@@ -234,7 +234,42 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding-top:12px;font-si
 .mbox td{border-bottom:1px solid var(--line);padding:5px 6px;vertical-align:top}
 .mbox td:first-child{color:var(--gold);white-space:nowrap;font-weight:600}
 
+
+/* ---------- read the room ---------- */
+.scene{position:relative;border-radius:14px;overflow:hidden;border:1px solid #0d223d;background:#0f1c2e;aspect-ratio:1200/440;max-height:440px}
+.sart,.sart svg,.sart img{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover}
+.scene.photo{aspect-ratio:16/9;max-height:560px;background:#000}
+.scene.photo .sart img{object-fit:contain}
+.scene.photo .scap{display:none}
+.rtag{position:absolute;left:14px;top:12px;background:var(--gold);color:#1a1405;font-weight:800;font-size:.72rem;letter-spacing:.2em;padding:4px 10px;border-radius:4px}
+.scap{position:absolute;left:0;right:0;bottom:0;padding:22px 18px 12px;background:linear-gradient(transparent,rgba(4,10,20,.88));display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.scap .loc{font-size:1.3rem;font-weight:800;color:#fff}
+.scap .tm{font-size:1rem;color:var(--gold);font-weight:700;letter-spacing:.04em}
+.rtext{margin:14px 0;background:var(--navy2);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.narr{font-size:1.35rem;line-height:1.5;margin:.1rem 0 .6rem;color:#fff}
+.whois{color:var(--ink-dim);font-size:.95rem}
+.whois b{color:var(--ink)}
+.goalbig{margin:14px 0 4px;padding:12px 16px;border-left:6px solid var(--gold);background:rgba(212,175,55,.09);border-radius:6px;font-size:1.35rem;font-weight:700;line-height:1.35;color:#fff}
+.goalbig span{display:block;font-size:.72rem;letter-spacing:.22em;color:var(--gold);margin-bottom:3px}
+.clues{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.clue{background:var(--navy3);border-radius:8px;padding:9px 11px;font-size:.95rem}
+.clue b{display:block;font-size:.64rem;letter-spacing:.16em;color:var(--gold);margin-bottom:2px}
+.kk{transform-origin:70px 72px}
+.kk.go{animation:kick .4s ease-out}
+@keyframes kick{0%{transform:rotate(0)}30%{transform:rotate(7deg)}60%{transform:rotate(-3deg)}100%{transform:rotate(0)}}
+.vu .rd{white-space:pre-line;font-family:var(--mono);font-size:.68rem;color:var(--lcdink);text-align:center;min-height:1.1em;margin-top:2px}
+.vtog{display:block;margin:4px auto 0;background:#22272e;border:1px solid #3a414a;color:var(--print);border-radius:5px;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px}
+.vtog:hover{border-color:#8d96a0}
+.vu.off svg{filter:grayscale(1) brightness(.42)}
+.vu.off .cap2,.vu.off .rd{opacity:.45}
+.vu.off .rd{color:var(--print-dim)}
+
 @media (max-width:860px){
+  .clues{grid-template-columns:1fr}
+  .narr{font-size:1.12rem}
+  .goalbig{font-size:1.1rem}
+  .scene{aspect-ratio:16/9}
+  .scap .loc{font-size:1.05rem}
   .hero,.two{grid-template-columns:1fr}
   .dgrid{grid-template-columns:1fr;gap:12px}
   .rbay{display:contents}
@@ -1518,6 +1553,30 @@ SCENARIOS.push({
  ]
 });
 /* ======================================================================
+   READ-THE-ROOM SCENES
+   Picture: the app first tries img/scene-<id>.png (export of the NotebookLM
+   scene slide). If that file is missing it draws the built-in illustration.
+   ====================================================================== */
+const SCENE_IMG_DIR = "img/";
+const SCENES = {
+  s0:{art:"office", clock:[10,15],
+      text:"Squadron Leader Malee's office. Tuesday, 10:15. Her door is open and she is reading a report at her desk. It is the week of month-end closing. You knock on the open door."},
+  s1:{art:"canteen", clock:[12,10],
+      text:"The canteen. 12:10. Ploy has just sat down with a plate of som tam. The seat next to her is empty. You carry your tray over."},
+  s2:{art:"meeting", clock:[9,0],
+      who:"Squadron Leader Malee (chair) and Khun Nok (Purchasing)",
+      role:"Your section head is chairing. Khun Nok has come from Purchasing — your level, another section.",
+      text:"Meeting room 2. Monday, 09:00. Squadron Leader Malee chairs the section meeting. Khun Nok has come across from Purchasing. The month-end update is your item — and it is next on the agenda."},
+  s3:{art:"desk", clock:[13,30],
+      text:"The Purchasing section. Wednesday, 13:30. Khun Nok is at her desk behind a pile of files. Tomorrow is the payment run and one invoice is still missing. You walk over."},
+  s4:{art:"cofficer", clock:[8,5],
+      text:"The Division head's office. Thursday, 08:05. The door is half open. You knock. Wing Commander Anan looks up from a file."},
+  s5:{art:"video", clock:[15,0],
+      text:"Your desk, on a video call. Monday, 15:00 Bangkok time. The call connects and Squadron Leader Clarke of the visiting partner air force appears on screen. You have never met."},
+  s6:{art:"conference", clock:[10,40],
+      text:"The Regional Defence Finance Forum, Bangkok. The keynote has just finished and it is the coffee break. Dr. Hannah Lim is standing alone with a coffee. You walk up to her."}
+};
+/* ======================================================================
    ENGINE
    ====================================================================== */
 const LS_KEY = "rtafModDesk_v1";
@@ -1541,14 +1600,38 @@ const regFromRoom = n => n<=1?1:n===2?2:n===3?3:n<=5?4:5;
 const REGN = {1:"Friendly",2:"Informal",3:"Professional",4:"Serious",5:"Deference"};
 
 /* ---- normalise data ---- */
-SCENARIOS.forEach(sc => sc.turns.forEach(t => t.slots.forEach(s => {
+const LINEAR_DIMS = ["direct","hedge","report","nominal","time"];
+SCENARIOS.forEach(sc => { const T = regFromRoom(sc.room.d+sc.room.p+sc.room.s); sc.turns.forEach(t => t.slots.forEach(s => {
   if (s.fixed != null) return;
   s.opts = s.opts.map((o,i) => ({t:o[0], d:o[1], g:o[2], tag:o[3]||"", n:o[4]||"", x:o[5]||{}, i}));
   const goods = s.opts.filter(o => o.g===2);
   s.best = goods.length ? goods[Math.floor(goods.length/2)].i : s.opts.reduce((a,o)=>o.g>s.opts[a].g?o.i:a,0);
   if (s.m != null) s.best = s.m;
-  s.opts.forEach(o => { const m = /^R(\d)/.exec(o.d); if (m) o.r = +m[1]; });
-})));
+  const n = s.opts.length;
+  s.opts.forEach(o => {
+    const m = /^R(\d)/.exec(o.d), off = 2 - o.g;
+    if (m) o.r = +m[1];                                                  // labelled register level
+    else if (LINEAR_DIMS.includes(s.dim)) o.r = n > 1 ? 1 + o.i * 4 / (n - 1) : T;  // ordered ladders: bottom = R1, top = R5
+    else if (o.tag === "low" || o.tag === "blunt" || o.tag === "hype" || o.tag === "flat") o.r = T - off;
+    else if (o.tag === "high") o.r = T + off;
+    else o.r = T;                                                       // accuracy slips (tense, conditional…) keep the room's register
+    o.r = Math.max(1, Math.min(5, o.r));
+  });
+})); });
+
+/* ---- read-the-room dials ---- */
+const ROOM_DEFS = [
+ {k:"d", dim:"distance", lab:"Distance", opts:[["0 · Close","Close: you eat lunch together and use nicknames."],["1 · Known","Known: you know their name and job, but you are not friends."],["2 · Distant","Distant: you have never met, or never worked together."]]},
+ {k:"p", dim:"power", lab:"Power", opts:[["0 · Peer or junior","Same level as you, or below you."],["1 · Above / expert","One level above you, a senior expert, or an official counterpart."],["2 · Commander","Your commanding officer, a senior officer two or more levels up, an auditor."]]},
+ {k:"s", dim:"stakes", lab:"Stakes", opts:[["0 · Small","A small favour or a friendly chat."],["1 · Real cost","A deadline, a real cost to them, or a relationship to protect."],["2 · High","An error, a large sum, or blame in the room."]]}
+];
+DIMS.distance = {name:"Distance", lo:"Close", hi:"Distant"};
+DIMS.power    = {name:"Power", lo:"Peer / junior", hi:"Commander"};
+DIMS.stakes   = {name:"Stakes", lo:"Small favour", hi:"Error / large sum"};
+function roomTurn(sc){
+  return {room:true, slots: ROOM_DEFS.map(d => ({k:d.k, dim:d.dim, lab:d.lab, best: sc.room[d.k],
+    opts: d.opts.map((o,i) => ({t:o[0], d:o[0], n:o[1], i, g:[2,1,0][Math.abs(i - sc.room[d.k])], tag:"", x:{}}))}))};
+}
 
 /* ---- persistence ---- */
 let store = {best:{}, fs:16, voice:false};
@@ -1599,15 +1682,17 @@ let view = "home";
 function startScenario(i){
   const sc = SCENARIOS[i];
   S = {i, sc, ti:0, sel:{}, act:null, log:[], gw:50, keyFail:false, hints:0, hinted:{}, phase:"build",
-       expanded:false, msgs:[], revealR: !!sc.demo, clock: baseClock(sc)};
+       expanded:false, msgs:[], revealR: !!sc.demo, clock: baseClock(sc),
+       inRoom:true, roomT: roomTurn(sc), roomRes:null, vu:{reg: !!sc.demo, gw: !!sc.demo}};
   S.msgs.push({type:"pill", text: sc.place});
   S.msgs.push({type:"pill", text: "Goal: " + sc.goal});
-  view = "play"; renderPlay(); firstSlot();
+  view = "play"; renderRoom(); firstSlot();
   window.scrollTo({top:0, behavior:"smooth"});
 }
 function baseClock(sc){ const m = /(\d{1,2}):(\d{2})/.exec(sc.place); return m ? (+m[1])*60 + (+m[2]) : 10*60+40; }
 function tick(){ S.clock += 1; const h = Math.floor(S.clock/60)%24, m = S.clock%60; return String(h).padStart(2,"0")+":"+String(m).padStart(2,"0"); }
-const turn = () => S.sc.turns[S.ti];
+const turn = () => S.inRoom ? S.roomT : S.sc.turns[S.ti];
+const hkey = s => (S.inRoom ? "room" : S.ti) + ":" + s.k;
 const liveSlots = t => t.slots.filter(s => s.fixed == null);
 function firstSlot(){ const ls = liveSlots(turn()); S.act = ls.length ? ls[0].k : null; renderDesk(); }
 
@@ -1659,20 +1744,29 @@ function renderPlay(){
     <div class="cbody" id="cbody" aria-live="polite"></div>
   </section>
   <section class="brief" id="brief"></section>
-  <section class="desk" aria-label="Mixing desk">
+  ${deskHTML("Thought Modulation Mixer", "Sentence under construction — tick a slot to put it on the fader")}`;
+  $("#backBtn").onclick = () => { if (confirmLeave()) renderHome(); };
+  $("#restartBtn").onclick = () => startScenario(S.i);
+  $("#moreBtn").onclick = () => { S.expanded = !S.expanded; renderChat(); };
+  if ($("#hearBtn")) $("#hearBtn").onclick = () => { const v = store.voice; store.voice = true; speak(assemble(turn(), s => S.sel[s.k]!=null ? s.opts[S.sel[s.k]] : null).replace(/\[[^\]]+\]/g,""), 0.9); store.voice = v; };
+  wireDesk(["R1","R2","R3","R4","R5"], ["0","25","50","75","100"]);
+  renderChat(); renderDots();
+}
+function deskHTML(mode, silk){
+  return `<section class="desk" aria-label="Mixing desk">
     <i class="screw a"></i><i class="screw b"></i><i class="screw c"></i><i class="screw d"></i>
-    <div class="dhead"><span class="mk">TM 9000</span><span class="md">Thought Modulation Mixer</span><span class="md" style="margin-left:auto" id="exLbl"></span></div>
+    <div class="dhead"><span class="mk">TM 9000</span><span class="md">${mode}</span><span class="md" style="margin-left:auto" id="exLbl"></span></div>
     <div class="dgrid">
       <div class="fbay" id="fbay"></div>
       <div class="rbay">
-        <div class="sut"><div class="silk">Sentence under construction — tick a slot to put it on the fader</div>
+        <div class="sut"><div class="silk">${silk}</div>
           <div class="slots" id="slots"></div>
-          <div class="live"><div class="s" id="live"></div><button class="hear" id="hearBtn" title="Hear the sentence">Play</button></div>
+          <div class="live"><div class="s" id="live"></div>${S.inRoom ? "" : `<button class="hear" id="hearBtn" title="Hear the sentence">Play</button>`}</div>
         </div>
         <div class="lcd" id="lcd"></div>
         <div class="mrow">
-          <div class="vu"><svg viewBox="0 0 140 84" id="vuR"></svg><div class="cap2">REGISTER OUT</div></div>
-          <div class="vu"><svg viewBox="0 0 140 84" id="vuG"></svg><div class="cap2">GOODWILL</div></div>
+          <div class="vu" id="vuRbox"><svg viewBox="0 0 140 84" id="vuR"></svg><div class="cap2">REGISTER OUT</div><div class="rd" id="rdR"></div><button class="vtog" data-vu="reg"></button></div>
+          <div class="vu" id="vuGbox"><svg viewBox="0 0 140 84" id="vuG"></svg><div class="cap2" id="capG">${S.inRoom ? "ROOM TOTAL" : "GOODWILL"}</div><div class="rd" id="rdG"></div><button class="vtog" data-vu="gw"></button></div>
           <div class="coach" id="coach"></div>
         </div>
         <div class="acts" id="acts"></div>
@@ -1680,13 +1774,10 @@ function renderPlay(){
       </div>
     </div>
   </section>`;
-  $("#backBtn").onclick = () => { if (confirmLeave()) renderHome(); };
-  $("#restartBtn").onclick = () => startScenario(S.i);
-  $("#moreBtn").onclick = () => { S.expanded = !S.expanded; renderChat(); };
-  $("#hearBtn").onclick = () => { const v = store.voice; store.voice = true; speak(assemble(turn(), s => S.sel[s.k]!=null ? s.opts[S.sel[s.k]] : null).replace(/\[[^\]]+\]/g,""), 0.9); store.voice = v; };
-  buildVU($("#vuR"), ["R1","R2","R3","R4","R5"]);
-  buildVU($("#vuG"), ["0","25","50","75","100"]);
-  renderChat(); renderDots();
+}
+function wireDesk(lblR, lblG){
+  buildVU($("#vuR"), lblR); buildVU($("#vuG"), lblG);
+  document.querySelectorAll(".vtog").forEach(b => b.onclick = () => { S.vu[b.dataset.vu] = !S.vu[b.dataset.vu]; renderMeters(); if ($("#live")) $("#live").innerHTML = liveText(); });
 }
 function confirmLeave(){ return S.phase === "over" || S.ti === 0 && !S.log.length || window.confirm("Leave this scenario? Progress in this run will be lost."); }
 
@@ -1698,6 +1789,7 @@ function renderDots(){
 }
 
 function renderBrief(){
+  if (!$("#brief")) return;
   const sc = S.sc, t = turn(), r = sc.room, R = regFromRoom(r.d+r.p+r.s);
   $("#brief").innerHTML = `
    <div><div class="sit"><b>Exchange ${S.ti+1} of ${sc.turns.length}${t.key?' · key moment':''}.</b> ${t.s}</div>
@@ -1745,7 +1837,7 @@ function renderDesk(){
   $("#slots").innerHTML = t.slots.map(s => {
     if (s.fixed != null) return `<div class="sl"><div class="stxt fixed">${esc(s.fixed)}</div><span class="lock">Core · fixed</span></div>`;
     const v = S.sel[s.k], o = v!=null ? s.opts[v] : null;
-    const res = done && S.log[S.ti] ? S.log[S.ti].slots.find(x=>x.k===s.k) : null;
+    const res = !done ? null : S.inRoom ? (S.roomRes ? {g: s.opts[S.roomRes.sel[s.k]].g} : null) : (S.log[S.ti] ? S.log[S.ti].slots.find(x=>x.k===s.k) : null);
     const cls = ["sl", S.act===s.k && !done ? "act" : "", res ? ({2:"g",1:"o",0:"b"}[res.g]) : ""].join(" ");
     let txt, tc = "stxt";
     if (!o) { txt = "[" + s.lab + "]"; tc += " unset"; }
@@ -1757,25 +1849,32 @@ function renderDesk(){
   }).join("");
   $("#slots").querySelectorAll("[data-ck]").forEach(el => el.onchange = () => { S.act = el.dataset.ck; renderDesk(); });
   $("#slots").querySelectorAll("[data-slot]").forEach(el => el.onclick = () => { if (!done) { S.act = el.dataset.slot; renderDesk(); } });
-  // live sentence
-  $("#live").innerHTML = liveHTML(assemble(t, s => S.sel[s.k]!=null ? s.opts[S.sel[s.k]] : null));
+  $("#live").innerHTML = liveText();
   renderFader(); renderLCD(); renderMeters(); renderCoach(); renderActs();
 }
 
+function liveText(){
+  const t = turn();
+  if (!S.inRoom) return liveHTML(assemble(t, s => S.sel[s.k]!=null ? s.opts[S.sel[s.k]] : null));
+  const v = k => S.sel[k] == null ? '<span class="ph">?</span>' : S.sel[k];
+  const all = ["d","p","s"].every(k => S.sel[k] != null);
+  const sum = ["d","p","s"].reduce((a,k) => a + (S.sel[k] || 0), 0);
+  return `Distance ${v("d")} + Power ${v("p")} + Stakes ${v("s")} = ${all ? sum : '<span class="ph">?</span>'} → ${all && (S.vu.reg || S.phase !== "build") ? `<b>R${regFromRoom(sum)} · ${REGN[regFromRoom(sum)]}</b>` : '<span class="ph">register ?</span>'}`;
+}
 function curSlot(){ return turn().slots.find(s => s.k === S.act && s.fixed == null); }
 
 function renderFader(){
   const s = curSlot(), bay = $("#fbay");
   if (!s || S.phase !== "build") {
     bay.innerHTML = `<div class="on">ON FADER</div><div class="dn">—</div>
-      <div class="fempty">${S.phase!=="build" ? "Sentence committed. Read the mix report." : "Tick a checkbox under a sentence slot to put it on the fader."}</div>`;
+      <div class="fempty">${S.phase!=="build" ? (S.inRoom ? "Room reading locked in. Read the report." : "Sentence committed. Read the mix report.") : "Tick a checkbox under a slot to put it on the fader."}</div>`;
     return;
   }
   const d = DIMS[s.dim], n = s.opts.length, v = S.sel[s.k];
-  const stars = S.sc.demo || S.hinted[s.k];
+  const stars = S.sc.demo || S.hinted[hkey(s)];
   const rows = s.opts.slice().reverse().map(o => `
     <button class="frow ${v===o.i?'sel':''}" data-o="${o.i}" aria-pressed="${v===o.i}">
-      <span class="led"></span><span class="tx"><span class="dg">${esc(o.d)}</span><span class="pv">${esc(s.aff ? o.n : (o.t ? o.t.replace(/^,\s*/,"") : "(leave empty)"))}</span></span>
+      <span class="led"></span><span class="tx"><span class="dg">${esc(o.d)}</span><span class="pv">${esc(s.aff || S.inRoom ? o.n : (o.t ? o.t.replace(/^,\s*/,"") : "(leave empty)"))}</span></span>
       ${stars && o.g===2 ? '<span class="star" title="Good setting">★</span>' : ''}</button>`).join("");
   const ticks = s.opts.map((o,k) => { const y = rowY(n, o.i); return `<i class="tick" style="top:${y}%"><b>${o.i}</b></i>`; }).join("");
   bay.innerHTML = `<div class="on">ON FADER</div><div class="dn">${esc(d.name)}</div><div class="sl">${esc(s.lab)}</div>
@@ -1815,7 +1914,7 @@ function setOpt(s, i, keepFocus){
   // refresh the rest
   const act = S.act;
   const t = turn();
-  $("#live").innerHTML = liveHTML(assemble(t, x => S.sel[x.k]!=null ? x.opts[S.sel[x.k]] : null));
+  $("#live").innerHTML = liveText();
   const tx = document.querySelector(`[data-slot="${s.k}"]`);
   if (tx) {
     const o = s.opts[i];
@@ -1824,11 +1923,12 @@ function setOpt(s, i, keepFocus){
     const lab = tx.parentNode.querySelector(".ck"); if (lab && !lab.querySelector(".done")) lab.insertAdjacentHTML("beforeend",' <span class="done">●</span>');
   }
   S.act = act;
-  renderLCD(); renderMeters(); renderCoach(); renderActs();
+  renderLCD(); renderMeters(true); renderCoach(); renderActs();
 }
 
 function renderLCD(){
   const s = curSlot(), el = $("#lcd");
+  if (S.phase !== "build" && S.inRoom) { const r = S.roomRes; el.innerHTML = r ? `<span class="dim">ROOM READ ·</span> <span class="t">${r.right}/3 dials correct · you read R${r.R}, the room is R${r.trueR}</span>` : ""; return; }
   if (S.phase !== "build") { el.innerHTML = `<span class="dim">MIX COMMITTED ·</span> <span class="t">${esc(S.log[S.ti] ? S.log[S.ti].tagLabel : "")}</span>`; return; }
   if (!s) { el.innerHTML = `<span class="dim">NO CHANNEL SELECTED</span>`; return; }
   const v = S.sel[s.k];
@@ -1852,20 +1952,58 @@ function buildVU(svg, labels){
     h += `<text x="${xt}" y="${yt+3}" font-size="8" text-anchor="middle" fill="#222" font-family="Arial">${l}</text>`;
   });
   h += `<text x="70" y="52" font-size="9" text-anchor="middle" fill="#8a7a55" font-family="Georgia" font-style="italic">VU</text>`;
-  h += `<g class="ndl" style="transform:rotate(-50deg)"><line x1="${cx}" y1="${cy}" x2="${cx}" y2="${cy-R+4}" stroke="#111" stroke-width="1.6"/></g>`;
+  h += `<g class="ndl" style="transform:rotate(-50deg)"><g class="kk"><line x1="${cx}" y1="${cy}" x2="${cx}" y2="${cy-R+4}" stroke="#111" stroke-width="1.6"/></g></g>`;
   h += `<circle cx="${cx}" cy="${cy}" r="5" fill="#222"/>`;
   svg.innerHTML = h;
 }
-function setNeedle(svg, deg){ const g = svg.querySelector(".ndl"); if (g) g.style.transform = `rotate(${deg}deg)`; }
-function renderMeters(){
-  const t = turn(); let sum = 0, k = 0;
-  t.slots.forEach(s => { if (s.fixed==null && S.sel[s.k]!=null) { const o = s.opts[S.sel[s.k]]; if (o.r) { sum += o.r; k++; } } });
-  setNeedle($("#vuR"), k ? -45 + (sum/k - 1) * 22.5 : -50);
-  setNeedle($("#vuG"), -45 + S.gw * 0.9);
+function setNeedle(svg, frac){ const g = svg && svg.querySelector(".ndl"); if (g) g.style.transform = `rotate(${frac == null ? -50 : -45 + Math.max(0, Math.min(1, frac)) * 90}deg)`; }
+const GW_DELTA = {good:8, ok:2, bad:-10};
+function projectedGW(){
+  const t = turn(), set = liveSlots(t).filter(s => S.sel[s.k] != null);
+  if (!set.length) return S.gw;
+  const gs = set.map(s => s.opts[S.sel[s.k]].g);
+  const level = gs.includes(0) ? "bad" : gs.includes(1) ? "ok" : "good";
+  return Math.max(0, Math.min(100, S.gw + GW_DELTA[level] * (t.key ? 1.5 : 1)));
+}
+function renderMeters(kick){
+  const rb = $("#vuRbox"), gb = $("#vuGbox"); if (!rb) return;
+  const t = turn();
+  let regVal = null, gFrac = null, rdR = "", rdG = "";
+  if (S.inRoom) {
+    const ks = ["d","p","s"].filter(k => S.sel[k] != null);
+    const sum = ks.reduce((a,k) => a + S.sel[k], 0);
+    if (ks.length) { const R = regFromRoom(sum); regVal = R; rdR = ks.length === 3 ? `R${R} · ${REGN[R]}` : `R${R}… (${3-ks.length} to set)`; gFrac = sum / 6; rdG = `${sum} / 6`; }
+    else { rdR = "set a dial"; rdG = "0 / 6"; gFrac = 0; }
+  } else {
+    let sum = 0, k = 0;
+    t.slots.forEach(s => { if (s.fixed == null && S.sel[s.k] != null) { sum += s.opts[S.sel[s.k]].r; k++; } });
+    if (k) { regVal = sum / k; rdR = `R${regVal.toFixed(1)} · ${REGN[Math.round(regVal)]}`; } else rdR = "set a slot";
+    const cs = curSlot();
+    if (k && cs && new Set(cs.opts.map(o => o.r)).size === 1) rdR += `\n(${DIMS[cs.dim].name.toLowerCase()}: no register change)`;
+    const pg = S.phase === "build" ? projectedGW() : S.gw;
+    gFrac = pg / 100;
+    rdG = S.phase === "build" && Math.round(pg) !== Math.round(S.gw) ? `${Math.round(S.gw)} → ${Math.round(pg)}` : `${Math.round(pg)}`;
+  }
+  const apply = (box, svg, rd, on, frac, text) => {
+    box.classList.toggle("off", !on);
+    setNeedle(svg, on ? frac : null);
+    rd.textContent = on ? text : "hidden";
+    if (on && kick) { const kk = svg.querySelector(".kk"); if (kk) { kk.classList.remove("go"); void kk.getBoundingClientRect(); kk.classList.add("go"); } }
+    box.querySelector(".vtog").textContent = on ? "Hide" : "Reveal";
+    box.querySelector(".vtog").setAttribute("aria-pressed", on);
+  };
+  apply(rb, $("#vuR"), $("#rdR"), S.vu.reg, regVal == null ? null : (regVal - 1) / 4, rdR);
+  apply(gb, $("#vuG"), $("#rdG"), S.vu.gw, gFrac, rdG);
 }
 
 function renderCoach(){
   const t = turn(), s = curSlot(), el = $("#coach");
+  if (S.inRoom) {
+    el.innerHTML = S.sc.demo
+      ? `<b>COACH ·</b> Before a single word, score the room. Tick <b>DISTANCE</b> and slide it: how well do you know her? Then <b>POWER</b>, then <b>STAKES</b>. The REGISTER OUT meter adds them up: 0–1 R1 · 2 R2 · 3 R3 · 4–5 R4 · 6 R5.${s ? `<div class="why"><b>${esc(s.lab)}:</b> ${esc(S.sc.room[{d:"dw",p:"pw",s:"sw"}[s.k]])}</div>` : ""}`
+      : `<b>CUE ·</b> Score each dial 0–2 from the clues above, then lock in. Register = Distance + Power + Stakes. Power is not the same axis as familiarity.`;
+    return;
+  }
   if (S.sc.demo) {
     el.style.display = "";
     el.innerHTML = `<b>COACH ·</b> ${t.coach || ""}${s && s.why ? `<div class="why"><b>${esc(s.lab)}:</b> ${esc(s.why)}</div>` : ""}`;
@@ -1883,8 +2021,8 @@ function renderActs(){
   el.innerHTML = `<button class="dbtn" id="resetBtn">Reset</button>
     ${S.sc.demo ? `<button class="dbtn" id="showBtn">Show me</button>` : `<button class="dbtn" id="hintBtn" ${!curSlot()?'disabled':''}>Hint</button>`}
     <button class="dbtn" id="nextSlotBtn">Next slot ▸</button>
-    <span class="need">${missing.length ? `${missing.length} slot${missing.length>1?'s':''} to set` : "All channels set"}</span>
-    <button class="commit" id="commitBtn" ${missing.length?'disabled':''}>COMMIT</button>`;
+    <span class="need">${missing.length ? `${missing.length} ${S.inRoom?'dial':'slot'}${missing.length>1?'s':''} to set` : "All channels set"}</span>
+    <button class="commit" id="commitBtn" ${missing.length?'disabled':''}>${S.inRoom ? "LOCK IN" : "COMMIT"}</button>`;
   $("#resetBtn").onclick = () => { S.sel = {}; firstSlot(); };
   $("#nextSlotBtn").onclick = () => {
     const i = ls.findIndex(s => s.k === S.act);
@@ -1893,8 +2031,8 @@ function renderActs(){
     S.act = nx.k; renderDesk();
   };
   if ($("#showBtn")) $("#showBtn").onclick = () => { ls.forEach(s => S.sel[s.k] = s.best); renderDesk(); };
-  if ($("#hintBtn")) $("#hintBtn").onclick = () => { const s = curSlot(); if (!s) return; if (!S.hinted[s.k]) { S.hinted[s.k] = true; S.hints++; } renderFader(); };
-  $("#commitBtn").onclick = commit;
+  if ($("#hintBtn")) $("#hintBtn").onclick = () => { const s = curSlot(); if (!s) return; if (!S.hinted[hkey(s)]) { S.hinted[hkey(s)] = true; S.hints++; } renderFader(); };
+  $("#commitBtn").onclick = S.inRoom ? roomCommit : commit;
 }
 
 /* ---- commit & reply ---- */
@@ -1909,7 +2047,7 @@ function commit(){
   let tag = level==="bad" ? tagOf(bad) : level==="ok" ? tagOf(near) : "";
   const score = Math.round(slots.reduce((a,x)=>a+[15,60,100][x.g],0) / slots.length);
   const mult = t.key ? 1.5 : 1;
-  S.gw = Math.max(0, Math.min(100, S.gw + ({good:8, ok:2, bad:-10}[level]) * mult));
+  S.gw = Math.max(0, Math.min(100, S.gw + GW_DELTA[level] * mult));
   if (t.key && level==="bad") S.keyFail = true;
   const tagLabel = level==="good" ? "On target" : (level==="ok" ? "Nearly — slightly " : "") + (TAG_LABEL[tag] || "Off target").replace(/^./, c => level==="ok" ? c.toLowerCase() : c);
   S.log[S.ti] = {ti:S.ti, sentence, model, slots, level, tag, tagLabel, score, key:!!t.key};
@@ -1948,6 +2086,7 @@ function buildReply(t, level, tag){
 }
 
 function renderReport(){
+  if (S.inRoom) return roomReport();
   const L = S.log[S.ti], el = $("#report");
   if (!L) { el.innerHTML = ""; return; }
   const ic = {2:["g","✓"],1:["o","~"],0:["b","✗"]};
@@ -2021,15 +2160,15 @@ function renderDebrief(){
      <div class="verdict ${res}">
        <div class="big">${big}</div>
        <div><b>Goal:</b> ${esc(sc.goal)}<br><span style="color:var(--ink-dim)">${esc(outcome)}</span>
-         <br><span style="color:var(--ink-dim);font-size:.85rem">Goodwill ${Math.round(S.gw)}/100${S.keyFail?' · a key moment went wrong':''}${S.hints?` · ${S.hints} hint${S.hints>1?'s':''} used`:''}</span></div>
+         <br><span style="color:var(--ink-dim);font-size:.85rem">${S.roomRes ? `Room read ${S.roomRes.right}/3 dials (R${S.roomRes.R} vs R${S.roomRes.trueR}) · ` : ""}Goodwill ${Math.round(S.gw)}/100${S.keyFail?' · a key moment went wrong':''}${S.hints?` · ${S.hints} hint${S.hints>1?'s':''} used`:''}</span></div>
        <div class="score">${score}%<small>mix accuracy</small></div>
      </div>
      <div class="two">
        <div class="panel"><h3>What was good</h3><ul>${goods.length ? goods.slice(0,6).map(({l,x}) =>
           `<li><b>${esc(DIMS[x.dim].name)}</b> (exchange ${l.ti+1}): <span class="q">${esc(x.s.aff ? x.o.d : (x.o.t||"(none)").replace(/^,\s*/,""))}</span> — ${esc(x.o.n)}</li>`).join("") : "<li>Keep going — no channel was fully on target yet.</li>"}</ul></div>
-       <div class="panel"><h3>What can be improved</h3><ul>${improve.length ? improve.slice(0,8).map(({l,x}) => {
+       <div class="panel"><h3>What can be improved</h3><ul>${roomImproveHTML()}${improve.length ? improve.slice(0,8).map(({l,x}) => {
           const goodsO = x.s.opts.filter(o=>o.g===2); const b = goodsO.reduce((a,o)=>Math.abs(o.i-x.o.i)<Math.abs(a.i-x.o.i)?o:a, goodsO[0]);
-          return `<li><b>${esc(x.lab)}</b> (exchange ${l.ti+1}): you set <span class="q">${esc(x.o.d)}</span>. ${esc(x.o.n)} <br>Try <span class="q">${esc(b.d)}</span>${!x.s.aff && b.t?`: “${esc(b.t.replace(/^,\s*/,""))}”`:''}.</li>`; }).join("") : "<li>Nothing — a clean mix.</li>"}</ul>
+          return `<li><b>${esc(x.lab)}</b> (exchange ${l.ti+1}): you set <span class="q">${esc(x.o.d)}</span>. ${esc(x.o.n)} <br>Try <span class="q">${esc(b.d)}</span>${!x.s.aff && b.t?`: “${esc(b.t.replace(/^,\s*/,""))}”`:''}.</li>`; }).join("") : (S.roomRes && S.roomRes.right<3 ? "" : "<li>Nothing — a clean mix.</li>")}</ul>
           ${improve.length>8?`<p style="color:var(--ink-dim);font-size:.8rem">+ ${improve.length-8} more in the transcript below.</p>`:''}</div>
      </div>
      <div class="two">
@@ -2047,6 +2186,13 @@ function renderDebrief(){
   $("#replayBtn").onclick = () => startScenario(S.i);
   const nx = $("#nextScBtn"); if (nx) nx.onclick = () => startScenario(S.i+1);
   window.scrollTo({top:0, behavior:"smooth"});
+}
+
+function roomImproveHTML(){
+  const r = S.roomRes; if (!r) return "";
+  const why = {d:"dw", p:"pw", s:"sw"};
+  return S.roomT.slots.filter(s => s.opts[r.sel[s.k]].g < 2).map(s =>
+    `<li><b>Read the room · ${esc(s.lab)}</b>: you set <span class="q">${esc(s.opts[r.sel[s.k]].d)}</span>; the room is <span class="q">${esc(s.opts[S.sc.room[s.k]].d)}</span>. ${esc(S.sc.room[why[s.k]])}</li>`).join("");
 }
 
 /* ---- reference ---- */
@@ -2086,6 +2232,183 @@ document.querySelectorAll("[data-fs]").forEach(b => b.onclick = () => {
   document.documentElement.style.setProperty("--fs", store.fs + "px");
 });
 document.addEventListener("click", e => { const b = e.target.closest("[data-start]"); if (b) startScenario(+b.dataset.start); });
+
+
+/* ======================================================================
+   READ THE ROOM — screen, lock-in, report
+   ====================================================================== */
+function renderRoom(){
+  const sc = S.sc, p = PEOPLE[sc.npc], sd = SCENES[sc.id] || {text: sc.place};
+  const parts = sc.place.split(" · ");
+  const r = sc.room;
+  $("#app").innerHTML = `
+  <div class="pbar">
+    <button class="btn ghost" id="backBtn">&larr; Scenarios</button>
+    <h2>${esc(sc.title)}</h2><span class="bdg lv">${esc(sc.cefr)}</span><span class="bdg">Step 1 · Read the room</span>
+    <button class="btn ghost" id="restartBtn" style="margin-left:auto">Restart</button>
+  </div>
+  <section class="scene" id="scene" aria-label="Scene picture">
+    <div class="sart" id="sart">${sceneArt(sc)}</div>
+    <div class="rtag">READ THE ROOM</div>
+    <div class="scap"><span class="loc">${esc(parts[0])}</span><span class="tm">${esc(parts.slice(1).join(" · "))}</span></div>
+  </section>
+  <section class="rtext">
+    <p class="narr">${esc(sd.text)}</p>
+    <div class="whois"><b>${esc(sd.who || p.name)}</b> — ${esc(sd.role || p.role)}</div>
+    <div class="goalbig"><span>YOUR GOAL</span>${esc(sc.goal)}</div>
+    <div class="clues">
+      <div class="clue"><b>DISTANCE · clue</b>${esc(r.dw)}</div>
+      <div class="clue"><b>POWER · clue</b>${esc(r.pw)}</div>
+      <div class="clue"><b>STAKES · clue</b>${esc(r.sw)}</div>
+    </div>
+  </section>
+  ${deskHTML("Room Reader", "Room reading — tick a dial to put it on the fader")}`;
+  $("#backBtn").onclick = () => { if (confirmLeave()) renderHome(); };
+  $("#restartBtn").onclick = () => startScenario(S.i);
+  wireDesk(["R1","R2","R3","R4","R5"], ["0","1","2","3","4","5","6"]);
+  $("#exLbl").textContent = "Step 1 · Read the room";
+  loadSceneImage(sc);
+}
+
+function loadSceneImage(sc){
+  try {
+    const im = new Image();
+    im.onload = () => { const a = $("#sart"); if (a && S && S.sc === sc) { a.innerHTML = ""; im.alt = sc.place; a.appendChild(im); $("#scene").classList.add("photo"); } };
+    im.src = SCENE_IMG_DIR + "scene-" + sc.id + ".png";
+  } catch(e){}
+}
+
+function roomCommit(){
+  const sc = S.sc, sel = Object.assign({}, S.sel);
+  const right = S.roomT.slots.filter(s => s.opts[sel[s.k]].g === 2).length;
+  const sum = sel.d + sel.p + sel.s, tsum = sc.room.d + sc.room.p + sc.room.s;
+  S.roomRes = {sel, right, sum, R: regFromRoom(sum), tsum, trueR: regFromRoom(tsum)};
+  S.revealR = true; S.phase = "after";
+  renderDesk(); roomReport();
+}
+
+function roomReport(){
+  const r = S.roomRes, el = $("#report");
+  if (!r) { el.innerHTML = ""; return; }
+  const ic = {2:["g","✓"],1:["o","~"],0:["b","✗"]}, why = {d:"dw", p:"pw", s:"sw"};
+  const lines = S.roomT.slots.map(s => {
+    const o = s.opts[r.sel[s.k]], tr = s.opts[S.sc.room[s.k]], [c, sym] = ic[o.g];
+    return `<div class="rline"><span class="ic ${c}">${sym}</span><div><b>${esc(s.lab)}</b> · you set ${esc(o.d)}${o.g < 2 ? ` — <span class="bt">the room is ${esc(tr.d)}</span>` : ""}
+      <div class="n">${esc(S.sc.room[why[s.k]])} → ${esc(tr.n)}</div></div></div>`;
+  }).join("");
+  const same = r.R === r.trueR;
+  el.innerHTML = `<div class="report"><h4>Room report · ${r.right}/3 dials</h4>${lines}
+    <div class="model"><span class="silk">Register</span>Your read: ${r.sum} → R${r.R} · ${REGN[r.R]}. The room: ${r.tsum} → <b>R${r.trueR} · ${REGN[r.trueR]}</b>.
+    ${same ? "Right register — every greeting, address and closer should be tuned to it." : "Carry the room's register into the conversation, not your first read."}</div>
+    <div class="acts" style="margin-top:10px"><button class="dbtn" id="reReadBtn">Read again</button>
+    <button class="commit" id="enterBtn">ENTER THE ROOM ▸</button></div></div>`;
+  $("#enterBtn").onclick = enterRoom;
+  $("#reReadBtn").onclick = () => { S.roomRes = null; S.phase = "build"; S.sel = {}; $("#report").innerHTML = ""; firstSlot(); };
+}
+
+function enterRoom(){
+  S.inRoom = false; S.phase = "build"; S.sel = {}; S.act = null;
+  renderPlay(); firstSlot();
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+/* ---------- built-in scene illustrations (fallback when no slide image) ---------- */
+function sceneArt(sc){
+  const sd = SCENES[sc.id] || {art:"office", clock:[10,0]};
+  const W = 1200, H = 440;
+  const sil = "#07101d", rim = "#D4AF37";
+  const person = (x, base, s, o) => {
+    o = o || {};
+    const hy = base - 172*s, col = o.col || sil;
+    let g = `<g opacity="${o.op==null?1:o.op}">`;
+    g += `<path d="M${x-40*s} ${base} L${x-44*s} ${base-120*s} Q${x-42*s} ${base-146*s} ${x-14*s} ${base-150*s} L${x+14*s} ${base-150*s} Q${x+42*s} ${base-146*s} ${x+44*s} ${base-120*s} L${x+40*s} ${base} Z" fill="${col}" stroke="${rim}" stroke-opacity=".35" stroke-width="1.5"/>`;
+    g += `<rect x="${x-7*s}" y="${hy+14*s}" width="${14*s}" height="${14*s}" fill="${col}"/>`;
+    g += `<ellipse cx="${x}" cy="${hy}" rx="${19*s}" ry="${23*s}" fill="${col}" stroke="${rim}" stroke-opacity=".45" stroke-width="1.5"/>`;
+    if (o.bun) g += `<circle cx="${x + (o.bun==="l"?-17:17)*s}" cy="${hy+10*s}" r="${9*s}" fill="${col}" stroke="${rim}" stroke-opacity=".35"/>`;
+    if (o.cup) g += `<rect x="${x+22*s}" y="${base-110*s}" width="${14*s}" height="${16*s}" rx="2" fill="#e9ecef"/>`;
+    return g + `</g>`;
+  };
+  const clock = (x, y, r) => {
+    const [h, m] = sd.clock || [10,0];
+    const ma = (m/60)*360 - 90, ha = ((h%12)/12 + m/720)*360 - 90, rad = a => a*Math.PI/180;
+    return `<circle cx="${x}" cy="${y}" r="${r}" fill="#e9ecef" stroke="#8d96a0" stroke-width="3"/>
+      <line x1="${x}" y1="${y}" x2="${x+r*.5*Math.cos(rad(ha))}" y2="${y+r*.5*Math.sin(rad(ha))}" stroke="#111" stroke-width="4" stroke-linecap="round"/>
+      <line x1="${x}" y1="${y}" x2="${x+r*.8*Math.cos(rad(ma))}" y2="${y+r*.8*Math.sin(rad(ma))}" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="${x}" cy="${y}" r="3" fill="#c0271a"/>`;
+  };
+  const windowCity = (x, y, w, h) => {
+    let g = `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#0c2340" stroke="#34506f" stroke-width="6"/>`;
+    for (let i = 0; i < 9; i++) { const bx = x + 10 + i*(w-20)/9, bh = 40 + ((i*37)%70); g += `<rect x="${bx}" y="${y+h-bh}" width="${(w-20)/9-6}" height="${bh}" fill="#132e52"/>`;
+      for (let j = 0; j < 4; j++) if ((i+j)%3) g += `<rect x="${bx+6}" y="${y+h-bh+8+j*12}" width="5" height="5" fill="#f5d27a" opacity=".7"/>`; }
+    g += `<line x1="${x+w/2}" y1="${y}" x2="${x+w/2}" y2="${y+h}" stroke="#34506f" stroke-width="5"/>`;
+    return g;
+  };
+  const shelf = (x, y) => { let g = `<rect x="${x}" y="${y}" width="170" height="170" fill="#15263d" stroke="#2b4466"/>`;
+    for (let r = 0; r < 3; r++) { g += `<rect x="${x}" y="${y+55*(r+1)}" width="170" height="4" fill="#2b4466"/>`;
+      for (let b = 0; b < 7; b++) g += `<rect x="${x+8+b*22}" y="${y+10+55*r}" width="16" height="44" fill="${["#2f6fb5","#b5762f","#3d9a6a","#7a4fb0","#8f7626"][(b+r)%5]}" opacity=".75"/>`; }
+    return g; };
+  const desk = (x, y, w) => `<rect x="${x}" y="${y}" width="${w}" height="16" fill="#3a2a1c"/><rect x="${x+10}" y="${y+16}" width="${w-20}" height="${H-y-40}" fill="#2a1e14"/>`;
+  const papers = (x, y) => `<rect x="${x}" y="${y-6}" width="70" height="6" fill="#e9ecef"/><rect x="${x+8}" y="${y-11}" width="70" height="5" fill="#dfe3e8"/>`;
+  const floor = (c) => `<rect x="0" y="${H-40}" width="${W}" height="40" fill="${c||"#0b1626"}"/>`;
+  const wall = (a, b) => `<defs><linearGradient id="wl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs><rect width="${W}" height="${H}" fill="url(#wl)"/>`;
+  const lamp = (x) => `<line x1="${x}" y1="0" x2="${x}" y2="50" stroke="#555"/><path d="M${x-30} 70 L${x-12} 50 L${x+12} 50 L${x+30} 70 Z" fill="#e9c46a"/><ellipse cx="${x}" cy="72" rx="36" ry="6" fill="#f5d27a" opacity=".5"/>`;
+  let g = "";
+  switch (sd.art) {
+    case "office":
+      g = wall("#22385a","#162740") + windowCity(760, 60, 360, 200) + shelf(60, 90) + clock(560, 90, 30)
+        + `<rect x="280" y="80" width="120" height="${H-120}" fill="#0e1a2b" stroke="#6b5a2a" stroke-width="6"/><path d="M280 80 L340 96 L340 ${H-50} L280 ${H-40} Z" fill="#3a2a1c"/>`
+        + person(700, 330, 1, {bun:"r"}) + desk(520, 300, 420) + papers(600, 300) + `<rect x="820" y="230" width="90" height="62" fill="#111" stroke="#444"/><rect x="858" y="292" width="14" height="10" fill="#444"/>` + floor();
+      break;
+    case "cofficer":
+      g = wall("#1f3350","#13233a") + windowCity(640, 60, 320, 190) + shelf(990, 90) + clock(520, 80, 28)
+        + person(800, 330, 1.05, {}) + `<rect x="770" y="190" width="70" height="52" fill="#e9ecef" stroke="#999" transform="rotate(-8 805 216)"/>`
+        + desk(560, 300, 470) + papers(620, 300)
+        + `<rect x="60" y="40" width="210" height="${H-80}" fill="#0a1422" stroke="#6b5a2a" stroke-width="8"/><path d="M60 40 L170 70 L170 ${H-60} L60 ${H-40} Z" fill="#4a3522"/><circle cx="150" cy="${H/2+20}" r="6" fill="${rim}"/>`
+        + person(250, H-40, 1.25, {bun:"l", op:.95}) + floor();
+      break;
+    case "canteen":
+      g = wall("#4a3a26","#2c2217") + lamp(300) + lamp(650) + lamp(1000) + clock(1100, 110, 26)
+        + `<rect x="80" y="110" width="520" height="120" fill="#1d160e" stroke="#6b5a2a" stroke-width="4"/>`
+        + [0,1,2].map(i => `<rect x="${100+i*170}" y="125" width="150" height="90" fill="#2d2216"/><rect x="${115+i*170}" y="140" width="120" height="8" fill="#f5d27a" opacity=".6"/><rect x="${115+i*170}" y="158" width="90" height="6" fill="#e9ecef" opacity=".5"/><rect x="${115+i*170}" y="172" width="100" height="6" fill="#e9ecef" opacity=".5"/>`).join("")
+        + person(760, 350, 1, {bun:"r"}) + `<rect x="620" y="330" width="330" height="14" fill="#6b4a2a"/><rect x="775" y="344" width="16" height="${H-384}" fill="#4a3522"/><ellipse cx="720" cy="326" rx="36" ry="8" fill="#e9ecef"/><ellipse cx="720" cy="322" rx="24" ry="5" fill="#9ccf62"/>`
+        + `<rect x="880" y="300" width="50" height="60" rx="6" fill="#2d2216" stroke="#6b4a2a"/>` + person(250, H-40, 1.2, {bun:"l", op:.95}) + `<rect x="300" y="${H-190}" width="120" height="12" fill="#c9ced6" opacity=".9"/>` + floor("#1d160e");
+      break;
+    case "meeting":
+      g = wall("#1d3150","#12213a") + clock(1100, 80, 26)
+        + `<rect x="380" y="50" width="440" height="190" fill="#0a1422" stroke="#34506f" stroke-width="6"/><text x="410" y="95" fill="${rim}" font-family="Arial" font-size="26" font-weight="700" letter-spacing="3">AGENDA</text>`
+        + ["1  Month-end update","2  Receipt cut-off","3  Any other business"].map((t,i) => `<text x="410" y="${135+i*34}" fill="#e9ecef" font-family="Arial" font-size="20" opacity="${i?0.6:1}">${t}</text>`).join("")
+        + person(330, 360, .9, {bun:"r"}) + person(500, 360, .9, {}) + person(700, 360, .9, {bun:"l"}) + person(870, 360, .9, {bun:"r"})
+        + `<path d="M240 330 L960 330 L1080 ${H-40} L120 ${H-40} Z" fill="#2a1e14" stroke="#6b4a2a" stroke-width="3"/>` + papers(420, 360) + papers(760, 370) + floor();
+      break;
+    case "desk":
+      g = wall("#21374f","#152538") + windowCity(80, 60, 300, 170) + clock(470, 90, 26)
+        + `<rect x="960" y="60" width="170" height="170" fill="#e9ecef"/><rect x="960" y="60" width="170" height="30" fill="#c0271a"/><text x="1045" y="82" fill="#fff" font-family="Arial" font-size="16" text-anchor="middle" font-weight="700">THIS MONTH</text>`
+        + Array.from({length:20}, (_,i) => `<text x="${975+(i%5)*32}" y="${112+Math.floor(i/5)*30}" fill="#333" font-family="Arial" font-size="14">${i+12}</text>`).join("")
+        + `<circle cx="${980+3*32}" cy="${107+0*30}" r="15" fill="none" stroke="#c0271a" stroke-width="3"/>`
+        + person(690, 330, 1, {bun:"r"}) + desk(500, 300, 500)
+        + [0,1,2,3].map(i => `<rect x="${540+i*18}" y="${300-40-i*22}" width="120" height="${40+i*22}" fill="${["#c9a45a","#b98d3f","#d6b46a","#a8803a"][i]}" stroke="#6b4a2a"/>`).join("")
+        + `<rect x="820" y="220" width="110" height="72" fill="#111" stroke="#444"/>` + person(230, H-40, 1.2, {bun:"l", op:.95}) + floor();
+      break;
+    case "video":
+      g = wall("#1a2e4a","#0f1f33") + clock(1110, 80, 26) + shelf(40, 80)
+        + `<rect x="330" y="50" width="560" height="320" rx="10" fill="#111" stroke="#444" stroke-width="4"/><rect x="350" y="70" width="520" height="260" fill="#3b5e86"/>`
+        + `<rect x="350" y="70" width="520" height="260" fill="url(#vg)"/><defs><linearGradient id="vg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6d8fb5"/><stop offset="1" stop-color="#2d4a6d"/></linearGradient></defs>`
+        + person(610, 330, .95, {bun:"r", col:"#1a2433"})
+        + `<rect x="350" y="300" width="520" height="30" fill="#000" opacity=".55"/><circle cx="590" cy="315" r="10" fill="#c0271a"/><circle cx="630" cy="315" r="10" fill="#8d96a0"/><text x="365" y="321" fill="#9ff0b0" font-family="Arial" font-size="14">● CONNECTED 00:01</text>`
+        + `<rect x="585" y="370" width="50" height="30" fill="#333"/>` + desk(250, 400, 720) + person(1000, H-40, 1.15, {bun:"l", op:.95}) + floor();
+      break;
+    case "conference":
+      g = wall("#1a1f3a","#0f1226")
+        + `<rect x="120" y="30" width="960" height="120" fill="#0d1b36" stroke="${rim}" stroke-width="3"/><text x="600" y="85" fill="${rim}" font-family="Arial" font-size="34" font-weight="700" text-anchor="middle" letter-spacing="4">REGIONAL DEFENCE FINANCE FORUM</text><text x="600" y="120" fill="#6fe3ff" font-family="Arial" font-size="18" text-anchor="middle" letter-spacing="6">BANGKOK · COFFEE BREAK</text>`
+        + person(180, 380, .8, {op:.35}) + person(290, 380, .8, {bun:"r", op:.35}) + person(1010, 380, .8, {op:.35}) + person(1100, 380, .8, {bun:"l", op:.35})
+        + `<rect x="560" y="330" width="120" height="10" fill="#e9ecef"/><rect x="612" y="340" width="16" height="${H-380}" fill="#8d96a0"/><rect x="580" y="316" width="16" height="14" fill="#e9ecef"/><rect x="630" y="316" width="16" height="14" fill="#e9ecef"/>`
+        + person(760, 400, 1.05, {bun:"r", cup:true}) + `<rect x="752" y="245" width="16" height="22" fill="#6fe3ff" opacity=".8"/>`
+        + person(420, H-30, 1.2, {bun:"l", op:.95}) + floor("#0a0c1a");
+      break;
+  }
+  return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${esc(sc.place)}">${g}
+    <rect width="${W}" height="${H}" fill="url(#vig)"/><defs><radialGradient id="vig" cx=".5" cy=".45" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient></defs></svg>`;
+}
 
 renderHome();
 </script>
