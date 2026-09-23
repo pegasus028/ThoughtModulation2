@@ -1,0 +1,2093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modulation Desk — RTAF Finance English</title>
+<style>
+:root{
+  --navy:#0A192F; --navy2:#0F2440; --navy3:#14304F; --line:#23486f;
+  --gold:#D4AF37; --gold-dim:#8f7626; --ink:#EDF2F9; --ink-dim:#A9BBD0;
+  --good:#4ade80; --warn:#fbbf24; --bad:#f87171;
+  --rack:#141619; --rack2:#1d2025; --rack3:#262a30; --print:#e9ecef; --print-dim:#8d96a0;
+  --led:#ff4b2b; --ledg:#58e07a; --lcd:#0e1a12; --lcdink:#9ff0b0;
+  --chat:#8aa4c8; --me:#8fe065; --them:#ffffff;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  --fs:16px;
+}
+*{box-sizing:border-box}
+html{font-size:var(--fs)}
+body{margin:0;background:var(--navy);color:var(--ink);font-family:var(--sans);line-height:1.45;-webkit-text-size-adjust:100%}
+button{font:inherit;cursor:pointer}
+em{font-style:italic;color:inherit;opacity:.8}
+.wrap{max-width:1180px;margin:0 auto;padding:14px 16px 30px}
+header{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.emblem{width:44px;height:44px;flex:none}
+.brand h1{margin:0;font-size:1.25rem;letter-spacing:.14em;color:var(--gold)}
+.brand .sub{font-size:.78rem;color:var(--ink-dim);letter-spacing:.06em}
+.hctl{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.hbtn{background:var(--navy2);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 10px;font-size:.82rem}
+.hbtn:hover{border-color:var(--gold)}
+.hbtn.on{border-color:var(--gold);color:var(--gold)}
+footer{border-top:1px solid var(--line);margin-top:28px;padding-top:12px;font-size:.76rem;color:var(--ink-dim)}
+
+/* ---------- home ---------- */
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:18px;margin:18px 0}
+.hero h2{margin:.2rem 0 .5rem;font-size:1.5rem}
+.hero p{color:var(--ink-dim);margin:.3rem 0}
+.steps{background:var(--navy2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:0;list-style:none;counter-reset:st}
+.steps li{counter-increment:st;display:flex;gap:10px;padding:6px 0;font-size:.9rem}
+.steps li::before{content:counter(st);flex:none;width:24px;height:24px;border-radius:50%;background:var(--gold);color:#1a1405;font-weight:700;display:grid;place-items:center;font-size:.8rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px}
+.card{background:var(--navy2);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.card.demo{border-color:var(--gold);box-shadow:0 0 0 1px rgba(212,175,55,.25) inset}
+.card h3{margin:0;font-size:1.08rem}
+.card .who{font-size:.82rem;color:var(--ink-dim)}
+.card .goal{font-size:.88rem}
+.badges{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.bdg{font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:99px;border:1px solid var(--line);color:var(--ink-dim)}
+.bdg.lv{background:var(--gold);color:#1a1405;border-color:var(--gold);font-weight:700}
+.bdg.g{color:var(--good);border-color:rgba(74,222,128,.5)}
+.bdg.p{color:var(--warn);border-color:rgba(251,191,36,.5)}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{font-size:.72rem;background:var(--navy3);border-radius:6px;padding:2px 7px;color:var(--ink-dim)}
+.card .foot{margin-top:auto;display:flex;align-items:center;gap:8px;justify-content:space-between}
+.best{font-size:.8rem;color:var(--ink-dim)}
+.btn{border:none;border-radius:9px;padding:9px 16px;font-weight:700;background:var(--gold);color:#1a1405}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);font-weight:600}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+
+/* ---------- play: top bar ---------- */
+.pbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0 10px}
+.pbar h2{margin:0;font-size:1.1rem}
+.dots{display:flex;gap:5px;margin-left:auto}
+.dots i{width:11px;height:11px;border-radius:50%;background:var(--navy3);border:1px solid var(--line)}
+.dots i.on{background:var(--gold);border-color:var(--gold)}
+.dots i.g{background:var(--good);border-color:var(--good)}
+.dots i.o{background:var(--warn);border-color:var(--warn)}
+.dots i.b{background:var(--bad);border-color:var(--bad)}
+
+/* ---------- chat (messenger style) ---------- */
+.chat{border-radius:14px;overflow:hidden;border:1px solid #0d223d;background:var(--chat)}
+.chead{background:#243447;color:#fff;display:flex;align-items:center;gap:8px;padding:8px 12px;font-weight:600;font-size:.95rem}
+.chead svg{width:13px;height:13px;flex:none}
+.chead .more{margin-left:auto;background:rgba(255,255,255,.12);color:#fff;border:none;border-radius:99px;font-size:.72rem;padding:3px 10px}
+.cbody{height:300px;overflow-y:auto;padding:10px 12px 14px;display:flex;flex-direction:column;gap:9px;scroll-behavior:smooth}
+.pill{align-self:center;background:rgba(15,30,50,.35);color:#fff;font-size:.72rem;border-radius:99px;padding:3px 12px;text-align:center;max-width:92%}
+.msg{display:flex;gap:7px;align-items:flex-end;max-width:100%}
+.msg.me{justify-content:flex-end}
+.msg .bub{padding:8px 12px;border-radius:18px;font-size:.93rem;line-height:1.35;max-width:min(560px,78vw);color:#111;word-wrap:break-word}
+.msg.me .bub{background:var(--me);border-bottom-right-radius:6px}
+.msg.them .bub{background:var(--them);border-bottom-left-radius:6px}
+.msg .meta{font-size:.66rem;color:#23364f;display:flex;flex-direction:column;align-items:flex-end;line-height:1.15;flex:none}
+.msg.them .meta{align-items:flex-start}
+.av{width:34px;height:34px;border-radius:50%;color:#fff;font-weight:700;display:grid;place-items:center;flex:none;font-size:.9rem;align-self:flex-start;border:2px solid rgba(255,255,255,.7)}
+.tcol{display:flex;flex-direction:column;gap:3px;min-width:0}
+.tcol .nm{font-size:.72rem;color:#12253d;font-weight:600}
+.trow{display:flex;gap:5px;align-items:flex-end}
+.imp{font-size:.7rem;font-weight:700;padding:1px 8px;border-radius:99px;align-self:flex-start;background:rgba(255,255,255,.75);color:#1f2d3d}
+.imp.g{background:#dcfce7;color:#166534}.imp.o{background:#fef3c7;color:#92400e}.imp.b{background:#fee2e2;color:#991b1b}
+.typing .bub{display:flex;gap:4px;padding:12px 14px}
+.typing .bub i{width:7px;height:7px;border-radius:50%;background:#9aa5b1;animation:blink 1s infinite}
+.typing .bub i:nth-child(2){animation-delay:.2s}.typing .bub i:nth-child(3){animation-delay:.4s}
+@keyframes blink{0%,100%{opacity:.25}50%{opacity:1}}
+
+/* ---------- brief ---------- */
+.brief{display:grid;grid-template-columns:1fr auto;gap:12px;margin:12px 0;background:var(--navy2);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.brief .sit{font-size:.95rem}
+.brief .core{margin-top:6px;font-size:.88rem;color:var(--ink-dim)}
+.brief .core b{color:#6fe3ff;font-weight:600}
+.room{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.gauge{background:var(--navy3);border-radius:8px;padding:4px 8px;text-align:center;min-width:62px;cursor:help}
+.gauge .k{font-size:.6rem;letter-spacing:.1em;color:var(--ink-dim)}
+.gauge .v{font-family:var(--mono);font-size:1.05rem;color:var(--gold);font-weight:700}
+.gauge.r .v{color:#6fe3ff}
+.revbtn{background:none;border:1px dashed var(--line);color:var(--ink-dim);border-radius:6px;font-size:.72rem;padding:2px 6px}
+
+/* ---------- the desk ---------- */
+.desk{position:relative;background:linear-gradient(180deg,var(--rack2),var(--rack));border-radius:10px;border:1px solid #000;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.06);padding:16px 44px 18px}
+.desk::before,.desk::after{content:"";position:absolute;top:10px;bottom:10px;width:26px;border-radius:6px;background:linear-gradient(90deg,#2a2d33,#3a3e45 50%,#2a2d33);box-shadow:inset 0 0 0 1px #000}
+.desk::before{left:8px}.desk::after{right:8px}
+.screw{position:absolute;width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#c9ced6,#6b717a);box-shadow:0 0 0 1px #000}
+.screw.a{left:16px;top:18px}.screw.b{left:16px;bottom:18px}.screw.c{right:16px;top:18px}.screw.d{right:16px;bottom:18px}
+.dhead{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid #30353c;padding-bottom:8px;margin-bottom:12px}
+.dhead .mk{font-family:Georgia,serif;font-style:italic;color:var(--print);font-size:1.25rem;font-weight:700;letter-spacing:.02em}
+.dhead .md{font-size:.66rem;letter-spacing:.2em;color:var(--print-dim);text-transform:uppercase}
+.silk{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--print-dim)}
+.dgrid{display:grid;grid-template-columns:minmax(250px,330px) 1fr;gap:18px}
+
+/* fader bay */
+.fbay{background:#101215;border:1px solid #2b3036;border-radius:8px;padding:10px 10px 12px;display:flex;flex-direction:column}
+.fbay .on{font-size:.62rem;letter-spacing:.16em;color:var(--print-dim)}
+.fbay .dn{font-size:1rem;font-weight:800;letter-spacing:.14em;color:var(--print);text-transform:uppercase}
+.fbay .sl{font-size:.8rem;color:var(--gold)}
+.fend{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--print-dim);text-align:left;padding-left:58px;margin:6px 0 4px}
+.fader{display:grid;grid-template-columns:50px 1fr;gap:6px;outline:none;flex:1;min-height:200px}
+.fader:focus-visible{box-shadow:0 0 0 2px var(--gold);border-radius:6px}
+.track{position:relative;touch-action:none;cursor:ns-resize}
+.track .slot{position:absolute;left:50%;top:6px;bottom:6px;width:8px;margin-left:-4px;background:#000;border-radius:4px;box-shadow:inset 0 0 0 1px #3a3f46}
+.track .tick{position:absolute;left:4px;right:4px;height:1px;background:#4b525b}
+.track .tick b{position:absolute;left:-2px;top:-7px;font-size:.6rem;color:var(--print-dim);font-family:var(--mono);font-weight:400}
+.cap{position:absolute;left:50%;width:44px;height:26px;margin-left:-22px;margin-top:-13px;border-radius:4px;background:linear-gradient(180deg,#f3f4f6,#b8bec7 45%,#8e959f 55%,#d9dde2);box-shadow:0 3px 6px rgba(0,0,0,.6),inset 0 0 0 1px #5a616b;transition:top .16s ease}
+.cap::after{content:"";position:absolute;left:4px;right:4px;top:12px;height:2px;background:#111}
+.cap.off{opacity:.25}
+.rows{display:flex;flex-direction:column}
+.frow{flex:1;min-height:38px;display:flex;align-items:center;gap:6px;background:none;border:none;border-left:3px solid transparent;color:var(--print);text-align:left;padding:3px 6px;border-radius:0 6px 6px 0}
+.frow:hover{background:#1b1f24}
+.frow.sel{background:#232a1f;border-left-color:var(--ledg)}
+.frow .led{width:8px;height:8px;border-radius:50%;background:#3a2a26;flex:none}
+.frow.sel .led{background:var(--ledg);box-shadow:0 0 6px var(--ledg)}
+.frow .tx{display:flex;flex-direction:column;min-width:0}
+.frow .dg{font-size:.72rem;font-weight:700;letter-spacing:.04em;color:#ffd97a}
+.frow .pv{font-size:.74rem;color:var(--print-dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:230px}
+.frow .star{margin-left:auto;color:var(--gold);font-size:.85rem;flex:none}
+.fempty{color:var(--print-dim);font-size:.85rem;padding:30px 10px;text-align:center;border:1px dashed #333;border-radius:8px;margin-top:10px}
+
+/* right bay */
+.rbay{display:flex;flex-direction:column;gap:12px;min-width:0}
+.sut{background:#0f1113;border:1px solid #2b3036;border-radius:8px;padding:10px 12px}
+.slots{display:flex;flex-wrap:wrap;gap:8px 8px;margin-top:8px}
+.sl{display:flex;flex-direction:column;align-items:stretch;gap:5px;min-width:74px;max-width:100%}
+.stxt{background:#1c2026;border:1px solid #394049;border-radius:6px;padding:6px 9px;font-size:.88rem;color:var(--print);min-height:34px;display:flex;align-items:center;cursor:pointer;word-break:break-word}
+.stxt.unset{border-style:dashed;color:#6d7680;font-style:italic}
+.stxt.none{color:#7d8792;font-style:italic}
+.stxt.fixed{background:#0d2a33;border-color:#1f6475;color:#8fe8ff;cursor:default}
+.sl.act .stxt{border-color:var(--ledg);box-shadow:0 0 0 1px var(--ledg)}
+.sl.g .stxt{border-color:var(--good)}.sl.o .stxt{border-color:var(--warn)}.sl.b .stxt{border-color:var(--bad)}
+.ck{display:flex;align-items:center;gap:5px;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--print-dim);cursor:pointer;user-select:none}
+.ck input{appearance:none;-webkit-appearance:none;width:15px;height:15px;border:1.5px solid #8d96a0;border-radius:3px;background:#000;margin:0;display:grid;place-items:center;flex:none}
+.ck input:checked{border-color:var(--ledg);background:#0e2b16}
+.ck input:checked::after{content:"";width:7px;height:7px;background:var(--ledg);border-radius:1px;box-shadow:0 0 5px var(--ledg)}
+.ck input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.ck .done{color:var(--ledg);font-size:.75rem}
+.lock{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#4fb6cc}
+.live{margin-top:12px;padding-top:10px;border-top:1px solid #262b31;font-size:1.05rem;color:#fff;display:flex;gap:10px;align-items:flex-start}
+.live .s{flex:1}
+.live .ph{color:#6d7680;font-style:italic}
+.hear{background:#22272e;border:1px solid #3a414a;color:var(--print);border-radius:6px;font-size:.72rem;padding:4px 8px;flex:none}
+.lcd{background:var(--lcd);border:1px solid #1f3a27;border-radius:6px;padding:9px 12px;font-family:var(--mono);color:var(--lcdink);font-size:.8rem;min-height:62px;box-shadow:inset 0 0 12px rgba(0,0,0,.6)}
+.lcd .t{color:#d7ffe0;font-weight:700}
+.lcd .dim{color:#5fae74}
+.mrow{display:grid;grid-template-columns:auto auto 1fr;gap:12px;align-items:stretch}
+.vu{background:#101215;border:1px solid #2b3036;border-radius:6px;padding:5px;width:150px}
+.vu svg{display:block;width:100%;height:auto}
+.vu .cap2{font-size:.58rem;letter-spacing:.14em;color:var(--print-dim);text-align:center;margin-top:2px}
+.ndl{transition:transform .5s cubic-bezier(.3,1.4,.5,1);transform-origin:70px 72px}
+.coach{background:#1b1a12;border:1px solid #5c4d1b;border-radius:6px;padding:9px 12px;font-size:.84rem;color:#f1e3b0}
+.coach b{color:var(--gold)}
+.coach .why{margin-top:6px;color:#e6d59a;border-top:1px dashed #5c4d1b;padding-top:6px}
+.acts{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.dbtn{background:#25292f;border:1px solid #3d444d;color:var(--print);border-radius:6px;padding:8px 12px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.dbtn:hover:not(:disabled){border-color:#8d96a0}
+.dbtn:disabled{opacity:.35;cursor:not-allowed}
+.commit{margin-left:auto;background:linear-gradient(180deg,#ff6a4a,#c42c12);border:1px solid #5a1206;color:#fff;border-radius:8px;padding:10px 22px;font-weight:800;letter-spacing:.18em;box-shadow:0 3px 0 #5a1206}
+.commit:disabled{background:#3a2522;color:#8a6e69;box-shadow:none;border-color:#2c1a17;cursor:not-allowed}
+.commit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #5a1206}
+.need{font-size:.74rem;color:var(--print-dim)}
+.report{background:#0f1113;border:1px solid #2b3036;border-radius:8px;padding:10px 12px;font-size:.85rem}
+.report h4{margin:0 0 6px;font-size:.7rem;letter-spacing:.16em;color:var(--print-dim);text-transform:uppercase}
+.rline{display:grid;grid-template-columns:22px 1fr;gap:6px;padding:4px 0;border-bottom:1px solid #1d2126}
+.rline:last-of-type{border-bottom:none}
+.rline .ic{font-weight:800}
+.ic.g{color:var(--good)}.ic.o{color:var(--warn)}.ic.b{color:var(--bad)}
+.rline .n{color:#b9c3cd}
+.rline .bt{color:#ffd97a}
+.model{margin-top:8px;padding:8px 10px;background:#11202a;border-left:3px solid #6fe3ff;border-radius:4px;color:#dff6ff}
+.model .silk{display:block;margin-bottom:2px}
+
+/* ---------- debrief ---------- */
+.deb{display:grid;gap:14px;margin-top:14px}
+.verdict{border-radius:14px;padding:16px 18px;border:1px solid var(--line);background:var(--navy2);display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center}
+.verdict .big{font-size:1.4rem;font-weight:800;letter-spacing:.06em}
+.verdict.win{border-color:var(--good)}.verdict.win .big{color:var(--good)}
+.verdict.part{border-color:var(--warn)}.verdict.part .big{color:var(--warn)}
+.verdict.fail{border-color:var(--bad)}.verdict.fail .big{color:var(--bad)}
+.score{font-family:var(--mono);font-size:2rem;color:var(--gold);text-align:right}
+.score small{display:block;font-size:.7rem;color:var(--ink-dim);font-family:var(--sans)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.panel{background:var(--navy2);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.panel h3{margin:0 0 8px;font-size:.95rem}
+.panel ul{margin:0;padding-left:18px}
+.panel li{margin:5px 0;font-size:.88rem}
+.panel li .q{color:#ffd97a}
+.bars{display:grid;gap:6px}
+.bar{display:grid;grid-template-columns:150px 1fr 48px;gap:8px;align-items:center;font-size:.82rem}
+.bar .tr{height:9px;background:var(--navy3);border-radius:99px;overflow:hidden}
+.bar .tr i{display:block;height:100%;background:var(--gold)}
+.bar .v{font-family:var(--mono);color:var(--ink-dim);text-align:right}
+.tx{width:100%;border-collapse:collapse;font-size:.85rem}
+.tx td,.tx th{border-bottom:1px solid var(--line);padding:7px 6px;vertical-align:top;text-align:left}
+.tx th{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim)}
+.tx .you{color:#bff5a6}.tx .mdl{color:#9fe8ff}
+.mk{display:inline-block;padding:1px 7px;border-radius:99px;font-size:.7rem;font-weight:700}
+.mk.g{background:#dcfce7;color:#166534}.mk.o{background:#fef3c7;color:#92400e}.mk.b{background:#fee2e2;color:#991b1b}
+
+/* ---------- modal ---------- */
+.modal{position:fixed;inset:0;background:rgba(3,8,16,.72);display:none;align-items:flex-start;justify-content:center;padding:30px 12px;z-index:50;overflow-y:auto}
+.modal.show{display:flex}
+.mbox{background:var(--navy2);border:1px solid var(--line);border-radius:14px;max-width:860px;width:100%;padding:16px 18px}
+.mbox h2{margin:0 0 6px;color:var(--gold)}
+.mbox h3{margin:14px 0 4px;font-size:.98rem}
+.mbox p,.mbox li{font-size:.88rem;color:var(--ink-dim)}
+.mbox table{width:100%;border-collapse:collapse;font-size:.84rem}
+.mbox td{border-bottom:1px solid var(--line);padding:5px 6px;vertical-align:top}
+.mbox td:first-child{color:var(--gold);white-space:nowrap;font-weight:600}
+
+@media (max-width:860px){
+  .hero,.two{grid-template-columns:1fr}
+  .dgrid{grid-template-columns:1fr;gap:12px}
+  .rbay{display:contents}
+  .sut{order:1}.fbay{order:2}.lcd{order:3}.acts{order:4}#report{order:5}.mrow{order:6}
+  .fader{min-height:0}
+  .brief{grid-template-columns:1fr}
+  .room{justify-content:flex-start}
+  .desk{padding:14px 12px 16px}
+  .desk::before,.desk::after,.screw{display:none}
+  .mrow{grid-template-columns:1fr 1fr}
+  .mrow .coach{grid-column:1/-1}
+  .vu{width:auto}
+  .cbody{height:280px}
+  .verdict{grid-template-columns:1fr}
+  .score{text-align:left}
+  .bar{grid-template-columns:110px 1fr 40px}
+  .frow .pv{max-width:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <svg class="emblem" viewBox="0 0 64 64" aria-hidden="true">
+    <circle cx="32" cy="32" r="30" fill="#0F2440" stroke="#D4AF37" stroke-width="1.6"/>
+    <path d="M32 13l3.1 6.6 7.2.9-5.3 5 1.4 7.1L32 29.2l-6.4 3.4 1.4-7.1-5.3-5 7.2-.9z" fill="#D4AF37"/>
+    <path d="M10 40c7-3.5 14-4.5 22-4.5S47 36.5 54 40c-7 1.2-11 2.6-14 4.4-2.6-1.6-5-2.4-8-2.4s-5.4.8-8 2.4C21 42.6 17 41.2 10 40z" fill="#8f7626"/>
+    <rect x="24" y="48" width="16" height="2.2" rx="1.1" fill="#D4AF37"/>
+    <rect x="27" y="52" width="10" height="2.2" rx="1.1" fill="#8f7626"/>
+  </svg>
+  <div class="brand">
+    <h1>MODULATION DESK</h1>
+    <div class="sub">Thought Modulation · The Linguistic Simulator · RTAF Finance English</div>
+  </div>
+  <div class="hctl">
+    <button class="hbtn" id="homeBtn">Scenarios</button>
+    <button class="hbtn" id="refBtn">Dial reference</button>
+    <button class="hbtn" id="voiceBtn" title="Read replies aloud">Voice: off</button>
+    <button class="hbtn" data-fs="-1" title="Smaller text">A&minus;</button>
+    <button class="hbtn" data-fs="1" title="Larger text">A+</button>
+  </div>
+</header>
+<main id="app"></main>
+<div class="modal" id="ref"><div class="mbox" id="refBox"></div></div>
+<footer>
+  Modulation Desk — an unofficial English-language training aid built on Teacher Chris's Thought Modulation method.
+  Emblem, people, units and scenarios are fictional and are not affiliated with or endorsed by the Royal Thai Air Force.
+</footer>
+</div>
+<script>
+/* ======================================================================
+   DATA — dimensions, people, reaction banks
+   Option format: [text, degree label, grade(2 good / 1 near / 0 off), tag, note, extras]
+   extras: {q:1} makes the sentence a question · {m:"!"} sets the end mark
+   ====================================================================== */
+const DIMS = {
+  register:{name:"Register",      lo:"Friendly",      hi:"Deference",   g:"Register"},
+  direct:  {name:"Directness",    lo:"Direct",        hi:"Remote",      g:"Polite speech"},
+  hedge:   {name:"Hedging",       lo:"Straight",      hi:"Heavy frame", g:"Modals for hedging"},
+  commit:  {name:"Commitment",    lo:"0% sure",       hi:"100% sure",   g:"Modals for hedging"},
+  grain:   {name:"Detail",        lo:"Status only",   hi:"Every step",  g:"Register"},
+  order:   {name:"Order",         lo:"Story first",   hi:"Point first", g:"Register"},
+  affect:  {name:"Affect",        lo:"Calm",          hi:"Very emphatic", g:"Register"},
+  tense:   {name:"Tense",         lo:"Earlier",       hi:"Later",       g:"Tenses"},
+  cond:    {name:"Conditional",   lo:"Real",          hi:"Unreal / formal", g:"Conditional sentences"},
+  report:  {name:"Reported speech", lo:"Quoted",      hi:"Formal report", g:"Reported speech"},
+  nominal: {name:"Nominalisation", lo:"Spoken verbs", hi:"Dense nouns", g:"Nominalisation"},
+  time:    {name:"Timing",        lo:"Urgent",        hi:"Open",        g:"Polite speech"}
+};
+
+/* reaction tags, in priority order (first match wins when several slots slip) */
+const TAGS = ["low","blunt","blame","hype","odd","tense","cond","report","order","unsure","sure","vague","over","flat","high"];
+const TAG_LABEL = {
+  low:"Too casual / rude", high:"Too formal / stiff", blunt:"Too direct", vague:"Unclear",
+  unsure:"Sounds unsure", sure:"Over-certain", tense:"Tense confusion", cond:"Conditional mix-up",
+  report:"Reported-speech slip", hype:"Too emotional", flat:"Flat / cold", over:"Too much detail",
+  order:"Point buried", blame:"Unproven blame", odd:"Wrong name convention"
+};
+
+/* ---------- people ---------- */
+const PEOPLE = {
+  malee:{name:"Squadron Leader Malee Thongchai", chat:"Sqn Ldr Malee", init:"M", col:"#2f6fb5",
+    role:"Your section head. One level above you. Fair, busy, signs off your work.",
+    rx:{low:["How rude. <em>She raises an eyebrow.</em>","<em>She puts her pen down.</em> Let's try that again with a little more respect, shall we?"],
+        high:["<em>She smiles.</em> No need to be so formal — it's only me.","<em>She laughs.</em> Relax, you're not addressing the Air Council."],
+        blunt:["<em>Her eyebrows go up.</em> Was that a request or an order?"],
+        vague:["Sorry — what exactly are you telling me?"],
+        unsure:["Have you checked, or are you guessing?"],
+        sure:["You sound very certain. Have you checked?"],
+        tense:["Sorry — has that already happened, or is it still coming?"],
+        cond:["Wait — is that what will happen, or just a 'what if'?"],
+        report:["Sorry — who said what, exactly?"],
+        hype:["<em>She holds up a hand.</em> Calm down."],
+        over:["<em>She glances at the clock.</em> The short version, please."],
+        order:["<em>She interrupts.</em> What's the point? Start with the point."],
+        flat:["<em>She waits for more.</em> Hm."],
+        blame:["Careful. Do you actually know that?"],
+        odd:["<em>A puzzled look.</em>"],
+        ok:["<em>She nods slowly.</em>","Mm."]}},
+  ploy:{name:"Ploy", chat:"Ploy", init:"P", col:"#d0567f",
+    role:"Your desk neighbour and best friend at work. Same level. You eat lunch together every day.",
+    rx:{low:["Whoa. Rude!","<em>She blinks.</em> Okay… hello to you too."],
+        high:["<em>She stares at you.</em> Why are you talking like that? It's me!","<em>She laughs.</em> No need to be so formal, silly!"],
+        blunt:["Er — you're not my boss, you know."],
+        vague:["Huh? What do you mean?"],
+        unsure:["You don't sound sure."],
+        sure:["Wait — are you sure? Did you check?"],
+        tense:["Huh? Is that now, or before?"],
+        cond:["Wait, is that real or just 'what if'?"],
+        report:["Who said that?"],
+        hype:["Ha! Calm down!"],
+        over:["Okay, okay, too much information!"],
+        order:["Get to the point!"],
+        flat:["<em>She pokes you.</em> Why so serious? Smile!","You sound like a robot."],
+        blame:["Hey — you don't know that."],
+        odd:["<em>She giggles.</em> Who taught you that?"],
+        ok:["Ha, okay.","Mm-hm."]}},
+  nok:{name:"Khun Nok (Kanokwan)", chat:"Khun Nok", init:"N", col:"#3d9a6a",
+    role:"Clerk in the Purchasing (Procurement) section. Your own level, another section. Always busy.",
+    rx:{low:["<em>She stiffens.</em> Wow. Okay.","How rude. <em>She turns back to her screen.</em>"],
+        high:["<em>She laughs.</em> No need to be so formal — we're the same level!","Ha! Why so formal? It's just me."],
+        blunt:["<em>She frowns.</em> I don't work for you, you know."],
+        vague:["Sorry — which one? I've got forty files here."],
+        unsure:["Do you know or not?"],
+        sure:["Are you sure? That's not what I heard."],
+        tense:["Sorry, is that done already, or not yet?"],
+        cond:["Hang on — will it happen or not?"],
+        report:["Sorry — who said that?"],
+        hype:["Whoa, calm down."],
+        over:["<em>She sighs.</em> Okay, I don't need the whole story."],
+        order:["What's the actual problem?"],
+        flat:["Hm."],
+        blame:["Hey — careful who you blame."],
+        odd:["<em>She looks puzzled.</em>"],
+        ok:["Okay…","Mm."]}},
+  anan:{name:"Wing Commander Anan Prasert", chat:"Wg Cdr Anan", init:"A", col:"#34495e",
+    role:"Head of the Finance Division — your commanding officer, two levels above you. Brisk. Hates stories.",
+    rx:{low:["<em>A long pause.</em> I'll pretend I didn't hear that.","<em>He looks up slowly.</em> Who trained you?"],
+        high:["<em>He glances at the clock.</em> Get to the point.","No speeches. Just tell me."],
+        blunt:["<em>His face does not move.</em> Are you giving me orders?"],
+        vague:["Stop. What exactly happened, and how much?"],
+        unsure:["Do you know that, or do you think it?"],
+        sure:["You'd better be certain of that."],
+        tense:["Has it happened or not? Be precise."],
+        cond:["Is that a fact or a theory?"],
+        report:["Who said what? Be precise."],
+        hype:["<em>Cold.</em> Compose yourself."],
+        over:["<em>He cuts in.</em> I don't need every step. Headline."],
+        order:["<em>He interrupts.</em> Stop. What's the bottom line?"],
+        flat:["Hm."],
+        blame:["<em>Sharp.</em> Can you prove that? Then don't say it."],
+        odd:["<em>He frowns slightly.</em>"],
+        ok:["<em>He nods once.</em>","Go on."]}},
+  clarke:{name:"Squadron Leader Emma Clarke", chat:"Sqn Ldr Clarke", init:"C", col:"#7a4fb0",
+    role:"Finance officer of the visiting partner air force. Your equivalent rank. You have never met.",
+    rx:{low:["<em>A short pause on the line.</em> Right…","<em>Her smile fades a little.</em> I see."],
+        high:["<em>She smiles.</em> Oh, no need to be so formal!","Goodness — you're very formal. Please, relax."],
+        blunt:["<em>Cooler now.</em> I'll see what I can do."],
+        vague:["Sorry — I'm not quite sure what you're referring to."],
+        unsure:["Are you saying it's wrong, or asking whether it is?"],
+        sure:["You seem very certain — do you have the records?"],
+        tense:["Sorry — has that happened already?"],
+        cond:["Sorry, is that a real possibility or a hypothetical?"],
+        report:["Sorry — who said that, exactly?"],
+        hype:["<em>She blinks.</em> Oh — goodness."],
+        over:["<em>She scrolls.</em> Could you give me the short version?"],
+        order:["Sorry, what's the main issue?"],
+        flat:["Hm."],
+        blame:["<em>Stiffly.</em> I'd rather not assume anyone's at fault."],
+        odd:["<em>Politely.</em> It's Clarke, actually — Emma is my first name."],
+        ok:["Mm, okay.","Right."]}},
+  lim:{name:"Dr. Hannah Lim", chat:"Dr. Lim", init:"L", col:"#b5762f",
+    role:"Keynote speaker. Visiting professor of public finance. Friendly, but you have never met.",
+    rx:{low:["<em>She blinks.</em> Oh. Hello.","<em>A polite, tight smile.</em>"],
+        high:["<em>She laughs.</em> Goodness, no need to be so formal!","Please — 'Hannah' is fine at the coffee table."],
+        blunt:["<em>Her smile fades.</em> Well. That's direct."],
+        vague:["Sorry — in what way?"],
+        unsure:["You don't sound sure yourself."],
+        sure:["Hm, that's quite a strong claim."],
+        tense:["Sorry — did that happen, or will it?"],
+        cond:["Is that the plan, or a hypothetical?"],
+        report:["Sorry — who said that?"],
+        hype:["<em>She laughs, a little embarrassed.</em> Oh my."],
+        over:["<em>Nods politely.</em> Right… right."],
+        order:["Sorry — what's your main point?"],
+        flat:["<em>Her smile falters.</em> Oh. Just okay?"],
+        blame:["Hm — that's a serious thing to say."],
+        odd:["<em>Gently.</em> Lim is my family name, actually."],
+        ok:["Mm, I see.","Right."]}}
+};
+
+/* shared affect fader: grades per position [calm, warm, emphatic, very emphatic] */
+function AFF(g, tags){
+  tags = tags || ["flat","","hype","hype"];
+  return [
+    ["","Calm  ( . )", g[0], tags[0], "Level voice, full stop. The default above register 3."],
+    ["","Warm  ( . )", g[1], tags[1], "Same words with a smile in the voice. Safe at every register."],
+    ["","Emphatic  ( ! )", g[2], tags[2], "Raised pitch, stress on the key word. Natural with friends; positive words survive it higher up."],
+    ["","Very emphatic  ( !! )", g[3], tags[3], "Loud, high, fast. With anyone senior it reads as losing your composure."]
+  ].map((o,i)=>{ o[5] = {m:[".",".","!","!!"][i]}; return o; });
+}
+/* ======================================================================
+   SCENARIOS 0–3
+   ====================================================================== */
+const SCENARIOS = [];
+
+/* ---------------- 0 · DEMO · The Leave Request ---------------- */
+SCENARIOS.push({
+ id:"s0", demo:true, title:"The Leave Request", cefr:"Demo · B1", npc:"malee",
+ place:"Sqn Ldr Malee's office · Tuesday 10:15 · door open",
+ goal:"Get approval for two days' leave next Thursday and Friday — in the week of month-end closing.",
+ room:{d:1,p:1,s:1, dw:"You know her, but you don't eat lunch together.", pw:"Your section head, one level above you.", sw:"A favour — and it falls in month-end week."},
+ focus:["Register","Polite speech","Tenses","Conditional sentences","Reported speech","Modals for hedging"],
+ intro:"This is the guided run. The coach panel tells you which slot to open and why. Gold stars on the fader mark good settings — use them, then try other settings to hear how Malee reacts.",
+ turns:[
+ {s:"You knock on the open door. This is the first thing you have said to her today.",
+  core:"I want to talk to you.",
+  coach:"Read the room first. Distance 1 + Power 1 + Stakes 1 = 3, so aim for R3 (Professional), leaning to R4 for the rank. Open each slot with its checkbox, then move the fader. Watch the REGISTER meter move as you go.",
+  slots:[
+   {k:"greet", dim:"register", lab:"Greeting", why:"Before noon, 'Good morning' is the professional default. 'Hello' is also safe.",
+    opts:[["Hey","R1 · Friendly",0,"low","Lunch-table greeting. Only for close friends."],
+          ["Hi","R2 · Informal",1,"low","Easy and friendly. With your section head it drops a little respect."],
+          ["Hello","R3 · Professional",2,"","Neutral. Never wrong, never warm."],
+          ["Good morning","R4 · Serious",2,"","The professional default before noon. If unsure, pick this."],
+          ["A very good morning to you","R5 · Deference",0,"high","Theatrical. Sounds like a speech, not a person."]]},
+   {k:"addr", dim:"register", lab:"Address", why:"Thai service practice: rank + FIRST name. 'Ma'am' alone is always safe upward.",
+    opts:[["","R2 · (no name)",1,"low","No address at all. Fine with a peer; a little bare with your boss."],
+          [", Malee","R2 · First name",0,"low","Bare first name drops the rank she is owed."],
+          [", Khun Malee","R3 · Khun + name",1,"low","Polite Thai-English, but it skips her rank."],
+          [", Squadron Leader Malee","R4 · Rank + first name",2,"","Respectful and precise — how RTAF pairs rank with name."],
+          [", Ma'am","R5 · Ma'am",2,"","Say 'Ma'am', write 'Madam'. Always safe upward."]]},
+   {k:"pre", dim:"register", lab:"Pre-sequence", newS:true, why:"A pre-sequence asks for the floor before you take it.",
+    opts:[["Got a sec","R1 · Casual",0,"low","Slang. Fine at lunch, not at her office door.",{q:1}],
+          ["Have you got a minute","R2 · Informal",1,"low","Friendly and acceptable, a touch casual for her office.",{q:1}],
+          ["Do you have a minute","R3 · Professional",2,"","Neutral and polite.",{q:1}],
+          ["Could I have a quick word","R4 · Serious",2,"","Polite and business-like. 'Quick' respects her time.",{q:1}],
+          ["I wonder whether I might trouble you for a moment of your valuable time","R5+ · Over-deferent",0,"high","Far too much for a normal office visit. It sounds sarcastic."]]}
+  ],
+  good:"Of course. Come in and sit down — what can I do for you?",
+  cont:"Come in. What do you need?"},
+
+ {s:"She points at the chair. You sit down.",
+  core:"I take two days' leave next Thursday and Friday.",
+  coach:"This is the key request. English makes a request polite by changing the GRAMMAR, not by adding 'please'. Slide DIRECTNESS: level 4 'Could I…?' is the workhorse. Then add a FRAME that names the cost to her (it's month-end).",
+  key:true,
+  slots:[
+   {k:"frame", dim:"hedge", lab:"Softener", why:"Naming the cost to the listener buys goodwill before the ask.",
+    opts:[["","0 · (no softener)",1,"blunt","Straight to the request. Acceptable, but month-end leave costs her something."],
+          ["Sorry to bother you, but","1 · Apology",2,"","Acknowledges you are interrupting her."],
+          ["I know it's month-end, but","2 · Names the cost",2,"","Shows you have thought about her problem before yours. Very effective."],
+          ["I humbly beg your indulgence, but","3 · Grovelling",0,"high","Sounds like a period drama. Too much."]]},
+   {k:"ask", dim:"direct", lab:"Request form", why:"Could / would / might are not past tense here — they are distance markers. Distance from 'now' = distance from the demand.",
+    opts:[["I take","0 · Announcement",0,"blunt","Not a request at all — you are telling her."],
+          ["please let me take","1 · 'Please' + order",0,"blunt","'Please' does not make an English request. It is still an imperative."],
+          ["I need to take","2 · Need statement",1,"blunt","Honest, but it presents your need as her problem."],
+          ["can I take","3 · Can…?",1,"low","A real question, but casual for your section head.",{q:1}],
+          ["could I take","4 · Could…? (workhorse)",2,"","The everyday polite request. Correct almost anywhere.",{q:1}],
+          ["would it be OK if I took","5 · Would it be OK if…",2,"","Past form 'took' adds distance. Polite and natural.",{q:1}],
+          ["I was wondering if I could take","6 · I was wondering…",2,"","Very polite and indirect. Good for a favour at a bad time."],
+          ["would it be at all possible for me to take","7 · Maximum distance",1,"high","Very remote. A little heavy for a leave form.",{q:1}]]},
+   {k:"core", dim:"register", lab:"Core thought", fixed:"two days' leave next Thursday and Friday"}
+  ],
+  good:"Next Thursday and Friday… that's the 14th and 15th. What's the occasion?",
+  cont:"Next Thursday and Friday? What's the occasion?"},
+
+ {s:"<em>“What's the occasion?”</em> — Your sister's wedding is fixed for next Friday in Chiang Mai. The date and the venue are booked.",
+  core:"My sister marries next Friday.",
+  coach:"TENSE. A future event that is already arranged (booked, fixed) takes the present continuous: 'is getting married'. Then set DETAIL: give her just enough to understand why you need Thursday too.",
+  rx:{tense:"Sorry — has it happened already, or is it still coming up?"},
+  slots:[
+   {k:"tense", dim:"tense", lab:"Tense", m:4, why:"Arranged future = present continuous. 'Will' sounds like a prediction.",
+    opts:[["My sister had got married","Past perfect",0,"tense","Past-before-past. It says the wedding is long over."],
+          ["My sister got married","Past simple",0,"tense","Finished past. She'll think the wedding already happened."],
+          ["My sister has got married","Present perfect",0,"tense","Already done, with a result now. Clashes with 'next Friday'."],
+          ["My sister gets married","Present simple",1,"tense","Used for timetables. Understood, but sounds like a train schedule."],
+          ["My sister is getting married","Present continuous",2,"","Arranged future: booked, fixed, in the diary."],
+          ["My sister is going to get married","Going to",2,"","Planned future. Also natural here."],
+          ["My sister will get married","Will",1,"tense","Sounds like a prediction ('one day she will marry'), not a booked date."]]},
+   {k:"when", dim:"register", lab:"Time & place", fixed:"next Friday in Chiang Mai"},
+   {k:"detail", dim:"grain", lab:"Detail", why:"Grain answers: what does this listener need to decide?",
+    opts:[["","D · Status only",1,"vague","The wedding is Friday — so why Thursday? She will have to ask."],
+          [", and I need Thursday to travel","C · Reason for the ask",2,"","Exactly what she needs to approve both days."],
+          [", and the ceremony starts at seven, so I fly on Thursday at six, then there's the rehearsal, and my aunt needs help with the flowers","A · Every step",0,"over","She does not need the programme. Too much detail."]]}
+  ],
+  good:"Oh, congratulations to her! That's lovely news. Now — month-end closing is that week. Who will cover your accounts?",
+  cont:"…Right. But month-end closing is that week. Who will cover your accounts?"},
+
+ {s:"Ploy has already agreed to cover your accounts — you asked her yesterday. It only happens if Malee approves.",
+  core:"You approve → Ploy covers. Ploy said yes already.",
+  coach:"CONDITIONAL: this is a real future possibility, so use the FIRST conditional — If + present, will + verb. Then COMMITMENT: Ploy has already said yes, so it is a fact. Facts take no modal.",
+  rx:{cond:"Hang on — is Ploy covering or not?"},
+  slots:[
+   {k:"cond", dim:"cond", lab:"Conditional", why:"If + present simple, will + verb = a real, likely future.",
+    opts:[["If you approve it, Ploy covers my accounts","Zero conditional",1,"cond","Zero conditional is for general rules. Here it sounds like office policy."],
+          ["If you approve it, Ploy will cover my accounts","First conditional",2,"","Real future result of a real possibility. Exactly right."],
+          ["If you approved it, Ploy would cover my accounts","Second conditional",1,"cond","Hypothetical. Polite, but sounds as if you don't expect approval."],
+          ["If you had approved it, Ploy would have covered my accounts","Third conditional",0,"cond","Past, unreal — as if the chance is already gone. Makes no sense here."],
+          ["Should you approve it, Ploy would be covering my accounts","Formal inversion",0,"high","Contract English. Much too formal for your section head."]]},
+   {k:"commit", dim:"commit", lab:"Commitment", newS:true, why:"100% takes no modal at all.",
+    opts:[["I think she might agree","30% · might",0,"unsure","She already said yes. 'Might' makes you sound as if you never asked."],
+          ["She should be OK with it","70% · should",1,"unsure","Sounds like a guess. Malee will ask whether you checked."],
+          ["She will agree","90% · will",1,"tense","'Will' puts it in the future — haven't you asked her yet?"],
+          ["She's already agreed","100% · fact",2,"","Present perfect: done, with a result now. No modal on a fact."]]}
+  ],
+  good:"Good — you've planned ahead. And the VAT return? That's due on the 15th. What did Ploy say about that?",
+  cont:"Hm. And the VAT return — that's due on the 15th. What did Ploy say about it?"},
+
+ {s:"Yesterday Ploy told you: <em>“I'll file it on the 14th.”</em>",
+  core:"Ploy: “I'll file it on the 14th.”",
+  coach:"REPORTED SPEECH. 'Told' needs a person after it (told ME); 'said' doesn't. Moving the verb one step back (will → would) shows you are reporting carefully. Then close the sentence with her ADDRESS.",
+  rx:{report:"Sorry — so who's filing it?"},
+  slots:[
+   {k:"rep", dim:"report", lab:"Reporting", why:"said + (that) + clause · told + person + (that) + clause · backshift will → would.",
+    opts:[["Ploy said, ‘I'll file it on the 14th.’","Direct quote",1,"report","Word-for-word quote. Fine in chat; reporting sounds more professional upward."],
+          ["Ploy told that she would file it on the 14th","Error: told + that",0,"report","'Told' needs a person: told ME. A very common slip."],
+          ["Ploy said she will file it on the 14th","Reported, no backshift",2,"","Acceptable — the plan is still in the future."],
+          ["Ploy told me she would file it on the 14th","Reported, backshifted",2,"","Clean reported speech: told + me, will → would."],
+          ["It was confirmed by Ploy that the filing would be effected on the 14th","Passive + nouns",0,"high","Memo English. Out loud it sounds robotic."]]},
+   {k:"addr", dim:"register", lab:"Address", why:"Ending with 'Ma'am' is a respectful full stop.",
+    opts:[["","R3 · (no name)",2,"","Nothing needed mid-conversation."],
+          [", Malee","R2 · First name",0,"low","Drops her rank."],
+          [", Ma'am","R5 · Ma'am",2,"","Respectful, natural at the end of a report."]]}
+  ],
+  good:"Then I'm happy. Leave approved — put the request into the system today, please.",
+  cont:"…All right. Put the request into the system and I'll look at it."},
+
+ {s:"She has approved it. Thank her and promise to submit the form this afternoon.",
+  core:"Thank you. I submit the form this afternoon.",
+  coach:"AFFECT has a ceiling set by register — but POSITIVE affect survives higher. 'Thank you very much, Ma'am!' is safe. Two exclamation marks are not. Then use WILL for a promise.",
+  slots:[
+   {k:"thanks", dim:"register", lab:"Thanks",
+    why:"Gratitude is the one warm thing allowed at high register.",
+    opts:[["Thanks a lot","R2 · Informal",1,"low","Friendly, a bit casual for your section head."],
+          ["Thank you","R3 · Professional",2,"","Neutral and correct anywhere."],
+          ["Thank you very much","R4 · Warm formal",2,"","Warmer and more formal. Good upward."],
+          ["I am eternally grateful to you","R5+ · Excessive",0,"high","Too big for a leave form. Sounds sarcastic."]]},
+   {k:"addr", dim:"register", lab:"Address", why:"'Ma'am' after thanks is expected; its absence is noticed.",
+    opts:[["","(no name)",1,"low","Fine, but upward the address is expected here."],
+          [", Malee","R2 · First name",0,"low","Drops her rank."],
+          [", Ma'am","R5 · Ma'am",2,"","Expected. Its absence is noticed."]]},
+   {k:"aff", dim:"affect", lab:"Affect", aff:true, why:"Positive affect survives higher than negative affect.",
+    opts:AFF([2,2,2,0],["","","","hype"])},
+   {k:"commit", dim:"commit", lab:"Promise", newS:true, why:"A promise you can keep takes 'will'.",
+    opts:[["I might submit the form this afternoon","30% · might",0,"unsure","A promise so soft it isn't one."],
+          ["I should submit the form this afternoon","70% · should",1,"unsure","Expectation, not a promise. She may check tomorrow."],
+          ["I'll submit the form this afternoon","90% · will (promise)",2,"","Firm. A promise she can rely on."],
+          ["I submit the form this afternoon","Present simple",0,"tense","Present simple is for habits. Grammatically wrong here."]]}
+  ],
+  good:"You're very kind. And congratulations to your sister!",
+  cont:"Mm. Fine."},
+
+ {s:"You stand up to leave.",
+  core:"Goodbye.",
+  coach:"The last exchange is the greeting's mirror. Match the register you opened with.",
+  slots:[
+   {k:"bye", dim:"register", lab:"Leave-taking", why:"A wish for the rest of her day is warm and professional.",
+    opts:[["See ya","R1 · Slang",0,"low","Street English. Not in her office."],
+          ["Bye","R2 · Informal",1,"low","Abrupt with your section head."],
+          ["See you later","R2 · Informal",1,"low","Friendly, slightly casual for her office."],
+          ["Have a good afternoon","R4 · Serious",2,"","Warm and professional."],
+          ["Farewell","R5+ · Archaic",0,"high","Sounds like you are leaving the country."]]},
+   {k:"addr", dim:"register", lab:"Address",
+    opts:[["","(no name)",1,"low","Fine, but upward the address is expected."],
+          [", Malee","R2 · First name",0,"low","Drops her rank."],
+          [", Squadron Leader Malee","R4 · Rank + first name",2,"","Respectful and precise."],
+          [", Ma'am","R5 · Ma'am",2,"","Always safe upward."]]}
+  ],
+  good:"You too. Enjoy the wedding!",
+  cont:"Yes. Close the door on your way out."}
+ ]
+});
+
+/* ---------------- 1 · B1 · Lunch with Ploy ---------------- */
+SCENARIOS.push({
+ id:"s1", title:"Lunch Break: The Three-Way Match", cefr:"B1", npc:"ploy",
+ place:"The canteen · 12:10 · Ploy has just sat down with som tam",
+ goal:"Get Ploy to explain the three-way match — and agree to go through one with you after lunch.",
+ room:{d:0,p:0,s:0, dw:"Your best friend at work.", pw:"Same level.", sw:"A small favour between friends."},
+ focus:["Register","Polite speech","Tenses","Conditional sentences","Modals for hedging"],
+ intro:"Register 1 — Friendly. Here the danger is sounding TOO formal. Most slots should be short. That is correct, not lazy.",
+ turns:[
+ {s:"You carry your tray to Ploy's table.",
+  core:"Hello. Can I sit?",
+  slots:[
+   {k:"greet", dim:"register", lab:"Greeting",
+    opts:[["Hey","R1 · Friendly",2,"","Warm and easy — right for your best friend.",{m:"!"}],
+          ["Hi","R2 · Informal",2,"","Friendly. Fine.",{m:"!"}],
+          ["Hello","R3 · Professional",1,"high","A little stiff for your lunch buddy."],
+          ["Good afternoon","R4 · Serious",0,"high","Sounds like a meeting. She'll wonder what's wrong."],
+          ["Greetings","R5+ · Robotic",0,"high","Sounds like a robot or a science-fiction film."]]},
+   {k:"addr", dim:"register", lab:"Address",
+    opts:[["","R1 · (no name)",2,"","With a friend, nothing is needed."],
+          [", Ploy","R1 · Name",2,"","Natural and warm."],
+          [", Khun Ploy","R3 · Khun + name",1,"high","Polite, but it adds distance between friends."],
+          [", Ms. Rattanakosin","R4 · Ms. + surname",0,"high","Very cold. She'll think you're angry with her."],
+          [", Ma'am","R5 · Ma'am",0,"high","To a friend this sounds sarcastic."]]},
+   {k:"pre", dim:"register", lab:"Pre-sequence", newS:true,
+    opts:[["Move over","R1 · Order",0,"low","An order, even as a joke. A bit rude."],
+          ["Mind if I join you","R1 · Friendly",2,"","The natural friendly way.",{q:1}],
+          ["Is this seat taken","R3 · Stranger",1,"high","What you say to a stranger — funny with your best friend.",{q:1}],
+          ["Would you mind terribly if I joined you","R5 · Very formal",0,"high","Much too formal. She'll laugh at you.",{q:1}]]}
+  ],
+  good:"Of course! Sit, sit. You look tired — what's up?",
+  cont:"…Uh, sure. Sit down. What's up?"},
+
+ {s:"You've spent the whole morning on the three-way match and you still don't understand it.",
+  core:"I am stuck on the three-way match (all morning, still now).",
+  rx:{tense:"Huh? Are you still stuck, or not?"},
+  slots:[
+   {k:"tense", dim:"tense", lab:"Tense",
+    opts:[["I had been stuck on","Past perfect",0,"tense","Past-before-past. It needs another past event."],
+          ["I got stuck on","Past simple",1,"tense","Finished past — but you are still stuck now."],
+          ["I get stuck on","Present simple",0,"tense","Present simple = a habit. Sounds like it happens every day."],
+          ["I've been stuck on","Present perfect continuous",2,"","Started this morning, still true now. With 'all morning' this is right."],
+          ["I'll be stuck on","Future",0,"tense","A prediction. It's already happening."]]},
+   {k:"obj", dim:"register", lab:"Core thought", fixed:"the three-way match all morning"},
+   {k:"aff", dim:"affect", lab:"Affect", aff:true,
+    opts:AFF([1,2,2,2],["flat","","",""])}
+  ],
+  good:"Oh no, the three-way match! It's easy once you see it. What part is confusing you?",
+  cont:"The three-way match? It's easy once you see it. What part?"},
+
+ {s:"You want her to explain how it works.",
+  core:"Explain the three-way match to me.",
+  key:true,
+  slots:[
+   {k:"frame", dim:"hedge", lab:"Softener",
+    opts:[["","0 · (none)",2,"","With a friend at lunch, no cushion is needed."],
+          ["Sorry to bother you, but","1 · Apology",1,"high","She isn't busy — the apology adds distance."],
+          ["I sincerely apologise for the imposition, but","3 · Formal apology",0,"high","Business-letter English. Very strange at lunch."]]},
+   {k:"ask", dim:"direct", lab:"Request form",
+    opts:[["explain","0 · Order",0,"blunt","An order, even to a friend."],
+          ["please explain","1 · 'Please' + order",0,"blunt","Still an order. 'Please' doesn't change the grammar."],
+          ["I need you to explain","2 · Need",1,"blunt","A bit demanding."],
+          ["can you explain","3 · Can…?",2,"","Natural between friends.",{q:1}],
+          ["could you explain","4 · Could…?",2,"","Polite and still friendly.",{q:1}],
+          ["would you be able to explain","5 · Would you be able to…",1,"high","A bit formal for lunch.",{q:1}],
+          ["I was wondering if you could explain","6 · I was wondering…",0,"high","Much too careful for your best friend."],
+          ["would it be possible for you to explain","7 · Maximum distance",0,"high","She'll think you're joking.",{q:1}]]},
+   {k:"core", dim:"register", lab:"Core thought", fixed:"how the three-way match works"}
+  ],
+  good:"Sure! Three documents: the purchase order, the goods received note — the GRN — and the invoice. All three have to match before we pay. Got it?",
+  cont:"…Okay. Three documents: the purchase order, the goods received note, and the invoice. All three have to match before we pay."},
+
+ {s:"You want to check you understand the rule.",
+  core:"Invoice doesn't match PO → we don't pay (always).",
+  rx:{cond:"Huh? It's a rule — it's not 'what if'."},
+  slots:[
+   {k:"lead", dim:"register", lab:"Link word",
+    opts:[["So","R1 · Spoken",2,"","Natural spoken link."],
+          ["OK, so","R1 · Spoken",2,"","Natural — shows you're thinking."],
+          ["Therefore,","R4 · Written",1,"high","Written English. A bit stiff at lunch."],
+          ["Consequently, am I correct in understanding that","R5 · Formal",0,"high","Sounds like a court hearing."]]},
+   {k:"cond", dim:"cond", lab:"Conditional",
+    opts:[["if the invoice won't match the PO, we don't pay it","Error: will in if-clause",0,"cond","No 'will' after 'if' for a condition."],
+          ["if the invoice doesn't match the PO, we don't pay it","Zero conditional",2,"","Zero conditional = a general rule or procedure. Exactly right."],
+          ["if the invoice doesn't match the PO, we won't pay it","First conditional",2,"","Also fine — one particular case."],
+          ["if the invoice didn't match the PO, we wouldn't pay it","Second conditional",1,"cond","Hypothetical — as if it almost never happens."],
+          ["if the invoice hadn't matched the PO, we wouldn't have paid it","Third conditional",0,"cond","About the past, unreal. Not a rule."]].map(o=>{o[5]={q:1};return o;})}
+  ],
+  good:"Exactly! We hold it and ask Purchasing to check. Why? Did something happen?",
+  cont:"Um… yes, basically. If they don't match, we hold it. Why — did something happen?"},
+
+ {s:"You're not sure, but you think you paid one invoice last Tuesday without a GRN.",
+  core:"I paid one without a GRN. (Not sure.)",
+  rx:{sure:"Wait — you did?! Are you sure? Did you check?"},
+  slots:[
+   {k:"frame", dim:"hedge", lab:"Frame",
+    opts:[["","0 · (none)",2,"","Fine — the modal can carry the doubt."],
+          ["I think","1 · Light hedge",2,"","Honest: you haven't checked yet."],
+          ["It is my considered view that","3 · Formal frame",0,"high","Sounds like a report to a committee."]]},
+   {k:"commit", dim:"commit", lab:"Commitment",
+    opts:[["I can't have paid","0% · can't",0,"unsure","Says it's impossible — but you think you did."],
+          ["I might have paid","30% · might",2,"","Honest about what you know. You haven't checked."],
+          ["I must have paid","90% · must",1,"sure","A strong deduction. Stronger than your evidence."],
+          ["I paid","100% · fact",0,"sure","Sounds certain — but you haven't checked."]]},
+   {k:"obj", dim:"register", lab:"Core thought", fixed:"one without a GRN"},
+   {k:"detail", dim:"grain", lab:"Detail",
+    opts:[["","D · Status only",1,"vague","She'll ask which one, when?"],
+          ["last Tuesday","C · When",2,"","Enough for her to find it."],
+          ["on Tuesday at 3:15 in batch 42, for 18,400 baht, to Siam Office Supply, after I checked the PO twice","A · Every step",0,"over","Too much for lunch talk."]]}
+  ],
+  good:"Ah, don't panic — it happens. We can check it in the system together.",
+  cont:"Hmm. Okay, we can check it in the system."},
+
+ {s:"You want her to show you the check on your computer after lunch.",
+  core:"Show me after lunch. Thank you.",
+  key:true,
+  slots:[
+   {k:"ask", dim:"direct", lab:"Request form",
+    opts:[["show me","0 · Order",0,"blunt","An order."],
+          ["can you show me","3 · Can…?",2,"","Natural between friends.",{q:1}],
+          ["could you show me","4 · Could…?",2,"","Polite and friendly.",{q:1}],
+          ["would you mind showing me","5 · Would you mind…",2,"","Friendly and considerate.",{q:1}],
+          ["I was wondering whether you might be able to show me","6 · Very indirect",0,"high","Much too careful for a friend."]]},
+   {k:"time", dim:"time", lab:"Timing",
+    opts:[["right now","Urgent",0,"blunt","She's eating! Too pushy."],
+          ["after lunch","Specific",2,"","Clear and reasonable."],
+          ["later","Open",1,"vague","When? She can't plan."],
+          ["at your earliest convenience","Formal open",0,"high","Email English. Funny at lunch."]]},
+   {k:"thanks", dim:"register", lab:"Thanks", newS:true,
+    opts:[["You're a lifesaver","R1 · Friendly",2,"","Warm, friendly thanks.",{m:"!"}],
+          ["Thanks","R2 · Informal",2,"","Everyday thanks.",{m:"!"}],
+          ["Thank you","R3 · Neutral",1,"high","Correct, but a little cool between friends."],
+          ["I am deeply indebted to you","R5 · Formal",0,"high","Much too formal. She'll laugh."]]}
+  ],
+  good:"Ha! Of course. Bring your laptop. And you're buying the coffee!",
+  cont:"…Sure, after lunch."},
+
+ {s:"You finish first and go back to the office.",
+  core:"Bye. See you at the desk.",
+  slots:[
+   {k:"bye", dim:"register", lab:"Leave-taking",
+    opts:[["Later","R1 · Friendly",2,"","Short and friendly.",{m:"!"}],
+          ["See you back at the desk","R1 · Friendly",2,"","Warm and natural.",{m:"!"}],
+          ["Goodbye","R3 · Neutral",1,"high","A bit final and cold for a friend."],
+          ["It was a pleasure lunching with you","R5 · Formal",0,"high","Sounds like a business lunch with a stranger."]]},
+   {k:"addr", dim:"register", lab:"Address",
+    opts:[["","R1 · (no name)",2,"","Nothing needed."],
+          [", Ploy","R1 · Name",2,"","Warm."],
+          [", Khun Ploy","R3 · Khun + name",1,"high","Adds distance."],
+          [", Ms. Rattanakosin","R4 · Ms. + surname",0,"high","Very cold."]]}
+  ],
+  good:"See you! Don't forget the coffee!",
+  cont:"…Okay. Bye?"}
+ ]
+});
+
+/* ---------------- 2 · B2 · Monday Team Meeting ---------------- */
+SCENARIOS.push({
+ id:"s2", title:"Monday Team Meeting", cefr:"B2", npc:"malee", group:"Finance Section · Monday meeting",
+ place:"Meeting room 2 · Monday 09:00 · Sqn Ldr Malee chairs · Khun Nok attends for Purchasing",
+ goal:"Get the team to agree to move the receipt cut-off from the 28th to the 25th.",
+ room:{d:1,p:1,s:1, dw:"Colleagues you know, not close friends.", pw:"Your section head is chairing.", sw:"A change to procedure affects other sections."},
+ focus:["Register","Tenses","Reported speech","Polite speech","Conditional sentences","Nominalisation"],
+ intro:"Register 3 — Professional. A meeting rewards clear order: point first, then support. Watch the tense of your status update.",
+ turns:[
+ {s:"Malee looks at you: it's your turn on the agenda.",
+  core:"Hello everyone. I start with the update.",
+  slots:[
+   {k:"greet", dim:"register", lab:"Greeting",
+    opts:[["Hi guys","R1 · Friendly",0,"low","Too casual with the chair in the room."],
+          ["Morning, all","R2 · Informal",1,"low","Friendly — a touch casual for a meeting."],
+          ["Good morning, everyone","R3 · Professional",2,"","Right for a section meeting."],
+          ["Good morning, ladies and gentlemen","R4 · Conference",0,"high","Conference-stage English. Stiff for six colleagues."],
+          ["Esteemed colleagues","R5 · Ceremonial",0,"high","Ceremonial. People will smile."]]},
+   {k:"pre", dim:"direct", lab:"Taking the floor", newS:true,
+    opts:[["Me first","0 · Announcement",0,"blunt","Takes the floor without asking the chair."],
+          ["Can I start with the month-end update","3 · Can…?",2,"","A polite question to the chair.",{q:1}],
+          ["Shall I start with the month-end update","4 · Shall I…?",2,"","Offers, and lets the chair decide. Ideal.",{q:1}],
+          ["With the Chair's kind permission, I shall now commence the month-end update","7 · Ceremonial",0,"high","Parliament English. Too much."]]}
+  ],
+  good:"Yes, please — go ahead.",
+  cont:"Er — yes. Go ahead."},
+
+ {s:"12 of the 15 accounts are closed. The other 3 are waiting for receipts. The month is not over yet.",
+  core:"We close 12 of 15 accounts (so far).",
+  rx:{tense:"Sorry — is that finished, or still going on?"},
+  slots:[
+   {k:"order", dim:"order", lab:"Order",
+    opts:[["So first we collected all the receipts, then we checked them against the bank, and then","Story first",0,"order","Eleven seconds of method before the point. Reads as not able to prioritise."],
+          ["","Point first (no frame)",2,"","Straight to the headline."],
+          ["In short,","Point first + signpost",2,"","Signals: here is the headline."]]},
+   {k:"tense", dim:"tense", lab:"Tense",
+    opts:[["we had closed 12 of the 15 accounts","Past perfect",0,"tense","Past-before-past. Nothing else in the past to relate to."],
+          ["we closed 12 of the 15 accounts","Past simple",1,"tense","Finished time — but the month is still open."],
+          ["we close 12 of the 15 accounts","Present simple",0,"tense","A habit. Not an update."],
+          ["we've closed 12 of the 15 accounts","Present perfect",2,"","Progress up to now, period still open. Right for a status update."],
+          ["we'll have closed 12 of the 15 accounts","Future perfect",0,"tense","Needs a future point ('by Friday'). Clashes with 'so far'."]]},
+   {k:"sofar", dim:"register", lab:"Time", fixed:"so far"},
+   {k:"detail", dim:"grain", lab:"Detail", newS:true,
+    opts:[["","D · Status only",1,"vague","What about the other three? They'll ask."],
+          ["The other three are waiting for receipts","C · Result + cause",2,"","One clause — exactly what the room needs."],
+          ["Account 5102 is waiting for receipt R-114 from Transport, 5108 for two receipts from the Mess, and 5111 for a fuel slip that Stores says was sent on the 19th","A · Every step",0,"over","Too much for a meeting. Put it in the email."]]}
+  ],
+  good:"Good progress. Why are the other three late again? This is the third month running.",
+  cont:"Hm. Why are the other three late?"},
+
+ {s:"Finance HQ told the section last month: <em>“You must submit all accounts by the 28th.”</em> Receipts usually arrive on the 27th.",
+  core:"HQ: “You must submit everything by the 28th.” Receipts come on the 27th.",
+  slots:[
+   {k:"rep", dim:"report", lab:"Reporting",
+    opts:[["HQ said us we must submit everything by the 28th","Error: said + person",0,"report","'Said' does not take a person. Say 'told us' or 'said to us'."],
+          ["HQ said, ‘You must submit everything by the 28th.’","Direct quote",1,"report","Word for word. Understood, but a summary sounds more professional."],
+          ["HQ told us we must submit everything by the 28th","Reported, 'must' kept",2,"","Fine: the rule still applies."],
+          ["HQ told us we had to submit everything by the 28th","Reported, backshifted",2,"","must → had to. Clean reported speech."],
+          ["It has been stipulated by HQ that the submission of all accounts is required by the 28th","Passive + nouns",0,"high","Circular-letter English. Too heavy out loud."]]},
+   {k:"reason", dim:"grain", lab:"Justification", newS:true,
+    opts:[["","D · (none)",1,"vague","The room won't see the problem."],
+          ["Receipts arrive late","D · Vague",1,"vague","How late? The room can't judge."],
+          ["Most receipts only arrive on the 27th, so we have one day to check them","C · Cause + result",2,"","The problem in one sentence."],
+          ["Most receipts only arrive on the 27th, although in March some came on the 26th and in April the Mess sent theirs on the 25th, but Transport was on the 28th","A · Every data point",0,"over","Too much. The pattern is enough."]]}
+  ],
+  good:"I see the problem. So what do you propose?",
+  cont:"…And? What do you propose?"},
+
+ {s:"Now make the proposal.",
+  core:"Move the receipt cut-off from the 28th to the 25th.",
+  key:true,
+  slots:[
+   {k:"prop", dim:"direct", lab:"Suggestion form",
+    opts:[["Move","0 · Order",0,"blunt","An order to the chair and your colleagues."],
+          ["We must move","1 · Must",0,"blunt","Presents your idea as an obligation. Pushy."],
+          ["We should move","2 · Should",1,"blunt","Clear, but it closes the discussion early."],
+          ["I suggest we move","3 · I suggest",2,"","A clear proposal that leaves room to discuss."],
+          ["I'd suggest we move","4 · I'd suggest",2,"","'Would' adds a little distance. Ideal in a meeting."],
+          ["Perhaps we could consider moving","5 · Perhaps we could",2,"","Softer. Good if you expect resistance."],
+          ["It might perhaps be worth possibly considering whether we could move","7 · Over-hedged",0,"high","So many hedges that nobody hears a proposal."]]},
+   {k:"core", dim:"register", lab:"Core thought", fixed:"the receipt cut-off from the 28th to the 25th"}
+  ],
+  good:[["nok","Hmm, the 25th? That's quite early for us in Purchasing. Suppliers are always late."]],
+  cont:[["nok","The 25th? That's too early for Purchasing. Suppliers are always late."]]},
+
+ {s:"Khun Nok (Purchasing) objects. Answer her: moving the date gives Finance three full days to check.",
+  core:"Move to the 25th → three days to check.",
+  key:true,
+  rx:{cond:"Sorry — are you saying it will help or not?"},
+  slots:[
+   {k:"addr", dim:"register", lab:"Address",
+    opts:[["","(no name)",2,"","Fine in a meeting."],
+          ["Nok,","R2 · First name",1,"low","A bit bare across sections in a meeting."],
+          ["Khun Nok,","R3 · Khun + name",2,"","Polite Thai-English courtesy."],
+          ["Ms. Kanokwan,","R4 · Ms. + name",1,"high","Correct in writing; stiff in the room."]]},
+   {k:"frame", dim:"hedge", lab:"Softener",
+    opts:[["no, but","0 · Flat no",0,"blunt","Starts with a refusal. She'll defend her position."],
+          ["","0 · (none)",1,"blunt","Goes straight to the argument. A little abrupt after an objection."],
+          ["I understand, but","1 · Acknowledge",2,"","Accepts her point before you answer it."],
+          ["I take your point, but","2 · Acknowledge",2,"","Professional and respectful."],
+          ["with all due respect,","2 · 'Respect' frame",0,"high","In English this often signals polite disagreement — and can sound like an attack."]]},
+   {k:"cond", dim:"cond", lab:"Conditional",
+    opts:[["if we will move it to the 25th, we will have three full days to check everything","Error: will in if-clause",0,"cond","No 'will' after 'if' in the condition."],
+          ["if we move it to the 25th, we have three full days to check everything","Zero conditional",1,"cond","Sounds like a general law, not a proposal."],
+          ["if we move it to the 25th, we'll have three full days to check everything","First conditional",2,"","Real possible future — confident proposal."],
+          ["if we moved it to the 25th, we'd have three full days to check everything","Second conditional",2,"","Tentative: the proposal is still under discussion. Also good."],
+          ["if we had moved it to the 25th, we would have had three full days to check everything","Third conditional",1,"cond","About last month — true, but it looks backwards, not forwards."]]}
+  ],
+  good:[["nok","Okay, that's fair — as long as suppliers get a reminder on the 20th."],["malee","Then it's agreed. Could you summarise the decision for the minutes?"]],
+  cont:[["nok","…Fine. I suppose so."],["malee","Let's move on. Could you summarise the decision for the minutes?"]]},
+
+ {s:"Malee wants one sentence for the written minutes, plus the action point.",
+  core:"We decided: cut-off → 25th. Purchasing reminds suppliers on the 20th.",
+  slots:[
+   {k:"min", dim:"nominal", lab:"Minutes style",
+    opts:[["We talked about it and we said okay, we'll move it","Chat style",0,"low","Spoken chat. Minutes are a written record."],
+          ["We decided to move the cut-off to the 25th","Verb style",1,"low","Clear and correct — a little conversational for minutes."],
+          ["Decision: the receipt cut-off moves to the 25th, effective next month","Note style (noun head)",2,"","'Decision:' is a noun heading — clean minutes style."],
+          ["It was agreed that the receipt cut-off would move to the 25th, effective next month","Formal record",2,"","Classic minutes: passive 'it was agreed', no names."],
+          ["The implementation of the relocation of the determination of the cut-off date was the subject of agreement","Over-nominalised",0,"high","A chain of nouns. Nobody can read it."]]},
+   {k:"act", dim:"commit", lab:"Action point", newS:true,
+    opts:[["Purchasing might send suppliers a reminder on the 20th","30% · might",0,"unsure","An action point that might not happen isn't an action point."],
+          ["Purchasing should send suppliers a reminder on the 20th","70% · should",1,"unsure","Expectation, not a commitment."],
+          ["Purchasing will send suppliers a reminder on the 20th","90% · will",2,"","A clear commitment for the record."]]}
+  ],
+  good:"Perfect — that's exactly how it should read. Anything else before we close?",
+  cont:"Mm. I'll tidy that up. Anything else before we close?"},
+
+ {s:"You have nothing else. Close your part of the meeting.",
+  core:"That's all. Thank you.",
+  slots:[
+   {k:"close", dim:"register", lab:"Closing",
+    opts:[["Nope, done","R1 · Friendly",0,"low","Too casual in a meeting."],
+          ["That's all from me","R3 · Professional",2,"","Clear and polite."],
+          ["Nothing further","R4 · Formal",2,"","Crisp and professional."],
+          ["I have nothing further to add at this juncture","R5 · Ceremonial",0,"high","Sounds like a lawyer in court."]]},
+   {k:"thanks", dim:"register", lab:"Thanks", newS:true,
+    opts:[["Cheers, guys","R1 · Friendly",0,"low","Too casual for the chair."],
+          ["Thanks, everyone","R2 · Informal",2,"","Friendly and fine in a section meeting."],
+          ["Thank you, everyone","R3 · Professional",2,"","Neutral and correct."],
+          ["I thank you all for your kind attention","R5 · Speech",0,"high","Conference-speech English."]]}
+  ],
+  good:"Thank you. Good meeting, everyone — see you next Monday.",
+  cont:"Right. Meeting closed."}
+ ]
+});
+
+/* ---------------- 3 · B2 · Chasing the Invoice ---------------- */
+SCENARIOS.push({
+ id:"s3", title:"Chasing the Invoice", cefr:"B2", npc:"nok",
+ place:"Purchasing section · Wednesday 13:30 · tomorrow is the payment run",
+ goal:"Get Khun Nok to make the supplier send the missing invoice TODAY, so it makes tomorrow's payment run.",
+ room:{d:1,p:0,s:1, dw:"Another section — you know her name and job.", pw:"Same level. Neither of you reports to the other.", sw:"A deadline, and she owes you nothing."},
+ focus:["Polite speech","Tenses","Conditional sentences","Reported speech","Register"],
+ intro:"Register 2–3. She doesn't work for you, so the request must be a real request. Past simple vs present perfect matters in the background story.",
+ turns:[
+ {s:"You walk over to Khun Nok's desk.",
+  core:"Hello. Do you have time?",
+  slots:[
+   {k:"greet", dim:"register", lab:"Greeting",
+    opts:[["Yo","R1 · Slang",0,"low","Street slang. Rude to someone you don't know well."],
+          ["Hi","R2 · Informal",2,"","Friendly and right for a colleague at your level."],
+          ["Hello","R3 · Professional",2,"","Neutral. Always safe."],
+          ["Good afternoon","R4 · Serious",1,"high","Correct, a bit formal for a colleague's desk."],
+          ["Good afternoon, Madam","R5 · Deference",0,"high","Far too formal for a peer. Sounds sarcastic."]]},
+   {k:"addr", dim:"register", lab:"Address",
+    opts:[[", Nokkie","R1 · Nickname",0,"low","Pet name. You're not close enough."],
+          [", Nok","R2 · First name",1,"low","Acceptable, a little bare."],
+          [", Khun Nok","R3 · Khun + name",2,"","The Thai-English workplace default. Right."],
+          [", Ms. Kanokwan","R4 · Ms. + name",1,"high","Correct in an email; cold face to face."]]},
+   {k:"pre", dim:"register", lab:"Pre-sequence", newS:true,
+    opts:[["You free","R1 · Casual",1,"low","Very casual.",{q:1}],
+          ["Have you got a minute","R2 · Informal",2,"","Friendly and polite.",{q:1}],
+          ["Do you have a minute","R3 · Professional",2,"","Neutral and polite.",{q:1}],
+          ["Might I request a moment of your time","R5 · Formal",0,"high","Much too formal between peers.",{q:1}]]}
+  ],
+  good:"Sure, what's up?",
+  cont:"…Yes? What is it?"},
+
+ {s:"Stores received the fuel filters on the 3rd. There is still no invoice today.",
+  core:"We receive the filters on the 3rd. The invoice doesn't arrive (until now).",
+  rx:{tense:"Sorry — did it arrive or not?"},
+  slots:[
+   {k:"t1", dim:"tense", lab:"Tense 1",
+    opts:[["We had received the fuel filters on the 3rd","Past perfect",0,"tense","Past-before-past — but there's no later past event."],
+          ["We received the fuel filters on the 3rd","Past simple",2,"","A finished event with a specific date: past simple."],
+          ["We have received the fuel filters on the 3rd","Present perfect",0,"tense","Present perfect can't take a finished date like 'on the 3rd'."],
+          ["We receive the fuel filters on the 3rd","Present simple",0,"tense","Sounds like a monthly habit."]]},
+   {k:"t2", dim:"tense", lab:"Tense 2",
+    opts:[[", but the invoice didn't arrive yet","Past simple + yet",1,"tense","Common in American speech, but 'yet' prefers the present perfect."],
+          [", but the invoice hasn't arrived yet","Present perfect",2,"","Up to now, still not here. Exactly right."],
+          [", but the invoice doesn't arrive yet","Present simple",0,"tense","Present simple with 'yet' is wrong."],
+          [", but the invoice won't arrive yet","Future",0,"tense","A prediction. Confusing."]]}
+  ],
+  good:"Oh — the Bangkok Aero Supply order? I thought they sent it last week.",
+  cont:"The Bangkok Aero Supply order? I thought they sent it."},
+
+ {s:"You need her to call the supplier. She doesn't have to help you.",
+  core:"Ask the supplier to send it today.",
+  key:true,
+  slots:[
+   {k:"frame", dim:"hedge", lab:"Softener",
+    opts:[["","0 · (none)",1,"blunt","Straight in. A little abrupt for a favour."],
+          ["Sorry to chase you, but","1 · Apology",2,"","Acknowledges this is extra work for her."],
+          ["I know you're busy, but","2 · Names the cost",2,"","Names her cost before you ask. Effective."],
+          ["I hate to impose upon your esteemed section, but","3 · Grovelling",0,"high","Sounds sarcastic between peers."]]},
+   {k:"ask", dim:"direct", lab:"Request form",
+    opts:[["tell them to send it","0 · Order",0,"blunt","You're giving orders to another section."],
+          ["please ask them to send it","1 · 'Please' + order",0,"blunt","'Please' doesn't make it a request. Still an order."],
+          ["I need you to ask them to send it","2 · Need",1,"blunt","Honest, but pushy for someone who doesn't report to you."],
+          ["can you ask them to send it","3 · Can…?",2,"","Friendly, direct request between peers.",{q:1}],
+          ["could you ask them to send it","4 · Could…?",2,"","The workhorse. Polite and clear.",{q:1}],
+          ["would you be able to ask them to send it","5 · Would you be able…",2,"","Polite and considerate.",{q:1}],
+          ["I was wondering if you could possibly ask them to send it","6 · Very indirect",1,"high","A lot of distance for a same-level colleague."],
+          ["would it be at all possible for you to ask them to send it","7 · Maximum distance",0,"high","Far too formal. Sounds sarcastic.",{q:1}]]},
+   {k:"time", dim:"time", lab:"Timing",
+    opts:[["","(no time)",0,"vague","No deadline — she won't know it's urgent."],
+          ["sometime","Open",0,"vague","'Sometime' kills the urgency."],
+          ["ASAP","Vague urgent",1,"vague","Urgent, but not a date. 'ASAP' is heard as 'I don't know when'."],
+          ["today","Specific",2,"","Clear deadline."],
+          ["by four o'clock today","Very specific",2,"","A precise deadline she can act on."]]}
+  ],
+  good:"Today? That's a bit tight. Why the rush?",
+  cont:"Today? Why the rush?"},
+
+ {s:"If it doesn't arrive today, the invoice misses tomorrow's payment run — and the supplier waits a month.",
+  core:"Not today → misses the run → the supplier waits a month.",
+  key:true,
+  rx:{cond:"Hang on — will it miss the run or not?"},
+  slots:[
+   {k:"cond", dim:"cond", lab:"Conditional",
+    opts:[["If it won't arrive today, it'll miss tomorrow's payment run","Error: will in if-clause",0,"cond","No 'will' in the if-clause."],
+          ["If it doesn't arrive today, it misses tomorrow's payment run","Zero conditional",1,"cond","Sounds like a general law. Understood."],
+          ["If it doesn't arrive today, it'll miss tomorrow's payment run","First conditional",2,"","Real, likely consequence. Exactly right."],
+          ["Unless it arrives today, it'll miss tomorrow's payment run","Unless (= if not)",2,"","'Unless' = 'if not'. Strong and clear."],
+          ["If it didn't arrive today, it would miss tomorrow's payment run","Second conditional",1,"cond","Hypothetical — makes the danger sound unlikely."],
+          ["If it hadn't arrived today, it would have missed tomorrow's payment run","Third conditional",0,"cond","Past and unreal. Makes no sense for tomorrow."]]},
+   {k:"detail", dim:"grain", lab:"Consequence", newS:true,
+    opts:[["","D · (none)",1,"vague","She hears your deadline, not a reason she cares about."],
+          ["Then they won't be paid until next month","C · What it means for them",2,"","Gives her (and the supplier) a reason to act."],
+          ["The next run is on the 15th, after the budget committee meets, subject to the Division head's signature and the bank's cut-off","A · Every step",0,"over","Too much process."]]}
+  ],
+  good:"Ah, that changes things — they'll be furious if they wait a month. But didn't you call them yourself? What did they say?",
+  cont:"Hm. Didn't you call them yourself? What did they say?"},
+
+ {s:"On Friday the supplier's accountant, Khun Somsak, told you: <em>“I'll send it on Monday.”</em> Monday has passed.",
+  core:"Somsak: “I'll send it on Monday.” Nothing has come.",
+  rx:{report:"Sorry — who said what?"},
+  slots:[
+   {k:"rep", dim:"report", lab:"Reporting",
+    opts:[["Khun Somsak said, ‘I'll send it on Monday.’","Direct quote",1,"report","Word for word. Fine in chat; less precise."],
+          ["Khun Somsak said me he would send it on Monday","Error: said + person",0,"report","'Said' doesn't take a person. 'Told me' does."],
+          ["Khun Somsak told me he will send it on Monday","No backshift",1,"report","Monday is past — the promise is in the past, so backshift to 'would'."],
+          ["Khun Somsak told me he would send it on Monday","Reported, backshifted",2,"","told + me, will → would. Clean."],
+          ["It was indicated by Khun Somsak that dispatch would occur on Monday","Passive + nouns",0,"high","Memo English. Strange out loud."]]},
+   {k:"t", dim:"tense", lab:"Tense",
+    opts:[[", but nothing came",
+           "Past simple",1,"tense","Understood, but 'up to now' needs the present perfect."],
+          [", but nothing has come","Present perfect",2,"","Up to now, still nothing. Right."],
+          [", but nothing comes","Present simple",0,"tense","Present simple = habit. Wrong here."]]}
+  ],
+  good:"Typical. Okay — I'll call him right now and ask him to email a PDF today.",
+  cont:"…Okay. I'll call him."},
+
+ {s:"She's going to call. Thank her and offer help.",
+  core:"Thank you. If you need the PO number, tell me.",
+  rx:{cond:"Er — okay?"},
+  slots:[
+   {k:"thanks", dim:"register", lab:"Thanks",
+    opts:[["Cheers","R1 · Friendly",1,"low","Casual; fine with a friend, a little light here."],
+          ["Thanks","R2 · Informal",2,"","Friendly and right."],
+          ["Thank you so much","R3 · Warm",2,"","Warm, sincere."],
+          ["You're very kind","R3 · Warm",2,"","Polite and warm."],
+          ["I am profoundly grateful","R5 · Formal",0,"high","Too much for a phone call to a supplier."]]},
+   {k:"offer", dim:"cond", lab:"Offer", newS:true,
+    opts:[["Call me if you need the PO number","Imperative + if",2,"","Friendly offer."],
+          ["If you need the PO number, just let me know","First conditional",2,"","Natural, helpful offer."],
+          ["If you needed the PO number, I would give it to you","Second conditional",1,"cond","Hypothetical — sounds unlikely, a bit strange."],
+          ["If you would need the PO number, tell me","Error: would in if-clause",0,"cond","No 'would' in the if-clause here."],
+          ["Should you require the PO number, please do not hesitate to contact me","Letter formula",0,"high","Business-letter formula. Very stiff face to face."]]}
+  ],
+  good:"Will do. I'll message you when the PDF comes in.",
+  cont:"Mm-hm."},
+
+ {s:"You go back to your desk.",
+  core:"Bye.",
+  slots:[
+   {k:"bye", dim:"register", lab:"Leave-taking",
+    opts:[["Laters","R1 · Slang",0,"low","Slang. Too casual."],
+          ["See you","R2 · Informal",2,"","Friendly."],
+          ["See you later","R2 · Informal",2,"","Friendly and natural."],
+          ["Goodbye","R3 · Neutral",1,"high","A bit final and cold."],
+          ["Farewell","R5 · Archaic",0,"high","Sounds like a film."]]},
+   {k:"addr", dim:"register", lab:"Address",
+    opts:[["","(no name)",2,"","Fine."],
+          [", Nokkie","R1 · Nickname",0,"low","Too familiar."],
+          [", Khun Nok","R3 · Khun + name",2,"","Polite and warm."],
+          [", Madam","R5 · Madam",0,"high","Sarcastic between peers."]]}
+  ],
+  good:"Bye! Fingers crossed for today.",
+  cont:"Bye."}
+ ]
+});
+/* ======================================================================
+   SCENARIOS 4–6 (C1)
+   ====================================================================== */
+
+/* ---------------- 4 · C1 · The Duplicate Payment ---------------- */
+SCENARIOS.push({
+ id:"s4", title:"The Duplicate Payment", cefr:"C1", npc:"anan",
+ place:"Division head's office · Thursday 08:05 · the door is half open",
+ goal:"Report a 1.2-million-baht double payment to your commanding officer — clearly, calmly — and get his approval to hold the supplier's next payment.",
+ room:{d:2,p:2,s:2, dw:"You have never worked with him directly.", pw:"Your commanding officer — two levels up.", sw:"A 1.2-million-baht error."},
+ focus:["Register","Modals for hedging","Reported speech","Tenses","Polite speech","Nominalisation","Conditional sentences"],
+ intro:"Register 5 — Deference. Headline first. Never hedge a number you have checked; always hedge a cause you have not proved.",
+ turns:[
+ {s:"You knock. He looks up from a file.",
+  core:"Hello. I need five minutes. It's urgent.",
+  slots:[
+   {k:"greet", dim:"register", lab:"Greeting",
+    opts:[["Hi","R2 · Informal",0,"low","Much too casual for your commanding officer."],
+          ["Hello","R3 · Professional",1,"low","Neutral, but below what he is owed."],
+          ["Good morning","R4 · Serious",2,"","Correct and expected."],
+          ["A very good morning to you","R5+ · Theatrical",0,"high","Sounds like a stage greeting."]]},
+   {k:"addr", dim:"register", lab:"Address",
+    opts:[[", Anan","R2 · First name",0,"low","Shocking to a commanding officer."],
+          [", Khun Anan","R3 · Khun + name",0,"low","Civilian courtesy — drops his rank."],
+          [", Wing Commander Prasert","R4 · Rank + surname",1,"odd","Textbook Western form. Thai service practice pairs rank with the first name."],
+          [", Wing Commander Anan","R4 · Rank + first name",2,"","Correct RTAF practice."],
+          [", Sir","R5 · Sir",2,"","The register-5 default. Never fails."]]},
+   {k:"pre", dim:"direct", lab:"Pre-sequence", newS:true,
+    opts:[["Got a minute","1 · Casual",0,"low","Slang to your CO.",{q:1}],
+          ["Do you have a minute","3 · Neutral",1,"low","Polite, but doesn't signal the urgency.",{q:1}],
+          ["Do you have five minutes? It's urgent","4 · Clear + urgent",2,"","Asks, gives the time needed and the urgency."],
+          ["May I have five minutes of your time? It's urgent","5 · Formal + urgent",2,"","Deferent and clear."],
+          ["I most humbly beg five minutes of your esteemed time","7 · Grovelling",0,"high","Sounds like satire."]]}
+  ],
+  good:"Come in. Close the door. What is it?",
+  cont:"…Come in. What is it?"},
+
+ {s:"You have checked the bank statement twice. The same 1.2-million-baht invoice from Siam Aero Parts was paid on the 10th and again on the 12th.",
+  core:"We paid Siam Aero Parts twice (verified). 1.2 million baht.",
+  key:true,
+  rx:{unsure:"Did we pay twice or not? Which is it?"},
+  slots:[
+   {k:"order", dim:"order", lab:"Order",
+    opts:[["Last week I was doing the reconciliation and I noticed something strange, so I checked the bank statement, and it seems that","Story first",0,"order","Background first is the Thai narrative order. In English staff talk it hides the point."],
+          ["","Headline (no frame)",2,"","Straight to the point."],
+          ["I'm afraid I have bad news:","Headline + signpost",2,"","Prepares him in five words, then the point."]]},
+   {k:"commit", dim:"commit", lab:"Commitment",
+    opts:[["we might have paid Siam Aero Parts twice","30% · might",0,"unsure","You checked it twice. 'Might' makes you sound unsure of your own arithmetic."],
+          ["we probably paid Siam Aero Parts twice","70% · probably",0,"unsure","Still a hedge on a verified fact."],
+          ["we paid Siam Aero Parts twice","100% · fact",2,"","A checked fact takes no modal."],
+          ["it is absolutely certain beyond any doubt that we paid Siam Aero Parts twice","100% + drama",0,"hype","Over-insistence sounds anxious. The plain fact is stronger."]]},
+   {k:"detail", dim:"grain", lab:"Detail",
+    opts:[["","D · (no amount)",0,"vague","He will stop you: how much?"],
+          ["for the same invoice — 1.2 million baht","C · Result",2,"","The number he needs to decide. Nothing more."],
+          ["for invoice SAP-0412 of 3 March, once on the 10th in batch 17 and again on the 12th in batch 19, 1,200,000 baht each time","A · Every step",0,"over","The method belongs in the written report, not the first sentence."]]}
+  ],
+  good:"Twice? How did that happen?",
+  cont:"…What? How did that happen?"},
+
+ {s:"You believe the invoice was entered twice under two reference numbers — but you have not confirmed it with the bank yet.",
+  core:"The invoice was entered twice (probably). I check with the bank today.",
+  slots:[
+   {k:"cause", dim:"hedge", lab:"Cause (hedged)",
+    opts:[["Khun Somchai entered it twice","Blame, unproven",0,"blame","Naming a person you cannot prove is responsible. Dangerous upward."],
+          ["The system did it","Vague excuse",0,"vague","Sounds like an excuse, and tells him nothing."],
+          ["It looks like the invoice was entered under two different reference numbers","R3 · 'It looks like'",2,"","Hedges the cause you haven't proved. Passive keeps the focus on the process, not a person."],
+          ["It appears that the invoice was entered under two different reference numbers","R4 · 'It appears that'",2,"","Formal hedge for a cause still to be proved. Ideal upward."],
+          ["An erroneous duplicative entry appears to have been effected in respect of the invoice","Over-nominalised",0,"high","Sounds like you're hiding behind nouns."]]},
+   {k:"plan", dim:"commit", lab:"Next step", newS:true,
+    opts:[["Maybe I can check it","30% · maybe can",0,"unsure","A weak plan. He needs to hear action."],
+          ["","(no next step)",1,"vague","The hedge stays open. He'll ask what you're doing about it."],
+          ["I'm confirming it with the bank this morning","Arranged action",2,"","Turns the hedge into a plan with a time."]]}
+  ],
+  good:"Hm. Have you spoken to the supplier?",
+  cont:"Hm. And the supplier — have you spoken to them?"},
+
+ {s:"Yesterday their accountant told you: <em>“We'll return it within five working days. We had already noticed the extra payment.”</em>",
+  core:"Accountant: “We'll return it in 5 days. We already noticed.”",
+  rx:{report:"Be precise. What exactly did they say?",tense:"When did they notice — before you called?"},
+  slots:[
+   {k:"rep", dim:"report", lab:"Reporting",
+    opts:[["Yes. Their accountant said, ‘We'll return it within five working days.’","Direct quote",1,"report","Word for word. Fine, but a report sounds more professional."],
+          ["Yes. Their accountant told they will return it within five working days","Error: told + clause",0,"report","'Told' needs a person: told ME."],
+          ["Yes. Their accountant told me they would return it within five working days","Reported, backshifted",2,"","told + me, will → would. Clean."],
+          ["Yes. Their accountant confirmed that they would return it within five working days","Reporting verb 'confirmed'",2,"","A precise reporting verb — C1 style."],
+          ["Yes. It was confirmed by their accountant that the return of funds would be effected within five working days","Passive + nouns",0,"high","Memo English. Stiff out loud."]]},
+   {k:"pp", dim:"tense", lab:"Tense (past-before-past)", newS:true,
+    opts:[["She added that they already notice the extra payment","Present simple",0,"tense","Present simple after a past reporting verb: wrong."],
+          ["She added that they have already noticed the extra payment","Present perfect",1,"tense","Understood, but after 'added' the earlier event shifts back."],
+          ["She added that they had already noticed the extra payment","Past perfect",2,"","They noticed BEFORE she spoke: past perfect."]]}
+  ],
+  good:"Good. So what do you need from me?",
+  cont:"Fine. What do you need from me?"},
+
+ {s:"You need his approval to hold the supplier's next payment until the money is back.",
+  core:"Approve a hold on their next payment until the money is back.",
+  key:true,
+  slots:[
+   {k:"ask", dim:"direct", lab:"Request form",
+    opts:[["approve","0 · Order",0,"blunt","You are giving your CO an order."],
+          ["please approve","1 · 'Please' + order",0,"blunt","Still an imperative. 'Please' does not fix it."],
+          ["I need you to approve","2 · Need",0,"blunt","Tells your CO what to do."],
+          ["can you approve","3 · Can…?",1,"low","A real question, but casual at register 5.",{q:1}],
+          ["could you approve","4 · Could…?",2,"","The workhorse — acceptable even here.",{q:1}],
+          ["I'd like to request your approval for","5 · I'd like to request",2,"","Formal, clear and deferent."],
+          ["would you be willing to approve","6 · Would you be willing…",2,"","Deferent and clear.",{q:1}],
+          ["would it be at all possible for you to consider approving","7 · Maximum distance",1,"high","Very remote. For a time-critical action it slows him down.",{q:1}]]},
+   {k:"nom", dim:"nominal", lab:"Action (noun or verb)",
+    opts:[["stopping their next payment","Verb (gerund)",1,"low","Understandable, but less precise than the finance term."],
+          ["a hold on their next payment","Noun phrase",2,"","A 'hold' is the exact finance term — one noun does the work."],
+          ["the imposition of a temporary suspension upon the disbursement of their next payment","Over-nominalised",0,"high","Five nouns where one would do."]]},
+   {k:"until", dim:"register", lab:"Condition", fixed:"until the money is back"}
+  ],
+  good:"Approved. Bring me the form this afternoon. One more thing — how do we stop this happening again?",
+  cont:"…Bring me the form. And how do we stop this happening again?"},
+
+ {s:"The system had no duplicate-invoice check. With one, it would have flagged the second payment.",
+  core:"No duplicate check (past) → no flag. Recommend adding one.",
+  rx:{cond:"Is that what happened, or what might happen?"},
+  slots:[
+   {k:"cond", dim:"cond", lab:"Conditional",
+    opts:[["If we have a duplicate-invoice check, the system flags it","Zero conditional",1,"cond","A general rule — but we didn't have one."],
+          ["If we had a duplicate-invoice check, the system would flag it","Second conditional",2,"","Present unreal: we don't have one now. Valid."],
+          ["If we had had a duplicate-invoice check, the system would have flagged it","Third conditional",2,"","Past unreal: what would have happened last week. Precise."],
+          ["If we would have had a duplicate-invoice check, the system would have flagged it","Error: would have in if-clause",0,"cond","Very common error. The if-clause takes 'had had'."],
+          ["Had a duplicate-invoice check been in place, the system would have flagged it","Inverted third conditional",2,"","Formal inversion — elegant at register 5."]]},
+   {k:"rec", dim:"direct", lab:"Recommendation", newS:true,
+    opts:[["Add one","0 · Order",0,"blunt","An order to your CO."],
+          ["We should add one","2 · Should",1,"blunt","Clear, but a recommendation sounds better."],
+          ["I recommend we add one","3 · I recommend",2,"","Clear professional recommendation."],
+          ["I'd recommend adding one to the payment system","4 · I'd recommend",2,"","Clear, slightly softer, specific."],
+          ["Perhaps it might possibly be worth considering adding one","7 · Over-hedged",0,"high","He needs a recommendation, not a maybe."]]}
+  ],
+  good:"Agreed. Put that in writing for me.",
+  cont:"Put it in writing."},
+
+ {s:"He is finished. Close the meeting and commit to a written report by Friday.",
+  core:"Thank you. I send a written report by Friday.",
+  slots:[
+   {k:"thanks", dim:"register", lab:"Thanks",
+    opts:[["Thanks","R2 · Informal",0,"low","Too casual for your CO."],
+          ["Thank you","R3 · Neutral",1,"low","Correct, but the address is expected here."],
+          ["Thank you, Sir","R5 · Sir",2,"","Expected. Its absence is noticed."],
+          ["Thank you for your time, Sir","R5 · Formal thanks",2,"","Respectful and complete."],
+          ["I am forever in your debt, Sir","R5+ · Excessive",0,"high","Too much."]]},
+   {k:"commit", dim:"commit", lab:"Commitment", newS:true,
+    opts:[["I might send a report","30% · might",0,"unsure","He cannot plan on 'might'."],
+          ["I'll try to send a written report by Friday","'Try'",1,"unsure","'Try' leaves a way out. He notices."],
+          ["I'll have a written report on your desk by Friday","will + date",2,"","A promise with a date."],
+          ["A written report shall be submitted by Friday","Shall + passive",0,"high","Contract English. It hides who is responsible."]]}
+  ],
+  good:"Good work catching it. That's all.",
+  cont:"That's all."}
+ ]
+});
+
+/* ---------------- 5 · C1 · Invoice Correction, partner air force ---------------- */
+SCENARIOS.push({
+ id:"s5", title:"The Exercise Invoice", cefr:"C1", npc:"clarke",
+ place:"Video call · Monday 15:00 Bangkok time · after the joint exercise 'Golden Wing' (fictional)",
+ goal:"Get the partner air force to issue a corrected invoice: they billed accommodation for 40 personnel; only 32 attended.",
+ room:{d:2,p:1,s:1, dw:"A foreign officer you have never met.", pw:"Your equivalent rank in another air force.", sw:"Money — and a relationship between two air forces."},
+ focus:["Register","Nominalisation","Modals for hedging","Reported speech","Conditional sentences","Polite speech"],
+ intro:"Register 4 — Serious. With Western officers, rank + SURNAME is correct. State your checked figure plainly; hedge only what their office might have missed.",
+ turns:[
+ {s:"The call connects. You see her for the first time.",
+  core:"Hello. Thank you for the call.",
+  slots:[
+   {k:"greet", dim:"register", lab:"Greeting",
+    opts:[["Hi there","R1 · Friendly",0,"low","Too casual for a first official call."],
+          ["Hello","R3 · Professional",1,"low","Safe, but a time-of-day greeting is warmer and more formal."],
+          ["Good afternoon","R4 · Serious",2,"","Correct opening for an official call."],
+          ["Greetings","R5+ · Ceremonial",0,"high","Sounds like a robot or an ambassador."]]},
+   {k:"addr", dim:"register", lab:"Address",
+    opts:[[", Emma","R2 · First name",0,"low","First name on a first official call: too familiar."],
+          [", Khun Emma","Thai form",0,"odd","'Khun' is Thai courtesy — it doesn't transfer to a Western officer."],
+          [", Squadron Leader Emma","Rank + first name",1,"odd","Thai pattern. Western officers pair rank with the SURNAME."],
+          [", Squadron Leader Clarke","Rank + surname",2,"","Correct international military address."],
+          [", Ma'am","Ma'am",1,"high","Between equal ranks 'Ma'am' is over-deferent."]]},
+   {k:"pre", dim:"register", lab:"Opener", newS:true,
+    opts:[["Thanks for picking up","R2 · Casual",0,"low","Phone-to-a-friend English."],
+          ["Thank you for taking the call","R4 · Professional",2,"","Polite and business-like."],
+          ["Thank you for making time to speak with me","R4 · Warm formal",2,"","Warm and respectful."],
+          ["I am deeply honoured that you have graciously consented to speak with me","R5+ · Excessive",0,"high","Far too much for an invoice call."]]}
+  ],
+  good:"Good afternoon! Not at all — happy to help. What can I do for you?",
+  cont:"Good afternoon. What can I do for you?"},
+
+ {s:"State the purpose of the call.",
+  core:"I call about invoice GW-2291.",
+  slots:[
+   {k:"purpose", dim:"nominal", lab:"Purpose",
+    opts:[["I call about your bill","Present simple, vague",0,"low","Present simple is wrong for 'now', and 'bill' is shop English."],
+          ["I'm calling about invoice GW-2291","Plain verb",2,"","Clear and natural."],
+          ["I'm calling regarding invoice GW-2291","Formal preposition",2,"","'Regarding' adds one notch of formality. Good."],
+          ["I'm calling with regard to the accommodation charges on invoice GW-2291","Noun focus",2,"","Names the exact line — precise."],
+          ["The purpose of this communication is the facilitation of a review of the accommodation charges on invoice GW-2291","Over-nominalised",0,"high","Noun chain. Sounds like a machine."]]},
+   {k:"from", dim:"register", lab:"Reference", fixed:"from Exercise Golden Wing"}
+  ],
+  good:"Yes, I have it in front of me. Is there a problem?",
+  cont:"Right… Is there a problem with it?"},
+
+ {s:"You have checked the attendance list twice: 32 personnel attended. The invoice charges for 40.",
+  core:"The invoice says 40. Our records say 32 (checked).",
+  key:true,
+  rx:{unsure:"Sorry — is it wrong, or are you asking whether it is?"},
+  slots:[
+   {k:"frame", dim:"hedge", lab:"Frame",
+    opts:[["You've made a mistake:","0 · Accusation",0,"blunt","Blames her personally. Damages the relationship."],
+          ["","0 · (none)",1,"blunt","Correct, but a little abrupt with a foreign partner."],
+          ["Unfortunately,","1 · Regret marker",2,"","Softens the news without weakening the number."],
+          ["I'm afraid","1 · Regret marker",2,"","Polite bad-news marker. Doesn't touch the figure."],
+          ["It seems that possibly","3 · Hedge on the fact",0,"unsure","Hedges a number you have checked. Sounds like you're not sure."]]},
+   {k:"commit", dim:"commit", lab:"Commitment",
+    opts:[["the invoice might list 40 personnel, but our records could show 32","30% · might / could",0,"unsure","Modals on checked figures sound evasive."],
+          ["the invoice probably lists 40 personnel, but our records suggest 32","70% · probably",1,"unsure","Still softer than your evidence."],
+          ["the invoice lists 40 personnel, but our records show that only 32 attended","100% · fact",2,"","Checked numbers, no modal. Clear and credible."],
+          ["the invoice lists 40 personnel, which is completely wrong, because only 32 attended","Fact + judgement",0,"hype","'Completely wrong' adds heat, not information."]]}
+  ],
+  good:"Oh — really? Our logistics office gave us the figure of 40. Where did your 32 come from?",
+  cont:"Hm. Our logistics office gave us 40. Where does 32 come from?"},
+
+ {s:"Your movement control office told you: <em>“Eight personnel withdrew before deployment.”</em> Her logistics office probably never got the update.",
+  core:"MovCon: “8 withdrew before deployment.” Her office didn't get the update (probably).",
+  rx:{blame:"<em>Stiffly.</em> Let's not assume anyone ignored anything."},
+  slots:[
+   {k:"rep", dim:"report", lab:"Reporting",
+    opts:[["Our movement control office said, ‘Eight personnel withdrew before deployment.’","Direct quote",1,"report","Word for word. Acceptable, less polished."],
+          ["Our movement control office told eight personnel withdrew before deployment","Error: told + clause",0,"report","'Told' needs a person: told US."],
+          ["Our movement control office told us that eight personnel had withdrawn before deployment","Reported + past perfect",2,"","withdrew → had withdrawn: before the time of telling."],
+          ["According to our movement control office, eight personnel had withdrawn before deployment","'According to' + past perfect",2,"","Attributes the fact to its source. Very professional."],
+          ["It was reported by our movement control office that a withdrawal of eight personnel had occurred prior to deployment","Passive + nouns",0,"high","Heavy nouns. Hard to follow on a call."]]},
+   {k:"hedge", dim:"commit", lab:"Hedge (their side)", newS:true,
+    opts:[["Your logistics office must have ignored the update","90% · must (blame)",0,"blame","A strong deduction that blames them. You can't know this."],
+          ["Your logistics office didn't receive the update","100% · fact",0,"blame","You don't know this for certain — stated as fact, it's an accusation."],
+          ["Your logistics office may not have received the update","50% · may not have",2,"","Hedge other people's work — never your own verified figures."],
+          ["Perhaps your logistics office may possibly not have received the update","Over-hedged",0,"high","Three hedges. Sounds nervous."]]}
+  ],
+  good:"That's quite possible — the list changed very late. I'll check. What would you like us to do?",
+  cont:"I see. What would you like us to do?"},
+
+ {s:"You need a corrected invoice. If it arrives by Friday, you can pay it this month.",
+  core:"Send a corrected invoice. By Friday → we pay this month.",
+  key:true,
+  rx:{cond:"Sorry — is Friday a deadline, or just an idea?"},
+  slots:[
+   {k:"ask", dim:"direct", lab:"Request form",
+    opts:[["Send us a corrected invoice","0 · Order",0,"blunt","An order to a foreign officer."],
+          ["Please send us a corrected invoice","1 · 'Please' + order",0,"blunt","Still an imperative."],
+          ["We need a corrected invoice","2 · Need",1,"blunt","Clear, but it makes your need her problem."],
+          ["Could you send us a corrected invoice","4 · Could…?",2,"","Polite and clear.",{q:1}],
+          ["Would it be possible to send us a corrected invoice","5 · Would it be possible…",2,"","Polite and professional.",{q:1}],
+          ["We would be grateful if you could send us a corrected invoice","6 · Conditional politeness",2,"","A second-conditional request — elegant."],
+          ["We would be most profoundly grateful should you deign to send us a corrected invoice","7+ · Excessive",0,"high","'Deign' is sarcastic. Far too much."]]},
+   {k:"cond", dim:"cond", lab:"Conditional", newS:true,
+    opts:[["If it would arrive by Friday, we could pay it this month","Error: would in if-clause",0,"cond","No 'would' in the if-clause here."],
+          ["If it arrives by Friday, we can pay it this month","First conditional",2,"","A real, useful deadline."],
+          ["If it arrived by Friday, we could pay it this month","Second conditional",2,"","Tentative, polite. Also fine."],
+          ["If it had arrived by Friday, we could have paid it this month","Third conditional",0,"cond","Past, unreal. Friday hasn't happened."],
+          ["Should it arrive by Friday, we will be able to pay it this month","Inverted first conditional",2,"","Formal inversion. Correct at register 4."]]}
+  ],
+  good:"Of course. I'll need to confirm with logistics first, though.",
+  cont:"…I'll need to check with logistics first."},
+
+ {s:"She needs to check. Offer your attendance list to help.",
+  core:"Of course. I send our attendance list (if it helps).",
+  slots:[
+   {k:"ack", dim:"register", lab:"Acknowledge",
+    opts:[["Sure","R2 · Informal",1,"low","A bit casual for an official call."],
+          ["Of course","R3 · Professional",2,"","Gracious and natural."],
+          ["Certainly","R4 · Formal",2,"","Polite and formal."],
+          ["Naturally, that goes without saying","R5 · Condescending",0,"high","Sounds as if she asked something foolish."]]},
+   {k:"offer", dim:"direct", lab:"Offer", newS:true,
+    opts:[["Check our attendance list","0 · Order",0,"blunt","Tells her to do extra work."],
+          ["I'll send you our attendance list","1 · Direct offer",2,"","Helpful and clear."],
+          ["I can send you our attendance list if that would help","2 · Offer + if",2,"","Offer that leaves the choice to her."],
+          ["Would it help if I sent you our attendance list","3 · Conditional offer",2,"","Second-conditional offer. Very polite.",{q:1}],
+          ["Should it prove useful, I would be willing to arrange for the transmission of our attendance list","5 · Over-formal",0,"high","Noun-heavy and stiff."]]}
+  ],
+  good:"That would help a lot, thank you. I'll get back to you by Thursday.",
+  cont:"Yes, send it over. I'll get back to you."},
+
+ {s:"Close the call.",
+  core:"Thank you. I wait for your reply. Goodbye.",
+  slots:[
+   {k:"thanks", dim:"register", lab:"Thanks",
+    opts:[["Cheers","R1 · Friendly",0,"low","Too casual."],
+          ["Thanks","R2 · Informal",1,"low","A little light for an official call."],
+          ["Thank you for your help","R3 · Professional",2,"","Correct and warm."],
+          ["Thank you very much for your help","R4 · Warm formal",2,"","Warm and professional."],
+          ["Please accept my most sincere and heartfelt gratitude","R5+ · Excessive",0,"high","Much too much for an invoice."]]},
+   {k:"addr", dim:"register", lab:"Address",
+    opts:[["","(no name)",2,"","Fine."],
+          [", Emma","R2 · First name",0,"low","Too familiar on a first call."],
+          [", Squadron Leader Emma","Rank + first name",1,"odd","Thai pattern — Western form is rank + surname."],
+          [", Squadron Leader Clarke","Rank + surname",2,"","Correct."]]},
+   {k:"bye", dim:"register", lab:"Leave-taking", newS:true, m:2,
+    opts:[["Bye-bye","R1 · Friendly",0,"low","Baby talk in an official call."],
+          ["Speak soon","R2 · Informal",1,"low","Friendly, a little casual."],
+          ["I look forward to hearing from you","R4 · Professional",2,"","The standard professional close."],
+          ["Goodbye","R3 · Neutral",2,"","Correct."],
+          ["Until we meet again, farewell","R5+ · Archaic",0,"high","Poetry, not business."]]}
+  ],
+  good:"Likewise. Goodbye for now!",
+  cont:"Goodbye."}
+ ]
+});
+
+/* ---------------- 6 · C1 · The Keynote ---------------- */
+SCENARIOS.push({
+ id:"s6", title:"The Keynote", cefr:"C1", npc:"lim",
+ place:"Regional Defence Finance Forum, Bangkok · coffee break after the keynote",
+ goal:"Give Dr. Lim a balanced opinion of her keynote — real praise and a respectful reservation — and get her to share her slides.",
+ room:{d:2,p:1,s:0, dw:"A stranger — you've only seen her on stage.", pw:"A senior expert, but not your commander.", sw:"Low: a conversation, not a decision."},
+ focus:["Register","Modals for hedging","Conditional sentences","Reported speech","Nominalisation","Polite speech"],
+ intro:"Register 3 — Professional, leaning 4. Disagreement in English is hedged, not avoided. Positive affect can go higher than negative.",
+ turns:[
+ {s:"She is standing alone with a coffee. You walk up.",
+  core:"Hello, Dr. Lim. I work in RTAF finance.",
+  slots:[
+   {k:"greet", dim:"register", lab:"Opener",
+    opts:[["Hey","R1 · Friendly",0,"low","Too casual for a keynote speaker you've never met."],
+          ["Hi","R2 · Informal",1,"low","Friendly — a touch casual with a stranger."],
+          ["Hello","R3 · Professional",2,"","Neutral and safe."],
+          ["Excuse me","R3 · Polite opener",2,"","The natural way to approach a stranger.",{q:1}],
+          ["Pardon the intrusion, esteemed Professor","R5+ · Excessive",0,"high","Sounds like a period drama."]]},
+   {k:"addr", dim:"register", lab:"Address",
+    opts:[[", Hannah","R2 · First name",0,"low","Too familiar with a stranger."],
+          [", Khun Hannah","Thai form",0,"odd","'Khun' doesn't transfer to a foreign guest."],
+          [", Professor Hannah","Title + first name",1,"odd","Thai pattern. International form is title + surname."],
+          [", Dr. Lim","Title + surname",2,"","Correct."],
+          [", Madam","R5 · Madam",0,"high","Over-deferent and old-fashioned."]]},
+   {k:"intro", dim:"grain", lab:"Introduction", newS:true,
+    opts:[["I'm from the air force","D · Vague",1,"vague","Which air force? What do you do?"],
+          ["I work in finance at the Royal Thai Air Force","C · Who + what",2,"","Tells her who you are and why you're interested."],
+          ["I'm with the Royal Thai Air Force Directorate of Finance","C · Formal unit",2,"","Precise and professional."],
+          ["Please allow me to introduce myself: I am an officer of the esteemed Directorate of Finance of the Royal Thai Air Force","R5+ · Ceremonial",0,"high","Much too long and formal for a coffee break."]]}
+  ],
+  good:"Oh, hello! Lovely to meet you. Did you enjoy the session?",
+  cont:"Er, hello. Did you enjoy the session?"},
+
+ {s:"You liked the talk — especially the part on accrual budgeting.",
+  core:"I liked your talk (accrual budgeting part).",
+  slots:[
+   {k:"praise", dim:"affect", lab:"Praise",
+    opts:[["It was OK","Faint",0,"flat","Faint praise sounds like criticism in English."],
+          ["I found your talk very useful","Professional",2,"","Specific, sincere praise."],
+          ["I really enjoyed your talk","Warm",2,"","Warm and natural."],
+          ["Your talk was absolutely amazing, the best I have ever heard in my life","Gushing",0,"hype","Too much. It sounds insincere."]]},
+   {k:"detail", dim:"grain", lab:"Detail",
+    opts:[["","D · (none)",1,"vague","General praise. Which part?"],
+          [", especially the section on accrual budgeting","C · Specific",2,"","Shows you listened."],
+          [", especially slide fourteen, the second chart, the blue line from 2019 to 2023 and the footnote","A · Too specific",0,"over","Strange level of detail at a coffee break."]]},
+   {k:"aff", dim:"affect", lab:"Affect", aff:true,
+    opts:AFF([2,2,2,0],["","","","hype"])}
+  ],
+  good:"Thank you, you're very kind! Accrual is my favourite topic. Do you think it would work in Thailand?",
+  cont:"Thank you. Do you think accrual would work in Thailand?"},
+
+ {s:"You are not convinced accrual accounting would work in your system — yet.",
+  core:"It won't work in our system (in my opinion).",
+  key:true,
+  slots:[
+   {k:"frame", dim:"hedge", lab:"Concession",
+    opts:[["","0 · (none)",1,"blunt","No concession. The disagreement arrives cold."],
+          ["Yes, but","1 · Quick concession",1,"blunt","A token concession. Still sounds like a 'no'."],
+          ["It's a great idea, but","2 · Real concession",2,"","Gives her something real first."],
+          ["It's an interesting idea in theory; however,","3 · Formal concession",2,"","Formal and balanced."]]},
+   {k:"stance", dim:"hedge", lab:"Stance (hedged)",
+    opts:[["it won't work in our system","0 · Flat no",0,"blunt","A flat prediction against an expert."],
+          ["I don't think it would work in our system","1 · I don't think",1,"blunt","Honest, but blunt."],
+          ["I'm not entirely sure it would work in our system yet","2 · Not entirely sure",2,"","Hedged disagreement. Leaves room to talk."],
+          ["I wonder whether it would work quite as well in our system","3 · I wonder whether",2,"","Very diplomatic, still clear."],
+          ["one might perhaps venture to suggest that it could conceivably prove somewhat less than ideal in our system","5 · Over-hedged",0,"high","So hedged she can't find your opinion."]]}
+  ],
+  good:"Interesting — why not?",
+  cont:"Oh? Why not?"},
+
+ {s:"Your reason: if RTAF switched (it hasn't), you would need two years of parallel reporting. Training staff would be the main cost.",
+  core:"Switch → two years of parallel reporting (hypothetical). Training = main cost.",
+  rx:{cond:"Sorry — are you switching, or is that hypothetical?"},
+  slots:[
+   {k:"cond", dim:"cond", lab:"Conditional",
+    opts:[["If we switch to full accrual, we will need two years of parallel reporting","First conditional",1,"cond","Sounds as if the switch is already planned."],
+          ["If we switched to full accrual, we would need two years of parallel reporting","Second conditional",2,"","Hypothetical present — exactly right."],
+          ["If we had switched to full accrual, we would have needed two years of parallel reporting","Third conditional",0,"cond","Past unreal — about a decision already missed."],
+          ["If we would switch to full accrual, we would need two years of parallel reporting","Error: would in if-clause",0,"cond","No 'would' in the if-clause."],
+          ["Were we to switch to full accrual, we would need two years of parallel reporting","Inverted second conditional",2,"","Formal inversion. Elegant C1 English."]]},
+   {k:"nom", dim:"nominal", lab:"Reason (verb or noun)", newS:true,
+    opts:[["We don't have enough people who know how to do it","Spoken verbs",1,"low","Clear, but loose for a professional discussion."],
+          ["Our staff would need a lot of training","Verb-based",2,"","Clear and natural."],
+          ["Staff training would be the main cost","Noun-based",2,"","'Staff training' as subject: compact, professional."],
+          ["The provision of comprehensive capability development for personnel would constitute the principal cost driver","Over-nominalised",0,"high","A noun pile. Hard to follow."]]}
+  ],
+  good:"That's a fair point — New Zealand found exactly the same. Have others at your Directorate raised this?",
+  cont:"Hm. Have others raised this too?"},
+
+ {s:"Last month your director said at a briefing: <em>“I feel the transition might be too fast for us.”</em>",
+  core:"Director: “The transition might be too fast for us.”",
+  slots:[
+   {k:"rep", dim:"report", lab:"Reporting",
+    opts:[["Yes. Our director said, ‘The transition is too fast.’","Direct quote",1,"report","A quote — and it drops his 'might'. Report the hedge too."],
+          ["Yes. Our director said us that the transition is too fast","Error: said + person",0,"report","'Said' doesn't take a person."],
+          ["Yes. Our director mentioned that the transition might be too fast for us","Reporting verb 'mentioned'",2,"","Keeps his hedge. Natural."],
+          ["Yes. Our director told us that he felt the transition might be too fast","Reported, backshifted",2,"","told + us, feel → felt. Clean."],
+          ["Yes. Concerns regarding the excessive rapidity of the transition were expressed by our director","Passive + nouns",0,"high","Sounds like minutes read aloud."]]}
+  ],
+  good:"That's sensible. A phased approach is usually better.",
+  cont:"I see."},
+
+ {s:"You want her slides for your team.",
+  core:"Share your slides with me. My team wants them.",
+  key:true,
+  slots:[
+   {k:"ask", dim:"direct", lab:"Request form",
+    opts:[["Send me your slides","0 · Order",0,"blunt","An order to a stranger."],
+          ["Please send me your slides","1 · 'Please' + order",0,"blunt","Still an order."],
+          ["I want your slides","2 · Want",0,"blunt","Childish and demanding."],
+          ["Can you share your slides","3 · Can…?",1,"low","Understood, a bit casual with a stranger.",{q:1}],
+          ["Could you share your slides","4 · Could…?",2,"","Polite and clear.",{q:1}],
+          ["Would you mind sharing your slides","5 · Would you mind…",2,"","Polite, easy to say yes to.",{q:1}],
+          ["I was wondering if you might be willing to share your slides","6 · I was wondering…",2,"","Very polite. Good with a stranger."],
+          ["Would it be at all conceivable for you to share your slides","7 · Maximum distance",0,"high","Over the top for a small favour.",{q:1}]]},
+   {k:"why", dim:"grain", lab:"Reason", newS:true,
+    opts:[["","D · (none)",1,"vague","She'll wonder what they're for."],
+          ["For team","D · Broken",0,"low","Too short — sounds rude."],
+          ["My team would find them really useful","C · Reason",2,"","A reason that also compliments her."],
+          ["I'd like to show them to my team","C · Reason",2,"","Clear purpose."],
+          ["They would be of inestimable value to the entire Directorate","Excessive",0,"high","Flattery overload."]]}
+  ],
+  good:"Not at all — here's my card. Email me and I'll send them tonight.",
+  cont:"…I suppose so. Here's my card."},
+
+ {s:"The bell rings for the next session.",
+  core:"Nice to meet you. Enjoy the conference.",
+  slots:[
+   {k:"close", dim:"register", lab:"Closing",
+    opts:[["Gotta go","R1 · Slang",0,"low","Too casual with a stranger."],
+          ["It was nice to meet you","R3 · Professional",2,"","Warm and correct."],
+          ["It was a pleasure meeting you","R4 · Warm formal",2,"","Warm and polished."],
+          ["It has been an immense honour to make your acquaintance","R5+ · Excessive",0,"high","Much too much."]]},
+   {k:"wish", dim:"register", lab:"Wish", newS:true,
+    opts:[["Bye-bye","R1 · Friendly",0,"low","Too childish."],
+          ["See you around","R2 · Informal",1,"low","Casual."],
+          ["Enjoy the rest of the conference","R3 · Professional",2,"","A kind, natural wish."],
+          ["May the remainder of the proceedings bring you great joy","R5+ · Poetic",0,"high","Sounds like a blessing."]]}
+  ],
+  good:"You too! I look forward to your email.",
+  cont:"Thanks. Bye."}
+ ]
+});
+/* ======================================================================
+   ENGINE
+   ====================================================================== */
+const LS_KEY = "rtafModDesk_v1";
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const pick = a => a && a.length ? a[Math.floor(Math.random()*a.length)] : "";
+const MILD = {low:"<em>A slight pause.</em>", high:"<em>A small smile at the formality.</em>", blunt:"<em>A slight frown.</em>",
+  vague:"Mm — go on?", unsure:"Hm — you're not sure?", sure:"Hm.", tense:"<em>A puzzled look, then a nod.</em>",
+  cond:"<em>A moment to work it out.</em>", report:"Right…", hype:"<em>A small laugh.</em>", flat:"Hm.",
+  over:"<em>A glance at the clock.</em>", order:"Mm-hm…", blame:"Hm.", odd:"<em>A polite smile.</em>"};
+const OUTCOME = {
+  s0:["Leave approved — and Malee thinks you planned it well.","Malee will approve it, but she noticed the slips.","Malee wants to 'think about it'. The leave is not approved yet."],
+  s1:["Ploy explains it and books your after-lunch session — coffee is on you.","Ploy helps, but she thinks you were acting a bit strange.","Ploy is confused by your tone. No session booked."],
+  s2:["The team agrees: the receipt cut-off moves to the 25th.","Agreed in principle — but Malee wants to 'discuss it again next week'.","The proposal is parked. Nobody was convinced."],
+  s3:["Nok calls the supplier; the PDF arrives at 3:40 p.m. The invoice makes the payment run.","Nok says she'll call 'when she can'. It may not arrive today.","Nok puts it at the bottom of her pile. The invoice misses the run."],
+  s4:["Hold approved, written report requested. Wg Cdr Anan trusts your figures.","He approves the hold, but asks Sqn Ldr Malee to double-check your work.","He asks Sqn Ldr Malee to take over the case."],
+  s5:["A corrected invoice for 32 personnel arrives on Thursday.","She will 'look into it'. No date promised.","Her reply is cool and formal: she will 'refer it to her superiors'."],
+  s6:["Dr. Lim sends her slides that evening — and asks whether she may quote your point.","She gives you her card, but seems a little guarded.","She smiles politely and moves on to the next person."]
+};
+const regFromRoom = n => n<=1?1:n===2?2:n===3?3:n<=5?4:5;
+const REGN = {1:"Friendly",2:"Informal",3:"Professional",4:"Serious",5:"Deference"};
+
+/* ---- normalise data ---- */
+SCENARIOS.forEach(sc => sc.turns.forEach(t => t.slots.forEach(s => {
+  if (s.fixed != null) return;
+  s.opts = s.opts.map((o,i) => ({t:o[0], d:o[1], g:o[2], tag:o[3]||"", n:o[4]||"", x:o[5]||{}, i}));
+  const goods = s.opts.filter(o => o.g===2);
+  s.best = goods.length ? goods[Math.floor(goods.length/2)].i : s.opts.reduce((a,o)=>o.g>s.opts[a].g?o.i:a,0);
+  if (s.m != null) s.best = s.m;
+  s.opts.forEach(o => { const m = /^R(\d)/.exec(o.d); if (m) o.r = +m[1]; });
+})));
+
+/* ---- persistence ---- */
+let store = {best:{}, fs:16, voice:false};
+try { const raw = localStorage.getItem(LS_KEY); if (raw) store = Object.assign(store, JSON.parse(raw)); } catch(e){}
+function save(){ try { localStorage.setItem(LS_KEY, JSON.stringify(store)); } catch(e){} }
+document.documentElement.style.setProperty("--fs", store.fs + "px");
+
+/* ---- speech ---- */
+function speak(text, rate){
+  if (!store.voice || !("speechSynthesis" in window)) return;
+  try {
+    const plain = text.replace(/<em>.*?<\/em>/g,"").replace(/<[^>]+>/g,"").replace(/\s+/g," ").trim();
+    if (!plain) return;
+    const u = new SpeechSynthesisUtterance(plain); u.lang = "en-GB"; u.rate = rate || 0.95;
+    speechSynthesis.speak(u);
+  } catch(e){}
+}
+
+/* ---- sentence assembly ---- */
+function assemble(turn, getOpt){
+  const sents = []; let cur = null;
+  turn.slots.forEach(s => {
+    if (!cur || (s.newS && cur.parts.length)) { cur = {parts:[], q:false, m:null, ph:false}; sents.push(cur); }
+    if (s.fixed != null) { cur.parts.push(s.fixed); return; }
+    const o = getOpt(s);
+    if (!o) { cur.parts.push("[" + s.lab + "]"); cur.ph = true; return; }
+    if (o.t) cur.parts.push(o.t);
+    if (o.x.q) cur.q = true;
+    if (o.x.m) cur.m = o.x.m;
+  });
+  return sents.map(c => {
+    let t = c.parts.join(" ").replace(/\s+([,:;])/g,"$1").replace(/\s+/g," ").trim().replace(/^[,;]\s*/,"");
+    if (!t) return "";
+    const f = t.search(/[A-Za-z]/);
+    if (f === 0) t = t[0].toUpperCase() + t.slice(1);
+    const end = c.q ? "?" : (c.m || ".");
+    if (/[.?!]['’"”]?$/.test(t)) return t;
+    if (/\]$/.test(t) && c.ph) return t + end;
+    return t + end;
+  }).filter(Boolean).join(" ");
+}
+const liveHTML = s => esc(s).replace(/\[([^\]]+)\]/g,'<span class="ph">[$1]</span>');
+
+/* ---- state ---- */
+let S = null;       // play state
+let view = "home";
+
+function startScenario(i){
+  const sc = SCENARIOS[i];
+  S = {i, sc, ti:0, sel:{}, act:null, log:[], gw:50, keyFail:false, hints:0, hinted:{}, phase:"build",
+       expanded:false, msgs:[], revealR: !!sc.demo, clock: baseClock(sc)};
+  S.msgs.push({type:"pill", text: sc.place});
+  S.msgs.push({type:"pill", text: "Goal: " + sc.goal});
+  view = "play"; renderPlay(); firstSlot();
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+function baseClock(sc){ const m = /(\d{1,2}):(\d{2})/.exec(sc.place); return m ? (+m[1])*60 + (+m[2]) : 10*60+40; }
+function tick(){ S.clock += 1; const h = Math.floor(S.clock/60)%24, m = S.clock%60; return String(h).padStart(2,"0")+":"+String(m).padStart(2,"0"); }
+const turn = () => S.sc.turns[S.ti];
+const liveSlots = t => t.slots.filter(s => s.fixed == null);
+function firstSlot(){ const ls = liveSlots(turn()); S.act = ls.length ? ls[0].k : null; renderDesk(); }
+
+/* ---- render: home ---- */
+function renderHome(){
+  view = "home";
+  const cards = SCENARIOS.map((sc,i) => {
+    const b = store.best[sc.id];
+    const res = b ? `<span class="bdg ${b.win?'g':'p'}">${b.win?'Goal achieved':'Played'}</span>` : "";
+    return `<div class="card ${sc.demo?'demo':''}">
+      <div class="badges"><span class="bdg lv">${esc(sc.cefr)}</span>${sc.demo?'<span class="bdg">Guided demo</span>':''}${res}</div>
+      <h3>${i}. ${esc(sc.title)}</h3>
+      <div class="who">${esc(PEOPLE[sc.npc].name)}${sc.group?' + team':''} · ${esc(sc.place.split(" · ")[0])}</div>
+      <div class="goal"><b>Goal:</b> ${esc(sc.goal)}</div>
+      <div class="chips">${sc.focus.map(f=>`<span class="chip">${esc(f)}</span>`).join("")}</div>
+      <div class="foot"><span class="best">${b?`Best: ${b.score}%`:'Not played yet'}</span>
+        <button class="btn" data-start="${i}">${b?'Replay':'Start'}</button></div></div>`;
+  }).join("");
+  $("#app").innerHTML = `
+  <section class="hero">
+    <div>
+      <h2>Mix the sentence. Read the room.</h2>
+      <p>A core thought is the meaning; a sentence is only one delivery of it. English politeness is not vocabulary — it is a set of dials. On this desk every part of the sentence has its own fader.</p>
+      <p>Seven scenarios from the Finance Division, seven exchanges each, from a lunch chat (B1) to reporting a 1.2-million-baht error to your commanding officer (C1). Start with the guided demo.</p>
+    </div>
+    <ol class="steps">
+      <li><span><b>Read the room.</b> Distance + Power + Stakes gives the register the listener expects.</span></li>
+      <li><span><b>Tick a slot</b> under the sentence to put it on the fader.</span></li>
+      <li><span><b>Slide the fader</b> up or down. Each setting shows its degree and changes the sentence live.</span></li>
+      <li><span><b>Commit</b> to send it. The other person reacts to what your settings actually say.</span></li>
+    </ol>
+  </section>
+  <div class="grid">${cards}</div>`;
+}
+
+/* ---- render: play ---- */
+function renderPlay(){
+  const sc = S.sc, p = PEOPLE[sc.npc];
+  $("#app").innerHTML = `
+  <div class="pbar">
+    <button class="btn ghost" id="backBtn">&larr; Scenarios</button>
+    <h2>${esc(sc.title)}</h2><span class="bdg lv">${esc(sc.cefr)}</span>
+    <div class="dots" id="dots"></div>
+    <button class="btn ghost" id="restartBtn">Restart</button>
+  </div>
+  <section class="chat" aria-label="Conversation">
+    <div class="chead"><svg viewBox="0 0 16 16" fill="#fff" aria-hidden="true"><path d="M4 7V5a4 4 0 1 1 8 0v2h1v8H3V7h1zm2 0h4V5a2 2 0 1 0-4 0v2z"/></svg>
+      <span>${esc(sc.group || p.name)}</span><button class="more" id="moreBtn"></button></div>
+    <div class="cbody" id="cbody" aria-live="polite"></div>
+  </section>
+  <section class="brief" id="brief"></section>
+  <section class="desk" aria-label="Mixing desk">
+    <i class="screw a"></i><i class="screw b"></i><i class="screw c"></i><i class="screw d"></i>
+    <div class="dhead"><span class="mk">TM 9000</span><span class="md">Thought Modulation Mixer</span><span class="md" style="margin-left:auto" id="exLbl"></span></div>
+    <div class="dgrid">
+      <div class="fbay" id="fbay"></div>
+      <div class="rbay">
+        <div class="sut"><div class="silk">Sentence under construction — tick a slot to put it on the fader</div>
+          <div class="slots" id="slots"></div>
+          <div class="live"><div class="s" id="live"></div><button class="hear" id="hearBtn" title="Hear the sentence">Play</button></div>
+        </div>
+        <div class="lcd" id="lcd"></div>
+        <div class="mrow">
+          <div class="vu"><svg viewBox="0 0 140 84" id="vuR"></svg><div class="cap2">REGISTER OUT</div></div>
+          <div class="vu"><svg viewBox="0 0 140 84" id="vuG"></svg><div class="cap2">GOODWILL</div></div>
+          <div class="coach" id="coach"></div>
+        </div>
+        <div class="acts" id="acts"></div>
+        <div id="report"></div>
+      </div>
+    </div>
+  </section>`;
+  $("#backBtn").onclick = () => { if (confirmLeave()) renderHome(); };
+  $("#restartBtn").onclick = () => startScenario(S.i);
+  $("#moreBtn").onclick = () => { S.expanded = !S.expanded; renderChat(); };
+  $("#hearBtn").onclick = () => { const v = store.voice; store.voice = true; speak(assemble(turn(), s => S.sel[s.k]!=null ? s.opts[S.sel[s.k]] : null).replace(/\[[^\]]+\]/g,""), 0.9); store.voice = v; };
+  buildVU($("#vuR"), ["R1","R2","R3","R4","R5"]);
+  buildVU($("#vuG"), ["0","25","50","75","100"]);
+  renderChat(); renderDots();
+}
+function confirmLeave(){ return S.phase === "over" || S.ti === 0 && !S.log.length || window.confirm("Leave this scenario? Progress in this run will be lost."); }
+
+function renderDots(){
+  $("#dots").innerHTML = S.sc.turns.map((t,i) => {
+    const l = S.log[i]; const c = l ? ({good:"g",ok:"o",bad:"b"}[l.level]) : (i===S.ti?"on":"");
+    return `<i class="${c}" title="Exchange ${i+1}"></i>`;
+  }).join("");
+}
+
+function renderBrief(){
+  const sc = S.sc, t = turn(), r = sc.room, R = regFromRoom(r.d+r.p+r.s);
+  $("#brief").innerHTML = `
+   <div><div class="sit"><b>Exchange ${S.ti+1} of ${sc.turns.length}${t.key?' · key moment':''}.</b> ${t.s}</div>
+     <div class="core">Core thought (layer 0): <b>${esc(t.core)}</b></div></div>
+   <div class="room">
+     <div class="gauge" title="${esc(r.dw)}"><div class="k">DISTANCE</div><div class="v">${r.d}</div></div>
+     <div class="gauge" title="${esc(r.pw)}"><div class="k">POWER</div><div class="v">${r.p}</div></div>
+     <div class="gauge" title="${esc(r.sw)}"><div class="k">STAKES</div><div class="v">${r.s}</div></div>
+     <div class="gauge r"><div class="k">REGISTER</div><div class="v">${S.revealR ? 'R'+R : `<button class="revbtn" id="revR">? reveal</button>`}</div></div>
+   </div>`;
+  const rb = $("#revR"); if (rb) rb.onclick = () => { S.revealR = true; renderBrief(); };
+  $("#exLbl").textContent = `Exchange ${S.ti+1}/${sc.turns.length}`;
+}
+
+/* ---- chat ---- */
+function renderChat(){
+  const body = $("#cbody"); if (!body) return;
+  const ms = S.msgs;
+  // find start index of the last two exchanges (each exchange starts with a "me" message)
+  const meIdx = ms.map((m,i)=>m.type==="me"?i:-1).filter(i=>i>=0);
+  let start = 0;
+  if (!S.expanded && meIdx.length > 2) start = meIdx[meIdx.length-2];
+  const hidden = start > 0;
+  $("#moreBtn").textContent = S.expanded ? "Show last 2 exchanges" : (meIdx.length>2 ? "Show full chat" : "");
+  $("#moreBtn").style.display = meIdx.length>2 ? "" : "none";
+  body.innerHTML = (hidden ? `<div class="pill">${meIdx.length-2} earlier exchange${meIdx.length-2>1?'s':''} hidden</div>` : "") +
+    ms.slice(start).map(m => {
+      if (m.type === "pill") return `<div class="pill">${esc(m.text)}</div>`;
+      if (m.type === "me") return `<div class="msg me"><div class="meta"><span>Read</span><span>${m.tm}</span></div><div class="bub">${esc(m.text)}</div></div>`;
+      if (m.type === "typing") return `<div class="msg them typing"><div class="av" style="background:${PEOPLE[m.who].col}">${PEOPLE[m.who].init}</div><div class="bub"><i></i><i></i><i></i></div></div>`;
+      const p = PEOPLE[m.who];
+      return `<div class="msg them"><div class="av" style="background:${p.col}">${p.init}</div><div class="tcol">
+        <div class="nm">${esc(p.chat)}</div><div class="trow"><div class="bub">${m.text}</div><div class="meta"><span>${m.tm}</span></div></div>
+        ${m.imp ? `<span class="imp ${m.impc}">${esc(m.imp)}</span>` : ""}</div></div>`;
+    }).join("");
+  body.scrollTop = body.scrollHeight;
+}
+
+/* ---- desk ---- */
+function renderDesk(){
+  renderBrief();
+  const t = turn();
+  const done = S.phase !== "build";
+  // slots
+  $("#slots").innerHTML = t.slots.map(s => {
+    if (s.fixed != null) return `<div class="sl"><div class="stxt fixed">${esc(s.fixed)}</div><span class="lock">Core · fixed</span></div>`;
+    const v = S.sel[s.k], o = v!=null ? s.opts[v] : null;
+    const res = done && S.log[S.ti] ? S.log[S.ti].slots.find(x=>x.k===s.k) : null;
+    const cls = ["sl", S.act===s.k && !done ? "act" : "", res ? ({2:"g",1:"o",0:"b"}[res.g]) : ""].join(" ");
+    let txt, tc = "stxt";
+    if (!o) { txt = "[" + s.lab + "]"; tc += " unset"; }
+    else if (s.aff) { txt = o.d.replace(/^.*\(/,"(").trim(); }
+    else if (!o.t) { txt = "∅ none"; tc += " none"; }
+    else txt = o.t.replace(/^,\s*/,"");
+    return `<div class="${cls}"><div class="${tc}" data-slot="${s.k}">${esc(txt)}</div>
+      <label class="ck"><input type="checkbox" data-ck="${s.k}" ${S.act===s.k?'checked':''} ${done?'disabled':''} title="${esc(DIMS[s.dim].name)}">${esc(s.lab)}${o?' <span class="done">●</span>':''}</label></div>`;
+  }).join("");
+  $("#slots").querySelectorAll("[data-ck]").forEach(el => el.onchange = () => { S.act = el.dataset.ck; renderDesk(); });
+  $("#slots").querySelectorAll("[data-slot]").forEach(el => el.onclick = () => { if (!done) { S.act = el.dataset.slot; renderDesk(); } });
+  // live sentence
+  $("#live").innerHTML = liveHTML(assemble(t, s => S.sel[s.k]!=null ? s.opts[S.sel[s.k]] : null));
+  renderFader(); renderLCD(); renderMeters(); renderCoach(); renderActs();
+}
+
+function curSlot(){ return turn().slots.find(s => s.k === S.act && s.fixed == null); }
+
+function renderFader(){
+  const s = curSlot(), bay = $("#fbay");
+  if (!s || S.phase !== "build") {
+    bay.innerHTML = `<div class="on">ON FADER</div><div class="dn">—</div>
+      <div class="fempty">${S.phase!=="build" ? "Sentence committed. Read the mix report." : "Tick a checkbox under a sentence slot to put it on the fader."}</div>`;
+    return;
+  }
+  const d = DIMS[s.dim], n = s.opts.length, v = S.sel[s.k];
+  const stars = S.sc.demo || S.hinted[s.k];
+  const rows = s.opts.slice().reverse().map(o => `
+    <button class="frow ${v===o.i?'sel':''}" data-o="${o.i}" aria-pressed="${v===o.i}">
+      <span class="led"></span><span class="tx"><span class="dg">${esc(o.d)}</span><span class="pv">${esc(s.aff ? o.n : (o.t ? o.t.replace(/^,\s*/,"") : "(leave empty)"))}</span></span>
+      ${stars && o.g===2 ? '<span class="star" title="Good setting">★</span>' : ''}</button>`).join("");
+  const ticks = s.opts.map((o,k) => { const y = rowY(n, o.i); return `<i class="tick" style="top:${y}%"><b>${o.i}</b></i>`; }).join("");
+  bay.innerHTML = `<div class="on">ON FADER</div><div class="dn">${esc(d.name)}</div><div class="sl">${esc(s.lab)}</div>
+    <div class="fend">▲ ${esc(d.hi)}</div>
+    <div class="fader" id="fader" tabindex="0" role="slider" aria-label="${esc(d.name)} fader for ${esc(s.lab)}"
+      aria-valuemin="0" aria-valuemax="${n-1}" aria-valuenow="${v==null?'':v}" aria-valuetext="${v==null?'not set':esc(s.opts[v].d)}">
+      <div class="track" id="track"><div class="slot"></div>${ticks}<div class="cap ${v==null?'off':''}" id="cap" style="top:${rowY(n, v==null?Math.floor((n-1)/2):v)}%"></div></div>
+      <div class="rows">${rows}</div>
+    </div>
+    <div class="fend">▼ ${esc(d.lo)}</div>`;
+  bay.querySelectorAll(".frow").forEach(b => b.onclick = () => setOpt(s, +b.dataset.o));
+  const f = $("#fader");
+  f.onkeydown = e => {
+    const cur = S.sel[s.k];
+    if (e.key === "ArrowUp" || e.key === "ArrowRight") { e.preventDefault(); setOpt(s, Math.min(n-1, cur==null ? Math.floor((n-1)/2) : cur+1), true); }
+    if (e.key === "ArrowDown" || e.key === "ArrowLeft") { e.preventDefault(); setOpt(s, Math.max(0, cur==null ? Math.floor((n-1)/2) : cur-1), true); }
+  };
+  const tr = $("#track");
+  const fromY = y => { const r = tr.getBoundingClientRect(); const fr = (y - r.top) / r.height; return Math.max(0, Math.min(n-1, Math.round((1 - fr) * n - 0.5))); };
+  tr.onpointerdown = e => {
+    e.preventDefault(); tr.setPointerCapture(e.pointerId);
+    setOpt(s, fromY(e.clientY), true);
+    tr.onpointermove = ev => { const k = fromY(ev.clientY); if (k !== S.sel[s.k]) setOpt(s, k, true); };
+    tr.onpointerup = tr.onpointercancel = () => { tr.onpointermove = null; };
+  };
+}
+function rowY(n, i){ return ((n - 1 - i) + 0.5) / n * 100; }
+
+function setOpt(s, i, keepFocus){
+  if (S.phase !== "build") return;
+  S.sel[s.k] = i;
+  // light re-render: keep fader DOM for dragging smoothness
+  const cap = $("#cap"); const n = s.opts.length;
+  if (cap) { cap.classList.remove("off"); cap.style.top = rowY(n,i) + "%"; }
+  document.querySelectorAll("#fbay .frow").forEach(b => { const on = +b.dataset.o === i; b.classList.toggle("sel", on); b.setAttribute("aria-pressed", on); });
+  const f = $("#fader"); if (f) { f.setAttribute("aria-valuenow", i); f.setAttribute("aria-valuetext", s.opts[i].d); if (keepFocus) f.focus({preventScroll:true}); }
+  // refresh the rest
+  const act = S.act;
+  const t = turn();
+  $("#live").innerHTML = liveHTML(assemble(t, x => S.sel[x.k]!=null ? x.opts[S.sel[x.k]] : null));
+  const tx = document.querySelector(`[data-slot="${s.k}"]`);
+  if (tx) {
+    const o = s.opts[i];
+    tx.className = "stxt" + (!s.aff && !o.t ? " none" : "");
+    tx.textContent = s.aff ? o.d.replace(/^.*\(/,"(").trim() : (o.t ? o.t.replace(/^,\s*/,"") : "∅ none");
+    const lab = tx.parentNode.querySelector(".ck"); if (lab && !lab.querySelector(".done")) lab.insertAdjacentHTML("beforeend",' <span class="done">●</span>');
+  }
+  S.act = act;
+  renderLCD(); renderMeters(); renderCoach(); renderActs();
+}
+
+function renderLCD(){
+  const s = curSlot(), el = $("#lcd");
+  if (S.phase !== "build") { el.innerHTML = `<span class="dim">MIX COMMITTED ·</span> <span class="t">${esc(S.log[S.ti] ? S.log[S.ti].tagLabel : "")}</span>`; return; }
+  if (!s) { el.innerHTML = `<span class="dim">NO CHANNEL SELECTED</span>`; return; }
+  const v = S.sel[s.k];
+  if (v == null) { el.innerHTML = `<span class="t">${esc(s.lab.toUpperCase())}</span> <span class="dim">· ${esc(DIMS[s.dim].name)} · ${s.opts.length} settings · not set</span><br><span class="dim">Drag the fader, click a setting, or use the arrow keys.</span>`; return; }
+  const o = s.opts[v];
+  el.innerHTML = `<span class="t">${esc(o.d)}</span><br>${esc(o.n)}`;
+}
+
+/* ---- meters ---- */
+function buildVU(svg, labels){
+  const cx = 70, cy = 72, R = 56;
+  let h = `<rect x="1" y="1" width="138" height="82" rx="5" fill="#efe4bf"/>`;
+  const ang = a => (a - 90) * Math.PI / 180;
+  h += `<path d="M ${cx+R*Math.cos(ang(-45))} ${cy+R*Math.sin(ang(-45))} A ${R} ${R} 0 0 1 ${cx+R*Math.cos(ang(45))} ${cy+R*Math.sin(ang(45))}" fill="none" stroke="#222" stroke-width="1.2"/>`;
+  h += `<path d="M ${cx+R*Math.cos(ang(22))} ${cy+R*Math.sin(ang(22))} A ${R} ${R} 0 0 1 ${cx+R*Math.cos(ang(45))} ${cy+R*Math.sin(ang(45))}" fill="none" stroke="#c0271a" stroke-width="3"/>`;
+  labels.forEach((l,i) => {
+    const a = -45 + i * 90 / (labels.length - 1);
+    const x1 = cx + R*Math.cos(ang(a)), y1 = cy + R*Math.sin(ang(a)), x2 = cx + (R-7)*Math.cos(ang(a)), y2 = cy + (R-7)*Math.sin(ang(a));
+    const xt = cx + (R+9)*Math.cos(ang(a)), yt = cy + (R+9)*Math.sin(ang(a));
+    h += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#222" stroke-width="1.2"/>`;
+    h += `<text x="${xt}" y="${yt+3}" font-size="8" text-anchor="middle" fill="#222" font-family="Arial">${l}</text>`;
+  });
+  h += `<text x="70" y="52" font-size="9" text-anchor="middle" fill="#8a7a55" font-family="Georgia" font-style="italic">VU</text>`;
+  h += `<g class="ndl" style="transform:rotate(-50deg)"><line x1="${cx}" y1="${cy}" x2="${cx}" y2="${cy-R+4}" stroke="#111" stroke-width="1.6"/></g>`;
+  h += `<circle cx="${cx}" cy="${cy}" r="5" fill="#222"/>`;
+  svg.innerHTML = h;
+}
+function setNeedle(svg, deg){ const g = svg.querySelector(".ndl"); if (g) g.style.transform = `rotate(${deg}deg)`; }
+function renderMeters(){
+  const t = turn(); let sum = 0, k = 0;
+  t.slots.forEach(s => { if (s.fixed==null && S.sel[s.k]!=null) { const o = s.opts[S.sel[s.k]]; if (o.r) { sum += o.r; k++; } } });
+  setNeedle($("#vuR"), k ? -45 + (sum/k - 1) * 22.5 : -50);
+  setNeedle($("#vuG"), -45 + S.gw * 0.9);
+}
+
+function renderCoach(){
+  const t = turn(), s = curSlot(), el = $("#coach");
+  if (S.sc.demo) {
+    el.style.display = "";
+    el.innerHTML = `<b>COACH ·</b> ${t.coach || ""}${s && s.why ? `<div class="why"><b>${esc(s.lab)}:</b> ${esc(s.why)}</div>` : ""}`;
+  } else {
+    el.style.display = "";
+    const R = regFromRoom(S.sc.room.d+S.sc.room.p+S.sc.room.s);
+    el.innerHTML = `<b>CUE ·</b> ${S.ti===0 ? esc(S.sc.intro) : `Set every channel, then commit. ${S.revealR?`The room expects <b>R${R} · ${REGN[R]}</b> — but some slots (tense, conditionals, reporting) are about accuracy, not politeness.`:'Work out the register from Distance + Power + Stakes.'}`}`;
+  }
+}
+
+function renderActs(){
+  const t = turn(), el = $("#acts");
+  if (S.phase !== "build") { el.innerHTML = ""; return; }
+  const ls = liveSlots(t), missing = ls.filter(s => S.sel[s.k]==null);
+  el.innerHTML = `<button class="dbtn" id="resetBtn">Reset</button>
+    ${S.sc.demo ? `<button class="dbtn" id="showBtn">Show me</button>` : `<button class="dbtn" id="hintBtn" ${!curSlot()?'disabled':''}>Hint</button>`}
+    <button class="dbtn" id="nextSlotBtn">Next slot ▸</button>
+    <span class="need">${missing.length ? `${missing.length} slot${missing.length>1?'s':''} to set` : "All channels set"}</span>
+    <button class="commit" id="commitBtn" ${missing.length?'disabled':''}>COMMIT</button>`;
+  $("#resetBtn").onclick = () => { S.sel = {}; firstSlot(); };
+  $("#nextSlotBtn").onclick = () => {
+    const i = ls.findIndex(s => s.k === S.act);
+    const order = ls.slice(i+1).concat(ls.slice(0, i+1));
+    const nx = order.find(s => S.sel[s.k]==null) || order[0];
+    S.act = nx.k; renderDesk();
+  };
+  if ($("#showBtn")) $("#showBtn").onclick = () => { ls.forEach(s => S.sel[s.k] = s.best); renderDesk(); };
+  if ($("#hintBtn")) $("#hintBtn").onclick = () => { const s = curSlot(); if (!s) return; if (!S.hinted[s.k]) { S.hinted[s.k] = true; S.hints++; } renderFader(); };
+  $("#commitBtn").onclick = commit;
+}
+
+/* ---- commit & reply ---- */
+function commit(){
+  const t = turn(), sc = S.sc;
+  const sentence = assemble(t, s => s.opts[S.sel[s.k]]);
+  const model = assemble(t, s => s.opts[s.best]);
+  const slots = liveSlots(t).map(s => { const o = s.opts[S.sel[s.k]]; return {k:s.k, lab:s.lab, dim:s.dim, g:o.g, tag:o.tag, o, best:s.opts[s.best], s}; });
+  const bad = slots.filter(x => x.g===0), near = slots.filter(x => x.g===1);
+  const tagOf = arr => { for (const tg of TAGS) if (arr.some(x => x.tag===tg)) return tg; return arr[0] ? arr[0].tag : ""; };
+  let level = bad.length ? "bad" : near.length ? "ok" : "good";
+  let tag = level==="bad" ? tagOf(bad) : level==="ok" ? tagOf(near) : "";
+  const score = Math.round(slots.reduce((a,x)=>a+[15,60,100][x.g],0) / slots.length);
+  const mult = t.key ? 1.5 : 1;
+  S.gw = Math.max(0, Math.min(100, S.gw + ({good:8, ok:2, bad:-10}[level]) * mult));
+  if (t.key && level==="bad") S.keyFail = true;
+  const tagLabel = level==="good" ? "On target" : (level==="ok" ? "Nearly — slightly " : "") + (TAG_LABEL[tag] || "Off target").replace(/^./, c => level==="ok" ? c.toLowerCase() : c);
+  S.log[S.ti] = {ti:S.ti, sentence, model, slots, level, tag, tagLabel, score, key:!!t.key};
+  S.phase = "reply";
+
+  S.msgs.push({type:"me", text:sentence, tm:tick()});
+  const replies = buildReply(t, level, tag);
+  const who0 = replies[0][0];
+  S.msgs.push({type:"typing", who:who0});
+  renderChat(); renderDots(); renderDesk(); renderReport();
+  speak(sentence, 0.95);
+  setTimeout(() => {
+    S.msgs = S.msgs.filter(m => m.type !== "typing");
+    replies.forEach((r,j) => S.msgs.push({type:"them", who:r[0], text:r[1], tm:tick(),
+      imp: j===0 ? "Reads as: " + tagLabel : "", impc: j===0 ? ({good:"g",ok:"o",bad:"b"}[level]) : ""}));
+    renderChat(); renderMeters();
+    replies.forEach(r => speak(r[1], 1));
+    S.phase = "after"; renderReport();
+  }, 850);
+}
+
+function buildReply(t, level, tag){
+  const sc = S.sc;
+  const norm = v => typeof v === "string" ? [[sc.npc, v]] : v.map(a => [a[0], a[1]]);
+  if (level === "good") return norm(t.good);
+  const cont = norm(t.cont);
+  const p = PEOPLE[cont[0][0]];
+  if (level === "ok") {
+    if (t.ok) return norm(t.ok);
+    cont[0][1] = (MILD[tag] || pick(p.rx.ok)) + " " + cont[0][1];
+    return cont;
+  }
+  const phrase = (t.rx && t.rx[tag]) || pick(p.rx[tag]) || pick(p.rx.ok);
+  cont[0][1] = phrase + " " + cont[0][1];
+  return cont;
+}
+
+function renderReport(){
+  const L = S.log[S.ti], el = $("#report");
+  if (!L) { el.innerHTML = ""; return; }
+  const ic = {2:["g","✓"],1:["o","~"],0:["b","✗"]};
+  const lines = L.slots.map(x => {
+    const [c, sym] = ic[x.g];
+    const chosen = x.s.aff ? x.o.d : (x.o.t ? `“${x.o.t.replace(/^,\s*/,"")}”` : "(none)");
+    let better = "";
+    if (x.g < 2) {
+      const goods = x.s.opts.filter(o => o.g===2);
+      const nearest = goods.reduce((a,o) => Math.abs(o.i-x.o.i) < Math.abs(a.i-x.o.i) ? o : a, goods[0]);
+      const dir = nearest.i > x.o.i ? "▲ Push up to" : "▼ Pull down to";
+      better = `<div class="bt">${dir}: ${esc(nearest.d)}${!x.s.aff && nearest.t ? ` — “${esc(nearest.t.replace(/^,\s*/,""))}”` : ""}. ${esc(nearest.n)}</div>`;
+    }
+    return `<div class="rline"><span class="ic ${c}">${sym}</span><div><b>${esc(x.lab)}</b> · ${esc(x.o.d)} — ${esc(chosen)}<div class="n">${esc(x.o.n)}</div>${better}</div></div>`;
+  }).join("");
+  const last = S.ti === S.sc.turns.length - 1;
+  el.innerHTML = `<div class="report"><h4>Mix report · exchange ${S.ti+1} · ${L.score}%</h4>${lines}
+    <div class="model"><span class="silk">A model mix</span>${esc(L.model)}</div>
+    <div class="acts" style="margin-top:10px"><button class="dbtn" id="redoBtn" ${S.phase!=="after"?'disabled':''}>Try this exchange again</button>
+    <button class="commit" id="nextBtn" ${S.phase!=="after"?'disabled':''}>${last ? "DEBRIEF ▸" : "NEXT EXCHANGE ▸"}</button></div></div>`;
+  const nb = $("#nextBtn"); if (nb) nb.onclick = nextTurn;
+  const rb = $("#redoBtn"); if (rb) rb.onclick = redoTurn;
+}
+
+function redoTurn(){
+  // roll back this exchange: remove its messages, restore goodwill
+  const L = S.log[S.ti]; if (!L) return;
+  const mult = L.key ? 1.5 : 1;
+  S.gw = Math.max(0, Math.min(100, S.gw - ({good:8, ok:2, bad:-10}[L.level]) * mult));
+  if (L.key && L.level === "bad") S.keyFail = S.log.some((l,i) => i!==S.ti && l && l.key && l.level==="bad");
+  const lastMe = S.msgs.map(m=>m.type).lastIndexOf("me");
+  S.msgs = S.msgs.slice(0, lastMe); S.clock -= 2;
+  S.log.length = S.ti; S.phase = "build";
+  renderChat(); renderDots(); $("#report").innerHTML = ""; renderDesk();
+}
+
+function nextTurn(){
+  if (S.ti >= S.sc.turns.length - 1) { S.phase = "over"; renderDebrief(); return; }
+  S.ti++; S.sel = {}; S.phase = "build"; $("#report").innerHTML = "";
+  renderDots(); firstSlot();
+  $("#brief").scrollIntoView({behavior:"smooth", block:"start"});
+}
+
+/* ---- debrief ---- */
+function renderDebrief(){
+  const sc = S.sc, logs = S.log;
+  const score = Math.round(logs.reduce((a,l)=>a+l.score,0) / logs.length);
+  const res = (S.gw >= 70 && !S.keyFail) ? "win" : S.gw >= 45 ? "part" : "fail";
+  const big = {win:"GOAL ACHIEVED", part:"PARTLY ACHIEVED", fail:"GOAL NOT ACHIEVED"}[res];
+  const outcome = OUTCOME[sc.id][{win:0,part:1,fail:2}[res]];
+  const prev = store.best[sc.id];
+  if (!prev || score > prev.score || (res==="win" && !prev.win)) store.best[sc.id] = {score: Math.max(score, prev?prev.score:0), win: res==="win" || (prev && prev.win)};
+  save();
+
+  // what went well: strongest good choices, one per dimension, prefer non-register dims
+  const goods = [], seenDim = {};
+  logs.forEach(l => l.slots.forEach(x => { if (x.g===2 && !seenDim[x.dim]) { seenDim[x.dim] = 1; goods.push({l, x}); } }));
+  const improve = [];
+  logs.forEach(l => l.slots.forEach(x => { if (x.g<2) improve.push({l, x}); }));
+  // per-dimension bars
+  const dim = {};
+  logs.forEach(l => l.slots.forEach(x => { const d = dim[x.dim] || (dim[x.dim] = {n:0, s:0}); d.n++; d.s += [0,0.5,1][x.g]; }));
+  const bars = Object.keys(dim).map(k => { const p = Math.round(dim[k].s / dim[k].n * 100);
+    return `<div class="bar"><span>${esc(DIMS[k].name)}</span><span class="tr"><i style="width:${p}%"></i></span><span class="v">${p}%</span></div>`; }).join("");
+  const worstDims = Object.keys(dim).map(k => [k, dim[k].s/dim[k].n]).filter(a => a[1] < 1).sort((a,b)=>a[1]-b[1]).slice(0,2).map(a => DIMS[a[0]].name);
+  const nextFocus = worstDims.length ? `Next time, give extra attention to <b>${worstDims.join("</b> and <b>")}</b>.` : "Every channel was on target. Try the next level up.";
+
+  $("#app").innerHTML = `
+   <div class="pbar"><button class="btn ghost" id="backBtn">&larr; Scenarios</button><h2>Debrief · ${esc(sc.title)}</h2><span class="bdg lv">${esc(sc.cefr)}</span></div>
+   <div class="deb">
+     <div class="verdict ${res}">
+       <div class="big">${big}</div>
+       <div><b>Goal:</b> ${esc(sc.goal)}<br><span style="color:var(--ink-dim)">${esc(outcome)}</span>
+         <br><span style="color:var(--ink-dim);font-size:.85rem">Goodwill ${Math.round(S.gw)}/100${S.keyFail?' · a key moment went wrong':''}${S.hints?` · ${S.hints} hint${S.hints>1?'s':''} used`:''}</span></div>
+       <div class="score">${score}%<small>mix accuracy</small></div>
+     </div>
+     <div class="two">
+       <div class="panel"><h3>What was good</h3><ul>${goods.length ? goods.slice(0,6).map(({l,x}) =>
+          `<li><b>${esc(DIMS[x.dim].name)}</b> (exchange ${l.ti+1}): <span class="q">${esc(x.s.aff ? x.o.d : (x.o.t||"(none)").replace(/^,\s*/,""))}</span> — ${esc(x.o.n)}</li>`).join("") : "<li>Keep going — no channel was fully on target yet.</li>"}</ul></div>
+       <div class="panel"><h3>What can be improved</h3><ul>${improve.length ? improve.slice(0,8).map(({l,x}) => {
+          const goodsO = x.s.opts.filter(o=>o.g===2); const b = goodsO.reduce((a,o)=>Math.abs(o.i-x.o.i)<Math.abs(a.i-x.o.i)?o:a, goodsO[0]);
+          return `<li><b>${esc(x.lab)}</b> (exchange ${l.ti+1}): you set <span class="q">${esc(x.o.d)}</span>. ${esc(x.o.n)} <br>Try <span class="q">${esc(b.d)}</span>${!x.s.aff && b.t?`: “${esc(b.t.replace(/^,\s*/,""))}”`:''}.</li>`; }).join("") : "<li>Nothing — a clean mix.</li>"}</ul>
+          ${improve.length>8?`<p style="color:var(--ink-dim);font-size:.8rem">+ ${improve.length-8} more in the transcript below.</p>`:''}</div>
+     </div>
+     <div class="two">
+       <div class="panel"><h3>Channel accuracy</h3><div class="bars">${bars}</div><p style="font-size:.85rem;color:var(--ink-dim);margin:.6rem 0 0">${nextFocus}</p></div>
+       <div class="panel"><h3>The method in one line</h3><p style="margin:0;font-size:.9rem">One core thought. One register, read from the room. Every dial in concord. Hedge the cause, never the checked number; put the point first; let only positive affect climb above register 3.</p>
+       <div class="acts" style="margin-top:12px"><button class="btn" id="replayBtn">Replay scenario</button>
+       ${S.i < SCENARIOS.length-1 ? `<button class="btn ghost" id="nextScBtn">Next: ${esc(SCENARIOS[S.i+1].title)} ▸</button>` : ""}</div></div>
+     </div>
+     <div class="panel"><h3>Transcript — your mix vs a model mix</h3>
+       <table class="tx"><tr><th>#</th><th>Your sentence</th><th>Model</th><th>Read as</th></tr>
+       ${logs.map(l => `<tr><td>${l.ti+1}${l.key?'★':''}</td><td class="you">${esc(l.sentence)}</td><td class="mdl">${esc(l.model)}</td><td><span class="mk ${({good:'g',ok:'o',bad:'b'})[l.level]}">${esc(l.tagLabel)}</span></td></tr>`).join("")}
+       </table><p style="font-size:.78rem;color:var(--ink-dim)">★ = key moment for the goal. The model is one good mix; other settings marked ✓ are also correct.</p></div>
+   </div>`;
+  $("#backBtn").onclick = renderHome;
+  $("#replayBtn").onclick = () => startScenario(S.i);
+  const nx = $("#nextScBtn"); if (nx) nx.onclick = () => startScenario(S.i+1);
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+/* ---- reference ---- */
+function renderRef(){
+  $("#refBox").innerHTML = `<div style="display:flex;align-items:center"><h2>Dial reference</h2><button class="hbtn" style="margin-left:auto" id="refClose">Close</button></div>
+  <p>Layer 0 is the core thought (what is true). Layer 1 is register, read from the room. Layer 2 is the dials. The output is the assembled sentence.</p>
+  <h3>Register = Distance + Power + Stakes (each 0–2)</h3>
+  <table><tr><td>0–1 → R1</td><td>Friendly — lunch with a friend. Most slots empty. That is correct, not lazy.</td></tr>
+  <tr><td>2 → R2</td><td>Informal — colleagues you know.</td></tr><tr><td>3 → R3</td><td>Professional — the workplace default.</td></tr>
+  <tr><td>4–5 → R4</td><td>Serious — senior people, strangers in official roles, money.</td></tr><tr><td>6 → R5</td><td>Deference — your commanding officer, an auditor, an error.</td></tr></table>
+  <p>Power is not the same axis as familiarity. Register sets greeting, address, sentence length, grammar, word choice, the affect ceiling and the hedging floor.</p>
+  <h3>Address</h3><table><tr><td>Thai colleagues</td><td>Khun + first name is the safe default.</td></tr><tr><td>RTAF officers</td><td>Rank + FIRST name (Squadron Leader Malee). 'Sir' / 'Ma'am' alone is the R5 default.</td></tr><tr><td>Western officers / guests</td><td>Rank or title + SURNAME (Squadron Leader Clarke, Dr. Lim).</td></tr></table>
+  <h3>Directness (0–7)</h3><table><tr><td>0</td><td>Send me the receipt.</td></tr><tr><td>1</td><td>Please send me… — still an order. 'Please' does not make an English request.</td></tr><tr><td>2</td><td>I need…</td></tr><tr><td>3</td><td>Can you…?</td></tr><tr><td>4</td><td>Could you…? — the workhorse.</td></tr><tr><td>5</td><td>Would you be able to…?</td></tr><tr><td>6</td><td>I was wondering if…</td></tr><tr><td>7</td><td>Would it be possible to…? — higher is not better. Level 7 for a stapler sounds strange.</td></tr></table>
+  <h3>Commitment & hedging</h3><table><tr><td>can't 0% · might 30% · should 70% · must/will 90%</td><td>100% takes no modal at all.</td></tr><tr><td>Hedging frames</td><td>R3 'It looks like…' · R4 'It appears that… / My understanding is…' · R5 'If I may…'</td></tr><tr><td>Rule</td><td>Hedge the cause and other people's work — never your own checked figures.</td></tr></table>
+  <h3>Detail (grain) & order</h3><table><tr><td>D · C · B · A</td><td>Status only → result + action → cause → every step. Ask: what does this listener have to do next?</td></tr><tr><td>Order</td><td>English staff talk: headline → cause → action taken → what I need from you.</td></tr></table>
+  <h3>Affect</h3><p>Ceiling set by register: R2 high · R3 moderate · R4 low · R5 very low. Positive affect survives higher: “Thank you, that's very helpful” is safe everywhere.</p>
+  <h3>Grammar channels</h3><table>
+   <tr><td>Tenses</td><td>Past simple + finished time (on the 3rd) · present perfect for up-to-now (hasn't arrived yet, so far) · present continuous for arranged future (is getting married) · will for promises.</td></tr>
+   <tr><td>Conditionals</td><td>Zero: rules (If it doesn't match, we don't pay) · First: real future (If it doesn't arrive, it'll miss the run) · Second: hypothetical / tentative (If we switched…, we would…) · Third: past unreal (If we had had…, it would have flagged…) · Formal inversion: Should it arrive… / Had it been… / Were we to… · Never 'will/would' in the if-clause.</td></tr>
+   <tr><td>Reported speech</td><td>said (that)… · told + PERSON (that)… · backshift: will → would, must → had to, did → had done. Reporting verbs: confirmed, mentioned, added.</td></tr>
+   <tr><td>Nominalisation</td><td>Nouns make writing dense and formal (Decision: … / a hold on payments). Good in minutes and reports; one noun chain too many and nobody can follow it.</td></tr>
+   <tr><td>Concord</td><td>One core thought. One register. Every dial in agreement.</td></tr></table>`;
+  $("#refClose").onclick = () => $("#ref").classList.remove("show");
+}
+
+/* ---- header controls ---- */
+$("#homeBtn").onclick = () => { if (view !== "play" || confirmLeave()) renderHome(); };
+$("#refBtn").onclick = () => { renderRef(); $("#ref").classList.add("show"); };
+$("#ref").onclick = e => { if (e.target.id === "ref") $("#ref").classList.remove("show"); };
+document.addEventListener("keydown", e => { if (e.key === "Escape") $("#ref").classList.remove("show"); });
+const vb = $("#voiceBtn");
+const setVoiceBtn = () => { vb.textContent = "Voice: " + (store.voice ? "on" : "off"); vb.classList.toggle("on", store.voice); };
+vb.onclick = () => { store.voice = !store.voice; if (!store.voice && "speechSynthesis" in window) speechSynthesis.cancel(); save(); setVoiceBtn(); };
+setVoiceBtn();
+document.querySelectorAll("[data-fs]").forEach(b => b.onclick = () => {
+  store.fs = Math.max(13, Math.min(21, store.fs + (+b.dataset.fs))); save();
+  document.documentElement.style.setProperty("--fs", store.fs + "px");
+});
+document.addEventListener("click", e => { const b = e.target.closest("[data-start]"); if (b) startScenario(+b.dataset.start); });
+
+renderHome();
+</script>
+</body>
+</html>
