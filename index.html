@@ -69,7 +69,15 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding-top:12px;font-si
 .dots i.b{background:var(--bad);border-color:var(--bad)}
 
 /* ---------- chat (messenger style) ---------- */
-.chat{border-radius:14px;overflow:hidden;border:1px solid #0d223d;background:var(--chat)}
+.chat{position:relative;border-radius:14px;overflow:hidden;border:1px solid #0d223d;background:var(--chat)}
+.cbg{position:absolute;inset:0;background-size:cover;background-position:center 30%;filter:blur(18px) saturate(1.15) brightness(.78);transform:scale(1.18);opacity:0;transition:opacity .6s}
+.chat.photo .cbg{opacity:1}
+.chat.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,40,.25),rgba(8,20,40,.35));pointer-events:none}
+.chead,.cbody{position:relative;z-index:1}
+.chat.photo .chead{background:rgba(20,32,48,.82)}
+.chat.photo .pill{background:rgba(5,12,24,.6)}
+.chat.photo .tcol .nm{color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.7)}
+.chat.photo .msg .meta{color:#eef2f7;text-shadow:0 1px 2px rgba(0,0,0,.7)}
 .chead{background:#243447;color:#fff;display:flex;align-items:center;gap:8px;padding:8px 12px;font-weight:600;font-size:.95rem}
 .chead svg{width:13px;height:13px;flex:none}
 .chead .more{margin-left:auto;background:rgba(255,255,255,.12);color:#fff;border:none;border-radius:99px;font-size:.72rem;padding:3px 10px}
@@ -273,7 +281,13 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding-top:12px;font-si
   .hero,.two{grid-template-columns:1fr}
   .dgrid{grid-template-columns:1fr;gap:12px}
   .rbay{display:contents}
-  .sut{order:1}.fbay{order:2}.lcd{order:3}.acts{order:4}#report{order:5}.mrow{order:6}
+  .sut{order:1}.fbay{order:2}.lcd{order:3}.mrow{order:4}.acts{order:5}#report{order:6}
+  .dgrid{grid-template-columns:minmax(0,1fr)}
+  .fbay,.sut,.lcd,.mrow,.acts,#report,.slots,.sl{min-width:0}
+  .frow .pv{white-space:normal;overflow:visible}
+  .mrow{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .acts .commit{flex:1 1 100%;margin-left:0;padding:13px 16px;font-size:1.05rem}
+  .fend{padding-left:0}
   .fader{min-height:0}
   .brief{grid-template-columns:1fr}
   .room{justify-content:flex-start}
@@ -287,6 +301,7 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding-top:12px;font-si
   .score{text-align:left}
   .bar{grid-template-columns:110px 1fr 40px}
   .frow .pv{max-width:none}
+  .report .acts .dbtn{flex:1 1 auto}
 }
 </style>
 </head>
@@ -1738,7 +1753,7 @@ function renderPlay(){
     <div class="dots" id="dots"></div>
     <button class="btn ghost" id="restartBtn">Restart</button>
   </div>
-  <section class="chat" aria-label="Conversation">
+  <section class="chat" aria-label="Conversation"><div class="cbg" id="cbg" aria-hidden="true"></div>
     <div class="chead"><svg viewBox="0 0 16 16" fill="#fff" aria-hidden="true"><path d="M4 7V5a4 4 0 1 1 8 0v2h1v8H3V7h1zm2 0h4V5a2 2 0 1 0-4 0v2z"/></svg>
       <span>${esc(sc.group || p.name)}</span><button class="more" id="moreBtn"></button></div>
     <div class="cbody" id="cbody" aria-live="polite"></div>
@@ -1750,7 +1765,7 @@ function renderPlay(){
   $("#moreBtn").onclick = () => { S.expanded = !S.expanded; renderChat(); };
   if ($("#hearBtn")) $("#hearBtn").onclick = () => { const v = store.voice; store.voice = true; speak(assemble(turn(), s => S.sel[s.k]!=null ? s.opts[S.sel[s.k]] : null).replace(/\[[^\]]+\]/g,""), 0.9); store.voice = v; };
   wireDesk(["R1","R2","R3","R4","R5"], ["0","25","50","75","100"]);
-  renderChat(); renderDots();
+  renderChat(); renderDots(); applyChatBg();
 }
 function deskHTML(mode, silk){
   return `<section class="desk" aria-label="Mixing desk">
@@ -2276,11 +2291,19 @@ function loadSceneImage(sc){
   const tryNext = i => {
     if (i >= exts.length) return;             // none found: keep the built-in illustration
     const im = new Image();
-    im.onload = () => { const a = $("#sart"); if (a && S && S.sc === sc && S.inRoom) { a.innerHTML = ""; im.alt = sc.place; a.appendChild(im); $("#scene").classList.add("photo"); } };
+    im.onload = () => { sc._img = im.src; applyChatBg(); const a = $("#sart"); if (a && S && S.sc === sc && S.inRoom) { a.innerHTML = ""; im.alt = sc.place; a.appendChild(im); $("#scene").classList.add("photo"); } };
     im.onerror = () => tryNext(i + 1);
     im.src = SCENE_IMG_DIR + "scene-" + sc.id + "." + exts[i];
   };
   try { tryNext(0); } catch(e){}
+}
+
+/* heavily blurred copy of the scene behind the chat (slide image, or the built-in drawing) */
+function applyChatBg(){
+  const c = $(".chat"), bg = $("#cbg"); if (!c || !bg || !S) return;
+  const url = S.sc._img || ("data:image/svg+xml;charset=utf-8," + encodeURIComponent(sceneArt(S.sc)));
+  bg.style.backgroundImage = `url("${url.replace(/"/g, '%22')}")`;
+  c.classList.add("photo");
 }
 
 function roomCommit(){
@@ -2411,7 +2434,7 @@ function sceneArt(sc){
         + person(420, H-30, 1.2, {bun:"l", op:.95}) + floor("#0a0c1a");
       break;
   }
-  return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${esc(sc.place)}">${g}
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${esc(sc.place)}">${g}
     <rect width="${W}" height="${H}" fill="url(#vig)"/><defs><radialGradient id="vig" cx=".5" cy=".45" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient></defs></svg>`;
 }
 
