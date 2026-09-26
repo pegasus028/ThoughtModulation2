@@ -272,7 +272,103 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding-top:12px;font-si
 .vu.off .cap2,.vu.off .rd{opacity:.45}
 .vu.off .rd{color:var(--print-dim)}
 
+/* ---------- campaign tabs & quest map ---------- */
+.tabs{display:flex;gap:6px;margin:16px 0 0;border-bottom:1px solid var(--line);overflow-x:auto}
+.tab{background:none;border:none;border-bottom:3px solid transparent;color:var(--ink-dim);padding:10px 14px 8px;text-align:left;display:flex;gap:10px;align-items:center;flex:none}
+.tab .ti{font-size:1.5rem;line-height:1}
+.tab b{display:block;font-size:1rem;color:var(--ink)}
+.tab small{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}
+.tab.on{border-bottom-color:var(--gold)} .tab.on b{color:var(--gold)}
+.tab:focus-visible{outline:2px solid var(--gold)}
+.cbanner{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;margin:16px 0 8px;padding:16px 18px;border-radius:14px;border:1px solid var(--line);background:linear-gradient(120deg,var(--navy2),#132c4d)}
+.kick{font-size:.68rem;letter-spacing:.22em;color:var(--gold);font-weight:700;text-transform:uppercase}
+.cbanner h2{margin:.15rem 0 .35rem;font-size:1.45rem}
+.cbanner p{margin:0;color:var(--ink-dim);font-size:.92rem;max-width:72ch}
+.cstats{display:flex;gap:8px}
+.cstat{background:var(--navy3);border-radius:10px;padding:8px 12px;text-align:center;min-width:76px}
+.cstat .v{font-family:var(--mono);font-size:1.2rem;color:var(--gold);font-weight:700}
+.cstat .k{font-size:.6rem;letter-spacing:.14em;color:var(--ink-dim);text-transform:uppercase}
+.qmap{position:relative;display:flex;justify-content:space-between;gap:4px;padding:14px 0 6px;margin:4px 0}
+.qmap::before{content:"";position:absolute;left:7%;right:7%;top:40px;border-top:3px dashed #2d5480}
+.qn{position:relative;z-index:1;background:none;border:none;color:var(--ink);display:flex;flex-direction:column;align-items:center;gap:5px;flex:1 1 0;min-width:0;padding:0}
+.qn .dot{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:1.1rem;background:var(--navy2);border:3px solid #2d5480;color:var(--ink);transition:transform .15s}
+.qn:hover .dot{transform:scale(1.07)}
+.qn.done .dot{background:#12351f;border-color:var(--good);color:var(--good)}
+.qn.open .dot{border-color:var(--gold);color:var(--gold);animation:pulse 2s infinite}
+.qn.locked .dot{color:#56708f;background:#0c1d33;border-style:dashed}
+.qn.sel .dot{outline:3px solid #fff;outline-offset:3px}
+.qn:focus-visible{outline:none}.qn:focus-visible .dot{outline:3px solid var(--gold);outline-offset:3px}
+.qn .ql{font-size:.72rem;text-align:center;color:var(--ink-dim);line-height:1.2;max-width:130px}
+.qn .qs{font-size:.7rem;color:var(--gold);letter-spacing:1px;min-height:1em}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(212,175,55,.22)}50%{box-shadow:0 0 0 10px rgba(212,175,55,.04)}}
+.dossier{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px;background:var(--navy2);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-top:10px}
+.dossier h3{margin:.25rem 0 .3rem;font-size:1.3rem}
+.story{font-size:1rem;line-height:1.55;color:#dbe6f3;border-left:4px solid var(--gold);padding:4px 0 4px 12px;margin:10px 0}
+.dside{display:flex;flex-direction:column;gap:10px;font-size:.9rem}
+.lockmsg{font-size:.85rem;color:var(--warn)}
+.stars{color:var(--gold);letter-spacing:2px}
+.stars .off{color:#35506f}
+.intel{margin-top:18px}
+.intel h3{margin:0 0 8px;font-size:1rem}
+.icards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.icard{background:linear-gradient(160deg,#1b2f4f,#0f2440);border:1px solid #3a5c86;border-radius:10px;padding:10px 12px;font-size:.84rem}
+.icard .ih{display:flex;gap:8px;align-items:center;font-weight:700;color:var(--ink)}
+.icard .ii{font-size:1.25rem}
+.icard p{margin:6px 0 0;color:var(--ink-dim)}
+.icard .iu{margin-top:6px;font-size:.64rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase}
+.icard.locked{opacity:.6;border-style:dashed}
+.icard.locked p{font-style:italic}
+.free{display:flex;gap:8px;align-items:center;font-size:.8rem;color:var(--ink-dim);margin-top:14px;cursor:pointer}
+.mbrief{background:rgba(212,175,55,.07);border:1px solid rgba(212,175,55,.35);border-radius:10px;padding:10px 14px;margin-bottom:12px}
+.mbrief p{margin:4px 0 0;color:#e8eef6;font-size:1rem}
+.ichips{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.ichip{font-size:.78rem;background:#10304f;border:1px solid #3a5c86;border-radius:99px;padding:3px 10px;color:#cfe6ff}
+.ichip.miss{opacity:.55;border-style:dashed}
+.intel-tip{background:#0f2b45;border:1px solid #3a6f9f;border-radius:6px;padding:6px 9px;margin-bottom:6px;color:#cfe6ff}
+.intel-tip b{color:#9fd3ff}
+.vocab{margin-top:12px;background:var(--navy3);border-radius:8px;padding:8px 12px}
+.vocab summary{cursor:pointer;font-size:.74rem;letter-spacing:.16em;color:var(--gold);font-weight:700;text-transform:uppercase}
+.vocab dl{display:grid;grid-template-columns:auto 1fr;gap:5px 14px;margin:8px 0 2px;font-size:.92rem}
+.vocab dt{font-weight:700;color:#fff}
+.vocab dd{margin:0;color:var(--ink-dim)}
+
+/* ---------- chat reactions (LINE style) ---------- */
+.msg.me .bub{position:relative;cursor:pointer}
+.msg.me.hasrx{margin-bottom:12px}
+.rx{position:absolute;left:10px;bottom:-18px;width:31px;height:31px;border-radius:50%;background:#fff;border:1.5px solid #dfe5ec;box-shadow:0 2px 6px rgba(0,0,0,.28);font-size:17px;line-height:1;display:grid;place-items:center;padding:0}
+.rx.pop{animation:pop .5s cubic-bezier(.3,1.7,.5,1)}
+@keyframes pop{0%{transform:scale(0) rotate(-30deg)}100%{transform:scale(1) rotate(0)}}
+.dbtn.fbk{border-color:#4f86b8;color:#cfe6ff}
+.fbhead{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.fbsent{background:#0f1113;border-radius:8px;padding:8px 12px;margin-bottom:10px;color:#dff5d0;font-size:.95rem}
+.fbsent .silk{display:block;margin-bottom:2px}
+.fbbig{font-size:1.9rem;line-height:1}
+
+/* ---------- outcome (picture debrief) ---------- */
+.outc{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:16px;margin-top:14px;align-items:start}
+.opic{margin:0;background:#000;border-radius:14px;overflow:hidden;border:2px solid var(--line)}
+.opic.t5{border-color:var(--gold)}.opic.t4{border-color:var(--good)}.opic.t3{border-color:var(--warn)}.opic.t2,.opic.t1{border-color:var(--bad)}
+.oart{aspect-ratio:16/9;position:relative;background:#0b1626}
+.oart svg,.oart img{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover}
+.opic figcaption{padding:12px 16px;background:var(--navy2);font-size:1.05rem;color:#fff;line-height:1.4}
+.okpi{display:flex;flex-direction:column;gap:10px}
+.kpi{background:var(--navy2);border:1px solid var(--line);border-radius:12px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.kpi .k{font-size:.66rem;letter-spacing:.16em;color:var(--ink-dim);text-transform:uppercase}
+.kpi .v{font-family:var(--mono);font-size:1.3rem;font-weight:700;color:var(--gold);text-align:right}
+.kpi .v.win{color:var(--good)}.kpi .v.part{color:var(--warn)}.kpi .v.fail{color:var(--bad)}
+.kpi.big .v{font-size:1.7rem;letter-spacing:3px}
+.unlock{font-size:.88rem;color:#cfe6ff;background:#0f2b45;border:1px solid #3a6f9f;border-radius:10px;padding:9px 12px}
+.oacts{display:flex;gap:8px;flex-wrap:wrap}
+.fulldeb[hidden]{display:none}
+
 @media (max-width:860px){
+  .outc,.dossier,.cbanner{grid-template-columns:minmax(0,1fr)}
+  .cstats{flex-wrap:wrap}
+  .qn .dot{width:40px;height:40px;font-size:.95rem;border-width:2px}
+  .qmap::before{top:33px}
+  .qn .ql{font-size:.6rem}
+  .tab{padding:8px 10px}
+  .tab .ti{font-size:1.2rem}
   .clues{grid-template-columns:1fr}
   .narr{font-size:1.12rem}
   .goalbig{font-size:1.1rem}
@@ -303,6 +399,12 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding-top:12px;font-si
   .frow .pv{max-width:none}
   .report .acts .dbtn{flex:1 1 auto}
 }
+@media (max-width:560px){
+  .qn .ql{display:none}
+  .tab small{display:none}
+  .cstat{min-width:0;flex:1}
+  .kpi.big .v{font-size:1.35rem}
+}
 </style>
 </head>
 <body>
@@ -320,7 +422,7 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding-top:12px;font-si
     <div class="sub">Thought Modulation · The Linguistic Simulator · RTAF Finance English</div>
   </div>
   <div class="hctl">
-    <button class="hbtn" id="homeBtn">Scenarios</button>
+    <button class="hbtn" id="homeBtn">Mission map</button>
     <button class="hbtn" id="refBtn">Dial reference</button>
     <button class="hbtn" id="voiceBtn" title="Read replies aloud">Voice: off</button>
     <button class="hbtn" data-fs="-1" title="Smaller text">A&minus;</button>
@@ -329,9 +431,10 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding-top:12px;font-si
 </header>
 <main id="app"></main>
 <div class="modal" id="ref"><div class="mbox" id="refBox"></div></div>
+<div class="modal" id="fbm" role="dialog" aria-modal="true" aria-label="Feedback"><div class="mbox" id="fbBox"></div></div>
 <footer>
   Modulation Desk — an unofficial English-language training aid built on Teacher Chris's Thought Modulation method.
-  Emblem, people, units and scenarios are fictional and are not affiliated with or endorsed by the Royal Thai Air Force.
+  Emblem, people, units, banks, delegations and scenarios are fictional and are not affiliated with or endorsed by the Royal Thai Air Force or any other air force, bank or audit body.
 </footer>
 </div>
 <script>
@@ -352,17 +455,33 @@ const DIMS = {
   cond:    {name:"Conditional",   lo:"Real",          hi:"Unreal / formal", g:"Conditional sentences"},
   report:  {name:"Reported speech", lo:"Quoted",      hi:"Formal report", g:"Reported speech"},
   nominal: {name:"Nominalisation", lo:"Spoken verbs", hi:"Dense nouns", g:"Nominalisation"},
-  time:    {name:"Timing",        lo:"Urgent",        hi:"Open",        g:"Polite speech"}
+  time:    {name:"Timing",        lo:"Urgent",        hi:"Open",        g:"Polite speech"},
+  voice:   {name:"Voice",         lo:"Active",        hi:"Passive",     g:"Passive voice"},
+  qform:   {name:"Question form", lo:"Direct",        hi:"Indirect",    g:"Indirect questions"},
+  oblig:   {name:"Obligation",    lo:"Not needed",    hi:"Required",    g:"Modals of obligation"},
+  emph:    {name:"Emphasis",      lo:"Plain",         hi:"Cleft / inversion", g:"Cleft & inversion"},
+  jargon:  {name:"Jargon",        lo:"Plain English", hi:"Technical",   g:"Accounting vocabulary"},
+  trend:   {name:"Figures",       lo:"Vague",         hi:"Precise",     g:"Describing figures"},
+  form:    {name:"Verb form",     lo:"Base",          hi:"Pattern",     g:"Verb patterns"}
 };
 
 /* reaction tags, in priority order (first match wins when several slots slip) */
-const TAGS = ["low","blunt","blame","hype","odd","tense","cond","report","order","unsure","sure","vague","over","flat","high"];
+const TAGS = ["low","blunt","blame","hype","odd","tense","cond","report","form","order","unsure","sure","jargon","vague","over","flat","high"];
 const TAG_LABEL = {
   low:"Too casual / rude", high:"Too formal / stiff", blunt:"Too direct", vague:"Unclear",
   unsure:"Sounds unsure", sure:"Over-certain", tense:"Tense confusion", cond:"Conditional mix-up",
   report:"Reported-speech slip", hype:"Too emotional", flat:"Flat / cold", over:"Too much detail",
-  order:"Point buried", blame:"Unproven blame", odd:"Wrong name convention"
+  order:"Point buried", blame:"Unproven blame", odd:"Wrong name convention",
+  form:"Grammar slip", jargon:"Too much jargon"
 };
+/* LINE-style reaction the listener puts on your message */
+const RX_EMOJI = {low:"😠", high:"😅", blunt:"😤", vague:"🤔", unsure:"🤨", sure:"🤨", tense:"😕", cond:"😕",
+  report:"😕", hype:"😳", flat:"😐", over:"🥱", order:"🙄", blame:"😬", odd:"🤭", form:"🧐", jargon:"😵"};
+function reactionEmoji(level, tag, key){
+  if (level === "good") return key ? pick(["👏","❤️","🙌"]) : pick(["👍","😊","❤️","👌"]);
+  if (level === "ok") return pick(["🙂","👌","😶"]);
+  return RX_EMOJI[tag] || "😕";
+}
 
 /* ---------- people ---------- */
 const PEOPLE = {
@@ -473,7 +592,158 @@ const PEOPLE = {
         flat:["<em>Her smile falters.</em> Oh. Just okay?"],
         blame:["Hm — that's a serious thing to say."],
         odd:["<em>Gently.</em> Lim is my family name, actually."],
-        ok:["Mm, I see.","Right."]}}
+        ok:["Mm, I see.","Right."]}},
+  /* ---- International Week cast (all fictional) ---- */
+  olivia:{name:"Olivia Bennett", chat:"Olivia", init:"O", col:"#c0506a", lang:"en-GB",
+    role:"Your best friend from your master's year in England. Now an IT auditor in London, in Bangkok for a conference.",
+    rx:{low:["<em>She blinks.</em> Wow — okay…","Er… rude much?"],
+        high:["<em>She laughs.</em> Why are you talking like a hotel manager? It's me!","Ha! So formal! Did the Air Force do this to you?"],
+        blunt:["<em>She raises her eyebrows.</em> Yes, boss!"],
+        vague:["Sorry — what do you mean?"],
+        unsure:["You don't sound very sure!"],
+        sure:["Ha — are you sure?"],
+        tense:["Wait — now, or back then?"],
+        cond:["Hang on — is that a real plan or a dream?"],
+        report:["Who said that?"],
+        hype:["<em>She laughs.</em> Calm down!"],
+        over:["<em>Her eyes glaze over a little.</em> Okay, okay, I believe you!"],
+        order:["So… what's the point?"],
+        flat:["<em>She tilts her head.</em> You okay? You sound tired.","Hm. That's it?"],
+        blame:["Oof — careful!"],
+        odd:["<em>She giggles.</em> 'Khun Olivia'! I love it."],
+        form:["<em>A small puzzled smile.</em> Sorry?"],
+        jargon:["<em>She stares.</em> I understood the word 'we'.","Um… in English, please? Normal English!"],
+        ok:["Ha, yes.","Mm-hm."]}},
+  jack:{name:"Flight Lieutenant Jack Morrison", chat:"Flt Lt Morrison", init:"J", col:"#2f8f8a", lang:"en-AU",
+    role:"Liaison officer from a partner air force (Australia) on a two-week exchange. Your rank. You met him yesterday.",
+    rx:{low:["<em>He blinks.</em> Right. Okay then.","Ha — bit abrupt, mate."],
+        high:["<em>He grins.</em> Mate, no need to be so formal!","Crikey — 'Sir'? I'm a flight lieutenant, same as you."],
+        blunt:["<em>He raises an eyebrow.</em> Yes, Ma'am!"],
+        vague:["Sorry — what do I actually need to do?"],
+        unsure:["So is that the rule, or not?"],
+        sure:["You sure about that?"],
+        tense:["Sorry — is that done, or still to come?"],
+        cond:["Hang on — is that what happens, or what might happen?"],
+        report:["Who said that?"],
+        hype:["Whoa — easy!"],
+        over:["<em>He scratches his head.</em> That's a lot of info."],
+        order:["So… what do I do first?"],
+        flat:["Right."],
+        blame:["Steady on — whose fault is it?"],
+        odd:["<em>He laughs.</em> You don't have to talk like me!","Ha! It's Morrison — Jack's my first name."],
+        form:["<em>He looks confused.</em> Sorry?"],
+        jargon:["Mate, I'm a pilot, not an accountant."],
+        ok:["Right.","Okay."]}},
+  priya:{name:"Ms. Priya Raman", chat:"Ms. Raman", init:"R", col:"#9a4fb0", lang:"en-GB",
+    role:"Workshop trainer from a regional public-finance institute. Friendly, expert, and fast.",
+    rx:{low:["<em>She pauses.</em> Er — okay.","<em>A few people turn round.</em>"],
+        high:["<em>She smiles.</em> No need for ceremony — it's a workshop!","Goodness, very formal! Relax."],
+        blunt:["<em>Her smile fades a little.</em> Well — okay."],
+        vague:["Sorry — which part exactly?"],
+        unsure:["Are you asking, or telling?"],
+        sure:["Hm, are you sure about that?"],
+        tense:["Sorry — do you mean now, or before?"],
+        cond:["Is that a rule, or a possibility?"],
+        report:["Sorry — who said that?"],
+        hype:["<em>She laughs.</em> Oh my — enthusiasm!"],
+        over:["<em>She glances at the clock.</em> The short version?"],
+        order:["What's your main question?"],
+        flat:["Mm."],
+        blame:["Let's not blame anyone."],
+        odd:["<em>Gently.</em> 'Ms. Raman' is fine."],
+        form:["<em>She tilts her head.</em> Sorry — could you say that again?"],
+        jargon:["Good terms — but say it simply for the room?"],
+        ok:["Mm, right.","Okay."]}},
+  tan:{name:"Major Tan Wei Ming", chat:"Maj Tan", init:"T", col:"#b0674f", lang:"en-GB",
+    role:"Workshop participant from a partner air force (Singapore). Tan is his family name — it comes first.",
+    rx:{low:["<em>He frowns.</em> Eh — okay."],
+        high:["<em>He laughs.</em> So formal!"],
+        blunt:["<em>He crosses his arms.</em> Wah — okay, if you say so."],
+        vague:["What do you mean?"], unsure:["You sure or not?"], sure:["So confident ah?"],
+        tense:["Now or last time?"], cond:["Real or 'what if'?"], report:["Who said?"],
+        hype:["Relax!"], over:["Okay, okay."], order:["So what's your point?"], flat:["Hm."],
+        blame:["Eh — not fair."], odd:["<em>He smiles politely.</em> Tan is my family name, actually."],
+        form:["Sorry?"], jargon:["Too technical, lah."], ok:["Okay.","Mm."]}},
+  koh:{name:"Mr. Daniel Koh", chat:"Mr. Koh (bank)", init:"K", col:"#3b6ea5", lang:"en-GB",
+    role:"Payments Investigations officer at the partner bank in Singapore. Polite, precise, busy.",
+    rx:{low:["<em>A short silence on the line.</em> …I see.","<em>His voice cools.</em> Right."],
+        high:["<em>He sounds amused.</em> No need to be so formal — how can I help?"],
+        blunt:["<em>A pause.</em> I'll see what I can do."],
+        vague:["Sorry — which transaction do you mean?"],
+        unsure:["Are you telling me, or asking me?"],
+        sure:["Do you have the statement in front of you?"],
+        tense:["Sorry — has that already happened?"],
+        cond:["Sorry, is that definite or not?"],
+        report:["Sorry — who said that?"],
+        hype:["<em>A pause.</em> Please — let's go through it calmly."],
+        over:["<em>Typing sounds.</em> Could you give me just the key details?"],
+        order:["Sorry — what exactly do you need?"],
+        flat:["Mm."],
+        blame:["<em>Stiffly.</em> We'd need to check before saying whose error it was."],
+        odd:["Sorry?"],
+        form:["Sorry, the line is a little unclear — could you repeat that?"],
+        jargon:["Right…"],
+        ok:["Okay.","Mm, right."]}},
+  whitfield:{name:"Brigadier General Mark Whitfield", chat:"Brig Gen Whitfield", init:"W", col:"#4a5d7a", lang:"en-US",
+    role:"Visiting general from a partner air force (United States). Direct, busy, likes numbers.",
+    rx:{low:["<em>A slight pause. Wing Commander Anan stiffens.</em>","<em>He looks at Anan, then back at you.</em>"],
+        high:["<em>He smiles slightly.</em> No need for ceremony. Go ahead."],
+        blunt:["<em>His eyebrows rise.</em> Okay…"],
+        vague:["Give me the number."],
+        unsure:["Do you know, or are you guessing?"],
+        sure:["You're certain of that?"],
+        tense:["Has that happened or not?"],
+        cond:["Is that the plan, or a what-if?"],
+        report:["Who told you that?"],
+        hype:["<em>Flat.</em> Let's keep it factual."],
+        over:["<em>He checks his watch.</em> Headline, please."],
+        order:["Bottom line?"],
+        flat:["Mm."],
+        blame:["<em>Cool.</em> Let's not point fingers."],
+        odd:["<em>He smiles thinly.</em> 'General Whitfield' works fine."],
+        form:["Sorry — from what to what?"],
+        jargon:["Plain English, please."],
+        ok:["Go on.","Okay."]}},
+  hayes:{name:"Colonel Sarah Hayes", chat:"Col Hayes", init:"H", col:"#6b4f8a", lang:"en-US",
+    role:"Finance chief of the visiting partner-air-force delegation (United States). Several ranks above you. Old-school: bottom line up front.",
+    rx:{low:["<em>A long look.</em> I'm sorry?","<em>She puts down her pen.</em> Let's keep this professional."],
+        high:["<em>She waves a hand.</em> Skip the ceremony. What's the issue?"],
+        blunt:["<em>Her eyes narrow.</em> Excuse me?"],
+        vague:["Be specific. How much, and when?"],
+        unsure:["Do you know that, or not?"],
+        sure:["Can you prove that?"],
+        tense:["Has it arrived or not?"],
+        cond:["Is that what happened, or a hypothetical?"],
+        report:["Who said that, exactly?"],
+        hype:["<em>Cool.</em> Let's stay calm."],
+        over:["<em>She taps the table.</em> I have fifteen minutes."],
+        order:["<em>She holds up a hand.</em> Bottom line first."],
+        flat:["Hm."],
+        blame:["<em>Sharp.</em> So it's someone else's fault?"],
+        odd:["<em>Evenly.</em> It's Colonel Hayes."],
+        form:["Sorry?"],
+        jargon:["Go on."],
+        ok:["Go on.","Mm."]}},
+  eriksen:{name:"Mr. Lars Eriksen", chat:"Mr. Eriksen", init:"E", col:"#2f5f8f", lang:"en-GB",
+    role:"Team leader of the international audit team. Independent, precise — his report goes to the top.",
+    rx:{low:["<em>He writes something down.</em> Noted.","<em>A cool pause.</em> I see."],
+        high:["<em>A slight smile.</em> There's no need to be ceremonial."],
+        blunt:["<em>He leans back.</em> I'd ask you to keep to the evidence."],
+        vague:["I need precision. Which items, exactly?"],
+        unsure:["Is that your position, or not?"],
+        sure:["Do you have evidence for that?"],
+        tense:["When did that happen, exactly?"],
+        cond:["Is that an offer, or a hypothetical?"],
+        report:["Who confirmed that, and how?"],
+        hype:["<em>Calmly.</em> Let's keep this professional."],
+        over:["<em>He stops writing.</em> Just the answer to the question, please."],
+        order:["What's your position?"],
+        flat:["Hm."],
+        blame:["That's a serious statement. Can you support it?"],
+        odd:["<em>Politely.</em> Eriksen is my family name."],
+        form:["Sorry — could you rephrase that?"],
+        jargon:["Right."],
+        ok:["Noted.","Mm."]}}
 };
 
 /* shared affect fader: grades per position [calm, warm, emphatic, very emphatic] */
@@ -1568,6 +1838,1068 @@ SCENARIOS.push({
  ]
 });
 /* ======================================================================
+   CAMPAIGN 2 · OPERATION OPEN SKIES — International Week (i1–i7)
+   Speaking with foreigners, B1 → C1+. All people, banks and units fictional.
+   ====================================================================== */
+
+/* ---------------- i1 · B1 · Dinner with an Old Friend ---------------- */
+SCENARIOS.push({
+ id:"i1", title:"Dinner with an Old Friend", cefr:"B1", npc:"olivia",
+ place:"Riverside Thai restaurant · Monday 18:45 · Olivia is waiting at a table by the window",
+ goal:"Catch up with Olivia, explain your work in plain English, and pay the bill without an argument — then leave with a plan to meet again.",
+ room:{d:0,p:0,s:0, dw:"Your best friend from your master's year in England.", pw:"A friend — no rank between you.", sw:"A relaxed dinner. Nothing to win or lose."},
+ focus:["Register","Tenses","Used to","Polite speech","Accounting vocabulary","Conditional sentences"],
+ intro:"Register 1 — Friendly. Olivia is British and a close friend: first name, short sentences, warm affect. The traps are the tenses for catching up — and accounting jargon she won't understand.",
+ vocab:[["close the books","finish and check all the accounts for a month or a year"],["month-end","the last days of the month, when the accounts are closed"],["service charge","an extra percentage added to the bill for the staff"],["VAT","value added tax — 7% in Thailand"],["split the bill","each person pays part of the bill"],["It's on me","I'll pay for everyone"]],
+ turns:[
+ {s:"Olivia stands up and waves. You haven't seen each other since graduation, three years ago.",
+  core:"Hello! I don't see you for three years.",
+  rx:{tense:"Ha — 'don't see'? You mean it's been ages!"},
+  slots:[
+   {k:"greet", dim:"register", lab:"Greeting",
+    opts:[["Hey","R1 · Friendly",2,"","Warm and natural with an old friend."],
+          ["Hi","R2 · Informal",2,"","Friendly. Fine."],
+          ["Hello","R3 · Professional",1,"high","Correct, but a little cool for a best friend you haven't seen for years."],
+          ["Good evening","R4 · Serious",0,"high","Sounds like a waiter, not a friend."],
+          ["Good evening, Madam","R5 · Service",0,"high","She'll think you've become the restaurant manager."]]},
+   {k:"addr", dim:"register", lab:"Address",
+    opts:[["","R1 · (no name)",1,"flat","Fine — but her name after three years sounds warmer."],
+          [", Olivia","R1 · First name",2,"","Natural and warm."],
+          [", Khun Olivia","R3 · Khun + name",1,"odd","Thai courtesy on an English friend — sweet, but she'll giggle."],
+          [", Ms. Bennett","R4 · Ms. + surname",0,"high","Far too cold for a friend. She'll wonder if you're angry."]].map(o=>{o[5]={m:"!"};return o;})},
+   {k:"tense", dim:"tense", lab:"Catching up", newS:true, m:2,
+    opts:[["I don't see you for three years","Present simple",0,"tense","Present simple is for habits. It doesn't connect the past to now."],
+          ["I didn't see you for three years","Past simple",1,"tense","Past simple = a finished period. The 'not seeing' only ended tonight — use the present perfect."],
+          ["I haven't seen you for three years","Present perfect",2,"","Up to now + for + a period. Exactly right."],
+          ["It's been three years","It's been…",2,"","Very natural spoken English: It's been ages!",{m:"!"}],
+          ["I hadn't seen you for three years","Past perfect",0,"tense","Past-before-past. There is no other past event here."]]}
+  ],
+  good:"I know! Three whole years! Come here — you look great. Sit, sit!",
+  cont:"Yes… three years. Sit down."},
+
+ {s:"Olivia is in Bangkok for a week. You want to know how long she is staying and whether she is enjoying it.",
+  core:"How long do you stay? You like Bangkok?",
+  rx:{tense:"Sorry — 'how long do I stay' — like, usually?"},
+  slots:[
+   {k:"q1", dim:"tense", lab:"Question 1",
+    opts:[["How long do you stay","Present simple",0,"tense","Present simple sounds like a habit: 'How long do you usually stay?'",{q:1}],
+          ["How long are you staying","Present continuous",2,"","An arranged plan for this trip. Perfect.",{q:1}],
+          ["How long have you been here","Present perfect",2,"","Asks about the time up to now. Also natural.",{q:1}],
+          ["How long did you stay","Past simple",0,"tense","Past — as if she has already gone home.",{q:1}],
+          ["How long will you have been staying","Future perfect continuous",0,"tense","Much too complicated for a simple question.",{q:1}]]},
+   {k:"q2", dim:"qform", lab:"Question 2", newS:true,
+    opts:[["You like Bangkok","Statement + rising tone",1,"form","OK in speech with a rising voice, but it's really a statement.",{q:1}],
+          ["Do you like Bangkok","Yes/no question",2,"","Simple and friendly.",{q:1}],
+          ["Are you enjoying Bangkok","Present continuous question",2,"","Asks about the experience right now. Very natural.",{q:1}],
+          ["May I enquire whether Bangkok is to your liking","Formal indirect",0,"high","Hotel-reception English. Much too formal for a friend."]]}
+  ],
+  good:"Until Sunday! And I love it — the food is incredible. I'm here for a conference on IT auditing, believe it or not. So what are you working on at the moment?",
+  cont:"Er — until Sunday. It's great, yes. I'm here for an IT-audit conference. So what are you working on?"},
+
+ {s:"<em>“What are you working on at the moment?”</em> It's month-end: you are closing the accounts. Olivia audits IT systems, not accounts — keep it simple.",
+  core:"This week I close the books. (Explain it simply.)",
+  rx:{tense:"Every week? Or just this week?"},
+  slots:[
+   {k:"tense", dim:"tense", lab:"Tense",
+    opts:[["This week I close","Present simple",1,"tense","Present simple = routine. Right for 'every month', but she asked about now."],
+          ["This week I'm closing","Present continuous",2,"","A temporary activity around now. Exactly right."],
+          ["This week I've closed","Present perfect",0,"tense","Finished — but the week isn't over."],
+          ["This week I was closing","Past continuous",0,"tense","Past. Confusing."]]},
+   {k:"core", dim:"register", lab:"Core thought", fixed:"the books for month-end"},
+   {k:"jargon", dim:"jargon", lab:"Explanation", newS:true,
+    opts:[["","(no explanation)",1,"vague","'Closing the books' may be new to her. One short explanation helps."],
+          ["That means we check every account and make sure the numbers balance","Plain English",2,"","Clear to anyone. Good."],
+          ["Basically, we finish all the accounts for the month","Plain + spoken",2,"","Simple and friendly."],
+          ["We're posting accruals, reversing prepayments and clearing the suspense accounts before the trial balance","Heavy jargon",0,"jargon","Correct — but she won't understand a word. Too much jargon for dinner."]]}
+  ],
+  good:"Ah — so everything has to balance at the end of the month. Sounds stressful! Anyway, I'm starving. What should I order?",
+  cont:"Okay… I'm not sure I followed that. Anyway — what should I order?"},
+
+ {s:"Olivia doesn't know Thai food well. You want to recommend the massaman curry — it isn't spicy.",
+  core:"Order the massaman curry. It is not spicy.",
+  slots:[
+   {k:"adv", dim:"direct", lab:"Recommending",
+    opts:[["Order","0 · Order",0,"blunt","An instruction, even to a friend. Sounds bossy."],
+          ["You must order","1 · Must",1,"blunt","Strong — OK as enthusiasm, but a little pushy."],
+          ["You should try","2 · Should (advice)",2,"","The everyday way to recommend something."],
+          ["Why don't you try","3 · Why don't you…?",2,"","A friendly suggestion.",{q:1}],
+          ["Might I suggest that you consider","6 · Formal",0,"high","Waiter English. Too formal for a friend."]]},
+   {k:"core", dim:"register", lab:"Core thought", fixed:"the massaman curry"},
+   {k:"reason", dim:"grain", lab:"Reason", newS:true,
+    opts:[["","D · (no reason)",1,"vague","She may worry it's spicy. Give her the reason."],
+          ["It's not spicy at all, and it's really good","C · Reason",2,"","Exactly what she needs to know."],
+          ["It's a mild curry with potatoes and peanuts","C · Reason + detail",2,"","A helpful description."],
+          ["It dates from the 17th-century Ayutthaya court, and the paste contains cardamom, cinnamon, cloves, nutmeg, cumin and","A · Every step",0,"over","A history lecture. She just wants dinner."]]},
+   {k:"aff", dim:"affect", lab:"Affect", aff:true, m:1, opts:AFF([1,2,2,1],["flat","","","hype"])}
+  ],
+  good:"Perfect — massaman it is! Oh, this reminds me of that tiny Thai place near the library in Leeds…",
+  cont:"Okay, I'll try it. Oh — this reminds me of that Thai place near the library in Leeds."},
+
+ {s:"You both remember your student days: every night before exams you studied in the library until midnight. That habit stopped long ago.",
+  core:"Yes! We study in the library until midnight (every night, in the past).",
+  rx:{tense:"Ha — do we still? I hope not!", form:"<em>She laughs.</em> 'Were used to study'? You mean we used to!"},
+  slots:[
+   {k:"lead", dim:"register", lab:"Reaction",
+    opts:[["Oh yes","R1 · Spoken",2,"","A warm spoken reaction.",{m:"!"}],
+          ["Oh my goodness, yes","R1 · Emphatic",2,"","Excited and natural between friends.",{m:"!"}],
+          ["Indeed","R4 · Formal",0,"high","Sounds like a butler."],
+          ["I concur","R5 · Formal",0,"high","Committee English. She'll laugh at you."]]},
+   {k:"habit", dim:"tense", lab:"Past habit", newS:true, m:1,
+    opts:[["We study in the library until midnight every night","Present simple",0,"tense","Present simple = still true now. You're not students any more!"],
+          ["We used to study in the library until midnight every night","Used to",2,"","A past habit that has stopped. Exactly right."],
+          ["We would study in the library until midnight every night","Would (past habit)",2,"","Also a past habit — nostalgic, storytelling style."],
+          ["We were used to study in the library until midnight every night","Error: were used to + verb",0,"form","'Be used to' means 'accustomed to' and needs -ing. Say 'used to study'."],
+          ["We have studied in the library until midnight every night","Present perfect",0,"tense","Present perfect connects to now — but the habit has stopped."]]},
+   {k:"q", dim:"qform", lab:"Memory question", newS:true,
+    opts:[["You remember the coffee machine that never worked","Statement + rising tone",1,"form","Works with a rising voice, but it's really a statement.",{q:1}],
+          ["Remember the coffee machine that never worked","Clipped question",2,"","A natural spoken shortcut between friends.",{q:1}],
+          ["Do you remember the coffee machine that never worked","Full question",2,"","Clear and friendly.",{q:1}],
+          ["Can you recall the malfunctioning beverage dispenser","Formal",0,"high","Sounds like a technical report.",{q:1}]]}
+  ],
+  good:"Ha! Yes! That machine stole so many of my coins. Those were the days… Oh — here's the bill.",
+  cont:"Um… yes. Those were the days, I suppose. Oh — here's the bill."},
+
+ {s:"The bill: 2,354 baht. It already includes a 10% service charge and 7% VAT. You want to pay — Olivia is your guest in Thailand. She reaches for her purse.",
+  core:"I pay. (You're my guest.) No tip — service charge and VAT are included.",
+  key:true,
+  rx:{blunt:"Oh! Er… okay, if you insist."},
+  slots:[
+   {k:"offer", dim:"direct", lab:"Offer to pay",
+    opts:[["I pay","0 · Announcement",0,"blunt","Sounds like an order — and present simple 'I pay' sounds like a habit."],
+          ["You don't pay","0 · Order",0,"blunt","Tells her what to do. A bit rude."],
+          ["Let me get this","3 · Let me…",2,"","The natural friendly offer."],
+          ["This one's on me","3 · It's on me",2,"","Warm and idiomatic: I'm paying."],
+          ["Please permit me to settle the account","6 · Formal",0,"high","Business-lunch English. Too stiff for a friend."]]},
+   {k:"reason", dim:"grain", lab:"Reason", newS:true,
+    opts:[["","D · (no reason)",1,"vague","She may argue. A reason makes the offer easy to accept."],
+          ["You're my guest in Thailand","C · Reason",2,"","A kind reason she can accept."],
+          ["You're my guest here, and you can pay next time I'm in England","C · Reason + future deal",2,"","Friendly and fair. Very natural."]]},
+   {k:"expl", dim:"jargon", lab:"The bill", newS:true,
+    opts:[["","(no explanation)",1,"vague","She might leave a tip on top. A quick explanation helps."],
+          ["And no need to tip — the service charge is already included","Plain English",2,"","Clear and friendly. 'Included' is the key word."],
+          ["And no need to tip — there's already a 10% service charge, plus 7% VAT","Plain + figures",2,"","Clear, with the numbers. Nice."],
+          ["The gross amount is inclusive of a 10% service charge and 7% output VAT, so gratuities are not required","Accounting jargon",0,"jargon","You sound like an invoice. Too technical for dinner."]]}
+  ],
+  good:"Oh, that's so kind — thank you! Next time you're in England, dinner's on me. Promise?",
+  cont:"Oh — um, okay, if you're sure. Thank you. Next time dinner's on me, okay?"},
+
+ {s:"Outside the restaurant. Olivia flies home on Sunday. You want to meet her next time you visit England, and wish her a good trip.",
+  core:"I visit England → I call you. Have a good flight.",
+  rx:{cond:"Wait — are you coming to England or not?"},
+  slots:[
+   {k:"cond", dim:"cond", lab:"Future plan",
+    opts:[["If I will visit England, I call you","Error: will in if-clause",0,"cond","No 'will' after 'if' — and the result needs 'will'."],
+          ["If I visit England, I'll call you","First conditional",2,"","A real future possibility. Exactly right."],
+          ["Next time I'm in England, I'll call you","Time clause",2,"","'Next time' + present, will + verb. Very natural."],
+          ["If I visited England, I would call you","Second conditional",1,"cond","Hypothetical — sounds as if you don't really plan to go."],
+          ["If I had visited England, I would have called you","Third conditional",0,"cond","Past and unreal — as if you missed your chance."]]},
+   {k:"wish", dim:"register", lab:"Wish", newS:true,
+    opts:[["Bye","R2 · Informal",1,"flat","A bit short after a lovely evening."],
+          ["Have a safe flight","R2 · Friendly wish",2,"","Warm and natural."],
+          ["Safe flight, and keep in touch","R1 · Warm",2,"","Warm and friendly — perfect."],
+          ["I wish you a pleasant and uneventful journey","R5 · Formal",0,"high","Sounds like an airline announcement."]]},
+   {k:"aff", dim:"affect", lab:"Affect", aff:true, opts:AFF([1,2,2,1],["flat","","","hype"])}
+  ],
+  good:"I will! And good luck with month-end. Oh — a tip from an auditor: when auditors ask a question, answer exactly that question, then offer the evidence. Works every time!",
+  cont:"Yes, okay. Bye then. Good luck with month-end."}
+ ]
+});
+
+/* ---------------- i2 · B1+ · The Expense Claim ---------------- */
+SCENARIOS.push({
+ id:"i2", title:"The Expense Claim", cefr:"B1+", npc:"jack",
+ place:"Finance Division front desk · Tuesday 08:30 · Flt Lt Morrison has a folder of receipts",
+ goal:"Help Flight Lieutenant Morrison complete his travel expense claim correctly — so it's approved first time and paid before he flies home.",
+ room:{d:2,p:0,s:1, dw:"A visiting officer you met for the first time yesterday.", pw:"Same rank as you — Flight Lieutenant — from another air force.", sw:"His money, and claims close on Friday."},
+ focus:["Polite speech","Modals of obligation","Passive voice","Conditional sentences","Time clauses","Accounting vocabulary"],
+ intro:"Register 3 — Professional. Australians are informal, but you've only just met: start with rank + SURNAME, and use his first name only if he invites you. Instructions to a visitor should sound like help, not orders.",
+ vocab:[["per diem","a fixed daily allowance for meals and small costs"],["reimbursement","paying someone back for money they spent"],["receipt","proof that you paid"],["claim form","the form you use to get money back"],["exchange rate","the price of one currency in another"],["approve / sign off","agree officially"]],
+ turns:[
+ {s:"Flight Lieutenant Morrison walks up to your desk with a folder full of receipts.",
+  core:"Hello. I'm from Finance. I help you with your claim.",
+  rx:{tense:"Sorry — you help me… every day?"},
+  slots:[
+   {k:"greet", dim:"register", lab:"Greeting",
+    opts:[["G'day","R1 · Aussie slang",0,"odd","Copying his accent can sound as if you're making fun of him."],
+          ["Hi","R2 · Informal",1,"low","Friendly — a bit casual for a first working meeting."],
+          ["Hello","R3 · Professional",2,"","Neutral and correct."],
+          ["Good morning","R3 · Professional",2,"","Right for a first meeting at work."],
+          ["A very good morning to you, Sir","R5 · Deference",0,"high","He's your rank. This is far more than he expects."]]},
+   {k:"addr", dim:"register", lab:"Address",
+    opts:[["","R3 · (no name)",1,"flat","Fine, but using his name shows you know who he is."],
+          [", Jack","R1 · First name",0,"low","He hasn't invited you to use his first name yet."],
+          [", Flight Lieutenant Jack","Rank + first name",0,"odd","That's the Thai pattern. For Western officers: rank + SURNAME."],
+          [", Flight Lieutenant Morrison","R3 · Rank + surname",2,"","Correct for a Western officer: rank + SURNAME."],
+          [", Sir","R5 · Sir",1,"high","Same rank — a little too much."]]},
+   {k:"offer", dim:"tense", lab:"Offer", newS:true,
+    opts:[["I help you with your claim","Present simple",0,"tense","Present simple = a habit. For an offer now, use 'I'll'."],
+          ["I'm from Finance, and I'm going to help you with your claim","Going to",1,"tense","Sounds like a plan made earlier — fine, but less warm than 'I'll'."],
+          ["I'm from Finance, and I'll help you with your claim","Will (offer)",2,"","'Will' for an offer or decision now. Clear and friendly."],
+          ["I'm from Finance — I'm here to help you with your claim","Be here to…",2,"","Friendly and clear."],
+          ["It is my duty to assist you in the completion of your claim","R5 · Formal",0,"high","Heavy and formal. He'll think he's in trouble."]]}
+  ],
+  good:"Morning! Great, thanks — and please, call me Jack. I've got a pile of receipts here and no idea what I'm doing. What does the per diem cover?",
+  cont:"Morning. Right, thanks. I've got all these receipts and no idea what to do. What does the per diem cover?"},
+
+ {s:"Jack has invited you to use his first name. He asks what the per diem covers: meals and local transport — but not his hotel, which the Air Force pays directly.",
+  core:"Per diem = meals + local transport. Not the hotel (we pay it directly).",
+  rx:{form:"Wait — the hotel pays? Pays who?"},
+  slots:[
+   {k:"addr", dim:"register", lab:"Address",
+    opts:[["","R3 · (no name)",2,"","Fine."],
+          ["Jack,","R2 · First name (invited)",2,"","He invited you — using it now is friendly and correct."],
+          ["Flight Lieutenant Morrison,","R4 · Rank + surname",1,"high","He asked you to call him Jack. Ignoring it sounds cold."]]},
+   {k:"fact", dim:"tense", lab:"Fact",
+    opts:[["the per diem covered meals and local transport","Past simple",1,"tense","Past — as if the rule has changed."],
+          ["the per diem covers meals and local transport","Present simple (fact)",2,"","Present simple for rules and facts. Right."],
+          ["the per diem is covering meals and local transport","Present continuous",0,"tense","Continuous = temporary. A rule is not temporary."],
+          ["the per diem will be covering meals and local transport","Future continuous",0,"tense","Too complicated, and it isn't a future event."]]},
+   {k:"hotel", dim:"voice", lab:"The hotel",
+    opts:[[", but we pay your hotel directly","Active",2,"","Clear and friendly: 'we' = the Air Force."],
+          [", but your hotel is paid directly by the Air Force","Passive",2,"","Passive puts the focus on the hotel. Good, and a little more formal."],
+          [", but your hotel pays directly","Error: wrong voice",0,"form","The hotel doesn't pay! You need 'is paid'."],
+          [", but the hotel is paying by the Air Force","Error: passive form",0,"form","Passive = be + past participle: 'is paid by'."]]}
+  ],
+  good:"Oh, so I don't claim the hotel at all? Brilliant. What about receipts — do I need all of them?",
+  cont:"Hm, okay. So what about receipts — do I need all of them?"},
+
+ {s:"The rule: meals are covered by the per diem, so meal receipts are not necessary. But every taxi receipt is required.",
+  core:"Meal receipts: not necessary. Taxi receipts: necessary.",
+  key:true,
+  rx:{form:"Wait — so I'm not allowed to keep meal receipts? Or I just don't need them?"},
+  slots:[
+   {k:"meals", dim:"oblig", lab:"Meals",
+    opts:[["You don't have to keep receipts for meals","Don't have to (not necessary)",2,"","Not necessary. Exactly the meaning you want."],
+          ["You don't need to keep receipts for meals","Don't need to",2,"","Same meaning. Natural."],
+          ["You shouldn't keep receipts for meals","Shouldn't (advice)",0,"form","Sounds as if keeping them is a bad idea."],
+          ["You mustn't keep receipts for meals","Mustn't (forbidden)",0,"form","'Mustn't' = it's forbidden! He CAN keep them — he just doesn't need to."]]},
+   {k:"taxi", dim:"oblig", lab:"Taxis",
+    opts:[[", but you can keep taxi receipts","Can (possible)",0,"vague","Sounds optional. It isn't."],
+          [", but you should keep taxi receipts","Should (advice)",1,"unsure","Advice, not a rule. He might skip some."],
+          [", but you have to keep every taxi receipt","Have to (rule)",2,"","A clear rule. Right."],
+          [", but every taxi receipt must be attached to the claim","Must + passive",2,"","A formal rule, like on the form. Also good."],
+          [", but you are obliged under regulation 14(b) to retain all taxi receipts","R5 · Legal",0,"high","Sounds like a legal warning."]]}
+  ],
+  good:"Got it — no meal receipts, but every taxi receipt. Uh-oh… I think I lost one. The taxi from the airport.",
+  cont:"Okay… I think. Oh no — I lost a taxi receipt. The one from the airport."},
+
+ {s:"There's a standard rule for this: if a receipt is lost, the officer fills in a Lost Receipt form, and a supervisor signs it. Reassure him.",
+  core:"Don't worry. You lose a receipt → you fill in a Lost Receipt form (rule). Supervisor signs it.",
+  rx:{cond:"Hang on — is that the rule, or just a possibility?"},
+  slots:[
+   {k:"calm", dim:"register", lab:"Reassurance",
+    opts:[["Relax","R1 · Order",1,"low","Friendly, but a bit abrupt."],
+          ["Don't worry","R2 · Reassurance",2,"","Kind and natural."],
+          ["No problem at all","R2 · Reassurance",2,"","Reassuring."],
+          ["Please do not be alarmed","R5 · Formal",0,"high","Sounds like an emergency announcement."]]},
+   {k:"cond", dim:"cond", lab:"Rule", newS:true,
+    opts:[["if you lose a receipt, you fill in a Lost Receipt form","Zero conditional",2,"","Zero conditional = a general rule. Exactly right."],
+          ["if you will lose a receipt, you fill in a Lost Receipt form","Error: will in if-clause",0,"cond","No 'will' after 'if'."],
+          ["if you lost a receipt, you would fill in a Lost Receipt form","Second conditional",1,"cond","Hypothetical — but he really has lost it."],
+          ["if you had lost a receipt, you would have filled in a Lost Receipt form","Third conditional",0,"cond","Past and unreal. Makes no sense here."]]},
+   {k:"sign", dim:"voice", lab:"Who signs", newS:true,
+    opts:[["Your supervisor signs it","Active",2,"","Clear."],
+          ["Then it's signed by your supervisor","Passive",2,"","Focus on the form. Also good."],
+          ["Then it signs by your supervisor","Error: passive",0,"form","Passive needs 'is signed'."]]}
+  ],
+  good:"Ah, what a relief. I'll fill one in now. And the exchange rate — I paid some things in Aussie dollars on my card. Which rate do you use?",
+  cont:"Okay, thanks. And the exchange rate — which one do you use?"},
+
+ {s:"The Division converts foreign-currency amounts at the Bank of Thailand rate on the date of payment. Explain it — it's a procedure, so a little formality helps.",
+  core:"We convert at the Bank of Thailand rate (on the date of payment).",
+  rx:{form:"Sorry — it converts itself?"},
+  slots:[
+   {k:"voice", dim:"voice", lab:"Procedure",
+    opts:[["We convert it at the Bank of Thailand rate","Active",2,"","Clear and friendly."],
+          ["It's converted at the Bank of Thailand rate","Passive",2,"","Procedure style: focus on the money, not the person. Good."],
+          ["It converts at the Bank of Thailand rate","Error: missing passive",0,"form","Money doesn't convert itself. Say 'is converted'."],
+          ["Conversion thereof is effected at the Bank of Thailand rate","Over-nominalised",0,"high","Heavy noun style. Hard to follow out loud."]]},
+   {k:"when", dim:"register", lab:"Time", fixed:"on the date of payment"},
+   {k:"help", dim:"grain", lab:"Next step", newS:true,
+    opts:[["","D · (nothing more)",1,"vague","He may wonder where to find the rate."],
+          ["I'll add the rates for you, so you don't have to look them up","C · Helpful action",2,"","Tells him what happens next. Very helpful."],
+          ["You can check the rate on the Bank of Thailand website","C · Where to check",2,"","Useful and clear."],
+          ["It's the weighted-average interbank selling rate published daily at 6 p.m., except on bank holidays, when the previous business day's rate applies, unless","A · Every rule",0,"over","Accurate — but far more than he needs."]]}
+  ],
+  good:"Perfect, thanks. So once I hand it in, how long does it take to get paid?",
+  cont:"Right… okay. So how long until I get paid?"},
+
+ {s:"After he submits it, the Division approves the claim within two days, and the money normally reaches his account within five working days.",
+  core:"Once you submit it → approved in 2 days. Money within 5 working days (normally).",
+  key:true,
+  rx:{form:"Sorry — once I will submit it? When exactly?"},
+  slots:[
+   {k:"time", dim:"tense", lab:"Time clause",
+    opts:[["Once you will submit it","Error: will after 'once'",0,"form","No 'will' after once / when / as soon as. Use the present."],
+          ["Once you submit it","Once + present",2,"","Once / when / as soon as + present for the future. Right."],
+          ["As soon as you've submitted it","As soon as + present perfect",2,"","Stresses that the step is finished first. Also good."],
+          ["Once you submitted it","Past simple",0,"tense","Sounds as if it has already happened."]]},
+   {k:"appr", dim:"voice", lab:"Approval",
+    opts:[[", we approve it within two days","Active",2,"","Clear."],
+          [", it'll be approved within two days","Future passive",2,"","'will be + past participle'. Clear and professional."],
+          [", it approves within two days","Error: passive",0,"form","The claim doesn't approve itself — 'it'll be approved'."],
+          [", it might be approved within two days, maybe","Over-hedged",0,"unsure","You know the procedure. Don't sound unsure."]]},
+   {k:"paid", dim:"commit", lab:"Payment", newS:true,
+    opts:[["You might get the money within five working days","30% · might",0,"unsure","He needs a reliable date."],
+          ["You should get the money within five working days","70% · should",2,"","Honest: it's the normal time, but you don't control the bank."],
+          ["You'll get the money within five working days","90% · will",2,"","Confident. Fine if the process is reliable."],
+          ["You will definitely get the money in exactly five days, 100%","Over-certain",0,"sure","Never promise what the bank controls."]]}
+  ],
+  good:"Brilliant — that's before I fly home. You've been a massive help.",
+  cont:"Okay. Hopefully before I fly home, then."},
+
+ {s:"You've finished. Offer more help if he needs it, and say goodbye.",
+  core:"If you have questions, tell me. Enjoy your stay.",
+  slots:[
+   {k:"offer", dim:"direct", lab:"Offer",
+    opts:[["If you have questions, tell me","0 · Order",1,"blunt","Understood, but 'tell me' is an order."],
+          ["If you have any questions, just let me know","3 · Just let me know",2,"","Friendly and professional. The standard phrase."],
+          ["If you have any questions, feel free to call me","3 · Feel free to…",2,"","Warm and helpful."],
+          ["Should you have any further queries, please do not hesitate to contact the undersigned","7 · Letter English",0,"high","Written English for letters, not a conversation."]]},
+   {k:"wish", dim:"register", lab:"Wish", newS:true,
+    opts:[["See ya, mate","R1 · Aussie slang",0,"odd","Copying his slang can sound like teasing."],
+          ["Enjoy the rest of your stay","R3 · Professional",2,"","Warm and polite."],
+          ["Enjoy your stay in Bangkok","R3 · Professional",2,"","Friendly and polite."],
+          ["Farewell","R5+ · Archaic",0,"high","He's staying another week!"]]},
+   {k:"addr", dim:"register", lab:"Address",
+    opts:[["","R3 · (no name)",2,"","Fine."],
+          [", Jack","R2 · First name",2,"","He invited it — warm."],
+          [", Flight Lieutenant Morrison","R4 · Rank + surname",1,"high","After 'call me Jack', this sounds distant."]]}
+  ],
+  good:"Cheers, I will! Oh — I hear the US delegation's finance chief is here this week: Colonel Hayes. If you meet her — bottom line up front, and it's 'Ma'am'. Good luck!",
+  cont:"Thanks. See you around."}
+ ]
+});
+
+/* ---------------- i3 · B2 · The IPSAS Workshop ---------------- */
+SCENARIOS.push({
+ id:"i3", title:"The IPSAS Workshop", cefr:"B2", npc:"priya", group:"IPSAS Workshop · Training room B",
+ place:"Training room B · Tuesday 10:15 · accrual-accounting workshop taught in English · four air forces in the room",
+ goal:"Take an active part in the workshop: introduce yourself, ask a clear question, disagree politely in group work — and report your group's answer to the class.",
+ room:{d:2,p:1,s:0, dw:"A trainer and participants you have never met.", pw:"The trainer is an expert leading the room.", sw:"Low: a learning event, not a decision."},
+ focus:["Indirect questions","Tenses","Passive voice","Reported speech","Polite speech","Accounting vocabulary"],
+ intro:"Register 3 — Professional. In a classroom the key skills are asking questions well (watch the word order in indirect questions!), checking you understood, and disagreeing politely in group work.",
+ vocab:[["IPSAS","International Public Sector Accounting Standards"],["accrual basis","record income and costs when they happen, not when cash moves"],["cash basis","record only when money is paid or received"],["accrued expense","a cost you have had but not yet paid"],["prepayment","money paid before you receive the service"],["depreciation","spreading the cost of a long-life asset over its useful life"],["recognise","record in the accounts"]],
+ turns:[
+ {s:"The trainer, Ms. Priya Raman, asks everyone to introduce themselves: name, unit, and how long you've worked there. You've worked in the Finance Division for six years.",
+  core:"Hello everyone. I'm from RTAF Finance. I work there six years.",
+  rx:{tense:"Sorry — you worked there? You don't any more?", form:"<em>A few people smile.</em> Since six years… you mean FOR six years?"},
+  slots:[
+   {k:"greet", dim:"register", lab:"Greeting",
+    opts:[["Hi guys","R1 · Friendly",0,"low","Too casual for a room of strangers and a trainer."],
+          ["Hi, everyone","R2 · Informal",2,"","Friendly and fine in a workshop."],
+          ["Good morning, everyone","R3 · Professional",2,"","Polite and correct."],
+          ["Distinguished trainer and fellow participants","R5 · Ceremonial",0,"high","A speech opening. People will smile."]]},
+   {k:"unit", dim:"register", lab:"Who you are", newS:true, fixed:"I'm from the Finance Division of the Royal Thai Air Force"},
+   {k:"tense", dim:"tense", lab:"How long", newS:true,
+    opts:[["I work there for six years","Present simple",0,"tense","Present simple + 'for six years' is a very common error. Use the present perfect."],
+          ["I've worked there for six years","Present perfect",2,"","Started in the past, still true now. Right."],
+          ["I've been working there for six years","Present perfect continuous",2,"","Also correct — it stresses the continuing activity."],
+          ["I worked there for six years","Past simple",0,"tense","Past simple says you don't work there any more!"],
+          ["I'm working there since six years","Error: since + period",0,"form","'Since' + a point in time (since 2020); 'for' + a period (for six years)."]]}
+  ],
+  good:[["priya","Welcome! Six years — so you know the cash system very well. What system does your unit use now?"]],
+  cont:[["priya","Thank you. And what system does your unit use at the moment?"]]},
+
+ {s:"Your unit has always used cash-basis accounting. This year it is starting to move to accrual accounting.",
+  core:"We always use cash basis. This year we move to accrual.",
+  rx:{tense:"Sorry — so which one are you using now?"},
+  slots:[
+   {k:"past", dim:"tense", lab:"Up to now",
+    opts:[["We always use cash-basis accounting","Present simple",1,"tense","Sounds as if nothing is changing."],
+          ["We've always used cash-basis accounting","Present perfect",2,"","From the past up to now. Right."],
+          ["We always used cash-basis accounting","Past simple",1,"tense","Sounds finished — but you still use it."],
+          ["We had always used cash-basis accounting","Past perfect",0,"tense","Needs another past event."]]},
+   {k:"now", dim:"tense", lab:"The change",
+    opts:[[", but now we move to accrual accounting","Present simple",1,"tense","Present simple for a change in progress sounds odd."],
+          [", but this year we're moving to accrual accounting","Present continuous",2,"","A change in progress. Right."],
+          [", but this year we've moved to accrual accounting","Present perfect",1,"tense","Sounds finished — but you've only just started."],
+          [", but this year we'll have been moving to accrual accounting","Future perfect continuous",0,"tense","Much too complicated."]]}
+  ],
+  good:[["priya","That's a big change — and exactly why we're here. Any questions before we start on accruals?"]],
+  cont:[["priya","I see. Well, that's why we're here. Any questions before we start?"]]},
+
+ {s:"You don't understand the difference between an accrued expense and a prepayment. Ask the trainer — politely, in front of the whole room.",
+  core:"What is the difference between an accrued expense and a prepayment?",
+  key:true,
+  rx:{form:"<em>She pauses.</em> Sorry — could you say the question again?"},
+  slots:[
+   {k:"pre", dim:"register", lab:"Taking the floor",
+    opts:[["Hey,","R1 · Friendly",0,"low","Too casual to get the trainer's attention."],
+          ["Sorry,","R2 · Apology",2,"","A natural way to take the floor in class."],
+          ["Excuse me,","R3 · Professional",2,"","Polite and correct."],
+          ["Pardon my interruption, esteemed trainer, but","R5 · Ceremonial",0,"high","Far too much."]]},
+   {k:"q", dim:"qform", lab:"Question form",
+    opts:[["what is the difference between an accrued expense and a prepayment","Direct question",1,"blunt","Correct, but a bit direct in front of the room.",{q:1}],
+          ["could you explain what the difference between an accrued expense and a prepayment is","Indirect (correct order)",2,"","Indirect question: subject before verb — 'what the difference IS'. Polite and correct.",{q:1}],
+          ["could you explain what is the difference between an accrued expense and a prepayment","Error: word order",0,"form","In an indirect question, no question word order: 'what the difference IS'.",{q:1}],
+          ["I was wondering if you could explain the difference between an accrued expense and a prepayment","Very indirect",2,"","Very polite. Good in a room of strangers."],
+          ["would it be at all possible for you to elucidate the distinction between an accrued expense and a prepayment","Maximum distance",0,"high","Far too heavy for a classroom question.",{q:1}]]}
+  ],
+  good:[["priya","Great question — everyone mixes them up. An accrued expense: you've received the service but haven't paid yet. A prepayment: you've paid, but you haven't received it yet. Does that make sense?"]],
+  cont:[["priya","Um — okay. Accrued expense: service received, not paid yet. Prepayment: paid, not received yet. Clear?"]]},
+
+ {s:"Check that you understood. In your own words: the expense is recorded when the service is received — not when the money is paid.",
+  core:"So: we record the expense when we get the service, not when we pay. Right?",
+  rx:{form:"Hmm — nearly. Try that again?", vague:"No — careful! That's the cash basis."},
+  slots:[
+   {k:"lead", dim:"register", lab:"Checking frame",
+    opts:[["So","R1 · Spoken",1,"low","A bit abrupt for checking with the trainer."],
+          ["So, if I understand correctly,","R3 · Checking",2,"","The classic phrase for checking understanding."],
+          ["So, just to check,","R3 · Checking",2,"","Clear and polite."],
+          ["Am I correct in my comprehension that","R5 · Stiff",0,"high","Stiff and unnatural."]]},
+   {k:"voice", dim:"voice", lab:"The rule",
+    opts:[["we record the expense when we receive the service, not when we pay","Active",2,"","Clear and correct."],
+          ["the expense is recognised when the service is received, not when it's paid","Passive + key term",2,"","Passive + 'recognised' — the exact IPSAS language. Excellent."],
+          ["the expense recognises when the service receives","Error: passive",0,"form","Expenses don't recognise anything! Passive: 'is recognised'."],
+          ["the expense is recognised when the money is paid","Wrong meaning",0,"vague","That's the cash basis — the opposite of accrual."]]},
+   {k:"tag", dim:"qform", lab:"Check", newS:true,
+    opts:[["Right","Short check",2,"","A natural spoken check.",{q:1}],
+          ["Is that right","Check question",2,"","Clear and polite.",{q:1}],
+          ["Correct me if I'm wrong","Polite invitation",2,"",""],
+          ["Yes or no","Demand",0,"blunt","Sounds as if you're testing HER.",{q:1}]]}
+  ],
+  good:[["priya","Exactly right! You've got it. Now, in your groups, discuss question 3: should a new flight simulator be expensed in full this year, or depreciated?"]],
+  cont:[["priya","More or less… Now, in groups: question 3 — should a new flight simulator be expensed this year, or depreciated?"]]},
+
+ {s:"Group work. Major Tan Wei Ming (Tan is his family name) says: <em>“We should expense it all this year — it's simpler.”</em> You disagree: the simulator will be used for about ten years, so it should be depreciated.",
+  core:"No, you're wrong. Simulator lasts 10 years → depreciate it.",
+  key:true,
+  rx:{blunt:"<em>Major Tan frowns.</em> Wah — okay, if you're so sure."},
+  slots:[
+   {k:"addr", dim:"register", lab:"Address",
+    opts:[["","(no name)",1,"flat","OK — but using his name softens the disagreement."],
+          ["Major Tan,","R3 · Rank + family name",2,"","Correct: Tan is his family name, and in Chinese names it comes first."],
+          ["Major Wei Ming,","Rank + given name",0,"odd","In Chinese names the family name comes first — he's Major TAN."],
+          ["Tan,","R1 · Bare surname",0,"low","Sounds rude from a stranger."]]},
+   {k:"frame", dim:"hedge", lab:"Disagreeing",
+    opts:[["no, you're wrong —","0 · Flat no",0,"blunt","A direct contradiction. He'll defend his idea."],
+          ["I see what you mean, but","1 · Acknowledge",2,"","Accepts his point first — the classic polite disagreement."],
+          ["that's a fair point, but I'm not sure —","2 · Acknowledge + hedge",2,"","Polite and open."],
+          ["with the greatest possible respect, I must fundamentally disagree —","3 · Heavy",0,"high","Sounds like a parliamentary debate."]]},
+   {k:"arg", dim:"voice", lab:"Argument",
+    opts:[["we'll use the simulator for about ten years, so we should depreciate it","Active + should",2,"","Clear and natural."],
+          ["the simulator will be used for about ten years, so it should be depreciated","Passive + should",2,"","Clear reason + recommendation. Strong."],
+          ["the simulator uses ten years, so it depreciates","Error: voice",0,"form","The simulator doesn't use anything. 'will be used', 'should be depreciated'."],
+          ["depreciation is obviously the only answer","Over-certain",0,"sure","'Obviously' makes him look foolish."]]}
+  ],
+  good:[["tan","Hm — fair point. It's a long-life asset. Okay, depreciation. Can you report back for our group?"]],
+  cont:[["tan","…Okay, fine. You report back, then."]]},
+
+ {s:"Report your group's answer to the class. At first Major Tan said you should expense it, but in the end the group agreed to depreciate it over ten years.",
+  core:"Tan: “We should expense it.” Final group decision: depreciate over 10 years.",
+  rx:{report:"Sorry — so what did your group decide in the end?"},
+  slots:[
+   {k:"rep", dim:"report", lab:"Reporting",
+    opts:[["At first Major Tan said, ‘Let's expense it’","Direct quote",1,"report","Word for word — reporting sounds more professional."],
+          ["Major Tan said us that we should expense it","Error: said + person",0,"report","'Said' has no person after it — 'told us'."],
+          ["At first, Major Tan felt that we should expense it","Reported, 'felt'",2,"","Natural and polite."],
+          ["Major Tan initially suggested that we should expense it","Reporting verb 'suggested'",2,"","A precise reporting verb. Excellent."]]},
+   {k:"dec", dim:"nominal", lab:"Decision",
+    opts:[[", but then we talk and we say okay, depreciate","Chat style",0,"low","Spoken chat, wrong tense. Unclear for the class."],
+          [", but in the end we agreed to depreciate it over ten years","Verb style",2,"","Clear and correct."],
+          [", but our final recommendation is depreciation over ten years","Noun style",2,"","'Recommendation' + 'depreciation': nominalisation sounds professional here."],
+          [", but the finalisation of our determination was the depreciation of the asset","Over-nominalised",0,"high","A chain of nouns — hard to follow."]]}
+  ],
+  good:[["priya","Excellent — that's the correct IPSAS treatment, and nicely reported. Well done, Group 2."]],
+  cont:[["priya","Thank you. Yes — depreciation is correct."]]},
+
+ {s:"The session ends. You'd like the trainer to email the answer key for the exercises, and you want to thank her.",
+  core:"Send us the answer key. Thank you.",
+  rx:{form:"<em>She smiles.</em> 'Mind to send'? Mind SENDING — but yes, of course."},
+  slots:[
+   {k:"ask", dim:"direct", lab:"Request",
+    opts:[["Send us the answer key","0 · Order",0,"blunt","An order to the trainer."],
+          ["Can you send us the answer key","3 · Can…?",1,"low","A real question, a little casual with a trainer you've just met.",{q:1}],
+          ["Could you possibly send us the answer key","4 · Could you possibly…?",2,"","Polite and natural.",{q:1}],
+          ["Would you mind to send us the answer key","Error: mind + to",0,"form","'Mind' takes -ing: 'mind sending'.",{q:1}],
+          ["Would you mind sending us the answer key","5 · Would you mind + -ing",2,"","Polite. Note: mind + -ING.",{q:1}]]},
+   {k:"thanks", dim:"register", lab:"Thanks", newS:true,
+    opts:[["Thanks","R2 · Informal",1,"low","A bit short after a whole morning."],
+          ["Thank you — that was really useful","R3 · Professional",2,"","Specific thanks. Good."],
+          ["Thank you very much for a very clear session","R4 · Warm formal",2,"","Warm and polite."],
+          ["I shall be forever in your debt","R5+ · Excessive",0,"high","Much too dramatic."]]}
+  ],
+  good:[["priya","Of course — I'll email it tonight. And your question on accruals helped everyone. Here — take this handout on variance language. You might need it this week."]],
+  cont:[["priya","Sure. I'll send it."]]}
+ ]
+});
+
+/* ---------------- i4 · B2 · The Returned Payment ---------------- */
+SCENARIOS.push({
+ id:"i4", title:"The Returned Payment", cefr:"B2", npc:"koh",
+ place:"Your desk, on the phone · Wednesday 14:30 Bangkok (15:30 Singapore) · a USD transfer has bounced",
+ goal:"Find out why a USD 48,600 transfer was returned, get it re-sent with the full beneficiary name, get the double bank charge refunded — and get it all confirmed in writing.",
+ room:{d:2,p:0,s:2, dw:"A bank officer you have never spoken to.", pw:"A service provider — no rank between you.", sw:"USD 48,600 to a partner air force — and it's already late."},
+ focus:["Passive voice","Question tags","Reported speech","Modals for hedging","Polite speech","Accounting vocabulary"],
+ intro:"Register 4 — Serious. On the phone there's no face to help you: say who you are, read codes digit by digit, check what you believe with a question tag, and use the passive when the 'doer' is a bank system.",
+ vocab:[["beneficiary","the person or organisation receiving the money"],["returned / bounced","sent back because it could not be paid"],["intermediary bank","a bank in the middle that passes the payment on"],["bank charge","a fee the bank takes"],["SWIFT MT103","the bank message that confirms an international transfer"],["value date","the date the money is available"],["refund / waive a fee","give a fee back / cancel it"]],
+ turns:[
+ {s:"The bank answers: <em>“Straits Pacific Bank, Payments Investigations, Daniel Koh speaking.”</em>",
+  core:"Hello. I'm from RTAF Finance. I call about a payment — it returned.",
+  rx:{odd:"<em>A pause.</em> Sorry — who's calling, please?", form:"Returned by itself? Sorry — what happened to it?"},
+  slots:[
+   {k:"greet", dim:"register", lab:"Greeting",
+    opts:[["Hi there","R2 · Informal",0,"low","Too casual for a bank investigation."],
+          ["Hello","R3 · Professional",1,"flat","Fine, but 'Good afternoon' sounds more professional on a bank call."],
+          ["Good afternoon","R4 · Serious",2,"","A professional phone opening."],
+          ["Good afternoon, Mr. Koh","R4 · + his name",2,"","Using the name he just gave shows you were listening."]]},
+   {k:"who", dim:"register", lab:"Who's calling", newS:true, m:2,
+    opts:[["Here is the Royal Thai Air Force speaking","Error: 'Here is'",0,"odd","'Here is…' isn't English phone language. Say 'This is…' or 'I'm calling from…'."],
+          ["I am from the Royal Thai Air Force","'I am from'",1,"odd","Understood — but on the phone English uses 'This is…' / 'I'm calling from…'."],
+          ["This is the Finance Division of the Royal Thai Air Force","'This is…'",2,"","Phone convention: 'This is…'."],
+          ["I'm calling from the Finance Division of the Royal Thai Air Force","'I'm calling from…'",2,"","Clear: who + where from. Ideal."]]},
+   {k:"why", dim:"voice", lab:"Purpose", newS:true,
+    opts:[["I'm calling about a payment that returned","Error: active",0,"form","The payment didn't return by itself — 'that was returned'."],
+          ["I'm calling about a payment that was returned","Passive",2,"","Passive: the bank system did it. Right."],
+          ["I'm calling about a payment which your bank returned to us","Active, with 'your bank'",1,"blame","Correct grammar — but it blames him before you know why."],
+          ["I'm calling regarding the non-completion of a remittance","Over-nominalised",0,"high","Hard to follow on the phone."]]}
+  ],
+  good:"Good afternoon. Certainly — I can look into that for you. Could you give me the transaction reference?",
+  cont:"Okay… Can you give me the reference, please?"},
+
+ {s:"The reference is TT-4471-09: USD 48,600, sent on the 3rd of September. You believe that's the date, but you want him to confirm it.",
+  core:"Ref TT-4471-09, USD 48,600. (Spell it.) It was sent on the 3rd — check.",
+  rx:{form:"Sorry — was that a question?", vague:"Sorry — could you repeat the reference, digit by digit?"},
+  slots:[
+   {k:"ref", dim:"register", lab:"Reference", fixed:"The reference is TT-4471-09, for USD 48,600"},
+   {k:"spell", dim:"grain", lab:"Read-back", newS:true,
+    opts:[["","(no read-back)",1,"vague","On the phone, letters and numbers get lost. Read the code back."],
+          ["That's T-T, four-four-seven-one, zero-nine","Digit by digit",2,"","Codes are read digit by digit. Professional."],
+          ["That's TT four thousand four hundred and seventy-one, nine","Read as an amount",0,"vague","A code is not an amount. Read it digit by digit."]]},
+   {k:"tag", dim:"qform", lab:"Checking the date", newS:true, m:2,
+    opts:[["It was sent on the 3rd of September, isn't it","Error: wrong tag",0,"form","The tag copies the verb: was → wasn't.",{q:1}],
+          ["It was sent on the 3rd of September, no","Thai-style tag",1,"form","Understood, but not standard English.",{q:1}],
+          ["It was sent on the 3rd of September, wasn't it","Question tag",2,"","Falling tone = checking what you believe. Correct tag.",{q:1}],
+          ["Was it sent on the 3rd of September","Direct question",2,"","Also fine — a plain question.",{q:1}]]}
+  ],
+  good:"Yes — sent on the 3rd, and returned to your bank on the 5th. Let me see the reason…",
+  cont:"One moment… Yes, I have it. It was returned on the 5th."},
+
+ {s:"The return notice you received says: <em>“Beneficiary name does not match account.”</em> Tell him what the notice said — and give your best guess at the cause, carefully.",
+  core:"Notice: “Beneficiary name does not match account.” Maybe our system shortened the name.",
+  rx:{report:"Sorry — who said the name didn't match?", blame:"<em>Stiffly.</em> We'd need to check that before saying whose error it was."},
+  slots:[
+   {k:"rep", dim:"report", lab:"Reporting",
+    opts:[["The notice says, ‘Beneficiary name does not match account.’","Direct quote",1,"report","Word for word — fine, but reporting sounds smoother."],
+          ["The notice told that the beneficiary name didn't match","Error: told + that",0,"report","'Told' needs a person: told US."],
+          ["The notice said the beneficiary name doesn't match the account","Reported, no backshift",2,"","Also OK — the problem is still true."],
+          ["The notice said that the beneficiary name didn't match the account","Reported, backshifted",2,"","does not → didn't. Clean reported speech."]]},
+   {k:"hedge", dim:"hedge", lab:"The cause", newS:true,
+    opts:[["","(no comment)",1,"vague","He'll need your theory to check."],
+          ["We think our system may have shortened the name","Hedged cause",2,"","You don't know yet — so hedge the cause. Right."],
+          ["It appears that the name may have been shortened in our system","Formal hedge + passive",2,"","Careful and professional."],
+          ["It's your bank's mistake","Blame",0,"blame","You don't know that. Unproven blame."]]}
+  ],
+  good:"Yes, I can see it. The name was cut short — only the first twenty characters were sent. That's why the intermediary bank in New York rejected it.",
+  cont:"Hm. It looks like the name was cut short. The intermediary bank rejected it."},
+
+ {s:"Your bank statement shows the USD 25 charge was taken twice: once when it was sent, and again when it was returned. You're fairly sure — but it's the bank's system, not yours.",
+  core:"Also: the USD 25 charge was taken twice (on the 3rd and the 5th). I think.",
+  key:true,
+  rx:{sure:"Do you have the statement in front of you?", form:"Sorry — the charge deducted what?"},
+  slots:[
+   {k:"frame", dim:"hedge", lab:"Frame",
+    opts:[["","0 · (no frame)",1,"blunt","Straight in. A little blunt about someone else's system."],
+          ["Also, it looks like","1 · It looks like",2,"","Hedges the bank's error politely."],
+          ["Also, it appears that","2 · It appears that",2,"","A formal hedge. Professional."],
+          ["It is beyond any doubt that","3 · Over-certain",0,"sure","You haven't seen their records yet."]]},
+   {k:"what", dim:"voice", lab:"What happened",
+    opts:[["you deducted the USD 25 charge twice","Active 'you'",1,"blame","Correct — but 'you' sounds like personal blame."],
+          ["the USD 25 charge was deducted twice","Passive",2,"","Passive: we don't need to say who did it."],
+          ["the USD 25 charge deducted twice","Error: missing 'was'",0,"form","Passive needs 'was deducted'."]]},
+   {k:"detail", dim:"grain", lab:"Detail", newS:true,
+    opts:[["","D · (no dates)",1,"vague","When? He'll need the dates to find it."],
+          ["Once on the 3rd, and again on the 5th","C · Dates",2,"","Exactly what he needs to find it."],
+          ["Once on the 3rd at 10:42, again on the 5th at 16:10, which is line 14 and line 22 on our statement, and the running balance was","A · Every detail",0,"over","Too much for the phone. Offer to email the statement instead."]]}
+  ],
+  good:"You're right — I can see two charges. The second one shouldn't have been applied.",
+  cont:"Let me check… Yes, there are two charges. I'll look into it."},
+
+ {s:"Now ask him to re-send the payment with the full beneficiary name — and give a soft deadline, because it's already late.",
+  core:"Resend it with the full name. Today.",
+  key:true,
+  slots:[
+   {k:"ask", dim:"direct", lab:"Request",
+    opts:[["Resend it","0 · Order",0,"blunt","An order to a bank officer."],
+          ["Please resend it","1 · 'Please' + order",0,"blunt","Still an order. 'Please' doesn't make a request."],
+          ["Can you resend it","3 · Can…?",1,"low","A bit casual for a formal request.",{q:1}],
+          ["Could you resend it","4 · Could…?",2,"","Polite and clear.",{q:1}],
+          ["Would it be possible to resend it","5 · Would it be possible…",2,"","Formal and polite. Good for a bank.",{q:1}],
+          ["I was wondering whether it might conceivably be feasible to resend it","7 · Over-hedged",0,"high","So many hedges he can't hear the request."]]},
+   {k:"name", dim:"register", lab:"Core thought", fixed:"with the full beneficiary name"},
+   {k:"when", dim:"time", lab:"Deadline", newS:true, m:1,
+    opts:[["Immediately. Right now","Demand",0,"blunt","Demanding. He'll feel pushed."],
+          ["It's already a week late, so today would be ideal","Reason + target",2,"","Gives the reason and a target. Professional."],
+          ["Today, if possible","Soft deadline",2,"","Clear and polite."],
+          ["Whenever you like","Open",0,"vague","No deadline — it may wait another week."]]}
+  ],
+  good:"Of course. I'll re-send it today with the full name — value date tomorrow. And I'll refund the second charge.",
+  cont:"Okay. I'll arrange it."},
+
+ {s:"You need proof for your commanding officer — and maybe for the auditors. Ask for written confirmation, and say what you'll do if you get it by 5 p.m.",
+  core:"Confirm in writing. If I get it by 5 p.m. → I tell our partners today.",
+  rx:{cond:"Sorry — so do you need it today or not?"},
+  slots:[
+   {k:"ask", dim:"direct", lab:"Request",
+    opts:[["Confirm it in writing","0 · Order",0,"blunt","An order."],
+          ["Could you confirm that in writing","4 · Could…?",2,"","Polite and clear.",{q:1}],
+          ["Would you be able to confirm that by email","5 · Would you be able to…",2,"","Polite and specific.",{q:1}],
+          ["Might it be conceivable for you to furnish written confirmation","7 · Over-formal",0,"high","Too heavy.",{q:1}]]},
+   {k:"cond", dim:"cond", lab:"Conditional", newS:true,
+    opts:[["If I will get it by 5 p.m., I'll tell our partners today","Error: will in if-clause",0,"cond","No 'will' after 'if'."],
+          ["If I get it by 5 p.m., I'll inform our partners today","First conditional",2,"","A real possibility. Right."],
+          ["If you can send it by 5 p.m., I can inform our partners today","First conditional + can",2,"","Polite: it shows him why the time matters."],
+          ["If I got it by 5 p.m., I'd inform our partners today","Second conditional",1,"cond","Sounds unlikely — as if you don't expect it."]]}
+  ],
+  good:"Of course. I'll email the SWIFT confirmation — the MT103 — before 5 p.m. your time.",
+  cont:"Okay, I'll send something later."},
+
+ {s:"Close the call. Summarise the next steps so there's no misunderstanding, then thank him and say goodbye.",
+  core:"(Summary.) Thanks. Bye.",
+  slots:[
+   {k:"sum", dim:"grain", lab:"Summary",
+    opts:[["So you'll do everything","D · Vague",0,"vague","'Everything' is not a summary."],
+          ["","(no summary)",1,"vague","On the phone, a quick summary prevents mistakes."],
+          ["So, just to confirm: you'll re-send the payment today, refund the second charge, and email the MT103 before 5 p.m.","C · Summary of actions",2,"","The professional phone close: 'just to confirm'."]]},
+   {k:"thanks", dim:"register", lab:"Thanks", newS:true,
+    opts:[["Thanks, bye","R2 · Informal",0,"low","Abrupt after he has helped you."],
+          ["Thank you for sorting this out so quickly","R3 · Specific",2,"","Specific thanks — people remember it."],
+          ["Thank you very much for your help","R4 · Warm formal",2,"","Warm and professional."],
+          ["Words cannot express my gratitude","R5+ · Excessive",0,"high","Too dramatic for a bank call."]]},
+   {k:"bye", dim:"register", lab:"Goodbye", newS:true,
+    opts:[["","(nothing more)",2,"","Fine — the thanks can close the call."],
+          ["Bye-bye","R1 · Friendly",1,"low","Casual — common on Asian phone calls, but light for this one."],
+          ["Goodbye","R3 · Professional",2,"",""],
+          ["Have a good afternoon","R4 · Serious",2,"","Warm and professional."]]}
+  ],
+  good:"That's all correct. You're welcome — and sorry for the trouble. Goodbye.",
+  cont:"Yes. Okay. Bye."}
+ ]
+});
+
+/* ---------------- i5 · B2+ · The General's Visit ---------------- */
+SCENARIOS.push({
+ id:"i5", title:"The General's Visit", cefr:"B2+", npc:"whitfield", group:"Finance Division · briefing for the partner delegation",
+ place:"Division conference room · Thursday 09:00 · meeting held in English for Brig Gen Whitfield · Wg Cdr Anan chairs",
+ goal:"Brief the visiting general on Q3 budget execution — clear structure, precise figures — and handle his difficult question about the late payment.",
+ room:{d:2,p:2,s:1, dw:"A foreign general you have never met.", pw:"A general — and your own commanding officer is chairing.", sw:"Your Division's reputation with a partner air force."},
+ focus:["Describing figures","Nominalisation","Modals for hedging","Conditional sentences","Register","Accounting vocabulary"],
+ intro:"Register 4 — Serious. Address him as 'General Whitfield' or 'Sir'. Signpost your talk, describe figures precisely (from… to… by…), and when you don't know everything, say exactly what you DO know.",
+ vocab:[["budget execution","how much of the budget has been spent so far"],["variance","the difference between the budget and the actual figure"],["adverse / favourable variance","worse / better than budget"],["over budget / under budget","spent more / less than planned"],["percentage point","the difference between two percentages (61% → 74% = 13 points)"],["reconciliation","a check that two sets of records agree"],["follow up","take further action later"]],
+ turns:[
+ {s:"Wing Commander Anan introduces you. Welcome the general and introduce your item.",
+  core:"Hello, General. Welcome. I give the budget update.",
+  rx:{odd:"<em>The general smiles thinly.</em> 'General Whitfield' works fine.", tense:"<em>Anan glances at you.</em>"},
+  slots:[
+   {k:"greet", dim:"register", lab:"Greeting",
+    opts:[["Hi, General","R2 · Informal",0,"low","Much too casual for a general."],
+          ["Good morning, Khun Mark","Khun + first name",0,"odd","Thai courtesy doesn't fit a US general."],
+          ["Good morning, General Mark","Title + first name",0,"odd","Western convention is title + SURNAME."],
+          ["Good morning, General Whitfield","R4 · Title + surname",2,"","Correct: 'General' + surname for a US general."],
+          ["Good morning, Sir","R5 · Sir",2,"","Always safe with a senior officer."]]},
+   {k:"welcome", dim:"register", lab:"Welcome", newS:true,
+    opts:[["Welcome","R3 · Plain",1,"flat","Correct, but a little bare."],
+          ["Welcome to the Finance Division","R4 · Serious",2,"","Clear and warm."],
+          ["It's an honour to welcome you to the Finance Division","R5 · Deference",2,"","Formal — right for a general."],
+          ["We are humbled beyond words by your illustrious presence","R5+ · Flattery",0,"high","Sounds insincere."]]},
+   {k:"item", dim:"tense", lab:"Your item", newS:true,
+    opts:[["I give the budget update","Present simple",0,"tense","Present simple = a habit. Use 'I'll' or 'I'd like to' for what you're about to do."],
+          ["Now I am going to talk about budget","Missing article",1,"form","'the budget' — and a little flat for a general."],
+          ["I'll give you a short update on our Q3 budget","Will",2,"","Clear and direct."],
+          ["I'd like to give you a short update on our Q3 budget","Would like to",2,"","Polite and professional."]]}
+  ],
+  good:[["whitfield","Thank you. Good to be here. Go ahead."]],
+  cont:[["whitfield","Thanks. Go ahead."]]},
+
+ {s:"Signpost the structure: three parts — budget execution, the main variances, and next steps. Tell him how long it will take.",
+  core:"Three points: execution, variances, next steps. About five minutes.",
+  rx:{order:"<em>The general glances at Anan.</em> Where are we going with this?"},
+  slots:[
+   {k:"sign", dim:"order", lab:"Roadmap",
+    opts:[["Before I start, some background on how our budget system has developed since 1992","Story first",0,"order","He didn't ask for history."],
+          ["I'll talk about many things","Vague",0,"vague","No map. He won't know how long you'll take."],
+          ["First execution, then variances, then next steps","Clipped list",1,"flat","Clear, but a bit abrupt."],
+          ["I'll cover three points: budget execution, the main variances, and next steps","Signposted",2,"","A clear roadmap. Senior people love this."]]},
+   {k:"time", dim:"grain", lab:"Time", newS:true,
+    opts:[["","(no time given)",1,"vague","Fine — but a busy general likes to know how long."],
+          ["It won't take long, I hope","Unsure",1,"unsure","Sounds unsure of your own talk."],
+          ["It'll take about five minutes","Time given",2,"","Tells a busy general how long. Excellent."]]}
+  ],
+  good:[["whitfield","Perfect. I like a clear map."]],
+  cont:[["whitfield","Mm. Okay."]]},
+
+ {s:"Your slide: budget execution was 61% at the end of Q2 and 74% at the end of Q3. Describe the change — and say what it means.",
+  core:"Execution: Q2 61% → Q3 74%. (So what?)",
+  key:true,
+  rx:{form:"Sorry — from what to what?", vague:"Give me the number."},
+  slots:[
+   {k:"trend", dim:"trend", lab:"The figure", m:3,
+    opts:[["Execution is going up","Vague",0,"vague","How much? A general wants numbers."],
+          ["Budget execution rose at 61% until 74%","Error: prepositions",0,"form","FROM 61% TO 74% — or BY 13 points."],
+          ["Budget execution rose by 13%","Points vs per cent",1,"form","Careful: 61 → 74 is 13 percentage POINTS, not 13%."],
+          ["Budget execution rose from 61% to 74%","From… to…",2,"","Precise: rose FROM… TO…"],
+          ["Budget execution rose by 13 percentage points to 74%","By… to…",2,"","'By' = the size of the change. 'Percentage points' is exactly right."]]},
+   {k:"when", dim:"register", lab:"Period", fixed:"in Q3"},
+   {k:"sowhat", dim:"grain", lab:"So what?",
+    opts:[["","(no comment)",1,"flat","The number alone. What does it mean?"],
+          [", which puts us on track for our annual target","C · So what",2,"","Tells him what the figure means."],
+          [", which is absolutely fantastic","Over-enthusiastic",0,"hype","Too emotional for a briefing."]]}
+  ],
+  good:[["whitfield","That's a solid improvement. What were the main variances?"]],
+  cont:[["whitfield","Hm. And the variances?"]]},
+
+ {s:"The biggest variance: fuel was 8% over budget because world oil prices were higher. Say it in briefing style.",
+  core:"Fuel: 8% over budget. Reason: higher oil prices.",
+  rx:{form:"Due to… what?"},
+  slots:[
+   {k:"var", dim:"nominal", lab:"Variance",
+    opts:[["We spent too much on fuel","Chat style",0,"low","Sounds like a confession — and there's no figure."],
+          ["We spent 8% more on fuel than we planned","Verb style",2,"","Clear and correct."],
+          ["The main adverse variance was in fuel, at 8% over budget","Noun style + key term",2,"","Precise briefing English: 'adverse variance'."],
+          ["The adversity of the variance of fuel expenditure was of 8%","Over-nominalised",0,"high","Nouns piled up. Hard to follow."]]},
+   {k:"cause", dim:"grain", lab:"Cause",
+    opts:[["","D · (no cause)",1,"vague","He'll ask why."],
+          [", due to higher world oil prices","'Due to' + noun",2,"","'Due to' + NOUN. Clear."],
+          [", because world oil prices were higher","'Because' + clause",2,"","'Because' + clause. Also good."],
+          [", due to world oil prices were higher","Error: due to + clause",0,"form","'Due to' + noun ('due to higher prices') — or 'because prices were higher'."]]}
+  ],
+  good:[["whitfield","Understood — same story for us. Now, my finance people tell me your Q3 payment to our account hasn't arrived. What's going on?"]],
+  cont:[["whitfield","Okay. Now — my people say your Q3 payment hasn't arrived. What happened?"]]},
+
+ {s:"A difficult question in front of your commanding officer. You know the payment was returned because the name was shortened, and it was re-sent yesterday. You have NOT yet seen confirmation that it has arrived.",
+  core:"It was returned (name shortened). Re-sent yesterday. Arrived? Not confirmed.",
+  key:true,
+  rx:{sure:"You're certain it's arrived? My people say no.", blame:"<em>Cool.</em> It wasn't our bank. Let's not point fingers."},
+  slots:[
+   {k:"frame", dim:"hedge", lab:"Frame",
+    opts:[["Honestly, I don't know, but","Blank",0,"vague","You DO know most of it. Say what you know."],
+          ["","0 · (no frame)",1,"blunt","Straight in. Fine — but a short frame buys you a second."],
+          ["Fair question, Sir —","Acknowledge",2,"","A calm acknowledgement before the answer."],
+          ["My understanding is that","Hedged frame",2,"","Signals carefully checked information."]]},
+   {k:"fact", dim:"voice", lab:"What happened",
+    opts:[["your bank rejected it","Blame",0,"blame","It wasn't his bank — and it was your own system's error."],
+          ["the bank returned it because of a problem","Vague",1,"vague","What problem? He'll ask."],
+          ["the payment was returned by the intermediary bank because the beneficiary name had been shortened","Passive + cause",2,"","Clear and exact. The 'doer' isn't the point."]]},
+   {k:"commit", dim:"commit", lab:"Arrival", newS:true,
+    opts:[["It might never arrive","Alarmist",0,"unsure","Unnecessarily worrying — and not true."],
+          ["It was re-sent yesterday, and it may already have arrived","30% · may have",2,"","Honest about what you don't know."],
+          ["It was re-sent yesterday, so it should arrive today","70% · should",2,"","Fact + careful prediction. Exactly right."],
+          ["It has definitely arrived","100% · Over-certain",0,"sure","You haven't seen confirmation. Don't promise it."]]}
+  ],
+  good:[["whitfield","Good — that's a clear answer. Colonel Hayes handles this on our side. I'd like you to brief her directly."]],
+  cont:[["whitfield","Hmm. I need that cleared up. Talk to Colonel Hayes."]]},
+
+ {s:"Offer to send Colonel Hayes a full reconciliation by Friday — as a polite offer.",
+  core:"If helpful → I send Colonel Hayes a full reconciliation by Friday.",
+  rx:{cond:"Sorry — are you sending it or not?", low:"<em>Anan closes his eyes for a second.</em>"},
+  slots:[
+   {k:"cond", dim:"cond", lab:"Offer",
+    opts:[["If it will help, I send Colonel Hayes a full reconciliation by Friday","Error: will in if-clause",0,"cond","No 'will' after 'if' — and the result needs a modal."],
+          ["If it helps, I'll send Colonel Hayes a full reconciliation by Friday","First conditional",2,"","Clear and helpful."],
+          ["If it would be helpful, I could send Colonel Hayes a full reconciliation by Friday","'If it would be helpful'",2,"","A special polite use of 'would' after 'if'. Ideal for an offer."],
+          ["If it had helped, I would have sent Colonel Hayes a reconciliation","Third conditional",0,"cond","Past and unreal — sounds as if it's too late."]]},
+   {k:"addr", dim:"register", lab:"Address",
+    opts:[[", Mark","R1 · First name",0,"low","Never with a general."],
+          ["","(no name)",1,"flat","Fine — but closing with 'Sir' is expected here."],
+          [", General Whitfield","R4 · Title + surname",2,"","Correct and respectful."],
+          [", Sir","R5 · Sir",2,"","A respectful full stop."]]}
+  ],
+  good:[["whitfield","That would be very helpful. Thank you."],["anan","Good. Please continue."]],
+  cont:[["whitfield","Fine."],["anan","Continue."]]},
+
+ {s:"Close your item and hand back to the chair, Wing Commander Anan.",
+  core:"That's the end. Thank you. Back to Wing Commander Anan.",
+  slots:[
+   {k:"close", dim:"register", lab:"Closing",
+    opts:[["That's it","R1 · Casual",0,"low","Too casual for this room."],
+          ["That's all from me","R3 · Professional",2,"","Clear and polite."],
+          ["That concludes my update","R4 · Serious",2,"","A clear, formal close."],
+          ["Thus endeth my humble presentation","R5+ · Archaic",0,"high","Church English."]]},
+   {k:"thanks", dim:"register", lab:"Thanks", newS:true,
+    opts:[["Thanks","R2 · Informal",0,"low","Too short for a general."],
+          ["Thank you for your attention","R4 · Serious",2,"",""],
+          ["Thank you, Sir","R5 · Sir",2,"",""],
+          ["Thank you from the bottom of my heart","R5+ · Excessive",0,"high","Emotional."]]},
+   {k:"hand", dim:"direct", lab:"Handover", newS:true,
+    opts:[["Anan, your turn","First name",0,"low","Never with your commanding officer."],
+          ["Wing Commander, back to you","Short handover",1,"low","Understandable, but a little clipped for your CO."],
+          ["I'll now hand back to Wing Commander Anan","Formal handover",2,"","The standard handover to the chair."],
+          ["I hereby relinquish the floor to the Chair","Ceremonial",0,"high","Parliament English."]]}
+  ],
+  good:[["anan","Thank you. A clear briefing."],["whitfield","Agreed — very clear. Thank you."]],
+  cont:[["anan","Thank you. Next item."]]}
+ ]
+});
+
+/* ---------------- i6 · C1 · Bottom Line Up Front ---------------- */
+SCENARIOS.push({
+ id:"i6", title:"Bottom Line Up Front", cefr:"C1", npc:"hayes",
+ place:"Delegation office, Building 3 · Thursday 15:00 · Colonel Hayes has fifteen minutes",
+ goal:"Report the late Q3 payment to Colonel Hayes: bottom line first, the cause without excuses — and get her to correct the statement and remove the late-payment flag.",
+ room:{d:2,p:2,s:2, dw:"A senior foreign officer you have never met.", pw:"A full colonel — several ranks above you.", sw:"A late payment on an international account, and a flag on your air force's record."},
+ focus:["Register","Modals for hedging","Conditional sentences","Passive voice","Nominalisation","Polite speech"],
+ intro:"Register 5 — Deference. US military style is BLUF: Bottom Line Up Front. Own your error once, clearly — then move to the fix. The third conditional shows you understand exactly what went wrong.",
+ vocab:[["BLUF","bottom line up front — the main point first"],["statement of account","the partner's record of what you have paid and still owe"],["late-payment flag","a mark on the account that a payment was late"],["funds received in full","all the money has arrived"],["corrective action","a change that stops an error happening again"],["LOA","Letter of Offer and Acceptance — the agreement behind the account"]],
+ turns:[
+ {s:"You enter. Colonel Hayes stands up and shakes your hand.",
+  core:"Hello, Colonel. Thanks for seeing me.",
+  rx:{odd:"<em>Evenly.</em> It's Colonel Hayes."},
+  slots:[
+   {k:"greet", dim:"register", lab:"Greeting",
+    opts:[["Hi","R2 · Informal",0,"low","Much too casual for a colonel."],
+          ["Good afternoon, Colonel Sarah","Rank + first name",0,"odd","US convention: rank + SURNAME."],
+          ["Good afternoon, Colonel Hayes","R4 · Rank + surname",2,"","Correct US convention."],
+          ["Good afternoon, Ma'am","R5 · Ma'am",2,"","US forces say 'Ma'am' to a senior female officer."]]},
+   {k:"thanks", dim:"register", lab:"Thanks", newS:true,
+    opts:[["Thanks for seeing me","R2 · Informal",1,"low","Friendly — a little casual for a colonel."],
+          ["Thank you for making time to see me","R4 · Serious",2,"","Recognises that her time is valuable."],
+          ["Thank you for seeing me at such short notice","R5 · Deference",2,"","Very polite — and accurate: it was arranged this morning."],
+          ["I am unworthy of your precious time","R5+ · Grovelling",0,"high","Grovelling. It makes her uncomfortable."]]}
+  ],
+  good:"Of course. General Whitfield said you'd be coming. Sit down — what's the bottom line?",
+  cont:"Sure. Sit down. What's this about?"},
+
+ {s:"BLUF. The Q3 payment of USD 48,600 has now arrived — but eleven days late. Say that first.",
+  core:"Bottom line: Q3 payment USD 48,600 — received now, 11 days late.",
+  key:true,
+  rx:{order:"<em>She holds up a hand.</em> Stop. Bottom line?", unsure:"Has it arrived or not? You should know that."},
+  slots:[
+   {k:"order", dim:"order", lab:"Order",
+    opts:[["To give you some background, our payment process starts when the billing statement arrives, and then","Story first",0,"order","She asked for the bottom line. You gave her the history."],
+          ["","Point first (no frame)",2,"","Straight to the point."],
+          ["The bottom line is that","Point first + BLUF frame",2,"","Uses her own language. Excellent."]]},
+   {k:"fact", dim:"tense", lab:"The fact",
+    opts:[["our Q3 payment of USD 48,600 is receiving, but late","Error: passive",0,"form","The payment isn't receiving anything. 'Has been received'."],
+          ["our Q3 payment of USD 48,600 was received this morning, but eleven days late","Past simple passive",2,"","Also fine — with a finished time ('this morning')."],
+          ["our Q3 payment of USD 48,600 has now been received — but eleven days late","Present perfect passive",2,"","Result now + a clear admission. Exactly right."],
+          ["our Q3 payment might possibly have been received, perhaps","Over-hedged",0,"unsure","You have the bank confirmation. Don't hedge a checked fact."]]}
+  ],
+  good:"Good. I saw it land this morning. So what happened?",
+  cont:"Okay… So what happened?"},
+
+ {s:"The cause, confirmed by the bank: your system had shortened the beneficiary name, so the intermediary bank returned the payment. It was your Division's error.",
+  core:"Bank returned it: our system had shortened the name. Our error.",
+  key:true,
+  rx:{blame:"<em>Cool.</em> So it's someone else's fault?", hype:"<em>She raises a hand.</em> Once is enough. Go on."},
+  slots:[
+   {k:"cause", dim:"voice", lab:"Cause",
+    opts:[["The American bank made a mistake","Blame",0,"blame","It wasn't their mistake. Unproven — and untrue — blame."],
+          ["The bank sent it back because of the name","Vague",1,"vague","What about the name? Be precise at this level."],
+          ["It was returned by the intermediary bank because our system had shortened the beneficiary name","Passive + past perfect",2,"","A precise sequence: shortened (earlier) → returned (later)."]]},
+   {k:"own", dim:"commit", lab:"Ownership", newS:true,
+    opts:[["Mistakes may perhaps have been made","Evasive passive",0,"unsure","Classic evasion. She'll notice."],
+          ["","(no admission)",1,"flat","She'll wonder whether you accept responsibility."],
+          ["That was our error","100% · Ownership",2,"","Short, clear ownership. Exactly what a colonel respects."],
+          ["I'm terribly, terribly sorry, it was totally my fault, I feel awful","Over-apology",0,"hype","Once is enough. Over-apology sounds emotional."]]}
+  ],
+  good:"I appreciate you saying that straight. Most people spend ten minutes explaining why it wasn't them.",
+  cont:"I see."},
+
+ {s:"Show you understand the chain of events: if the name had been entered in full, the payment would have arrived on time.",
+  core:"Name in full (past, didn't happen) → on time (past, didn't happen).",
+  rx:{cond:"Sorry — is that what happened, or what would have happened?"},
+  slots:[
+   {k:"cond", dim:"cond", lab:"Conditional",
+    opts:[["If the name was entered in full, the payment arrived on time","Error: past simple both",0,"cond","That's a statement about the past, not a 'what if'."],
+          ["If the name would have been entered in full, the payment would arrive on time","Error: would in if-clause",0,"cond","No 'would' in the if-clause."],
+          ["If the name had been entered in full, the payment would have arrived on time","Third conditional",2,"","Past unreal: the right tool to analyse what went wrong."],
+          ["Had the name been entered in full, the payment would have arrived on time","Third conditional, inverted",2,"","Formal inversion: very C1."]]},
+   {k:"lesson", dim:"grain", lab:"Lesson", newS:true,
+    opts:[["So nobody could have done anything","Excuse",0,"blame","Not true — and it sounds like an excuse."],
+          ["","(stop there)",1,"flat","OK — but what's the lesson?"],
+          ["That's the lesson we've taken from it","C · Lesson",2,"","Shows the analysis has led somewhere."]]}
+  ],
+  good:"Exactly. So — what are you asking me for?",
+  cont:"Mm. So what do you need from me?"},
+
+ {s:"Your request: correct the statement of account and remove the late-payment flag — because the funds are now in full and the cause has been fixed.",
+  core:"Correct the statement. Remove the flag. (Money is in; cause fixed.)",
+  key:true,
+  slots:[
+   {k:"ask", dim:"direct", lab:"Request",
+    opts:[["Remove the flag","0 · Order",0,"blunt","An order to a colonel."],
+          ["I need you to remove the flag","2 · Need",0,"blunt","Presents your need as her job."],
+          ["Could you remove the flag","4 · Could…?",1,"low","Polite — but light for a big favour at R5.",{q:1}],
+          ["Would it be possible to correct the statement and remove the late-payment flag","5 · Would it be possible…",2,"","Formal and distant. Right for a favour upward.",{q:1}],
+          ["I'd be very grateful if you could correct the statement and remove the late-payment flag","6 · I'd be grateful if…",2,"","Very polite and formal. Excellent."]]},
+   {k:"reason", dim:"nominal", lab:"Justification", newS:true, m:1,
+    opts:[["Because now the money is there","Chat style",0,"low","Too informal and vague."],
+          ["The funds have now been received in full, and the cause has been corrected","Passive + key nouns",2,"","Formal, precise, persuasive."],
+          ["This is in view of the receipt of funds in full and the correction of the root cause","Noun style",2,"","Dense but clear. Formal."],
+          ["The rectification of the causation of the non-timeliness has been effectuated","Over-nominalised",0,"high","Unreadable."]]}
+  ],
+  good:"That seems reasonable. But how do I know this won't happen again?",
+  cont:"Hm. I'll think about it. How do I know this won't happen again?"},
+
+ {s:"Corrective action already taken: from this week, every beneficiary name is checked against the LOA before a payment is released.",
+  core:"New (this week): second check of names against the LOA before release.",
+  rx:{tense:"Will? Or have you already done it?"},
+  slots:[
+   {k:"tense", dim:"tense", lab:"Tense",
+    opts:[["We had introduced a second check","Past perfect",0,"tense","Past-before-past. There's no second past event."],
+          ["We introduce a second check","Present simple",1,"tense","Sounds like a general habit — not a new change."],
+          ["We've introduced a second check","Present perfect",2,"","A recent change with a result now. Right."],
+          ["We will introduce a second check","Will",1,"tense","A promise — but it's already done. Say so!"]]},
+   {k:"detail", dim:"voice", lab:"The control",
+    opts:[[": someone checks names","Vague",1,"vague","Who? Against what?"],
+          [": every beneficiary name is now checked against the LOA before a payment is released","Passive procedure",2,"","Clear procedure language."],
+          [": all names are checked by two people, then three, then the Wing Commander, and then again the next day","Overkill",0,"over","Sounds unrealistic."]]}
+  ],
+  good:"That's exactly what I wanted to hear. Send me the bank confirmation and your corrective action in writing, and I'll have the statement corrected.",
+  cont:"Okay. Put it in writing and I'll consider it."},
+
+ {s:"Close: promise the documents by close of business Friday, thank her, and leave.",
+  core:"I send the documents by Friday. Thanks.",
+  slots:[
+   {k:"commit", dim:"commit", lab:"Promise",
+    opts:[["I might send the documents by Friday","30% · might",0,"unsure","A colonel needs a commitment."],
+          ["I send the documents by Friday","Present simple",0,"tense","Present simple isn't a promise."],
+          ["I'll send you the bank confirmation and our corrective action plan by close of business Friday","90% · will (promise)",2,"","A firm promise with a deadline."],
+          ["You'll have the documents by close of business Friday","90% · will (her gain)",2,"","A promise from her point of view. Strong."]]},
+   {k:"thanks", dim:"register", lab:"Thanks", newS:true,
+    opts:[["Cheers","R1 · Slang",0,"low","Never with a colonel."],
+          ["Thanks a lot","R2 · Informal",0,"low","Too casual."],
+          ["Thank you for your understanding, Colonel","R4 · Rank",2,"",""],
+          ["Thank you, Ma'am","R5 · Ma'am",2,"",""]]}
+  ],
+  good:"Thank you. That was handled well. Good luck with the auditors tomorrow.",
+  cont:"Fine. Goodbye."}
+ ]
+});
+
+/* ---------------- i7 · C1+ · The Exit Meeting ---------------- */
+SCENARIOS.push({
+ id:"i7", title:"The Exit Meeting", cefr:"C1+", npc:"eriksen",
+ place:"Audit room · Friday 14:00 · exit meeting on the international auditors' draft findings",
+ goal:"Respond to the auditor's draft findings: answer precisely, accept what is fair, respectfully contest what is not — with evidence — and leave with a constructive final report.",
+ room:{d:2,p:2,s:2, dw:"An auditor you have met only in formal meetings.", pw:"An independent auditor — his report goes to the top.", sw:"Audit findings go on record."},
+ focus:["Modals for hedging","Reported speech","Cleft & inversion","Nominalisation","Passive voice","Accounting vocabulary"],
+ intro:"Register 5 — Deference, but not weakness. Auditors want precise answers and evidence. Accept a fair finding cleanly; contest an unfair one with facts, never emotion. Cleft sentences and inversion help you sound controlled and formal.",
+ vocab:[["finding","a problem the auditor reports"],["fixed asset register","the list of everything the unit owns that has a long life"],["sample","the items the auditor chose to check"],["physical count","going and seeing each asset"],["management response","your official answer to a finding"],["audit trail","documents that show what happened, step by step"],["internal control","a check built into a process to stop errors"]],
+ turns:[
+ {s:"Mr. Eriksen hands you the draft findings: (1) three assets in the sample could not be located; (2) a Q3 payment to a partner air force was late.",
+  core:"Hello. Thanks for the draft findings.",
+  rx:{odd:"<em>Politely.</em> Eriksen is my family name."},
+  slots:[
+   {k:"greet", dim:"register", lab:"Greeting",
+    opts:[["Hi, Lars","R1 · First name",0,"low","Much too familiar for an exit meeting."],
+          ["Good afternoon, Mr. Lars","Mr. + first name",0,"odd","Western convention: Mr. + SURNAME."],
+          ["Good afternoon, Lars Eriksen","Full name",1,"odd","A full name as a form of address sounds odd in English."],
+          ["Good afternoon, Mr. Eriksen","R4 · Mr. + surname",2,"","Correct and professional."]]},
+   {k:"thanks", dim:"register", lab:"Thanks", newS:true,
+    opts:[["Thanks for this","R2 · Informal",1,"low","A bit casual for a formal exit meeting."],
+          ["Thank you for sharing the draft findings","R4 · Serious",2,"",""],
+          ["Thank you for sharing the draft findings with us in advance","R5 · Deference",2,"","Precise and courteous."],
+          ["We are deeply grateful for your merciful findings","R5+ · Grovelling",0,"high","Sounds sarcastic."]]}
+  ],
+  good:"You're welcome. Let's start with Finding 1. Which of the forty assets in our sample could you not locate?",
+  cont:"Right. Finding 1: which assets could you not locate?"},
+
+ {s:"He wants a precise answer. The facts: three of the forty — two laptops and a projector. All three had been sent for disposal, but the register had not been updated.",
+  core:"3 of 40: 2 laptops + 1 projector. Sent for disposal earlier; register not updated.",
+  rx:{tense:"Sorry — is the register updated now, or not?", over:"<em>He stops writing.</em> Which items — just the answer, please."},
+  slots:[
+   {k:"ans", dim:"grain", lab:"Answer",
+    opts:[["Some things were missing","D · Vague",0,"vague","He knows that. Be exact."],
+          ["Three of the forty: two laptops and a projector","C · Exact answer",2,"","Exactly what he asked. Nothing more."],
+          ["Well, the story of those assets starts in 2019, when the IT section","Story first",0,"over","He asked 'which', not 'why'."]]},
+   {k:"cause", dim:"tense", lab:"Sequence", newS:true,
+    opts:[["All three will be sent for disposal","Future",0,"tense","They were already sent."],
+          ["They were sent for disposal, but the register is not updated","Tense mix",0,"tense","'Is not updated' — mixed tenses. The update should have happened before the audit."],
+          ["All three had been sent for disposal before the audit, but the register wasn't updated","Past perfect + past simple",2,"","A clear sequence."],
+          ["All three had been sent for disposal, but the register had not been updated","Past perfect passive",2,"","Past-before-past, passive: the exact sequence."]]}
+  ],
+  good:"Thank you — precise. So do you accept Finding 1?",
+  cont:"I see. So do you accept Finding 1?"},
+
+ {s:"Finding 1 is fair. Accept it cleanly, and give your action: a full physical count, and the register reconciled by 31 October.",
+  core:"We accept Finding 1. Action: full count + reconcile the register by 31 Oct.",
+  slots:[
+   {k:"accept", dim:"commit", lab:"Position",
+    opts:[["OK, fine, whatever","Dismissive",0,"low","Sounds as if you don't care."],
+          ["We might accept it","30% · might",0,"unsure","An auditor needs a clear position."],
+          ["We accept the finding","100% · Accept",2,"","Clean acceptance."],
+          ["Management accepts Finding 1 in full","100% · Formal record",2,"","Formal management-response style."]]},
+   {k:"action", dim:"nominal", lab:"Action", newS:true,
+    opts:[["We'll count and fix it","Chat style",1,"low","A bit vague for a management response."],
+          ["A full physical count will be carried out, and the register will be reconciled by 31 October","Future passive",2,"","Clear, formal, dated."],
+          ["Remediation: a full physical count and reconciliation of the register by 31 October","Noun style",2,"","Management-response style. Excellent."],
+          ["The actualisation of the reconciliation of the enumeration of the assets will occur","Over-nominalised",0,"high","Unreadable."]]}
+  ],
+  good:"Good. I'll record that as your management response. Finding 2, then — the late payment.",
+  cont:"Noted. Finding 2."},
+
+ {s:"Finding 2 is no longer fair: the delay has been corrected, and Colonel Hayes confirmed in writing that the statement has been corrected and the flag removed. Contest it — respectfully, with evidence.",
+  core:"We disagree with Finding 2. Colonel Hayes (in writing): “Statement corrected, flag removed.”",
+  key:true,
+  rx:{hype:"<em>He leans back.</em> Let's keep this calm, please.", report:"Who confirmed that — and do you have it in writing?"},
+  slots:[
+   {k:"frame", dim:"hedge", lab:"Disagreeing",
+    opts:[["That's wrong","0 · Contradiction",0,"blunt","A flat contradiction of an auditor. He'll dig in."],
+          ["However, we would respectfully disagree with Finding 2","2 · Respectful disagreement",2,"","'Would' + 'respectfully' — firm but courteous."],
+          ["With respect, we'd question whether Finding 2 is still necessary","2 · Hedged challenge",2,"","Polite and precise."],
+          ["Finding 2 is a total disgrace","Emotional",0,"hype","Emotion in an audit meeting."]]},
+   {k:"evid", dim:"report", lab:"Evidence", newS:true,
+    opts:[["Colonel Hayes told that everything is fine","Error: told + that; vague",0,"report","'Told' needs a person — and 'everything is fine' is not evidence."],
+          ["Colonel Hayes said, ‘The statement is corrected.’","Direct quote",1,"report","Better to report formally — and say it's in writing."],
+          ["Colonel Hayes has confirmed in writing that the statement has been corrected and the flag removed","Reported + 'in writing'",2,"","A precise reporting verb + evidence. Very strong."],
+          ["According to Colonel Hayes's email of yesterday, the statement has been corrected and the flag removed","Source + content",2,"","Names the evidence. Excellent."]]}
+  ],
+  good:"I didn't have that email. If it's in writing, that changes things. What have you changed internally?",
+  cont:"Hm. I'll need to see that. What have you changed internally?"},
+
+ {s:"Emphasise the key control you introduced: a second, independent check on every beneficiary name against the LOA. Use a cleft sentence or inversion to put it in the spotlight.",
+  core:"We introduced a second check on beneficiary names. (Emphasise it.)",
+  rx:{form:"Sorry — could you rephrase that?"},
+  slots:[
+   {k:"emph", dim:"emph", lab:"Emphasis",
+    opts:[["We introduced a second check","Plain",1,"flat","Correct — but it doesn't stand out."],
+          ["It is a second check what we introduced","Error: cleft form",0,"form","It-cleft: 'It is a second check THAT we introduced'."],
+          ["What we have introduced is a second, independent check on every beneficiary name","'What' cleft",2,"","A what-cleft puts the spotlight on the key control."],
+          ["Not only have we introduced a second check, but we have also retrained the payment staff","Inversion 'Not only…'",2,"","Formal inversion adds weight. Very C1."]]},
+   {k:"detail", dim:"grain", lab:"Detail", newS:true,
+    opts:[["","(no detail)",1,"vague","Against what? How is it recorded?"],
+          ["Every name is now verified against the LOA before release","C · The control",2,"","Clear."],
+          ["Every name is now verified against the LOA, and each check is signed and filed as an audit trail","C · Control + audit trail",2,"","Mentions the evidence he'll want. Excellent."]]}
+  ],
+  good:"That's a proper control, with an audit trail. I'll downgrade Finding 2 to an observation.",
+  cont:"Okay. I'll consider that."},
+
+ {s:"Offer further documents — formally.",
+  core:"If you need more documents, we'll provide them.",
+  rx:{cond:"Sorry — are you offering or not?"},
+  slots:[
+   {k:"cond", dim:"cond", lab:"Offer",
+    opts:[["If you will need more documents, we provide them","Error: will in if-clause",0,"cond","No 'will' in the if-clause — and the result needs 'will'."],
+          ["Were you to require documents, we would have provided them","Error: mixed times",0,"cond","The result is in the wrong time — 'we would provide them'."],
+          ["If you need any further documents, we'll be happy to provide them","First conditional",2,"","Clear and professional."],
+          ["Should you require any further documentation, we would be happy to provide it","Formal inversion",2,"","Should + subject: formal register. Excellent."]]}
+  ],
+  good:"Thank you. I'll send the final report within two weeks.",
+  cont:"Fine. The final report will follow."},
+
+ {s:"Close the meeting constructively: thank him for a professional audit, and say you look forward to the final report.",
+  core:"Thanks for the audit. We wait for the final report.",
+  rx:{form:"<em>A small smile.</em> 'Look forward to receive'? I'll take it as a compliment."},
+  slots:[
+   {k:"thanks", dim:"register", lab:"Thanks",
+    opts:[["Thank God that's over","R1 · Slang",0,"low","Never say this to an auditor!"],
+          ["Thanks a lot","R2 · Informal",0,"low","Too casual."],
+          ["Thank you for a thorough and constructive audit","R4 · Serious",2,"","Specific and gracious."],
+          ["Thank you, Mr. Eriksen — it has been a constructive process","R5 · Formal",2,"","Courteous and formal."]]},
+   {k:"look", dim:"form", lab:"Verb pattern", newS:true,
+    opts:[["We look forward to receive the final report","Error: to + base verb",0,"form","'Look forward to' + -ING: 'to receiving'."],
+          ["We are waiting for the final report","Neutral",1,"flat","Correct, but it sounds impatient."],
+          ["We look forward to receiving the final report","Look forward to + -ing",2,"","Correct and professional."],
+          ["We await it with bated breath","Theatrical",0,"high","Sounds sarcastic."]]}
+  ],
+  good:"Likewise. Your team was well prepared. Good afternoon.",
+  cont:"Yes. Good afternoon."}
+ ]
+});
+
+/* ======================================================================
    READ-THE-ROOM SCENES
    Picture: the app first tries img/scene-<id>.png (export of the NotebookLM
    scene slide). If that file is missing it draws the built-in illustration.
@@ -1592,6 +2924,109 @@ const SCENES = {
       text:"The Regional Defence Finance Forum, Bangkok. The keynote has just finished and it is the coffee break. Dr. Hannah Lim is standing alone with a coffee. You walk up to her."}
 };
 /* ======================================================================
+   CAMPAIGNS — the scenarios as two unfolding missions (quest map,
+   story interludes, intel cards carried forward, 5-tier outcome pictures)
+   ====================================================================== */
+const CAMPAIGNS = [
+ {id:"fin", icon:"🏢", tab:"Finance Division", name:"Operation Month-End", kick:"Campaign 1",
+  prologue:"Two weeks in the Finance Division. Month-end closing is coming, your sister's wedding is next Friday, and a 1.2-million-baht mistake is hiding in the ledger. Seven missions — each one opens the next.",
+  ids:["s0","s1","s2","s3","s4","s5","s6"]},
+ {id:"intl", icon:"🌏", tab:"International Week", name:"Operation Open Skies", kick:"Campaign 2",
+  prologue:"A partner-air-force delegation, an IPSAS workshop and an international audit — all in one week, all in English. Monday evening to Friday afternoon. A payment goes missing on Wednesday… and everything you say this week becomes evidence on Friday.",
+  ids:["i1","i2","i3","i4","i5","i6","i7"]}
+];
+
+/* story interlude shown on the map and before each mission */
+const STORY = {
+ s0:{day:"Week 1 · Tuesday", pre:"Your sister's wedding is next Friday in Chiang Mai — right in month-end week. Before anything else, you need your section head to sign off two days' leave."},
+ s1:{day:"Week 1 · Tuesday lunch", pre:"Leave approved — but you promised Malee a clean desk before you go. At the top of your in-tray: a three-way match you still don't understand. Ploy is in the canteen."},
+ s2:{day:"Week 2 · Monday", pre:"Ploy's lesson worked: you found three invoices stuck because receipts only arrive on the 27th. At Monday's section meeting you'll propose a fix."},
+ s3:{day:"Week 2 · Wednesday", pre:"The new cut-off is agreed — but one supplier invoice is still missing, and tomorrow is the payment run. Only Khun Nok in Purchasing can chase it."},
+ s4:{day:"Week 2 · Thursday", pre:"The missing invoice arrived. But while matching it you noticed something worse: Siam Aero Parts was paid twice. 1.2 million baht. Your commanding officer must hear it from you — first."},
+ s5:{day:"Week 3 · Monday", pre:"Wing Commander Anan now wants every invoice checked twice. On Monday the joint-exercise invoice from the partner air force arrives — and the numbers don't add up."},
+ s6:{day:"Week 3 · Forum day", pre:"Word of your careful work has travelled. Anan sends you to the Regional Defence Finance Forum in his place. After the keynote, the speaker is standing alone with a coffee…"},
+ i1:{day:"Monday · 18:45", pre:"International Week starts tonight — with something easy. Olivia, your best friend from your master's year in England, is in Bangkok for a conference. Dinner by the river. Just don't talk like an accountant all evening."},
+ i2:{day:"Tuesday · 08:30", pre:"The partner-air-force delegation arrived yesterday. First job: Flight Lieutenant Jack Morrison, an Australian liaison officer, needs help with his travel expense claim — before your workshop starts."},
+ i3:{day:"Tuesday · 10:15", pre:"The Division is moving to accrual accounting, and today's IPSAS workshop is taught entirely in English, with participants from four air forces. You can't sit quietly at the back."},
+ i4:{day:"Wednesday · 14:30", pre:"Bad news: the Q3 payment of USD 48,600 to the partner air force's account has come back — 'returned'. The delegation is in the building this week. You pick up the phone to the bank in Singapore."},
+ i5:{day:"Thursday · 09:00", pre:"Brigadier General Whitfield is visiting the Division, so today's meeting is in English. Wing Commander Anan has given you the budget item. The general's staff already know the payment was late."},
+ i6:{day:"Thursday · 15:00", pre:"The general asked you to brief his finance chief personally. Colonel Sarah Hayes has fifteen minutes. The late-payment flag is still on the account."},
+ i7:{day:"Friday · 14:00", pre:"The international audit team has finished its fieldwork. Mr. Lars Eriksen presents the draft findings — and one of them is the late payment. Everything you did this week is now evidence."}
+};
+
+/* intel cards: earned with 3★ or more; each gives +5 starting goodwill and a tip in the target mission */
+const CARDS = [
+ {id:"c_malee",  from:"s0", to:"s2", ex:1, icon:"📌", title:"Malee's rule",       tip:"In my meetings: point first, then support."},
+ {id:"c_ploy",   from:"s1", to:"s3", ex:2, icon:"🥗", title:"Ploy's advice",      tip:"Nok helps people who make a real request ('Could you…?') and give a reason — never 'please' + an order."},
+ {id:"c_minutes",from:"s2", to:"s4", ex:1, icon:"📝", title:"Minutes habit",      tip:"Put the checked figure in the first sentence — like a line in the minutes."},
+ {id:"c_nok",    from:"s3", to:"s5", ex:2, icon:"📂", title:"Nok's supplier file",tip:"Before you challenge an invoice, have your own checked figure ready — and state it plainly."},
+ {id:"c_anan",   from:"s4", to:"s6", ex:2, icon:"⭐", title:"Anan's rule",        tip:"Hedge opinions and causes — never your checked facts."},
+ {id:"c_clarke", from:"s5", to:"s6", ex:0, icon:"🎓", title:"Clarke's manners",   tip:"With Western experts: title + SURNAME — Dr. Lim, not Dr. Hannah."},
+ {id:"c_forum",  from:"s6", to:null,       icon:"🏅", title:"Forum badge",        tip:"Operation Month-End complete."},
+ {id:"c_olivia", from:"i1", to:"i7", ex:1, icon:"🍛", title:"Olivia's audit tip", tip:"Auditors ask narrow questions. Answer exactly the question — then offer the evidence."},
+ {id:"c_jack",   from:"i2", to:"i6", ex:1, icon:"🦘", title:"Jack's warning",     tip:"Colonel Hayes is old-school: BLUF — bottom line up front. And it's 'Ma'am'."},
+ {id:"c_priya",  from:"i3", to:"i5", ex:2, icon:"📊", title:"Priya's handout",    tip:"rose FROM 61% TO 74% · rose BY 13 percentage points · adverse variance = worse than budget."},
+ {id:"c_koh",    from:"i4", to:"i5", ex:4, icon:"🏦", title:"Bank confirmation",  tip:"Returned on the 5th (name cut short) · re-sent yesterday · fee refunded. State what you know; hedge only the arrival."},
+ {id:"c_general",from:"i5", to:"i6", ex:0, icon:"🎖️", title:"The General's request", tip:"She's expecting you. Thank her for her time — then go straight to the bottom line."},
+ {id:"c_hayes",  from:"i6", to:"i7", ex:3, icon:"✉️", title:"Colonel Hayes's email", tip:"In writing: statement corrected, flag removed. Name the source when you contest Finding 2."},
+ {id:"c_skies",  from:"i7", to:null,       icon:"🏆", title:"Open Skies badge",   tip:"International Week complete — seven English situations, B1 to C1+."}
+];
+
+/* key vocabulary for the Finance Division missions (the International Week ones carry their own) */
+const VOCAB_FIN = {
+ s0:[["month-end closing","finishing and checking all the accounts at the end of the month"],["cover (someone's accounts)","do their work while they are away"],["VAT return","the tax form that reports VAT"],["submit","send a form officially"],["approve","say yes officially"]],
+ s1:[["three-way match","checking the purchase order, goods received note and invoice agree before paying"],["PO (purchase order)","the document that orders goods"],["GRN (goods received note)","proof that the goods arrived"],["invoice","the supplier's bill"],["hold (a payment)","stop it for now"]],
+ s2:[["cut-off","the last date for including something"],["receipt","proof of payment"],["minutes","the written record of a meeting"],["action point","a task someone must do after the meeting"],["propose","suggest formally"]],
+ s3:[["payment run","the day the unit pays all approved invoices"],["supplier","the company that sells you goods"],["chase","ask again for something that is late"],["PO number","the reference number of the order"]],
+ s4:[["duplicate payment","paying the same invoice twice"],["verify","check that something is true"],["hold on payments","stopping future payments for now"],["recover (money)","get money back"],["duplicate check","a control that flags repeated invoices"]],
+ s5:[["corrected invoice","a new invoice that fixes an error"],["personnel","the people in an organisation"],["attendance list","the record of who was there"],["discrepancy","a difference that should not be there"]],
+ s6:[["keynote","the main talk at a conference"],["accrual budgeting","budgeting by when costs happen, not when cash moves"],["parallel reporting","reporting in the old and new systems at the same time"],["reservation","a polite doubt"]]
+};
+
+/* who appears in the outcome picture (first = main reaction) */
+const CAST = {s2:["malee","nok"], i3:["priya","tan"], i5:["whitfield","anan"]};
+
+/* 5 outcome pictures per mission: [stamp, caption] from 5★ down to 1★ */
+const PICS = {
+ s0:[["LEAVE APPROVED","Malee signs the form on the spot — and tells the team you're a model of planning."],["APPROVED","Leave approved. See you at the wedding in Chiang Mai!"],["APPROVED — WITH NOTES","Approved… but Malee has made a note about your tone."],["ON HOLD","Malee wants to 'think about it'. Your leave form sits in her in-tray."],["DECLINED","Leave declined for month-end week. You'll watch the wedding on video."]],
+ s1:[["GOT IT!","Ploy draws the three-way match on a napkin — and you get it first time."],["SESSION BOOKED","Ploy explains it and books a session after lunch. Coffee's on you."],["SORT OF CLEAR","Ploy helps, but gives you a funny look. You understand about half."],["CONFUSED","Ploy is puzzled by your tone. No session booked."],["LUNCH ALONE","Ploy takes her som tam to another table."]],
+ s2:[["MOTION CARRIED","Everyone agrees: the cut-off moves to the 25th, and Malee praises your proposal."],["AGREED","The team agrees: the receipt cut-off moves to the 25th."],["DEFERRED","Agreed in principle — 'to discuss again next week'."],["PARKED","The proposal is parked. Nobody was convinced."],["DROPPED","Khun Nok objects, the room goes quiet, and the item is dropped."]],
+ s3:[["ON TIME","Nok calls the supplier at once — the PDF arrives by 3:40 p.m."],["INVOICE IN","Nok chases it. The invoice makes the payment run."],["MAYBE TODAY","Nok will call 'when she can'. Fingers crossed."],["BOTTOM OF THE PILE","Your request goes under forty other files."],["MISSED THE RUN","The invoice misses the run. The supplier waits a month."]],
+ s4:[["HOLD APPROVED","Anan approves the hold at once and asks you to brief the whole Division."],["HOLD APPROVED","Hold approved; written report by Friday. He trusts your figures."],["DOUBLE-CHECK","He approves, but asks Sqn Ldr Malee to check your work."],["CASE REASSIGNED","He hands the case to Sqn Ldr Malee."],["DISMISSED","'Come back when you have facts.' The door closes."]],
+ s5:[["CORRECTED","A corrected invoice for 32 personnel arrives the next day — with a thank-you note."],["CORRECTED","A corrected invoice arrives on Thursday."],["UNDER REVIEW","She'll 'look into it'. No date promised."],["REFERRED","Her reply is cool: she'll 'refer it to her superiors'."],["DISPUTED","A formal complaint about your tone reaches Wing Commander Anan."]],
+ s6:[["SLIDES SHARED","Dr. Lim sends her slides — and asks to quote your point in her next talk."],["SLIDES SHARED","She sends her slides that evening."],["CARD EXCHANGED","She gives you her card, a little guarded."],["POLITE SMILE","She smiles politely and turns to the next person."],["COLD SHOULDER","She finishes her coffee and walks away."]],
+ i1:[["BEST NIGHT OUT","Olivia hugs you goodbye: 'Next time — London, and dinner's on me!'"],["GREAT CATCH-UP","A lovely evening, and plans to meet in London."],["NICE, BUT…","A pleasant dinner — but some things got lost in translation."],["AWKWARD","Olivia looks confused. The conversation keeps stopping."],["EARLY NIGHT","Olivia says she's tired and takes a taxi at 8 p.m."]],
+ i2:[["APPROVED FIRST TIME","Jack's claim sails through — he tells his squadron you're the best in Finance."],["CLAIM SUBMITTED","The claim is complete and submitted by 9 a.m."],["RESUBMIT","Jack submits, but has to come back with a missing form."],["CONFUSED","Jack isn't sure what he needs. He'll 'ask someone else'."],["RETURNED","The claim bounces back. Jack flies home unpaid."]],
+ i3:[["STAR PARTICIPANT","Priya uses your question as the example for the whole class."],["ACTIVE LEARNER","You asked, checked and reported — a strong morning."],["PASSED","You took part, but some of it got lost."],["QUIET","You stopped asking questions after the first one."],["LOST","The workshop moves on without you."]],
+ i4:[["FIXED + REFUNDED","Re-sent today, fee refunded, MT103 in your inbox by 4 p.m."],["RE-SENT","Payment re-sent with the full name. Confirmation to follow."],["PENDING","The bank will 'investigate'. No confirmation yet."],["ESCALATED","Mr. Koh asks you to put everything in writing — it'll take a week."],["STILL STUCK","The call ends badly. The payment is still stuck."]],
+ i5:[["IMPRESSIVE","The general asks for a copy of your slides — and Anan beams."],["WELL BRIEFED","A clear briefing. The general wants you to brief Colonel Hayes."],["ADEQUATE","The general got the numbers, but looked at his watch."],["UNCONVINCED","The general asks Anan to 'find out what's really going on'."],["TAKEN OVER","Anan takes over in the middle of your briefing."]],
+ i6:[["FLAG REMOVED","Colonel Hayes corrects the statement the same day — and tells the general so."],["STATEMENT CORRECTED","She'll correct the statement as soon as your documents arrive."],["UNDER REVIEW","She'll 'review the situation'. The flag stays for now."],["FLAG STAYS","The late-payment flag stays on the record."],["COMPLAINT","A formal note about the meeting goes to your commander."]],
+ i7:[["CLEAN REPORT","Finding 2 is dropped; Finding 1 is recorded with your action plan. Operation Open Skies complete!"],["CONSTRUCTIVE","One finding, one observation — a fair report."],["TWO FINDINGS","Both findings stay, with your responses attached."],["NOTED","The auditor records 'limited cooperation'."],["ADVERSE","A tough report goes to the Air Staff."]]
+};
+
+/* read-the-room scenes for the International Week */
+Object.assign(SCENES, {
+  i1:{art:"restaurant", clock:[18,45],
+      text:"A riverside Thai restaurant. Monday, 18:45. The lights of the boats are coming on. Olivia is waiting at a table by the window — and she has just seen you."},
+  i2:{art:"frontdesk", clock:[8,30],
+      text:"The Finance Division front desk. Tuesday, 08:30. Flight Lieutenant Morrison of the visiting delegation walks up with a folder full of receipts and a claim form."},
+  i3:{art:"classroom", clock:[10,15],
+      who:"Ms. Priya Raman (trainer) and Major Tan Wei Ming (participant)",
+      role:"The trainer is an expert you have never met. Major Tan, from a partner air force, is in your group.",
+      text:"Training room B. Tuesday, 10:15. Twenty participants from four air forces. The trainer has just said: “Let's go round the room — name, unit, and how long you've worked there.”"},
+  i4:{art:"phone", clock:[14,30],
+      text:"Your desk. Wednesday, 14:30 in Bangkok, 15:30 in Singapore. A return notice for USD 48,600 is on your screen. You dial the bank's Payments Investigations team."},
+  i5:{art:"boardroom", clock:[9,0],
+      who:"Brigadier General Whitfield (guest) and Wing Commander Anan (chair)",
+      role:"A visiting general from the partner air force — and your own commanding officer is chairing.",
+      text:"The Division conference room. Thursday, 09:00. Flags on the table, name cards, coffee. Because of the visiting general, today's meeting is in English. The budget update is your item."},
+  i6:{art:"delegation", clock:[15,0],
+      text:"The delegation office, Building 3. Thursday, 15:00. Colonel Hayes is at a borrowed desk covered in files. She looks at her watch, then at you."},
+  i7:{art:"audit", clock:[14,0],
+      text:"The audit room. Friday, 14:00. Files are stacked along the wall. Mr. Eriksen slides two pages of draft findings across the table."}
+});
+
+/* ======================================================================
    ENGINE
    ====================================================================== */
 const LS_KEY = "rtafModDesk_v1";
@@ -1612,6 +3047,14 @@ const OUTCOME = {
   s6:["Dr. Lim sends her slides that evening — and asks whether she may quote your point.","She gives you her card, but seems a little guarded.","She smiles politely and moves on to the next person."]
 };
 const regFromRoom = n => n<=1?1:n===2?2:n===3?3:n<=5?4:5;
+/* campaign membership, vocabulary */
+SCENARIOS.forEach(sc => {
+  const c = CAMPAIGNS.find(c => c.ids.includes(sc.id));
+  sc.camp = c ? c.id : "fin";
+  sc.mno = c ? c.ids.indexOf(sc.id) + 1 : 0;
+  if (!sc.vocab && VOCAB_FIN[sc.id]) sc.vocab = VOCAB_FIN[sc.id];
+});
+const scIndex = id => SCENARIOS.findIndex(s => s.id === id);
 const REGN = {1:"Friendly",2:"Informal",3:"Professional",4:"Serious",5:"Deference"};
 
 /* ---- normalise data ---- */
@@ -1649,18 +3092,18 @@ function roomTurn(sc){
 }
 
 /* ---- persistence ---- */
-let store = {best:{}, fs:16, voice:false};
+let store = {best:{}, fs:16, voice:false, free:false, tab:"fin", sel:{}};
 try { const raw = localStorage.getItem(LS_KEY); if (raw) store = Object.assign(store, JSON.parse(raw)); } catch(e){}
 function save(){ try { localStorage.setItem(LS_KEY, JSON.stringify(store)); } catch(e){} }
 document.documentElement.style.setProperty("--fs", store.fs + "px");
 
 /* ---- speech ---- */
-function speak(text, rate){
+function speak(text, rate, lang){
   if (!store.voice || !("speechSynthesis" in window)) return;
   try {
     const plain = text.replace(/<em>.*?<\/em>/g,"").replace(/<[^>]+>/g,"").replace(/\s+/g," ").trim();
     if (!plain) return;
-    const u = new SpeechSynthesisUtterance(plain); u.lang = "en-GB"; u.rate = rate || 0.95;
+    const u = new SpeechSynthesisUtterance(plain); u.lang = lang || "en-GB"; u.rate = rate || 0.95;
     speechSynthesis.speak(u);
   } catch(e){}
 }
@@ -1694,11 +3137,26 @@ const liveHTML = s => esc(s).replace(/\[([^\]]+)\]/g,'<span class="ph">[$1]</spa
 let S = null;       // play state
 let view = "home";
 
+/* ---- campaign progress helpers ---- */
+const hasCard = c => !!(store.cards && store.cards[c.id]);
+const cardsFor = id => CARDS.filter(c => c.to === id);
+const isDone = id => !!store.best[id];
+function isUnlocked(id){
+  if (store.free) return true;
+  const c = CAMPAIGNS.find(c => c.ids.includes(id)); if (!c) return true;
+  const k = c.ids.indexOf(id);
+  return k === 0 || isDone(c.ids[k-1]) || isDone(id);
+}
+const tierOf = id => { const b = store.best[id]; return b ? (b.tier || (b.win ? 4 : 2)) : 0; };
+const starsHTML = n => `<span class="stars" aria-label="${n} of 5 stars">${"★".repeat(n)}<span class="off">${"★".repeat(5-n)}</span></span>`;
+
 function startScenario(i){
   const sc = SCENARIOS[i];
-  S = {i, sc, ti:0, sel:{}, act:null, log:[], gw:50, keyFail:false, hints:0, hinted:{}, phase:"build",
+  const intel = cardsFor(sc.id).filter(hasCard);
+  S = {i, sc, ti:0, sel:{}, act:null, log:[], gw:50 + 5*intel.length, gw0:50 + 5*intel.length, intel, keyFail:false, hints:0, hinted:{}, phase:"build",
        expanded:false, msgs:[], revealR: !!sc.demo, clock: baseClock(sc),
        inRoom:true, roomT: roomTurn(sc), roomRes:null, vu:{reg: !!sc.demo, gw: !!sc.demo}};
+  store.tab = sc.camp; store.sel[sc.camp] = sc.id; save();
   S.msgs.push({type:"pill", text: sc.place});
   S.msgs.push({type:"pill", text: "Goal: " + sc.goal});
   view = "play"; renderRoom(); firstSlot();
@@ -1714,33 +3172,85 @@ function firstSlot(){ const ls = liveSlots(turn()); S.act = ls.length ? ls[0].k 
 /* ---- render: home ---- */
 function renderHome(){
   view = "home";
-  const cards = SCENARIOS.map((sc,i) => {
-    const b = store.best[sc.id];
-    const res = b ? `<span class="bdg ${b.win?'g':'p'}">${b.win?'Goal achieved':'Played'}</span>` : "";
-    return `<div class="card ${sc.demo?'demo':''}">
-      <div class="badges"><span class="bdg lv">${esc(sc.cefr)}</span>${sc.demo?'<span class="bdg">Guided demo</span>':''}${res}</div>
-      <h3>${i}. ${esc(sc.title)}</h3>
-      <div class="who">${esc(PEOPLE[sc.npc].name)}${sc.group?' + team':''} · ${esc(sc.place.split(" · ")[0])}</div>
-      <div class="goal"><b>Goal:</b> ${esc(sc.goal)}</div>
-      <div class="chips">${sc.focus.map(f=>`<span class="chip">${esc(f)}</span>`).join("")}</div>
-      <div class="foot"><span class="best">${b?`Best: ${b.score}%`:'Not played yet'}</span>
-        <button class="btn" data-start="${i}">${b?'Replay':'Start'}</button></div></div>`;
+  const camp = CAMPAIGNS.find(c => c.id === store.tab) || CAMPAIGNS[0];
+  const ids = camp.ids;
+  // default selection: the saved one, else the first unlocked mission not yet done
+  let selId = store.sel[camp.id];
+  if (!selId || !ids.includes(selId)) selId = ids.find(id => isUnlocked(id) && !isDone(id)) || ids[0];
+  const doneN = ids.filter(isDone).length;
+  const starN = ids.reduce((a,id) => a + tierOf(id), 0);
+  const campCards = CARDS.filter(c => ids.includes(c.from));
+  const cardN = campCards.filter(hasCard).length;
+
+  const tabs = CAMPAIGNS.map(c => {
+    const d = c.ids.filter(isDone).length;
+    return `<button class="tab ${c.id===camp.id?'on':''}" role="tab" aria-selected="${c.id===camp.id}" data-tab="${c.id}">
+      <span class="ti" aria-hidden="true">${c.icon}</span><span><b>${esc(c.tab)}</b><small>${esc(c.name)} · ${d}/${c.ids.length}</small></span></button>`;
   }).join("");
-  $("#app").innerHTML = `
-  <section class="hero">
+
+  const nodes = ids.map((id, k) => {
+    const sc = SCENARIOS[scIndex(id)], done = isDone(id), un = isUnlocked(id);
+    const cls = ["qn", done ? "done" : un ? "open" : "locked", id === selId ? "sel" : ""].join(" ");
+    return `<button class="${cls}" data-sel="${id}" aria-label="Mission ${k+1}: ${esc(sc.title)}${un?'':' (locked)'}">
+      <span class="dot">${done ? "✓" : un ? k+1 : "🔒"}</span>
+      <span class="ql">${esc(sc.title)}</span><span class="qs">${done ? "★".repeat(tierOf(id)) : esc(sc.cefr)}</span></button>`;
+  }).join("");
+
+  const sc = SCENARIOS[scIndex(selId)], k = ids.indexOf(selId), un = isUnlocked(selId), b = store.best[selId];
+  const st = STORY[selId] || {};
+  const intel = cardsFor(selId);
+  const earns = CARDS.find(c => c.from === selId);
+  const dossier = `<section class="dossier" aria-live="polite">
     <div>
-      <h2>Mix the sentence. Read the room.</h2>
-      <p>A core thought is the meaning; a sentence is only one delivery of it. English politeness is not vocabulary — it is a set of dials. On this desk every part of the sentence has its own fader.</p>
-      <p>Seven scenarios from the Finance Division, seven exchanges each, from a lunch chat (B1) to reporting a 1.2-million-baht error to your commanding officer (C1). Start with the guided demo.</p>
+      <div class="kick">Mission ${k+1} of ${ids.length} · ${esc(st.day || "")}</div>
+      <h3>${esc(sc.title)}</h3>
+      <div class="badges"><span class="bdg lv">${esc(sc.cefr)}</span>${sc.demo?'<span class="bdg">Guided demo</span>':''}${b?`<span class="bdg ${tierOf(selId)>=4?'g':'p'}">Best ${b.score}%</span>`:''}</div>
+      <p class="story">${esc(st.pre || sc.intro)}</p>
+      <div class="goal"><b>Goal:</b> ${esc(sc.goal)}</div>
     </div>
-    <ol class="steps">
+    <div class="dside">
+      <div class="who"><b>${esc(sc.group || PEOPLE[sc.npc].name)}</b><br><span style="color:var(--ink-dim)">${esc(sc.place.split(" · ")[0])}</span></div>
+      <div class="chips">${sc.focus.map(f=>`<span class="chip">${esc(f)}</span>`).join("")}</div>
+      ${intel.length ? `<div><div class="kick" style="margin-bottom:4px">Intel for this mission</div><div class="ichips">${intel.map(c => hasCard(c)
+          ? `<span class="ichip" title="${esc(c.tip)}">${c.icon} ${esc(c.title)} · +5 goodwill</span>`
+          : `<span class="ichip miss" title="Earn it with 3★ in Mission ${ids.indexOf(c.from)+1}">🔒 ${esc(c.title)}</span>`).join("")}</div></div>` : ""}
+      ${earns && earns.to ? `<div style="font-size:.84rem;color:var(--ink-dim)">3★ or more earns <b style="color:var(--ink)">${earns.icon} ${esc(earns.title)}</b> for Mission ${ids.indexOf(earns.to)+1}.</div>` : ""}
+      <div>${b ? starsHTML(tierOf(selId)) : '<span style="color:var(--ink-dim);font-size:.85rem">Not played yet</span>'}</div>
+      ${un ? `<button class="btn" data-start="${scIndex(selId)}">${b ? "Replay mission" : "Start mission"} ▸</button>`
+           : `<div class="lockmsg">🔒 Complete Mission ${k} to unlock this mission.</div>`}
+    </div></section>`;
+
+  const cards = campCards.map(c => hasCard(c)
+    ? `<div class="icard"><div class="ih"><span class="ii">${c.icon}</span>${esc(c.title)}</div><p>${esc(c.tip)}</p>
+        <div class="iu">${c.to ? `From Mission ${ids.indexOf(c.from)+1} → used in Mission ${ids.indexOf(c.to)+1}` : "Campaign badge"}</div></div>`
+    : `<div class="icard locked"><div class="ih"><span class="ii">🔒</span>${esc(c.title)}</div><p>Earn with 3★ or more in Mission ${ids.indexOf(c.from)+1}.</p>
+        <div class="iu">${c.to ? `Helps in Mission ${ids.indexOf(c.to)+1}` : "Campaign badge"}</div></div>`).join("");
+
+  $("#app").innerHTML = `
+  <div class="tabs" role="tablist" aria-label="Campaigns">${tabs}</div>
+  <section class="cbanner">
+    <div><div class="kick">${esc(camp.kick)}</div><h2>${esc(camp.name)}</h2><p>${esc(camp.prologue)}</p></div>
+    <div class="cstats">
+      <div class="cstat"><div class="v">${doneN}/${ids.length}</div><div class="k">Missions</div></div>
+      <div class="cstat"><div class="v">${starN}</div><div class="k">of ${ids.length*5} ★</div></div>
+      <div class="cstat"><div class="v">${cardN}/${campCards.length}</div><div class="k">Intel</div></div>
+    </div>
+  </section>
+  <nav class="qmap" aria-label="Mission map">${nodes}</nav>
+  ${dossier}
+  <section class="intel"><h3>Intel cards — earned in one mission, used in a later one</h3><div class="icards">${cards}</div></section>
+  <label class="free"><input type="checkbox" id="freeCk" ${store.free?'checked':''}> Free play — unlock every mission (teacher mode)</label>
+  <details class="vocab" style="margin-top:18px"><summary>How the desk works</summary>
+    <ol class="steps" style="margin-top:10px">
       <li><span><b>Read the room.</b> Distance + Power + Stakes gives the register the listener expects.</span></li>
       <li><span><b>Tick a slot</b> under the sentence to put it on the fader.</span></li>
       <li><span><b>Slide the fader</b> up or down. Each setting shows its degree and changes the sentence live.</span></li>
-      <li><span><b>Commit</b> to send it. The other person reacts to what your settings actually say.</span></li>
-    </ol>
-  </section>
-  <div class="grid">${cards}</div>`;
+      <li><span><b>Commit.</b> The other person replies — and reacts to your message with an emoji. Tap 📋 Feedback (or your own message) for the full mix report.</span></li>
+    </ol></details>`;
+  document.querySelectorAll("[data-tab]").forEach(b => b.onclick = () => { store.tab = b.dataset.tab; save(); renderHome(); });
+  document.querySelectorAll("[data-sel]").forEach(b => b.onclick = () => { store.sel[camp.id] = b.dataset.sel; save(); renderHome();
+    const nb = document.querySelector(`[data-sel="${b.dataset.sel}"]`); if (nb) nb.focus({preventScroll:true}); });
+  $("#freeCk").onchange = e => { store.free = e.target.checked; save(); renderHome(); };
 }
 
 /* ---- render: play ---- */
@@ -1748,7 +3258,7 @@ function renderPlay(){
   const sc = S.sc, p = PEOPLE[sc.npc];
   $("#app").innerHTML = `
   <div class="pbar">
-    <button class="btn ghost" id="backBtn">&larr; Scenarios</button>
+    <button class="btn ghost" id="backBtn">&larr; Mission map</button>
     <h2>${esc(sc.title)}</h2><span class="bdg lv">${esc(sc.cefr)}</span>
     <div class="dots" id="dots"></div>
     <button class="btn ghost" id="restartBtn">Restart</button>
@@ -1833,14 +3343,25 @@ function renderChat(){
   body.innerHTML = (hidden ? `<div class="pill">${meIdx.length-2} earlier exchange${meIdx.length-2>1?'s':''} hidden</div>` : "") +
     ms.slice(start).map(m => {
       if (m.type === "pill") return `<div class="pill">${esc(m.text)}</div>`;
-      if (m.type === "me") return `<div class="msg me"><div class="meta"><span>Read</span><span>${m.tm}</span></div><div class="bub">${esc(m.text)}</div></div>`;
+      if (m.type === "me") {
+        const L = S.log[m.ti];
+        const rx = m.rx ? `<span class="rx ${m.pop?'pop':''}" aria-hidden="true">${m.rx}</span>` : "";
+        return `<div class="msg me ${m.rx?'hasrx':''}"><div class="meta"><span>${m.rx?'Read':''}</span><span>${m.tm}</span></div>
+          <div class="bub" data-fb="${m.ti}" role="button" tabindex="0" title="Tap for feedback on this message"
+            aria-label="Your message${L && m.rx ? ', reaction ' + m.rx + ' — ' + esc(L.tagLabel) : ''}. Open feedback.">${esc(m.text)}${rx}</div></div>`;
+      }
       if (m.type === "typing") return `<div class="msg them typing"><div class="av" style="background:${PEOPLE[m.who].col}">${PEOPLE[m.who].init}</div><div class="bub"><i></i><i></i><i></i></div></div>`;
       const p = PEOPLE[m.who];
       return `<div class="msg them"><div class="av" style="background:${p.col}">${p.init}</div><div class="tcol">
-        <div class="nm">${esc(p.chat)}</div><div class="trow"><div class="bub">${m.text}</div><div class="meta"><span>${m.tm}</span></div></div>
-        ${m.imp ? `<span class="imp ${m.impc}">${esc(m.imp)}</span>` : ""}</div></div>`;
+        <div class="nm">${esc(p.chat)}</div><div class="trow"><div class="bub">${m.text}</div><div class="meta"><span>${m.tm}</span></div></div></div></div>`;
     }).join("");
   body.scrollTop = body.scrollHeight;
+  ms.forEach(m => { m.pop = false; });
+  body.querySelectorAll("[data-fb]").forEach(el => {
+    const open = () => { const t = +el.dataset.fb; if (S.log[t] && S.phase !== "reply") openFeedback(t); };
+    el.onclick = open;
+    el.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); } };
+  });
 }
 
 /* ---- desk ---- */
@@ -1852,7 +3373,8 @@ function renderDesk(){
   $("#slots").innerHTML = t.slots.map(s => {
     if (s.fixed != null) return `<div class="sl"><div class="stxt fixed">${esc(s.fixed)}</div><span class="lock">Core · fixed</span></div>`;
     const v = S.sel[s.k], o = v!=null ? s.opts[v] : null;
-    const res = !done ? null : S.inRoom ? (S.roomRes ? {g: s.opts[S.roomRes.sel[s.k]].g} : null) : (S.log[S.ti] ? S.log[S.ti].slots.find(x=>x.k===s.k) : null);
+    // grading colours only on the room read; in the conversation the verdict lives behind the Feedback button
+    const res = !done ? null : S.inRoom ? (S.roomRes ? {g: s.opts[S.roomRes.sel[s.k]].g} : null) : null;
     const cls = ["sl", S.act===s.k && !done ? "act" : "", res ? ({2:"g",1:"o",0:"b"}[res.g]) : ""].join(" ");
     let txt, tc = "stxt";
     if (!o) { txt = "[" + s.lab + "]"; tc += " unset"; }
@@ -1882,7 +3404,7 @@ function renderFader(){
   const s = curSlot(), bay = $("#fbay");
   if (!s || S.phase !== "build") {
     bay.innerHTML = `<div class="on">ON FADER</div><div class="dn">—</div>
-      <div class="fempty">${S.phase!=="build" ? (S.inRoom ? "Room reading locked in. Read the report." : "Sentence committed. Read the mix report.") : "Tick a checkbox under a slot to put it on the fader."}</div>`;
+      <div class="fempty">${S.phase!=="build" ? (S.inRoom ? "Room reading locked in. Read the report." : "Sentence sent. Tap 📋 Feedback for the mix report.") : "Tick a checkbox under a slot to put it on the fader."}</div>`;
     return;
   }
   const d = DIMS[s.dim], n = s.opts.length, v = S.sel[s.k];
@@ -1944,7 +3466,7 @@ function setOpt(s, i, keepFocus){
 function renderLCD(){
   const s = curSlot(), el = $("#lcd");
   if (S.phase !== "build" && S.inRoom) { const r = S.roomRes; el.innerHTML = r ? `<span class="dim">ROOM READ ·</span> <span class="t">${r.right}/3 dials correct · you read R${r.R}, the room is R${r.trueR}</span>` : ""; return; }
-  if (S.phase !== "build") { el.innerHTML = `<span class="dim">MIX COMMITTED ·</span> <span class="t">${esc(S.log[S.ti] ? S.log[S.ti].tagLabel : "")}</span>`; return; }
+  if (S.phase !== "build") { el.innerHTML = `<span class="dim">MIX SENT ·</span> <span class="t">${S.phase === "reply" ? "waiting for a reply…" : "watch the reaction on your message"}</span><br><span class="dim">📋 Feedback opens the full mix report whenever you want it.</span>`; return; }
   if (!s) { el.innerHTML = `<span class="dim">NO CHANNEL SELECTED</span>`; return; }
   const v = S.sel[s.k];
   if (v == null) { el.innerHTML = `<span class="t">${esc(s.lab.toUpperCase())}</span> <span class="dim">· ${esc(DIMS[s.dim].name)} · ${s.opts.length} settings · not set</span><br><span class="dim">Drag the fader, click a setting, or use the arrow keys.</span>`; return; }
@@ -2019,26 +3541,40 @@ function renderCoach(){
       : `<b>CUE ·</b> Score each dial 0–2 from the clues above, then lock in. Register = Distance + Power + Stakes. Power is not the same axis as familiarity.`;
     return;
   }
+  const tip = (S.intel || []).filter(c => c.ex === S.ti).map(c => `<div class="intel-tip">${c.icon} <b>INTEL · ${esc(c.title)}:</b> ${esc(c.tip)}</div>`).join("");
   if (S.sc.demo) {
     el.style.display = "";
-    el.innerHTML = `<b>COACH ·</b> ${t.coach || ""}${s && s.why ? `<div class="why"><b>${esc(s.lab)}:</b> ${esc(s.why)}</div>` : ""}`;
+    el.innerHTML = `${tip}<b>COACH ·</b> ${t.coach || ""}${s && s.why ? `<div class="why"><b>${esc(s.lab)}:</b> ${esc(s.why)}</div>` : ""}`;
   } else {
     el.style.display = "";
     const R = regFromRoom(S.sc.room.d+S.sc.room.p+S.sc.room.s);
-    el.innerHTML = `<b>CUE ·</b> ${S.ti===0 ? esc(S.sc.intro) : `Set every channel, then commit. ${S.revealR?`The room expects <b>R${R} · ${REGN[R]}</b> — but some slots (tense, conditionals, reporting) are about accuracy, not politeness.`:'Work out the register from Distance + Power + Stakes.'}`}`;
+    el.innerHTML = `${tip}<b>CUE ·</b> ${S.ti===0 ? esc(S.sc.intro) : `Set every channel, then commit. ${S.revealR?`The room expects <b>R${R} · ${REGN[R]}</b> — but some slots (tense, conditionals, reporting) are about accuracy, not politeness.`:'Work out the register from Distance + Power + Stakes.'}`}`;
   }
 }
 
 function renderActs(){
   const t = turn(), el = $("#acts");
-  if (S.phase !== "build") { el.innerHTML = ""; return; }
+  if (S.phase !== "build" && S.inRoom) { el.innerHTML = ""; return; }
+  if (S.phase !== "build") {
+    const wait = S.phase !== "after", last = S.ti === S.sc.turns.length - 1;
+    el.innerHTML = `<button class="dbtn fbk" id="fbBtn" ${wait?'disabled':''}>📋 Feedback</button>
+      <button class="dbtn" id="redoBtn" ${wait?'disabled':''}>Try again</button>
+      <span class="need">${wait ? "Waiting for a reply…" : "Feedback is optional — open it any time."}</span>
+      <button class="commit" id="nextBtn" ${wait?'disabled':''}>${last ? "MISSION RESULT ▸" : "NEXT EXCHANGE ▸"}</button>`;
+    $("#fbBtn").onclick = () => openFeedback(S.ti);
+    $("#redoBtn").onclick = redoTurn;
+    $("#nextBtn").onclick = nextTurn;
+    return;
+  }
   const ls = liveSlots(t), missing = ls.filter(s => S.sel[s.k]==null);
-  el.innerHTML = `<button class="dbtn" id="resetBtn">Reset</button>
+  const prevL = !S.inRoom && S.ti > 0 ? S.log[S.ti-1] : null;
+  el.innerHTML = `${prevL ? `<button class="dbtn fbk" id="lastFbBtn" title="Feedback on your last message">📋 Last reply</button>` : ""}<button class="dbtn" id="resetBtn">Reset</button>
     ${S.sc.demo ? `<button class="dbtn" id="showBtn">Show me</button>` : `<button class="dbtn" id="hintBtn" ${!curSlot()?'disabled':''}>Hint</button>`}
     <button class="dbtn" id="nextSlotBtn">Next slot ▸</button>
     <span class="need">${missing.length ? `${missing.length} ${S.inRoom?'dial':'slot'}${missing.length>1?'s':''} to set` : "All channels set"}</span>
     <button class="commit" id="commitBtn" ${missing.length?'disabled':''}>${S.inRoom ? "LOCK IN" : "COMMIT"}</button>`;
   $("#resetBtn").onclick = () => { S.sel = {}; firstSlot(); };
+  if ($("#lastFbBtn")) $("#lastFbBtn").onclick = () => openFeedback(S.ti - 1);
   $("#nextSlotBtn").onclick = () => {
     const i = ls.findIndex(s => s.k === S.act);
     const order = ls.slice(i+1).concat(ls.slice(0, i+1));
@@ -2068,19 +3604,20 @@ function commit(){
   S.log[S.ti] = {ti:S.ti, sentence, model, slots, level, tag, tagLabel, score, key:!!t.key};
   S.phase = "reply";
 
-  S.msgs.push({type:"me", text:sentence, tm:tick()});
+  const me = {type:"me", text:sentence, tm:tick(), ti:S.ti};
+  S.msgs.push(me);
   const replies = buildReply(t, level, tag);
   const who0 = replies[0][0];
   S.msgs.push({type:"typing", who:who0});
-  renderChat(); renderDots(); renderDesk(); renderReport();
+  renderChat(); renderDots(); renderDesk();
   speak(sentence, 0.95);
   setTimeout(() => {
     S.msgs = S.msgs.filter(m => m.type !== "typing");
-    replies.forEach((r,j) => S.msgs.push({type:"them", who:r[0], text:r[1], tm:tick(),
-      imp: j===0 ? "Reads as: " + tagLabel : "", impc: j===0 ? ({good:"g",ok:"o",bad:"b"}[level]) : ""}));
-    renderChat(); renderMeters();
-    replies.forEach(r => speak(r[1], 1));
-    S.phase = "after"; renderReport();
+    me.rx = reactionEmoji(level, tag, !!t.key); me.pop = true;      // LINE-style reaction on your bubble
+    replies.forEach(r => S.msgs.push({type:"them", who:r[0], text:r[1], tm:tick()}));
+    S.phase = "after";
+    renderChat(); renderMeters(); renderLCD(); renderActs();
+    replies.forEach(r => speak(r[1], 1, PEOPLE[r[0]].lang));
   }, 850);
 }
 
@@ -2102,8 +3639,10 @@ function buildReply(t, level, tag){
 
 function renderReport(){
   if (S.inRoom) return roomReport();
-  const L = S.log[S.ti], el = $("#report");
-  if (!L) { el.innerHTML = ""; return; }
+  $("#report").innerHTML = "";          // the mix report now lives behind the Feedback button
+}
+
+function reportHTML(L){
   const ic = {2:["g","✓"],1:["o","~"],0:["b","✗"]};
   const lines = L.slots.map(x => {
     const [c, sym] = ic[x.g];
@@ -2117,13 +3656,33 @@ function renderReport(){
     }
     return `<div class="rline"><span class="ic ${c}">${sym}</span><div><b>${esc(x.lab)}</b> · ${esc(x.o.d)} — ${esc(chosen)}<div class="n">${esc(x.o.n)}</div>${better}</div></div>`;
   }).join("");
-  const last = S.ti === S.sc.turns.length - 1;
-  el.innerHTML = `<div class="report"><h4>Mix report · exchange ${S.ti+1} · ${L.score}%</h4>${lines}
-    <div class="model"><span class="silk">A model mix</span>${esc(L.model)}</div>
-    <div class="acts" style="margin-top:10px"><button class="dbtn" id="redoBtn" ${S.phase!=="after"?'disabled':''}>Try this exchange again</button>
-    <button class="commit" id="nextBtn" ${S.phase!=="after"?'disabled':''}>${last ? "DEBRIEF ▸" : "NEXT EXCHANGE ▸"}</button></div></div>`;
-  const nb = $("#nextBtn"); if (nb) nb.onclick = nextTurn;
-  const rb = $("#redoBtn"); if (rb) rb.onclick = redoTurn;
+  return `<div class="report"><h4>Mix report · exchange ${L.ti+1} · ${L.score}%</h4>${lines}
+    <div class="model"><span class="silk">A model mix</span>${esc(L.model)}</div></div>`;
+}
+
+/* feedback drawer — opened from the 📋 button or by tapping your own message */
+function openFeedback(ti){
+  const L = S && S.log[ti]; if (!L) return;
+  const me = S.msgs.find(m => m.type === "me" && m.ti === ti);
+  const canRedo = ti === S.ti && S.phase === "after";
+  const prev = S.log.slice(0, ti).map((l,i) => l ? i : -1).filter(i => i >= 0).pop();
+  const next = S.log.slice(ti+1).findIndex(l => l);
+  $("#fbBox").innerHTML = `<div class="fbhead"><span class="fbbig" aria-hidden="true">${me && me.rx ? me.rx : "📋"}</span>
+      <div><h2 style="margin:0">Feedback · exchange ${ti+1}${L.key?' ★':''}</h2>
+      <div class="imp ${({good:'g',ok:'o',bad:'b'})[L.level]}" style="display:inline-block;margin-top:3px">Reads as: ${esc(L.tagLabel)}</div></div>
+      <button class="hbtn" style="margin-left:auto" id="fbClose">Close</button></div>
+    <div class="fbsent"><span class="silk">You said</span>${esc(L.sentence)}</div>
+    ${reportHTML(L)}
+    <div class="acts" style="margin-top:12px">
+      ${prev != null ? `<button class="dbtn" data-fbgo="${prev}">◂ Exchange ${prev+1}</button>` : ""}
+      ${next >= 0 ? `<button class="dbtn" data-fbgo="${ti+1+next}">Exchange ${ti+2+next} ▸</button>` : ""}
+      ${canRedo ? `<button class="dbtn" id="fbRedo">Try this exchange again</button>` : ""}
+    </div>`;
+  const m = $("#fbm"); m.classList.add("show");
+  const close = () => { m.classList.remove("show"); const fb = $("#fbBtn"); if (fb) fb.focus({preventScroll:true}); };
+  $("#fbClose").onclick = close; $("#fbClose").focus({preventScroll:true});
+  $("#fbBox").querySelectorAll("[data-fbgo]").forEach(b => b.onclick = () => openFeedback(+b.dataset.fbgo));
+  const rd = $("#fbRedo"); if (rd) rd.onclick = () => { close(); redoTurn(); };
 }
 
 function redoTurn(){
@@ -2151,31 +3710,62 @@ function renderDebrief(){
   const score = Math.round(logs.reduce((a,l)=>a+l.score,0) / logs.length);
   const res = (S.gw >= 70 && !S.keyFail) ? "win" : S.gw >= 45 ? "part" : "fail";
   const big = {win:"GOAL ACHIEVED", part:"PARTLY ACHIEVED", fail:"GOAL NOT ACHIEVED"}[res];
-  const outcome = OUTCOME[sc.id][{win:0,part:1,fail:2}[res]];
+  // five outcome tiers: 5 outstanding · 4 achieved · 3 partly · 2 not achieved · 1 disaster
+  const rating = (score + S.gw) / 2;
+  const tier = res === "win" ? (score >= 90 && S.gw >= 85 && !S.hints ? 5 : 4) : res === "part" ? 3 : (rating >= 40 ? 2 : 1);
+  const pic = (PICS[sc.id] || [])[5 - tier] || ["", (OUTCOME[sc.id] || [])[{win:0,part:1,fail:2}[res]] || ""];
   const prev = store.best[sc.id];
-  if (!prev || score > prev.score || (res==="win" && !prev.win)) store.best[sc.id] = {score: Math.max(score, prev?prev.score:0), win: res==="win" || (prev && prev.win)};
+  const prevTier = tierOf(sc.id);
+  store.best[sc.id] = {score: Math.max(score, prev ? prev.score : 0), win: res==="win" || !!(prev && prev.win), tier: Math.max(tier, prevTier)};
+  // intel card
+  store.cards = store.cards || {};
+  const card = CARDS.find(c => c.from === sc.id);
+  const newCard = card && tier >= 3 && !store.cards[card.id];
+  if (card && tier >= 3) store.cards[card.id] = true;
   save();
+  const camp = CAMPAIGNS.find(c => c.id === sc.camp), k = camp.ids.indexOf(sc.id);
+  const nextId = camp.ids[k+1], nextSc = nextId ? SCENARIOS[scIndex(nextId)] : null;
 
-  // what went well: strongest good choices, one per dimension, prefer non-register dims
+  // what went well: strongest good choices, one per dimension
   const goods = [], seenDim = {};
   logs.forEach(l => l.slots.forEach(x => { if (x.g===2 && !seenDim[x.dim]) { seenDim[x.dim] = 1; goods.push({l, x}); } }));
   const improve = [];
   logs.forEach(l => l.slots.forEach(x => { if (x.g<2) improve.push({l, x}); }));
-  // per-dimension bars
   const dim = {};
   logs.forEach(l => l.slots.forEach(x => { const d = dim[x.dim] || (dim[x.dim] = {n:0, s:0}); d.n++; d.s += [0,0.5,1][x.g]; }));
   const bars = Object.keys(dim).map(k => { const p = Math.round(dim[k].s / dim[k].n * 100);
     return `<div class="bar"><span>${esc(DIMS[k].name)}</span><span class="tr"><i style="width:${p}%"></i></span><span class="v">${p}%</span></div>`; }).join("");
   const worstDims = Object.keys(dim).map(k => [k, dim[k].s/dim[k].n]).filter(a => a[1] < 1).sort((a,b)=>a[1]-b[1]).slice(0,2).map(a => DIMS[a[0]].name);
-  const nextFocus = worstDims.length ? `Next time, give extra attention to <b>${worstDims.join("</b> and <b>")}</b>.` : "Every channel was on target. Try the next level up.";
+  const nextFocus = worstDims.length ? `Next time, give extra attention to <b>${worstDims.join("</b> and <b>")}</b>.` : "Every channel was on target. Try the next mission.";
+  const gwTxt = `${Math.round(S.gw)}/100`;
 
   $("#app").innerHTML = `
-   <div class="pbar"><button class="btn ghost" id="backBtn">&larr; Scenarios</button><h2>Debrief · ${esc(sc.title)}</h2><span class="bdg lv">${esc(sc.cefr)}</span></div>
-   <div class="deb">
+   <div class="pbar"><button class="btn ghost" id="backBtn">&larr; Mission map</button><h2>Mission ${sc.mno} result · ${esc(sc.title)}</h2><span class="bdg lv">${esc(sc.cefr)}</span></div>
+   <div class="outc">
+     <figure class="opic t${tier}">
+       <div class="oart" id="oart">${outcomeArt(sc, tier, pic[0])}</div>
+       <figcaption>${esc(pic[1])}</figcaption>
+     </figure>
+     <div class="okpi">
+       <div class="kpi big"><span class="k">Result</span><span class="v">${starsHTML(tier)}</span></div>
+       <div class="kpi"><span class="k">Goal</span><span class="v ${res}" style="font-size:1rem">${big}</span></div>
+       <div class="kpi"><span class="k">Mix accuracy</span><span class="v">${score}%</span></div>
+       <div class="kpi"><span class="k">Goodwill</span><span class="v">${gwTxt}</span></div>
+       ${newCard ? `<div class="unlock">${card.icon} <b>Intel card earned: ${esc(card.title)}</b><br>${card.to ? `It will help you in Mission ${camp.ids.indexOf(card.to)+1}.` : esc(card.tip)}</div>`
+         : card && card.to && tier < 3 ? `<div class="unlock" style="opacity:.8">🔒 3★ or more earns the intel card <b>${esc(card.title)}</b> for Mission ${camp.ids.indexOf(card.to)+1}.</div>` : ""}
+       ${nextSc && !store.free ? `<div class="unlock">🔓 Mission ${k+2} unlocked: <b>${esc(nextSc.title)}</b></div>` : ""}
+       <div class="oacts">
+         <button class="btn ghost" id="fullBtn" aria-expanded="false" aria-controls="fullDeb">Full debrief ▾</button>
+         <button class="btn ghost" id="replayBtn">Replay</button>
+         ${nextSc ? `<button class="btn" id="nextScBtn">Next mission ▸</button>` : `<button class="btn" id="mapBtn">Campaign complete ▸</button>`}
+       </div>
+     </div>
+   </div>
+   <div class="deb fulldeb" id="fullDeb" hidden>
      <div class="verdict ${res}">
        <div class="big">${big}</div>
-       <div><b>Goal:</b> ${esc(sc.goal)}<br><span style="color:var(--ink-dim)">${esc(outcome)}</span>
-         <br><span style="color:var(--ink-dim);font-size:.85rem">${S.roomRes ? `Room read ${S.roomRes.right}/3 dials (R${S.roomRes.R} vs R${S.roomRes.trueR}) · ` : ""}Goodwill ${Math.round(S.gw)}/100${S.keyFail?' · a key moment went wrong':''}${S.hints?` · ${S.hints} hint${S.hints>1?'s':''} used`:''}</span></div>
+       <div><b>Goal:</b> ${esc(sc.goal)}<br><span style="color:var(--ink-dim)">${esc(pic[1])}</span>
+         <br><span style="color:var(--ink-dim);font-size:.85rem">${S.roomRes ? `Room read ${S.roomRes.right}/3 dials (R${S.roomRes.R} vs R${S.roomRes.trueR}) · ` : ""}Goodwill ${gwTxt}${S.gw0>50?` (started at ${S.gw0} with intel)`:''}${S.keyFail?' · a key moment went wrong':''}${S.hints?` · ${S.hints} hint${S.hints>1?'s':''} used`:''}</span></div>
        <div class="score">${score}%<small>mix accuracy</small></div>
      </div>
      <div class="two">
@@ -2189,18 +3779,107 @@ function renderDebrief(){
      <div class="two">
        <div class="panel"><h3>Channel accuracy</h3><div class="bars">${bars}</div><p style="font-size:.85rem;color:var(--ink-dim);margin:.6rem 0 0">${nextFocus}</p></div>
        <div class="panel"><h3>The method in one line</h3><p style="margin:0;font-size:.9rem">One core thought. One register, read from the room. Every dial in concord. Hedge the cause, never the checked number; put the point first; let only positive affect climb above register 3.</p>
-       <div class="acts" style="margin-top:12px"><button class="btn" id="replayBtn">Replay scenario</button>
-       ${S.i < SCENARIOS.length-1 ? `<button class="btn ghost" id="nextScBtn">Next: ${esc(SCENARIOS[S.i+1].title)} ▸</button>` : ""}</div></div>
+       ${sc.vocab ? `<h3 style="margin-top:12px">Key vocabulary</h3><p style="margin:0;font-size:.86rem;color:var(--ink-dim)">${sc.vocab.map(v => `<b style="color:var(--ink)">${esc(v[0])}</b> — ${esc(v[1])}`).join(" · ")}</p>` : ""}</div>
      </div>
      <div class="panel"><h3>Transcript — your mix vs a model mix</h3>
        <table class="tx"><tr><th>#</th><th>Your sentence</th><th>Model</th><th>Read as</th></tr>
-       ${logs.map(l => `<tr><td>${l.ti+1}${l.key?'★':''}</td><td class="you">${esc(l.sentence)}</td><td class="mdl">${esc(l.model)}</td><td><span class="mk ${({good:'g',ok:'o',bad:'b'})[l.level]}">${esc(l.tagLabel)}</span></td></tr>`).join("")}
+       ${logs.map(l => { const me = S.msgs.find(m => m.type==="me" && m.ti===l.ti);
+          return `<tr><td>${l.ti+1}${l.key?'★':''}</td><td class="you">${esc(l.sentence)} ${me && me.rx ? me.rx : ""}</td><td class="mdl">${esc(l.model)}</td><td><span class="mk ${({good:'g',ok:'o',bad:'b'})[l.level]}">${esc(l.tagLabel)}</span></td></tr>`; }).join("")}
        </table><p style="font-size:.78rem;color:var(--ink-dim)">★ = key moment for the goal. The model is one good mix; other settings marked ✓ are also correct.</p></div>
    </div>`;
   $("#backBtn").onclick = renderHome;
   $("#replayBtn").onclick = () => startScenario(S.i);
-  const nx = $("#nextScBtn"); if (nx) nx.onclick = () => startScenario(S.i+1);
+  const fb = $("#fullBtn"), fd = $("#fullDeb");
+  fb.onclick = () => { fd.hidden = !fd.hidden; fb.setAttribute("aria-expanded", !fd.hidden); fb.textContent = fd.hidden ? "Full debrief ▾" : "Hide full debrief ▴";
+    if (!fd.hidden) fd.scrollIntoView({behavior:"smooth", block:"start"}); };
+  const nx = $("#nextScBtn"); if (nx) nx.onclick = () => startScenario(scIndex(nextId));
+  const mb = $("#mapBtn"); if (mb) mb.onclick = renderHome;
+  if (nextId) { store.sel[camp.id] = nextId; save(); }
+  loadOutcomeImage(sc, tier);
   window.scrollTo({top:0, behavior:"smooth"});
+}
+
+/* drop-in outcome pictures: img/outcome-<id>-<tier>.png (5 = best … 1 = worst) */
+function loadOutcomeImage(sc, tier){
+  const exts = ["png","PNG","jpg","JPG","jpeg","JPEG","webp"];
+  const tryNext = i => {
+    if (i >= exts.length) return;
+    const im = new Image();
+    im.onload = () => { const a = $("#oart"); if (a) { a.innerHTML = ""; im.alt = (PICS[sc.id]||[])[5-tier] ? PICS[sc.id][5-tier][1] : sc.title; a.appendChild(im); } };
+    im.onerror = () => tryNext(i + 1);
+    im.src = SCENE_IMG_DIR + "outcome-" + sc.id + "-" + tier + "." + exts[i];
+  };
+  try { tryNext(0); } catch(e){}
+}
+
+/* built-in outcome illustration: the scene, re-lit by the result, the listener's reaction, a stamp and stars */
+function outcomeArt(sc, tier, stamp){
+  const W = 1200, H = 675;
+  const cast = (CAST[sc.id] || [sc.npc]).map(id => PEOPLE[id]);
+  const mood = {5:{tint:"#D4AF37", op:.18, stamp:"#f5d27a", emo:"🤩"}, 4:{tint:"#4ade80", op:.14, stamp:"#4ade80", emo:"😊"},
+                3:{tint:"#fbbf24", op:.2, stamp:"#fbbf24", emo:"😐"}, 2:{tint:"#1b2a44", op:.45, stamp:"#f87171", emo:"😕"},
+                1:{tint:"#2a0d12", op:.55, stamp:"#ef4444", emo:"😠"}}[tier];
+  const bg = sc._img
+    ? `<image href="${sc._img}" x="0" y="0" width="${W}" height="${H}" preserveAspectRatio="xMidYMid slice" filter="url(#ob)"/>`
+    : sceneArt(sc, `x="0" y="0" width="${W}" height="${H}"`);
+  // a face whose mouth and brows follow the tier
+  const face = (cx, cy, r, p, main) => {
+    const mouth = {5:`<path d="M${cx-r*.42} ${cy+r*.18} Q${cx} ${cy+r*.78} ${cx+r*.42} ${cy+r*.18} Z" fill="#3b1111"/><path d="M${cx-r*.28} ${cy+r*.42} Q${cx} ${cy+r*.62} ${cx+r*.28} ${cy+r*.42}" fill="#e76f6f"/>`,
+                   4:`<path d="M${cx-r*.38} ${cy+r*.25} Q${cx} ${cy+r*.62} ${cx+r*.38} ${cy+r*.25}" fill="none" stroke="#1d1d1d" stroke-width="${r*.09}" stroke-linecap="round"/>`,
+                   3:`<path d="M${cx-r*.3} ${cy+r*.38} L${cx+r*.3} ${cy+r*.34}" stroke="#1d1d1d" stroke-width="${r*.08}" stroke-linecap="round"/>`,
+                   2:`<path d="M${cx-r*.32} ${cy+r*.48} Q${cx} ${cy+r*.26} ${cx+r*.32} ${cy+r*.48}" fill="none" stroke="#1d1d1d" stroke-width="${r*.08}" stroke-linecap="round"/>`,
+                   1:`<path d="M${cx-r*.36} ${cy+r*.55} Q${cx} ${cy+r*.18} ${cx+r*.36} ${cy+r*.55}" fill="none" stroke="#1d1d1d" stroke-width="${r*.1}" stroke-linecap="round"/>`}[tier];
+    const bt = {5:-.08, 4:-.04, 3:0, 2:.08, 1:.2}[tier];      // brow tilt
+    const brow = s => `<line x1="${cx+s*r*.5}" y1="${cy-r*.36 - s*bt*r*0}" x2="${cx+s*r*.16}" y2="${cy-r*.36 + bt*r}" stroke="#1d1d1d" stroke-width="${r*.08}" stroke-linecap="round"/>`;
+    const eyes = tier === 5
+      ? `<path d="M${cx-r*.42} ${cy-r*.08} Q${cx-r*.3} ${cy-r*.26} ${cx-r*.18} ${cy-r*.08}" fill="none" stroke="#1d1d1d" stroke-width="${r*.08}" stroke-linecap="round"/><path d="M${cx+r*.18} ${cy-r*.08} Q${cx+r*.3} ${cy-r*.26} ${cx+r*.42} ${cy-r*.08}" fill="none" stroke="#1d1d1d" stroke-width="${r*.08}" stroke-linecap="round"/>`
+      : `<ellipse cx="${cx-r*.3}" cy="${cy-r*.1}" rx="${r*.08}" ry="${r*.11}" fill="#1d1d1d"/><ellipse cx="${cx+r*.3}" cy="${cy-r*.1}" rx="${r*.08}" ry="${r*.11}" fill="#1d1d1d"/>`;
+    return `<g>
+      <circle cx="${cx}" cy="${cy+r*1.55}" r="${r*1.25}" fill="${p.col}" opacity=".95"/>
+      <circle cx="${cx}" cy="${cy}" r="${r*1.08}" fill="${p.col}"/>
+      <circle cx="${cx}" cy="${cy}" r="${r*.92}" fill="#f1d3b3" stroke="#fff" stroke-width="${r*.06}"/>
+      ${eyes}${brow(-1)}${brow(1)}${mouth}
+      ${tier >= 4 ? `<ellipse cx="${cx-r*.52}" cy="${cy+r*.2}" rx="${r*.14}" ry="${r*.08}" fill="#f08a8a" opacity=".55"/><ellipse cx="${cx+r*.52}" cy="${cy+r*.2}" rx="${r*.14}" ry="${r*.08}" fill="#f08a8a" opacity=".55"/>` : ""}
+      <rect x="${cx-r*.9}" y="${cy+r*1.2}" width="${r*1.8}" height="${r*.42}" rx="${r*.12}" fill="rgba(5,12,24,.78)"/>
+      <text x="${cx}" y="${cy+r*1.5}" fill="#fff" font-family="Arial" font-size="${main?22:17}" font-weight="700" text-anchor="middle">${esc(p.chat)}</text>
+    </g>`;
+  };
+  let people = "";
+  if (cast.length === 1) people = face(760, 300, 118, cast[0], true);
+  else people = face(680, 300, 108, cast[0], true) + face(930, 330, 84, cast[1], false);
+  // reaction bubble
+  const bx = cast.length === 1 ? 900 : 800, by = 120;
+  const bubble = `<g><ellipse cx="${bx}" cy="${by}" rx="62" ry="54" fill="#fff" stroke="#dfe5ec" stroke-width="3"/>
+    <path d="M${bx-34} ${by+40} L${bx-58} ${by+78} L${bx-8} ${by+50} Z" fill="#fff"/>
+    <text x="${bx}" y="${by+22}" font-size="60" text-anchor="middle">${mood.emo}</text></g>`;
+  // extras
+  let fx = "";
+  if (tier === 5) { for (let i = 0; i < 46; i++) { const x = (i*263)%W, y = 30 + (i*97)%(H*0.62), c = ["#D4AF37","#4ade80","#6fe3ff","#f87171","#ffffff"][i%5];
+      fx += `<rect x="${x}" y="${y}" width="12" height="7" fill="${c}" opacity=".9" transform="rotate(${(i*47)%180} ${x} ${y})"/>`; } }
+  if (tier === 4) { for (let i = 0; i < 9; i++) { const x = 520 + (i*151)%560, y = 70 + (i*83)%330;
+      fx += `<path d="M${x} ${y-14} L${x+4} ${y-4} L${x+14} ${y} L${x+4} ${y+4} L${x} ${y+14} L${x-4} ${y+4} L${x-14} ${y} L${x-4} ${y-4} Z" fill="#fff6c9" opacity=".85"/>`; } }
+  if (tier <= 2) { const cx0 = cast.length === 1 ? 760 : 700;
+      fx += `<g opacity="${tier===1?0.95:0.75}"><ellipse cx="${cx0-60}" cy="110" rx="80" ry="44" fill="#5b6675"/><ellipse cx="${cx0+30}" cy="92" rx="95" ry="56" fill="#6b7686"/><ellipse cx="${cx0+110}" cy="118" rx="70" ry="40" fill="#5b6675"/></g>`;
+      if (tier === 1) for (let i = 0; i < 14; i++) fx += `<line x1="${cx0-110+i*18}" y1="${160+(i%3)*10}" x2="${cx0-122+i*18}" y2="${200+(i%3)*10}" stroke="#9fc3e6" stroke-width="3" stroke-linecap="round"/>`; }
+  // stars
+  let stars = "";
+  for (let i = 0; i < 5; i++) { const x = 70 + i*50, on = i < tier;
+    stars += `<path transform="translate(${x} 58) scale(1.35)" d="M0 -16 L4.7 -5.2 L16 -4.9 L7.2 2.4 L10 13.7 L0 7.4 L-10 13.7 L-7.2 2.4 L-16 -4.9 L-4.7 -5.2 Z" fill="${on?'#D4AF37':'rgba(255,255,255,.18)'}" stroke="${on?'#8f7626':'rgba(255,255,255,.35)'}" stroke-width="1.2"/>`; }
+  // stamp
+  const st = (stamp || "").toUpperCase(), sw = Math.max(260, st.length * 27 + 60);
+  const stampG = st ? `<g transform="rotate(-8 ${60 + sw/2} 470)" opacity=".95">
+      <rect x="60" y="425" width="${sw}" height="92" rx="10" fill="rgba(5,12,24,.55)" stroke="${mood.stamp}" stroke-width="7"/>
+      <rect x="72" y="437" width="${sw-24}" height="68" rx="6" fill="none" stroke="${mood.stamp}" stroke-width="2" stroke-dasharray="6 5"/>
+      <text x="${60 + sw/2}" y="487" fill="${mood.stamp}" font-family="Arial Black,Arial" font-weight="900" font-size="40" letter-spacing="3" text-anchor="middle">${esc(st)}</text></g>` : "";
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${esc(tier)} star outcome: ${esc(stamp || "")}">
+    <defs><filter id="ob"><feGaussianBlur stdDeviation="6"/></filter>
+      <radialGradient id="ovig" cx=".62" cy=".45" r=".8"><stop offset=".35" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".7"/></radialGradient></defs>
+    ${bg}
+    <rect width="${W}" height="${H}" fill="${mood.tint}" opacity="${mood.op}"/>
+    <rect width="${W}" height="${H}" fill="url(#ovig)"/>
+    ${fx}${people}${bubble}${stars}${stampG}
+    <text x="62" y="${H-30}" fill="rgba(255,255,255,.75)" font-family="Arial" font-size="20" letter-spacing="4">MISSION ${sc.mno} · ${esc(sc.title.toUpperCase())}</text>
+  </svg>`;
 }
 
 function roomImproveHTML(){
@@ -2229,7 +3908,18 @@ function renderRef(){
    <tr><td>Conditionals</td><td>Zero: rules (If it doesn't match, we don't pay) · First: real future (If it doesn't arrive, it'll miss the run) · Second: hypothetical / tentative (If we switched…, we would…) · Third: past unreal (If we had had…, it would have flagged…) · Formal inversion: Should it arrive… / Had it been… / Were we to… · Never 'will/would' in the if-clause.</td></tr>
    <tr><td>Reported speech</td><td>said (that)… · told + PERSON (that)… · backshift: will → would, must → had to, did → had done. Reporting verbs: confirmed, mentioned, added.</td></tr>
    <tr><td>Nominalisation</td><td>Nouns make writing dense and formal (Decision: … / a hold on payments). Good in minutes and reports; one noun chain too many and nobody can follow it.</td></tr>
-   <tr><td>Concord</td><td>One core thought. One register. Every dial in agreement.</td></tr></table>`;
+   <tr><td>Passive voice</td><td>be + past participle when the 'doer' isn't the point: The payment <b>was returned</b>. The claim <b>will be approved</b>. Money doesn't 'convert' itself — it <b>is converted</b>.</td></tr>
+   <tr><td>Indirect questions</td><td>Could you explain what the difference <b>is</b>? (not 'what is the difference') · Do you know when it <b>arrived</b>?</td></tr>
+   <tr><td>Obligation</td><td>have to / must = required · <b>don't have to</b> = not necessary · <b>mustn't</b> = forbidden.</td></tr>
+   <tr><td>Used to / would</td><td>Past habits that have stopped: We <b>used to</b> study until midnight. 'Be used to' + -ing = accustomed to.</td></tr>
+   <tr><td>Time clauses</td><td>No 'will' after once / when / as soon as / next time: Once you <b>submit</b> it, it'll be approved.</td></tr>
+   <tr><td>Question tags</td><td>Copy the auxiliary, flip the polarity: It was sent on the 3rd, <b>wasn't it</b>?</td></tr>
+   <tr><td>Figures</td><td>rose FROM 61% TO 74% · rose BY 13 percentage points · due to + NOUN / because + CLAUSE.</td></tr>
+   <tr><td>Cleft & inversion</td><td><b>What</b> we have introduced <b>is</b> a second check. · <b>Not only have we</b>… · <b>Should you require</b>… · <b>Had the name been</b> entered in full…</td></tr>
+   <tr><td>Names abroad</td><td>Western officers: rank + SURNAME (Colonel Hayes). Chinese names: family name first (Major TAN Wei Ming). Only use a first name when invited.</td></tr>
+   <tr><td>Concord</td><td>One core thought. One register. Every dial in agreement.</td></tr></table>
+  ${CAMPAIGNS.map(c => `<h3>Glossary · ${esc(c.name)}</h3><table>${c.ids.flatMap(id => (SCENARIOS[scIndex(id)].vocab || [])).filter((v,i,a) => a.findIndex(w => w[0]===v[0]) === i)
+      .map(v => `<tr><td>${esc(v[0])}</td><td>${esc(v[1])}</td></tr>`).join("")}</table>`).join("")}`;
   $("#refClose").onclick = () => $("#ref").classList.remove("show");
 }
 
@@ -2237,7 +3927,8 @@ function renderRef(){
 $("#homeBtn").onclick = () => { if (view !== "play" || confirmLeave()) renderHome(); };
 $("#refBtn").onclick = () => { renderRef(); $("#ref").classList.add("show"); };
 $("#ref").onclick = e => { if (e.target.id === "ref") $("#ref").classList.remove("show"); };
-document.addEventListener("keydown", e => { if (e.key === "Escape") $("#ref").classList.remove("show"); });
+$("#fbm").onclick = e => { if (e.target.id === "fbm") $("#fbm").classList.remove("show"); };
+document.addEventListener("keydown", e => { if (e.key === "Escape") { $("#ref").classList.remove("show"); $("#fbm").classList.remove("show"); } });
 const vb = $("#voiceBtn");
 const setVoiceBtn = () => { vb.textContent = "Voice: " + (store.voice ? "on" : "off"); vb.classList.toggle("on", store.voice); };
 vb.onclick = () => { store.voice = !store.voice; if (!store.voice && "speechSynthesis" in window) speechSynthesis.cancel(); save(); setVoiceBtn(); };
@@ -2258,7 +3949,7 @@ function renderRoom(){
   const r = sc.room;
   $("#app").innerHTML = `
   <div class="pbar">
-    <button class="btn ghost" id="backBtn">&larr; Scenarios</button>
+    <button class="btn ghost" id="backBtn">&larr; Mission map</button>
     <h2>${esc(sc.title)}</h2><span class="bdg lv">${esc(sc.cefr)}</span><span class="bdg">Step 1 · Read the room</span>
     <button class="btn ghost" id="restartBtn" style="margin-left:auto">Restart</button>
   </div>
@@ -2268,6 +3959,9 @@ function renderRoom(){
     <div class="scap"><span class="loc">${esc(parts[0])}</span><span class="tm">${esc(parts.slice(1).join(" · "))}</span></div>
   </section>
   <section class="rtext">
+    ${STORY[sc.id] ? `<div class="mbrief"><span class="kick">Mission ${sc.mno} of ${CAMPAIGNS.find(c=>c.id===sc.camp).ids.length} · ${esc(CAMPAIGNS.find(c=>c.id===sc.camp).name)} · ${esc(STORY[sc.id].day)}</span>
+      <p>${esc(STORY[sc.id].pre)}</p>
+      ${S.intel.length ? `<div class="ichips">${S.intel.map(c => `<span class="ichip">${c.icon} Intel: ${esc(c.title)} · +5 goodwill · appears at exchange ${c.ex+1}</span>`).join("")}</div>` : ""}</div>` : ""}
     <p class="narr">${esc(sd.text)}</p>
     <div class="whois"><b>${esc(sd.who || p.name)}</b> — ${esc(sd.role || p.role)}</div>
     <div class="goalbig"><span>YOUR GOAL</span>${esc(sc.goal)}</div>
@@ -2276,6 +3970,7 @@ function renderRoom(){
       <div class="clue"><b>POWER · clue</b>${esc(r.pw)}</div>
       <div class="clue"><b>STAKES · clue</b>${esc(r.sw)}</div>
     </div>
+    ${sc.vocab ? `<details class="vocab"><summary>Key vocabulary · ${sc.vocab.length} words</summary><dl>${sc.vocab.map(v => `<dt>${esc(v[0])}</dt><dd>${esc(v[1])}</dd>`).join("")}</dl></details>` : ""}
   </section>
   ${deskHTML("Room Reader", "Room reading — tick a dial to put it on the fader")}`;
   $("#backBtn").onclick = () => { if (confirmLeave()) renderHome(); };
@@ -2341,7 +4036,7 @@ function enterRoom(){
 }
 
 /* ---------- built-in scene illustrations (fallback when no slide image) ---------- */
-function sceneArt(sc){
+function sceneArt(sc, attrs){
   const sd = SCENES[sc.id] || {art:"office", clock:[10,0]};
   const W = 1200, H = 440;
   const sil = "#07101d", rim = "#D4AF37";
@@ -2433,8 +4128,69 @@ function sceneArt(sc){
         + person(760, 400, 1.05, {bun:"r", cup:true}) + `<rect x="752" y="245" width="16" height="22" fill="#6fe3ff" opacity=".8"/>`
         + person(420, H-30, 1.2, {bun:"l", op:.95}) + floor("#0a0c1a");
       break;
+    case "restaurant":
+      g = wall("#3b2a1c","#231811") + lamp(260) + lamp(620) + lamp(980)
+        + `<rect x="420" y="60" width="640" height="210" fill="#0b1b33" stroke="#6b4a2a" stroke-width="8"/><rect x="420" y="200" width="640" height="70" fill="#0d2a44"/>`
+        + [0,1,2,3,4,5,6,7].map(i => `<circle cx="${450+i*80}" cy="${214+(i%3)*14}" r="4" fill="#f5d27a"/><ellipse cx="${450+i*80}" cy="${236+(i%3)*14}" rx="3" ry="10" fill="#f5d27a" opacity=".35"/>`).join("")
+        + `<rect x="680" y="208" width="120" height="16" rx="6" fill="#1e3550"/><rect x="700" y="196" width="60" height="12" fill="#c9a45a"/>`
+        + person(820, 360, 1, {bun:"r"}) + `<rect x="600" y="340" width="420" height="14" fill="#6b4a2a"/><rect x="800" y="354" width="16" height="${H-394}" fill="#4a3522"/>`
+        + `<ellipse cx="700" cy="336" rx="40" ry="9" fill="#e9ecef"/><ellipse cx="700" cy="332" rx="26" ry="6" fill="#c98a3a"/><ellipse cx="930" cy="336" rx="40" ry="9" fill="#e9ecef"/><rect x="760" y="316" width="10" height="22" fill="#e9ecef" opacity=".7"/>`
+        + person(250, H-40, 1.2, {bun:"l", op:.95}) + floor("#1d140c");
+      break;
+    case "frontdesk":
+      g = wall("#21374f","#152538") + clock(1080, 90, 26) + windowCity(60, 60, 260, 170)
+        + `<rect x="420" y="70" width="330" height="60" fill="#0a1422" stroke="${rim}" stroke-width="3"/><text x="585" y="110" fill="${rim}" font-family="Arial" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="3">FINANCE · RECEPTION</text>`
+        + `<rect x="820" y="150" width="170" height="120" fill="#e9ecef"/>` + [0,1,2,3].map(i => `<rect x="${836+(i%2)*80}" y="${164+Math.floor(i/2)*50}" width="66" height="40" fill="${["#f5d27a","#9fd3ff","#f8b4b4","#b9f0c4"][i]}"/>`).join("")
+        + person(700, 330, 1.05, {}) + `<rect x="740" y="210" width="44" height="58" fill="#c9a45a" stroke="#6b4a2a" transform="rotate(8 762 239)"/>`
+        + `<rect x="360" y="300" width="560" height="22" fill="#3a2a1c"/><rect x="370" y="322" width="540" height="${H-362}" fill="#2a1e14"/>` + papers(440, 300)
+        + person(220, H-40, 1.2, {bun:"l", op:.95}) + floor();
+      break;
+    case "classroom":
+      g = wall("#1f3350","#13233a") + clock(1110, 70, 24)
+        + `<rect x="300" y="40" width="600" height="220" fill="#eef2f6" stroke="#8d96a0" stroke-width="6"/><text x="330" y="90" fill="#1a3a6b" font-family="Arial" font-size="30" font-weight="700">IPSAS — Accrual vs Cash</text>`
+        + `<line x1="600" y1="110" x2="600" y2="240" stroke="#8d96a0" stroke-width="2"/><text x="330" y="140" fill="#333" font-family="Arial" font-size="20">Cash: when money moves</text><text x="620" y="140" fill="#333" font-family="Arial" font-size="20">Accrual: when it happens</text>`
+        + `<text x="330" y="180" fill="#c0271a" font-family="Arial" font-size="18">accrued expense?</text><text x="620" y="180" fill="#c0271a" font-family="Arial" font-size="18">prepayment?</text>`
+        + person(980, 330, 1, {bun:"r"})
+        + [0,1,2,3,4].map(i => person(170 + i*190, H-10, .72, {op:.55, bun: i%2 ? "r" : ""})).join("")
+        + person(1050, H-10, .8, {op:.8}) + floor();
+      break;
+    case "phone":
+      g = wall("#1a2e4a","#0f1f33") + windowCity(60, 50, 280, 170)
+        + clock(980, 80, 26) + `<text x="980" y="140" fill="#9fd3ff" font-family="Arial" font-size="15" text-anchor="middle">BKK 14:30</text>`
+        + `<circle cx="1090" cy="80" r="26" fill="#e9ecef" stroke="#8d96a0" stroke-width="3"/><line x1="1090" y1="80" x2="1090" y2="60" stroke="#111" stroke-width="2.5"/><line x1="1090" y1="80" x2="1102" y2="88" stroke="#111" stroke-width="4"/><text x="1090" y="140" fill="#9fd3ff" font-family="Arial" font-size="15" text-anchor="middle">SGP 15:30</text>`
+        + `<rect x="420" y="90" width="420" height="250" rx="8" fill="#111" stroke="#444" stroke-width="4"/><rect x="436" y="106" width="388" height="218" fill="#f4f6f9"/>`
+        + `<rect x="436" y="106" width="388" height="36" fill="#c0271a"/><text x="452" y="131" fill="#fff" font-family="Arial" font-size="18" font-weight="700">PAYMENT RETURNED</text>`
+        + `<text x="452" y="176" fill="#333" font-family="Arial" font-size="17">Ref  TT-4471-09</text><text x="452" y="206" fill="#333" font-family="Arial" font-size="17">Amount  USD 48,600.00</text><text x="452" y="236" fill="#c0271a" font-family="Arial" font-size="15">Beneficiary name does not</text><text x="452" y="258" fill="#c0271a" font-family="Arial" font-size="15">match account</text>`
+        + `<rect x="615" y="340" width="30" height="40" fill="#333"/>` + desk(250, 380, 760)
+        + `<rect x="900" y="352" width="70" height="28" rx="6" fill="#222"/><path d="M890 350 q45 -40 90 0" stroke="#222" stroke-width="12" fill="none" stroke-linecap="round"/>`
+        + person(210, H-40, 1.2, {bun:"l", op:.95}) + floor();
+      break;
+    case "boardroom":
+      g = wall("#1d3150","#12213a") + clock(1110, 70, 24)
+        + `<rect x="380" y="40" width="460" height="230" fill="#0a1422" stroke="#34506f" stroke-width="6"/><text x="410" y="80" fill="${rim}" font-family="Arial" font-size="22" font-weight="700" letter-spacing="2">Q3 BUDGET EXECUTION</text>`
+        + [["Q1",38],["Q2",61],["Q3",74]].map((b,i) => `<rect x="${440+i*120}" y="${250-b[1]*2}" width="70" height="${b[1]*2}" fill="${i===2?rim:'#6fa8dc'}"/><text x="${475+i*120}" y="${244-b[1]*2}" fill="#e9ecef" font-family="Arial" font-size="16" text-anchor="middle">${b[1]}%</text>`).join("")
+        + person(300, 360, .9, {}) + person(520, 360, .9, {bun:"r"}) + person(700, 360, .95, {}) + person(900, 360, .9, {bun:"l"})
+        + `<path d="M200 330 L1000 330 L1100 ${H-40} L100 ${H-40} Z" fill="#2a1e14" stroke="#6b4a2a" stroke-width="3"/>`
+        + [[560,"#c0271a"],[600,"#2f6fb5"],[840,"#e9ecef"]].map(f => `<line x1="${f[0]}" y1="332" x2="${f[0]}" y2="292" stroke="#999" stroke-width="3"/><path d="M${f[0]} 292 l30 8 l-30 8 Z" fill="${f[1]}"/>`).join("")
+        + `<rect x="640" y="340" width="120" height="26" fill="#e9ecef"/><text x="700" y="358" fill="#111" font-family="Arial" font-size="13" text-anchor="middle" font-weight="700">GEN. WHITFIELD</text>` + papers(360, 370) + floor();
+      break;
+    case "delegation":
+      g = wall("#22385a","#162740") + windowCity(760, 60, 360, 190) + clock(560, 80, 28)
+        + `<rect x="60" y="70" width="180" height="300" fill="#15263d" stroke="#2b4466"/>` + [0,1,2,3,4].map(i => `<rect x="76" y="${86+i*56}" width="148" height="44" fill="#c9a45a" opacity=".8"/>`).join("")
+        + person(660, 330, 1, {bun:"r"}) + desk(480, 300, 480) + papers(520, 300) + papers(600, 290)
+        + `<rect x="790" y="240" width="90" height="60" fill="#111" stroke="#444"/><rect x="828" y="300" width="14" height="8" fill="#444"/>`
+        + person(300, H-40, 1.2, {bun:"l", op:.95}) + floor();
+      break;
+    case "audit":
+      g = wall("#1f3048","#13202f") + clock(620, 70, 24)
+        + [0,1].map(k => `<rect x="${60+k*900}" y="60" width="180" height="300" fill="#15263d" stroke="#2b4466"/>` + [0,1,2,3,4,5].map(i => `<rect x="${72+k*900+(i%3)*54}" y="${76+Math.floor(i/3)*140}" width="44" height="120" fill="${["#2f6fb5","#8f7626","#3d9a6a"][i%3]}" opacity=".8"/>`).join("")).join("")
+        + person(700, 320, 1, {})
+        + `<rect x="320" y="310" width="640" height="18" fill="#3a2a1c"/><rect x="340" y="328" width="600" height="${H-368}" fill="#2a1e14"/>`
+        + `<rect x="520" y="284" width="130" height="26" fill="#e9ecef" transform="rotate(-4 585 297)"/><text x="585" y="302" fill="#c0271a" font-family="Arial" font-size="13" font-weight="700" text-anchor="middle" transform="rotate(-4 585 297)">DRAFT FINDINGS</text>`
+        + papers(760, 310) + person(230, H-40, 1.2, {bun:"l", op:.95}) + floor();
+      break;
   }
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${esc(sc.place)}">${g}
+  return `<svg xmlns="http://www.w3.org/2000/svg" ${attrs || ""} viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${esc(sc.place)}">${g}
     <rect width="${W}" height="${H}" fill="url(#vig)"/><defs><radialGradient id="vig" cx=".5" cy=".45" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient></defs></svg>`;
 }
 
