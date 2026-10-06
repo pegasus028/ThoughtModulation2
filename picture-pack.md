@@ -185,3 +185,18 @@ Setting: an audit room lined with binders, a Scandinavian male auditor sliding '
 | img/outcome-i7-2.png | NOTED | The auditor records 'limited cooperation'. | disappointing — frowns, arms crossed or turning away, cool grey light |
 | img/outcome-i7-1.png | ADVERSE | A tough report goes to the Air Staff. | a clear failure — visible displeasure or walking away, dark stormy light |
 
+
+## 3. Ground School pictures (optional) — 6 scenes + 18 outcomes
+
+Ground School draws its own pictures. To replace one, upload a file with exactly this name to **img/**. Use the same style line as above (the student is not in these scenes; it's her point of view).
+
+| File | Scene |
+|---|---|
+| img/gs-scene-g1.png | A bright training room, whiteboard "International Finance Course — Day 1", a friendly British female instructor (40s, auburn bob, teal cardigan) pointing at the board, participants from several countries seen from behind |
+| img/gs-scene-g2.png | An office desk at 15:10, a ringing desk phone, a monitor showing an invoice, two wall clocks "Bangkok" and "California", window with city view |
+| img/gs-scene-g3.png | A finance front desk during a multinational exercise, sign "Finance · Claims & Allowances", a British air force officer (light blue uniform, fair hair) holding a folder at the counter |
+| img/gs-scene-g4.png | A Washington, D.C. hotel lobby at night, a smiling front-desk manager (Latina, burgundy blazer, name badge), a domed building through the window, a suitcase in the foreground |
+| img/gs-scene-g5.png | A training-centre corridor in the morning, a noticeboard with session papers, the same British instructor walking with a coffee cup |
+| img/gs-scene-g6.png | A conference coffee break, banner "International Finance Course — Closing Day", an African-American air force captain (blue uniform) holding a coffee, smiling |
+
+Outcome pictures (shown on the result screen): **img/gs-outcome-g1-3.png** (best, 85%+), **-2** (60–84%), **-1** (under 60%), for g1 to g6. Mood: 3 = warm success, 2 = friendly and positive, 1 = encouraging "try again" — never a failure picture.

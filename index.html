@@ -405,6 +405,157 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding-top:12px;font-si
   .cstat{min-width:0;flex:1}
   .kpi.big .v{font-size:1.35rem}
 }
+
+/* ---------- Ground School (speaking tab) ---------- */
+.gs-tab b{color:#9fe3b0}
+.gs-banner{background:linear-gradient(120deg,#0F2440,#123a3a)}
+.gs-strip{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0 2px}
+.gs-mic{font-size:.82rem;padding:6px 10px;border-radius:8px;border:1px solid var(--line);background:var(--navy2)}
+.gs-mic.ok{color:#bff5cf;border-color:rgba(74,222,128,.45)}
+.gs-mic.no{color:var(--warn);border-color:rgba(251,191,36,.5)}
+.gs-resume{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.4);border-radius:10px;padding:10px 12px;margin:12px 0;font-size:.92rem}
+.gs-dossier .scene.gs-thumb{margin:10px 0;max-height:220px}
+.gs-who{display:flex;gap:12px;align-items:center;font-size:.86rem}
+.gs-who span{color:var(--ink-dim)} .gs-who small{color:var(--gold);letter-spacing:.06em}
+.gs-av{flex:none;border-radius:50%;box-shadow:0 0 0 2px rgba(212,175,55,.55)}
+.gs-mode{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--navy3);border:1px solid var(--line);border-radius:12px;padding:10px 12px;color:var(--ink)}
+.gs-mode:hover:not(:disabled){border-color:var(--gold)}
+.gs-mode .gm-i{font-size:1.6rem;flex:none}
+.gs-mode .gm-t{flex:1;min-width:0}
+.gs-mode .gm-t b{display:block;font-size:.95rem}
+.gs-mode .gm-t small{display:block;color:var(--ink-dim);font-size:.76rem;line-height:1.3}
+.gs-mode .gm-s{flex:none;text-align:right;color:var(--gold);font-family:var(--mono)}
+.gs-mode .gm-s small{display:block;font-size:.66rem;font-family:var(--sans);color:var(--ink-dim)}
+.gs-mode.won{border-color:rgba(74,222,128,.5)}
+.gs-mode.locked{opacity:.5;cursor:not-allowed}
+.gs-radar{margin-top:16px;background:var(--navy2);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.gs-radar h3{margin:0 0 2px;font-size:1rem} .gs-radar p{margin:0 0 8px;color:var(--ink-dim);font-size:.82rem}
+.gr-row{display:grid;grid-template-columns:150px 1fr 30px;gap:10px;align-items:center;font-size:.85rem;margin:4px 0}
+.gr-bar{height:10px;background:var(--navy3);border-radius:6px;overflow:hidden}
+.gr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--warn),var(--bad))}
+/* briefing */
+.gs-brief{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:16px;margin-top:14px}
+.gs-bcol{display:flex;flex-direction:column;gap:12px}
+.gs-howmode{font-size:.88rem;color:var(--ink-dim);background:var(--navy2);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+.gs-gcard{background:var(--navy2);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.gs-gcard h3{margin:.2rem 0 .4rem;font-size:1.1rem}
+.gs-viz{width:100%;height:auto;display:block;background:#0b1a30;border-radius:10px;margin:6px 0 10px}
+.gs-rules{width:100%;border-collapse:collapse;font-size:.92rem}
+.gs-rules td{border-bottom:1px solid var(--line);padding:6px 6px;vertical-align:top}
+.gs-rules td:first-child{color:var(--ink-dim);font-size:.8rem;width:38%}
+.gs-rules b{color:var(--gold)}
+.gs-tip{font-size:.86rem;color:#dbe6f3;margin:10px 0 0}
+.gs-go{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin:16px 0 4px;padding:12px 14px;border-radius:12px;background:rgba(212,175,55,.07);border:1px solid rgba(212,175,55,.35)}
+.gs-go span{font-size:.9rem;color:#e8eef6}
+.btn.gs-big{padding:13px 22px;font-size:1.02rem}
+/* conversation */
+.gs-dots{display:flex;gap:5px;margin-left:auto}
+.gs-dot{width:11px;height:11px;border-radius:50%;background:var(--navy3);border:1px solid var(--line)}
+.gs-dot.done{background:var(--good);border-color:var(--good)} .gs-dot.cur{background:var(--gold);border-color:var(--gold)}
+.gs-talk{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:start}
+.gs-chat{background:#0b1726;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.gs-chead{display:flex;gap:10px;align-items:center;padding:8px 12px;background:var(--navy2);border-bottom:1px solid var(--line)}
+.gs-chead b{display:block;font-size:.95rem} .gs-chead small{color:var(--ink-dim);font-size:.74rem}
+.gs-cscene{position:relative;height:120px;overflow:hidden;border-bottom:1px solid var(--line)}
+.gs-cscene .sart img{object-fit:cover}
+.gs-msgs{padding:12px;display:flex;flex-direction:column;gap:10px;max-height:52vh;min-height:220px;overflow-y:auto}
+.gs-msg{display:flex;gap:8px;align-items:flex-end;max-width:92%}
+.gs-msg.npc{align-self:flex-start} .gs-msg.me{align-self:flex-end}
+.gs-bub{position:relative;border-radius:16px;padding:9px 40px 9px 12px;font-size:1rem;line-height:1.4}
+.gs-msg.npc .gs-bub{background:#fff;color:#14202e;border-bottom-left-radius:4px}
+.gs-msg.me .gs-bub{background:#8fe065;color:#0e1d07;border-bottom-right-radius:4px;padding-right:28px}
+.gs-msg.me .gs-bub.no{background:#3a4652;color:#d9e2ec;text-decoration:line-through;text-decoration-color:rgba(248,113,113,.7)}
+.gs-mk{position:absolute;right:9px;bottom:7px;font-size:.8rem;text-decoration:none;display:inline-block}
+.gs-ty{font-size:.66rem;opacity:.75;margin-left:6px;text-decoration:none;display:inline-block}
+.gs-play{position:absolute;right:6px;top:50%;transform:translateY(-50%);background:none;border:none;font-size:1.05rem;padding:4px}
+.gs-bub.hid{cursor:pointer}
+.gs-bub.hid .gs-btxt{filter:blur(6px);user-select:none}
+.gs-hidl{display:block;font-size:.74rem;color:#1d4f8f;font-weight:700;margin-top:3px}
+.gs-sys{align-self:center;font-size:.72rem;color:var(--ink-dim);letter-spacing:.08em;text-transform:uppercase}
+.gs-speak{background:var(--navy2);border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:12px}
+.gs-score{display:flex;gap:12px;flex-wrap:wrap;font-size:.74rem;color:var(--ink-dim);letter-spacing:.06em;text-transform:uppercase}
+.gs-score b{color:var(--gold);font-family:var(--mono);font-size:.9rem}
+.gs-task{background:#0b1a30;border:1px solid #2b4f78;border-radius:12px;padding:10px 12px}
+.gs-sit{margin:4px 0 8px;font-size:.92rem;color:#dbe6f3}
+.gs-line{font-size:1.28rem;line-height:1.75;color:#fff;font-weight:600}
+.gs-line .kw{border-bottom:3px solid rgba(212,175,55,.55);padding:0 1px}
+.gs-line .kw.glow,.gs-line .gap.glow{background:rgba(212,175,55,.22);border-radius:4px;box-shadow:0 0 0 2px var(--gold)}
+.gs-line .gap{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;line-height:1;margin:0 3px;padding:2px 6px;border:2px dashed var(--gold);border-radius:6px;color:var(--gold)}
+.gs-line .gap small{font-size:.62rem;color:#bcd3ea;font-weight:600;margin-top:2px;white-space:nowrap}
+.gs-hear{margin-top:6px}
+.gs-objs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.gs-objs li{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;font-size:.95rem;padding:6px 8px;border-radius:8px;background:var(--navy3)}
+.gs-objs li span{width:18px;text-align:center;font-weight:800;color:var(--ink-dim)}
+.gs-objs li.hit{background:rgba(74,222,128,.13)} .gs-objs li.hit span{color:var(--good)}
+.gs-objs li.miss{background:rgba(248,113,113,.12)} .gs-objs li.miss span{color:var(--bad)}
+.gs-ex{flex-basis:100%;margin-left:26px;color:var(--gold);font-size:.86rem}
+.gs-model{margin-top:8px;font-size:.92rem;background:rgba(74,222,128,.08);border-radius:8px;padding:6px 8px}
+.gs-coach{display:flex;flex-direction:column;gap:6px}
+.gs-coach:empty{display:none}
+.gs-c{background:#13283f;border-left:4px solid var(--gold);border-radius:8px;padding:8px 10px;font-size:.92rem;color:#e8eef6}
+.gs-c.unclear{border-left-color:#7fb3e6}
+.gs-said{display:block;margin-top:3px;color:#ffc9c9;font-size:.86rem}
+.gs-msgx{margin-top:4px;color:#ffd38a;font-size:.88rem} .gs-msgx.good{color:var(--good)}
+.gs-acc{margin-top:4px;font-size:.82rem;color:var(--ink-dim)} .gs-acc b{color:var(--gold)}
+.gs-ch{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.gs-chb{background:var(--navy3);border:1px solid var(--line);color:var(--ink);border-radius:9px;padding:8px 12px;font-size:.95rem}
+.gs-chb.right{background:rgba(74,222,128,.18);border-color:var(--good)} .gs-chb.wrong{background:rgba(248,113,113,.15);border-color:var(--bad);animation:gsShake .3s}
+@keyframes gsShake{0%,100%{transform:none}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.gs-micwrap{display:flex;gap:16px;align-items:center}
+.gs-micbtn{flex:none;width:84px;height:84px;border-radius:50%;border:none;background:radial-gradient(circle at 35% 30%,#ff7a5c,#c42c12);color:#fff;display:grid;place-items:center;box-shadow:0 4px 0 #5a1206,0 0 0 6px rgba(255,107,74,.15);touch-action:manipulation}
+.gs-micbtn:active{transform:translateY(2px);box-shadow:0 2px 0 #5a1206}
+.gs-micbtn.wait{background:radial-gradient(circle at 35% 30%,#6b7f96,#3b4b5e);box-shadow:0 4px 0 #222c38}
+.gs-micbtn.rec{animation:gsRec 1.2s infinite}
+@keyframes gsRec{0%{box-shadow:0 4px 0 #5a1206,0 0 0 0 rgba(255,107,74,.6)}100%{box-shadow:0 4px 0 #5a1206,0 0 0 22px rgba(255,107,74,0)}}
+.gs-mictxt{font-size:.95rem;min-width:0;flex:1}
+.gs-mictxt small{color:var(--ink-dim)}
+.gs-live{margin-top:6px;font-size:1.05rem;color:#fff;font-style:italic;min-height:1.4em}
+.gs-err{margin-top:6px;font-size:.84rem;color:#ffd38a}
+.gs-err:empty{display:none}
+.gs-review{display:flex;flex-direction:column;gap:8px}
+.gs-heard{font-size:1.2rem;line-height:1.55;background:#0b1a30;border:1px solid #2b4f78;border-radius:10px;padding:10px 12px;color:#fff}
+.gs-heard .hm{color:#fff} .gs-heard .hx{color:#ffd38a;text-decoration:underline wavy rgba(251,191,36,.6)}
+.gs-missing{font-size:.82rem;color:var(--ink-dim);margin-top:6px} .gs-missing s{color:#ffb3b3;margin-right:4px}
+.gs-review textarea{width:100%;font:inherit;font-size:1.05rem;border-radius:10px;border:1px solid var(--line);background:#0b1a30;color:#fff;padding:10px}
+.gs-acts{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.gs-acts .commit{margin-left:auto}
+.gs-under{justify-content:space-between}
+.dbtn.gs-again{padding:12px 14px;font-size:.82rem}
+.gs-link{background:none;border:none;color:#9fc6ee;font-size:.82rem;text-decoration:underline;padding:4px 0}
+.gs-fine{font-size:.78rem;color:var(--ink-dim);margin:0}
+.gs-pass{display:flex;gap:14px;align-items:center;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.45);border-radius:12px;padding:12px}
+.gs-big-ok{flex:none;width:56px;height:56px;border-radius:50%;background:var(--good);color:#06240f;display:grid;place-items:center;font-size:1.8rem;font-weight:900}
+.gs-note{font-size:.86rem;color:var(--ink-dim);margin-top:4px}
+/* result */
+.gs-resbox{background:var(--navy2);border:1px solid var(--line);border-radius:14px;padding:14px;margin-top:12px;display:flex;flex-direction:column;gap:12px}
+.gs-resh{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.gs-resv{font-family:var(--mono);font-size:2.4rem;color:var(--gold);font-weight:800}
+.gs-medals{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.gs-medals span{font-size:.76rem;border:1px solid var(--line);border-radius:99px;padding:2px 9px;opacity:.45}
+.gs-medals span.on{opacity:1;border-color:var(--gold);color:var(--gold)}
+.gs-tx{width:100%;border-collapse:collapse;font-size:.86rem}
+.gs-tx th{text-align:left;color:var(--gold);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 6px;border-bottom:1px solid var(--line)}
+.gs-tx td{padding:6px;border-bottom:1px solid var(--line);vertical-align:top}
+.gs-tx td:nth-child(3){color:var(--ink-dim)}
+/* account + voice check */
+.gs-f{display:flex;flex-direction:column;gap:4px;font-size:.85rem;color:var(--ink-dim);margin:10px 0}
+.gs-f input{font:inherit;font-size:1.1rem;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:#0b1a30;color:#fff;max-width:320px}
+#acct .mbox{max-width:460px}
+.gs-vt td{vertical-align:middle}
+.gs-vt td:first-child{width:36px}
+@media (max-width:860px){
+  .gs-brief,.gs-talk{grid-template-columns:1fr}
+  .gs-msgs{max-height:none;min-height:0}
+  .gs-cscene{height:96px}
+}
+@media (max-width:560px){
+  .gs-line{font-size:1.12rem}
+  .gs-micbtn{width:76px;height:76px}
+  .gr-row{grid-template-columns:110px 1fr 24px}
+  .gs-tx td:nth-child(3),.gs-tx th:nth-child(3){display:none}
+  .gs-dots{margin-left:0;width:100%}
+  .gs-strip .hbtn{flex:1 1 auto}
+}
 </style>
 </head>
 <body>
@@ -422,6 +573,7 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding-top:12px;font-si
     <div class="sub">Thought Modulation · The Linguistic Simulator · RTAF Finance English</div>
   </div>
   <div class="hctl">
+    <button class="hbtn" id="userBtn" style="display:none">👤 Sign in</button>
     <button class="hbtn" id="homeBtn">Mission map</button>
     <button class="hbtn" id="refBtn">Dial reference</button>
     <button class="hbtn" id="voiceBtn" title="Read replies aloud">Voice: off</button>
@@ -432,8 +584,10 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding-top:12px;font-si
 <main id="app"></main>
 <div class="modal" id="ref"><div class="mbox" id="refBox"></div></div>
 <div class="modal" id="fbm" role="dialog" aria-modal="true" aria-label="Feedback"><div class="mbox" id="fbBox"></div></div>
+<div class="modal" id="acct" role="dialog" aria-modal="true" aria-label="Account"><div class="mbox" id="acctBox"></div></div>
 <footer>
   Modulation Desk — an unofficial English-language training aid built on Teacher Chris's Thought Modulation method.
+  In Ground School, speech is turned into text by the browser (Apple in Safari, Google in Chrome) — practise with the scripts, never with real account details.
   Emblem, people, units, banks, delegations and scenarios are fictional and are not affiliated with or endorsed by the Royal Thai Air Force or any other air force, bank or audit body.
 </footer>
 </div>
@@ -3092,9 +3246,10 @@ function roomTurn(sc){
 }
 
 /* ---- persistence ---- */
-let store = {best:{}, fs:16, voice:false, free:false, tab:"fin", sel:{}};
+let store = {best:{}, fs:16, voice:false, free:false, tab:"gs", sel:{}};
+const DESK_DEFAULT = JSON.stringify(store);
 try { const raw = localStorage.getItem(LS_KEY); if (raw) store = Object.assign(store, JSON.parse(raw)); } catch(e){}
-function save(){ try { localStorage.setItem(LS_KEY, JSON.stringify(store)); } catch(e){} }
+function save(){ store._t = Date.now(); try { localStorage.setItem(LS_KEY, JSON.stringify(store)); } catch(e){} cloudQueue(); }
 document.documentElement.style.setProperty("--fs", store.fs + "px");
 
 /* ---- speech ---- */
@@ -3172,6 +3327,7 @@ function firstSlot(){ const ls = liveSlots(turn()); S.act = ls.length ? ls[0].k 
 /* ---- render: home ---- */
 function renderHome(){
   view = "home";
+  if (store.tab === "gs") return renderGSHome();
   const camp = CAMPAIGNS.find(c => c.id === store.tab) || CAMPAIGNS[0];
   const ids = camp.ids;
   // default selection: the saved one, else the first unlocked mission not yet done
@@ -3182,11 +3338,7 @@ function renderHome(){
   const campCards = CARDS.filter(c => ids.includes(c.from));
   const cardN = campCards.filter(hasCard).length;
 
-  const tabs = CAMPAIGNS.map(c => {
-    const d = c.ids.filter(isDone).length;
-    return `<button class="tab ${c.id===camp.id?'on':''}" role="tab" aria-selected="${c.id===camp.id}" data-tab="${c.id}">
-      <span class="ti" aria-hidden="true">${c.icon}</span><span><b>${esc(c.tab)}</b><small>${esc(c.name)} · ${d}/${c.ids.length}</small></span></button>`;
-  }).join("");
+  const tabs = allTabsHTML(camp.id);
 
   const nodes = ids.map((id, k) => {
     const sc = SCENARIOS[scIndex(id)], done = isDone(id), un = isUnlocked(id);
@@ -4193,6 +4345,1564 @@ function sceneArt(sc, attrs){
   return `<svg xmlns="http://www.w3.org/2000/svg" ${attrs || ""} viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${esc(sc.place)}">${g}
     <rect width="${W}" height="${H}" fill="url(#vig)"/><defs><radialGradient id="vig" cx=".5" cy=".45" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient></defs></svg>`;
 }
+
+/* ======================================================================
+   GROUND SCHOOL — A2→B1 speaking missions with foreigners
+   Turn format:
+     npc   what the other person says (spoken aloud)
+     ack   their reply when she gets it right (spoken aloud)
+     task  what she has to do (Script and Gap modes)
+     say   the model sentence (Script mode shows it; Gap mode hides the keys)
+     keys  grammar points checked in every mode:
+           s    the words blanked in Gap mode   base  the cue shown in the gap
+           ok   phrases that prove it is right   bad   [phrase, message, "soft"?]
+           cat  hint 1 (clue) · rule hint 2 · ch [right, wrong] hint 3 · tag radar label
+           soft:true → a note only, never a fail (plurals the recogniser may miss)
+     obj   Own-words mode: text + need[{lab, re, ex}] + bad[{re, k, msg}]
+   All phrases and patterns run on normalised speech: lower case, no
+   punctuation, contractions expanded (haven't → have not), numbers as digits.
+   ====================================================================== */
+const GREET = /\b(good (morning|afternoon|evening)|hello|hi|nice to meet you)\b/;
+const DAYS = "(monday|tuesday|wednesday|thursday|friday|saturday|sunday)";
+
+const GS_PEOPLE = {
+  sarah:   {vp:["Serena","Kate","Martha","Stephanie"], name:"Sarah Bennett", short:"Sarah", role:"Course instructor, International Finance Course", accent:"GB", sex:"f", flag:"🇬🇧",
+            av:{skin:"#f1c7a5", hair:"#8a3b1e", style:"bob", top:"#1f7a74", bg:"#cfe9e6"}},
+  mike:    {vp:["Evan","Alex","Aaron"], name:"Mike Turner", short:"Mike", role:"Accounts manager, Pacific Aero Supplies (California)", accent:"US", sex:"m", flag:"🇺🇸",
+            av:{skin:"#e8b996", hair:"#4a3220", style:"short", top:"#2b4f8a", bg:"#d6e2f5", headset:true}},
+  tom:     {vp:["Daniel","Arthur","Oliver"], name:"Flight Lieutenant Tom Hughes", short:"Tom", role:"Visiting partner-air-force officer, exercise week", accent:"GB", sex:"m", flag:"🇬🇧",
+            av:{skin:"#f3cfb3", hair:"#c9a15a", style:"short", top:"#5b7fa6", bg:"#dde7f2", uniform:true}},
+  jessica: {vp:["Ava","Allison","Samantha"], name:"Jessica Morales", short:"Jessica", role:"Front-desk manager, Capitol View Hotel, Washington, D.C.", accent:"US", sex:"f", flag:"🇺🇸",
+            av:{skin:"#c98e62", hair:"#2a1a12", style:"long", top:"#7a1f35", bg:"#f3dce2", badge:true}},
+  mark:    {vp:["Nathan","Tom","Aaron","Alex"], name:"Captain Mark Ellis", short:"Mark", role:"Finance officer from a partner air force base in Hawaii", accent:"US", sex:"m", flag:"🇺🇸",
+            av:{skin:"#7a4b2e", hair:"#1b120c", style:"buzz", top:"#3d6a9e", bg:"#d9e6f3", uniform:true}}
+};
+
+const GS_MISSIONS = [
+/* ---------------- G1 ---------------- */
+{id:"g1", title:"First Day on the Course", cefr:"A2", npc:"sarah", art:"classroom",
+ place:"Training room 4 · Monday 08:45",
+ goal:"Introduce yourself to your British instructor: where you work, what you do, your boss, and your journey — then ask one question.",
+ focus:["Present simple","I work · she works","Questions with does"],
+ story:"Your first international finance course. Twenty participants from six countries, and everything is in English. The instructor smiles and starts with you.",
+ brief:{h:"Present simple — the -s that Thai doesn't have",
+   viz:"sverb",
+   rows:[["I / you / we / they","work · check · pay"],["he / she / it","work<b>s</b> · check<b>s</b> · pay<b>s</b>"],["Question","What time <b>does</b> the course finish?"]],
+   tip:"Thai verbs never change, so the -s is easy to forget. English listeners notice it — say it clearly."},
+ turns:[
+  {npc:"Good morning, and welcome to the course! I'm Sarah, your instructor. Let's go round the room. Where do you work?",
+   ack:"Lovely to meet you.",
+   task:"Greet her and say where you work.",
+   say:"Good morning. I work in the Finance Division.",
+   keys:[{s:"work", base:"work", tag:"Verb -s", ok:["i work","i am working"],
+          bad:[["i works","With I there is no -s: I work."],["i working","Don't drop the verb: I work."],["i am work","Say: I work."]],
+          cat:"Check the verb after “I”.", rule:"I / you / we / they + base verb (I work). He / she / it + verb-s (she works).", ch:["I work in the Finance Division.","I works in the Finance Division."]}],
+   obj:{text:"Say good morning and tell her where you work.",
+     need:[{lab:"A greeting", re:GREET, ex:"Good morning."},
+           {lab:"Where you work — I work in …", re:/\bi (work|am working) (in|at|for)\b/, ex:"I work in the …"}]}},
+
+  {npc:"And what do you do there?",
+   ack:"That sounds like an important job.",
+   task:"Tell her two things you do at work.",
+   say:"I check invoices and I pay our suppliers.",
+   keys:[{s:"check", base:"check", tag:"Verb -s", ok:["i check"],
+          bad:[["i checks","With I there is no -s: I check."],["i checked","Checked is past. Every day → present simple: I check."],["i checking","Say: I check."]],
+          cat:"This is your job every day. Check the verb form.", rule:"Routines and jobs → present simple. With I: base verb, no -s.", ch:["I check invoices","I checked invoices"]},
+         {s:"pay", base:"pay", tag:"Verb -s", ok:["i pay","and pay"],
+          bad:[["i pays","With I there is no -s: I pay."],["and pays","About yourself: and I pay (no -s)."],["i paid","Paid is past. Every day → I pay."],["i paying","Say: I pay."]],
+          cat:"Check the second verb too.", rule:"Every verb about your own routine: base form after I.", ch:["I pay our suppliers","I pays our suppliers"]}],
+   obj:{text:"Tell her two things you do at work (present simple).",
+     need:[{lab:"Job 1 — I + verb", re:/\bi (check|pay|prepare|process|record|approve|count|make|write|enter|handle|manage|do|file|send|keep|control|calculate|work on|look after)\b/, ex:"I check …"},
+           {lab:"Job 2 — and (I) + verb", re:/\b(and|also) (i )?(check|pay|prepare|process|record|approve|count|make|write|enter|handle|manage|do|file|send|keep|control|calculate)\b/, ex:"… and I pay …"}],
+     bad:[{re:/\b(i|and) (checks|pays|prepares|processes|records|approves|counts|makes|writes|enters|handles|manages|does|files|sends|keeps|controls|calculates)\b/, k:0, msg:"About yourself: no -s. I check, I pay."}]}},
+
+  {npc:"Interesting! And who is your boss?",
+   ack:"She sounds very busy!",
+   task:"Say who your boss is and one thing she does.",
+   say:"My boss is Squadron Leader Malee. She checks all our payments.",
+   keys:[{s:"is", base:"be", tag:"Verb be", ok:["my boss is"],
+          bad:[["my boss squadron","Don't drop the verb be: My boss is …"]],
+          cat:"Is a verb missing?", rule:"English sentences need a verb. My boss + is + name.", ch:["My boss is Squadron Leader Malee.","My boss Squadron Leader Malee."]},
+         {s:"checks", base:"check", tag:"Verb -s", ok:["she checks"],
+          bad:[["she check","She = one person: she checks (+ s)."],["she checking","Say: she checks."],["she is check","Say: she checks."]],
+          cat:"Who does the action? She → …", rule:"He / she / it + verb-s: she checks, she works, she has.", ch:["She checks all our payments.","She check all our payments."]}],
+   obj:{text:"Say who your boss is and one thing she (or he) does.",
+     need:[{lab:"My boss is …", re:/\bmy (boss|section head|supervisor|commander|manager|director) is\b/, ex:"My boss is …"},
+           {lab:"One thing she / he does — verb + s", re:/\b(she|he) (?!is\b|was\b)(\w+s)\b/, ex:"She checks …"}],
+     bad:[{re:/\b(she|he) (check|work|pay|approve|sign|help|manage|lead|make|do|go|have|teach|control|look|plan|write|read)\b/, k:1, msg:"She / he + verb-s: she checks, he works, she has."}]}},
+
+  {npc:"And how do you usually come to work?",
+   ack:"That's quite a long way!",
+   task:"Say how you usually come to work and how long it takes.",
+   say:"I usually drive to work. It takes about an hour.",
+   keys:[{s:"drive", base:"drive", tag:"Verb -s", ok:["usually drive","i drive"],
+          bad:[["usually drives","With I: no -s. I usually drive."],["usually drove","Usually = every day → present: I usually drive."],["usually driving","Say: I usually drive."]],
+          cat:"“Usually” = a routine. Check the verb.", rule:"usually / always / often + present simple: I usually drive.", ch:["I usually drive to work.","I usually drove to work."]},
+         {s:"takes", base:"take", tag:"Verb -s", ok:["it takes"],
+          bad:[["it take","It + verb-s: it takes."],["it is take","Say: it takes."],["it use","For time we say: it takes an hour."],["it uses","For time we say: it takes an hour."]],
+          cat:"Look at the verb after “it”.", rule:"Time for a journey: It takes + time (It takes an hour).", ch:["It takes about an hour.","It take about an hour."]}],
+   obj:{text:"Say how you usually come to work and how long it takes.",
+     need:[{lab:"How — I (usually) + verb", re:/\bi (usually |always |often |normally )?(drive|take|ride|walk|come|go|get|catch)\b/, ex:"I usually take the …"},
+           {lab:"How long — It takes …", re:/\bit takes\b/, ex:"It takes about …"}],
+     bad:[{re:/\bit (take|use|uses) (about|around|me|\d|an|a|half|one)\b/, k:1, msg:"For time: it takes 40 minutes."}]}},
+
+  {npc:"OK, before we start — do you have any questions?",
+   ack:"At half past four. OK — let's begin!",
+   task:"Ask what time the course finishes today.",
+   say:"Yes. What time does the course finish today?",
+   keys:[{s:"does", base:"do / does", tag:"Questions", ok:["what time does","when does"],
+          bad:[["what time the course","A question needs a helper: What time does the course finish?"],["what time is the course finish","Use does, not is: What time does the course finish?"],["what time do the course","The course = it → does."]],
+          cat:"A question needs a helper verb before the subject.", rule:"Question word + do / does + subject + base verb: What time does the course finish?", ch:["What time does the course finish?","What time the course finishes?"]},
+         {s:"finish", base:"finish", tag:"Questions", ok:["course finish","course end","it finish","class finish"],
+          bad:[["course finishes today","After does, the verb has no -s: does the course finish?"],["course finished","After does, use the base verb: finish."]],
+          cat:"Check the verb after “does … the course”.", rule:"does already has the -s, so the main verb has none: Does it finish?", ch:["does the course finish","does the course finishes"]}],
+   obj:{text:"Ask her what time the course finishes today.",
+     need:[{lab:"Question — What time / When does … ?", re:/\b(what time|when) (does|do) (the )?(course|class|session|it|training|lesson) (finish|end|stop|close)\b/, ex:"What time does …?"}],
+     bad:[{re:/\b(what time|when) (the )?(course|class|session|training|lesson) (finish|finishes|end|ends)\b/, k:0, msg:"Add does: What time does the course finish?"},
+          {re:/\bdoes (the )?\w+ (finishes|ends)\b/, k:1, msg:"After does: finish (no -s)."}]}}
+ ]},
+
+/* ---------------- G2 ---------------- */
+{id:"g2", title:"The Supplier's Call", cefr:"A2+", npc:"mike", art:"phone",
+ place:"Your desk · Wednesday 15:10 · incoming call",
+ goal:"An American supplier calls about his invoice. Tell him you received it, explain why it isn't paid yet, and ask for a new invoice.",
+ focus:["Short answers","Past simple vs present perfect","Present continuous","Could you…?"],
+ story:"The phone rings. The number starts with +1 — America. You take a breath and pick up.",
+ brief:{h:"Finished time or up to now?",
+   viz:"timeline",
+   rows:[["Finished time → past simple","We <b>received</b> it last Monday."],["Up to now (yet) → present perfect","We <b>haven't paid</b> it yet."],["Happening now","We'<b>re checking</b> it now."]],
+   tip:"If you say WHEN (last Monday, yesterday), use the past simple — never have + -ed."},
+ turns:[
+  {npc:"Hi, this is Mike Turner from Pacific Aero Supplies, in California. I'm calling about our invoice. Is this the Finance Division?",
+   ack:"Great.",
+   task:"Say yes (short answer) and offer to help.",
+   say:"Yes, it is. How can I help you?",
+   keys:[{s:"it is", base:"it + be", tag:"Short answers", ok:["yes it is"],
+          bad:[["yes it does","Is this…? → answer with is: Yes, it is."],["yes i am","He asked about the office: Yes, it is."],["yes this is the","Shorter and natural: Yes, it is."]],
+          cat:"Short answers repeat the verb from the question.", rule:"Is this…? → Yes, it is. Do you…? → Yes, I do. Have you…? → Yes, I have.", ch:["Yes, it is.","Yes, it does."]},
+         {s:"can I", base:"can + I", tag:"Questions", ok:["how can i","what can i do"],
+          bad:[["how i can","In a question, can comes before I: How can I help you?"]],
+          cat:"In a question, which comes first — can or I?", rule:"Questions: question word + can + subject + verb (How can I help you?).", ch:["How can I help you?","How I can help you?"]}],
+   obj:{text:"Say yes (short answer) and offer to help him.",
+     need:[{lab:"Short answer — Yes, it is.", re:/\byes,? it is\b/, ex:"Yes, it is."},
+           {lab:"Offer help — How can I … ?", re:/\b(how can i|what can i do|can i help|may i help)\b/, ex:"How can I help you?"}]}},
+
+  {npc:"Great. We sent the invoice on March third. Have you received it?",
+   ack:"OK, good.",
+   task:"Say yes (short answer) and say you received it last Monday.",
+   say:"Yes, we have. We received it last Monday.",
+   keys:[{s:"we have", base:"we + have", tag:"Short answers", ok:["yes we have","yes i have"],
+          bad:[["yes we did","Match the helper: Have you…? → Yes, we have."],["yes we do","Match the helper: Have you…? → Yes, we have."],["yes we received","First the short answer: Yes, we have."]],
+          cat:"Short answers repeat the helper from the question.", rule:"Have you…? → Yes, we have. / No, we haven't.", ch:["Yes, we have.","Yes, we did."]},
+         {s:"received", base:"receive", tag:"Past vs perfect", ok:["we received it","we got it","i received it"],
+          bad:[["have received it last","Last Monday = finished time → past simple: we received it."],["we receive it","Last Monday is past: received (-ed)."],["we are received","Say: we received it."]],
+          cat:"“Last Monday” is a finished time.", rule:"Finished time (yesterday, last Monday) → past simple: we received. Never have + received + last Monday.", ch:["We received it last Monday.","We have received it last Monday."]}],
+   obj:{text:"Say yes (short answer) and tell him when you received it.",
+     need:[{lab:"Short answer — Yes, we have.", re:/\byes,? (we|i) have\b/, ex:"Yes, we have."},
+           {lab:"When — past simple + finished time", re:/\b(we|i) (received|got) it (last|on|yesterday|\d|a|two|this)\b/, ex:"We received it last …"}],
+     bad:[{re:/\b(we|i) have (received|got) it (last|on|yesterday|\d)\b/, k:1, msg:"With a finished time, use past simple: we received it."},
+          {re:/\byes,? (we|i) (did|do)\b/, k:0, msg:"Have you…? → Yes, we have."}]}},
+
+  {npc:"So — have you paid it yet?",
+   ack:"Checking it? Hmm.",
+   task:"Say you haven't paid it yet, and that you are checking it now.",
+   say:"No, we haven't paid it yet. We're checking it now.",
+   keys:[{s:"haven't paid", base:"not / pay", tag:"Past vs perfect", ok:["have not paid","have not yet paid"],
+          bad:[["did not pay it yet","With yet, use the present perfect: we haven't paid it yet."],["do not pay it yet","Use the present perfect: we haven't paid it yet."],["have not pay","After have, use the past form: paid."],["did not paid","Say: we haven't paid it yet."],["not pay it yet","Use the present perfect: we haven't paid it yet."],["not paid it yet","Add have: we haven't paid it yet."]],
+          cat:"“Yet” means up to now. Which tense goes with yet?", rule:"Up to now (yet, already, ever) → present perfect: have / haven't + past participle (paid).", ch:["We haven't paid it yet.","We didn't pay it yet."]},
+         {s:"We're checking", base:"we / check", tag:"-ing now", ok:["we are checking","we are looking"],
+          bad:[["we check it now","Now = in progress: we're checking it now."],["we checking","Don't drop are: we're checking."],["we are check","Add -ing: we're checking."]],
+          cat:"“Now” = in progress at this moment.", rule:"am / is / are + verb-ing for actions in progress now.", ch:["We're checking it now.","We check it now."]}],
+   obj:{text:"Tell him you haven't paid it yet, and say what you are doing now.",
+     need:[{lab:"Not paid yet — haven't paid … yet", re:/\b(have|has) not (yet )?paid\b/, ex:"No, we haven't paid it yet."},
+           {lab:"Now — are + verb-ing", re:/\b(am|are|is) (\w+ing)\b/, ex:"We're checking it now."}]}},
+
+  {npc:"Checking it? Is there a problem with the invoice?",
+   ack:"Oh no — I'm sorry about that.",
+   task:"Say yes (short answer) and say the price is different from your order.",
+   say:"Yes, there is. The price is different from our order.",
+   keys:[{s:"there is", base:"there + be", tag:"There is", ok:["yes there is"],
+          bad:[["yes it has","Is there…? → Yes, there is."],["yes it have","Is there…? → Yes, there is."],["yes have","Is there…? → Yes, there is."]],
+          cat:"He asked “Is there…?”. Answer with the same words.", rule:"Is there…? → Yes, there is. / No, there isn't. Thai “มี” = there is, not have.", ch:["Yes, there is.","Yes, it has."]},
+         {s:"is different", base:"be / different", tag:"Verb be", ok:["price is different","is different from","is not the same"],
+          bad:[["price different","Don't drop the verb: the price is different."],["is difference","Difference is a noun. Use the adjective: different."]],
+          cat:"Is the verb there?", rule:"Adjectives need be: the price is different / the total is wrong.", ch:["The price is different","The price different"]},
+         {s:"from", base:"preposition", tag:"Prepositions", ok:["different from","different to"],
+          bad:[["different with","We say different from (not with)."],["different of","We say different from."]],
+          cat:"Which little word goes after different?", rule:"different from (British English also: different to). Not different with.", ch:["different from","different with"]}],
+   obj:{text:"Say yes (short answer) and explain the problem with the price.",
+     need:[{lab:"Short answer — Yes, there is.", re:/\byes,? there is\b/, ex:"Yes, there is."},
+           {lab:"The problem — The price is …", re:/\b(price|amount|total|quantity|number|unit price) is (different|wrong|higher|lower|not correct|not the same|too high)\b/, ex:"The price is different from …"}],
+     bad:[{re:/\b(price|amount|total) (different|wrong|higher|lower)\b/, k:1, msg:"Add is: the price is different."}]}},
+
+  {npc:"Oh, I'm sorry about that. What would you like me to do?",
+   ack:"Sure — I'll send a new one today. Thanks for your help!",
+   task:"Ask him politely to send you a new invoice.",
+   say:"Could you send us a new invoice, please?",
+   keys:[{s:"Could you send", base:"polite request: send", tag:"Polite requests", ok:["could you send","can you send","would you send","could you please send"],
+          bad:[["please send us","“Please + order” is still an order. Make it a question: Could you send…?"],["you send us a new","Make it a polite question: Could you send…?"],["could you sent","After could, use the base verb: send."],["could you sending","After could, use the base verb: send."]],
+          cat:"Make it a polite question.", rule:"Polite request = Could you + base verb …? In English, “please + order” is still an order.", ch:["Could you send us a new invoice, please?","Please send us a new invoice."]}],
+   obj:{text:"Ask him politely to send you a new (corrected) invoice.",
+     need:[{lab:"Polite question — Could you … ?", re:/\b(could|can|would) you (please )?send\b/, ex:"Could you send …?"},
+           {lab:"A new / corrected invoice", re:/\b(new|corrected|correct|revised|another) invoice\b/, ex:"… a new invoice"}],
+     bad:[{re:/^(please )?send (us|me)\b/, k:0, msg:"That is an order. Ask: Could you send…?"}]}}
+ ]},
+
+/* ---------------- G3 ---------------- */
+{id:"g3", title:"The Visiting Officer", cefr:"A2+", npc:"tom", art:"frontdesk",
+ place:"Finance Division front desk · Thursday 09:20 · exercise week",
+ goal:"A British officer from the visiting squadron wants his daily allowance. Tell him what to bring and when he will be paid.",
+ focus:["Short answers","need to + verb","Could you…?","will · on + day"],
+ story:"Exercise week. The base is full of visiting aircrew, and your front desk is the first stop for money questions. A tall officer with a folder walks in.",
+ brief:{h:"Requests, needs and plans",
+   viz:"ladder",
+   rows:[["Need","You <b>need to</b> bring your travel order."],["Request","<b>Could you</b> bring them tomorrow?"],["Offer / promise","<b>I'll</b> check it. We'<b>ll</b> transfer it <b>on</b> Friday."]],
+   tip:"“Please + verb” is still an order in English. A question (Could you…?) is what makes it polite."},
+ turns:[
+  {npc:"Morning! I'm Flight Lieutenant Tom Hughes, with the visiting squadron. I need to claim my daily allowance. Am I in the right place?",
+   ack:"Thanks very much.",
+   task:"Greet him, say yes (short answer), and invite him to sit down.",
+   say:"Good morning. Yes, you are. Please have a seat.",
+   keys:[{s:"you are", base:"you + be", tag:"Short answers", ok:["yes you are"],
+          bad:[["yes i am","He asked about himself (Am I…?). Answer about him: Yes, you are."],["yes it is","Am I…? → Yes, you are."],["yes you is","you + are: Yes, you are."]],
+          cat:"He asked “Am I…?”. Who are you talking about?", rule:"Am I…? → Yes, you are. Are you…? → Yes, I am.", ch:["Yes, you are.","Yes, I am."]}],
+   obj:{text:"Greet him, say yes (short answer) and invite him to sit down.",
+     need:[{lab:"A greeting", re:GREET, ex:"Good morning."},
+           {lab:"Short answer — Yes, you are.", re:/\byes,? you are\b/, ex:"Yes, you are."},
+           {lab:"Invite him to sit", re:/\b(have|take) a seat\b|\bsit down\b/, ex:"Please have a seat."}]}},
+
+  {npc:"Thanks. So, what do I need to bring?",
+   ack:"Right.",
+   task:"Tell him to bring his travel order and his hotel receipts.",
+   say:"You need to bring your travel order and your hotel receipts.",
+   keys:[{s:"need to bring", base:"need + bring", tag:"need to / to + verb", ok:["need to bring","have to bring"],
+          bad:[["need bring","need to + verb: You need to bring …"],["need to brings","After to, base verb: to bring."],["need to brought","After to, base verb: to bring."],["must to bring","must + verb (no to): must bring — or need to bring."]],
+          cat:"Check the words between need and bring.", rule:"need to + base verb: you need to bring, I need to check.", ch:["You need to bring…","You need bring…"]},
+         {s:"receipts", base:"receipt — one or more?", tag:"Plural -s", soft:true, ok:["receipts","bills"],
+          bad:[["hotel receipt","More than one night → receipts (with -s)."]],
+          cat:"How many receipts?", rule:"More than one → plural -s: receipts, invoices, documents.", ch:["your hotel receipts","your hotel receipt"]}],
+   obj:{text:"Tell him the two documents he needs to bring.",
+     need:[{lab:"You need to bring …", re:/\byou (need to|have to|must|should) bring\b/, ex:"You need to bring …"},
+           {lab:"Travel order", re:/\b(travel|movement) orders?\b/, ex:"… your travel order …"},
+           {lab:"Hotel receipts", re:/\b(receipts?|bills?)\b/, ex:"… and your hotel receipts."}]}},
+
+  {npc:"Right. Here's my travel order. But I'm afraid I've left the hotel receipts in my room.",
+   ack:"Of course — no problem.",
+   task:"Say it's OK, and ask him politely to bring them tomorrow morning.",
+   say:"That's OK. Could you bring them tomorrow morning?",
+   keys:[{s:"Could you bring", base:"polite request: bring", tag:"Polite requests", ok:["could you bring","can you bring","would you bring","could you please bring"],
+          bad:[["please bring them","“Please + order” is still an order. Ask: Could you bring them…?"],["you bring them tomorrow","Make it a polite question: Could you bring them…?"],["could you brought","After could: bring."],["could you bringing","After could: bring."]],
+          cat:"Make it a polite question.", rule:"Polite request = Could you + base verb …?", ch:["Could you bring them tomorrow morning?","Please bring them tomorrow morning."]},
+         {s:"them", base:"it / them?", tag:"Pronouns", soft:true, ok:["bring them"],
+          bad:[["bring it tomorrow","Receipts = more than one → them."]],
+          cat:"One thing or more than one?", rule:"One thing → it. More than one → them.", ch:["bring them","bring it"]}],
+   obj:{text:"Tell him it's OK, and ask him politely to bring the receipts tomorrow.",
+     need:[{lab:"It's OK / No problem", re:/\b(that is|it is) (okay|fine|alright|all right)\b|\bno problem\b|\bdo not worry\b/, ex:"That's OK."},
+           {lab:"Polite question — Could you bring … ?", re:/\b(could|can|would) you (please )?bring\b/, ex:"Could you bring them …?"},
+           {lab:"When — tomorrow", re:/\btomorrow\b|\bthis afternoon\b|\blater\b/, ex:"… tomorrow morning?"}]}},
+
+  {npc:"Of course. By the way, how much is the daily allowance?",
+   ack:"Brilliant, thanks.",
+   task:"Say it depends on his rank, and offer to check it for him.",
+   say:"It depends on your rank. I'll check it for you.",
+   keys:[{s:"depends", base:"depend", tag:"Verb -s", ok:["it depends"],
+          bad:[["it depend","It + verb-s: it depends."],["it is depend","Not “is depend” — it depends."],["it is depends","Not “is depends” — it depends."]],
+          cat:"Look at the verb after “it”.", rule:"it + verb-s: it depends, it takes, it costs.", ch:["It depends on your rank.","It depend on your rank."]},
+         {s:"I'll check", base:"offer: I + will + check", tag:"will (offers)", ok:["i will check","i will find out","i will look"],
+          bad:[["i will checking","After will: base verb — I'll check."],["i will checked","After will: base verb — I'll check."],["i check it for you","An offer right now → I'll check it for you."]],
+          cat:"You are offering to do something.", rule:"Offers and quick decisions: I'll (I will) + base verb.", ch:["I'll check it for you.","I check it for you."]}],
+   obj:{text:"Say it depends on his rank, and offer to check it for him (I'll …).",
+     need:[{lab:"It depends on …", re:/\bit depends on\b/, ex:"It depends on your rank."},
+           {lab:"Offer — I'll + verb", re:/\bi will (check|find out|look|ask|calculate|tell)\b/, ex:"I'll check it for you."}]}},
+
+  {npc:"Brilliant. And when will I get the money?",
+   ack:"Perfect. Thanks very much — that was easy!",
+   task:"Say you will transfer it to his account on Friday.",
+   say:"We'll transfer it to your account on Friday.",
+   keys:[{s:"We'll transfer", base:"will + transfer", tag:"will (offers)", ok:["we will transfer","we will pay","we will send","i will transfer"],
+          bad:[["will transferred","After will: base verb — transfer."],["will transferring","After will: base verb — transfer."],["we transfer it to","For the future: we'll transfer it."]],
+          cat:"This is in the future.", rule:"will + base verb: we'll transfer, we'll pay.", ch:["We'll transfer it on Friday.","We transfer it on Friday."]},
+         {s:"on", base:"preposition", tag:"Prepositions", ok:["on friday"],
+          bad:[["in friday","Days take on: on Friday."],["at friday","Days take on: on Friday."]],
+          cat:"Which little word goes with days?", rule:"on + day (on Friday) · at + clock time (at 3 o'clock) · in + month (in May).", ch:["on Friday","in Friday"]}],
+   obj:{text:"Tell him when the money will arrive.",
+     need:[{lab:"Future — will + verb", re:/\b(will|is going to|are going to) (transfer|pay|send|get|arrive|be|receive)\b/, ex:"We'll transfer it …"},
+           {lab:"When — on + day", re:new RegExp("\\bon "+DAYS+"\\b"), ex:"… on Friday."}],
+     bad:[{re:new RegExp("\\b(in|at) "+DAYS+"\\b"), k:1, msg:"Days take on: on Friday."}]}}
+ ]},
+
+/* ---------------- G4 ---------------- */
+{id:"g4", title:"Check-in Abroad", cefr:"B1−", npc:"jessica", art:"hotel",
+ place:"Capitol View Hotel, Washington, D.C. · Sunday 21:30",
+ goal:"You arrive in Washington for a course after a 20-hour journey. Check in, ask about dinner and the gym, and book a wake-up call.",
+ focus:["Short answers: do / did","Irregular past","Does … ?","Is there … ?","Could I have … ?"],
+ story:"Twenty hours of travel, two airports, one suitcase. The hotel lobby is warm and bright, and the woman at the desk is smiling at you.",
+ brief:{h:"Building questions",
+   viz:"question",
+   rows:[["Does … ?","<b>Does</b> the restaurant <b>serve</b> Asian food?"],["Is there … ?","<b>Is there</b> a gym in the hotel?  (not “Have gym?”)"],["Could I have … ?","<b>Could I have</b> a wake-up call at seven?"]],
+   tip:"Thai “มี…ไหม” becomes “Is there…?” in English. The helper (does / is / could) goes first."},
+ turns:[
+  {npc:"Good evening, and welcome to the Capitol View Hotel! Do you have a reservation?",
+   ack:"Wonderful.",
+   task:"Say yes (short answer) and that your reservation is for five nights.",
+   say:"Good evening. Yes, I do. I have a reservation for five nights.",
+   keys:[{s:"I do", base:"short answer", tag:"Short answers", ok:["yes i do"],
+          bad:[["yes i have i","Do you…? → Yes, I do."],["yes i am","Do you…? → Yes, I do."],["yes i did","Do you…? → Yes, I do."]],
+          cat:"Repeat the helper verb from her question.", rule:"Do you…? → Yes, I do. Did you…? → Yes, I did. Have you…? → Yes, I have.", ch:["Yes, I do.","Yes, I am."]},
+         {s:"nights", base:"night — one or more?", tag:"Plural -s", soft:true, ok:["nights"],
+          bad:[["5 night","Five → plural: five nights."]],
+          cat:"How many nights?", rule:"More than one → plural -s: five nights.", ch:["five nights","five night"]}],
+   obj:{text:"Say yes (short answer) and say how many nights you booked.",
+     need:[{lab:"Short answer — Yes, I do.", re:/\byes,? (i|we) do\b/, ex:"Yes, I do."},
+           {lab:"How many nights", re:/\b\d+ nights?\b|\b(a|one) night\b|\b(a|one|two) weeks?\b/, ex:"… for five nights."}]}},
+
+  {npc:"Wonderful. You must be tired. How was your flight?",
+   ack:"Glad to hear it.",
+   task:"Say it was long, but you slept well on the plane.",
+   say:"It was long, but I slept well on the plane.",
+   keys:[{s:"was", base:"be (past)", tag:"Past simple", ok:["it was"],
+          bad:[["it is long","The flight is finished: it was long."],["it long","Don't drop the verb: it was long."]],
+          cat:"The flight is finished.", rule:"Finished → past: is → was, are → were.", ch:["It was long.","It is long."]},
+         {s:"slept", base:"sleep", tag:"Past simple", ok:["i slept"],
+          bad:[["i sleep well","The flight is finished: slept (past of sleep)."],["i sleeped","Sleep is irregular: sleep → slept."],["i was sleep","Say: I slept."]],
+          cat:"Sleep is an irregular verb.", rule:"Irregular past: sleep → slept, eat → ate, take → took, see → saw, have → had.", ch:["I slept well","I sleeped well"]}],
+   obj:{text:"Say how your flight was and one thing you did on the plane.",
+     need:[{lab:"How it was — It was …", re:/\bit was\b/, ex:"It was long, but …"},
+           {lab:"One thing you did (past)", re:/\bi (slept|watched|ate|read|had|took|saw|listened|worked|talked|drank|did|rested|met|studied|wrote)\b/, ex:"… I slept well on the plane."}],
+     bad:[{re:/\bit is (long|okay|fine|good|tiring|great|bad|terrible|very)\b/, k:0, msg:"The flight is finished: it was."},
+          {re:/\bi (sleeped|eated|drinked|taked|seed|readed|sleep well|watch (a|the|some|movies?|films?))\b/, k:1, msg:"Past: slept, ate, drank, took, saw, watched."}]}},
+
+  {npc:"Glad to hear it. Did you have dinner on the plane? Our restaurant is open until ten.",
+   ack:"Yes, it does — try the noodles!",
+   task:"Say no (short answer), then ask if the restaurant serves Asian food.",
+   say:"No, I didn't. Does the restaurant serve Asian food?",
+   keys:[{s:"I didn't", base:"short answer", tag:"Short answers", ok:["no i did not"],
+          bad:[["no i do not","Did you…? → No, I didn't."],["no i not","Did you…? → No, I didn't."],["no i have not","Did you…? → No, I didn't."]],
+          cat:"She asked “Did you…?”.", rule:"Did you…? → Yes, I did. / No, I didn't.", ch:["No, I didn't.","No, I don't."]},
+         {s:"Does", base:"helper", tag:"Questions", ok:["does the restaurant","does your restaurant","does it serve","does it have"],
+          bad:[["do the restaurant","The restaurant = it → does."],["the restaurant serve asian","A question needs a helper: Does the restaurant serve…?"],["is the restaurant serve","Use does, not is: Does the restaurant serve…?"],["the restaurant has asian","Make it a question: Does the restaurant have…?"]],
+          cat:"A question needs a helper verb at the front.", rule:"Does + subject + base verb …? Does the restaurant serve Asian food?", ch:["Does the restaurant serve Asian food?","The restaurant serve Asian food?"]},
+         {s:"serve", base:"serve", tag:"Questions", ok:["restaurant serve","restaurant have","it serve","it have","restaurant cook"],
+          bad:[["restaurant serves asian","After does, base verb: serve."],["restaurant has asian","After does, base verb: have."]],
+          cat:"Check the verb after “does … the restaurant”.", rule:"does already has the -s, so the main verb has none.", ch:["does the restaurant serve","does the restaurant serves"]}],
+   obj:{text:"Answer her question (short answer), then ask if the restaurant serves Asian food.",
+     need:[{lab:"Short answer — No, I didn't / Yes, I did", re:/\b(no,? i did not|yes,? i did)\b/, ex:"No, I didn't."},
+           {lab:"Question — Does the restaurant … ?", re:/\bdoes (the|your) restaurant (serve|have|cook|make|sell)\b|\bdoes it (serve|have)\b/, ex:"Does the restaurant serve …?"}]}},
+
+  {npc:"Yes, it does — try the Vietnamese noodles! Anything else I can help you with?",
+   ack:"Yes, there is — on the second floor. It opens at six.",
+   task:"Ask if there is a gym in the hotel.",
+   say:"Yes. Is there a gym in the hotel?",
+   keys:[{s:"Is there", base:"there + be (question)", tag:"There is", ok:["is there a","is there an","does the hotel have","does it have a"],
+          bad:[["have gym","Ask: Is there a gym…? (not “Have gym?”)"],["have a gym","Ask: Is there a gym…?"],["there is a gym in the hotel","Make it a question — put is first: Is there a gym…?"],["it has gym","Ask: Is there a gym…?"]],
+          cat:"Thai “มี…ไหม” → English uses “Is there…?”", rule:"Is there a …? / Are there any …? Not “Have …?”", ch:["Is there a gym in the hotel?","Have gym in the hotel?"]}],
+   obj:{text:"Ask her if the hotel has a gym.",
+     need:[{lab:"Question — Is there a … ?", re:/\bis there (a|an|any)\b|\bdoes (the hotel|it) have (a|an)\b/, ex:"Is there a …?"},
+           {lab:"gym", re:/\bgym\b|\bfitness\b/, ex:"… a gym"}],
+     bad:[{re:/^(yes,? )?(have|has) (a )?gym\b|\bthere (have|has)\b/, k:0, msg:"Ask: Is there a gym…?"}]}},
+
+  {npc:"Yes, there is — on the second floor. It opens at six. Is there anything else?",
+   ack:"No problem — a wake-up call at seven. Have a good night!",
+   task:"Ask politely for a wake-up call at seven tomorrow.",
+   say:"Could I have a wake-up call at seven tomorrow, please?",
+   keys:[{s:"Could I have", base:"polite request", tag:"Polite requests", ok:["could i have","can i have","could i get","can i get","may i have","could i please have"],
+          bad:[["i want a wake","“I want…” sounds rude at a hotel desk. Ask: Could I have…?"],["give me a wake","Too direct. Ask: Could I have…?"],["i need a wake","Polite: Could I have…?"]],
+          cat:"Make it a polite question.", rule:"Asking for something: Could I have …? (softer than I want …).", ch:["Could I have a wake-up call…?","I want a wake-up call…"]},
+         {s:"at", base:"preposition", tag:"Prepositions", ok:["at 7","at 6","at 8","at 630","at 6 30","at 7 30"],
+          bad:[["on 7","Clock times take at: at seven."],["in 7","Clock times take at: at seven."]],
+          cat:"Which little word goes with clock times?", rule:"at + clock time (at seven) · on + day · in + month.", ch:["at seven","on seven"]}],
+   obj:{text:"Ask politely for a wake-up call tomorrow morning, with a time.",
+     need:[{lab:"Polite request — Could I have … ?", re:/\b(could|can|may) i (please )?(have|get|book|ask for)\b/, ex:"Could I have …?"},
+           {lab:"wake-up call", re:/\bwake up call\b|\bwake me up\b|\bmorning call\b/, ex:"… a wake-up call …"},
+           {lab:"Time — at + time", re:/\bat \d+\b|\bat (half past|quarter)\b/, ex:"… at seven"}],
+     bad:[{re:/\b(on|in) \d+\b(?! (nights?|days?|minutes?|hours?))/, k:1, msg:"Clock times take at: at seven."}]}}
+ ]},
+
+/* ---------------- G5 ---------------- */
+{id:"g5", title:"The Missed Session", cefr:"B1", npc:"sarah", art:"corridor",
+ place:"Training centre corridor · Thursday 08:40",
+ goal:"You missed yesterday's session. Apologise to Sarah, explain what happened, and ask for help with the homework.",
+ focus:["Past simple -ed","had to","didn't + base verb","Would you like…? answers"],
+ story:"Back on the course. Yesterday afternoon your boss called you back to the office, so you missed a whole session. Sarah is walking towards you with her coffee.",
+ brief:{h:"Telling a story in the past",
+   viz:"past",
+   rows:[["Regular -ed","miss → miss<b>ed</b> · call → call<b>ed</b> · need → need<b>ed</b>"],["Past obligation","I <b>had to</b> go back. (must has no past)"],["Past negative","It <b>didn't arrive</b>. (not didn't arrived)"]],
+   tip:"Say the -ed ending clearly: missed /mɪst/, called /kɔːld/, needed /ˈniːdɪd/."},
+ turns:[
+  {npc:"Oh, hello! We missed you yesterday afternoon. Is everything OK?",
+   ack:"Don't worry about it.",
+   task:"Say yes, and say sorry that you missed the session yesterday.",
+   say:"Yes, thank you. I'm sorry I missed the session yesterday.",
+   keys:[{s:"missed", base:"miss", tag:"Past simple", ok:["i missed"],
+          bad:[["i miss the session","Yesterday is finished: I missed (-ed)."],["have missed the session yesterday","With yesterday, use past simple: I missed."],["i was miss","Say: I missed."]],
+          cat:"Yesterday = finished. Listen for the -ed.", rule:"Regular past: verb + ed (miss → missed). Say the ending: /mɪst/.", ch:["I missed the session","I miss the session"]}],
+   obj:{text:"Say sorry and tell her you missed the session yesterday.",
+     need:[{lab:"Say sorry", re:/\b(sorry|apologi[sz]e)\b/, ex:"I'm sorry …"},
+           {lab:"I missed … (past -ed)", re:/\bi missed\b|\bi was (not|absent)\b|\bi could not (come|attend|join)\b/, ex:"… I missed the session yesterday."}]}},
+
+  {npc:"Don't worry about it. What happened?",
+   ack:"Oh dear.",
+   task:"Say your boss called you, so you had to go back to the office.",
+   say:"My boss called me, so I had to go back to the office.",
+   keys:[{s:"called", base:"call", tag:"Past simple", ok:["boss called","she called","he called","boss phoned"],
+          bad:[["boss call me","Past: my boss called me (-ed)."],["boss calls me","It's finished: called."],["boss is call","Say: my boss called me."]],
+          cat:"This happened yesterday.", rule:"Regular past: call → called /kɔːld/.", ch:["My boss called me","My boss call me"]},
+         {s:"had to go", base:"have to + go (past)", tag:"had to", ok:["had to go","had to return"],
+          bad:[["must go back","Must has no past form. Use had to: I had to go back."],["have to go back","It's finished: had to go back."],["had to went","After to: base verb — had to go."],["had go","had to + verb: had to go."]],
+          cat:"This obligation is in the past.", rule:"Past obligation → had to + base verb (must has no past form).", ch:["I had to go back","I must go back"]}],
+   obj:{text:"Explain what happened yesterday and why you had to leave.",
+     need:[{lab:"What happened (past)", re:/\b(called|asked|needed|wanted|phoned|sent|told|had|was|got)\b/, ex:"My boss called me …"},
+           {lab:"Link — so / because", re:/\b(so|because)\b/, ex:"…, so …"},
+           {lab:"Obligation — had to …", re:/\bhad to\b/, ex:"… I had to go back to the office."}],
+     bad:[{re:/\b(must|have to) (go|return|work|stay|check)\b/, k:1, msg:"Past obligation: had to."}]}},
+
+  {npc:"Oh dear. Was it urgent?",
+   ack:"That sounds stressful!",
+   task:"Say yes (short answer): a payment didn't arrive, so you needed to check it.",
+   say:"Yes, it was. A payment didn't arrive, so we needed to check it.",
+   keys:[{s:"it was", base:"short answer", tag:"Short answers", ok:["yes it was"],
+          bad:[["yes it is","Was it…? → Yes, it was."],["yes it did","Was it…? → Yes, it was."]],
+          cat:"She asked “Was it…?”.", rule:"Was it…? → Yes, it was. / No, it wasn't.", ch:["Yes, it was.","Yes, it is."]},
+         {s:"didn't arrive", base:"not / arrive", tag:"Past simple", ok:["did not arrive","did not come"],
+          bad:[["did not arrived","After didn't, use the base verb: didn't arrive."],["payment not","Add the helper: the payment didn't arrive."],["not arrive","Add the helper: it didn't arrive."],["do not arrive","It's finished: didn't arrive."]],
+          cat:"Negative in the past: helper + base verb.", rule:"Past negative: didn't + base verb (didn't arrive — not didn't arrived).", ch:["A payment didn't arrive","A payment didn't arrived"]},
+         {s:"needed", base:"need", tag:"Past simple", soft:true, ok:["we needed","had to check"],
+          bad:[["we need to check","It was yesterday → we needed to check."]],
+          cat:"Yesterday again.", rule:"need → needed /ˈniːdɪd/.", ch:["we needed to check it","we need to check it"]}],
+   obj:{text:"Answer her (short answer) and explain the problem in the past.",
+     need:[{lab:"Short answer — Yes, it was.", re:/\byes,? it was\b|\bno,? it was not\b/, ex:"Yes, it was."},
+           {lab:"The problem — past negative (didn't …)", re:/\bdid not \w+\b|\bwas (late|wrong|missing|lost)\b/, ex:"A payment didn't arrive …"}],
+     bad:[{re:/\bdid not (?!need\b|feed\b|proceed\b|exceed\b|succeed\b)\w+ed\b/, k:1, msg:"After didn't: base verb."}]}},
+
+  {npc:"That sounds stressful! Would you like a copy of yesterday's slides?",
+   ack:"No problem. I'll email them to you tonight.",
+   task:"Accept politely and say that would be very helpful.",
+   say:"Yes, please. That would be very helpful.",
+   keys:[{s:"Yes, please", base:"accept an offer", tag:"Short answers", ok:["yes please","yes i would"],
+          bad:[["yes i like","Would you like…? → Yes, please. (or Yes, I would.)"],["yes i want","Would you like…? → Yes, please."],["yes i do","Would you like…? → Yes, please."]],
+          cat:"How do we accept “Would you like…?”", rule:"Would you like…? → Yes, please. / Yes, I would. (not Yes, I like.)", ch:["Yes, please.","Yes, I like."]},
+         {s:"helpful", base:"help → adjective", tag:"Word form", ok:["helpful","useful"],
+          bad:[["very help","Help is a verb. The adjective is helpful."],["very helping","The adjective is helpful."]],
+          cat:"Help is a verb. What is the adjective?", rule:"help (verb) → helpful (adjective): That would be very helpful.", ch:["very helpful","very help"]}],
+   obj:{text:"Accept her offer politely and thank her.",
+     need:[{lab:"Accept — Yes, please / Yes, I would", re:/\byes,? (please|i would|that would)\b/, ex:"Yes, please."},
+           {lab:"Thanks / it helps", re:/\b(helpful|useful|great|kind|thank|wonderful|perfect)\b/, ex:"That would be very helpful."}]}},
+
+  {npc:"No problem — I'll email them to you tonight. Did you understand the homework?",
+   ack:"Of course! Come and see me at the coffee break.",
+   task:"Say no (short answer), and ask her politely to explain it again.",
+   say:"No, I didn't. Could you explain it again, please?",
+   keys:[{s:"I didn't", base:"short answer", tag:"Short answers", ok:["no i did not","not really"],
+          bad:[["no i do not","Did you…? → No, I didn't."],["no i not","Did you…? → No, I didn't."]],
+          cat:"She asked “Did you…?”.", rule:"Did you…? → No, I didn't. / Yes, I did.", ch:["No, I didn't.","No, I don't."]},
+         {s:"Could you explain", base:"polite request: explain", tag:"Polite requests", ok:["could you explain","can you explain","would you explain","could you please explain"],
+          bad:[["please explain","Make it a polite question: Could you explain…?"],["could you explained","After could: explain."],["could you explaining","After could: explain."],["explain me","We explain something TO someone: Could you explain it to me?"]],
+          cat:"Make it a polite question.", rule:"Could you + base verb …? We explain something to someone (not explain me).", ch:["Could you explain it again, please?","Please explain me again."]}],
+   obj:{text:"Answer her (short answer) and ask her politely to explain the homework again.",
+     need:[{lab:"Short answer — No, I didn't / Not really", re:/\b(no,? i did not|not really|not completely|not all of it)\b/, ex:"No, I didn't."},
+           {lab:"Polite request — Could you explain … ?", re:/\b(could|can|would) you (please )?explain\b/, ex:"Could you explain it again?"}],
+     bad:[{re:/\bexplain me\b/, k:1, msg:"We explain something TO someone: Could you explain it to me?"}]}}
+ ]},
+
+/* ---------------- G6 ---------------- */
+{id:"g6", title:"Coffee-Break Small Talk", cefr:"B1", npc:"mark", art:"coffee",
+ place:"Course closing day · coffee break · Friday 10:30",
+ goal:"Make a new international contact: say where you're from, compare weather, talk about your plans, and swap email addresses.",
+ focus:["Comparatives","Future plans (I'm flying…)","Have you ever…?","would love to + verb"],
+ story:"Last day of the course. You have spoken English all week — and now, at the coffee table, an American officer you haven't met turns to you.",
+ brief:{h:"Small-talk toolkit",
+   viz:"compare",
+   rows:[["Compare","Bangkok is <b>hotter than</b> Hawaii. (not more hot)"],["Fixed plan","I'<b>m flying</b> back <b>on</b> Saturday."],["Experience","Have you ever been…? → No, I <b>haven't</b>."],["Wish","I'd love <b>to visit</b> New York."]],
+   tip:"Small talk is short and friendly. Answer, then add one detail."},
+ turns:[
+  {npc:"Hi there! I don't think we've met. I'm Mark — I work in finance too, at a base in Hawaii. Where are you from?",
+   ack:"Bangkok! I've always wanted to go there.",
+   task:"Say nice to meet you, and that you're from Bangkok, in Thailand.",
+   say:"Nice to meet you, Mark. I'm from Bangkok, in Thailand.",
+   keys:[{s:"I'm from", base:"I + be + from", tag:"Verb be", ok:["i am from","i come from"],
+          bad:[["i from","Don't drop am: I'm from Bangkok."],["i am come from","Say I'm from — or I come from (not both)."]],
+          cat:"Is a verb missing?", rule:"I am (I'm) from … — or I come from … (not I am come from).", ch:["I'm from Bangkok.","I from Bangkok."]}],
+   obj:{text:"Say nice to meet you and where you are from.",
+     need:[{lab:"Nice to meet you", re:/\b(nice|good|great|pleased) to meet you\b/, ex:"Nice to meet you."},
+           {lab:"Where you're from — I'm from …", re:/\bi (am|come) from\b/, ex:"I'm from …"}]}},
+
+  {npc:"Bangkok! I've always wanted to go there. Is it hot this time of year?",
+   ack:"Ha! I bet it is.",
+   task:"Say yes (short answer) and that Bangkok is much hotter than Hawaii.",
+   say:"Yes, it is. Bangkok is much hotter than Hawaii!",
+   keys:[{s:"it is", base:"short answer", tag:"Short answers", ok:["yes it is","yes very"],
+          bad:[["yes it does","Is it…? → Yes, it is."],["yes it has","Is it…? → Yes, it is."]],
+          cat:"He asked “Is it…?”.", rule:"Is it…? → Yes, it is. / No, it isn't.", ch:["Yes, it is.","Yes, it does."]},
+         {s:"hotter than", base:"hot → compare", tag:"Comparatives", ok:["hotter than"],
+          bad:[["more hotter","Just hotter (not more hotter)."],["more hot","Short adjective → add -er: hotter (not more hot)."],["hot than","Add -er: hotter than."],["hotter that","hotter than (not that)."]],
+          cat:"You are comparing two places.", rule:"Short adjectives: -er than (hot → hotter than, big → bigger). Long ones: more … than (more expensive than).", ch:["much hotter than","much more hot than"]}],
+   obj:{text:"Answer (short answer) and compare Bangkok with Hawaii.",
+     need:[{lab:"Short answer — Yes, it is.", re:/\byes,? it is\b|\byes,? very\b/, ex:"Yes, it is."},
+           {lab:"Compare — …er than / more … than", re:/\b(\w+er|more \w+|less \w+) than\b/, ex:"Bangkok is hotter than …"}],
+     bad:[{re:/\bmore (hot|cold|big|busy|wet|warm|cheap|nice|hotter|bigger|busier)\b/, k:1, msg:"Short adjectives: hotter, bigger, busier (not more hot)."},
+          {re:/\b(hot|cold|big|busy|warm|cheap) than\b/, k:1, msg:"Add -er: hotter than."}]}},
+
+  {npc:"Ha! I bet it is. So, what are you doing after the course?",
+   ack:"Nice. Back to the office on Monday, then!",
+   task:"Say you're flying back to Bangkok on Saturday (your ticket is booked).",
+   say:"I'm flying back to Bangkok on Saturday.",
+   keys:[{s:"I'm flying", base:"fly — fixed plan", tag:"Future plans", ok:["i am flying","i am going back","i am going to fly","i am leaving","i am returning","i am going home"],
+          bad:[["i flying","Don't drop am: I'm flying."],["i fly back","A fixed plan (ticket booked) → I'm flying back on Saturday."],["i will fly back","Correct English — but for a plan you have already booked, we usually say: I'm flying back.","soft"]],
+          cat:"You already have your ticket. Which form for a fixed plan?", rule:"Fixed plans and arrangements → am / is / are + -ing: I'm flying back on Saturday.", ch:["I'm flying back on Saturday.","I fly back on Saturday."]},
+         {s:"on", base:"preposition", tag:"Prepositions", ok:["on saturday"],
+          bad:[["in saturday","Days: on Saturday."],["at saturday","Days: on Saturday."]],
+          cat:"Which little word goes with days?", rule:"on + day · at + time · in + month.", ch:["on Saturday","in Saturday"]}],
+   obj:{text:"Tell him your plan after the course and when.",
+     need:[{lab:"Plan — I'm flying / I'm going to / I'll …", re:/\bi (am \w+ing|will \w+)\b/, ex:"I'm flying back …"},
+           {lab:"When — on + day / tomorrow", re:new RegExp("\\bon "+DAYS+"\\b|\\b(tomorrow|next week|this weekend|tonight)\\b"), ex:"… on Saturday."}],
+     bad:[{re:new RegExp("\\b(in|at) "+DAYS+"\\b"), k:1, msg:"Days: on Saturday."}]}},
+
+  {npc:"Nice. Have you ever been to the United States before?",
+   ack:"You should! New York is amazing.",
+   task:"Say no (short answer), but you'd love to visit New York one day.",
+   say:"No, I haven't, but I'd love to visit New York one day.",
+   keys:[{s:"I haven't", base:"short answer", tag:"Short answers", ok:["no i have not","yes i have","no never"],
+          bad:[["no i did not","Have you ever…? → No, I haven't."],["no i do not","Have you ever…? → No, I haven't."],["no i never go","Say: No, I haven't. / No, never."]],
+          cat:"He asked “Have you ever…?”.", rule:"Have you ever…? → Yes, I have. / No, I haven't.", ch:["No, I haven't.","No, I didn't."]},
+         {s:"to visit", base:"would love + visit", tag:"need to / to + verb", ok:["love to visit","like to visit","love to go","like to go","love to see","like to see"],
+          bad:[["love visit","would love TO visit."],["like visit","would like TO visit."],["love to visiting","After to: base verb — to visit."],["love to visited","After to: base verb — to visit."]],
+          cat:"Check the words after “I'd love”.", rule:"would love / would like + to + base verb: I'd love to visit.", ch:["I'd love to visit New York","I'd love visit New York"]}],
+   obj:{text:"Answer his question (short answer) and say one place you would love to visit.",
+     need:[{lab:"Short answer — No, I haven't / Yes, I have", re:/\b(no,? i have not|yes,? i have|no,? never|not yet)\b/, ex:"No, I haven't."},
+           {lab:"Wish — I'd love to / I'd like to + verb", re:/\bi would (love|like) to \w+\b/, ex:"… but I'd love to visit …"}],
+     bad:[{re:/\b(no|yes),? i (did not|do not|did|do)\b/, k:0, msg:"Have you ever…? → No, I haven't / Yes, I have."}]}},
+
+  {npc:"You should! Well, it was really nice talking to you. Let's keep in touch.",
+   ack:"Sure! Here's my card. Have a great flight home!",
+   task:"Say it was nice talking to him too, and ask for his email address.",
+   say:"It was nice talking to you too. Could I have your email address?",
+   keys:[{s:"was", base:"be (past)", tag:"Past simple", ok:["it was nice","it was great","it was good","it was lovely","it was a pleasure"],
+          bad:[["it is nice talk","Say: It was nice talking to you."],["nice to talking","Say: nice talking to you (or: nice to talk to you)."]],
+          cat:"The chat is finishing.", rule:"At the end of a conversation: It was nice talking to you.", ch:["It was nice talking to you.","It is nice talk to you."]},
+         {s:"Could I have", base:"polite request", tag:"Polite requests", ok:["could i have","can i have","could i get","can i get","may i have"],
+          bad:[["give me your","Too direct. Ask: Could I have your email address?"],["i want your","Too direct. Ask: Could I have…?"]],
+          cat:"Make it a polite question.", rule:"Asking for something: Could I have …?", ch:["Could I have your email address?","Give me your email address."]}],
+   obj:{text:"Say it was nice talking to him, and ask politely for his email address.",
+     need:[{lab:"It was nice talking to you", re:/\bit was (really )?(nice|great|good|lovely|a pleasure) (talking|meeting|to meet|to talk)\b|\bnice (talking|meeting) (to )?you\b/, ex:"It was nice talking to you too."},
+           {lab:"Ask for his email — Could I have … ?", re:/\b(could|can|may) i (have|get|ask for)\b/, ex:"Could I have your email address?"}]}}
+ ]}
+];
+
+/* ======================================================================
+   GROUND SCHOOL — built-in pictures (scenes, portraits, grammar visuals)
+   Drop-in photos: img/gs-scene-g1.png … img/gs-scene-g6.png replace the
+   drawn scenes (same rules as the existing scene-*.png pictures).
+   ====================================================================== */
+function gsAvatar(pid, size, mood){
+  const p = GS_PEOPLE[pid], a = p.av, s = size || 44;
+  const dark = gsShade(a.skin, -0.18), hairD = gsShade(a.hair, -0.25);
+  let back = "", front = "";
+  if (a.style === "long") { back = `<path d="M28 44 Q27 18 50 17 Q73 18 72 44 L74 78 Q62 84 50 82 Q38 84 26 78 Z" fill="${a.hair}"/>`;
+    front = `<path d="M32 40 Q34 20 50 20 Q67 20 68 40 Q60 30 50 31 Q41 31 32 40 Z" fill="${a.hair}"/>`; }
+  else if (a.style === "bob") { back = `<path d="M29 46 Q28 20 50 19 Q72 20 71 46 L71 58 Q66 62 62 58 L38 58 Q34 62 29 58 Z" fill="${a.hair}"/>`;
+    front = `<path d="M32 42 Q33 21 51 21 Q68 22 68 40 Q57 33 46 31 Q38 34 32 42 Z" fill="${a.hair}"/>`; }
+  else if (a.style === "buzz") { front = `<path d="M33.5 40 Q34 24 50 23.5 Q66 24 66.5 40 Q60 31 50 30.5 Q40 31 33.5 40 Z" fill="${a.hair}" opacity=".95"/>`; }
+  else { front = `<path d="M32.5 41 Q31 21 50 20.5 Q69 21 67.5 41 Q66 31 58 29 Q50 33 42 30 Q35 32 32.5 41 Z" fill="${a.hair}"/><path d="M42 30 Q50 26 58 29" stroke="${hairD}" stroke-width="1.2" fill="none"/>`; }
+  const smile = mood === "puzzled" ? `<path d="M44.5 56 Q50 54 55.5 56.5" stroke="#6b2b1d" stroke-width="1.8" fill="none" stroke-linecap="round"/>`
+              : `<path d="M44 54 Q50 59.5 56 54" stroke="#6b2b1d" stroke-width="1.8" fill="none" stroke-linecap="round"/>`;
+  const brows = mood === "puzzled" ? `<path d="M40 40.5 L46 42" stroke="${hairD}" stroke-width="1.6" stroke-linecap="round"/><path d="M54 41 L60 39" stroke="${hairD}" stroke-width="1.6" stroke-linecap="round"/>`
+              : `<path d="M40 41 Q43 39.5 46 41" stroke="${hairD}" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M54 41 Q57 39.5 60 41" stroke="${hairD}" stroke-width="1.5" fill="none" stroke-linecap="round"/>`;
+  let extra = "";
+  if (a.uniform) extra += `<path d="M42 74 L50 86 L58 74" fill="#e9eef5"/><path d="M47 78 L50 92 L53 78" fill="#1c2c48"/><rect x="20" y="80" width="14" height="4" rx="1" fill="#d4af37"/><rect x="66" y="80" width="14" height="4" rx="1" fill="#d4af37"/>`;
+  if (a.badge) extra += `<rect x="60" y="86" width="12" height="5" rx="1" fill="#d4af37"/><path d="M42 74 L50 84 L58 74" fill="#f6f1ea"/>`;
+  if (a.headset) extra += `<path d="M31 46 Q31 15 50 15 Q69 15 69 46" stroke="#222" stroke-width="3" fill="none"/><rect x="27" y="42" width="7" height="12" rx="3" fill="#222"/><path d="M30 54 Q32 62 42 62" stroke="#222" stroke-width="2" fill="none"/><circle cx="43" cy="62" r="2" fill="#222"/>`;
+  if (!a.uniform && !a.badge && !a.headset) extra += `<path d="M42 74 L50 82 L58 74" fill="${gsShade(a.top, .35)}"/>`;
+  return `<svg class="gs-av" viewBox="0 0 100 100" width="${s}" height="${s}" aria-hidden="true"><defs><clipPath id="avc${pid}${s}"><circle cx="50" cy="50" r="50"/></clipPath></defs>
+    <g clip-path="url(#avc${pid}${s})"><rect width="100" height="100" fill="${a.bg}"/>${back}
+    <path d="M14 104 Q16 76 50 73 Q84 76 86 104 Z" fill="${a.top}"/>
+    <rect x="44" y="58" width="12" height="17" rx="4" fill="${dark}"/>
+    <ellipse cx="33" cy="47" rx="3" ry="4.5" fill="${dark}"/><ellipse cx="67" cy="47" rx="3" ry="4.5" fill="${dark}"/>
+    <ellipse cx="50" cy="45" rx="17" ry="20.5" fill="${a.skin}"/>${front}${brows}
+    <circle cx="43.5" cy="46.5" r="2" fill="#2a1a12"/><circle cx="56.5" cy="46.5" r="2" fill="#2a1a12"/>
+    <path d="M50 47 Q48.5 51.5 50.5 52" stroke="${dark}" stroke-width="1.2" fill="none"/>${smile}${extra}</g></svg>`;
+}
+function gsShade(hex, k){
+  const n = parseInt(hex.slice(1), 16); let r = n >> 16, g = (n >> 8) & 255, b = n & 255;
+  const f = v => Math.max(0, Math.min(255, Math.round(k < 0 ? v * (1 + k) : v + (255 - v) * k)));
+  return "#" + [f(r), f(g), f(b)].map(v => v.toString(16).padStart(2, "0")).join("");
+}
+
+/* a standing / half-length person for the scenes (x = centre, y = waist line) */
+function gsFig(pid, x, y, s, o){
+  o = o || {};
+  const a = pid ? GS_PEOPLE[pid].av : {skin:o.skin || "#d9a77f", hair:o.hair || "#2a1a12", style:o.style || "short", top:o.top || "#3b4a5e"};
+  const dark = gsShade(a.skin, -0.18);
+  const T = (dx, dy) => `${x + dx * s} ${y + dy * s}`;
+  let g = `<g opacity="${o.op == null ? 1 : o.op}">`;
+  if (o.legs) g += `<path d="M${T(-22,0)} L${T(-20,120)} L${T(-4,120)} L${T(-2,10)} L${T(2,10)} L${T(4,120)} L${T(20,120)} L${T(22,0)} Z" fill="${o.legs}"/>
+      <rect x="${x - 24 * s}" y="${y + 116 * s}" width="${20 * s}" height="${7 * s}" rx="${3 * s}" fill="#151515"/><rect x="${x + 4 * s}" y="${y + 116 * s}" width="${20 * s}" height="${7 * s}" rx="${3 * s}" fill="#151515"/>`;
+  if (a.style === "long") g += `<path d="M${T(-20,-128)} Q${T(-22,-162)} ${T(0,-163)} Q${T(22,-162)} ${T(20,-128)} L${T(22,-92)} L${T(-22,-92)} Z" fill="${a.hair}"/>`;
+  g += `<path d="M${T(-30,4)} L${T(-34,-74)} Q${T(-32,-96)} ${T(-12,-100)} L${T(12,-100)} Q${T(32,-96)} ${T(34,-74)} L${T(30,4)} Z" fill="${a.top}"/>`;
+  if (o.arm === "cup") g += `<path d="M${T(26,-80)} Q${T(44,-56)} ${T(30,-40)}" stroke="${a.top}" stroke-width="${12 * s}" fill="none" stroke-linecap="round"/><rect x="${x + 22 * s}" y="${y - 58 * s}" width="${14 * s}" height="${17 * s}" rx="${2 * s}" fill="#f4efe6" stroke="#b8ab95"/><circle cx="${x + 29 * s}" cy="${y - 42 * s}" r="${5 * s}" fill="${a.skin}"/>`;
+  if (o.arm === "folder") g += `<rect x="${x - 4 * s}" y="${y - 66 * s}" width="${34 * s}" height="${42 * s}" rx="${2 * s}" fill="#c9a45a" stroke="#8a6a2a" transform="rotate(-8 ${x + 13 * s} ${y - 45 * s})"/><circle cx="${x + 2 * s}" cy="${y - 40 * s}" r="${5 * s}" fill="${a.skin}"/>`;
+  if (o.arm === "point") g += `<path d="M${T(-26,-82)} Q${T(-52,-96)} ${T(-62,-118)}" stroke="${a.top}" stroke-width="${12 * s}" fill="none" stroke-linecap="round"/><circle cx="${x - 64 * s}" cy="${y - 122 * s}" r="${5.5 * s}" fill="${a.skin}"/>`;
+  if (o.arm === "laptop") g += `<rect x="${x - 26 * s}" y="${y - 60 * s}" width="${40 * s}" height="${28 * s}" rx="${2 * s}" fill="#2b2f36" transform="rotate(-6 ${x - 6 * s} ${y - 46 * s})"/><circle cx="${x - 22 * s}" cy="${y - 40 * s}" r="${5 * s}" fill="${a.skin}"/>`;
+  g += `<rect x="${x - 6 * s}" y="${y - 110 * s}" width="${12 * s}" height="${14 * s}" fill="${dark}"/>`;
+  g += `<ellipse cx="${x}" cy="${y - 128 * s}" rx="${17 * s}" ry="${21 * s}" fill="${a.skin}"/>`;
+  if (a.style === "long" || a.style === "bob") g += `<path d="M${T(-18,-132)} Q${T(-16,-152)} ${T(1,-151)} Q${T(17,-150)} ${T(18,-134)} Q${T(8,-142)} ${T(-3,-143)} Q${T(-12,-140)} ${T(-18,-132)} Z" fill="${a.hair}"/>`;
+  if (a.style === "bob") g += `<path d="M${T(-19,-134)} Q${T(-21,-112)} ${T(-14,-108)} L${T(-12,-128)} Z" fill="${a.hair}"/><path d="M${T(19,-134)} Q${T(21,-112)} ${T(14,-108)} L${T(12,-128)} Z" fill="${a.hair}"/>`;
+  if (a.style === "short") g += `<path d="M${T(-18,-130)} Q${T(-19,-152)} ${T(0,-152)} Q${T(19,-152)} ${T(18,-130)} Q${T(14,-142)} ${T(0,-142)} Q${T(-12,-141)} ${T(-18,-130)} Z" fill="${a.hair}"/>`;
+  if (a.style === "buzz") g += `<path d="M${T(-16.5,-132)} Q${T(-16,-149)} ${T(0,-149.5)} Q${T(16,-149)} ${T(16.5,-132)} Q${T(10,-141)} ${T(0,-141)} Q${T(-10,-141)} ${T(-16.5,-132)} Z" fill="${a.hair}"/>`;
+  if (!o.back) g += `<circle cx="${x - 6 * s}" cy="${y - 128 * s}" r="${1.9 * s}" fill="#2a1a12"/><circle cx="${x + 6 * s}" cy="${y - 128 * s}" r="${1.9 * s}" fill="#2a1a12"/>
+      <path d="M${T(-5,-118)} Q${T(0,-114)} ${T(5,-118)}" stroke="#6b2b1d" stroke-width="${1.6 * s}" fill="none" stroke-linecap="round"/>`;
+  else g += `<path d="M${T(-17,-128)} Q${T(-17,-110)} ${T(0,-108)} Q${T(17,-110)} ${T(17,-128)} Q${T(17,-150)} ${T(0,-150)} Q${T(-17,-150)} ${T(-17,-128)} Z" fill="${a.hair}"/>`;
+  if (a.uniform) g += `<rect x="${x - 30 * s}" y="${y - 98 * s}" width="${16 * s}" height="${5 * s}" fill="#d4af37"/><rect x="${x + 14 * s}" y="${y - 98 * s}" width="${16 * s}" height="${5 * s}" fill="#d4af37"/>`;
+  if (a.badge) g += `<rect x="${x + 10 * s}" y="${y - 78 * s}" width="${13 * s}" height="${5 * s}" fill="#d4af37"/>`;
+  return g + `</g>`;
+}
+
+function gsSceneArt(m, stamp){
+  const W = 1200, H = 440;
+  const clock = (cx, cy, r, h, mi) => { const rad = d => d * Math.PI / 180, ma = mi / 60 * 360 - 90, ha = ((h % 12) / 12 + mi / 720) * 360 - 90;
+    return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="#f4f1ea" stroke="#7d8793" stroke-width="3"/><line x1="${cx}" y1="${cy}" x2="${cx + r * .5 * Math.cos(rad(ha))}" y2="${cy + r * .5 * Math.sin(rad(ha))}" stroke="#222" stroke-width="4" stroke-linecap="round"/><line x1="${cx}" y1="${cy}" x2="${cx + r * .8 * Math.cos(rad(ma))}" y2="${cy + r * .8 * Math.sin(rad(ma))}" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>`; };
+  const wall = (a, b) => `<defs><linearGradient id="gw${m.id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs><rect width="${W}" height="${H}" fill="url(#gw${m.id})"/>`;
+  const floor = c => `<rect x="0" y="${H - 46}" width="${W}" height="46" fill="${c}"/>`;
+  const txt = (x, y, t, sz, c, w, anchor) => `<text x="${x}" y="${y}" fill="${c}" font-family="Arial,Helvetica,sans-serif" font-size="${sz}" font-weight="${w || 700}" text-anchor="${anchor || "start"}">${t}</text>`;
+  let g = "";
+  switch (m.art) {
+    case "classroom":
+      g = wall("#e9dcc6", "#d7c6a8") + floor("#8b6b4a")
+        + `<rect x="840" y="50" width="300" height="200" fill="#9fd0f0" stroke="#f7f2ea" stroke-width="10"/><rect x="840" y="180" width="300" height="70" fill="#7fae7a"/><line x1="990" y1="50" x2="990" y2="250" stroke="#f7f2ea" stroke-width="8"/>`
+        + `<rect x="150" y="40" width="520" height="230" rx="6" fill="#fbfbf8" stroke="#a9a49a" stroke-width="6"/>` + txt(410, 105, "International Finance Course", 34, "#1d4f8f", 800, "middle")
+        + txt(410, 150, "Day 1 · Welcome!", 28, "#c0392b", 700, "middle") + txt(190, 200, "• Introductions", 22, "#333", 400) + txt(190, 232, "• Course timetable", 22, "#333", 400) + txt(450, 200, "• Your questions", 22, "#333", 400)
+        + `<rect x="150" y="270" width="520" height="10" fill="#a9a49a"/>` + clock(760, 80, 28, 8, 45)
+        + gsFig("sarah", 735, 300, 1.05, {legs:"#2d3440", arm:"point"})
+        + [[140,"#2a1a12","short","#46607e"],[300,"#6b4a2a","long","#7a5a8a"],[470,"#c9a15a","bob","#2f6f5b"],[640,"#1b120c","buzz","#8a4a3a"],[820,"#3a2416","long","#3d5a80"],[990,"#8a3b1e","short","#5c6b3a"]]
+            .map(([x, hr, st, tp]) => gsFig(null, x, H + 70, 1.15, {hair:hr, style:st, top:tp, back:true})).join("")
+        + `<rect x="0" y="${H - 40}" width="${W}" height="14" fill="#6d5137"/>`;
+      break;
+    case "phone":
+      g = wall("#dfe6ee", "#c9d3df") + floor("#5a4a3a")
+        + `<rect x="60" y="50" width="420" height="220" fill="#f6c87a" stroke="#eef2f6" stroke-width="10"/>`
+        + [0,1,2,3,4,5,6,7].map(i => `<rect x="${78 + i * 50}" y="${150 - (i * 37 % 80)}" width="40" height="${120 + (i * 37 % 80)}" fill="${["#7b8ba3","#8c99ad","#6d7d96"][i % 3]}"/>`).join("")
+        + clock(590, 95, 34, 15, 10) + txt(590, 152, "BANGKOK", 15, "#3a4a5e", 700, "middle") + clock(690, 95, 34, 1, 10) + txt(690, 152, "CALIFORNIA", 15, "#3a4a5e", 700, "middle")
+        + `<rect x="0" y="300" width="${W}" height="24" fill="#8a6a48"/><rect x="0" y="324" width="${W}" height="${H - 324}" fill="#6e5236"/>`
+        + `<rect x="640" y="150" width="300" height="150" rx="8" fill="#1d232b"/><rect x="652" y="162" width="276" height="122" fill="#f8fafc"/>`
+        + txt(666, 190, "INVOICE PAS-0417", 18, "#1d4f8f", 800) + txt(666, 216, "Radio parts · 40 units", 15, "#333", 400) + txt(666, 240, "Price on order:  USD 298", 15, "#333", 400) + txt(666, 264, "Price on invoice: USD 312", 15, "#c0392b", 700)
+        + `<rect x="770" y="300" width="40" height="8" fill="#1d232b"/>`
+        + `<rect x="320" y="268" width="150" height="36" rx="10" fill="#2b2f36"/><path d="M330 268 Q395 236 460 268" stroke="#2b2f36" stroke-width="18" fill="none" stroke-linecap="round"/>`
+        + [0,1,2].map(i => `<path d="M${490 + i * 16} ${236 - i * 8} q12 18 0 36" stroke="#c0392b" stroke-width="4" fill="none" stroke-linecap="round" opacity="${1 - i * .25}"/>`).join("")
+        + `<g transform="translate(990 70)"><rect x="-10" y="-10" width="190" height="220" rx="18" fill="#10213a" stroke="#d4af37" stroke-width="3"/>`
+        + `<g transform="translate(35 10)">${gsAvatar("mike", 100).replace(/^<svg[^>]*>/, "<g>").replace(/<\/svg>$/, "</g>")}</g>`
+        + txt(85, 140, "Incoming call", 16, "#d4af37", 700, "middle") + txt(85, 165, "+1 · Mike Turner", 15, "#e9eef5", 400, "middle")
+        + `<circle cx="45" cy="190" r="14" fill="#c0392b"/><circle cx="125" cy="190" r="14" fill="#2ecc71"/></g>`
+        + `<rect x="160" y="290" width="110" height="14" fill="#f4efe6"/><rect x="168" y="282" width="110" height="10" fill="#e9e3d6"/>`;
+      break;
+    case "frontdesk":
+      g = wall("#dbe4ec", "#c3cfdb") + floor("#4d5560")
+        + `<rect x="80" y="40" width="460" height="64" rx="6" fill="#0f2440"/>` + txt(310, 82, "FINANCE · CLAIMS & ALLOWANCES", 26, "#d4af37", 800, "middle")
+        + `<rect x="760" y="44" width="300" height="190" rx="6" fill="#f8f5ec" stroke="#b9b2a0" stroke-width="4"/><rect x="760" y="44" width="300" height="46" fill="#1d4f8f"/>`
+        + txt(910, 76, "EXERCISE BLUE HORIZON", 20, "#fff", 800, "middle") + txt(910, 122, "Welcome, visiting squadrons!", 17, "#333", 700, "middle")
+        + `<path d="M800 210 l60 -60 l40 30 l60 -70 l60 50" stroke="#1d4f8f" stroke-width="5" fill="none"/><path d="M955 100 l18 4 -12 12 z" fill="#1d4f8f"/>` + clock(640, 90, 30, 9, 20)
+        + gsFig("tom", 560, 300, 1.15, {arm:"folder"})
+        + `<rect x="0" y="282" width="${W}" height="22" fill="#e9e3d6"/><rect x="0" y="304" width="${W}" height="${H - 350}" fill="#8a6a48"/>`
+        + `<rect x="230" y="262" width="120" height="22" fill="#f4efe6"/><rect x="238" y="254" width="104" height="10" fill="#fff"/><rect x="880" y="252" width="20" height="32" fill="#2b2f36"/><circle cx="890" cy="248" r="8" fill="#c0392b"/>`
+        + txt(170, 345, "Daily allowance forms", 16, "#f4efe6", 700);
+      break;
+    case "hotel":
+      g = wall("#3a2c22", "#251b14") + floor("#5a3b2a")
+        + `<rect x="70" y="50" width="330" height="210" fill="#0f1d3a" stroke="#b08d57" stroke-width="8"/>`
+        + `<path d="M150 260 L150 205 Q235 120 320 205 L320 260 Z" fill="#e8e2d0" opacity=".85"/><rect x="226" y="120" width="18" height="40" fill="#e8e2d0" opacity=".85"/><circle cx="235" cy="115" r="7" fill="#e8e2d0" opacity=".85"/>`
+        + [0,1,2,3,4].map(i => `<circle cx="${110 + i * 60}" cy="${80 + (i % 2) * 20}" r="2" fill="#fff"/>`).join("")
+        + `<rect x="470" y="40" width="460" height="70" rx="6" fill="#1a120c" stroke="#d4af37" stroke-width="2"/>` + txt(700, 86, "CAPITOL VIEW HOTEL", 32, "#d4af37", 800, "middle")
+        + clock(1010, 80, 30, 21, 30) + `<path d="M980 150 Q1010 120 1040 150" stroke="#d4af37" stroke-width="2" fill="none"/>`
+        + gsFig("jessica", 700, 305, 1.1, {})
+        + `<rect x="420" y="285" width="560" height="22" fill="#b08d57"/><rect x="430" y="307" width="540" height="${H - 353}" fill="#6b4a32"/>`
+        + `<path d="M560 285 q14 -26 28 0 z" fill="#d4af37"/><rect x="556" y="283" width="36" height="4" fill="#8a6a2a"/><rect x="800" y="272" width="44" height="14" rx="2" fill="#f4efe6" transform="rotate(-6 822 279)"/><rect x="812" y="276" width="44" height="14" rx="2" fill="#d4af37" transform="rotate(4 834 283)"/>`
+        + `<rect x="1060" y="250" width="100" height="140" rx="12" fill="#1f5f8f"/><rect x="1095" y="225" width="30" height="28" rx="6" fill="none" stroke="#173f5f" stroke-width="6"/><line x1="1085" y1="250" x2="1085" y2="390" stroke="#173f5f" stroke-width="4"/><line x1="1135" y1="250" x2="1135" y2="390" stroke="#173f5f" stroke-width="4"/>`;
+      break;
+    case "corridor":
+      g = wall("#ece5d8", "#d9cfbf") + floor("#9a8a75")
+        + `<polygon points="0,0 220,70 220,${H - 80} 0,${H}" fill="#d2c6b2"/><polygon points="${W},0 980,70 980,${H - 80} ${W},${H}" fill="#d2c6b2"/><rect x="220" y="70" width="760" height="${H - 150}" fill="#f2ece2"/>`
+        + `<rect x="60" y="110" width="90" height="240" fill="#8a6a48" transform="skewY(18)"/><rect x="1050" y="140" width="90" height="230" fill="#8a6a48" transform="skewY(-18) translate(0 400)"/>`
+        + `<rect x="280" y="100" width="300" height="190" rx="4" fill="#b98d5a"/><rect x="292" y="112" width="276" height="166" fill="#d8b98c"/>`
+        + `<rect x="306" y="126" width="120" height="70" fill="#fff" transform="rotate(-3 366 161)"/>` + txt(316, 152, "SESSION 6", 16, "#1d4f8f", 800) + txt(316, 176, "Budget control", 14, "#333", 400)
+        + `<rect x="440" y="128" width="112" height="84" fill="#fff8c4" transform="rotate(4 496 170)"/>` + txt(452, 158, "Homework:", 15, "#c0392b", 800) + txt(452, 182, "Variance report", 13, "#333", 400)
+        + `<rect x="320" y="210" width="96" height="56" fill="#cfe9e6"/>` + txt(330, 240, "Wed 13:30", 14, "#333", 700)
+        + `<circle cx="366" cy="128" r="5" fill="#c0392b"/><circle cx="496" cy="128" r="5" fill="#2e86c1"/>`
+        + `<rect x="660" y="100" width="260" height="140" fill="#bfe0f5" stroke="#fff" stroke-width="8"/><line x1="790" y1="100" x2="790" y2="240" stroke="#fff" stroke-width="6"/>` + clock(860, 80, 24, 8, 40)
+        + gsFig("sarah", 650, 300, 1.1, {legs:"#2d3440", arm:"cup"});
+      break;
+    case "coffee":
+      g = wall("#21304a", "#16233a") + floor("#3a3a46")
+        + `<rect x="100" y="34" width="1000" height="92" rx="8" fill="#0d1b36" stroke="#d4af37" stroke-width="3"/>` + txt(600, 78, "INTERNATIONAL FINANCE COURSE", 32, "#d4af37", 800, "middle") + txt(600, 110, "Closing day · Coffee break 10:30", 20, "#e9eef5", 400, "middle")
+        + gsFig(null, 170, 360, .85, {hair:"#6b4a2a", style:"long", top:"#8a5a7a", op:.45}) + gsFig(null, 280, 360, .85, {hair:"#2a1a12", style:"short", top:"#4a6a4a", op:.45})
+        + gsFig(null, 1020, 360, .85, {hair:"#c9a15a", style:"bob", top:"#6a4a3a", op:.45}) + gsFig(null, 1110, 360, .85, {hair:"#1b120c", style:"buzz", top:"#3a4a6a", op:.45})
+        + gsFig("mark", 760, 320, 1.1, {arm:"cup"})
+        + `<rect x="360" y="300" width="300" height="14" fill="#f4efe6"/><rect x="372" y="314" width="276" height="${H - 360}" fill="#d9d2c3"/>`
+        + `<rect x="390" y="236" width="44" height="64" rx="6" fill="#9aa4b0"/><rect x="404" y="226" width="16" height="12" fill="#6b7480"/><rect x="450" y="236" width="44" height="64" rx="6" fill="#9aa4b0"/><rect x="464" y="226" width="16" height="12" fill="#6b7480"/>`
+        + [0,1,2,3].map(i => `<rect x="${514 + i * 30}" y="${282}" width="20" height="18" rx="2" fill="#fff"/>`).join("")
+        + `<ellipse cx="610" cy="296" rx="34" ry="6" fill="#f4efe6"/>` + [0,1,2].map(i => `<ellipse cx="${592 + i * 18}" cy="290" rx="9" ry="6" fill="#c98e3a"/>`).join("");
+      break;
+  }
+  if (stamp) {
+    g += `<rect width="${W}" height="${H}" fill="rgba(5,10,20,.35)"/>
+      <g transform="rotate(-6 600 220)"><rect x="360" y="170" width="480" height="100" rx="10" fill="rgba(5,10,20,.55)" stroke="${stamp.c}" stroke-width="8"/>
+      ${txt(600, 236, stamp.t, stamp.t.length > 14 ? 34 : 46, stamp.c, 900, "middle")}</g>`;
+  }
+  return `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${esc(m.place)}">${g}</svg>`;
+}
+
+/* grammar briefing visuals */
+function gsViz(kind){
+  const T = (x, y, t, sz, c, w, a) => `<text x="${x}" y="${y}" fill="${c}" font-family="Arial,Helvetica,sans-serif" font-size="${sz}" font-weight="${w || 700}" text-anchor="${a || "middle"}">${t}</text>`;
+  const box = (x, y, w, h, f, s) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="10" fill="${f}" stroke="${s || "none"}" stroke-width="2"/>`;
+  const G = "#D4AF37", N = "#0F2440", L = "#23486f", I = "#EDF2F9", D = "#A9BBD0", OK = "#4ade80", BAD = "#f87171";
+  let g = "";
+  switch (kind) {
+    case "sverb":
+      g = box(20, 20, 150, 56, N, L) + T(95, 56, "I · we · they", 20, I) + box(190, 20, 160, 56, "#14304F", L) + T(270, 57, "work", 26, I)
+        + box(20, 96, 150, 56, N, L) + T(95, 132, "he · she · it", 20, I) + box(190, 96, 160, 56, "#14304F", G) + T(258, 134, "work", 26, I) + T(312, 134, "s", 30, G, 900)
+        + `<path d="M370 124 h40" stroke="${G}" stroke-width="3" marker-end="url(#ar)"/>` + T(520, 116, "Say the -s!", 22, G) + T(520, 142, "she works · it takes", 18, D, 400);
+      break;
+    case "timeline":
+      g = `<line x1="30" y1="110" x2="590" y2="110" stroke="${D}" stroke-width="4"/><polygon points="590,102 606,110 590,118" fill="${D}"/>`
+        + `<circle cx="160" cy="110" r="10" fill="${G}"/>` + T(160, 82, "last Monday", 17, G) + T(160, 148, "We received it.", 17, I) + T(160, 170, "finished time → past simple", 13, D, 400)
+        + `<path d="M260 110 Q420 30 548 104" stroke="${OK}" stroke-width="3" fill="none" stroke-dasharray="7 6"/><polygon points="546,96 556,108 540,108" fill="${OK}"/>` + T(410, 52, "up to now → haven't paid … yet", 15, OK)
+        + `<rect x="540" y="86" width="44" height="48" rx="6" fill="#14304F" stroke="${G}"/>` + T(562, 115, "NOW", 14, G) + T(530, 160, "We're checking it now.", 15, I);
+      break;
+    case "ladder":
+      g = box(20, 112, 170, 54, "#3a1d1d", BAD) + T(105, 138, "Send it.", 18, I) + T(105, 157, "✗ an order", 13, BAD, 400)
+        + box(215, 72, 190, 54, "#3a2d1d", "#fbbf24") + T(310, 98, "Please send it.", 18, I) + T(310, 117, "✗ still an order", 13, "#fbbf24", 400)
+        + box(430, 30, 180, 54, "#12351f", OK) + T(520, 56, "Could you send it?", 17, I) + T(520, 75, "✓ polite request", 13, OK, 400)
+        + `<path d="M110 106 L250 132" stroke="none"/><path d="M190 120 L230 110 M405 82 L428 70" stroke="${G}" stroke-width="3"/>`;
+      break;
+    case "question":
+      g = T(20, 40, "The restaurant serves Asian food.", 19, D, 400, "start")
+        + box(20, 70, 80, 50, "#14304F", G) + T(60, 102, "Does", 20, G) + box(110, 70, 170, 50, N, L) + T(195, 102, "the restaurant", 18, I)
+        + box(290, 70, 90, 50, N, L) + T(335, 102, "serve", 20, I) + box(390, 70, 130, 50, N, L) + T(455, 102, "Asian food", 18, I) + T(540, 104, "?", 30, G, 900)
+        + T(60, 150, "helper first", 13, G, 400) + T(335, 150, "no -s", 13, OK, 400) + T(470, 150, "Is there a gym?", 15, D, 400);
+      break;
+    case "past":
+      g = [["miss","missed","/t/"],["call","called","/d/"],["need","needed","/ɪd/"]].map(([a, b, c], i) =>
+          box(20 + i * 200, 24, 180, 74, N, L) + T(110 + i * 200, 54, a + "  →  " + b, 19, I) + T(110 + i * 200, 82, "ends in " + c, 15, G, 400)).join("")
+        + box(20, 116, 280, 54, "#12351f", OK) + T(160, 149, "must → had to", 19, I) + box(320, 116, 280, 54, "#3a1d1d", BAD) + T(460, 149, "didn't arrive  (not arrived)", 16, I);
+      break;
+    case "compare":
+      g = `<rect x="40" y="30" width="22" height="120" rx="11" fill="#14304F" stroke="${L}"/><rect x="46" y="60" width="10" height="84" rx="5" fill="${BAD}"/><circle cx="51" cy="150" r="16" fill="${BAD}"/>`
+        + T(180, 70, "hot → hotter than", 20, I) + T(180, 98, "big → bigger · busy → busier", 15, D, 400) + T(180, 126, "expensive → more expensive", 15, D, 400)
+        + box(380, 30, 220, 130, N, L) + `<rect x="380" y="30" width="220" height="34" rx="10" fill="${G}"/>` + T(490, 54, "SATURDAY", 18, "#1a1405", 900)
+        + T(490, 100, "✈ ticket booked", 18, I) + T(490, 136, "I'm flying back.", 17, OK);
+      break;
+    default: return "";
+  }
+  return `<svg class="gs-viz" viewBox="0 0 620 180" role="img" aria-label="Grammar picture"><defs><marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="${G}"/></marker></defs>${g}</svg>`;
+}
+
+/* ======================================================================
+   GROUND SCHOOL — engine: normalising speech, checking, voices, mic, UI
+   ====================================================================== */
+/* ▼ Paste the Google Apps Script web-app URL (ends in /exec) between the quotes to switch on login + online saving. */
+const GS_SHEET_URL = "";
+const GS_KEY = "rtafGroundSchool_v1";
+const GS_DEFAULT = {best:{}, sel:"g1", slow:false, text:true, errs:{}, speaks:0, run:null, _t:0};
+let gs = JSON.parse(JSON.stringify(GS_DEFAULT));
+try { const raw = localStorage.getItem(GS_KEY); if (raw) gs = Object.assign(gs, JSON.parse(raw)); } catch(e){}
+function gsSave(){ gs._t = Date.now(); try { localStorage.setItem(GS_KEY, JSON.stringify(gs)); } catch(e){} cloudQueue(); }
+
+const GS_MODES = [
+  {id:"script", icon:"📜", name:"Read the script", short:"Script", desc:"Read the full sentence aloud. Learn the rhythm."},
+  {id:"gap",    icon:"🧩", name:"Fill the gaps",   short:"Gaps",   desc:"The grammar words are hidden. Say the whole sentence with the right forms."},
+  {id:"own",    icon:"🎯", name:"Your own words",  short:"Own words", desc:"No script — only your objectives. Choose your own words."}
+];
+const GS_CATCH = "Sorry — I didn't quite catch that. Would you mind repeating that?";
+
+/* ---------- normalising speech ---------- */
+const GS_NUM = {zero:0,one:1,two:2,three:3,four:4,five:5,six:6,seven:7,eight:8,nine:9,ten:10,eleven:11,twelve:12,thirteen:13,fourteen:14,fifteen:15,sixteen:16,seventeen:17,eighteen:18,nineteen:19,twenty:20,thirty:30,forty:40,fifty:50,sixty:60,seventy:70,eighty:80,ninety:90,
+  first:1,second:2,third:3,fourth:4,fifth:5,sixth:6,seventh:7,eighth:8,ninth:9,tenth:10,eleventh:11,twelfth:12,thirteenth:13,fifteenth:15,twentieth:20,thirtieth:30};
+function gsNorm(s){
+  s = String(s || "").toLowerCase().replace(/[’‘ʼ`´]/g, "'");
+  s = s.replace(/(\d),(\d{3})/g, "$1$2")
+       .replace(/\b(\d{1,2})[:.](\d{2})\b/g, (m, h, mm) => mm === "00" ? h : h + " " + mm)
+       .replace(/\b(\d+)\s*(a\.?\s?m\.?|p\.?\s?m\.?)(?=[\s.,!?]|$)/g, "$1")
+       .replace(/\b(\d+)(st|nd|rd|th)\b/g, "$1")
+       .replace(/\b0(\d)\b/g, "$1")
+       .replace(/\bo'clock\b/g, "oclock");
+  s = s.replace(/\bcan't\b/g, "can not").replace(/\bcannot\b/g, "can not").replace(/\bwon't\b/g, "will not").replace(/\bshan't\b/g, "shall not").replace(/\bain't\b/g, "is not")
+       .replace(/\b(\w+)n't\b/g, "$1 not")
+       .replace(/\bi'm\b/g, "i am").replace(/\b(\w+)'re\b/g, "$1 are").replace(/\b(\w+)'ve\b/g, "$1 have").replace(/\b(\w+)'ll\b/g, "$1 will").replace(/\b(\w+)'d\b/g, "$1 would")
+       .replace(/\b(it|that|there|here|what|he|she|who|where|how|this)'s\b/g, "$1 is").replace(/\blet's\b/g, "let us")
+       .replace(/'s\b/g, "").replace(/'/g, "");
+  s = s.replace(/[-–—\/]/g, " ").replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim();
+  const t = s ? s.split(" ") : [], out = [];
+  for (let i = 0; i < t.length; i++) {
+    const w = t[i];
+    if (w in GS_NUM) {
+      let v = GS_NUM[w];
+      if (v >= 20 && v % 10 === 0 && t[i+1] in GS_NUM && GS_NUM[t[i+1]] < 10 && GS_NUM[t[i+1]] > 0) { v += GS_NUM[t[i+1]]; i++; }
+      out.push(String(v));
+    } else out.push(w);
+  }
+  s = out.join(" ")
+       .replace(/\bok\b/g, "okay").replace(/\be mail\b/g, "email").replace(/\bwakeup\b/g, "wake up").replace(/\balright\b/g, "all right")
+       .replace(/\b(\w+er|more \w+|less \w+) then\b/g, "$1 than");
+  return s;
+}
+const gsHas = (padded, p) => padded.includes(" " + p + " ");
+
+/* longest common subsequence: which target words were heard */
+function gsLCS(T, H){
+  const n = T.length, m = H.length, d = Array.from({length:n+1}, () => new Uint16Array(m+1));
+  for (let i = n-1; i >= 0; i--) for (let j = m-1; j >= 0; j--) d[i][j] = T[i] === H[j] ? d[i+1][j+1] + 1 : Math.max(d[i+1][j], d[i][j+1]);
+  const tHit = new Array(n).fill(false), hHit = new Array(m).fill(false);
+  let i = 0, j = 0;
+  while (i < n && j < m) { if (T[i] === H[j]) { tHit[i] = hHit[j] = true; i++; j++; } else if (d[i+1][j] >= d[i][j+1]) i++; else j++; }
+  return {tHit, hHit, n: d[0][0]};
+}
+
+/* ---------- prepare mission data ---------- */
+(function gsPrep(){
+  const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  GS_MISSIONS.forEach((m, mi) => {
+    m.idx = mi;
+    m.turns.forEach(t => {
+      t._say = gsNorm(t.say); t._sayTok = t._say.split(" ");
+      t.keys.forEach(k => {
+        k._ok = k.ok.map(gsNorm);
+        k._bad = (k.bad || []).map(b => ({p: gsNorm(b[0]), msg: b[1], soft: b[2] === "soft"}));
+      });
+      // locate each key in the model sentence → segments for highlighting / gaps
+      const segs = []; let cur = 0;
+      t.keys.map((k, i) => ({k, i})).forEach(({k, i}) => {
+        const re = new RegExp("(^|[^A-Za-z'])(" + reEsc(k.s) + ")(?![A-Za-z])", "i");
+        const m2 = re.exec(t.say.slice(cur));
+        if (!m2) return;
+        const at = cur + m2.index + m2[1].length;
+        if (at > cur) segs.push({t: t.say.slice(cur, at)});
+        segs.push({t: t.say.substr(at, k.s.length), k: i});
+        cur = at + k.s.length;
+      });
+      if (cur < t.say.length) segs.push({t: t.say.slice(cur)});
+      t._segs = segs;
+    });
+  });
+})();
+
+/* ---------- checking an answer ---------- */
+function gsEval(t, mode, raw){
+  const n = gsNorm(raw), H = n ? n.split(" ") : [], P = " " + n + " ";
+  const r = {norm: n, status: "pass", issues: [], notes: [], miss: [], ratio: 1, lcs: null, okKeys: []};
+  if (!H.length) { r.status = "empty"; return r; }
+  t.keys.forEach((k, i) => {
+    if (k._ok.some(p => gsHas(P, p))) { r.okKeys.push(i); return; }
+    const b = k._bad.find(b => gsHas(P, b.p));
+    if (b) { (k.soft || b.soft ? r.notes : r.issues).push({k: i, msg: b.msg, said: b.p}); return; }
+    if (mode !== "own" && !k.soft) r.issues.push({k: i, msg: "", said: "", unheard: true});
+  });
+  if (mode === "own") {
+    (t.obj.bad || []).forEach(b => {
+      if (r.okKeys.includes(b.k) || r.issues.some(x => x.k === b.k)) return;
+      const m = n.match(b.re); if (m) r.issues.push({k: b.k, msg: b.msg, said: m[0]});
+    });
+    t.obj.need.forEach((nd, i) => { if (!nd.re.test(n)) r.miss.push(i); });
+    r.status = H.length < 2 ? "unclear" : r.issues.length ? "grammar" : r.miss.length ? "missing" : "pass";
+  } else {
+    r.lcs = gsLCS(t._sayTok, H);
+    r.ratio = r.lcs.n / t._sayTok.length;
+    const thr = mode === "script" ? 0.7 : 0.6;
+    const real = r.issues.filter(x => !x.unheard);
+    if (real.length) { r.status = "grammar"; r.issues = real.concat(r.issues.filter(x => x.unheard)); }
+    else if (r.ratio < thr) r.status = "unclear";
+    else if (r.issues.length) r.status = "grammar";
+  }
+  return r;
+}
+
+/* ---------- voices (the other person) ---------- */
+const GS_NOVELTY = /albert|bad news|bahh|bells|boing|bubbles|cellos|deranged|good news|hysterical|jester|organ|superstar|trinoids|whisper|wobble|zarvox|\bfred\b|junior|kathy|ralph|eddy|\bflo\b|grandma|grandpa|\breed\b|rocko|sandy|shelley|princess|bruce|agnes|vicki|victoria|novelty/i;
+const GS_VPREF = {
+  GBf: ["Serena","Kate","Stephanie","Martha","Sonia","Libby","Maisie","Hazel","Susan","Google UK English Female"],
+  GBm: ["Daniel","Arthur","Oliver","Ryan","Thomas","George","Malcolm","Google UK English Male"],
+  USf: ["Ava","Allison","Samantha","Susan","Zoe","Nicky","Joelle","Noelle","Jenny","Aria","Michelle","Emma","Google US English"],
+  USm: ["Evan","Nathan","Tom","Alex","Aaron","Guy","Christopher","Eric","Andrew","Brian","Davis","Roger"]
+};
+let gsVoices = [], gsVoiceCache = {};
+function gsLoadVoices(){ try { gsVoices = speechSynthesis.getVoices() || []; } catch(e){ gsVoices = []; } gsVoiceCache = {}; }
+if ("speechSynthesis" in window) {
+  gsLoadVoices();
+  try { speechSynthesis.addEventListener("voiceschanged", gsLoadVoices); } catch(e){ speechSynthesis.onvoiceschanged = gsLoadVoices; }
+  [300, 1000, 2500].forEach(ms => setTimeout(() => { if (!gsVoices.length) gsLoadVoices(); }, ms));
+}
+function gsPickVoice(accent, sex, own){
+  const key = accent + sex, ck = key + (own || []).join(","); if (gsVoiceCache[ck] !== undefined) return gsVoiceCache[ck];
+  const pref = (own || []).concat(GS_VPREF[key] || []), other = accent === "GB" ? "US" : "GB";
+  const quality = v => (/premium/i.test(v.name + v.voiceURI) ? 40 : 0) + (/enhanced/i.test(v.name + v.voiceURI) ? 25 : 0) + (/natural|neural|online/i.test(v.name) ? 30 : 0);
+  const score = (v, acc) => {
+    const lang = (v.lang || "").replace("_", "-").toLowerCase();
+    if (!lang.startsWith("en")) return -1;
+    if (GS_NOVELTY.test(v.name)) return -1;
+    let s = 0;
+    if (lang === "en-" + acc.toLowerCase()) s += 200; else if (lang === "en-" + other.toLowerCase()) s += 60; else s += 20;
+    const idx = pref.findIndex(p => new RegExp("\\b" + p + "\\b", "i").test(v.name));
+    const oppo = (GS_VPREF[acc + (sex === "f" ? "m" : "f")] || []).some(p => new RegExp("\\b" + p + "\\b", "i").test(v.name));
+    if (idx >= 0) s += 100 - idx * 4; else if (oppo) s -= 80;
+    return s + quality(v);
+  };
+  let best = null, bs = -1;
+  gsVoices.forEach(v => { const s = score(v, accent); if (s > bs) { bs = s; best = v; } });
+  gsVoiceCache[ck] = best;
+  return best;
+}
+let gsUtter = [];
+function gsSpeak(text, pid, opt){
+  opt = opt || {};
+  return new Promise(res => {
+    if (!("speechSynthesis" in window) || !text) return res();
+    try {
+      const p = GS_PEOPLE[pid] || {accent:"GB", sex:"f"};
+      const u = new SpeechSynthesisUtterance(String(text).replace(/<[^>]+>/g, "").replace(/\s*—\s*/g, ", "));
+      const v = gsPickVoice(p.accent, p.sex, p.vp);
+      if (v) { u.voice = v; u.lang = v.lang; } else u.lang = p.accent === "US" ? "en-US" : "en-GB";
+      u.rate = opt.rate || (gs.slow ? 0.78 : 0.95); u.pitch = 1;
+      let done = false; const fin = () => { if (done) return; done = true; GSP && (GSP.talking = false); gsRefreshMic(); res(); };
+      u.onend = fin; u.onerror = fin;
+      setTimeout(fin, 1500 + text.split(/\s+/).length * (u.rate < .9 ? 620 : 480));
+      gsUtter.push(u); if (gsUtter.length > 6) gsUtter.shift();
+      if (GSP) GSP.talking = true;
+      // Safari can drop an utterance queued straight after cancel(): give it a beat
+      if (speechSynthesis.speaking || speechSynthesis.pending) { speechSynthesis.cancel(); setTimeout(() => speechSynthesis.speak(u), 80); }
+      else speechSynthesis.speak(u);
+      gsRefreshMic();
+    } catch(e){ res(); }
+  });
+}
+function gsStopAudio(){ try { speechSynthesis.cancel(); } catch(e){} if (GS_REC) { try { GS_REC.abort(); } catch(e){} GS_REC = null; } }
+
+/* ---------- microphone (speech-to-text) ---------- */
+const GS_SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+let GS_REC = null;
+const gsIsIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+const gsIsSafari = /^((?!chrome|android|crios|fxios|edgios).)*safari/i.test(navigator.userAgent);
+function gsMicStatus(){
+  if (GS_SR) return {ok: true, text: gsIsIOS ? (gsIsSafari ? "Microphone ready · Safari" : "Microphone ready — if it fails, open this page in Safari") : "Microphone ready"};
+  if (gsIsIOS) return {ok: false, text: "Speaking needs Safari on iPhone. Open this page in Safari (Chrome on iPhone has no speech input)."};
+  return {ok: false, text: "This browser has no speech input. Use Safari on iPhone, or Chrome / Edge on a computer or Android. You can still type."};
+}
+function gsMicStart(){
+  if (!GS_SR) { GSP.sub = "type"; gsRenderSpeak(); return; }
+  if (GS_REC) { try { GS_REC.stop(); } catch(e){} return; }
+  try { speechSynthesis.cancel(); } catch(e){}
+  const r = new GS_SR(); GS_REC = r;
+  r.lang = "en-US"; r.interimResults = true; r.continuous = false; r.maxAlternatives = 1;
+  let fin = "", inter = "", silence = null, stopped = false;
+  const stop = () => { if (stopped) return; stopped = true; try { r.stop(); } catch(e){} };
+  r.onresult = e => {
+    let f = "", it = "";
+    for (let i = 0; i < e.results.length; i++) { const tx = e.results[i][0].transcript; if (e.results[i].isFinal) f += tx + " "; else it += tx + " "; }
+    fin = f; inter = it; GSP.live = (f + it).trim();
+    const el = document.getElementById("gsLive"); if (el) el.textContent = GSP.live || "…";
+    clearTimeout(silence); silence = setTimeout(stop, 2300);
+  };
+  r.onerror = e => { GSP.micErr = e.error || "error"; };
+  r.onend = () => {
+    clearTimeout(silence); clearTimeout(maxT); if (GS_REC === r) GS_REC = null;
+    const txt = (fin + " " + inter).replace(/\s+/g, " ").trim();
+    if (!GSP || GSP.phase !== "talk") return;
+    if (txt) { GSP.said = txt; GSP.typed = false; GSP.sub = "review"; gs.speaks = (gs.speaks || 0) + 1; }
+    else GSP.sub = "ready";
+    gsRenderSpeak();
+  };
+  const maxT = setTimeout(stop, 20000);
+  GSP.sub = "rec"; GSP.live = ""; GSP.micErr = null; gsRenderSpeak();
+  try { r.start(); } catch(e) { GS_REC = null; GSP.micErr = "start"; GSP.sub = "ready"; gsRenderSpeak(); }
+}
+function gsMicErrText(e){
+  if (!e) return "";
+  if (e === "not-allowed" || e === "service-not-allowed") return gsIsIOS
+    ? "The microphone is blocked. In Safari tap <b>aA</b> → <b>Website Settings</b> → <b>Microphone: Allow</b>. Also check <b>Settings → Privacy &amp; Security → Speech Recognition / Microphone → Safari</b> is on, and that Siri or Dictation is turned on."
+    : "The microphone is blocked. Allow microphone access for this site in the browser's address bar, then try again.";
+  if (e === "no-speech") return "I didn't hear anything. Tap the mic, wait for the red ring, then speak.";
+  if (e === "network") return "Speech recognition needs an internet connection.";
+  if (e === "audio-capture") return "No microphone found. If you are on a video call on this phone, the call may be using the microphone.";
+  if (e === "aborted") return "";
+  return "The microphone stopped (" + esc(e) + "). Tap the mic to try again — or type your answer.";
+}
+
+/* ======================================================================
+   SCREENS
+   ====================================================================== */
+let GSP = null;
+const gsM = id => GS_MISSIONS.find(m => m.id === id);
+const gsBest = (id, mode) => (gs.best[id] || {})[mode];
+const gsMedals = id => GS_MODES.filter(md => gsBest(id, md.id)).length;
+function gsUnlocked(id){ const m = gsM(id); return store.free || m.idx === 0 || !!gsBest(GS_MISSIONS[m.idx - 1].id, "script"); }
+function gsModeOpen(id, mode){ if (store.free) return true; if (mode === "script") return gsUnlocked(id); if (mode === "gap") return !!gsBest(id, "script"); return !!gsBest(id, "gap"); }
+function gsDefMode(id){ return !gsBest(id, "script") ? "script" : !gsBest(id, "gap") ? "gap" : "own"; }
+
+function allTabsHTML(activeId){
+  const camps = CAMPAIGNS.map(c => {
+    const d = c.ids.filter(isDone).length;
+    return `<button class="tab ${c.id===activeId?'on':''}" role="tab" aria-selected="${c.id===activeId}" data-tab="${c.id}">
+      <span class="ti" aria-hidden="true">${c.icon}</span><span><b>${esc(c.tab)}</b><small>${esc(c.name)} · ${d}/${c.ids.length}</small></span></button>`;
+  }).join("");
+  const gd = GS_MISSIONS.filter(m => gsBest(m.id, "script")).length;
+  return `<button class="tab gs-tab ${activeId==='gs'?'on':''}" role="tab" aria-selected="${activeId==='gs'}" data-tab="gs">
+      <span class="ti" aria-hidden="true">🎙️</span><span><b>Ground School</b><small>Speak it out · A2–B1 · ${gd}/${GS_MISSIONS.length}</small></span></button>` + camps;
+}
+
+function gsImg(m, el, kind){
+  // optional drop-in picture: img/gs-scene-g1.png etc.
+  const exts = ["png","PNG","jpg","JPG","jpeg","webp"];
+  const tryN = i => { if (i >= exts.length) return; const im = new Image();
+    im.onload = () => { if (!el.isConnected) return; el.innerHTML = ""; im.alt = m.place; el.appendChild(im); el.closest(".scene") && el.closest(".scene").classList.add("photo"); };
+    im.onerror = () => tryN(i + 1); im.src = SCENE_IMG_DIR + "gs-" + kind + "-" + m.id + "." + exts[i]; };
+  try { tryN(0); } catch(e){}
+}
+
+/* ---------- home ---------- */
+function renderGSHome(){
+  view = "home"; gsStopAudio(); GSP = null;
+  let sel = gsM(gs.sel) ? gs.sel : "g1";
+  const m = gsM(sel), p = GS_PEOPLE[m.npc], un = gsUnlocked(sel);
+  const medalsAll = GS_MISSIONS.reduce((a, x) => a + gsMedals(x.id), 0);
+  const nodes = GS_MISSIONS.map((x, k) => {
+    const done = !!gsBest(x.id, "script"), u = gsUnlocked(x.id);
+    const cls = ["qn", done ? "done" : u ? "open" : "locked", x.id === sel ? "sel" : ""].join(" ");
+    const md = gsMedals(x.id);
+    return `<button class="${cls}" data-gsel="${x.id}" aria-label="Mission ${k+1}: ${esc(x.title)}${u?'':' (locked)'}">
+      <span class="dot">${done ? "✓" : u ? k+1 : "🔒"}</span><span class="ql">${esc(x.title)}</span>
+      <span class="qs">${done ? "★".repeat(md) + '<span style="color:#35506f">' + "★".repeat(3 - md) + "</span>" : esc(x.cefr)}</span></button>`;
+  }).join("");
+  const run = gs.run && gsM(gs.run.id) ? gs.run : null;
+  const modes = GS_MODES.map((md, i) => {
+    const open = gsModeOpen(sel, md.id), b = gsBest(sel, md.id);
+    return `<button class="gs-mode ${open ? "" : "locked"} ${b ? "won" : ""}" ${open ? `data-gstart="${sel}" data-gmode="${md.id}"` : "disabled"}>
+      <span class="gm-i">${open ? md.icon : "🔒"}</span><span class="gm-t"><b>${i+1} · ${md.name}</b><small>${esc(md.desc)}</small></span>
+      <span class="gm-s">${b ? `<b>${b.score}%</b><small>best</small>` : open ? "<small>Start ▸</small>" : `<small>Finish ${GS_MODES[i-1].short}</small>`}</span></button>`;
+  }).join("");
+  const mic = gsMicStatus();
+  const errs = Object.entries(gs.errs || {}).sort((a, b) => b[1] - a[1]).slice(0, 6), emax = errs.length ? errs[0][1] : 1;
+  $("#app").innerHTML = `
+  <div class="tabs" role="tablist" aria-label="Campaigns">${allTabsHTML("gs")}</div>
+  <section class="cbanner gs-banner">
+    <div><div class="kick">Ground School · Speaking</div><h2>Speak it out</h2>
+      <p>Six real situations with people who don't speak Thai — an instructor, a supplier, a visiting officer, a hotel, a coffee break. They talk to you. You answer with your voice. Start by reading the script, then fill the gaps, then use your own words.</p></div>
+    <div class="cstats">
+      <div class="cstat"><div class="v">${GS_MISSIONS.filter(x => gsBest(x.id, "script")).length}/${GS_MISSIONS.length}</div><div class="k">Missions</div></div>
+      <div class="cstat"><div class="v">${medalsAll}</div><div class="k">of ${GS_MISSIONS.length * 3} ★</div></div>
+      <div class="cstat"><div class="v">${gs.speaks || 0}</div><div class="k">Times spoken</div></div>
+    </div>
+  </section>
+  <div class="gs-strip">
+    <span class="gs-mic ${mic.ok ? "ok" : "no"}">${mic.ok ? "🎙️" : "⚠️"} ${esc(mic.text)}</span>
+    <button class="hbtn" id="gsVoiceChk">🔊 Voice &amp; mic check</button>
+    <button class="hbtn ${gs.slow ? "on" : ""}" id="gsSlow">🐢 Slow voice: ${gs.slow ? "on" : "off"}</button>
+    <button class="hbtn ${gs.text ? "on" : ""}" id="gsText">👁 Show their words: ${gs.text ? "on" : "off"}</button>
+  </div>
+  ${run ? `<div class="gs-resume">⏸ You stopped <b>${esc(gsM(run.id).title)}</b> (${esc(GS_MODES.find(x => x.id === run.mode).name)}) at exchange ${run.ti + 1} of 5.
+     <button class="btn" id="gsResume">Resume ▸</button><button class="btn ghost" id="gsDrop">Discard</button></div>` : ""}
+  <nav class="qmap" aria-label="Ground School missions">${nodes}</nav>
+  <section class="dossier gs-dossier">
+    <div>
+      <div class="kick">Mission ${m.idx + 1} of ${GS_MISSIONS.length} · ${esc(m.place)}</div>
+      <h3>${esc(m.title)}</h3>
+      <div class="badges"><span class="bdg lv">${esc(m.cefr)}</span>${m.focus.map(f => `<span class="chip">${esc(f)}</span>`).join("")}</div>
+      <div class="scene gs-thumb"><div class="sart" id="gsThumb">${gsSceneArt(m)}</div></div>
+      <p class="story">${esc(m.story)}</p>
+      <div class="goal"><b>Goal:</b> ${esc(m.goal)}</div>
+    </div>
+    <div class="dside">
+      <div class="gs-who">${gsAvatar(m.npc, 64)}<div><b>${esc(p.name)}</b> ${p.flag}<br><span>${esc(p.role)}</span><br><small>${p.accent === "GB" ? "British" : "American"} English</small></div></div>
+      ${un ? modes : `<div class="lockmsg">🔒 Finish Mission ${m.idx} (Read the script) to unlock this mission.</div>`}
+    </div>
+  </section>
+  ${errs.length ? `<section class="gs-radar"><h3>Your grammar radar</h3><p>The grammar points that needed another try. Practise the top one first.</p>
+    ${errs.map(([k, v]) => `<div class="gr-row"><span>${esc(k)}</span><span class="gr-bar"><i style="width:${Math.max(8, v / emax * 100)}%"></i></span><b>${v}</b></div>`).join("")}</section>` : ""}
+  <label class="free"><input type="checkbox" id="freeCk" ${store.free?'checked':''}> Free play — unlock every mission and mode (teacher mode)</label>
+  <details class="vocab" style="margin-top:14px"><summary>How Ground School works</summary>
+    <ol class="steps" style="margin-top:10px">
+      <li><span><b>Listen.</b> The other person speaks to you (turn your sound on). Tap 🔊 to hear them again.</span></li>
+      <li><span><b>Tap the microphone</b> and say your answer. Tap again to stop — or just stop talking.</span></li>
+      <li><span><b>Check what I heard.</b> If the words are wrong, tap <b>Say again</b>. When it's right, tap <b>Commit</b>.</span></li>
+      <li><span><b>Mistake?</b> They will ask you to repeat. Each try gives you a better hint — clue, rule, choice, then the model.</span></li>
+    </ol>
+    <p style="font-size:.85rem;color:var(--ink-dim)">On iPhone use <b>Safari</b>. Earphones help: the voice is clearer and the microphone hears only you.</p></details>`;
+  document.querySelectorAll("[data-tab]").forEach(b => b.onclick = () => { store.tab = b.dataset.tab; save(); renderHome(); });
+  document.querySelectorAll("[data-gsel]").forEach(b => b.onclick = () => { gs.sel = b.dataset.gsel; gsSave(); renderGSHome(); });
+  document.querySelectorAll("[data-gstart]").forEach(b => b.onclick = () => gsStart(b.dataset.gstart, b.dataset.gmode));
+  $("#freeCk").onchange = e => { store.free = e.target.checked; save(); renderGSHome(); };
+  $("#gsSlow").onclick = () => { gs.slow = !gs.slow; gsSave(); renderGSHome(); };
+  $("#gsText").onclick = () => { gs.text = !gs.text; gsSave(); renderGSHome(); };
+  $("#gsVoiceChk").onclick = gsVoiceCheck;
+  if ($("#gsResume")) $("#gsResume").onclick = () => gsStart(run.id, run.mode, run);
+  if ($("#gsDrop")) $("#gsDrop").onclick = () => { gs.run = null; gsSave(); renderGSHome(); };
+  gsImg(m, $("#gsThumb"), "scene");
+}
+
+/* ---------- start / briefing ---------- */
+function gsStart(id, mode, resume){
+  const m = gsM(id);
+  GSP = {m, mode, ti: 0, phase: "brief", sub: "ready", chat: [], pts: [], log: [], lad: 0, issue: null, tries: 0, unclear: 0, said: "", typed: false, live: "", micErr: null, pick: null, talking: false};
+  if (resume) { GSP.ti = resume.ti; GSP.pts = resume.pts || []; GSP.log = resume.log || []; }
+  gs.sel = id; gsSave();
+  view = "gsplay";
+  gsRenderBrief(!!resume);
+  window.scrollTo({top: 0});
+}
+function gsRenderBrief(resuming){
+  const m = GSP.m, p = GS_PEOPLE[m.npc], md = GS_MODES.find(x => x.id === GSP.mode), b = m.brief;
+  $("#app").innerHTML = `
+  <div class="pbar"><button class="btn ghost" id="gsBack">&larr; Ground School</button><h2>${esc(m.title)}</h2>
+    <span class="bdg lv">${esc(m.cefr)}</span><span class="bdg">${md.icon} ${esc(md.name)}</span></div>
+  <section class="scene" id="gsScene"><div class="sart" id="gsSart">${gsSceneArt(m)}</div><div class="rtag">BRIEFING</div>
+    <div class="scap"><span class="loc">${esc(m.place.split(" · ")[0])}</span><span class="tm">${esc(m.place.split(" · ").slice(1).join(" · "))}</span></div></section>
+  <section class="gs-brief">
+    <div class="gs-bcol">
+      <p class="story">${esc(m.story)}</p>
+      <div class="gs-who">${gsAvatar(m.npc, 72)}<div><b>${esc(p.name)}</b> ${p.flag}<br><span>${esc(p.role)}</span></div></div>
+      <div class="goalbig"><span>YOUR GOAL</span>${esc(m.goal)}</div>
+      <div class="gs-howmode"><b>${md.icon} ${esc(md.name)}:</b> ${esc(md.desc)}
+        ${GSP.mode === "own" ? " The coach will tick each objective you complete." : ""}</div>
+    </div>
+    <div class="gs-gcard">
+      <div class="kick">Grammar briefing</div><h3>${esc(b.h)}</h3>
+      ${gsViz(b.viz)}
+      <table class="gs-rules">${b.rows.map(r => `<tr><td>${esc(r[0])}</td><td>${r[1]}</td></tr>`).join("")}</table>
+      <p class="gs-tip">💡 ${esc(b.tip)}</p>
+    </div>
+  </section>
+  <div class="gs-go"><span>🔊 Turn your sound on — ${esc(p.short)} will speak first.</span>
+    <button class="btn gs-big" id="gsGo">${resuming ? "Resume conversation" : "Start the conversation"} ▸</button></div>`;
+  $("#gsBack").onclick = gsLeave;
+  $("#gsGo").onclick = () => { GSP.phase = "talk"; gsBeginTurn(true); };
+  gsImg(m, $("#gsSart"), "scene");
+}
+function gsLeave(){
+  if (GSP && GSP.phase === "talk" && GSP.ti > 0 && !confirm("Leave this mission? Your place is saved — you can resume it later.")) return;
+  gsStopAudio(); renderGSHome();
+}
+
+/* ---------- conversation ---------- */
+function gsTurn(){ return GSP.m.turns[GSP.ti]; }
+function gsBeginTurn(first){
+  const t = gsTurn();
+  GSP.lastEval = null; GSP.lad = 0; GSP.issue = null; GSP.tries = 0; GSP.unclear = 0; GSP.said = ""; GSP.sub = "ready"; GSP.pick = null; GSP.score = 100; GSP.hinted = 0;
+  if (first && GSP.ti > 0) GSP.chat.push({sys: true, text: "Resuming at exchange " + (GSP.ti + 1)});
+  GSP.chat.push({who: "npc", text: t.npc});
+  gsRenderTalk();
+  gsSpeak(t.npc, GSP.m.npc);
+}
+function gsRenderTalk(){
+  const m = GSP.m, p = GS_PEOPLE[m.npc], n = m.turns.length;
+  const dots = m.turns.map((_, i) => `<span class="gs-dot ${i < GSP.ti ? "done" : i === GSP.ti ? "cur" : ""}"></span>`).join("");
+  $("#app").innerHTML = `
+  <div class="pbar"><button class="btn ghost" id="gsBack">&larr; Ground School</button><h2>${esc(m.title)}</h2>
+    <span class="bdg lv">${esc(m.cefr)}</span><span class="bdg">${GS_MODES.find(x => x.id === GSP.mode).icon} ${esc(GS_MODES.find(x => x.id === GSP.mode).short)}</span>
+    <span class="gs-dots" aria-label="Exchange ${GSP.ti + 1} of ${n}">${dots}</span></div>
+  <div class="gs-talk">
+    <section class="gs-chat" id="gsChat" aria-live="polite">
+      <div class="gs-chead">${gsAvatar(m.npc, 40)}<div><b>${esc(p.name)}</b><small>${esc(m.place)}</small></div></div>
+      <div class="gs-cscene"><div class="sart" id="gsCs">${gsSceneArt(m)}</div></div>
+      <div class="gs-msgs" id="gsMsgs"></div>
+    </section>
+    <section class="gs-speak" id="gsSpeak"></section>
+  </div>`;
+  $("#gsBack").onclick = gsLeave;
+  gsImg(m, $("#gsCs"), "scene");
+  gsRenderChat(); gsRenderSpeak();
+}
+function gsRenderChat(){
+  const el = $("#gsMsgs"); if (!el) return;
+  const pid = GSP.m.npc;
+  el.innerHTML = GSP.chat.map((c, i) => c.sys ? `<div class="gs-sys">${esc(c.text)}</div>`
+    : c.who === "npc" ? `<div class="gs-msg npc">${gsAvatar(pid, 34, c.puzzled ? "puzzled" : "")}<div class="gs-bub ${gs.text ? "" : "hid"}" data-rev="${i}">
+        <span class="gs-btxt">${esc(c.text)}</span>${gs.text ? "" : '<span class="gs-hidl">👂 Listen — tap to show the words</span>'}
+        <button class="gs-play" data-say="${i}" aria-label="Play again">🔊</button></div></div>`
+    : `<div class="gs-msg me"><div class="gs-bub ${c.ok ? "ok" : "no"}">${esc(c.text)}<span class="gs-mk">${c.ok ? "✓" : "↺"}</span>${c.typed ? '<small class="gs-ty">typed</small>' : ""}</div></div>`).join("");
+  el.querySelectorAll("[data-say]").forEach(b => b.onclick = e => { e.stopPropagation(); gsSpeak(GSP.chat[+b.dataset.say].text, pid); });
+  el.querySelectorAll("[data-rev]").forEach(b => b.onclick = () => b.classList.remove("hid"));
+  el.scrollTop = el.scrollHeight;
+  const last = el.lastElementChild; if (last && window.innerWidth < 860) last.scrollIntoView({block: "nearest"});
+}
+
+/* the task card: script, gaps or objectives */
+function gsTaskHTML(t){
+  const glowK = GSP.issue && GSP.issue.type === "key" && GSP.lad >= 1 ? GSP.issue.k : -1;
+  if (GSP.mode === "script")
+    return `<div class="gs-task"><div class="kick">Your move · read this aloud</div><p class="gs-sit">${esc(t.task)}</p>
+      <div class="gs-line">${t._segs.map(s => s.k == null ? esc(s.t) : `<span class="kw ${s.k === glowK ? "glow" : ""}">${esc(s.t)}</span>`).join("")}</div>
+      <button class="dbtn gs-hear" id="gsHear">🔊 Hear it first</button></div>`;
+  if (GSP.mode === "gap") {
+    const reveal = GSP.lad >= 4;
+    return `<div class="gs-task"><div class="kick">Your move · say the whole sentence</div><p class="gs-sit">${esc(t.task)}</p>
+      <div class="gs-line">${t._segs.map(s => s.k == null ? esc(s.t)
+        : reveal ? `<span class="kw glow">${esc(s.t)}</span>` : `<span class="gap ${s.k === glowK ? "glow" : ""}">____<small>${esc(t.keys[s.k].base)}</small></span>`).join("")}</div>
+      ${reveal ? `<button class="dbtn gs-hear" id="gsHear">🔊 Hear the model</button>` : ""}</div>`;
+  }
+  const done = GSP.lastEval && GSP.lastEval.miss ? GSP.lastEval.miss : null;
+  return `<div class="gs-task"><div class="kick">Your move · your own words</div><p class="gs-sit">🎯 ${esc(t.obj.text)}</p>
+    <ul class="gs-objs">${t.obj.need.map((nd, i) => {
+      const st = !done ? "" : done.includes(i) ? "miss" : "hit";
+      return `<li class="${st}"><span>${st === "hit" ? "✓" : st === "miss" ? "✗" : "○"}</span>${esc(nd.lab)}${GSP.lad >= 2 && st !== "hit" ? `<em class="gs-ex">e.g. “${esc(nd.ex)}”</em>` : ""}</li>`; }).join("")}</ul>
+    ${GSP.lad >= 3 ? `<div class="gs-model"><b>Example answer:</b> ${esc(t.say)} <button class="dbtn" id="gsHear">🔊</button></div>` : ""}</div>`;
+}
+
+/* the hint ladder: clue → rule → choice → model */
+function gsCoachHTML(t){
+  const I = GSP.issue; if (!I) return "";
+  let h = "";
+  if (I.type === "unclear") {
+    h = `<div class="gs-c unclear">👂 <b>${esc(GS_PEOPLE[GSP.m.npc].short)} couldn't follow.</b> ${GSP.mode === "script" ? "Read the whole sentence, clearly and not too fast." : "Say the whole sentence, clearly."}
+      ${GSP.unclear >= 2 && GSP.mode === "script" ? " Tap <b>🔊 Hear it first</b>, then copy the rhythm." : ""}
+      ${I.ratio != null ? `<div class="gs-acc">Words I matched: <b>${Math.round(I.ratio * 100)}%</b></div>` : ""}</div>`;
+    return h;
+  }
+  if (I.type === "need") {
+    const miss = I.miss.map(i => t.obj.need[i].lab);
+    h += `<div class="gs-c">🧭 <b>Not yet:</b> make sure you include — ${miss.map(x => `<b>${esc(x)}</b>`).join(", ")}.</div>`;
+    if (GSP.lad >= 2) h += `<div class="gs-c">✍️ <b>Starters</b> are now shown next to each objective.</div>`;
+    return h;
+  }
+  const K = t.keys[I.k];
+  h += `<div class="gs-c">🧭 <b>Clue:</b> ${esc(K.cat)}${I.said ? ` <span class="gs-said">You said: “${esc(I.said)}”</span>` : ""}</div>`;
+  if (GSP.lad >= 2) h += `<div class="gs-c">📘 <b>Rule:</b> ${esc(K.rule)}${I.msg ? `<div class="gs-msgx">${esc(I.msg)}</div>` : ""}</div>`;
+  if (GSP.lad >= 3) {
+    const order = (GSP.ti + GSP.m.idx) % 2 ? [1, 0] : [0, 1];
+    h += `<div class="gs-c">🔀 <b>Which is right?</b><div class="gs-ch">${order.map(o => `<button class="gs-chb ${GSP.pick === o ? (o === 0 ? "right" : "wrong") : ""}" data-pick="${o}">${esc(K.ch[o])}</button>`).join("")}</div>
+      ${GSP.pick === 0 ? `<div class="gs-msgx good">✓ Yes! Now say the whole sentence.</div>` : GSP.pick === 1 ? `<div class="gs-msgx">✗ Not that one — look again.</div>` : ""}</div>`;
+  }
+  if (GSP.lad >= 4 && GSP.mode !== "script") h += `<div class="gs-c">🗣 <b>Model:</b> ${esc(t.say)}</div>`;
+  return h;
+}
+
+function gsRenderSpeak(){
+  const el = $("#gsSpeak"); if (!el || !GSP) return;
+  const t = gsTurn(), last = GSP.ti === GSP.m.turns.length - 1;
+  let body = "";
+  if (GSP.sub === "passed") {
+    const e = GSP.lastEval;
+    body = `<div class="gs-pass"><div class="gs-big-ok">✓</div><div><b>${GSP.score >= 100 ? "Perfect!" : GSP.score >= 80 ? "Well done!" : "Got there!"}</b> +${GSP.score} points
+      ${e && e.lcs && GSP.mode === "script" ? `<div class="gs-acc">Reading match: <b>${Math.round(e.ratio * 100)}%</b></div>` : ""}
+      ${e && e.notes.length ? e.notes.map(nn => `<div class="gs-note">📝 ${esc(nn.msg)}</div>`).join("") : ""}
+      ${GSP.mode !== "script" ? `<div class="gs-note">Model: ${esc(t.say)}</div>` : ""}</div></div>
+      <div class="gs-acts"><button class="commit" id="gsNext">${last ? "MISSION RESULT ▸" : "NEXT ▸"}</button></div>`;
+  } else {
+    const rec = GSP.sub === "rec", rev = GSP.sub === "review", typ = GSP.sub === "type";
+    let micArea;
+    if (rev) {
+      let heard = esc(GSP.said);
+      if (GSP.mode === "script") {
+        const H = gsNorm(GSP.said).split(" "), r = gsLCS(t._sayTok, H);
+        heard = H.map((w, i) => `<span class="${r.hHit[i] ? "hm" : "hx"}">${esc(w)}</span>`).join(" ");
+        const missed = t._sayTok.filter((w, i) => !r.tHit[i]);
+        if (missed.length) heard += `<div class="gs-missing">Not heard: ${missed.map(w => `<s>${esc(w)}</s>`).join(" ")}</div>`;
+      }
+      micArea = `<div class="gs-review"><div class="kick">Check — is this what you said?</div><div class="gs-heard">${heard}</div>
+        <div class="gs-acts"><button class="dbtn gs-again" id="gsAgain">🎤 Say again</button>
+        <button class="commit" id="gsCommit">COMMIT ✓</button></div>
+        <button class="gs-link" id="gsTypeFix">⌨ The words are wrong and “Say again” isn't working? Type it</button></div>`;
+    } else if (typ) {
+      micArea = `<div class="gs-review"><div class="kick">Type your answer</div>
+        <textarea id="gsTypeIn" rows="2" autocapitalize="sentences" placeholder="Type what you want to say…">${esc(GSP.said || "")}</textarea>
+        <p class="gs-fine">Tip: on iPhone you can also tap the 🎤 on the keyboard to dictate.</p>
+        <div class="gs-acts">${GS_SR ? `<button class="dbtn" id="gsBackMic">🎤 Use the microphone</button>` : ""}<button class="commit" id="gsTypeOk">CHECK ▸</button></div></div>`;
+    } else {
+      micArea = `<div class="gs-micwrap"><button class="gs-micbtn ${rec ? "rec" : ""} ${GSP.talking ? "wait" : ""}" id="gsMic" aria-label="${rec ? "Stop" : "Speak"}">
+          <svg viewBox="0 0 24 24" width="38" height="38" aria-hidden="true"><path d="M12 15a3.5 3.5 0 0 0 3.5-3.5v-6a3.5 3.5 0 1 0-7 0v6A3.5 3.5 0 0 0 12 15z" fill="currentColor"/><path d="M18.5 11.5a6.5 6.5 0 0 1-13 0M12 18v3.5M8.5 21.5h7" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></button>
+        <div class="gs-mictxt">${rec ? `<b>Listening…</b> tap to stop<div class="gs-live" id="gsLive">${esc(GSP.live || "…")}</div>`
+          : GSP.talking ? `<b>${esc(GS_PEOPLE[GSP.m.npc].short)} is speaking…</b><br><small>Tap the mic when you're ready</small>`
+          : `<b>Tap and speak</b><br><small>${GS_SR ? "Stop talking — or tap again — to finish" : esc(gsMicStatus().text)}</small>`}
+          ${GSP.micErr ? `<div class="gs-err">${gsMicErrText(GSP.micErr)}</div>` : ""}</div></div>
+        <div class="gs-acts gs-under"><button class="dbtn" id="gsHint" ${GSP.lad >= 4 ? "disabled" : ""}>💡 Hint (−10)</button>
+          <button class="gs-link" id="gsType">⌨ Type instead</button></div>`;
+    }
+    body = gsTaskHTML(t) + `<div class="gs-coach" id="gsCoach">${gsCoachHTML(t)}</div>` + micArea;
+  }
+  el.innerHTML = `<div class="gs-score"><span>Exchange ${GSP.ti + 1} / ${GSP.m.turns.length}</span><span>Tries: ${GSP.tries}</span><span>This turn: <b>${GSP.score}</b></span></div>` + body;
+  const on = (id, f) => { const b = document.getElementById(id); if (b) b.onclick = f; };
+  on("gsMic", gsMicStart);
+  on("gsAgain", () => { GSP.said = ""; gsMicStart(); });
+  on("gsCommit", gsCommit);
+  on("gsType", () => { gsStopAudio(); GSP.sub = "type"; gsRenderSpeak(); const ta = $("#gsTypeIn"); if (ta) ta.focus(); });
+  on("gsTypeFix", () => { GSP.sub = "type"; gsRenderSpeak(); const ta = $("#gsTypeIn"); if (ta) ta.focus(); });
+  on("gsBackMic", () => { GSP.sub = "ready"; gsRenderSpeak(); });
+  on("gsTypeOk", () => { const v = ($("#gsTypeIn").value || "").trim(); if (!v) return; GSP.said = v; GSP.typed = true; gsCommit(); });
+  on("gsHear", () => gsSpeak(t.say, GSP.m.npc, {rate: 0.75}));
+  on("gsHint", gsHint);
+  on("gsNext", gsNext);
+  el.querySelectorAll("[data-pick]").forEach(b => b.onclick = () => { GSP.pick = +b.dataset.pick; gsRenderSpeak(); });
+}
+function gsRefreshMic(){ if (GSP && GSP.phase === "talk" && GSP.sub === "ready" && $("#gsMic")) gsRenderSpeak(); }
+
+function gsHint(){
+  const t = gsTurn();
+  if (!GSP.issue) {
+    if (GSP.mode === "own") GSP.issue = {type: "need", miss: t.obj.need.map((_, i) => i)};
+    else { const k = t.keys.findIndex(k => !k.soft); GSP.issue = {type: "key", k: k < 0 ? 0 : k, msg: "", said: ""}; }
+  }
+  if (GSP.issue.type === "unclear") { gsSpeak(t.say, GSP.m.npc, {rate: 0.75}); return; }
+  GSP.lad = Math.min(4, GSP.lad + 1); GSP.hinted++;
+  GSP.score = Math.max(20, GSP.score - 10);
+  gsRenderSpeak();
+}
+
+function gsCommit(){
+  const t = gsTurn(), said = GSP.said;
+  if (!said) return;
+  const e = gsEval(t, GSP.mode, said);
+  GSP.lastEval = e; GSP.tries++;
+  GSP.chat.push({who: "me", text: said, ok: e.status === "pass", typed: GSP.typed});
+  const issue = e.issues[0];
+  gsLog({m: GSP.m.id, t: GSP.ti + 1, mode: GSP.mode, said, res: e.status, note: issue ? (issue.msg || "key: " + t.keys[issue.k].s) : e.miss.length ? "missing: " + e.miss.map(i => t.obj.need[i].lab).join("; ") : "", tries: GSP.tries, typed: GSP.typed});
+  if (e.status === "pass") {
+    GSP.sub = "passed"; GSP.issue = null;
+    GSP.pts[GSP.ti] = GSP.score;
+    GSP.log[GSP.ti] = {said, tries: GSP.tries, score: GSP.score, typed: GSP.typed};
+    GSP.chat.push({who: "npc", text: t.ack});
+    gs.run = {id: GSP.m.id, mode: GSP.mode, ti: GSP.ti + 1, pts: GSP.pts, log: GSP.log};
+    if (gs.run.ti >= GSP.m.turns.length) gs.run = null;
+    gsSave();
+    gsRenderChat(); gsRenderSpeak();
+    gsSpeak(t.ack, GSP.m.npc);
+    return;
+  }
+  // not accepted → they ask her to repeat; the hint ladder moves on
+  if (e.status === "unclear" || e.status === "empty") {
+    GSP.unclear++; GSP.score = Math.max(20, GSP.score - 5);
+    GSP.issue = {type: "unclear", ratio: e.lcs ? e.ratio : null};
+  } else if (e.status === "missing") {
+    GSP.lad = Math.min(4, GSP.lad + 1); GSP.score = Math.max(20, GSP.score - 15);
+    GSP.issue = {type: "need", miss: e.miss};
+  } else {
+    const K = t.keys[issue.k];
+    GSP.lad = Math.min(4, GSP.lad + 1); GSP.score = Math.max(20, GSP.score - 20);
+    GSP.issue = {type: "key", k: issue.k, msg: issue.msg, said: issue.said};
+    gs.errs = gs.errs || {}; gs.errs[K.tag || "Other"] = (gs.errs[K.tag || "Other"] || 0) + 1;
+    gsSave();
+  }
+  GSP.pick = null; GSP.sub = "ready"; GSP.said = "";
+  GSP.chat.push({who: "npc", text: GS_CATCH, puzzled: true});
+  gsRenderChat(); gsRenderSpeak();
+  gsSpeak(GS_CATCH, GSP.m.npc);
+}
+
+function gsNext(){
+  if (GSP.ti < GSP.m.turns.length - 1) { GSP.ti++; gsBeginTurn(); return; }
+  gsResult();
+}
+
+/* ---------- result ---------- */
+function gsResult(){
+  const m = GSP.m, md = GSP.mode;
+  const score = Math.round(GSP.pts.reduce((a, b) => a + (b || 0), 0) / m.turns.length);
+  gs.best[m.id] = gs.best[m.id] || {};
+  const prev = gs.best[m.id][md], first = !prev;
+  if (!prev || score > prev.score) gs.best[m.id][md] = {score, d: new Date().toISOString().slice(0, 10)};
+  gs.run = null; gsSave();
+  gsLog({m: m.id, t: "result", mode: md, said: "", res: "mission " + score + "%", note: "", tries: "", typed: false});
+  const tier = score >= 85 ? {t: "MISSION ACCOMPLISHED", c: "#D4AF37", w: "Excellent — clear and correct."}
+             : score >= 60 ? {t: "WELL DONE", c: "#4ade80", w: "Good communication. A few repairs on the way."}
+             : {t: "KEEP PRACTISING", c: "#fbbf24", w: "You finished it. Play it again — it gets easier every time."};
+  const mi = GS_MODES.findIndex(x => x.id === md), nextMode = GS_MODES[mi + 1], nextM = GS_MISSIONS[m.idx + 1];
+  view = "gsplay"; GSP.phase = "done";
+  $("#app").innerHTML = `
+  <div class="pbar"><button class="btn ghost" id="gsBack">&larr; Ground School</button><h2>Mission result · ${esc(m.title)}</h2>
+    <span class="bdg lv">${esc(m.cefr)}</span><span class="bdg">${GS_MODES[mi].icon} ${esc(GS_MODES[mi].name)}</span></div>
+  <section class="scene"><div class="sart" id="gsRes">${gsSceneArt(m, tier)}</div></section>
+  <section class="gs-resbox">
+    <div class="gs-resh"><div class="gs-resv">${score}%</div><div><b>${esc(tier.w)}</b><br>
+      ${first ? `New medal: ${GS_MODES[mi].icon} ${esc(GS_MODES[mi].name)}` : prev && score > prev.score ? `New best! (was ${prev.score}%)` : `Best so far: ${prev.score}%`}
+      <div class="gs-medals">${GS_MODES.map(x => `<span class="${gsBest(m.id, x.id) ? "on" : ""}">${x.icon} ${esc(x.short)}</span>`).join("")}</div></div></div>
+    <table class="gs-tx"><tr><th>#</th><th>You said</th><th>Model</th><th>Tries</th><th>Pts</th></tr>
+      ${m.turns.map((t, i) => { const L = GSP.log[i] || {}; return `<tr><td>${i+1}</td><td>${esc(L.said || "—")}${L.typed ? ' <small class="gs-ty">typed</small>' : ""}</td><td>${esc(t.say)}</td><td>${L.tries || "—"}</td><td>${GSP.pts[i] || "—"}</td></tr>`; }).join("")}</table>
+    <div class="gs-acts" style="flex-wrap:wrap">
+      <button class="btn ghost" id="gsAgainM">↺ Play again</button>
+      ${nextMode ? `<button class="btn" id="gsNextMode">${nextMode.icon} Next: ${esc(nextMode.name)} ▸</button>` : ""}
+      ${nextM && md === "script" ? `<button class="btn ghost" id="gsNextM">Next mission: ${esc(nextM.title)} ▸</button>` : ""}
+      ${!nextMode && nextM ? `<button class="btn" id="gsNextM">Next mission: ${esc(nextM.title)} ▸</button>` : ""}
+    </div>
+  </section>`;
+  $("#gsBack").onclick = () => { gsStopAudio(); renderGSHome(); };
+  $("#gsAgainM").onclick = () => gsStart(m.id, md);
+  if ($("#gsNextMode")) $("#gsNextMode").onclick = () => gsStart(m.id, nextMode.id);
+  if ($("#gsNextM")) $("#gsNextM").onclick = () => gsStart(nextM.id, "script");
+  const ri = $("#gsRes");
+  // optional drop-in result picture img/gs-outcome-g1-3.png (3 best · 1 lowest)
+  const tn = score >= 85 ? 3 : score >= 60 ? 2 : 1, exts = ["png","PNG","jpg","webp"];
+  const tryN = i => { if (i >= exts.length) return; const im = new Image(); im.onload = () => { if (!ri.isConnected) return; ri.innerHTML = ""; ri.appendChild(im); ri.parentElement.classList.add("photo"); };
+    im.onerror = () => tryN(i + 1); im.src = SCENE_IMG_DIR + "gs-outcome-" + m.id + "-" + tn + "." + exts[i]; };
+  tryN(0);
+  window.scrollTo({top: 0, behavior: "smooth"});
+  gsSpeak(score >= 60 ? "Mission accomplished. Well done!" : "Mission complete. Try it again to improve your score.", m.npc);
+}
+
+/* ---------- voice & mic check ---------- */
+function gsVoiceCheck(){
+  gsLoadVoices();
+  const rows = Object.keys(GS_PEOPLE).map(pid => { const p = GS_PEOPLE[pid], v = gsPickVoice(p.accent, p.sex, p.vp);
+    return `<tr><td>${gsAvatar(pid, 30)}</td><td><b>${esc(p.short)}</b> ${p.flag}<br><small>${p.accent === "GB" ? "British" : "American"} · ${p.sex === "f" ? "female" : "male"}</small></td>
+      <td>${v ? esc(v.name) + " <small>(" + esc(v.lang) + ")</small>" : "<em>default voice</em>"}</td><td><button class="dbtn" data-vt="${pid}">▶ Test</button></td></tr>`; }).join("");
+  const en = gsVoices.filter(v => /^en/i.test(v.lang) && !GS_NOVELTY.test(v.name)).length;
+  $("#refBox").innerHTML = `<h2>Voice &amp; microphone check</h2>
+    <p>Each person speaks with a British or American voice from this device. Tap ▶ to hear them.</p>
+    <table class="gs-vt">${rows}</table>
+    <p style="margin-top:10px"><b>Want more natural voices on iPhone?</b> Settings → Accessibility → Spoken Content → Voices → English → choose a voice marked <b>Enhanced</b> or <b>Premium</b> (for example Serena or Daniel for British, Ava or Evan for American) and download it. Then reload this page. (${en} English voices found on this device.)</p>
+    <h3>Microphone test</h3><p>${esc(gsMicStatus().text)}</p>
+    <div class="gs-acts"><button class="btn" id="gsMicTest" ${GS_SR ? "" : "disabled"}>🎤 Say “I check invoices every day”</button></div>
+    <div class="gs-heard" id="gsMicOut" style="margin-top:8px">…</div>
+    <p style="font-size:.8rem">Speech is turned into text by Apple (Safari) or Google (Chrome). Practise with the scripts — don't say real account numbers or personal details.</p>
+    <div class="gs-acts"><button class="btn ghost" id="gsVcClose">Close</button></div>`;
+  $("#ref").classList.add("show");
+  $("#refBox").querySelectorAll("[data-vt]").forEach(b => b.onclick = () => { const p = GS_PEOPLE[b.dataset.vt]; gsSpeak("Hello! I'm " + p.short + ". Nice to meet you. Could you tell me where you work?", b.dataset.vt); });
+  $("#gsVcClose").onclick = () => $("#ref").classList.remove("show");
+  const mt = $("#gsMicTest");
+  if (mt && GS_SR) mt.onclick = () => {
+    try { speechSynthesis.cancel(); } catch(e){}
+    const r = new GS_SR(); r.lang = "en-US"; r.interimResults = true; r.continuous = false;
+    const out = $("#gsMicOut"); out.textContent = "Listening…"; mt.disabled = true;
+    r.onresult = e => { let s = ""; for (let i = 0; i < e.results.length; i++) s += e.results[i][0].transcript; out.textContent = s; };
+    r.onerror = e => { out.innerHTML = gsMicErrText(e.error) || "Error: " + esc(e.error); };
+    r.onend = () => { mt.disabled = false; if (out.textContent === "Listening…") out.textContent = "Nothing heard — try again."; };
+    try { r.start(); } catch(e) { out.textContent = "Could not start the microphone."; mt.disabled = false; }
+  };
+}
+
+/* ======================================================================
+   ACCOUNT — name + PIN login, progress saved to Google Sheets
+   ====================================================================== */
+const USER_KEY = "rtafModDesk_user", API_KEY = "rtafModDesk_api";
+(function(){ try { const q = new URLSearchParams(location.search).get("api"); if (q && /^https:\/\/script\.google(usercontent)?\.com\//.test(q)) localStorage.setItem(API_KEY, q); } catch(e){} })();
+function gsApiURL(){ if (GS_SHEET_URL) return GS_SHEET_URL; try { return localStorage.getItem(API_KEY) || ""; } catch(e){ return ""; } }
+let USER = null; try { USER = JSON.parse(localStorage.getItem(USER_KEY) || "null"); } catch(e){}
+const CLOUD = {state: "off", last: 0, timer: null, logs: [], busy: false};
+const nameKey = s => String(s || "").trim().toLowerCase().replace(/\s+/g, " ");
+
+async function gsHashPin(name, pin){
+  const msg = "modulation-desk|" + nameKey(name) + "|" + pin;
+  try { const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(msg)); return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, "0")).join(""); }
+  catch(e){ let h1 = 0x811c9dc5, h2 = 0x1b873593; for (const ch of msg) { const c = ch.charCodeAt(0); h1 = Math.imul(h1 ^ c, 16777619); h2 = Math.imul(h2 ^ c, 2246822507); }
+    return ((h1 >>> 0).toString(16).padStart(8, "0") + (h2 >>> 0).toString(16).padStart(8, "0")).repeat(2); }
+}
+async function gsApi(action, body, keep){
+  const url = gsApiURL(); if (!url) throw new Error("Online saving is not set up yet.");
+  const r = await fetch(url, {method: "POST", body: JSON.stringify(Object.assign({action}, body)), keepalive: !!keep});
+  if (!r.ok) throw new Error("Server error " + r.status);
+  const j = await r.json(); if (!j.ok) throw new Error(j.error || "Server error");
+  return j;
+}
+function gsSummary(){
+  return GS_MISSIONS.map(m => m.id + ":" + GS_MODES.map(md => { const b = gsBest(m.id, md.id); return b ? b.score : "-"; }).join("/")).join("  ")
+    + " | Desk: " + Object.keys(store.best || {}).length + " missions";
+}
+function cloudQueue(){
+  if (!USER || !gsApiURL()) return;
+  clearTimeout(CLOUD.timer); CLOUD.state = "pending"; gsUserBtn();
+  CLOUD.timer = setTimeout(cloudPush, 2500);
+}
+function gsLog(row){ if (!USER || !gsApiURL()) return; CLOUD.logs.push(row); if (CLOUD.logs.length > 40) CLOUD.logs.shift(); cloudQueue(); }
+async function cloudPush(keep){
+  if (!USER || !gsApiURL()) return;
+  if (CLOUD.busy) { cloudQueue(); return; }
+  CLOUD.busy = true; clearTimeout(CLOUD.timer);
+  const logs = CLOUD.logs.splice(0);
+  try {
+    await gsApi("save", {name: USER.name, h: USER.h, t: Date.now(), desk: store, gs, summary: gsSummary(), logs}, keep);
+    CLOUD.state = "saved"; CLOUD.last = Date.now();
+  } catch(e) { CLOUD.logs = logs.concat(CLOUD.logs).slice(-40); CLOUD.state = "offline"; }
+  CLOUD.busy = false; gsUserBtn();
+}
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden" && CLOUD.state === "pending") cloudPush(true); });
+
+function gsAdopt(remote){
+  const desk = JSON.parse(DESK_DEFAULT);
+  Object.keys(store).forEach(k => delete store[k]); Object.assign(store, desk, (remote && remote.desk) || {});
+  const g2 = JSON.parse(JSON.stringify(GS_DEFAULT));
+  Object.keys(gs).forEach(k => delete gs[k]); Object.assign(gs, g2, (remote && remote.gs) || {});
+  try { localStorage.setItem(LS_KEY, JSON.stringify(store)); localStorage.setItem(GS_KEY, JSON.stringify(gs)); } catch(e){}
+  document.documentElement.style.setProperty("--fs", (store.fs || 16) + "px");
+  if (typeof setVoiceBtn === "function") setVoiceBtn();
+}
+async function gsLogin(name, pin){
+  name = String(name || "").trim().replace(/\s+/g, " ").slice(0, 40);
+  const h = await gsHashPin(name, pin);
+  const j = await gsApi("login", {name, h});
+  const prev = USER, same = prev && nameKey(prev.name) === nameKey(name);
+  const remote = j.data, localT = Math.max(store._t || 0, gs._t || 0);
+  USER = {name: j.name || name, h};
+  try { localStorage.setItem(USER_KEY, JSON.stringify(USER)); } catch(e){}
+  if (remote && (remote.desk || remote.gs) && (!same || (remote.t || 0) > localT)) gsAdopt(remote);
+  else if (!remote && prev && !same) gsAdopt(null);
+  CLOUD.state = "saved"; CLOUD.last = Date.now();
+  cloudPush();
+  return j;
+}
+function gsLogout(){
+  if (!confirm("Sign out? Your progress is saved online. This device will be cleared.")) return;
+  cloudPush(true);
+  USER = null; try { localStorage.removeItem(USER_KEY); } catch(e){}
+  gsAdopt(null); CLOUD.state = "off"; gsUserBtn(); gsAccount(); renderHome();
+}
+function gsUserBtn(){
+  const b = $("#userBtn"); if (!b) return;
+  if (!gsApiURL()) { b.style.display = "none"; return; }
+  b.style.display = "";
+  const ic = {saved: "☁️✓", pending: "☁️…", offline: "⚠️", off: ""}[CLOUD.state] || "";
+  b.textContent = USER ? "👤 " + USER.name + " " + ic : "👤 Sign in";
+  b.classList.toggle("on", !!USER);
+  b.title = USER ? (CLOUD.state === "offline" ? "Offline — progress is kept on this device and will be saved when you're back online" : "Progress saved online") : "Sign in to save your progress online";
+}
+function gsAccount(msg){
+  const box = $("#acctBox"); if (!box) return;
+  if (!gsApiURL()) { box.innerHTML = `<h2>Online saving</h2><p>Online saving isn't set up yet, so progress is saved on this device only.</p><div class="gs-acts"><button class="btn ghost" id="acClose">Close</button></div>`; }
+  else if (USER) {
+    box.innerHTML = `<h2>👤 ${esc(USER.name)}</h2>
+      <p>${CLOUD.state === "offline" ? "⚠️ Offline right now — your progress is safe on this device and will be saved online when the connection is back." : CLOUD.last ? "☁️ Progress saved online at " + new Date(CLOUD.last).toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}) + "." : "☁️ Progress is saved online automatically."}</p>
+      <p>You can continue on any device: open this page and sign in with the same name and PIN.</p>
+      <div class="gs-acts"><button class="btn" id="acSave">Save now</button><button class="btn ghost" id="acOut">Sign out</button><button class="btn ghost" id="acClose">Close</button></div>`;
+  } else {
+    box.innerHTML = `<h2>Sign in</h2><p>Sign in to save your missions online and continue next time — on this phone or any other device.</p>
+      <label class="gs-f">First name<input id="acName" autocomplete="username" autocapitalize="words" maxlength="40" placeholder="e.g. Pim"></label>
+      <label class="gs-f">4-digit PIN<input id="acPin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="current-password" placeholder="••••"></label>
+      <p class="gs-fine">First time? Choose a name and a PIN — your account is created when you sign in. Use the same name and PIN next time.</p>
+      <div class="gs-err" id="acErr">${msg ? esc(msg) : ""}</div>
+      <div class="gs-acts"><button class="btn" id="acGo">Sign in ▸</button><button class="gs-link" id="acSkip">Continue without saving online</button></div>`;
+  }
+  const on = (id, f) => { const b = document.getElementById(id); if (b) b.onclick = f; };
+  on("acClose", () => $("#acct").classList.remove("show"));
+  on("acSkip", () => { try { sessionStorage.setItem("mdSkipLogin", "1"); } catch(e){} $("#acct").classList.remove("show"); });
+  on("acSave", async () => { await cloudPush(); gsAccount(); });
+  on("acOut", gsLogout);
+  on("acGo", async () => {
+    const nm = $("#acName").value.trim(), pin = $("#acPin").value.trim(), er = $("#acErr");
+    if (!nm) { er.textContent = "Please type your first name."; return; }
+    if (!/^\d{4}$/.test(pin)) { er.textContent = "The PIN must be 4 numbers."; return; }
+    er.textContent = "Signing in…"; $("#acGo").disabled = true;
+    try { const j = await gsLogin(nm, pin); $("#acct").classList.remove("show"); gsUserBtn(); renderHome();
+      if (j.created) setTimeout(() => alert("Welcome, " + USER.name + "! Your account is ready. Remember your PIN."), 50); }
+    catch(e) { er.textContent = e.message || "Could not sign in."; $("#acGo").disabled = false; }
+  });
+  const pin = $("#acPin"); if (pin) pin.onkeydown = e => { if (e.key === "Enter") $("#acGo").click(); };
+}
+function gsInitAccount(){
+  const b = $("#userBtn");
+  if (b) b.onclick = () => { gsAccount(); $("#acct").classList.add("show"); };
+  $("#acct").onclick = e => { if (e.target.id === "acct") $("#acct").classList.remove("show"); };
+  if (USER) CLOUD.state = "saved";
+  gsUserBtn();
+  let skip = false; try { skip = sessionStorage.getItem("mdSkipLogin") === "1"; } catch(e){}
+  if (gsApiURL() && !USER && !skip) { gsAccount(); $("#acct").classList.add("show"); }
+  if (USER && gsApiURL()) {   // refresh from the cloud in case another device saved more recently
+    gsApi("login", {name: USER.name, h: USER.h}).then(j => {
+      const r = j.data, localT = Math.max(store._t || 0, gs._t || 0);
+      if (r && (r.t || 0) > localT + 1000) { gsAdopt(r); if (view === "home") renderHome(); }
+      CLOUD.state = "saved"; gsUserBtn();
+    }).catch(e => { if (/match|not signed/i.test(e.message)) { USER = null; try { localStorage.removeItem(USER_KEY); } catch(_){} gsUserBtn(); } else { CLOUD.state = "offline"; gsUserBtn(); } });
+  }
+}
+
+/* header: Mission map button must also leave a Ground School conversation cleanly */
+$("#homeBtn").onclick = () => {
+  if (view === "gsplay") { gsLeave(); return; }
+  if (view !== "play" || confirmLeave()) renderHome();
+};
+document.addEventListener("keydown", e => { if (e.key === "Escape") $("#acct").classList.remove("show"); });
+(function(){ try { const q = new URLSearchParams(location.search).get("tab"); if (q === "gs" || CAMPAIGNS.some(c => c.id === q)) store.tab = q; } catch(e){} })();
+gsInitAccount();
 
 renderHome();
 </script>
