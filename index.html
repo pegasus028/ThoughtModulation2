@@ -556,6 +556,65 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding-top:12px;font-si
   .gs-dots{margin-left:0;width:100%}
   .gs-strip .hbtn{flex:1 1 auto}
 }
+
+/* ---------- Formation Drills (spoken grammar drills tab) ---------- */
+.fd-tab b{color:#f3d77a}
+.fd-banner{background:linear-gradient(120deg,#0F2440,#3a2f10)}
+.fd-livenote{margin:10px 0;padding:10px 12px;border-radius:10px;background:rgba(127,179,230,.1);border:1px solid rgba(127,179,230,.45);font-size:.88rem}
+.fd-review{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:12px 0;padding:10px 14px;border-radius:12px;background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.45)}
+.fd-review small{color:var(--ink-dim)}
+.fd-review.none{background:var(--navy2);border-color:var(--line)}
+.fd-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px;margin-top:6px}
+.fd-card{background:var(--navy2);border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:10px}
+.fd-card.flown{border-color:rgba(212,175,55,.5)}
+.fd-ch{display:flex;gap:10px;align-items:center}
+.fd-ch h3{margin:.1rem 0 0;font-size:1.02rem}
+.fd-ic{font-size:1.7rem;flex:none}
+.fd-st{margin-left:auto;color:var(--gold);letter-spacing:1px;flex:none}
+.fd-st span,.fd-pst span{color:#35506f}
+.fd-pst{color:var(--gold);letter-spacing:1px;white-space:nowrap}
+.fd-eg{display:flex;flex-direction:column;gap:4px;font-size:.86rem;background:#0b1a30;border-radius:10px;padding:8px 10px;color:var(--ink-dim)}
+.fd-eg b{color:#fff}
+.fd-cue{display:inline-block;align-self:center;background:var(--gold);color:#1a1405;font-weight:800;border-radius:99px;padding:6px 18px;font-size:1.05rem;letter-spacing:.02em;box-shadow:0 0 0 4px rgba(212,175,55,.18)}
+.fd-cue.sm{align-self:flex-start;font-size:.74rem;padding:2px 10px;box-shadow:none}
+.fd-cue.big{font-size:1.45rem;padding:8px 26px}
+.fd-meter{height:7px;background:var(--navy3);border-radius:6px;overflow:hidden}
+.fd-meter i{display:block;height:100%;background:linear-gradient(90deg,var(--gold-dim),var(--gold))}
+.fd-cf{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.fd-cf small{color:var(--ink-dim);font-size:.76rem}
+.fd-due{color:var(--warn)}
+.fd-demo{display:flex;flex-direction:column;align-items:stretch;gap:6px;background:var(--navy2);border:1px solid var(--line);border-radius:12px;padding:12px}
+.fd-demo .dbtn{align-self:flex-start;margin-top:4px}
+.fd-base{position:relative;background:#fff;color:#14202e;border-radius:14px;padding:12px 44px 12px 14px;font-size:1.2rem;font-weight:600;line-height:1.4}
+.fd-demo .fd-base{font-size:1rem;padding-right:14px}
+.fd-base.hid{cursor:pointer;color:#1d4f8f;font-size:.95rem;background:#dfe9f5}
+.fd-arrow{text-align:center;color:var(--gold);font-size:.8rem;line-height:1}
+.fd-ans{background:rgba(74,222,128,.14);border:1px solid rgba(74,222,128,.5);border-radius:12px;padding:10px 12px;font-weight:700;color:#fff}
+.fd-rule{font-size:1rem;line-height:1.55;color:#fff;margin:.3rem 0}
+.fd-rule b,.fd-more b,.gs-tip b,.gs-c b b{color:var(--gold)}
+.fd-more{font-size:.9rem;color:#dbe6f3;background:#0b1a30;border-radius:8px;padding:8px 10px}
+.fd-play{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:start;margin-top:12px}
+.fd-stage{background:#0b1726;border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:10px}
+.fd-how{margin:0;text-align:center;color:var(--ink-dim);font-size:.88rem}
+.fd-usewho{display:flex;gap:10px;align-items:center;font-size:.9rem}
+.fd-usewho small{color:var(--ink-dim)}
+.fd-ubub{max-width:100%}
+.fd-task{background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.5);border-radius:10px;padding:10px 12px;font-weight:600}
+.fd-frame{font-size:1.1rem;font-weight:600;color:#fff}
+.fd-blank{color:var(--gold);letter-spacing:1px}
+.fd-tbox{display:flex;flex-direction:column;gap:10px}
+.fd-tbtns{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.fd-tb{border-radius:12px;padding:14px 8px;font-weight:800;font-size:1rem;border:1px solid var(--line);color:#fff;background:var(--navy3)}
+.fd-tb.ok{background:rgba(74,222,128,.2);border-color:var(--good)}
+.fd-tb.mid{background:rgba(212,175,55,.18);border-color:var(--gold)}
+.fd-tb.no{background:rgba(248,113,113,.14);border-color:var(--bad)}
+.fd-udot{border-radius:3px;transform:rotate(45deg) scale(.85)}
+@media (max-width:860px){ .fd-play{grid-template-columns:1fr} }
+@media (max-width:560px){
+  .fd-base{font-size:1.08rem}
+  .fd-cue.big{font-size:1.25rem}
+  .fd-tbtns{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -3328,6 +3387,7 @@ function firstSlot(){ const ls = liveSlots(turn()); S.act = ls.length ? ls[0].k 
 function renderHome(){
   view = "home";
   if (store.tab === "gs") return renderGSHome();
+  if (store.tab === "fd") return renderFDHome();
   const camp = CAMPAIGNS.find(c => c.id === store.tab) || CAMPAIGNS[0];
   const ids = camp.ids;
   // default selection: the saved one, else the first unlocked mission not yet done
@@ -5342,7 +5402,9 @@ function allTabsHTML(activeId){
   }).join("");
   const gd = GS_MISSIONS.filter(m => gsBest(m.id, "script")).length;
   return `<button class="tab gs-tab ${activeId==='gs'?'on':''}" role="tab" aria-selected="${activeId==='gs'}" data-tab="gs">
-      <span class="ti" aria-hidden="true">🎙️</span><span><b>Ground School</b><small>Speak it out · A2–B1 · ${gd}/${GS_MISSIONS.length}</small></span></button>` + camps;
+      <span class="ti" aria-hidden="true">🎙️</span><span><b>Ground School</b><small>Speak it out · A2–B1 · ${gd}/${GS_MISSIONS.length}</small></span></button>`
+    + (typeof FD_DRILLS === "undefined" ? "" : `<button class="tab fd-tab ${activeId==='fd'?'on':''}" role="tab" aria-selected="${activeId==='fd'}" data-tab="fd">
+      <span class="ti" aria-hidden="true">🎖️</span><span><b>Formation Drills</b><small>Grammar out loud · A1–A2 · ${FD_DRILLS.filter(d => fdS().best[d.id]).length}/${FD_DRILLS.length}</small></span></button>`) + camps;
 }
 
 function gsImg(m, el, kind){
@@ -5763,6 +5825,669 @@ function gsVoiceCheck(){
 }
 
 /* ======================================================================
+   FORMATION DRILLS — data
+   Each drill ("formation") = one grammar point said out loud.
+   item: b = base sentence (she hears/sees it), c = cue, a = accepted answers (a[0] = model),
+         k = required forms (every group must match; a group is a list of alternatives),
+         x = common mistakes [phrase, coach message]
+   use: one "now use it" line in a real situation at the end of each sortie
+   All forms are matched after gsNorm(): contractions are expanded (doesn't → does not,
+   I'll → i will) and number words become digits (three → 3).
+   ====================================================================== */
+const FD_DRILLS = [
+{id:"d1", icon:"🧍‍♀️", name:"He · She · It + s", short:"Verb -s", cefr:"A1", tag:"Verb -s",
+ how:"Change the person. Say the new sentence.",
+ eg:["I check the invoices.", "She", "She checks the invoices."],
+ rule:"He / she / it (one person or thing) → verb + <b>s</b>: she check<b>s</b>, he pay<b>s</b>, it cost<b>s</b>.",
+ more:"Spelling to say: go → go<b>es</b> · do → do<b>es</b> · watch → watch<b>es</b> · have → <b>has</b>.",
+ thai:"Thai verbs never change. English adds -s after he / she / it — say the s clearly.",
+ items:[
+  {b:"I check the invoices.", c:"She", a:["She checks the invoices."], k:[["she checks"]], x:[["she check","She → checks. Add -s."]]},
+  {b:"I work in the Finance Division.", c:"He", a:["He works in the Finance Division."], k:[["he works"]], x:[["he work","He → works. Add -s."]]},
+  {b:"We pay the suppliers on Friday.", c:"Malee", a:["Malee pays the suppliers on Friday."], k:[["pays the suppliers"]], x:[["pay the suppliers","Malee is one person → pays."]]},
+  {b:"I have a meeting at ten.", c:"She", a:["She has a meeting at ten."], k:[["she has"]], x:[["she have","With she, have → has."],["she haves","have → has (not haves)."]]},
+  {b:"They go to the bank every Monday.", c:"Ploy", a:["Ploy goes to the bank every Monday."], k:[["goes to the bank"]], x:[["go to the bank","Ploy is one person → goes."]]},
+  {b:"I do the bank reconciliation.", c:"He", a:["He does the bank reconciliation."], k:[["he does"]], x:[["he do","With he, do → does."]]},
+  {b:"We send the report to the commander.", c:"The section head", a:["The section head sends the report to the commander."], k:[["sends the report"]], x:[["send the report","The section head = one person → sends."]]},
+  {b:"I watch the budget carefully.", c:"She", a:["She watches the budget carefully."], k:[["she watches"]], x:[["she watch","watch → watches (add -es)."]]},
+  {b:"The flights cost a lot.", c:"The flight", a:["The flight costs a lot."], k:[["flight costs"]], x:[["flight cost a","One flight → costs."]]},
+  {b:"I need two signatures.", c:"The form", a:["The form needs two signatures."], k:[["form needs"]], x:[["form need","The form = it → needs."]]},
+  {b:"They approve the travel claims.", c:"The wing commander", a:["The wing commander approves the travel claims."], k:[["approves the travel"]], x:[["approve the travel","One commander → approves."]]},
+  {b:"I start work at eight.", c:"Nok", a:["Nok starts work at eight."], k:[["starts work"]], x:[["start work","Nok is one person → starts."]]}
+ ],
+ use:{npc:"sarah", q:"Who checks the travel claims in your section?", task:"Say that Malee checks them.",
+      a:["Malee checks them.","Malee checks the travel claims.","She checks them."], k:[["checks them","checks the travel claims","checks the claims"]],
+      x:[["check them","Malee is one person → checks."],["malee check","Malee is one person → checks."]]}
+},
+{id:"d2", icon:"🔢", name:"There is · There are", short:"There is / are", cefr:"A1", tag:"There is / are",
+ how:"Change the number. Say the new sentence.",
+ eg:["There is one invoice on my desk.", "three", "There are three invoices on my desk."],
+ rule:"One → There <b>is</b> one invoice. Two or more → There <b>are</b> three invoice<b>s</b>.",
+ more:"Watch: person → <b>people</b> · box → box<b>es</b> · copy → cop<b>ies</b>.",
+ thai:"Thai nouns don't change with numbers. English nouns do: one invoice, three invoice<b>s</b>.",
+ items:[
+  {b:"There is one invoice on my desk.", c:"three", a:["There are three invoices on my desk."], k:[["are 3 invoices"]], x:[["is 3 invoices","Three is more than one → There are."],["3 invoice on","Add -s: three invoices."]]},
+  {b:"There is one problem with the payment.", c:"two", a:["There are two problems with the payment."], k:[["are 2 problems"]], x:[["is 2 problems","Two → There are."],["2 problem with","Add -s: two problems."]]},
+  {b:"There is one receipt in the file.", c:"five", a:["There are five receipts in the file."], k:[["are 5 receipts"]], x:[["is 5 receipts","Five → There are."],["5 receipt in","Add -s: five receipts."]]},
+  {b:"There are four mistakes in the report.", c:"one", a:["There is one mistake in the report."], k:[["there is"],["1 mistake","a mistake"]], x:[["are 1 mistake","One → There is."],["1 mistakes","One → mistake (no -s)."]]},
+  {b:"There is one meeting this week.", c:"three", a:["There are three meetings this week."], k:[["are 3 meetings"]], x:[["is 3 meetings","Three → There are."],["3 meeting this","Add -s: three meetings."]]},
+  {b:"There are two signatures on the form.", c:"one", a:["There is one signature on the form."], k:[["there is"],["1 signature","a signature"]], x:[["are 1 signature","One → There is."],["1 signatures","One → signature (no -s)."]]},
+  {b:"There is one officer from Australia.", c:"four", a:["There are four officers from Australia."], k:[["are 4 officers"]], x:[["is 4 officers","Four → There are."],["4 officer from","Add -s: four officers."]]},
+  {b:"There is a printer on this floor.", c:"two", a:["There are two printers on this floor."], k:[["are 2 printers"]], x:[["is 2 printers","Two → There are."],["2 printer on","Add -s: two printers."]]},
+  {b:"There is one person in the meeting room.", c:"six", a:["There are six people in the meeting room."], k:[["are 6 people"]], x:[["6 persons","person → people (not persons)."],["6 person","person → people."],["is 6 people","Six → There are."]]},
+  {b:"There is one bank account for the project.", c:"two", a:["There are two bank accounts for the project."], k:[["are 2 bank accounts"]], x:[["is 2 bank","Two → There are."],["2 bank account for","Add -s: two bank accounts."]]},
+  {b:"There is one box of files.", c:"three", a:["There are three boxes of files."], k:[["are 3 boxes"]], x:[["is 3 boxes","Three → There are."],["3 box of","box → boxes."]]},
+  {b:"There is one copy of the contract.", c:"two", a:["There are two copies of the contract."], k:[["are 2 copies"]], x:[["is 2 copies","Two → There are."],["2 copy of","copy → copies."]]}
+ ],
+ use:{npc:"mike", q:"How many invoices are there in the file?", task:"Say there are four invoices.",
+      a:["There are four invoices.","There are four invoices in the file."], k:[["are 4 invoices","are 4 of them","are 4"]],
+      x:[["is 4","Four → There are."]]}
+},
+{id:"d3", icon:"🚫", name:"Don't · Doesn't · Isn't", short:"Negatives", cefr:"A1–A2", tag:"Negatives",
+ how:"Make the sentence negative (not).",
+ eg:["The bank opens on Sunday.", "✗ not", "The bank doesn't open on Sunday."],
+ rule:"I / you / we / they → <b>don't</b> + verb. He / she / it → <b>doesn't</b> + verb (no -s). With is / are → <b>isn't</b> / <b>aren't</b>.",
+ more:"doesn't open ✓ · doesn't opens ✗ · not open ✗",
+ thai:"Thai puts ไม่ before the verb. English needs a helper: don't / doesn't — or isn't with be.",
+ items:[
+  {b:"I work on Saturdays.", c:"✗ not", a:["I don't work on Saturdays."], k:[["do not work"]], x:[["i not work","Add don't: I don't work."],["i no work","Say: I don't work."],["i does not","I → don't."],["i am not work","Say: I don't work."]]},
+  {b:"The bank opens on Sunday.", c:"✗ not", a:["The bank doesn't open on Sunday."], k:[["does not open"]], x:[["does not opens","After doesn't, no -s: doesn't open."],["do not open","The bank = it → doesn't."],["bank not open","Add doesn't: The bank doesn't open."],["no open","Say: The bank doesn't open."]]},
+  {b:"We accept cash.", c:"✗ not", a:["We don't accept cash."], k:[["do not accept"]], x:[["we not accept","Add don't: We don't accept."],["we does not","We → don't."]]},
+  {b:"She has the receipt.", c:"✗ not", a:["She doesn't have the receipt.","She hasn't got the receipt."], k:[["does not have","has not got"]], x:[["does not has","After doesn't → have (not has)."],["she not have","Add doesn't: She doesn't have."],["she do not have","She → doesn't."],["she has not the","Say: She doesn't have the receipt."]]},
+  {b:"The total is correct.", c:"✗ not", a:["The total isn't correct."], k:[["is not correct"]], x:[["is not correctly","Say: isn't correct."],["does not correct","With is → isn't correct."],["total not correct","Keep is: The total isn't correct."]]},
+  {b:"The invoices are ready.", c:"✗ not", a:["The invoices aren't ready."], k:[["are not ready"]], x:[["is not ready","Invoices = they → aren't."],["do not ready","With are → aren't ready."],["invoices not ready","Keep are: aren't ready."]]},
+  {b:"He knows the account number.", c:"✗ not", a:["He doesn't know the account number."], k:[["does not know"]], x:[["does not knows","After doesn't, no -s: doesn't know."],["he not know","Add doesn't: He doesn't know."],["do not know","He → doesn't."]]},
+  {b:"I understand this report.", c:"✗ not", a:["I don't understand this report."], k:[["do not understand"]], x:[["i not understand","Add don't: I don't understand."],["does not understand","I → don't."]]},
+  {b:"The supplier sends the invoice on time.", c:"✗ not", a:["The supplier doesn't send the invoice on time."], k:[["does not send"]], x:[["supplier do not send","The supplier = it → doesn't."],["does not sends","After doesn't, no -s: doesn't send."],["supplier not send","Add doesn't."]]},
+  {b:"The figures match.", c:"✗ not", a:["The figures don't match."], k:[["do not match"]], x:[["does not match","Figures = they → don't."],["figures not match","Add don't: The figures don't match."]]},
+  {b:"It is my responsibility.", c:"✗ not", a:["It isn't my responsibility."], k:[["is not my"]], x:[["does not my","With is → isn't."],["it not my","Keep is: It isn't my responsibility."]]},
+  {b:"We need a new budget.", c:"✗ not", a:["We don't need a new budget."], k:[["do not need"]], x:[["we not need","Add don't: We don't need."]]}
+ ],
+ use:{npc:"jessica", q:"Would you like breakfast tomorrow morning?", task:"Say no, thank you — you don't need breakfast.",
+      a:["No, thank you. I don't need breakfast.","No, thanks. I don't need breakfast."], k:[["do not need","do not want"]],
+      x:[["i not need","Add don't: I don't need breakfast."]]}
+},
+{id:"d4", icon:"❓", name:"Do · Does · Is · Are ?", short:"Yes/No questions", cefr:"A2", tag:"Questions",
+ how:"Turn the sentence into a question.",
+ eg:["The supplier accepts bank transfers.", "❓ question", "Does the supplier accept bank transfers?"],
+ rule:"<b>Do</b> + I / you / we / they + verb? <b>Does</b> + he / she / it + verb (no -s)? With be, move it to the front: <b>Is</b> it…? <b>Are</b> you…?",
+ more:"Does she speak ✓ · Does she speaks ✗ · She speaks? ✗",
+ thai:"Thai adds ไหม at the end. English starts with Do / Does / Is / Are — not just a rising voice.",
+ items:[
+  {b:"You work in Finance.", c:"❓ question", a:["Do you work in Finance?"], k:[["do you work"]], x:[["does you","You → Do you work?"],["are you work","Use do with a verb: Do you work…?"]]},
+  {b:"The supplier accepts bank transfers.", c:"❓ question", a:["Does the supplier accept bank transfers?"], k:[["does the supplier accept"]], x:[["is the supplier accept","Use does with a verb: Does the supplier accept…?"],["supplier accepts bank","Start with Does — and no -s: Does the supplier accept…?"],["do the supplier","The supplier = it → Does."]]},
+  {b:"You have the receipt.", c:"❓ question", a:["Do you have the receipt?"], k:[["do you have"]], x:[["does you have","You → Do you have?"],["are you have","Say: Do you have…?"]]},
+  {b:"The meeting is at two.", c:"❓ question", a:["Is the meeting at two?"], k:[["is the meeting"]], x:[["does the meeting","With is → move is to the front: Is the meeting…?"],["the meeting is at","Move is to the front: Is the meeting at two?"]]},
+  {b:"She speaks Thai.", c:"❓ question", a:["Does she speak Thai?"], k:[["does she speak"]], x:[["is she speak","Use does with a verb: Does she speak…?"],["does she speaks","After does, no -s: Does she speak?"],["do she","She → Does."],["she speaks thai","Start with Does: Does she speak Thai?"]]},
+  {b:"They need my signature.", c:"❓ question", a:["Do they need my signature?"], k:[["do they need"]], x:[["does they","They → Do they need?"],["^they need my","Start with Do: Do they need…?"]]},
+  {b:"The invoice is correct.", c:"❓ question", a:["Is the invoice correct?"], k:[["is the invoice correct"]], x:[["does the invoice","With is → Is the invoice correct?"],["the invoice is correct","Move is to the front: Is the invoice correct?"]]},
+  {b:"You are free on Friday.", c:"❓ question", a:["Are you free on Friday?"], k:[["are you free"]], x:[["do you free","With are → Are you free?"],["you are free","Move are to the front: Are you free?"]]},
+  {b:"Your office opens at eight.", c:"❓ question", a:["Does your office open at eight?","Is your office open at eight?"], k:[["does your office open","is your office open"]], x:[["does your office opens","After does, no -s: open."],["your office opens","Start with Does: Does your office open…?"]]},
+  {b:"He checks the travel claims.", c:"❓ question", a:["Does he check the travel claims?"], k:[["does he check"]], x:[["is he check","Use does with a verb: Does he check…?"],["does he checks","After does, no -s: check."],["he checks the","Start with Does: Does he check…?"]]},
+  {b:"The hotel includes breakfast.", c:"❓ question", a:["Does the hotel include breakfast?"], k:[["does the hotel include"]], x:[["is the hotel include","Use does with a verb: Does the hotel include…?"],["does the hotel includes","After does, no -s: include."],["hotel includes breakfast","Start with Does: Does the hotel include…?"]]},
+  {b:"The figures are final.", c:"❓ question", a:["Are the figures final?"], k:[["are the figures"]], x:[["do the figures","With are → Are the figures final?"],["the figures are final","Move are to the front: Are the figures final?"]]}
+ ],
+ use:{npc:"tom", q:"Hello! I'm Tom, from the visiting squadron. Nice to meet you.", task:"Say nice to meet you — then ask if he speaks Thai.",
+      a:["Nice to meet you too. Do you speak Thai?","Nice to meet you. Do you speak Thai?"], k:[["do you speak thai","do you speak any thai","can you speak thai"]],
+      x:[["^you speak thai","Start with Do: Do you speak Thai?"],["meet you you speak thai","Start with Do: Do you speak Thai?"],["meet you too you speak thai","Start with Do: Do you speak Thai?"],["are you speak","Say: Do you speak Thai?"]]}
+},
+{id:"d5", icon:"🧭", name:"When · Where · How much ?", short:"Wh- questions", cefr:"A2", tag:"Wh- questions",
+ how:"Ask for the missing information. Start with the question word.",
+ eg:["The meeting starts at nine.", "When?", "When does the meeting start?"],
+ rule:"Question word + <b>do / does</b> + person + verb? → When <b>does</b> the meeting <b>start</b>? With be: Where <b>is</b> the file?",
+ more:"When does it start ✓ · When it starts ✗ · When does it starts ✗",
+ thai:"Thai keeps the normal order. English questions need the helper (do / does / is) before the person.",
+ items:[
+  {b:"The meeting starts at nine.", c:"When?", a:["When does the meeting start?","What time does the meeting start?"], k:[["does the meeting start"]], x:[["is the meeting start","Use does with a verb: When does the meeting start?"],["does the meeting starts","After does, no -s: start."],["when the meeting starts","Add does: When does the meeting start?"]]},
+  {b:"The file is in the cabinet.", c:"Where?", a:["Where is the file?"], k:[["where is the file"]], x:[["where the file is","Move is: Where is the file?"],["where does the file","With is → Where is the file?"]]},
+  {b:"The ticket costs 4,000 baht.", c:"How much?", a:["How much does the ticket cost?","How much is the ticket?","How much does it cost?","How much is it?"], k:[["does the ticket cost","is the ticket","does it cost","is it"]], x:[["is the ticket cost","Say: How much is the ticket? or How much does the ticket cost?"],["does the ticket costs","After does, no -s: cost."],["how much the ticket costs","Add does: How much does the ticket cost?"]]},
+  {b:"She works in Purchasing.", c:"Where?", a:["Where does she work?"], k:[["where does she work"]], x:[["is she work","Use does with a verb: Where does she work?"],["where does she works","After does, no -s: work."],["where she works","Add does: Where does she work?"],["where is she work","Say: Where does she work?"]]},
+  {b:"The supplier sends the invoices by email.", c:"How?", a:["How does the supplier send the invoices?"], k:[["does the supplier send"]], x:[["is the supplier send","Use does with a verb: How does the supplier send…?"],["does the supplier sends","After does, no -s: send."],["how the supplier sends","Add does: How does the supplier send…?"]]},
+  {b:"The visitors arrive on Monday.", c:"When?", a:["When do the visitors arrive?"], k:[["do the visitors arrive"]], x:[["are the visitors arrive","Use do with a verb: When do the visitors arrive?"],["does the visitors","Visitors = they → do."],["when the visitors arrive","Add do: When do the visitors arrive?"]]},
+  {b:"Mr. Eriksen is the auditor.", c:"Who?", a:["Who is the auditor?"], k:[["who is the auditor"]], x:[["who the auditor is","Move is: Who is the auditor?"]]},
+  {b:"The bank closes at half past three.", c:"What time?", a:["What time does the bank close?","When does the bank close?"], k:[["does the bank close"]], x:[["is the bank close","Use does with a verb: What time does the bank close?"],["does the bank closes","After does, no -s: close."],["what time the bank closes","Add does: What time does the bank close?"]]},
+  {b:"The project needs 2 million baht.", c:"How much?", a:["How much does the project need?","How much money does the project need?"], k:[["does the project need"]], x:[["is the project need","Use does with a verb: How much does the project need?"],["does the project needs","After does, no -s: need."],["how much the project needs","Add does: How much does the project need?"]]},
+  {b:"He calls the supplier every week.", c:"How often?", a:["How often does he call the supplier?"], k:[["does he call"]], x:[["is he call","Use does with a verb: How often does he call…?"],["does he calls","After does, no -s: call."],["how often he calls","Add does: How often does he call…?"]]},
+  {b:"The receipts are in the blue folder.", c:"Where?", a:["Where are the receipts?"], k:[["where are the receipts"]], x:[["where is the receipts","Receipts = they → are."],["where the receipts are","Move are: Where are the receipts?"]]},
+  {b:"They pay the suppliers by bank transfer.", c:"How?", a:["How do they pay the suppliers?"], k:[["do they pay"]], x:[["are they pay","Use do with a verb: How do they pay…?"],["does they pay","They → do."],["how they pay","Add do: How do they pay the suppliers?"]]}
+ ],
+ use:{npc:"mark", q:"I fly back to Hawaii tomorrow.", task:"Ask what time his flight leaves.",
+      a:["What time does your flight leave?","When does your flight leave?"], k:[["does your flight leave","does it leave","is your flight"]],
+      x:[["is your flight leave","Say: What time does your flight leave?"],["does your flight leaves","After does, no -s: leave."],["what time your flight leaves","Add does: What time does your flight leave?"]]}
+},
+{id:"d6", time:true, icon:"⏪", name:"Past simple", short:"Past simple", cefr:"A2", tag:"Past simple",
+ how:"Change the time to the past. Say the new sentence with the new time.",
+ eg:["I send the report every Friday.", "Last Friday", "I sent the report last Friday."],
+ rule:"Finished time (yesterday, last week, this morning) → <b>past simple</b>. Regular: check → check<b>ed</b>, call → call<b>ed</b>.",
+ more:"Irregular: send → <b>sent</b> · go → <b>went</b> · have → <b>had</b> · meet → <b>met</b> · make → <b>made</b> · get → <b>got</b> · pay → <b>paid</b> · buy → <b>bought</b> · write → <b>wrote</b>.",
+ thai:"Thai shows the past with a time word only. English changes the verb too — the time word is not enough.",
+ items:[
+  {b:"I check the invoices every morning.", c:"Yesterday", a:["I checked the invoices yesterday.","Yesterday I checked the invoices."], k:[["checked"]], x:[["i was","No was here — past simple: just the past verb (I checked…)."],["^yesterday i check","Yesterday is finished → checked."],["i check the invoices yesterday","Yesterday is finished → checked."]]},
+  {b:"I send the report every Friday.", c:"Last Friday", a:["I sent the report last Friday.","Last Friday I sent the report."], k:[["sent the report"]], x:[["i was","No was here — past simple: just the past verb (I checked…)."],["^last friday i send","Last Friday is finished → sent."],["send the report last","send → sent (irregular)."],["sended","send → sent (not sended)."]]},
+  {b:"We meet the supplier every month.", c:"Last month", a:["We met the supplier last month.","Last month we met the supplier."], k:[["met the supplier"]], x:[["we were","No was here — past simple: just the past verb (I checked…)."],["meet the supplier last","meet → met."],["meeted","meet → met (not meeted)."]]},
+  {b:"She pays the bills on Monday.", c:"Last Monday", a:["She paid the bills last Monday.","Last Monday she paid the bills."], k:[["paid"]], x:[["she was","No was here — past simple: just the past verb (I checked…)."],["payed","pay → paid (not payed)."],["pays the bills last","Last Monday is finished → paid."],["pay the bills last","pay → paid."]]},
+  {b:"I go to the bank every week.", c:"Yesterday", a:["I went to the bank yesterday.","Yesterday I went to the bank."], k:[["went to the bank"]], x:[["i was","No was here — past simple: just the past verb (I checked…)."],["go to the bank yesterday","go → went (irregular)."],["goed","go → went."]]},
+  {b:"He has a meeting with the auditors.", c:"Yesterday", a:["He had a meeting with the auditors yesterday.","Yesterday he had a meeting with the auditors."], k:[["had a meeting"]], x:[["he was","No was here — past simple: just the past verb (I checked…)."],["has a meeting","Yesterday is finished → had."],["have a meeting","have → had."],["haved","have → had."]]},
+  {b:"We make a payment every month.", c:"Last month", a:["We made a payment last month.","Last month we made a payment."], k:[["made a payment"]], x:[["we were","No was here — past simple: just the past verb (I checked…)."],["make a payment last","make → made."],["maked","make → made (not maked)."]]},
+  {b:"I get an email from the bank every day.", c:"This morning", a:["I got an email from the bank this morning.","This morning I got an email from the bank."], k:[["got an email","got a email"]], x:[["i was","No was here — past simple: just the past verb (I checked…)."],["get an email from the bank this","This morning is finished → got."],["getted","get → got."]]},
+  {b:"The supplier calls me every week.", c:"Yesterday", a:["The supplier called me yesterday.","Yesterday the supplier called me."], k:[["called me"]], x:[["supplier was","No was here — past simple: just the past verb (I checked…)."],["calls me yesterday","Yesterday is finished → called."],["call me yesterday","call → called."]]},
+  {b:"I buy office supplies every month.", c:"Last week", a:["I bought office supplies last week.","Last week I bought office supplies."], k:[["bought"]], x:[["i was","No was here — past simple: just the past verb (I checked…)."],["buy office supplies last","buy → bought (irregular)."],["buyed","buy → bought (not buyed)."]]},
+  {b:"She writes the budget report.", c:"Last year", a:["She wrote the budget report last year.","Last year she wrote the budget report."], k:[["wrote the budget"]], x:[["she was","No was here — past simple: just the past verb (I checked…)."],["writes the budget report last","Last year is finished → wrote."],["writed","write → wrote."]]},
+  {b:"They approve the claims on Friday.", c:"Last Friday", a:["They approved the claims last Friday.","Last Friday they approved the claims."], k:[["approved"]], x:[["they were","No was here — past simple: just the past verb (I checked…)."],["they was","No was here — past simple: just the past verb (I checked…)."],["approve the claims last","Last Friday is finished → approved."]]}
+ ],
+ use:{npc:"sarah", q:"Good morning! Did you do the homework?", task:"Say yes — you finished it last night.",
+      a:["Yes, I finished it last night.","Yes, I did. I finished it last night."], k:[["finished it","finished the homework","finished"]],
+      x:[["i finish it last","Last night is finished → finished."]]}
+},
+{id:"d7", time:true, icon:"⏩", name:"Will · Going to", short:"Future", cefr:"A2", tag:"Future",
+ how:"Change the time to the future. Promise or plan it.",
+ eg:["I send the invoice today.", "Tomorrow", "I'll send the invoice tomorrow."],
+ rule:"Plans and promises: <b>I'll</b> (I will) + verb, or <b>I'm going to</b> + verb. After will → the base verb: will <b>send</b>.",
+ more:"will send ✓ · will sent ✗ · will sends ✗ · will to send ✗",
+ thai:"Thai จะ comes before the verb and the verb never changes. English will works the same way — just keep the base verb.",
+ items:[
+  {b:"I send the invoice today.", c:"Tomorrow", a:["I'll send the invoice tomorrow.","I'm going to send the invoice tomorrow."], k:[["will send","am going to send"]], x:[["i going to","Add am: I'm going to…"],["will sent","After will → send."],["will sends","After will → send (no -s)."],["will to send","No to: I'll send."]]},
+  {b:"I checked the report yesterday.", c:"Tomorrow", a:["I'll check the report tomorrow.","I'm going to check the report tomorrow."], k:[["will check","am going to check"]], x:[["i going to","Add am: I'm going to…"],["will checked","After will → check."],["will to check","No to: I'll check."]]},
+  {b:"We pay the supplier this week.", c:"Next week", a:["We'll pay the supplier next week.","We're going to pay the supplier next week."], k:[["will pay","are going to pay"]], x:[["we going to","Add are: We're going to…"],["will paid","After will → pay."],["will pays","After will → pay (no -s)."]]},
+  {b:"She called the bank this morning.", c:"This afternoon", a:["She'll call the bank this afternoon.","She's going to call the bank this afternoon."], k:[["will call","is going to call"]], x:[["she going to","Add is: She's going to…"],["will called","After will → call."],["will calls","After will → call (no -s)."]]},
+  {b:"The auditors visited us last month.", c:"Next month", a:["The auditors will visit us next month.","The auditors are going to visit us next month."], k:[["will visit","are going to visit"]], x:[["auditors going to","Add are: The auditors are going to…"],["will visited","After will → visit."]]},
+  {b:"I finished the budget today.", c:"On Friday", a:["I'll finish the budget on Friday.","I'm going to finish the budget on Friday."], k:[["will finish","am going to finish"]], x:[["i going to","Add am: I'm going to…"],["will finished","After will → finish."]]},
+  {b:"He signs the forms today.", c:"Tomorrow morning", a:["He'll sign the forms tomorrow morning.","He's going to sign the forms tomorrow morning."], k:[["will sign","is going to sign"]], x:[["he going to","Add is: He's going to…"],["will signs","After will → sign (no -s)."],["will signed","After will → sign."]]},
+  {b:"We met the delegation on Monday.", c:"Next Monday", a:["We'll meet the delegation next Monday.","We're going to meet the delegation next Monday."], k:[["will meet","are going to meet"]], x:[["we going to","Add are: We're going to…"],["will met","After will → meet."]]},
+  {b:"I answered the email yesterday.", c:"Later", a:["I'll answer the email later.","I'm going to answer the email later.","I'll reply to the email later."], k:[["will answer","am going to answer","will reply","am going to reply"]], x:[["i going to","Add am: I'm going to…"],["will answered","After will → answer."]]},
+  {b:"The bank transferred the money yesterday.", c:"Tomorrow", a:["The bank will transfer the money tomorrow.","The bank is going to transfer the money tomorrow."], k:[["will transfer","is going to transfer"]], x:[["bank going to","Add is: The bank is going to…"],["will transferred","After will → transfer."],["will transfers","After will → transfer (no -s)."]]},
+  {b:"I booked the hotel last week.", c:"Next week", a:["I'll book the hotel next week.","I'm going to book the hotel next week."], k:[["will book","am going to book"]], x:[["i going to","Add am: I'm going to…"],["will booked","After will → book."]]},
+  {b:"They closed the accounts in September.", c:"In October", a:["They'll close the accounts in October.","They're going to close the accounts in October."], k:[["will close","are going to close"]], x:[["they going to","Add are: They're going to…"],["will closed","After will → close."]]}
+ ],
+ use:{npc:"mike", q:"So when can you pay the invoice?", task:"Promise to pay it on Friday.",
+      a:["I'll pay it on Friday.","I will pay the invoice on Friday."], k:[["will pay","am going to pay"]],
+      x:[["i going to","Add am: I'm going to…"],["will paid","After will → pay."],["i pay it on friday","Promise with will: I'll pay it on Friday."]]}
+},
+{id:"d8", icon:"🙏", name:"Could you … please?", short:"Polite requests", cefr:"A2–B1", tag:"Polite requests",
+ how:"Make it a polite request.",
+ eg:["Send me the file.", "🙏 polite", "Could you send me the file, please?"],
+ rule:"Ask, don't order: <b>Could you</b> + verb …, <b>please</b>? For yourself: <b>Could I</b> + verb …, please?",
+ more:"Could is the most polite — use it with seniors, visitors and suppliers. Can you…? is fine with friends.",
+ thai:"In English, please alone does not make a request. “Please send me the file” still sounds like an order.",
+ items:[
+  {b:"Send me the file.", c:"🙏 polite", a:["Could you send me the file, please?"], k:[["could you send","can you send","would you send"]], x:[["could you to","No to: Could you + verb."],["^please you","Ask: Could you…, please?"],["^please send","Please + order is still an order. Ask: Could you send…?"]]},
+  {b:"Sign this form.", c:"🙏 polite", a:["Could you sign this form, please?"], k:[["could you sign","can you sign","would you sign"]], x:[["could you to","No to: Could you + verb."],["^please you","Ask: Could you…, please?"],["^please sign","Ask: Could you sign this form, please?"]]},
+  {b:"Check these figures.", c:"🙏 polite", a:["Could you check these figures, please?"], k:[["could you check","can you check","would you check"]], x:[["could you to","No to: Could you + verb."],["^please you","Ask: Could you…, please?"],["^please check","Ask: Could you check…?"]]},
+  {b:"Call the supplier.", c:"🙏 polite", a:["Could you call the supplier, please?"], k:[["could you call","can you call","would you call"]], x:[["could you to","No to: Could you + verb."],["^please you","Ask: Could you…, please?"],["^please call","Ask: Could you call…?"]]},
+  {b:"Speak more slowly.", c:"🙏 polite", a:["Could you speak more slowly, please?","Could you speak slower, please?","Could you speak more slowly?"], k:[["could you speak","can you speak","would you speak"]], x:[["could you to","No to: Could you + verb."],["^please you","Ask: Could you…, please?"],["^please speak","Ask: Could you speak more slowly, please?"]]},
+  {b:"Repeat that.", c:"🙏 polite", a:["Could you repeat that, please?","Could you say that again, please?"], k:[["could you repeat","can you repeat","would you repeat","could you say that again","can you say that again"]], x:[["could you to","No to: Could you + verb."],["^please you","Ask: Could you…, please?"],["^please repeat","Ask: Could you repeat that, please?"]]},
+  {b:"Give me the receipt.", c:"🙏 polite", a:["Could you give me the receipt, please?"], k:[["could you give","can you give","would you give"]], x:[["could you to","No to: Could you + verb."],["^please you","Ask: Could you…, please?"],["^please give","Ask: Could you give me…?"]]},
+  {b:"Wait a moment.", c:"🙏 polite", a:["Could you wait a moment, please?"], k:[["could you wait","can you wait","would you wait"]], x:[["could you to","No to: Could you + verb."],["^please you","Ask: Could you…, please?"],["^please wait","Ask: Could you wait a moment, please?"]]},
+  {b:"I want to see the invoice.", c:"🙏 Could I …?", a:["Could I see the invoice, please?"], k:[["could i see","can i see","may i see"]], x:[["i want to see","“I want” sounds strong. Ask: Could I see the invoice, please?"],["could i to see","No to: Could I see…?"]]},
+  {b:"I want to ask a question.", c:"🙏 Could I …?", a:["Could I ask a question, please?"], k:[["could i ask","can i ask","may i ask"]], x:[["i want to ask","Ask: Could I ask a question, please?"],["could i to ask","No to: Could I ask…?"]]},
+  {b:"Explain this charge.", c:"🙏 polite", a:["Could you explain this charge, please?"], k:[["could you explain","can you explain","would you explain"]], x:[["could you to","No to: Could you + verb."],["^please you","Ask: Could you…, please?"],["^please explain","Ask: Could you explain this charge, please?"],["could you explain me","Say: Could you explain this charge? (not explain me)"]]},
+  {b:"I want to borrow your pen.", c:"🙏 Could I …?", a:["Could I borrow your pen, please?"], k:[["could i borrow","can i borrow","may i borrow"]], x:[["i want to borrow","Ask: Could I borrow your pen, please?"],["could you borrow","You want the pen → Could I borrow…?"]]}
+ ],
+ use:{npc:"mark", q:"OK, the reference number is four-eight, Q, X, seven, two, nine, five.", task:"You didn't catch it. Ask him politely to repeat it.",
+      a:["Sorry, could you repeat that, please?","Could you say that again, please?"], k:[["could you repeat","can you repeat","would you repeat","could you say that again","can you say that again","could you say it again"]],
+      x:[["^please repeat","Ask: Could you repeat that, please?"],["repeat again","Say: Could you repeat that, please?"]]}
+}
+];
+
+/* ---------- the drill instructor (voice + avatar) ---------- */
+GS_PEOPLE.helen = {vp:["Kate","Serena","Stephanie","Martha"], name:"Flight Lieutenant Helen Price", short:"Helen", role:"Language-lab instructor, International Finance Course", accent:"GB", sex:"f", flag:"🇬🇧",
+  av:{skin:"#f0c9a8", hair:"#3b2a1e", style:"bob", top:"#203a5c", bg:"#e7dcc0", uniform:true}};
+
+const FD_BOX = [0, 1, 3, 7, 21];          // Leitner boxes → days until the item comes back
+const FD_SORTIE = 8;                       // items per sortie (+ one "use it" line)
+const FD_FILL = /\b(um+|uh+|erm|er|ah+|hmm+|mm+)\b/g;
+const fdP = s => String(s || "").replace(/\bplease\b/g, " ").replace(FD_FILL, " ").replace(/\s+/g, " ").trim();
+function fdS(){ if (!gs.fd || typeof gs.fd !== "object") gs.fd = {}; const f = gs.fd; f.best = f.best || {}; f.it = f.it || {}; return f; }
+const fdD = id => FD_DRILLS.find(d => d.id === id);
+const fdToday = () => { const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
+const fdAdd = n => { const d = new Date(); d.setDate(d.getDate() + n); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
+const fdSay = s => String(s).replace(/<[^>]+>/g, "").replace(/[^\p{L}\p{N}\s?'’.,…-]/gu, "").replace(/\s+/g, " ").trim();
+
+(function fdPrep(){
+  const prep = (it, d) => {
+    it.d = d.id;
+    it._a = it.a.map(s => fdP(gsNorm(s)));
+    it._k = (it.k || []).map(g => g.map(s => fdP(gsNorm(s))));
+    it._x = (it.x || []).map(x => ({p: x[0][0] === "^" ? "^" + gsNorm(x[0].slice(1)) : gsNorm(x[0]), msg: x[1]}));
+    it._b = it.b ? fdP(gsNorm(it.b)) : "";
+  };
+  FD_DRILLS.forEach((d, di) => {
+    d.idx = di;
+    d.items.forEach((it, i) => { it.id = d.id + "-" + String(i + 1).padStart(2, "0"); prep(it, d); });
+    d.use.id = d.id + "-use"; prep(d.use, d);
+  });
+})();
+const fdItem = id => { for (const d of FD_DRILLS) { const it = d.items.find(x => x.id === id); if (it) return it; } return null; };
+
+/* ---------- checking ---------- */
+const FD_LEAD = /^((okay|ok|sorry|so|well|yes|no|hi|hello|excuse me|um|uh)\s+)+/;
+function fdEval(it, raw, use){
+  raw = String(raw || "").replace(/\b(\w+)['’]s (not|at|in|on)\b/gi, "$1 is $2").replace(/\bgonna\b/gi, "going to");
+  let nn = gsNorm(raw).replace(FD_FILL, " ").replace(/\s+/g, " ").trim();
+  if (it.d === "d2") nn = nn.replace(/\b(are|is) (to|too)\b/g, "$1 2").replace(/\b(are|is) for\b/g, "$1 4");
+  const r = {norm: nn, status: "pass", msg: "", said: "", ratio: 1};
+  if (!nn) { r.status = "empty"; return r; }
+  const np = fdP(nn), H = np ? np.split(" ") : [], P = " " + nn + " ", PP = " " + np + " ";
+  if (!use && np === it._b) {
+    if (!/\bplease\b/.test(nn)) { r.status = "same"; return r; }
+    if (it.d === "d8") { r.status = "grammar"; r.msg = "Please + order is still an order. Ask: Could you …, please?"; return r; }
+  }
+  const lead = nn.replace(FD_LEAD, "");
+  if (it._a.includes(np)) return r;
+  const bad = it._x.find(x => x.p[0] === "^" ? (lead + " ").startsWith(x.p.slice(1) + " ") : gsHas(P, x.p) || gsHas(PP, x.p));
+  if (bad) { r.status = "grammar"; r.msg = bad.msg; r.said = bad.p.replace(/^\^/, ""); return r; }
+  let best = 0;
+  it._a.forEach(a => { const T = a.split(" "); best = Math.max(best, gsLCS(T, H).n / T.length); });
+  r.ratio = best;
+  const miss = it._k.findIndex(g => !g.some(k => gsHas(PP, k)));
+  if (miss >= 0) { r.status = (H.length < 2 || (!use && best < 0.5)) ? "unclear" : "key"; return r; }
+  if (use) { if (H.length < 2) r.status = "unclear"; return r; }
+  if (fdD(it.d).time) {   // past / future drills: the new time from the cue must be said too
+    const tk = fdP(gsNorm(it.c)).replace(/^(on|in) /, "");
+    if (!gsHas(PP, tk)) { r.status = "time"; r.msg = "Good verb! Now say the new time too: " + it.c + "."; return r; }
+  }
+  if (best < 0.7) r.status = "unclear";
+  return r;
+}
+
+/* the hint frame: changed words become first letter + blanks — "She c_____ the invoices." */
+function fdFrame(it){
+  // blank every word of the model that is not kept (in order) from the base sentence; cue words stay visible
+  const words = it.a[0].split(" "), core = words.map(w => fdP(gsNorm(w))), A = [], owner = [];
+  core.forEach((c, i) => c.split(" ").filter(Boolean).forEach(t => { A.push(t); owner.push(i); }));
+  const B = fdP(gsNorm(it.b)).split(" "), lc = gsLCS(A, B), kept = new Array(words.length).fill(true);
+  A.forEach((t, j) => { if (!lc.tHit[j]) kept[owner[j]] = false; });
+  const cue = new Set(fdP(gsNorm(fdSay(it.c))).split(" ").filter(t => !/^(not|question|polite|could|i)$/.test(t)));
+  return words.map((w, i) => {
+    const m = w.match(/^(.*?)([?.!,]*)$/), body = m[1], punct = m[2];
+    if (!core[i] || kept[i] || core[i].split(" ").every(t => cue.has(t))) return esc(w);
+    return `<span class="fd-blank">${esc(body[0])}${"_".repeat(Math.max(2, body.length - 1))}</span>${esc(punct)}`;
+  }).join(" ");
+}
+
+/* ---------- choosing a sortie ---------- */
+function fdPick(d){
+  const f = fdS(), today = fdToday(), shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const due = [], unseen = [], rest = [];
+  d.items.forEach(it => { const s = f.it[it.id]; if (!s) unseen.push(it); else if (s.due <= today) due.push(it); else rest.push(it); });
+  due.sort((a, b) => f.it[a.id].b - f.it[b.id].b);
+  return shuffle(due.concat(unseen, shuffle(rest)).slice(0, FD_SORTIE));
+}
+function fdDueAll(){
+  const f = fdS(), today = fdToday(), out = [];
+  FD_DRILLS.forEach(d => d.items.forEach(it => { const s = f.it[it.id]; if (s && s.due <= today) out.push(it); }));
+  return out.sort((a, b) => f.it[a.id].b - f.it[b.id].b);
+}
+const fdDue = d => d.items.filter(it => { const s = fdS().it[it.id]; return s && s.due <= fdToday(); }).length;
+const fdMastered = d => d.items.filter(it => (fdS().it[it.id] || {}).b >= 2).length;
+const fdStars = d => { const b = fdS().best[d.id]; return !b ? 0 : b.acc >= 90 ? 3 : b.acc >= 70 ? 2 : 1; };
+
+/* ---------- home ---------- */
+let FDP = null;
+function renderFDHome(){
+  view = "home"; gsStopAudio(); GSP = null; FDP = null;
+  const f = fdS(), mic = gsMicStatus(), dueAll = fdDueAll().length;
+  const mastered = FD_DRILLS.reduce((a, d) => a + fdMastered(d), 0), total = FD_DRILLS.reduce((a, d) => a + d.items.length, 0);
+  const flown = FD_DRILLS.filter(d => f.best[d.id]).length;
+  const cards = FD_DRILLS.map((d, i) => {
+    const b = f.best[d.id], st = fdStars(d), du = fdDue(d), ms = fdMastered(d);
+    return `<article class="fd-card ${b ? "flown" : ""}">
+      <div class="fd-ch"><span class="fd-ic" aria-hidden="true">${d.icon}</span><div><div class="kick">Formation ${i + 1} · ${esc(d.cefr)}</div><h3>${esc(d.name)}</h3></div>
+        <span class="fd-st" aria-label="${st} of 3 stars">${"★".repeat(st)}<span>${"★".repeat(3 - st)}</span></span></div>
+      <div class="fd-eg"><span>${esc(d.eg[0])}</span><span class="fd-cue sm">${esc(d.eg[1])}</span><b>${esc(d.eg[2])}</b></div>
+      <div class="fd-meter" title="${ms} of ${d.items.length} sentences mastered"><i style="width:${ms / d.items.length * 100}%"></i></div>
+      <div class="fd-cf"><small>${ms}/${d.items.length} mastered${b ? ` · best ${b.acc}%` : ""}${du ? ` · <b class="fd-due">${du} due</b>` : ""}</small>
+        <button class="btn" data-fdgo="${d.id}">${b ? "Fly again" : "Start"} ▸</button></div></article>`;
+  }).join("");
+  const errs = Object.entries(gs.errs || {}).filter(([k]) => FD_DRILLS.some(d => d.tag === k)).sort((a, b) => b[1] - a[1]).slice(0, 5), emax = errs.length ? errs[0][1] : 1;
+  $("#app").innerHTML = `
+  <div class="tabs" role="tablist" aria-label="Campaigns">${allTabsHTML("fd")}</div>
+  <section class="cbanner fd-banner">
+    <div><div class="kick">Formation Drills · Grammar out loud</div><h2>Drill it. Say it. Own it.</h2>
+      <p>Short spoken drills for the grammar that trips you up. Helen says a sentence and gives you a cue — you say the new sentence. Eight sentences, then one real line at work. A few minutes a day makes the forms automatic.</p></div>
+    <div class="cstats">
+      <div class="cstat"><div class="v">${flown}/${FD_DRILLS.length}</div><div class="k">Formations</div></div>
+      <div class="cstat"><div class="v">${mastered}</div><div class="k">of ${total} mastered</div></div>
+      <div class="cstat"><div class="v">${dueAll}</div><div class="k">Due today</div></div>
+    </div>
+  </section>
+  <div class="gs-strip">
+    <span class="gs-mic ${mic.ok ? "ok" : "no"}">${mic.ok ? "🎙️" : "⚠️"} ${esc(mic.text)}</span>
+    <button class="hbtn" id="fdVoiceChk">🔊 Voice &amp; mic check</button>
+    <button class="hbtn ${gs.slow ? "on" : ""}" id="fdSlow">🐢 Slow voice: ${gs.slow ? "on" : "off"}</button>
+    <button class="hbtn ${f.hide ? "on" : ""}" id="fdHide">👂 Listen only: ${f.hide ? "on" : "off"}</button>
+    <button class="hbtn ${f.live ? "on" : ""}" id="fdLive">👩‍🏫 Lesson mode: ${f.live ? "on" : "off"}</button>
+  </div>
+  ${f.live ? `<div class="fd-livenote">👩‍🏫 <b>Lesson mode is on.</b> Share this screen in the online lesson. Ms. Demii answers out loud on the call — no microphone in the app. The teacher taps <b>✓ First try</b>, <b>✓ With help</b> or <b>↺ Not yet</b>. Results are saved and logged as <i>live</i>.</div>` : ""}
+  <div class="fd-review ${dueAll ? "" : "none"}">
+    <div><b>🔁 Daily review</b><br><small>${dueAll ? `${dueAll} sentence${dueAll > 1 ? "s" : ""} from all formations ${dueAll > 1 ? "are" : "is"} due — the ones that needed help come back first.` : "Nothing due right now. Sentences you miss come back here tomorrow, then after 3, 7 and 21 days."}</small></div>
+    <button class="btn" id="fdRev" ${dueAll ? "" : "disabled"}>Review ${dueAll ? Math.min(dueAll, 10) : ""} ▸</button></div>
+  <section class="fd-grid">${cards}</section>
+  ${errs.length ? `<section class="gs-radar"><h3>Your grammar radar</h3><p>The forms that needed another try (drills and Ground School together). Fly the top one again.</p>
+    ${errs.map(([k, v]) => `<div class="gr-row"><span>${esc(k)}</span><span class="gr-bar"><i style="width:${Math.max(8, v / emax * 100)}%"></i></span><b>${v}</b></div>`).join("")}</section>` : ""}
+  <details class="vocab" style="margin-top:14px"><summary>How Formation Drills work</summary>
+    <ol class="steps" style="margin-top:10px">
+      <li><span><b>Briefing.</b> Read the rule and the example. Tap 🔊 to hear it.</span></li>
+      <li><span><b>Listen.</b> Helen says a sentence. Look at the gold <b>cue</b> — for example <i>She</i>, <i>Yesterday</i> or <i>❓ question</i>.</span></li>
+      <li><span><b>Tap the microphone</b> and say the whole new sentence. Check what the app heard, then tap <b>Commit</b>.</span></li>
+      <li><span><b>Mistake?</b> Try again. 💡 Hint gives the rule, then the sentence with gaps, then the model.</span></li>
+      <li><span><b>Use it.</b> Every sortie ends with one real line at work, in your own words.</span></li>
+    </ol>
+    <p style="font-size:.85rem;color:var(--ink-dim)">★★★ = right first time with no hint. Sentences you get right first time come back later (1, 3, 7, 21 days); sentences that needed help come back tomorrow. On iPhone use <b>Safari</b> and earphones.</p></details>`;
+  document.querySelectorAll("[data-tab]").forEach(b => b.onclick = () => { store.tab = b.dataset.tab; save(); renderHome(); });
+  document.querySelectorAll("[data-fdgo]").forEach(b => b.onclick = () => fdBrief(fdD(b.dataset.fdgo)));
+  $("#fdRev").onclick = () => fdStart(null, fdDueAll().slice(0, 10));
+  $("#fdVoiceChk").onclick = gsVoiceCheck;
+  $("#fdSlow").onclick = () => { gs.slow = !gs.slow; gsSave(); renderFDHome(); };
+  $("#fdHide").onclick = () => { f.hide = !f.hide; gsSave(); renderFDHome(); };
+  $("#fdLive").onclick = () => { f.live = !f.live; gsSave(); renderFDHome(); };
+}
+
+/* ---------- briefing ---------- */
+function fdBrief(d){
+  view = "fdplay"; gsStopAudio();
+  FDP = null;
+  $("#app").innerHTML = `
+  <div class="pbar"><button class="btn ghost" id="fdBack">&larr; Formation Drills</button><h2>${d.icon} ${esc(d.name)}</h2><span class="bdg lv">${esc(d.cefr)}</span></div>
+  <section class="gs-brief">
+    <div class="gs-bcol">
+      <div class="gs-who">${gsAvatar("helen", 72)}<div><b>${esc(GS_PEOPLE.helen.name)}</b> ${GS_PEOPLE.helen.flag}<br><span>${esc(GS_PEOPLE.helen.role)}</span></div></div>
+      <div class="goalbig"><span>YOUR TASK</span>${esc(d.how)} ${FD_SORTIE} sentences, then one real line at work.</div>
+      <div class="fd-demo">
+        <div class="fd-base">${esc(d.eg[0])}</div><div class="fd-arrow" aria-hidden="true">▼</div>
+        <div class="fd-cue">${esc(d.eg[1])}</div><div class="fd-arrow" aria-hidden="true">▼</div>
+        <div class="fd-ans">${esc(d.eg[2])}</div>
+        <button class="dbtn" id="fdEgHear">🔊 Hear the example</button></div>
+    </div>
+    <div class="gs-gcard">
+      <div class="kick">Grammar briefing</div><h3>${esc(d.name)}</h3>
+      <p class="fd-rule">${d.rule}</p><p class="fd-more">${d.more}</p>
+      <p class="gs-tip">🇹🇭 ${d.thai}</p>
+    </div>
+  </section>
+  <div class="gs-go"><span>🔊 Turn your sound on. ${fdS().live ? "Lesson mode: the teacher scores each answer." : "Answer with your voice — or type."}</span>
+    <button class="btn gs-big" id="fdGo">Start the sortie ▸</button></div>`;
+  $("#fdBack").onclick = () => renderFDHome();
+  $("#fdEgHear").onclick = async () => { await gsSpeak(fdSay(d.eg[0]), "helen"); await gsSpeak(fdSay(d.eg[1]), "helen"); gsSpeak(d.eg[2], "helen", {rate: 0.8}); };
+  $("#fdGo").onclick = () => fdStart(d, fdPick(d));
+  window.scrollTo({top: 0});
+}
+
+/* ---------- the sortie ---------- */
+function fdStart(d, list){
+  if (!list.length) { renderFDHome(); return; }
+  FDP = {d, list, i: 0, phase: "item", res: [], live: !!fdS().live, t0: Date.now()};
+  view = "fdplay";
+  fdBegin();
+  window.scrollTo({top: 0});
+}
+const fdCur = () => FDP.phase === "use" ? FDP.d.use : FDP.list[FDP.i];
+function fdBegin(){
+  Object.assign(FDP, {sub: "ready", lad: 0, tries: 0, unclear: 0, said: "", typed: false, live_: "", micErr: null, issue: null, pick: null, tStart: Date.now(), stars: 0});
+  fdRender();
+  fdPlayPrompt();
+}
+async function fdPlayPrompt(){
+  const it = fdCur(), me = FDP;
+  if (FDP.phase === "use") { await gsSpeak(it.q, it.npc); return; }
+  await gsSpeak(fdSay(it.b), "helen");
+  if (FDP !== me) return;
+  gsSpeak(fdSay(it.c), "helen", {rate: 0.9});
+}
+function fdLeave(){
+  if (FDP && FDP.phase !== "done" && (FDP.i > 0 || FDP.tries > 0) && !confirm("Leave this sortie? Sentences you already finished are saved.")) return;
+  gsStopAudio(); renderFDHome();
+}
+function fdRender(){
+  const it = fdCur(), n = FDP.list.length, d = it.d ? fdD(it.d) : null, useP = FDP.phase === "use";
+  const dots = FDP.list.map((_, i) => `<span class="gs-dot ${i < FDP.i || useP ? "done" : i === FDP.i && !useP ? "cur" : ""}"></span>`).join("")
+    + (FDP.d ? `<span class="gs-dot fd-udot ${useP ? "cur" : ""}" title="Use it"></span>` : "");
+  const title = FDP.d ? FDP.d.icon + " " + FDP.d.name : "🔁 Daily review";
+  $("#app").innerHTML = `
+  <div class="pbar"><button class="btn ghost" id="fdBack">&larr; Formation Drills</button><h2>${esc(title)}</h2>
+    ${d ? `<span class="bdg lv">${esc(d.cefr)}</span>` : ""}${FDP.live ? `<span class="bdg">👩‍🏫 Lesson mode</span>` : ""}
+    <span class="gs-dots" aria-label="${useP ? "Use it" : "Sentence " + (FDP.i + 1) + " of " + n}">${dots}</span></div>
+  <section class="fd-play">
+    <div class="fd-stage" id="fdStage"></div>
+    <section class="gs-speak" id="fdSpeak"></section>
+  </section>`;
+  $("#fdBack").onclick = fdLeave;
+  fdRenderStage(); fdRenderSpeak();
+}
+function fdRenderStage(){
+  const el = $("#fdStage"); if (!el) return;
+  const it = fdCur(), d = fdD(it.d);
+  if (FDP.phase === "use") {
+    const p = GS_PEOPLE[it.npc];
+    el.innerHTML = `<div class="kick">Use it · a real line at work</div>
+      <div class="fd-usewho">${gsAvatar(it.npc, 54)}<div><b>${esc(p.name)}</b> ${p.flag}<br><small>${esc(p.role)}</small></div></div>
+      <div class="gs-msg npc"><div class="gs-bub fd-ubub">${esc(it.q)}<button class="gs-play" id="fdRe" aria-label="Play again">🔊</button></div></div>
+      <div class="fd-task">🎯 ${esc(it.task)}</div>
+      <p class="gs-fine">Your own words are fine — just use the ${esc(d.short.toLowerCase())} form.</p>`;
+  } else {
+    const hide = fdS().hide && !FDP.showBase;
+    el.innerHTML = `<div class="kick">Sentence ${FDP.i + 1} of ${FDP.list.length}${FDP.d ? "" : " · " + esc(d.name)}</div>
+      <div class="fd-base ${hide ? "hid" : ""}" id="fdBase">${hide ? "👂 Listen — tap to show the sentence" : esc(it.b)}<button class="gs-play" id="fdRe" aria-label="Play again">🔊</button></div>
+      <div class="fd-arrow" aria-hidden="true">▼</div>
+      <div class="fd-cue big">${esc(it.c)}</div>
+      <p class="fd-how">${esc(d.how)}</p>`;
+    const b = $("#fdBase"); if (hide) b.onclick = e => { if (e.target.id === "fdRe") return; FDP.showBase = true; fdRenderStage(); };
+  }
+  $("#fdRe").onclick = e => { e.stopPropagation(); fdPlayPrompt(); };
+}
+
+function fdCoachHTML(){
+  const it = fdCur(), d = fdD(it.d), I = FDP.issue;
+  let h = "";
+  if (I && I.type === "unclear") {
+    h += `<div class="gs-c unclear">👂 <b>I couldn't follow that.</b> Say the whole sentence, clearly and not too fast.
+      ${I.ratio != null && I.ratio > 0 ? `<div class="gs-acc">Words I matched: <b>${Math.round(I.ratio * 100)}%</b></div>` : ""}</div>`;
+    if (FDP.unclear >= 2 && FDP.phase === "item") {
+      const opts = FDP.pickOrder || (FDP.pickOrder = Math.random() < .5 ? [0, 1] : [1, 0]);
+      h += `<div class="gs-c">👆 <b>Tap the sentence you meant:</b><div class="gs-ch">${opts.map(o => `<button class="gs-chb ${FDP.pick === o ? (o === 0 ? "right" : "wrong") : ""}" data-fdpick="${o}">${esc(o === 0 ? it.a[0] : it.b)}</button>`).join("")}</div>
+        ${FDP.pick === 1 ? `<div class="gs-msgx">✗ That's the first sentence — change it with the cue.</div>` : ""}</div>`;
+    }
+  } else if (I && I.type === "same") {
+    h += `<div class="gs-c">🔁 <b>That's the first sentence.</b> Change it with the cue: <b>${esc(it.c)}</b>.</div>`;
+  } else if (I && (I.type === "grammar" || I.type === "key" || I.type === "time")) {
+    h += `<div class="gs-c">🧭 <b>Not yet.</b> ${I.msg ? esc(I.msg) : "Check the form — " + esc(d.short.toLowerCase()) + "."}${I.said ? ` <span class="gs-said">I heard: “${esc(I.said)}”</span>` : ""}</div>`;
+  }
+  if (FDP.lad >= 1) h += `<div class="gs-c">📘 <b>Rule:</b> ${d.rule}</div>`;
+  if (FDP.lad >= 2 && FDP.phase === "item") h += `<div class="gs-c">🧩 <b>Fill the gaps:</b> <span class="fd-frame">${fdFrame(it)}</span></div>`;
+  if (FDP.lad >= 3 || (FDP.lad >= 2 && FDP.phase === "use")) h += `<div class="gs-c">🗣 <b>Model:</b> ${esc(it.a[0])} <button class="dbtn" id="fdModel">🔊</button><div class="gs-msgx good">Now say it yourself.</div></div>`;
+  return h;
+}
+
+function fdRenderSpeak(){
+  const el = $("#fdSpeak"); if (!el || !FDP) return;
+  const it = fdCur(), useP = FDP.phase === "use", lastItem = FDP.i === FDP.list.length - 1;
+  const nextLbl = useP ? "SORTIE RESULT ▸" : lastItem ? (FDP.d ? "USE IT ▸" : "RESULT ▸") : "NEXT ▸";
+  let body = "";
+  if (FDP.sub === "passed") {
+    const st = FDP.stars;
+    body = `<div class="gs-pass"><div class="gs-big-ok">✓</div><div><b>${st === 3 ? "In formation!" : st === 2 ? "Good — got there." : "Done. It will come back for practice."}</b>
+        <span class="fd-pst">${"★".repeat(st)}<span>${"★".repeat(3 - st)}</span></span>
+        <div class="gs-note">${useP ? "Example" : "Model"}: <b>${esc(it.a[0])}</b> <button class="dbtn" id="fdModel">🔊</button></div>
+        ${FDP.lastEval && FDP.lastEval.status === "pass" && FDP.lastEval.norm && !it._a.includes(fdP(FDP.lastEval.norm)) && !FDP.live && !FDP.tapped ? `<div class="gs-note">You said: ${esc(FDP.said)}</div>` : ""}</div></div>
+      <div class="gs-acts"><button class="commit" id="fdNext">${nextLbl}</button></div>`;
+  } else if (FDP.live) {
+    body = `<div class="gs-coach">${fdCoachHTML()}</div>
+      <div class="fd-tbox"><div class="kick">Teacher · score the spoken answer</div>
+        <div class="fd-tbtns"><button class="fd-tb ok" data-fdt="3">✓ First try</button><button class="fd-tb mid" data-fdt="2">✓ With help</button><button class="fd-tb no" data-fdt="0">↺ Not yet</button></div>
+        <div class="gs-acts gs-under"><button class="dbtn" id="fdHint" ${FDP.lad >= 3 ? "disabled" : ""}>💡 Show next hint</button><button class="dbtn" id="fdModel">🔊 Model</button></div></div>`;
+  } else {
+    const rec = FDP.sub === "rec", rev = FDP.sub === "review", typ = FDP.sub === "type";
+    let micArea;
+    if (rev) {
+      micArea = `<div class="gs-review"><div class="kick">Check — is this what you said?</div><div class="gs-heard">${esc(FDP.said)}</div>
+        <div class="gs-acts"><button class="dbtn gs-again" id="fdAgain">🎤 Say again</button><button class="commit" id="fdCommit">COMMIT ✓</button></div>
+        <button class="gs-link" id="fdTypeFix">⌨ The words are wrong and “Say again” isn't working? Type it</button></div>`;
+    } else if (typ) {
+      micArea = `<div class="gs-review"><div class="kick">Type your answer</div>
+        <textarea id="fdTypeIn" rows="2" autocapitalize="sentences" placeholder="Type the new sentence…">${esc(FDP.said || "")}</textarea>
+        <div class="gs-acts">${GS_SR ? `<button class="dbtn" id="fdBackMic">🎤 Use the microphone</button>` : ""}<button class="commit" id="fdTypeOk">CHECK ▸</button></div></div>`;
+    } else {
+      micArea = `<div class="gs-micwrap"><button class="gs-micbtn ${rec ? "rec" : ""}" id="fdMic" aria-label="${rec ? "Stop" : "Speak"}">
+          <svg viewBox="0 0 24 24" width="38" height="38" aria-hidden="true"><path d="M12 15a3.5 3.5 0 0 0 3.5-3.5v-6a3.5 3.5 0 1 0-7 0v6A3.5 3.5 0 0 0 12 15z" fill="currentColor"/><path d="M18.5 11.5a6.5 6.5 0 0 1-13 0M12 18v3.5M8.5 21.5h7" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></button>
+        <div class="gs-mictxt">${rec ? `<b>Listening…</b> tap to stop<div class="gs-live" id="fdLiveTx">${esc(FDP.live_ || "…")}</div>`
+          : `<b>Tap and say the new sentence</b><br><small>${GS_SR ? "Stop talking — or tap again — to finish" : esc(gsMicStatus().text)}</small>`}
+          ${FDP.micErr ? `<div class="gs-err">${gsMicErrText(FDP.micErr)}</div>` : ""}</div></div>
+        <div class="gs-acts gs-under"><button class="dbtn" id="fdHint" ${FDP.lad >= 3 ? "disabled" : ""}>💡 Hint</button>
+          <button class="gs-link" id="fdType">⌨ Type instead</button></div>`;
+    }
+    body = `<div class="gs-coach">${fdCoachHTML()}</div>` + micArea;
+  }
+  el.innerHTML = `<div class="gs-score"><span>${useP ? "Use it" : "Sentence " + (FDP.i + 1) + " / " + FDP.list.length}</span><span>Tries: ${FDP.tries}</span><span>Hints: ${FDP.lad}</span></div>` + body;
+  const on = (id, f) => { const b = document.getElementById(id); if (b) b.onclick = f; };
+  on("fdMic", fdMicStart);
+  on("fdAgain", () => { FDP.said = ""; fdMicStart(); });
+  on("fdCommit", fdCommit);
+  on("fdType", () => { gsStopAudio(); FDP.sub = "type"; fdRenderSpeak(); const ta = $("#fdTypeIn"); if (ta) ta.focus(); });
+  on("fdTypeFix", () => { FDP.sub = "type"; fdRenderSpeak(); const ta = $("#fdTypeIn"); if (ta) ta.focus(); });
+  on("fdBackMic", () => { FDP.sub = "ready"; fdRenderSpeak(); });
+  on("fdTypeOk", () => { const v = ($("#fdTypeIn").value || "").trim(); if (!v) return; FDP.said = v; FDP.typed = true; fdCommit(); });
+  on("fdHint", fdHint);
+  on("fdModel", () => gsSpeak(it.a[0], useP ? it.npc : "helen", {rate: 0.8}));
+  on("fdNext", fdNext);
+  el.querySelectorAll("[data-fdpick]").forEach(b => b.onclick = () => {
+    FDP.pick = +b.dataset.fdpick;
+    if (FDP.pick === 0) { FDP.tapped = true; FDP.said = it.a[0]; fdPass(1, "tapped"); return; }
+    fdRenderSpeak();
+  });
+  el.querySelectorAll("[data-fdt]").forEach(b => b.onclick = () => fdTeacher(+b.dataset.fdt));
+}
+
+/* microphone — same recogniser as Ground School (GS_SR / GS_REC) */
+function fdMicStart(){
+  if (!GS_SR) { FDP.sub = "type"; fdRenderSpeak(); return; }
+  if (GS_REC) { try { GS_REC.stop(); } catch(e){} return; }
+  try { speechSynthesis.cancel(); } catch(e){}
+  const r = new GS_SR(); GS_REC = r;
+  r.lang = "en-US"; r.interimResults = true; r.continuous = false; r.maxAlternatives = 1;
+  let fin = "", inter = "", silence = null, stopped = false; const me = FDP;
+  const stop = () => { if (stopped) return; stopped = true; try { r.stop(); } catch(e){} };
+  r.onresult = e => {
+    let f = "", t = "";
+    for (let i = 0; i < e.results.length; i++) { const tx = e.results[i][0].transcript; if (e.results[i].isFinal) f += tx + " "; else t += tx + " "; }
+    fin = f; inter = t; me.live_ = (f + t).trim();
+    const el = document.getElementById("fdLiveTx"); if (el) el.textContent = me.live_ || "…";
+    clearTimeout(silence); silence = setTimeout(stop, 2300);
+  };
+  r.onerror = e => { me.micErr = e.error || "error"; };
+  r.onend = () => {
+    clearTimeout(silence); clearTimeout(maxT); if (GS_REC === r) GS_REC = null;
+    if (FDP !== me || me.sub !== "rec") return;
+    const txt = (fin + " " + inter).replace(/\s+/g, " ").trim();
+    if (txt) { me.said = txt; me.typed = false; me.sub = "review"; gs.speaks = (gs.speaks || 0) + 1; } else me.sub = "ready";
+    fdRenderSpeak();
+  };
+  const maxT = setTimeout(stop, 15000);
+  FDP.sub = "rec"; FDP.live_ = ""; FDP.micErr = null; fdRenderSpeak();
+  try { r.start(); } catch(e) { GS_REC = null; FDP.micErr = "start"; FDP.sub = "ready"; fdRenderSpeak(); }
+}
+
+function fdHint(){ FDP.lad = Math.min(3, FDP.lad + 1); fdRenderSpeak(); if (FDP.lad === 3) gsSpeak(fdCur().a[0], FDP.phase === "use" ? fdCur().npc : "helen", {rate: 0.8}); }
+
+function fdLog(res, note){
+  const it = fdCur();
+  gsLog({m: "drill " + it.d, t: it.id, mode: FDP.live ? "live" : FDP.phase === "use" ? "use it" : "drill", said: FDP.live ? "" : FDP.said, res, note: note || "", tries: FDP.tries, typed: !!FDP.typed});
+}
+function fdCommit(){
+  const it = fdCur(), said = FDP.said; if (!said) return;
+  const e = fdEval(it, said, FDP.phase === "use");
+  FDP.lastEval = e; FDP.tries++;
+  if (e.status === "pass") {
+    fdLog("pass", FDP.lad ? "hints " + FDP.lad : "");
+    fdPass(FDP.tries === 1 && FDP.lad === 0 ? 3 : FDP.lad >= 3 ? 1 : 2);
+    return;
+  }
+  const d = fdD(it.d);
+  if (e.status === "unclear" || e.status === "empty") {
+    FDP.unclear++; FDP.issue = {type: "unclear", ratio: e.ratio};
+    fdLog("unclear", "");
+  } else {
+    FDP.lad = Math.min(3, FDP.lad + 1);
+    FDP.issue = {type: e.status, msg: e.msg, said: e.said};
+    if (e.status !== "same") { gs.errs = gs.errs || {}; gs.errs[d.tag] = (gs.errs[d.tag] || 0) + 1; }
+    fdLog(e.status === "same" ? "unchanged" : e.status === "time" ? "time missing" : "grammar", e.msg || (e.status === "key" ? "form missing" : ""));
+  }
+  gsSave();
+  FDP.sub = "ready"; FDP.said = ""; FDP.pick = null;
+  fdRenderSpeak();
+  gsSpeak(e.status === "unclear" || e.status === "empty" ? "Sorry, say that again, please." : e.status === "same" ? "Change it with the cue." : "Not quite. Try again.", FDP.phase === "use" ? it.npc : "helen");
+}
+function fdTeacher(v){
+  const it = fdCur();
+  FDP.tries++;
+  if (v === 0) {
+    FDP.lad = Math.min(3, FDP.lad + 1); FDP.issue = null;
+    gs.errs = gs.errs || {}; gs.errs[fdD(it.d).tag] = (gs.errs[fdD(it.d).tag] || 0) + 1;
+    fdLog("not yet", ""); gsSave(); fdRenderSpeak();
+    if (FDP.lad === 3) gsSpeak(it.a[0], FDP.phase === "use" ? it.npc : "helen", {rate: 0.8});
+    return;
+  }
+  fdLog(v === 3 ? "first try" : "with help", "");
+  fdPass(v === 3 && FDP.tries === 1 && FDP.lad === 0 ? 3 : v === 3 ? 2 : FDP.lad >= 3 ? 1 : 2);
+}
+function fdPass(stars, how){
+  const it = fdCur(), f = fdS();
+  if (how === "tapped") fdLog("tapped", "picked the model after 2 unclear tries");
+  FDP.stars = stars; FDP.sub = "passed"; FDP.issue = null;
+  FDP.res.push({id: it.id, said: FDP.live ? "(lesson)" : FDP.said, typed: FDP.typed, tapped: how === "tapped", tries: FDP.tries, stars, use: FDP.phase === "use", ms: Date.now() - FDP.tStart});
+  if (FDP.phase === "item") {
+    const s = f.it[it.id] || {b: 0, n: 0, ok: 0};
+    // right first time → next box (an unseen sentence right first time starts in box 2 = 3 days); help needed → back tomorrow
+    s.n++; if (stars === 3) { s.ok++; s.b = Math.min(4, f.it[it.id] ? s.b + 1 : 2); } else s.b = 0;
+    s.due = fdAdd(s.b ? FD_BOX[s.b] : 1);
+    f.it[it.id] = s;
+  }
+  gsSave();
+  fdRenderSpeak();
+  gsSpeak(stars === 3 ? "Correct. " + it.a[0] : it.a[0], FDP.phase === "use" ? it.npc : "helen");
+}
+function fdNext(){
+  FDP.showBase = false; FDP.tapped = false; FDP.pickOrder = null; FDP.lastEval = null;
+  if (FDP.phase === "item" && FDP.i < FDP.list.length - 1) { FDP.i++; fdBegin(); return; }
+  if (FDP.phase === "item" && FDP.d) { FDP.phase = "use"; fdBegin(); return; }
+  fdResult();
+}
+
+/* ---------- result ---------- */
+function fdResult(){
+  FDP.phase = "done"; gsStopAudio();
+  const f = fdS(), items = FDP.res.filter(r => !r.use), use = FDP.res.find(r => r.use);
+  const acc = items.length ? Math.round(items.filter(r => r.stars === 3).length / items.length * 100) : 0;
+  const secs = items.length ? Math.round(items.reduce((a, r) => a + r.ms, 0) / items.length / 1000) : 0;
+  const d = FDP.d;
+  let prev = null;
+  if (d) { prev = f.best[d.id]; if (!prev || acc > prev.acc) f.best[d.id] = {acc, d: fdToday()}; }
+  f.runs = (f.runs || 0) + 1;
+  gsSave();
+  gsLog({m: d ? "drill " + d.id : "drill review", t: "result", mode: FDP.live ? "live" : "drill", said: "", res: "first-try " + acc + "%", note: "avg " + secs + "s per sentence", tries: "", typed: false});
+  const tier = acc >= 90 ? {t: "IN FORMATION", w: "Excellent — clean and fast."} : acc >= 60 ? {t: "GOOD FLYING", w: "Most sentences right first time. The others come back tomorrow."} : {t: "KEEP DRILLING", w: "You finished the sortie. Fly it again — it gets easier every time."};
+  const row = r => { const it = fdItem(r.id) || fdD(r.id.split("-")[0]).use;
+    return `<tr><td>${r.use ? "🎯" : esc(it.c)}</td><td>${esc(r.said || "—")}${r.typed ? ' <small class="gs-ty">typed</small>' : ""}${r.tapped ? ' <small class="gs-ty">tapped</small>' : ""}</td><td>${esc(it.a[0])}</td><td class="fd-pst">${"★".repeat(r.stars)}<span>${"★".repeat(3 - r.stars)}</span></td></tr>`; };
+  view = "fdplay";
+  $("#app").innerHTML = `
+  <div class="pbar"><button class="btn ghost" id="fdBack">&larr; Formation Drills</button><h2>Debrief · ${esc(d ? d.name : "Daily review")}</h2>${FDP.live ? `<span class="bdg">👩‍🏫 Lesson mode</span>` : ""}</div>
+  <section class="gs-resbox">
+    <div class="gs-resh"><div class="gs-resv">${acc}%</div><div><div class="kick">${tier.t}</div><b>${esc(tier.w)}</b><br>
+      <small>Right first time with no hint · about ${secs}s per sentence${d && prev ? (acc > prev.acc ? ` · new best (was ${prev.acc}%)` : ` · best ${prev.acc}%`) : d ? " · first sortie" : ""}</small></div></div>
+    <table class="gs-tx"><tr><th>Cue</th><th>You said</th><th>Model</th><th>★</th></tr>${FDP.res.map(row).join("")}</table>
+    <div class="gs-acts" style="flex-wrap:wrap">
+      ${d ? `<button class="btn" id="fdAgainS">↺ Fly again</button>` : ""}
+      ${d && FD_DRILLS[d.idx + 1] ? `<button class="btn ghost" id="fdNextD">Next: ${esc(FD_DRILLS[d.idx + 1].name)} ▸</button>` : ""}
+      <button class="btn ghost" id="fdHome">All formations</button>
+    </div>
+  </section>`;
+  $("#fdBack").onclick = $("#fdHome").onclick = () => renderFDHome();
+  if ($("#fdAgainS")) $("#fdAgainS").onclick = () => fdStart(d, fdPick(d));
+  if ($("#fdNextD")) $("#fdNextD").onclick = () => fdBrief(FD_DRILLS[d.idx + 1]);
+  window.scrollTo({top: 0, behavior: "smooth"});
+  gsSpeak(acc >= 60 ? "Sortie complete. Well done!" : "Sortie complete. Fly it again to improve.", "helen");
+}
+
+/* ======================================================================
    ACCOUNT — name + PIN login, progress saved to Google Sheets
    ====================================================================== */
 const USER_KEY = "rtafModDesk_user", API_KEY = "rtafModDesk_api";
@@ -5787,7 +6512,8 @@ async function gsApi(action, body, keep){
 }
 function gsSummary(){
   return GS_MISSIONS.map(m => m.id + ":" + GS_MODES.map(md => { const b = gsBest(m.id, md.id); return b ? b.score : "-"; }).join("/")).join("  ")
-    + " | Desk: " + Object.keys(store.best || {}).length + " missions";
+    + " | Desk: " + Object.keys(store.best || {}).length + " missions"
+    + " | Drills: " + FD_DRILLS.map(d => { const b = fdS().best[d.id]; return d.id + ":" + (b ? b.acc : "-"); }).join(" ");
 }
 function cloudQueue(){
   if (!USER || !gsApiURL()) return;
@@ -5898,10 +6624,11 @@ function gsInitAccount(){
 /* header: Mission map button must also leave a Ground School conversation cleanly */
 $("#homeBtn").onclick = () => {
   if (view === "gsplay") { gsLeave(); return; }
+  if (view === "fdplay") { fdLeave(); return; }
   if (view !== "play" || confirmLeave()) renderHome();
 };
 document.addEventListener("keydown", e => { if (e.key === "Escape") $("#acct").classList.remove("show"); });
-(function(){ try { const q = new URLSearchParams(location.search).get("tab"); if (q === "gs" || CAMPAIGNS.some(c => c.id === q)) store.tab = q; } catch(e){} })();
+(function(){ try { const q = new URLSearchParams(location.search).get("tab"); if (q === "gs" || q === "fd" || CAMPAIGNS.some(c => c.id === q)) store.tab = q; } catch(e){} })();
 gsInitAccount();
 
 renderHome();
