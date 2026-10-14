@@ -615,6 +615,88 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding-top:12px;font-si
   .fd-cue.big{font-size:1.25rem}
   .fd-tbtns{grid-template-columns:1fr}
 }
+
+/* ---------- Formation Drills · briefing slides (full-screen viewer) ---------- */
+.fd-slbtn{display:inline-flex;align-items:center;gap:8px;margin-top:12px;width:100%;justify-content:center;padding:11px 12px;font-size:.9rem;background:linear-gradient(180deg,#17365a,#0F2440);border:1px solid var(--gold);color:#fff;border-radius:10px;font-weight:700;letter-spacing:.04em}
+.fd-slbtn:hover{box-shadow:0 0 0 2px rgba(212,175,55,.3)}
+.fd-slbtn small{font-weight:400;color:var(--ink-dim);letter-spacing:0}
+.fdsl{position:fixed;inset:0;z-index:300;background:#061120;color:#fff;display:none;flex-direction:column;overscroll-behavior:contain}
+.fdsl.show{display:flex}
+.fdsl-top{flex:none;display:flex;align-items:center;gap:10px;padding:max(8px,env(safe-area-inset-top)) 12px 8px;background:linear-gradient(180deg,rgba(6,17,32,.98),rgba(6,17,32,.9));border-bottom:1px solid rgba(212,175,55,.35);font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.fdsl-top .fdsl-cls{color:var(--ink-dim);letter-spacing:.06em;text-transform:none;font-family:var(--sans)}
+.fdsl-top .sp{flex:1}
+.fdsl-top #fdslHd{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+@media (max-width:560px){ .fdsl-top .nm{display:none} }
+.fdsl-x{background:transparent;border:1px solid var(--line);color:#fff;border-radius:8px;width:40px;height:36px;font-size:1.1rem}
+.fdsl-x:hover{border-color:var(--gold)}
+.fdsl-body{flex:1;position:relative;overflow:hidden}
+.fdsl-track{position:absolute;inset:0;display:flex;width:200%;transition:transform .32s cubic-bezier(.2,.8,.2,1);will-change:transform}
+.fdsl-slide{flex:0 0 50%;height:100%;overflow:auto;-webkit-overflow-scrolling:touch;position:relative;scrollbar-width:thin}
+.fdsl-slide::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.012) 0 2px,transparent 2px 6px);pointer-events:none}
+.fdsl-nav{flex:none;display:flex;align-items:center;gap:10px;padding:8px 12px max(10px,env(safe-area-inset-bottom));border-top:1px solid rgba(212,175,55,.35);background:#061120}
+.fdsl-nav .btn{min-width:110px}
+.fdsl-dots{flex:1;display:flex;justify-content:center;gap:8px}
+.fdsl-dots i{width:9px;height:9px;border-radius:50%;background:#2b4a70;display:block}
+.fdsl-dots i.on{background:var(--gold);box-shadow:0 0 0 3px rgba(212,175,55,.25)}
+/* slide 1: rule */
+.fdr{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);min-height:100%}
+.fdr-txt{padding:22px 26px 28px;display:flex;flex-direction:column;gap:14px;max-width:760px}
+.fdr-img{position:relative;overflow:hidden;background:#071526}
+.fdr-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% top}
+.fdr-img::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#061120 0%,rgba(6,17,32,.95) 20%,rgba(6,17,32,.35) 45%,rgba(6,17,32,0) 68%),linear-gradient(0deg,#061120 0%,rgba(6,17,32,.85) 14%,rgba(6,17,32,0) 42%);z-index:1}
+.fdr-img::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--gold);z-index:2;opacity:.6}
+.fdr-stamp{position:absolute;right:14px;top:12px;z-index:2;border:2px solid var(--gold);color:var(--gold);font-family:var(--mono);font-weight:700;letter-spacing:.2em;padding:6px 10px;transform:rotate(6deg);font-size:.72rem;background:rgba(6,17,32,.55)}
+.fdsl-head{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-dim)}
+.fdsl-head b{color:var(--gold)}
+.fdsl-head .cn{border:1px solid var(--gold);color:var(--gold);padding:2px 8px;border-radius:3px}
+.fdsl h1{margin:0;font-size:clamp(1.5rem,3.2vw,2.3rem);line-height:1.1;letter-spacing:.01em}
+.fdsl h1 small{display:block;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-family:var(--mono);margin-bottom:6px}
+.fdsl-mission{border-left:4px solid var(--gold);background:rgba(212,175,55,.08);padding:10px 14px;border-radius:0 10px 10px 0;font-size:1.02rem;font-weight:600}
+.fdsl-mission span{display:block;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-family:var(--mono);margin-bottom:3px;font-weight:700}
+.fdsl-pts{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;font-size:1.02rem;line-height:1.5}
+.fdsl-pts li{display:flex;gap:12px;align-items:flex-start}
+.fdsl-pts li::before{content:"";flex:none;width:12px;height:12px;margin-top:.45em;background:var(--gold);clip-path:polygon(0 0,100% 50%,0 100%)}
+.fdsl b{color:var(--gold)}
+.fdsl-pat{font-family:var(--mono);font-size:.92rem;background:#0b1a30;border:1px solid var(--line);border-radius:8px;padding:10px 12px;color:#dbe6f3;line-height:1.5;word-break:break-word}
+.fdsl-pat span{display:block;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.fdsl-watch{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;align-items:center;font-size:.98rem;background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.35);border-radius:8px;padding:8px 12px}
+.fdsl-watch .no{color:var(--bad);font-weight:700}.fdsl-watch .ok{color:var(--good);font-weight:700}
+.fdsl-watch .wrong{text-decoration:line-through;text-decoration-color:rgba(248,113,113,.7);color:#dbe6f3}
+.fdsl-thai{font-size:.92rem;color:#dbe6f3;display:flex;gap:10px;align-items:flex-start}
+.fdsl-thai .fl{flex:none;font-size:1.1rem}
+/* slide 2: examples */
+.fde{min-height:100%;display:flex;flex-direction:column}
+.fde-ban{position:relative;height:clamp(150px,30vh,280px);flex:none;overflow:hidden;background:#071526}
+.fde-ban img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.fde-ban::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,17,32,.2) 0%,rgba(6,17,32,0) 28%,rgba(6,17,32,.55) 52%,rgba(6,17,32,.9) 78%,#061120 100%)}
+.fde-cap{position:absolute;left:0;right:0;bottom:0;padding:0 26px 10px;z-index:1;display:flex;flex-direction:column;gap:6px}
+.fde-cap h1{font-size:clamp(1.3rem,2.6vw,1.9rem)}
+.fde-cap p{margin:0;color:#dbe6f3;font-size:.95rem}
+.fde-grid{padding:16px 26px 24px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 14px}
+.fde-pair{background:var(--navy2);border:1px solid var(--line);border-radius:12px;padding:10px 12px 10px 14px;display:grid;grid-template-columns:28px 1fr auto;gap:4px 10px;align-items:center;cursor:pointer;position:relative}
+.fde-pair:hover{border-color:var(--gold)}
+.fde-pair.say{border-color:var(--gold);box-shadow:0 0 0 2px rgba(212,175,55,.25)}
+.fde-pair .n{grid-row:1/3;font-family:var(--mono);font-size:.78rem;color:var(--gold);font-weight:700;align-self:start;padding-top:3px}
+.fde-pair .cue{font-size:.8rem;color:var(--ink-dim);grid-column:2/4}
+.fde-pair .ln{font-size:1.06rem;line-height:1.4;color:#fff}
+.fde-pair .spk{font-size:1rem;opacity:.75;grid-row:2;grid-column:3}
+.fde-pair .nt{grid-column:2/4;font-size:.76rem;color:var(--gold);font-family:var(--mono)}
+.fde-radio{margin:0 26px 26px;font-family:var(--mono);font-size:.9rem;color:var(--gold);border:1px dashed rgba(212,175,55,.5);border-radius:8px;padding:10px 14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.fde-radio .btn{margin-left:auto}
+@media (max-width:760px){
+  .fdr{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+  .fdr-img{height:34vh;min-height:170px;order:-1}
+  .fdr-img img{object-position:62% 12%}
+  .fdr-img::before{background:linear-gradient(0deg,#061120 0%,rgba(6,17,32,.4) 40%,rgba(6,17,32,0) 75%)}
+  .fdr-txt{padding:14px 16px 24px;gap:11px}
+  .fdsl-pts{font-size:.98rem}
+  .fde-ban{height:26vh;min-height:140px}
+  .fde-cap,.fde-grid{padding-left:16px;padding-right:16px}
+  .fde-grid{grid-template-columns:1fr;gap:8px}
+  .fde-radio{margin:0 16px 20px}
+  .fdsl-nav .btn{min-width:84px;padding:10px 12px}
+}
+
 </style>
 </head>
 <body>
@@ -6029,6 +6111,18 @@ const FD_DRILLS = [
 }
 ];
 
+/* ---------- Formation Drills · briefing slides (2 per formation; images in img/fd/) ---------- */
+const FD_SLIDES = [
+{"id": "d1", "callsign": "FORMATION 1", "codename": "SINGLE-S", "rule": {"title": "He · She · It + s", "mission": "Talk about one person or thing at work and always add the s to the verb.", "points": ["One person or thing (he, she, it, Malee, the bank) → verb + <b>s</b>.", "Say the s clearly: she work<b>s</b>, it cost<b>s</b>, he pay<b>s</b>.", "After o, ch, sh, x add <b>-es</b>: go<b>es</b>, watch<b>es</b>, fix<b>es</b>. Do → <b>does</b>. Have → <b>has</b>.", "I, you, we, they → no s: I check, they check. The common slip: she check."], "pattern": "[He / She / It] + [verb + s] + …", "watch": "✗ She check → ✓ She checks", "thai": "Thai verbs never change, so the s is easy to forget. After he / she / it, say the s out loud."}, "examples": {"title": "In the Finance Division", "intro": "A new colleague asks who does what in your section.", "pairs": [{"cue": "A visitor asks about Malee's job:", "say": "Malee <b>manages</b> the travel budget."}, {"cue": "Tell Sarah about Nok:", "say": "Nok <b>answers</b> the phone in our office."}, {"cue": "Someone asks about the canteen:", "say": "The canteen <b>closes</b> at two o'clock."}, {"cue": "Explain Mr. Eriksen's visit:", "say": "Mr. Eriksen <b>does</b> the audit every March.", "note": "do → does"}, {"cue": "The printer is broken again:", "say": "Ploy <b>fixes</b> the printer when it breaks.", "note": "fix → fixes (add -es)"}, {"cue": "Mike asks about your section:", "say": "Our section <b>has</b> six accountants.", "note": "have → has (not haves)"}], "radio": "One person, one s. Every time. Loud and clear."}},
+{"id": "d2", "callsign": "FORMATION 2", "codename": "HEADCOUNT", "rule": {"title": "There is · There are", "mission": "Say how many things or people there are, with is or are and the right noun.", "points": ["One thing → <b>There is</b> one receipt. In speech: There's.", "Two or more → <b>There are</b> + number + noun with <b>s</b>: three receipt<b>s</b>.", "Special plurals: person → <b>people</b>, box → <b>boxes</b>, copy → <b>copies</b>.", "To say something exists, start with <b>There is / There are</b> — not 'Have'."], "pattern": "[There is] + [a / one + noun] · [There are] + [number + noun-s]", "watch": "✗ Have many cars outside → ✓ There are many cars outside", "thai": "Thai มี means 'have' and 'there is'. When something exists, English starts with There is / There are."}, "examples": {"title": "Office Headcount", "intro": "Visitors from the bank arrive. Count everything.", "pairs": [{"cue": "Sarah asks about your office:", "say": "There <b>are</b> eight desks in our office."}, {"cue": "Malee asks about the safe:", "say": "There <b>is</b> only one key for the safe."}, {"cue": "Reception calls about visitors:", "say": "There <b>are</b> two people from the bank downstairs.", "note": "person → people"}, {"cue": "The auditor asks about this month:", "say": "There <b>are</b> eleven travel claims this month."}, {"cue": "Mike is hungry:", "say": "There <b>is</b> a good canteen next to our building."}, {"cue": "You find a problem on an invoice:", "say": "There <b>is</b> a wrong date on this invoice."}], "radio": "One — there is. More — there are, plus s. Count and report."}},
+{"id": "d3", "callsign": "FORMATION 3", "codename": "NEGATIVE CONTACT", "rule": {"title": "Don't · Doesn't · Isn't", "mission": "Say no clearly and correctly, with the right helper before the verb.", "points": ["I / you / we / they → <b>don't</b> + verb: I don't know.", "He / she / it → <b>doesn't</b> + verb with no -s: she <b>doesn't work</b> (not works).", "With is / are → <b>isn't</b> / <b>aren't</b>. Don't use don't with be.", "Never just 'not' or 'no' before a verb: ✗ I not know."], "pattern": "[I / You / We / They] + [don't] + verb · [He / She / It] + [doesn't] + verb · [is / are] + [n't]", "watch": "✗ He doesn't works → ✓ He doesn't work", "thai": "Thai puts ไม่ before the verb. English needs a helper first: don't, doesn't, isn't or aren't."}, "examples": {"title": "Saying No at Work", "intro": "A busy Tuesday. Not everything is ready.", "pairs": [{"cue": "Mike wants dinner at the canteen:", "say": "The canteen <b>doesn't serve</b> dinner."}, {"cue": "A supplier wants money now:", "say": "Sorry, we <b>don't pay</b> without an invoice."}, {"cue": "Ploy gives you a claim form:", "say": "This claim form <b>isn't</b> complete."}, {"cue": "Nok asks about Mr. Eriksen:", "say": "Mr. Eriksen <b>doesn't work</b> for the Air Force.", "note": "doesn't + work (no -s)"}, {"cue": "Sarah offers you a coffee at three:", "say": "No, thanks. I <b>don't drink</b> coffee after lunch."}, {"cue": "Malee asks for the receipts:", "say": "The receipts <b>aren't</b> in this folder.", "note": "receipts = they → aren't"}], "radio": "Helper first, then the verb. No helper, no negative."}},
+{"id": "d4", "callsign": "FORMATION 4", "codename": "CHALLENGE", "rule": {"title": "Do · Does · Is · Are ?", "mission": "Ask yes/no questions that start with the right helper word.", "points": ["<b>Do</b> + I / you / we / they + verb? Do you like tea?", "<b>Does</b> + he / she / it + verb with no -s? <b>Does</b> it <b>cost</b> a lot?", "With be, move it to the front: <b>Is</b> it ready? <b>Are</b> you busy?", "Short answers: Yes, I <b>do</b>. / No, it <b>doesn't</b>. / Yes, it <b>is</b>."], "pattern": "[Do / Does] + [person] + [verb] + …? · [Is / Are] + [person / thing] + …?", "watch": "✗ Does he works here? → ✓ Does he work here?", "thai": "Thai adds ไหม at the end. English starts with Do, Does, Is or Are — a rising voice alone is not enough."}, "examples": {"title": "Checking the Facts", "intro": "The welcome week for the visiting officers begins.", "pairs": [{"cue": "Ask Ploy about the auditor:", "say": "<b>Is</b> Mr. Eriksen here today?"}, {"cue": "Ask a supplier about receipts:", "say": "<b>Do</b> you <b>send</b> receipts by email?"}, {"cue": "Ask Nok about the canteen:", "say": "<b>Does</b> the canteen <b>sell</b> coffee?"}, {"cue": "Talk to Tom at the welcome dinner:", "say": "<b>Do</b> you <b>like</b> Thai food?"}, {"cue": "Check before you go to Malee:", "say": "<b>Are</b> these claims ready for Malee?"}, {"cue": "Ask Helen about the English course:", "say": "<b>Does</b> the course <b>finish</b> in December?", "note": "does + finish (no -s)"}], "radio": "Helper up front, verb plain. Then listen for the answer."}},
+{"id": "d5", "callsign": "FORMATION 5", "codename": "INTEL REQUEST", "rule": {"title": "When · Where · How much ?", "mission": "Ask for missing information with a question word and the right helper.", "points": ["Start with the question word: what, when, where, why, how many, how long.", "Then <b>do / does</b> + person + verb: What <b>do</b> you <b>need</b>?", "With be: question word + <b>is / are</b> + thing: Why <b>is</b> it late?", "After does, the verb has no -s: How long <b>does</b> it <b>take</b>?"], "pattern": "[Question word] + [do / does] + [person] + [verb]? · [Question word] + [is / are] + [thing]?", "watch": "✗ What time the canteen opens? → ✓ What time does the canteen open?", "thai": "Thai keeps the normal word order. English needs a helper (do, does, is, are) before the person or thing."}, "examples": {"title": "Getting the Details", "intro": "Audit week. You need answers fast.", "pairs": [{"cue": "A supplier's invoice arrives two weeks late:", "say": "Why <b>is</b> this invoice late?"}, {"cue": "Small talk with Tom:", "say": "Where <b>do</b> you <b>come</b> from?"}, {"cue": "Ask Nok about tonight:", "say": "What time <b>is</b> the welcome dinner?"}, {"cue": "Ask the auditor about receipts:", "say": "How many receipts <b>do</b> you <b>need</b>?", "note": "How many + plural noun"}, {"cue": "Ask Malee about the paperwork:", "say": "Which form <b>do</b> I <b>use</b> for a travel claim?"}, {"cue": "Ask Mr. Eriksen about his visit:", "say": "How long <b>does</b> the audit <b>take</b>?", "note": "does + take (no -s)"}], "radio": "Question word, helper, person, verb. Four steps. Fire."}},
+{"id": "d6", "callsign": "FORMATION 6", "codename": "AFTER-ACTION", "rule": {"title": "Past simple", "mission": "Report what you did, with a past verb and a finished time.", "points": ["Finished time (yesterday, last week, two days ago) → <b>past simple</b>.", "Regular verbs add <b>-ed</b>: email<b>ed</b>, finish<b>ed</b>, check<b>ed</b>.", "Irregular verbs change: see → <b>saw</b>, find → <b>found</b>, spend → <b>spent</b>.", "No was with a normal verb: ✗ I was finish → ✓ I <b>finished</b>."], "pattern": "[Person] + [verb-ed / irregular past] + … + [finished time]", "watch": "✗ Yesterday I send it → ✓ Yesterday I sent it", "thai": "Thai shows the past with a time word like เมื่อวาน. English needs the time word and a past verb."}, "examples": {"title": "After-Action Report", "intro": "Monday morning. Malee wants a report on last week.", "pairs": [{"cue": "Malee asks about the bank:", "say": "I <b>emailed</b> the bank this morning."}, {"cue": "Report to Wing Commander Anan:", "say": "We <b>finished</b> the reconciliation on Tuesday."}, {"cue": "Sarah asks about your weekend:", "say": "I <b>saw</b> a good film last weekend.", "note": "see → saw (irregular)"}, {"cue": "The auditor asks about a lost receipt:", "say": "Nok <b>found</b> it two days ago.", "note": "find → found (irregular)"}, {"cue": "Ploy missed the welcome dinner:", "say": "Tom <b>gave</b> a short speech last night.", "note": "give → gave (irregular)"}, {"cue": "Explain your travel claim:", "say": "I <b>spent</b> 3,500 baht on the hotel last week.", "note": "spend → spent (irregular)"}], "radio": "Time word and past verb. Both. Every time."}},
+{"id": "d7", "callsign": "FORMATION 7", "codename": "FLIGHT PLAN", "rule": {"title": "Will · Going to", "mission": "Promise or plan future actions with will or going to and a future time.", "points": ["Promise or quick decision → <b>will</b> + verb: I<b>'ll</b> send it.", "A plan you made before → <b>going to</b> + verb: I<b>'m going to</b> visit.", "After will, use the base verb: will <b>send</b> — no -s, no -ed, no to.", "Going to needs am / is / are: I<b>'m</b> going to, she<b>'s</b> going to."], "pattern": "[I'll / She'll / They'll] + [verb] · [am / is / are] + [going to] + [verb] + … + [future time]", "watch": "✗ I going to call → ✓ I'm going to call", "thai": "Thai จะ never changes the verb. English will works the same way — keep the base verb after it."}, "examples": {"title": "Flight Plan for the Week", "intro": "Month-end is close. Everyone asks about your plans.", "pairs": [{"cue": "A supplier needs a receipt:", "say": "<b>I'll email</b> you the receipt this afternoon."}, {"cue": "Malee asks about the claims:", "say": "<b>I'm going to check</b> them after lunch."}, {"cue": "Sarah asks about your weekend:", "say": "<b>I'm going to visit</b> my parents on Sunday.", "note": "plan made before → going to"}, {"cue": "Tell Nok about the auditor:", "say": "Mr. Eriksen <b>will arrive</b> next Tuesday."}, {"cue": "A caller wants to speak to Anan:", "say": "He<b>'ll call</b> you back in ten minutes.", "note": "quick promise → will"}, {"cue": "Anan asks about the budget report:", "say": "Ploy <b>is going to print</b> it tomorrow morning."}], "radio": "Will or going to, base verb, future time. Flight plan filed."}},
+{"id": "d8", "callsign": "FORMATION 8", "codename": "REQUEST CLEARANCE", "rule": {"title": "Could you … please?", "mission": "Ask colleagues, seniors and visitors for things politely, not with orders.", "points": ["Ask, don't order: <b>Could you</b> + verb …, <b>please</b>?", "For yourself: <b>Could I</b> + verb …, please? Could I use your phone?", "No to after could: Could you <b>sign</b> — not 'Could you to sign'.", "<b>Please</b> alone is not a request: 'Please sign' is still an order."], "pattern": "[Could you] + [verb] + … , please? · [Could I] + [verb] + … , please?", "watch": "✗ Please check this → ✓ Could you check this, please?", "thai": "Thai ช่วย…หน่อย makes an order softer. In English, start with Could you — please alone still sounds like a command."}, "examples": {"title": "Requests on Base", "intro": "A long day. You need help from many people.", "pairs": [{"cue": "The total looks wrong. Ask Nok:", "say": "<b>Could you</b> help me with this total, <b>please</b>?"}, {"cue": "The supplier's invoice has the wrong date:", "say": "<b>Could you</b> change the date on the invoice, <b>please</b>?"}, {"cue": "You have a doctor's appointment. Ask Malee:", "say": "<b>Could I</b> leave at four today, <b>please</b>?", "note": "for yourself → Could I"}, {"cue": "At the canteen counter:", "say": "<b>Could I</b> have a coffee, <b>please</b>?"}, {"cue": "At the bank counter:", "say": "<b>Could you</b> print a bank statement for me, <b>please</b>?"}, {"cue": "Sarah says a new word in class:", "say": "<b>Could you</b> write that word on the board, <b>please</b>?", "note": "Could you + verb (no to)"}], "radio": "Could you, verb, please. Request clearance — never give orders."}}
+];
+
 /* ---------- the drill instructor (voice + avatar) ---------- */
 GS_PEOPLE.helen = {vp:["Kate","Serena","Stephanie","Martha"], name:"Flight Lieutenant Helen Price", short:"Helen", role:"Language-lab instructor, International Finance Course", accent:"GB", sex:"f", flag:"🇬🇧",
   av:{skin:"#f0c9a8", hair:"#3b2a1e", style:"bob", top:"#203a5c", bg:"#e7dcc0", uniform:true}};
@@ -6203,6 +6297,7 @@ function fdBrief(d){
       <div class="kick">Grammar briefing</div><h3>${esc(d.name)}</h3>
       <p class="fd-rule">${d.rule}</p><p class="fd-more">${d.more}</p>
       <p class="gs-tip">🇹🇭 ${d.thai}</p>
+      ${fdSlD(d.id) ? `<button class="fd-slbtn" id="fdSlides">📽️ Briefing slides <small>· rule + examples, full screen</small></button>` : ""}
     </div>
   </section>
   <div class="gs-go"><span>🔊 Turn your sound on. ${fdS().live ? "Lesson mode: the teacher scores each answer." : "Answer with your voice — or type."}</span>
@@ -6210,8 +6305,112 @@ function fdBrief(d){
   $("#fdBack").onclick = () => renderFDHome();
   $("#fdEgHear").onclick = async () => { await gsSpeak(fdSay(d.eg[0]), "helen"); await gsSpeak(fdSay(d.eg[1]), "helen"); gsSpeak(d.eg[2], "helen", {rate: 0.8}); };
   $("#fdGo").onclick = () => fdStart(d, fdPick(d));
+  const sb = $("#fdSlides"); if (sb) sb.onclick = () => fdSlidesOpen(d);
   window.scrollTo({top: 0});
 }
+
+/* ---------- briefing slide viewer ---------- */
+let FDSL = null;
+const fdSlD = id => FD_SLIDES.find(s => s.id === id);
+function fdSlEl(){
+  let el = $("#fdsl");
+  if (el) return el;
+  el = document.createElement("div"); el.id = "fdsl"; el.className = "fdsl"; el.setAttribute("role", "dialog"); el.setAttribute("aria-modal", "true"); el.setAttribute("aria-label", "Briefing slides");
+  el.innerHTML = `
+    <div class="fdsl-top"><span id="fdslHd"></span><span class="sp"></span><span class="fdsl-cls" id="fdslPg"></span><button class="fdsl-x" id="fdslX" aria-label="Close slides">✕</button></div>
+    <div class="fdsl-body" id="fdslBody"><div class="fdsl-track" id="fdslTrack"></div></div>
+    <div class="fdsl-nav"><button class="btn ghost" id="fdslPrev">◀ Rule</button><div class="fdsl-dots" id="fdslDots"></div><button class="btn" id="fdslNext">Examples ▶</button></div>`;
+  document.body.appendChild(el);
+  $("#fdslX").onclick = fdSlClose;
+  $("#fdslPrev").onclick = () => fdSlGo(0);
+  $("#fdslNext").onclick = () => { if (FDSL && FDSL.i === 1) fdSlClose(true); else fdSlGo(1); };
+  // swipe
+  let x0 = null, y0 = null;
+  const body = $("#fdslBody");
+  body.addEventListener("touchstart", e => { const t = e.touches[0]; x0 = t.clientX; y0 = t.clientY; }, {passive: true});
+  body.addEventListener("touchend", e => {
+    if (x0 === null) return; const t = e.changedTouches[0], dx = t.clientX - x0, dy = t.clientY - y0; x0 = y0 = null;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.4) fdSlGo(dx < 0 ? 1 : 0);
+  }, {passive: true});
+  return el;
+}
+function fdSlHTML(d, s){
+  const pts = s.rule.points.map(p => `<li><span>${p}</span></li>`).join("");
+  const w = String(s.rule.watch).split("→"), wrong = (w[0] || "").replace(/^\s*✗\s*/, "").trim(), right = (w[1] || "").replace(/^\s*✓\s*/, "").trim();
+  const rule = `<div class="fdr">
+    <div class="fdr-txt">
+      <div class="fdsl-head"><b>Formation briefing</b><span>${esc(s.callsign)}</span><span class="cn">Codename ${esc(s.codename)}</span><span>${esc(d.cefr)}</span><span>1 / 2</span></div>
+      <h1><small>The rule</small>${esc(s.rule.title)}</h1>
+      <div class="fdsl-mission"><span>Mission</span>${esc(s.rule.mission)}</div>
+      <ul class="fdsl-pts">${pts}</ul>
+      <div class="fdsl-pat"><span>Pattern</span>${esc(s.rule.pattern)}</div>
+      <div class="fdsl-watch"><span class="no">✗</span><span class="wrong">${esc(wrong)}</span><span class="ok">✓</span><span>${esc(right)}</span></div>
+      <div class="fdsl-thai"><span class="fl">🇹🇭</span><span>${esc(s.rule.thai)}</span></div>
+    </div>
+    <div class="fdr-img"><img src="img/fd/fd-${d.id}-rule.jpg" alt="" loading="eager" onerror="this.style.display='none'"><span class="fdr-stamp">BRIEFING</span></div>
+  </div>`;
+  const pairs = s.examples.pairs.map((p, i) => `<div class="fde-pair" data-fdsay="${i}" role="button" tabindex="0" title="Tap to hear">
+      <span class="n">0${i + 1}</span><span class="cue">${esc(p.cue)}</span><span class="ln">${p.say}</span><span class="spk" aria-hidden="true">🔊</span>${p.note ? `<span class="nt">${esc(p.note)}</span>` : ""}</div>`).join("");
+  const eg = `<div class="fde">
+    <div class="fde-ban"><img src="img/fd/fd-${d.id}-eg.jpg" alt="" loading="eager" onerror="this.style.display='none'">
+      <div class="fde-cap"><div class="fdsl-head"><b>Formation briefing</b><span>${esc(s.callsign)}</span><span class="cn">Codename ${esc(s.codename)}</span><span>2 / 2</span></div>
+        <h1><small>Examples · RTAF Finance</small>${esc(s.examples.title)}</h1><p>${esc(s.examples.intro)}</p></div></div>
+    <div class="fde-grid">${pairs}</div>
+    <div class="fde-radio"><span>📻</span><span>${esc(s.examples.radio)}</span><button class="btn ghost" id="fdslHear">🔊 Hear all six</button></div>
+  </div>`;
+  return `<section class="fdsl-slide" aria-label="Slide 1: the rule">${rule}</section><section class="fdsl-slide" aria-label="Slide 2: examples">${eg}</section>`;
+}
+function fdSlidesOpen(d){
+  const s = fdSlD(d.id); if (!s) return;
+  const el = fdSlEl();
+  FDSL = {d, s, i: 0};
+  $("#fdslHd").innerHTML = `${esc(s.callsign)}<span class="nm"> · ${esc(d.name)}</span>`;
+  $("#fdslTrack").innerHTML = fdSlHTML(d, s);
+  el.querySelectorAll("[data-fdsay]").forEach(b => {
+    const say = () => { el.querySelectorAll(".fde-pair.say").forEach(p => p.classList.remove("say")); b.classList.add("say"); gsStopAudio(); gsSpeak(s.examples.pairs[+b.dataset.fdsay].say, "helen", {rate: 0.85}).then(() => b.classList.remove("say")); };
+    b.onclick = say; b.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); say(); } };
+  });
+  $("#fdslHear").onclick = async () => {
+    const me = FDSL; gsStopAudio();
+    for (const [i, p] of s.examples.pairs.entries()) {
+      if (FDSL !== me || FDSL.i !== 1) return;
+      const b = el.querySelector(`[data-fdsay="${i}"]`); b && b.classList.add("say");
+      await gsSpeak(p.say, "helen", {rate: 0.85});
+      b && b.classList.remove("say");
+    }
+  };
+  el.classList.add("show"); document.body.style.overflow = "hidden";
+  fdSlGo(0);
+  try { if (!/iP(hone|od)/.test(navigator.userAgent) && el.requestFullscreen) el.requestFullscreen().catch(() => {}); } catch(e){}
+  gsLog({m: "drill " + d.id, t: "slides", mode: "briefing", said: "", res: "opened", note: s.codename, tries: 0, typed: false});
+  $("#fdslX").focus();
+}
+function fdSlGo(i){
+  if (!FDSL) return;
+  FDSL.i = i = Math.max(0, Math.min(1, i));
+  gsStopAudio();
+  $("#fdslTrack").style.transform = `translateX(${-50 * i}%)`;
+  $("#fdslDots").innerHTML = [0, 1].map(k => `<i class="${k === i ? "on" : ""}"></i>`).join("");
+  $("#fdslPg").textContent = i ? "Examples" : "The rule";
+  $("#fdslPrev").disabled = i === 0;
+  $("#fdslNext").textContent = i ? "Done ✓" : "Examples ▶";
+  const sl = document.querySelectorAll("#fdslTrack .fdsl-slide")[i]; if (sl) sl.scrollTop = 0;
+}
+function fdSlClose(done){
+  const el = $("#fdsl"); if (!el) return;
+  gsStopAudio(); el.classList.remove("show"); document.body.style.overflow = "";
+  try { if (document.fullscreenElement === el && document.exitFullscreen) document.exitFullscreen().catch(() => {}); } catch(e){}
+  FDSL = null;
+  const go = $("#fdGo"); if (go) go.focus();
+}
+document.addEventListener("keydown", e => {
+  if (!FDSL) return;
+  if (e.key === "Escape") fdSlClose();
+  else if (e.key === "ArrowRight") fdSlGo(1);
+  else if (e.key === "ArrowLeft") fdSlGo(0);
+});
+document.addEventListener("fullscreenchange", () => { const el = $("#fdsl"); if (el && el.classList.contains("show") && !document.fullscreenElement && FDSL && !/iP(hone|od)/.test(navigator.userAgent)) { /* user pressed Esc in fullscreen */ fdSlClose(); } });
+
 
 /* ---------- the sortie ---------- */
 function fdStart(d, list){
