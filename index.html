@@ -688,6 +688,15 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding-top:12px;font-si
 .fdi-row i{font-style:normal;opacity:.65;font-size:.85rem;align-self:flex-end}
 .fdi-bridge{font-family:var(--mono);font-size:.88rem;color:#dbe6f3;border:1px dashed rgba(212,175,55,.5);border-radius:8px;padding:10px 14px;display:flex;gap:10px;align-items:flex-start}
 .fdi-bridge b{color:var(--gold)}
+.fdi-spk{cursor:pointer;position:relative;transition:box-shadow .15s}
+.fdi-spk:hover{box-shadow:0 0 0 2px rgba(212,175,55,.3)}
+.fdi-spk.say{box-shadow:0 0 0 2px var(--gold);background:rgba(212,175,55,.14)}
+.fdi-spk .ic{position:absolute;right:10px;top:8px;font-size:.85rem;opacity:.55;pointer-events:none}
+.fdi-card.fdi-spk h4{padding-right:26px}
+.fdi-hook.fdi-spk,.fdi-bridge.fdi-spk{padding-right:36px}
+.fdi-all{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.fdi-all .btn{padding:9px 14px}
+.fdi-all small{color:var(--ink-dim);font-size:.82rem}
 @media (max-width:760px){
   .fdi{padding:14px 16px 24px;gap:11px}
   .fdi-grid,.fdi-rows{grid-template-columns:1fr}
@@ -6391,14 +6400,29 @@ function fdSlHTML(d, s){
     <div class="fdi-bg"><img src="img/fd/fd-${d.id}-eg.jpg" alt="" loading="eager" onerror="this.style.display='none'"></div>
     <div class="fdsl-head"><b>Formation briefing</b><span>${esc(s.callsign)}</span><span class="cn">Codename ${esc(s.codename)}</span><span>2 / 3</span></div>
     <h1><small>Insights · why the rule works</small>${esc(n.title)}</h1>
-    <div class="fdi-hook"><span>Big idea</span>${n.hook}</div>
-    <div class="fdi-grid">${n.cards.map(c => `<div class="fdi-card"><h4>${esc(c.h)}</h4><p>${c.t}</p></div>`).join("")}</div>
+    <div class="fdi-all"><button class="btn" id="fdiAll">🔊 Hear the whole briefing</button><small>or tap any box to hear Helen read it</small></div>
+    <div class="fdi-hook fdi-spk" data-fdspk="hook" role="button" tabindex="0"><span>Big idea</span>${n.hook}<i class="ic" aria-hidden="true">🔊</i></div>
+    <div class="fdi-grid">${n.cards.map((c, i) => `<div class="fdi-card fdi-spk" data-fdspk="c${i}" role="button" tabindex="0"><h4>${esc(c.h)}</h4><p>${c.t}</p><i class="ic" aria-hidden="true">🔊</i></div>`).join("")}</div>
     ${n.sound ? `<div class="fdi-snd"><div class="lab">🔊 ${esc(n.sound.label)} <small>· tap a box to hear Helen</small></div>
       <div class="fdi-rows">${n.sound.rows.map((r, i) => `<div class="fdi-row" data-fdsnd="${i}" role="button" tabindex="0"><b>${esc(r.end)}</b><span>${esc(r.eg)}</span><i aria-hidden="true">🔊</i></div>`).join("")}</div></div>` : ""}
-    <div class="fdi-bridge"><span>🧭</span><span>${n.bridge}</span></div>
+    <div class="fdi-bridge fdi-spk" data-fdspk="bridge" role="button" tabindex="0"><span>🧭</span><span>${n.bridge}</span><i class="ic" aria-hidden="true">🔊</i></div>
   </div>` : "";
   return `<section class="fdsl-slide" aria-label="Slide 1: the rule">${rule}</section>${ins ? `<section class="fdsl-slide" aria-label="Slide 2: insights">${ins}</section>` : ""}<section class="fdsl-slide" aria-label="Slide 3: examples">${eg}</section>`;
 }
+/* turn slide text into something a British TTS voice can read: phonetic symbols, arrows, ticks and Thai words */
+const FD_THAI = [["ช่วย…หน่อย","chuay, noi"],["ครับ/ค่ะ","krap, ka"],["เมื่อวาน","muea waan"],["ไหม","mai"],["ไม่","mai"],["จะ","ja"],["มี","mee"],["ยืม","yuem"]];
+const FD_IPA = [["/ɪz/","the iz sound"],["/ɪd/","the id sound"],["/s/","the sss sound"],["/z/","the zzz sound"],["/t/","the t sound"],["/d/","the d sound"],["/dʌz/","duz"]];
+function fdSlSpeechText(t){
+  let x = String(t).replace(/<[^>]+>/g, "");
+  FD_IPA.forEach(([a, b]) => { x = x.split(a).join(b); });
+  FD_THAI.forEach(([a, b]) => { x = x.split(a).join("Thai " + b); });
+  x = x.replace(/Thai Thai /g, "Thai ").replace(/[\u0E00-\u0E7F]+/g, "");
+  x = x.replace(/✗\s*/g, "wrong: ").replace(/✓\s*/g, "right: ").replace(/[↘◆]/g, "").replace(/\s*·\s*/g, ", ").replace(/\s*—\s*/g, ", ");
+  x = x.replace(/→\s*Formations?/g, "see Formations").replace(/\s*→\s*/g, " becomes ").replace(/\byes\/no\b/gi, "yes-no").replace(/\s*\/\s*/g, ", ").replace(/\s*=\s*/g, " equals ").replace(/…/g, "");
+  x = x.replace(/\bwatch-iz\b/g, "watch iz").replace(/\s-(es|ed|th)\b/g, " $1").replace(/\(([^)]*)\)/g, ", $1,").replace(/,\s*([.;?!])/g, "$1").replace(/\?\./g, "?").replace(/\s{2,}/g, " ").replace(/\s+([,.])/g, "$1").replace(/,\s*,/g, ",");
+  return x;
+}
+function fdSlSoundText(r){ return fdSlSpeechText(r.end).replace(/[+]/g, "plus").replace(/\?/g, "").replace(/[,\s]+$/, "") + ". " + String(r.eg).replace(/\s*·\s*/g, ". "); }
 function fdSlidesOpen(d){
   const s = fdSlD(d.id); if (!s) return;
   const el = fdSlEl();
@@ -6409,8 +6433,26 @@ function fdSlidesOpen(d){
     const say = () => { el.querySelectorAll(".fde-pair.say").forEach(p => p.classList.remove("say")); b.classList.add("say"); gsStopAudio(); gsSpeak(s.examples.pairs[+b.dataset.fdsay].say, "helen", {rate: 0.85}).then(() => b.classList.remove("say")); };
     b.onclick = say; b.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); say(); } };
   });
+  // every block on the insights slide can be heard
+  const n = s.insight;
+  const blocks = n ? [["hook", n.hook], ...n.cards.map((c, i) => ["c" + i, c.h + ". " + c.t]), ...(n.sound ? n.sound.rows.map((r, i) => ["s" + i, fdSlSoundText(r)]) : []), ["bridge", n.bridge]] : [];
+  const mark = key => { el.querySelectorAll(".fdi-spk.say,.fdi-row.say,.fde-pair.say").forEach(p => p.classList.remove("say")); const b = key && el.querySelector(`[data-fdspk="${key}"],[data-fdsnd="${key.slice(1)}"].fdi-row`); if (b && (key[0] !== "s" || b.classList.contains("fdi-row"))) b.classList.add("say"); return b; };
+  el.querySelectorAll("[data-fdspk]").forEach(b => {
+    const say = () => { gsStopAudio(); const bl = blocks.find(x => x[0] === b.dataset.fdspk); mark(b.dataset.fdspk); gsSpeak(fdSlSpeechText(bl[1]), "helen", {rate: 0.88}).then(() => b.classList.remove("say")); };
+    b.onclick = say; b.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); say(); } };
+  });
+  const allBtn = $("#fdiAll"); if (allBtn) allBtn.onclick = async () => {
+    const me = FDSL; gsStopAudio();
+    for (const [key, text] of blocks) {
+      if (FDSL !== me || FDSL.i !== 1) { mark(null); return; }
+      const b = mark(key); if (b) b.scrollIntoView({block: "nearest", behavior: "smooth"});
+      await gsSpeak(key[0] === "s" ? text : fdSlSpeechText(text), "helen", {rate: 0.88});
+      await new Promise(r => setTimeout(r, 350));
+    }
+    mark(null);
+  };
   el.querySelectorAll("[data-fdsnd]").forEach(b => {
-    const say = () => { el.querySelectorAll(".fdi-row.say").forEach(p => p.classList.remove("say")); b.classList.add("say"); gsStopAudio(); const r = s.insight.sound.rows[+b.dataset.fdsnd]; gsSpeak(r.eg.replace(/\s*·\s*/g, ". "), "helen", {rate: 0.8}).then(() => b.classList.remove("say")); };
+    const say = () => { el.querySelectorAll(".fdi-row.say").forEach(p => p.classList.remove("say")); b.classList.add("say"); gsStopAudio(); const r = s.insight.sound.rows[+b.dataset.fdsnd]; gsSpeak(fdSlSoundText(r), "helen", {rate: 0.8}).then(() => b.classList.remove("say")); };
     b.onclick = say; b.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); say(); } };
   });
   $("#fdslHear").onclick = async () => {
