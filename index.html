@@ -5428,11 +5428,54 @@ function gsPickVoice(accent, sex, own){
   gsVoiceCache[ck] = best;
   return best;
 }
+/* ---------- recorded voices: Formation Drills lines are pre-recorded MP3s (Helen = Sonia, en-GB neural) in img/fd/audio/.
+   gsSpeak plays the recording when one exists for this person + text, and falls back to the device voice otherwise. ---------- */
+const GS_CLIP_VOICE = {helen: "sonia", sarah: "libby", tom: "ryan", mike: "andrew", mark: "christopher", jessica: "ava"};
+const GS_CLIP_DIR = "img/fd/audio/";
+const gsClipText = t => String(t).replace(/<[^>]+>/g, "").replace(/\s*—\s*/g, ", ").replace(/\s+/g, " ").trim();
+function gsClipKey(pid, text){
+  const s = (GS_CLIP_VOICE[pid] || "") + "|" + gsClipText(text);
+  let h = 0x811c9dc5;
+  for (const b of new TextEncoder().encode(s)) { h ^= b; h = Math.imul(h, 0x01000193) >>> 0; }
+  return h.toString(16).padStart(8, "0");
+}
+let GS_CLIPS = null, gsAud = null, gsClipCur = null;
+try { fetch(GS_CLIP_DIR + "manifest.json", {cache: "no-cache"}).then(r => r.ok ? r.json() : null).then(m => { if (m && m.clips) GS_CLIPS = new Set(Object.keys(m.clips)); }).catch(() => {}); } catch(e){}
+function gsClipStop(){ const c = gsClipCur; gsClipCur = null; if (c) { try { c.a.pause(); } catch(e){} c.fin(); } }
+function gsHush(){ try { speechSynthesis.cancel(); } catch(e){} gsClipStop(); }
+// resolves true if the recording played (or was stopped), false if the caller should use the device voice
+function gsPlayClip(text, pid, opt){
+  return new Promise(res => {
+    if (!GS_CLIPS || !GS_CLIP_VOICE[pid] || typeof Audio === "undefined") return res(false);
+    const key = gsClipKey(pid, text); if (!GS_CLIPS.has(key)) return res(false);
+    try {
+      gsHush();
+      if (!gsAud) gsAud = new Audio();
+      const a = gsAud, rate = opt.rate || (gs.slow ? 0.78 : 0.95);
+      let done = false, started = false;
+      const fin = ok => { if (done) return; done = true; a.onended = a.onerror = null; if (gsClipCur && gsClipCur.a === a && gsClipCur.fin === me.fin) gsClipCur = null; GSP && (GSP.talking = false); gsRefreshMic(); res(ok); };
+      const me = {a, fin: () => fin(true)}; gsClipCur = me;
+      a.onended = () => fin(true);
+      a.onerror = () => fin(started);
+      a.src = GS_CLIP_DIR + key + ".mp3";
+      a.playbackRate = Math.max(0.7, Math.min(1.2, rate / 0.95));
+      try { a.preservesPitch = true; a.webkitPreservesPitch = true; } catch(e){}
+      if (GSP) GSP.talking = true;
+      const p = a.play();
+      if (p && p.then) p.then(() => { started = true; }).catch(() => fin(false));
+      else started = true;
+      setTimeout(() => fin(started), 4000 + String(text).split(/\s+/).length * 900);
+      gsRefreshMic();
+    } catch(e){ res(false); }
+  });
+}
 let gsUtter = [];
-function gsSpeak(text, pid, opt){
+async function gsSpeak(text, pid, opt){
   opt = opt || {};
+  if (text && await gsPlayClip(text, pid, opt)) return;
   return new Promise(res => {
     if (!("speechSynthesis" in window) || !text) return res();
+    gsClipStop();
     try {
       const p = GS_PEOPLE[pid] || {accent:"GB", sex:"f"};
       const u = new SpeechSynthesisUtterance(String(text).replace(/<[^>]+>/g, "").replace(/\s*—\s*/g, ", "));
@@ -5451,7 +5494,7 @@ function gsSpeak(text, pid, opt){
     } catch(e){ res(); }
   });
 }
-function gsStopAudio(){ try { speechSynthesis.cancel(); } catch(e){} if (GS_REC) { try { GS_REC.abort(); } catch(e){} GS_REC = null; } }
+function gsStopAudio(){ gsHush(); if (GS_REC) { try { GS_REC.abort(); } catch(e){} GS_REC = null; } }
 
 /* ---------- microphone (speech-to-text) ---------- */
 const GS_SR = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -5466,7 +5509,7 @@ function gsMicStatus(){
 function gsMicStart(){
   if (!GS_SR) { GSP.sub = "type"; gsRenderSpeak(); return; }
   if (GS_REC) { try { GS_REC.stop(); } catch(e){} return; }
-  try { speechSynthesis.cancel(); } catch(e){}
+  gsHush();
   const r = new GS_SR(); GS_REC = r;
   r.lang = "en-US"; r.interimResults = true; r.continuous = false; r.maxAlternatives = 1;
   let fin = "", inter = "", silence = null, stopped = false;
@@ -5934,7 +5977,7 @@ function gsVoiceCheck(){
   $("#gsVcClose").onclick = () => $("#ref").classList.remove("show");
   const mt = $("#gsMicTest");
   if (mt && GS_SR) mt.onclick = () => {
-    try { speechSynthesis.cancel(); } catch(e){}
+    gsHush();
     const r = new GS_SR(); r.lang = "en-US"; r.interimResults = true; r.continuous = false;
     const out = $("#gsMicOut"); out.textContent = "Listening…"; mt.disabled = true;
     r.onresult = e => { let s = ""; for (let i = 0; i < e.results.length; i++) s += e.results[i][0].transcript; out.textContent = s; };
@@ -6748,7 +6791,7 @@ function fdRenderSpeak(){
 function fdMicStart(){
   if (!GS_SR) { FDP.sub = "type"; fdRenderSpeak(); return; }
   if (GS_REC) { try { GS_REC.stop(); } catch(e){} return; }
-  try { speechSynthesis.cancel(); } catch(e){}
+  gsHush();
   const r = new GS_SR(); GS_REC = r;
   r.lang = "en-US"; r.interimResults = true; r.continuous = false; r.maxAlternatives = 1;
   let fin = "", inter = "", silence = null, stopped = false; const me = FDP;

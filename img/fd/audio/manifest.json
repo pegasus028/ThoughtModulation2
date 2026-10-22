@@ -1,0 +1,2862 @@
+{
+"note": "Pre-recorded Formation Drills lines (edge-tts neural voices, rate -10%, silence trimmed). Key = FNV-1a of voice + '|' + cleaned text (gsClipKey in index.html). Helen = en-GB-SoniaNeural.",
+"made": "2026-10-22",
+"voices": {
+"helen": "en-GB-SoniaNeural",
+"sarah": "en-GB-LibbyNeural",
+"tom": "en-GB-RyanNeural",
+"mike": "en-US-AndrewNeural",
+"mark": "en-US-ChristopherNeural",
+"jessica": "en-US-AvaNeural"
+},
+"clips": {
+"0046a5c0": {
+"v": "ryan",
+"t": "Nice to meet you, Flight Lieutenant Hughes. Should I call you Tom?"
+},
+"01cc34d4": {
+"v": "sonia",
+"t": "He"
+},
+"02133554": {
+"v": "sonia",
+"t": "We pay late. The supplier charges a fee."
+},
+"028a74ba": {
+"v": "sonia",
+"t": "I buy office supplies every month."
+},
+"02b73ad8": {
+"v": "sonia",
+"t": "A question leaves a door open. 'Send me the file' leaves no choice. 'Could you send me the file?' is a question, the listener can say no. That choice is the politeness. Please only adds polish."
+},
+"02b86338": {
+"v": "sonia",
+"t": "If we had checked the invoice, we wouldn't have paid twice."
+},
+"03ca4651": {
+"v": "sonia",
+"t": "Correct. Who is the auditor?"
+},
+"0405d151": {
+"v": "sonia",
+"t": "If the new system worked properly, we wouldn't need these forms."
+},
+"0413017c": {
+"v": "sonia",
+"t": "Tomorrow"
+},
+"0462937c": {
+"v": "sonia",
+"t": "It is my responsibility."
+},
+"04692940": {
+"v": "sonia",
+"t": "Correct. If I knew the account number, I would make the payment."
+},
+"04e5be68": {
+"v": "sonia",
+"t": "Sorry, say that again, please."
+},
+"052a4766": {
+"v": "sonia",
+"t": "Khun Nok, the meeting is at two."
+},
+"05ce1278": {
+"v": "sonia",
+"t": "Correct. If we pay late, the supplier will charge a fee."
+},
+"06976080": {
+"v": "libby",
+"t": "Correct. Malee checks them."
+},
+"06b88c39": {
+"v": "sonia",
+"t": "Correct. When does the meeting start?"
+},
+"0745ff97": {
+"v": "sonia",
+"t": "Who is the auditor?"
+},
+"0799adfe": {
+"v": "sonia",
+"t": "I'm not the commander. I don't approve this claim."
+},
+"07a3cf3c": {
+"v": "sonia",
+"t": "Correct. How many invoices do we have?"
+},
+"07afc8a3": {
+"v": "sonia",
+"t": "I'd equals I would. I'd ask first. She'd know"
+},
+"08065964": {
+"v": "sonia",
+"t": "The suppliers are paid on the 25th."
+},
+"083f9531": {
+"v": "sonia",
+"t": "Malee"
+},
+"08922d47": {
+"v": "sonia",
+"t": "Correct. She has a meeting at ten."
+},
+"08d8524a": {
+"v": "sonia",
+"t": "Sir, could I have the file today, please?"
+},
+"090f3d01": {
+"v": "sonia",
+"t": "Correct. She watches the budget carefully."
+},
+"093c3cb3": {
+"v": "ava",
+"t": "No, thank you. I don't need breakfast."
+},
+"0942c1cf": {
+"v": "sonia",
+"t": "I'd have, wouldn't have. I'd have paid. We wouldn't have missed it"
+},
+"096a1450": {
+"v": "sonia",
+"t": "Correct. Are the figures final?"
+},
+"096f1b91": {
+"v": "ryan",
+"t": "Hi! Tom Hughes. I'm with the visiting squadron this week."
+},
+"09a009de": {
+"v": "sonia",
+"t": "The meeting is at two."
+},
+"09a2c2b7": {
+"v": "sonia",
+"t": "They pay the suppliers by bank transfer."
+},
+"09c1bca6": {
+"v": "sonia",
+"t": "If I knew the account number, I would make the payment."
+},
+"09d4bf47": {
+"v": "sonia",
+"t": "I'll plus verb. I'll send it. I'll call you back"
+},
+"0a214131": {
+"v": "sonia",
+"t": "six"
+},
+"0a361e1f": {
+"v": "sonia",
+"t": "If the bank had called us, we would have stopped the transfer."
+},
+"0a3ecf0e": {
+"v": "sonia",
+"t": "We have some paper in the store."
+},
+"0aaedabf": {
+"v": "sonia",
+"t": "She writes the budget report."
+},
+"0b2a6d00": {
+"v": "sonia",
+"t": "The committee will announce the new budget on Friday."
+},
+"0b7cc975": {
+"v": "sonia",
+"t": "Sortie complete. Well done!"
+},
+"0b8797ed": {
+"v": "sonia",
+"t": "Correct. There is one mistake in the report."
+},
+"0c38a47e": {
+"v": "sonia",
+"t": "Ploy goes to the bank every Monday."
+},
+"0c992e1f": {
+"v": "sonia",
+"t": "There are three invoices on my desk."
+},
+"0cd2ae3b": {
+"v": "sonia",
+"t": "There are eight desks in our office."
+},
+"0cd432f5": {
+"v": "sonia",
+"t": "Correct. Could you speak more slowly, please?"
+},
+"0d0371ac": {
+"v": "sonia",
+"t": "Correct. Could I ask a question, please?"
+},
+"0d08a43e": {
+"v": "sonia",
+"t": "There are four officers from Australia."
+},
+"0d21bcf8": {
+"v": "sonia",
+"t": "Correct. Sir, I'm afraid there is a mistake in the report."
+},
+"0e751aaf": {
+"v": "sonia",
+"t": "What time?"
+},
+"0ed1d4e2": {
+"v": "sonia",
+"t": "I have a meeting at ten."
+},
+"0ef49c07": {
+"v": "sonia",
+"t": "The figures were prepared by Khun Nok in Purchasing."
+},
+"0f1c4e22": {
+"v": "sonia",
+"t": "Correct. If you sign today, I will send the payment tomorrow."
+},
+"0f7c732f": {
+"v": "sonia",
+"t": "By only when it matters. Add by + person when the person is news: 'The new office was opened by the Air Commodore.' If the doer is obvious, unknown or not important, leave it out."
+},
+"0f7f6903": {
+"v": "sonia",
+"t": "There is one officer from Australia."
+},
+"0fa778ad": {
+"v": "sonia",
+"t": "The new budget will be announced on Friday."
+},
+"0fb23db3": {
+"v": "sonia",
+"t": "The plural after many uses the same the sss sound the zzz sound the iz sound endings as see Formations 1 and 2. Any lives in the negatives and questions of see Formations 3 and 4, and how much first appeared in see Formations 5."
+},
+"108e59c5": {
+"v": "sonia",
+"t": "Correct. He works in the Finance Division."
+},
+"10c52f22": {
+"v": "sonia",
+"t": "In English, not cannot sit on a normal verb. It needs a helper to hold it."
+},
+"10f626fb": {
+"v": "sonia",
+"t": "The participles end like the past forms in see Formations 6, and be agrees with one or many as in see Formations 2."
+},
+"10f64667": {
+"v": "sonia",
+"t": "Is there any paper in the cupboard? Could I take a few sheets from your desk?"
+},
+"11677470": {
+"v": "sonia",
+"t": "The s moves: in questions and negatives it jumps onto does see Formations 3 and 4."
+},
+"1192ffc1": {
+"v": "sonia",
+"t": "The project needs 2 million baht."
+},
+"11b9a399": {
+"v": "sonia",
+"t": "I go to the bank every week."
+},
+"11bf181c": {
+"v": "sonia",
+"t": "We don't have any paper in the store."
+},
+"125a56ce": {
+"v": "sonia",
+"t": "Things you cannot count. Money, paperwork, information and equipment usually have no plural. They take is: There is a lot of paperwork. To count, use units: three payments, two forms."
+},
+"12bb0aa6": {
+"v": "sonia",
+"t": "There is one meeting this week."
+},
+"1339309c": {
+"v": "sonia",
+"t": "Correct. Mr Eriksen, the meeting is at two o'clock."
+},
+"1439289a": {
+"v": "sonia",
+"t": "How many invoices do we have?"
+},
+"15da711c": {
+"v": "sonia",
+"t": "The flights cost a lot."
+},
+"15e06b60": {
+"v": "sonia",
+"t": "Correct. Does the supplier accept bank transfers?"
+},
+"1682f368": {
+"v": "sonia",
+"t": "Do you work in Finance?"
+},
+"171e7172": {
+"v": "sonia",
+"t": "I sent the report last Friday."
+},
+"17f7ef6a": {
+"v": "sonia",
+"t": "Thai ja sits in the same place as will: before a verb that does not change. Use that feeling."
+},
+"18442b91": {
+"v": "ava",
+"t": "Correct. No, thank you. I don't need breakfast."
+},
+"18b45bb6": {
+"v": "sonia",
+"t": "Hey Ploy, can you save me a seat?"
+},
+"18c2ea74": {
+"v": "sonia",
+"t": "Malee pays the suppliers on Friday."
+},
+"19a50676": {
+"v": "sonia",
+"t": "An English question is made by moving the helper to the front. No helper? Borrow do."
+},
+"19fa2bf6": {
+"v": "sonia",
+"t": "She works in Purchasing."
+},
+"1a0cf6cf": {
+"v": "sonia",
+"t": "The delegation delivered the invoices this morning."
+},
+"1ae81fb7": {
+"v": "sonia",
+"t": "How many people are there in the meeting?"
+},
+"1b5a6a77": {
+"v": "sonia",
+"t": "He didn't give me any advice."
+},
+"1c183338": {
+"v": "sonia",
+"t": "Could I …?"
+},
+"1cf1ec6c": {
+"v": "sonia",
+"t": "She paid the bills last Monday."
+},
+"1d1c19d4": {
+"v": "sonia",
+"t": "Who, no helper. Who checks the claims?"
+},
+"1d380dd4": {
+"v": "sonia",
+"t": "Correct. The supplier doesn't send the invoice on time."
+},
+"1dd45510": {
+"v": "sonia",
+"t": "Three sounds for ed. After a quiet sound: the t sound, checked sounds like 'checkt', finished like 'finisht'. After a voiced sound: the d sound, emailed, called. Only after t or d: a new syllable the id sound, wanted, needed."
+},
+"1dfb6635": {
+"v": "sonia",
+"t": "The same helper as 'not'. Is, are, do, does, can, will: the words that carry 'not' are the words that move. Doesn't work becomes Does she work? One system, two jobs."
+},
+"1e5165e2": {
+"v": "sonia",
+"t": "How…?"
+},
+"1f7f9830": {
+"v": "sonia",
+"t": "There are two signatures on the form."
+},
+"1f844a47": {
+"v": "sonia",
+"t": "The wing commander"
+},
+"1f930716": {
+"v": "sonia",
+"t": "Next Monday"
+},
+"20b7b4f3": {
+"v": "sonia",
+"t": "What time does the bank close?"
+},
+"20fe3d0e": {
+"v": "ryan",
+"t": "Hello! I'm Tom, from the visiting squadron. Nice to meet you."
+},
+"219374a7": {
+"v": "sonia",
+"t": "Correct. Do they need my signature?"
+},
+"21f632c3": {
+"v": "sonia",
+"t": "This morning"
+},
+"2205635b": {
+"v": "sonia",
+"t": "The ed ending is also a sound: your mouth picks the t sound, the d sound or the id sound. The old verbs kept an older system."
+},
+"220dbbff": {
+"v": "sonia",
+"t": "The supplier called me yesterday."
+},
+"225f7ad2": {
+"v": "sonia",
+"t": "No, thanks. I don't drink coffee after lunch."
+},
+"22cdb44d": {
+"v": "sonia",
+"t": "He gave me some advice."
+},
+"22ec4eae": {
+"v": "andrew",
+"t": "There are four invoices."
+},
+"23abc22c": {
+"v": "sonia",
+"t": "Correct. The figures don't match."
+},
+"23c6513f": {
+"v": "sonia",
+"t": "The canteen doesn't serve dinner."
+},
+"2431e33b": {
+"v": "sonia",
+"t": "They approved the claims last Friday."
+},
+"245535f4": {
+"v": "sonia",
+"t": "Why the old verbs are irregular. Many everyday verbs are very old. Some kept an old pattern: change the vowel inside, find becomes found, write becomes wrote, get becomes got. Words we use every day resist change, so they keep old forms."
+},
+"255a4032": {
+"v": "sonia",
+"t": "The file is in the cabinet."
+},
+"25b40678": {
+"v": "sonia",
+"t": "I work in the Finance Division."
+},
+"25c3ffa0": {
+"v": "sonia",
+"t": "Correct. Sir, could I have the file today, please?"
+},
+"262efa76": {
+"v": "sonia",
+"t": "She speaks Thai."
+},
+"2679fa56": {
+"v": "sonia",
+"t": "They approve the claims on Friday."
+},
+"27b6f2e3": {
+"v": "sonia",
+"t": "I spent 3,500 baht on the hotel last week."
+},
+"286fe190": {
+"v": "sonia",
+"t": "How?"
+},
+"2a06103b": {
+"v": "sonia",
+"t": "Correct. She wrote the budget report last year."
+},
+"2a20967e": {
+"v": "sonia",
+"t": "I checked the invoices yesterday."
+},
+"2a6c3167": {
+"v": "christopher",
+"t": "Correct. What time does your flight leave?"
+},
+"2a91159d": {
+"v": "sonia",
+"t": "Sir. Sir, could I have a minute, please?"
+},
+"2a9fab17": {
+"v": "sonia",
+"t": "If she had read the email, she wouldn't have missed the meeting."
+},
+"2abe1e1d": {
+"v": "sonia",
+"t": "Correct. Could you explain this charge, please?"
+},
+"2acd8f38": {
+"v": "sonia",
+"t": "Ma'am. Ma'am, the figures are ready."
+},
+"2af2e6f4": {
+"v": "sonia",
+"t": "Two small rules. In a condition, no will after if: English uses the present after if and when. If I were keeps an old form of be. In speech, If I was is normal too, but say If I were you."
+},
+"2b2e393b": {
+"v": "sonia",
+"t": "Short answers reuse the helper. The helper comes back in the answer: Do you?, Yes, I do. Is it?, No, it isn't. You don't need the full sentence."
+},
+"2b4190bf": {
+"v": "sonia",
+"t": "Later"
+},
+"2ba524a0": {
+"v": "sonia",
+"t": "I bought office supplies last week."
+},
+"2bd3bf5f": {
+"v": "sonia",
+"t": "Does the hotel include breakfast?"
+},
+"2ce2b66f": {
+"v": "sonia",
+"t": "The s rides on the helper. Does carries the s for the subject, so the verb goes back to its base: Does she speak Thai? Does it cost a lot? Never 'Does she speaks'."
+},
+"2cf4d8df": {
+"v": "sonia",
+"t": "Correct. Where are the receipts?"
+},
+"2cf839b6": {
+"v": "sonia",
+"t": "I'm afraid this form can't be accepted without a stamp."
+},
+"2d03f3cb": {
+"v": "sonia",
+"t": "Three sounds, one letter. After a quiet sound you say the sss sound: checks, costs. After a voiced sound you say the zzz sound: pays, goes, needs. After a hissing sound you add a syllable the iz sound: watches, fixes, closes."
+},
+"2d0ed0eb": {
+"v": "andrew",
+"t": "Change it with the cue."
+},
+"2d2c69b0": {
+"v": "sonia",
+"t": "A wh- question is a yes-no question with a question word in front. The helper still moves."
+},
+"2d527abd": {
+"v": "sonia",
+"t": "There is an empty word. The verb looks past it to the noun that follows."
+},
+"2d74e054": {
+"v": "sonia",
+"t": "Correct. We didn't receive any receipts today."
+},
+"2dd1d0b8": {
+"v": "sonia",
+"t": "There is one person in the meeting room."
+},
+"2e4e7bfa": {
+"v": "sonia",
+"t": "How much equipment does the project need?"
+},
+"2eb86aef": {
+"v": "sonia",
+"t": "It isn't my responsibility."
+},
+"2fde7704": {
+"v": "sonia",
+"t": "I understand this report."
+},
+"2fee9607": {
+"v": "sonia",
+"t": "Correct. She'll call the bank this afternoon."
+},
+"3071fd2f": {
+"v": "sonia",
+"t": "There is one mistake in the report."
+},
+"308ad503": {
+"v": "sonia",
+"t": "The supplier accepts bank transfers."
+},
+"30dc3b98": {
+"v": "sonia",
+"t": "Correct. There are two bank accounts for the project."
+},
+"30e7d93a": {
+"v": "sonia",
+"t": "Next week"
+},
+"3116be32": {
+"v": "sonia",
+"t": "Correct. The form needs two signatures."
+},
+"311d6e0c": {
+"v": "sonia",
+"t": "I'll send the invoice tomorrow."
+},
+"31a44e19": {
+"v": "sonia",
+"t": "How many days will you be here, and how much time do you need with us?"
+},
+"31b86798": {
+"v": "sonia",
+"t": "Thai classifiers do the same job. Thai needs a counting word whenever it counts:. English mostly needs one for mass nouns: two sheets of paper, a piece of advice, a piece of equipment."
+},
+"32b13b34": {
+"v": "sonia",
+"t": "In October"
+},
+"3391d2d0": {
+"v": "sonia",
+"t": "the id sound after the t sound or the d sound. audited. updated. recorded"
+},
+"33acd814": {
+"v": "sonia",
+"t": "Correct. We met the supplier last month."
+},
+"33ea8ebb": {
+"v": "sonia",
+"t": "We check every invoice twice."
+},
+"344299cc": {
+"v": "ryan",
+"t": "Change it with the cue."
+},
+"345050a6": {
+"v": "sonia",
+"t": "If… two, imagine"
+},
+"347a51ae": {
+"v": "sonia",
+"t": "Correct. He doesn't know the account number."
+},
+"3505c432": {
+"v": "sonia",
+"t": "How much money do we need?"
+},
+"35b40ef6": {
+"v": "sonia",
+"t": "I'll equals I will. I'll pay it. We'll check it"
+},
+"35de9aa3": {
+"v": "sonia",
+"t": "I get an email from the bank every day."
+},
+"360c431e": {
+"v": "sonia",
+"t": "English sorts many nouns by how speakers picture them: separate units you can count, or one mass you measure. Much, many and any follow that picture."
+},
+"3615dc17": {
+"v": "sonia",
+"t": "Tom gave a short speech last night."
+},
+"36b669dc": {
+"v": "sonia",
+"t": "Every invoice is checked twice."
+},
+"377d2ea3": {
+"v": "sonia",
+"t": "Correct. The bank doesn't open on Sunday."
+},
+"38866118": {
+"v": "sonia",
+"t": "Correct. The claim must be signed."
+},
+"388fefae": {
+"v": "sonia",
+"t": "Correct. She doesn't have the receipt."
+},
+"3894587f": {
+"v": "andrew",
+"t": "I'll pay it on Friday."
+},
+"38a4d81b": {
+"v": "sonia",
+"t": "We make a payment every month."
+},
+"396f365b": {
+"v": "ryan",
+"t": "Not quite. Try again."
+},
+"39be6879": {
+"v": "sonia",
+"t": "Correct. Could I borrow your pen, please?"
+},
+"39e8234d": {
+"v": "sonia",
+"t": "She called the bank this morning."
+},
+"3b566356": {
+"v": "sonia",
+"t": "There are two copies of the contract."
+},
+"3b8757a2": {
+"v": "sonia",
+"t": "the iz sound. invoices. boxes. offices"
+},
+"3c090929": {
+"v": "sonia",
+"t": "to Wing Commander Anan"
+},
+"3c29a1cf": {
+"v": "sonia",
+"t": "Correct. A mistake was made in the ledger."
+},
+"3c697f16": {
+"v": "sonia",
+"t": "the iz sound plus syllable. watches. fixes. closes. finishes"
+},
+"3c941ee6": {
+"v": "andrew",
+"t": "So when can you pay the invoice?"
+},
+"3c946a03": {
+"v": "sonia",
+"t": "Correct. Does she speak Thai?"
+},
+"3cc632bc": {
+"v": "andrew",
+"t": "Not quite. Try again."
+},
+"3d4d2f7c": {
+"v": "sonia",
+"t": "The total is correct."
+},
+"3d54863f": {
+"v": "sonia",
+"t": "There is one problem with the payment."
+},
+"3d7a3fff": {
+"v": "sonia",
+"t": "The accounts will be reviewed next week."
+},
+"3d9404fd": {
+"v": "sonia",
+"t": "Correct. The bank will transfer the money tomorrow."
+},
+"3dad18ef": {
+"v": "sonia",
+"t": "Correct. If the auditor finds a mistake, we will correct it."
+},
+"3dcf5311": {
+"v": "sonia",
+"t": "Would you mind a big favour. Would you mind sending it?"
+},
+"3de74ba6": {
+"v": "sonia",
+"t": "Correct. How much information do we need?"
+},
+"3df26e93": {
+"v": "sonia",
+"t": "We pay the suppliers on Friday."
+},
+"3dff99ee": {
+"v": "sonia",
+"t": "We paid the invoice on Monday."
+},
+"3ea3b021": {
+"v": "sonia",
+"t": "He'll sign the forms tomorrow morning."
+},
+"3ece9057": {
+"v": "sonia",
+"t": "Could you explain this charge, please?"
+},
+"3f8380d3": {
+"v": "sonia",
+"t": "I need two signatures."
+},
+"3fb0b828": {
+"v": "sonia",
+"t": "Correct. Khun Nok, the meeting is at two."
+},
+"400e8b3f": {
+"v": "sonia",
+"t": "The helper rule. 'Not' attaches to a helper word: isn't, aren't, don't, doesn't, can't, won't. A normal verb like work or know cannot carry it alone."
+},
+"4015160f": {
+"v": "sonia",
+"t": "The bank will transfer the money tomorrow."
+},
+"401903da": {
+"v": "sonia",
+"t": "Colonel Hayes, I'm afraid two receipts are missing."
+},
+"4075f2d5": {
+"v": "sonia",
+"t": "If the auditor finds a mistake, we will correct it."
+},
+"40771be7": {
+"v": "sonia",
+"t": "How often does he call the supplier?"
+},
+"41b2dc65": {
+"v": "sonia",
+"t": "He does the bank reconciliation."
+},
+"4254821e": {
+"v": "sonia",
+"t": "Could I ask a question, please?"
+},
+"425d3905": {
+"v": "sonia",
+"t": "Last Monday"
+},
+"429a2e96": {
+"v": "sonia",
+"t": "We met the supplier last month."
+},
+"42b93536": {
+"v": "sonia",
+"t": "Are these claims ready for Malee?"
+},
+"42baa2aa": {
+"v": "sonia",
+"t": "Someone made a mistake in the ledger."
+},
+"42ebc160": {
+"v": "sonia",
+"t": "Correct. Ploy, the meeting's at two."
+},
+"440cb6ca": {
+"v": "sonia",
+"t": "He has a meeting with the auditors."
+},
+"440e1f21": {
+"v": "sonia",
+"t": "He had a meeting with the auditors yesterday."
+},
+"446332b1": {
+"v": "sonia",
+"t": "The common slip. Saying 'check-ed' with an extra syllable is a common Thai-speaker slip. Only verbs that end in a t or d sound get the extra syllable: wanted, needed, started, visited."
+},
+"44eab088": {
+"v": "sonia",
+"t": "I'll finish the budget on Friday."
+},
+"4563ad04": {
+"v": "sonia",
+"t": "Correct. We'll pay the supplier next week."
+},
+"4568f541": {
+"v": "sonia",
+"t": "The politeness tools come from see Formations 8, could you, could I, please, and here you add the name in front."
+},
+"4579c491": {
+"v": "sonia",
+"t": "Two steps back equals a past that never was. If we had checked the bill but we didn't. Had + participle moves the idea into the past and away from reality. The result steps back too: would have paid."
+},
+"45f2c129": {
+"v": "sonia",
+"t": "English has no or and only one you. So the name you choose is the first register signal everyone hears."
+},
+"46469612": {
+"v": "sonia",
+"t": "There are two bank accounts for the project."
+},
+"464a48dc": {
+"v": "sonia",
+"t": "The flight costs a lot."
+},
+"465b54a9": {
+"v": "sonia",
+"t": "Last month"
+},
+"467c9b7d": {
+"v": "sonia",
+"t": "We'll meet the delegation next Monday."
+},
+"46ad7310": {
+"v": "sonia",
+"t": "She printed copies of the report."
+},
+"47050b39": {
+"v": "sonia",
+"t": "Correct. Sir, could I speak to you about the budget, please?"
+},
+"4770af46": {
+"v": "sonia",
+"t": "If I were the commander, I would approve this claim."
+},
+"48789db7": {
+"v": "sonia",
+"t": "Give me the receipt."
+},
+"48ca4279": {
+"v": "sonia",
+"t": "Correct. The section head sends the report to the commander."
+},
+"490d7766": {
+"v": "sonia",
+"t": "The supplier calls me every week."
+},
+"49aa23ef": {
+"v": "sonia",
+"t": "was, short and weak. It was paid. It was signed"
+},
+"49ae55d4": {
+"v": "sonia",
+"t": "We don't accept cash."
+},
+"49afbc7c": {
+"v": "sonia",
+"t": "How much does the ticket cost?"
+},
+"49fc61c8": {
+"v": "sonia",
+"t": "I'll send you some information this afternoon."
+},
+"4a17d51e": {
+"v": "sonia",
+"t": "I watch the budget carefully."
+},
+"4afa5706": {
+"v": "sonia",
+"t": "Correct. They'll close the accounts in October."
+},
+"4b0d0765": {
+"v": "sonia",
+"t": "Where. Where is the file?"
+},
+"4b1634d8": {
+"v": "sonia",
+"t": "Could you print a bank statement for me, please?"
+},
+"4b2ddb6c": {
+"v": "sonia",
+"t": "Correct. I went to the bank yesterday."
+},
+"4b810701": {
+"v": "sonia",
+"t": "The receipts aren't in this folder."
+},
+"4c726a3b": {
+"v": "sonia",
+"t": "Could, would, might: the same 'step back' runs through the whole Modulation Desk register dial."
+},
+"4c9c4e0d": {
+"v": "sonia",
+"t": "The bank doesn't open on Sunday."
+},
+"4c9e472a": {
+"v": "sonia",
+"t": "Is, Are. Is it ready?. Are you free?"
+},
+"4cad4a44": {
+"v": "sonia",
+"t": "How much cash is left in the box?"
+},
+"4cc173df": {
+"v": "sonia",
+"t": "The meeting starts at nine."
+},
+"4d2a42f1": {
+"v": "sonia",
+"t": "Last week"
+},
+"4d4129c4": {
+"v": "sonia",
+"t": "If the supplier had sent the bill earlier, we would have paid it on time."
+},
+"4ebe050b": {
+"v": "sonia",
+"t": "We need information about the supplier."
+},
+"4ef05e4e": {
+"v": "ryan",
+"t": "Correct. Nice to meet you too. Do you speak Thai?"
+},
+"4fa224f1": {
+"v": "sonia",
+"t": "On Friday"
+},
+"4fcdf827": {
+"v": "sonia",
+"t": "Your claim was received on Tuesday and will be paid next week."
+},
+"501a2be6": {
+"v": "ava",
+"t": "Change it with the cue."
+},
+"50b7e891": {
+"v": "sonia",
+"t": "We have three invoices."
+},
+"50cae3cf": {
+"v": "sonia",
+"t": "There is a printer on this floor."
+},
+"50fa222b": {
+"v": "sonia",
+"t": "There are eleven travel claims this month."
+},
+"512279b2": {
+"v": "libby",
+"t": "Change it with the cue."
+},
+"514c9a7e": {
+"v": "sonia",
+"t": "The form can be sent by email."
+},
+"51d973d8": {
+"v": "sonia",
+"t": "Could you check these figures, please?"
+},
+"52320d01": {
+"v": "sonia",
+"t": "We didn't check the invoice. We paid twice."
+},
+"5345c9fb": {
+"v": "andrew",
+"t": "Yes, it was paid yesterday."
+},
+"5347d607": {
+"v": "sonia",
+"t": "There is one receipt in the file."
+},
+"53a972df": {
+"v": "sonia",
+"t": "She"
+},
+"53d900f5": {
+"v": "sonia",
+"t": "There is some news from the bank."
+},
+"5518bc5a": {
+"v": "sonia",
+"t": "Correct. There are two problems with the payment."
+},
+"559cdb11": {
+"v": "sonia",
+"t": "Could you help me with this total, please?"
+},
+"55b74654": {
+"v": "sonia",
+"t": "The thing is the topic. Who paid? Usually nobody asks. The money is what matters. 'The salaries were paid on the 3rd' starts with the topic and puts the news at the end."
+},
+"55eedb8c": {
+"v": "sonia",
+"t": "Correct. When do the visitors arrive?"
+},
+"56b58fcb": {
+"v": "sonia",
+"t": "Correct. The invoice was paid on Monday."
+},
+"56ebf4c4": {
+"v": "sonia",
+"t": "Two steps. Step 1: the question word goes first, When, Where, How much. Step 2: the helper moves in front of the person, exactly as in Formation 4: When does the meeting start?"
+},
+"56f4136a": {
+"v": "sonia",
+"t": "Why do appears. Older English, Shakespeare's time, said 'I know not'. That form is gone now. When there is no helper, English borrows an empty one: do. It adds no meaning, it only holds 'not'."
+},
+"578be745": {
+"v": "sonia",
+"t": "Have or there is? Thai mee does both jobs. English splits them: have equals an owner has it; there is equals it exists in a place. 'We have two printers' and 'There are two printers' are both fine, 'Have two printers' is not."
+},
+"5803ec4d": {
+"v": "sonia",
+"t": "Correct. The total isn't correct."
+},
+"584ae669": {
+"v": "sonia",
+"t": "Who does the action? Could you, I want you to act. Could I, I want permission. Thai yuem covers two English verbs: Could I borrow your pen?, I take it., Could you lend me your pen?, You give it.,"
+},
+"58645965": {
+"v": "sonia",
+"t": "The invoices were delivered this morning."
+},
+"58e3a5e0": {
+"v": "sonia",
+"t": "If you sign today, I will send the payment tomorrow."
+},
+"59011b8a": {
+"v": "sonia",
+"t": "the zzz sound. claims. forms. files"
+},
+"5a5dc314": {
+"v": "sonia",
+"t": "Correct. Ploy goes to the bank every Monday."
+},
+"5a9b6ce8": {
+"v": "sonia",
+"t": "the sss sound. receipts. reports. cheques"
+},
+"5abab8a0": {
+"v": "sonia",
+"t": "will, full. The bank will transfer it tomorrow"
+},
+"5ac54aed": {
+"v": "christopher",
+"t": "Change it with the cue."
+},
+"5af81474": {
+"v": "sonia",
+"t": "Past equals far equals polite. Could is the past form of can. In a request it does not mean past time. The past form adds distance, and distance feels respectful: Can you becomes Could you. Will you becomes Would you."
+},
+"5b1e1226": {
+"v": "sonia",
+"t": "We accept cash."
+},
+"5b82524f": {
+"v": "andrew",
+"t": "Correct. I'll pay it on Friday."
+},
+"5ba937f6": {
+"v": "sonia",
+"t": "They closed the accounts in September."
+},
+"5c5da277": {
+"v": "sonia",
+"t": "How do they pay the suppliers?"
+},
+"5ce928de": {
+"v": "sonia",
+"t": "Change it with the cue."
+},
+"5d0f1a08": {
+"v": "sonia",
+"t": "Correct. How much does the project need?"
+},
+"5d38cdea": {
+"v": "sonia",
+"t": "We need money for the project."
+},
+"5da38424": {
+"v": "sonia",
+"t": "the sss sound quiet. checks. costs. starts. keeps"
+},
+"5de64912": {
+"v": "sonia",
+"t": "Khun Nok, could you check the delivery date for me, please?"
+},
+"5df2718e": {
+"v": "sonia",
+"t": "Send me the file."
+},
+"5eb4642f": {
+"v": "sonia",
+"t": "Correct. If I had had the receipt, I would have got the refund."
+},
+"5f6eb19e": {
+"v": "sonia",
+"t": "Correct. The invoices aren't ready."
+},
+"5fe80701": {
+"v": "sonia",
+"t": "There are three meetings this week."
+},
+"5ff39a1a": {
+"v": "sonia",
+"t": "Correct. Does he check the travel claims?"
+},
+"60005e19": {
+"v": "sonia",
+"t": "I send the invoice today."
+},
+"6011a2ce": {
+"v": "sonia",
+"t": "I work on Saturdays."
+},
+"60a53ece": {
+"v": "sonia",
+"t": "She has the receipt."
+},
+"60d33b89": {
+"v": "sonia",
+"t": "Correct. There are three invoices on my desk."
+},
+"619c38d7": {
+"v": "sonia",
+"t": "Mr. Eriksen doesn't work for the Air Force."
+},
+"61bec48d": {
+"v": "sonia",
+"t": "The ticket costs 4,000 baht."
+},
+"62edbd41": {
+"v": "sonia",
+"t": "Why is this invoice late?"
+},
+"63e9e36e": {
+"v": "libby",
+"t": "Yes, I finished it last night."
+},
+"647a0321": {
+"v": "sonia",
+"t": "Nok"
+},
+"64c930fa": {
+"v": "sonia",
+"t": "Correct. If we had checked the invoice, we wouldn't have paid twice."
+},
+"64d4ea21": {
+"v": "sonia",
+"t": "Where is ? Thai can soften anything with Thai krap, ka and choose a polite pronoun. English uses you for everyone. So politeness moves to other places: the name, could, would, please, and softeners like I'm afraid or it seems."
+},
+"65022b32": {
+"v": "sonia",
+"t": "If the total doesn't match, I will check every receipt again."
+},
+"6525baf7": {
+"v": "sonia",
+"t": "There is one signature on the form."
+},
+"6592ca63": {
+"v": "ava",
+"t": "Would you like breakfast tomorrow morning?"
+},
+"65abda84": {
+"v": "sonia",
+"t": "He doesn't know the account number."
+},
+"66c64bda": {
+"v": "sonia",
+"t": "the d sound. emailed. called. approved"
+},
+"6748b1ab": {
+"v": "sonia",
+"t": "There is only one key for the safe."
+},
+"678583fd": {
+"v": "christopher",
+"t": "Sorry, say that again, please."
+},
+"67e1bede": {
+"v": "sonia",
+"t": "Correct. If we had a bigger budget, we would buy the software."
+},
+"681e4f14": {
+"v": "sonia",
+"t": "I'll answer the email later."
+},
+"686ebf8b": {
+"v": "sonia",
+"t": "He signs the forms today."
+},
+"68f5ec1a": {
+"v": "andrew",
+"t": "Any update on our invoice?"
+},
+"69c832d7": {
+"v": "sonia",
+"t": "Check these figures."
+},
+"6a3f0a64": {
+"v": "sonia",
+"t": "The voice falls. yes-no questions often rise at the end. Wh- questions usually fall: When does it start? The question word already tells the listener it is a question."
+},
+"6af3585a": {
+"v": "sonia",
+"t": "Sorry, we don't pay without an invoice."
+},
+"6ba49092": {
+"v": "sonia",
+"t": "Correct. Every invoice is checked twice."
+},
+"6bb0a766": {
+"v": "sonia",
+"t": "How many receipts do you need?"
+},
+"6be1a90f": {
+"v": "sonia",
+"t": "four"
+},
+"6c91efd3": {
+"v": "sonia",
+"t": "How does the supplier send the invoices?"
+},
+"6cba6531": {
+"v": "sonia",
+"t": "The figures are final."
+},
+"6dbdfb7d": {
+"v": "sonia",
+"t": "Our section has six accountants."
+},
+"6dcfa0c4": {
+"v": "sonia",
+"t": "Correct. Does your office open at eight?"
+},
+"6e352647": {
+"v": "sonia",
+"t": "Ploy is going to print it tomorrow morning."
+},
+"6e647437": {
+"v": "sonia",
+"t": "I don't know the account number. I can't make the payment."
+},
+"6e882f5a": {
+"v": "sonia",
+"t": "Call the supplier."
+},
+"6eb58e40": {
+"v": "sonia",
+"t": "The figures match."
+},
+"6f73d831": {
+"v": "sonia",
+"t": "Where are the receipts?"
+},
+"6f9d5dcc": {
+"v": "sonia",
+"t": "Correct. The statement was sent yesterday."
+},
+"705b6f89": {
+"v": "sonia",
+"t": "When. When does the meeting start?"
+},
+"707a203c": {
+"v": "sonia",
+"t": "The form"
+},
+"708ec44e": {
+"v": "sonia",
+"t": "English has no future ending. It borrows two tools: a helper, will, and a movement verb, going to."
+},
+"70b21de6": {
+"v": "sonia",
+"t": "Sir, I'm afraid there is a mistake in the report."
+},
+"7116a7ff": {
+"v": "sonia",
+"t": "The budget was approved by the commander."
+},
+"71490c4e": {
+"v": "ryan",
+"t": "Sorry, say that again, please."
+},
+"71cd5a90": {
+"v": "sonia",
+"t": "Correct. If I were the commander, I would approve this claim."
+},
+"7250c94d": {
+"v": "sonia",
+"t": "We finished the reconciliation on Tuesday."
+},
+"72c7591a": {
+"v": "christopher",
+"t": "Sorry, could you repeat that, please?"
+},
+"72cec498": {
+"v": "sonia",
+"t": "The invoices aren't ready."
+},
+"73137339": {
+"v": "sonia",
+"t": "one"
+},
+"737595c3": {
+"v": "sonia",
+"t": "Ploy"
+},
+"738291f6": {
+"v": "sonia",
+"t": "Correct. There are five receipts in the file."
+},
+"7422e6b3": {
+"v": "sonia",
+"t": "The supplier sends the invoices by email."
+},
+"74f40fc3": {
+"v": "sonia",
+"t": "The report has a mistake."
+},
+"7571541d": {
+"v": "sonia",
+"t": "The bank transferred the money yesterday."
+},
+"75d3f5b2": {
+"v": "sonia",
+"t": "We'll pay the supplier next week."
+},
+"75e4f774": {
+"v": "sonia",
+"t": "doesn't. she doesn't work. it doesn't match"
+},
+"76259f91": {
+"v": "sonia",
+"t": "Yesterday"
+},
+"7635a219": {
+"v": "sonia",
+"t": "You sign today. I send the payment tomorrow."
+},
+"76a4920c": {
+"v": "sonia",
+"t": "Correct. I don't understand this report."
+},
+"76a784d6": {
+"v": "sonia",
+"t": "Could you write that word on the board, please?"
+},
+"76e69de5": {
+"v": "sonia",
+"t": "The section head"
+},
+"77118361": {
+"v": "sonia",
+"t": "Correct. Ploy, can you send me the file today?"
+},
+"771b0db9": {
+"v": "sonia",
+"t": "Correct. It isn't my responsibility."
+},
+"77cb0de7": {
+"v": "sonia",
+"t": "Correct. Could you call the supplier, please?"
+},
+"7881ca64": {
+"v": "sonia",
+"t": "Mr. Eriksen does the audit every March."
+},
+"79f03542": {
+"v": "sonia",
+"t": "We didn't receive any receipts today."
+},
+"7a32cc26": {
+"v": "sonia",
+"t": "Time word + past verb equals double signal. Thai often shows the time once, with the time word. English shows it twice: 'yesterday' and 'sent'. The verb shows past even with no time word, so the verb must change."
+},
+"7bcd2896": {
+"v": "libby",
+"t": "Who checks the travel claims in your section?"
+},
+"7bd67533": {
+"v": "sonia",
+"t": "The visitors arrive on Monday."
+},
+"7c980381": {
+"v": "sonia",
+"t": "Correct. The auditors will visit us next month."
+},
+"7ca8514d": {
+"v": "sonia",
+"t": "I'll email you the receipt this afternoon."
+},
+"7ceccb19": {
+"v": "sonia",
+"t": "There is a wrong date on this invoice."
+},
+"7da00821": {
+"v": "sonia",
+"t": "Fuel receipts are kept for five years."
+},
+"7e2a2549": {
+"v": "sonia",
+"t": "Could I leave at four today, please?"
+},
+"7e8a4dba": {
+"v": "sonia",
+"t": "Does the supplier accept bank transfers?"
+},
+"7eb22198": {
+"v": "sonia",
+"t": "There is one copy of the contract."
+},
+"7f03b826": {
+"v": "libby",
+"t": "Malee checks them."
+},
+"7f32b397": {
+"v": "sonia",
+"t": "Do you have the receipt?"
+},
+"7f983586": {
+"v": "sonia",
+"t": "I don't have any questions about the invoice."
+},
+"7fa2b726": {
+"v": "sonia",
+"t": "Correct. We don't have any paper in the store."
+},
+"7fc7f6fd": {
+"v": "sonia",
+"t": "Ploy, can we talk about the budget?"
+},
+"7fd750a5": {
+"v": "sonia",
+"t": "The name ladder. Sir, Ma'am becomes Colonel Hayes becomes Mr Eriksen becomes Khun Nok becomes Ploy. Each step down is closer. Sir and Ma'am work for any senior, Thai or foreign. Say the name first: they hear your level before your message."
+},
+"81006c0a": {
+"v": "sonia",
+"t": "The bank sent the statement yesterday."
+},
+"810cf7eb": {
+"v": "sonia",
+"t": "I didn't have the receipt. I didn't get the refund."
+},
+"8181b0ef": {
+"v": "sonia",
+"t": "Nok starts work at eight."
+},
+"81ec9ba4": {
+"v": "sonia",
+"t": "I want to see the invoice."
+},
+"82027670": {
+"v": "sonia",
+"t": "We received some receipts today."
+},
+"8233f85c": {
+"v": "ryan",
+"t": "Nice to meet you too. Do you speak Thai?"
+},
+"823d2ce1": {
+"v": "sonia",
+"t": "any, questions and negatives. Is there any news?. There isn't any cash."
+},
+"82904149": {
+"v": "sonia",
+"t": "the id sound plus syllable. wanted. needed. started"
+},
+"83796b9e": {
+"v": "sonia",
+"t": "Where 'll hides. In speech, will shrinks and sticks to the subject: I'll, she'll, the bank'll transfer it. Listen for the small 'l', it is the whole future."
+},
+"83bd8d3e": {
+"v": "sonia",
+"t": "Correct. The suppliers are paid on the 25th."
+},
+"84018189": {
+"v": "sonia",
+"t": "There are people in the meeting."
+},
+"8425ef87": {
+"v": "sonia",
+"t": "Mr Eriksen. Mr Eriksen, could you sign here, please?"
+},
+"84aa0719": {
+"v": "sonia",
+"t": "The bank closes at half past three."
+},
+"84abbdc0": {
+"v": "sonia",
+"t": "The form needs two signatures."
+},
+"84c406d6": {
+"v": "sonia",
+"t": "The hotel includes breakfast."
+},
+"85086021": {
+"v": "sonia",
+"t": "Same word, two pictures. Paper the material is a mass: some paper. A paper is one document or newspaper: two papers. Time is a mass: how much time? Three times means three occasions."
+},
+"85784feb": {
+"v": "andrew",
+"t": "Correct. Yes, it was paid yesterday."
+},
+"85ab4647": {
+"v": "sonia",
+"t": "She watches the budget carefully."
+},
+"85b55a69": {
+"v": "sonia",
+"t": "three"
+},
+"85b9af9e": {
+"v": "sonia",
+"t": "polite"
+},
+"861d78e2": {
+"v": "sonia",
+"t": "Be is its own helper. Is and are are already helpers, so they take not directly: isn't, aren't. Never 'doesn't is' or 'don't ready'."
+},
+"8622e28f": {
+"v": "sonia",
+"t": "Could I see the invoice, please?"
+},
+"86ae1448": {
+"v": "sonia",
+"t": "Could you give me the receipt, please?"
+},
+"86e4fea3": {
+"v": "sonia",
+"t": "I check the invoices."
+},
+"875c1b00": {
+"v": "sonia",
+"t": "Do you send receipts by email?"
+},
+"876e52b7": {
+"v": "sonia",
+"t": "Correct. A fee is charged for international transfers."
+},
+"877d3dcf": {
+"v": "sonia",
+"t": "Serious equals higher. Seriousness turns the dial up. With Ploy at lunch: can you? With Ploy about a payroll error: I'm afraid there's a problem. Could you check it? Same friend, different moment."
+},
+"87c0338c": {
+"v": "sonia",
+"t": "Same sound engine. The plural s uses the same three sounds as Formation 1: receipts the sss sound, claims the zzz sound, invoices the iz sound. Say the extra syllable in invoices, boxes, offices."
+},
+"886501d0": {
+"v": "sonia",
+"t": "There are four mistakes in the report."
+},
+"8867cbc1": {
+"v": "sonia",
+"t": "Sortie complete. Fly it again to improve."
+},
+"88aef7bb": {
+"v": "sonia",
+"t": "This afternoon"
+},
+"897a5879": {
+"v": "sonia",
+"t": "She didn't read the email. She missed the meeting."
+},
+"8ab6d29e": {
+"v": "sonia",
+"t": "Correct. I'll send the invoice tomorrow."
+},
+"8aefb216": {
+"v": "sonia",
+"t": "If the supplier accepted transfers, we wouldn't have to pay by card."
+},
+"8af6f20c": {
+"v": "sonia",
+"t": "Correct. Where is the file?"
+},
+"8b9ecde2": {
+"v": "sonia",
+"t": "Correct. She paid the bills last Monday."
+},
+"8bb8b9b7": {
+"v": "sonia",
+"t": "Where?"
+},
+"8bd5fb12": {
+"v": "sonia",
+"t": "Move, don't just rise. Thai marks a question with Thai mai at the end. English usually moves a word to the front: She is here becomes Is she here? A rising voice alone, 'She's here?', sounds like surprise or checking."
+},
+"8c134bc7": {
+"v": "sonia",
+"t": "Correct. The invoices were delivered this morning."
+},
+"8cb4ef56": {
+"v": "sonia",
+"t": "Correct. Colonel Hayes, could you send me the file today, please?"
+},
+"8cb7a0ce": {
+"v": "sonia",
+"t": "Ploy, the meeting's at two."
+},
+"8cbc93fc": {
+"v": "sonia",
+"t": "The project needs equipment."
+},
+"8cf24e24": {
+"v": "sonia",
+"t": "I emailed the bank this morning."
+},
+"8d0a0b35": {
+"v": "sonia",
+"t": "Correct. We don't need a new budget."
+},
+"8ea7d178": {
+"v": "sonia",
+"t": "When?"
+},
+"8edf77f0": {
+"v": "sonia",
+"t": "Last year"
+},
+"8f4649e2": {
+"v": "sonia",
+"t": "The section head must sign the claim."
+},
+"8f6aaa87": {
+"v": "sonia",
+"t": "Correct. He does the bank reconciliation."
+},
+"8f82fd83": {
+"v": "sonia",
+"t": "Correct. The wing commander approves the travel claims."
+},
+"90215309": {
+"v": "sonia",
+"t": "Correct. Are you free on Friday?"
+},
+"90adca14": {
+"v": "sonia",
+"t": "Correct. I checked the invoices yesterday."
+},
+"90f03f1d": {
+"v": "christopher",
+"t": "OK, the reference number is four-eight, Q, X, seven, two, nine, five."
+},
+"9107c28f": {
+"v": "sonia",
+"t": "First name or surname? Thai practice: rank + first name, Wing Commander Anan. English-speaking officers use rank + surname: Colonel Hayes. 'Colonel Sarah' sounds strange to them. Use a first name only when invited: 'Please, call me Sarah.'"
+},
+"91d3837b": {
+"v": "sonia",
+"t": "Correct. There are three meetings this week."
+},
+"91d3fc60": {
+"v": "sonia",
+"t": "If… one, real"
+},
+"922f51dc": {
+"v": "sonia",
+"t": "Does the canteen sell coffee?"
+},
+"93087394": {
+"v": "sonia",
+"t": "Present equals real. If the money arrives today, I'll pay the supplier. This can really happen, so the verb stays in the present. The result uses will because it is a real future."
+},
+"933f1150": {
+"v": "sonia",
+"t": "Next month"
+},
+"9367a67c": {
+"v": "sonia",
+"t": "Correct. There are four officers from Australia."
+},
+"936a916f": {
+"v": "sonia",
+"t": "How much plus no s. How much money?. How much time?"
+},
+"93ff6f0c": {
+"v": "sonia",
+"t": "There are three boxes of files."
+},
+"94511ca0": {
+"v": "sonia",
+"t": "Mr. Eriksen is the auditor."
+},
+"94edcc2e": {
+"v": "sonia",
+"t": "Mr. Eriksen will arrive next Tuesday."
+},
+"95124bbf": {
+"v": "sonia",
+"t": "Finance reports are about things: invoices, payments, budgets. The passive puts the thing at the front, where the listener's attention already is."
+},
+"952e271a": {
+"v": "sonia",
+"t": "Does your office open at eight?"
+},
+"954fc0bb": {
+"v": "sonia",
+"t": "I do the bank reconciliation."
+},
+"95722bf9": {
+"v": "sonia",
+"t": "Your office opens at eight."
+},
+"95a2868d": {
+"v": "sonia",
+"t": "Could you sign this form, please?"
+},
+"95b6933e": {
+"v": "sonia",
+"t": "If we pay late, the supplier will charge a fee."
+},
+"9686d88f": {
+"v": "sonia",
+"t": "Could you speak more slowly, please?"
+},
+"96bd9491": {
+"v": "sonia",
+"t": "The bank charges a fee for international transfers."
+},
+"97889f3c": {
+"v": "sonia",
+"t": "Correct. The form can be sent by email."
+},
+"9911e766": {
+"v": "sonia",
+"t": "Correct. I'll book the hotel next week."
+},
+"9954487e": {
+"v": "sonia",
+"t": "Correct. Mr Eriksen, could we talk about the budget, please?"
+},
+"9992af5f": {
+"v": "sonia",
+"t": "Correct. There are two printers on this floor."
+},
+"99b478cf": {
+"v": "sonia",
+"t": "Will is a helper. Will belongs to the helper family, can, must, should, will. Helpers always take the base verb: can go, must go, will go. No s, no ed, no to."
+},
+"99bfb390": {
+"v": "sonia",
+"t": "I checked the report yesterday."
+},
+"9a4cc93d": {
+"v": "sonia",
+"t": "Correct. The budget was approved by the commander."
+},
+"9a7487a2": {
+"v": "sonia",
+"t": "You will hear native speakers say 'there's three' in fast speech. Understand it; say there are."
+},
+"9b42e1bb": {
+"v": "sonia",
+"t": "Correct. Could you send me the file, please?"
+},
+"9b94a1b4": {
+"v": "sonia",
+"t": "The supplier doesn't accept transfers. We have to pay by card."
+},
+"9bb977e0": {
+"v": "sonia",
+"t": "How often?"
+},
+"9c09f3d3": {
+"v": "sonia",
+"t": "Wait a moment."
+},
+"9c5d39fa": {
+"v": "christopher",
+"t": "Not quite. Try again."
+},
+"9c697daa": {
+"v": "sonia",
+"t": "Sign this form."
+},
+"9c78f133": {
+"v": "sonia",
+"t": "Malee manages the travel budget."
+},
+"9cade166": {
+"v": "sonia",
+"t": "I have some questions about the invoice."
+},
+"9cb72af6": {
+"v": "sonia",
+"t": "I went to the bank yesterday."
+},
+"9d792aa3": {
+"v": "sonia",
+"t": "Correct. I'll check the report tomorrow."
+},
+"9dc1f024": {
+"v": "sonia",
+"t": "Speak more slowly."
+},
+"9e0cd5da": {
+"v": "sonia",
+"t": "Does she. Does she speak Thai?. Does it cost a lot?"
+},
+"9e1df9f2": {
+"v": "sonia",
+"t": "A fossil. Old English changed the verb for almost every person. Today only he, she, it keeps an ending. Long ago it was th, he worketh; the s came later from northern speech."
+},
+"9e6239d8": {
+"v": "sonia",
+"t": "There is one box of files."
+},
+"9ecb6169": {
+"v": "sonia",
+"t": "Not quite. Try again."
+},
+"9ee9c97e": {
+"v": "andrew",
+"t": "Correct. There are four invoices."
+},
+"9f20a7bc": {
+"v": "sonia",
+"t": "Ploy fixes the printer when it breaks."
+},
+"9f5e67a8": {
+"v": "sonia",
+"t": "The flight"
+},
+"9f96e2f5": {
+"v": "sonia",
+"t": "Correct. Do you have the receipt?"
+},
+"a129c4f0": {
+"v": "libby",
+"t": "Good morning! Did you do the homework?"
+},
+"a15481b5": {
+"v": "sonia",
+"t": "Do they need my signature?"
+},
+"a1b7ecb8": {
+"v": "sonia",
+"t": "We meet the supplier every month."
+},
+"a1cbd15e": {
+"v": "sonia",
+"t": "Which form do I use for a travel claim?"
+},
+"a2760ed2": {
+"v": "sonia",
+"t": "Correct. Malee pays the suppliers on Friday."
+},
+"a2ec1d59": {
+"v": "sonia",
+"t": "We need a new budget."
+},
+"a32dd738": {
+"v": "sonia",
+"t": "Correct. I got an email from the bank this morning."
+},
+"a351040f": {
+"v": "sonia",
+"t": "If I were you, I would ask for training first."
+},
+"a3518e6f": {
+"v": "sonia",
+"t": "He works in the Finance Division."
+},
+"a3c27613": {
+"v": "sonia",
+"t": "One step back equals imagined. If I had more time but I don't. The past form here is not about yesterday. It pushes the idea away from reality, like could in Formation 8. Would is the past form of will."
+},
+"a3e7752c": {
+"v": "sonia",
+"t": "What time is the welcome dinner?"
+},
+"a58d4e86": {
+"v": "sonia",
+"t": "Correct. I don't work on Saturdays."
+},
+"a61b56d0": {
+"v": "sonia",
+"t": "They'll close the accounts in October."
+},
+"a6aae286": {
+"v": "sonia",
+"t": "the t sound. checked. finished. booked"
+},
+"a6b88b4c": {
+"v": "sonia",
+"t": "Tomorrow morning"
+},
+"a7dd7160": {
+"v": "sonia",
+"t": "Correct. There are six people in the meeting room."
+},
+"a82e8e60": {
+"v": "sonia",
+"t": "I saw a good film last weekend."
+},
+"a967e363": {
+"v": "sonia",
+"t": "Is Mr. Eriksen here today?"
+},
+"aa1d864d": {
+"v": "sonia",
+"t": "The bank is closed. We transfer the money on Monday."
+},
+"ab3e10d6": {
+"v": "sonia",
+"t": "When do the visitors arrive?"
+},
+"ab524dbd": {
+"v": "sonia",
+"t": "Does she speak Thai?"
+},
+"ab547411": {
+"v": "sonia",
+"t": "He knows the account number."
+},
+"ab6343bc": {
+"v": "sonia",
+"t": "Correct. If the bank is closed, we will transfer the money on Monday."
+},
+"ac12a693": {
+"v": "sonia",
+"t": "to Khun Nok in Purchasing a colleague"
+},
+"ac2531a0": {
+"v": "sonia",
+"t": "I'm going to visit my parents on Sunday."
+},
+"ac605fea": {
+"v": "sonia",
+"t": "Correct. Do you work in Finance?"
+},
+"aced239f": {
+"v": "sonia",
+"t": "Do you like Thai food?"
+},
+"ad65d712": {
+"v": "sonia",
+"t": "going to. I'm going to check them"
+},
+"adae2c6e": {
+"v": "ryan",
+"t": "Correct. Nice to meet you, Flight Lieutenant Hughes. Should I call you Tom?"
+},
+"add75ea6": {
+"v": "sonia",
+"t": "Ploy, there's a mistake in the report."
+},
+"add78705": {
+"v": "sonia",
+"t": "Correct. If she had read the email, she wouldn't have missed the meeting."
+},
+"ae2dfc30": {
+"v": "sonia",
+"t": "How many copies did she print?"
+},
+"ae43d1c1": {
+"v": "sonia",
+"t": "Correct. What time does the bank close?"
+},
+"aecddffe": {
+"v": "sonia",
+"t": "If the claims arrive by Friday, I will process them on Monday."
+},
+"aee4e5f2": {
+"v": "sonia",
+"t": "were, short and weak. They were sent. They were checked"
+},
+"aef9df4e": {
+"v": "sonia",
+"t": "Last Friday"
+},
+"af54c5e7": {
+"v": "sonia",
+"t": "There is one bank account for the project."
+},
+"af5bef86": {
+"v": "sonia",
+"t": "Can you friendly. Can you send it?"
+},
+"af71d523": {
+"v": "sonia",
+"t": "We don't need a new budget."
+},
+"b13d2cc4": {
+"v": "sonia",
+"t": "Correct. There are two copies of the contract."
+},
+"b1a76589": {
+"v": "sonia",
+"t": "Can we talk about the budget?"
+},
+"b1aa1a63": {
+"v": "andrew",
+"t": "Sorry, say that again, please."
+},
+"b1e6aab6": {
+"v": "sonia",
+"t": "The bank didn't call us. We didn't stop the transfer."
+},
+"b229574a": {
+"v": "sonia",
+"t": "The canteen closes at two o'clock."
+},
+"b285411e": {
+"v": "sonia",
+"t": "He'll call you back in ten minutes."
+},
+"b2b285ca": {
+"v": "sonia",
+"t": "The pointer. 'There' is only a place-holder at the front. The real meaning comes after the verb. One receipt becomes is. Three receipts becomes are. The verb agrees with the noun that comes next."
+},
+"b2dc4e90": {
+"v": "sonia",
+"t": "Correct. Ploy, there's a mistake in the report."
+},
+"b3423804": {
+"v": "libby",
+"t": "Correct. Yes, I finished it last night."
+},
+"b3984afd": {
+"v": "sonia",
+"t": "Neutral, not unlucky. Thai often goes with bad news. The English passive is neutral, for good news too: 'Your claim was accepted.' Got paid means was paid, but it is casual. Use was in reports."
+},
+"b536cffc": {
+"v": "sonia",
+"t": "If we had a bigger budget, we would buy the software."
+},
+"b57914c1": {
+"v": "sonia",
+"t": "Correct. How often does he call the supplier?"
+},
+"b58bb241": {
+"v": "sonia",
+"t": "Of course, Mr Eriksen. Could you give me ten minutes, please?"
+},
+"b639456c": {
+"v": "sonia",
+"t": "We send the report to the commander."
+},
+"b63e95fa": {
+"v": "sonia",
+"t": "Correct. There are three boxes of files."
+},
+"b69ad675": {
+"v": "sonia",
+"t": "Colonel Hayes, I'm afraid there is a small mistake in the report."
+},
+"b743d6ea": {
+"v": "sonia",
+"t": "She pays the bills on Monday."
+},
+"b746cdb6": {
+"v": "sonia",
+"t": "Correct. I'll finish the budget on Friday."
+},
+"b74cad84": {
+"v": "sonia",
+"t": "How long does the audit take?"
+},
+"b75c5463": {
+"v": "sonia",
+"t": "The if-part is a distance dial. Present equals real. One step back equals imagined now. Two steps back equals an imagined past."
+},
+"b8372425": {
+"v": "sonia",
+"t": "isn't, aren't. it isn't ready. they aren't here"
+},
+"b8da3569": {
+"v": "sonia",
+"t": "Repeat that."
+},
+"b9368417": {
+"v": "sonia",
+"t": "Correct. Is the meeting at two?"
+},
+"b9b22aaf": {
+"v": "sonia",
+"t": "Ploy, I'm afraid there's a serious problem. Could you look at it now?"
+},
+"bb7c9389": {
+"v": "sonia",
+"t": "Going to started as walking. 'I am going to the bank' equals movement. English stretched it: 'I am going to pay' equals moving towards an action. The am, is, are is still there, it is the verb be."
+},
+"bc2b2224": {
+"v": "sonia",
+"t": "passive"
+},
+"bc806ad5": {
+"v": "sonia",
+"t": "Can I give you a piece of advice? Always keep the receipts."
+},
+"bcb9f96c": {
+"v": "sonia",
+"t": "Correct. There isn't any news from the bank."
+},
+"bcfbcdf1": {
+"v": "sonia",
+"t": "How much?"
+},
+"bd5bb64e": {
+"v": "sonia",
+"t": "I need the file today."
+},
+"bda0307a": {
+"v": "sonia",
+"t": "The supplier doesn't send the invoice on time."
+},
+"bdbe6063": {
+"v": "sonia",
+"t": "I start work at eight."
+},
+"bdbea85d": {
+"v": "sonia",
+"t": "The helper system runs through Formations 3, 4 and 5. Master it once."
+},
+"be7ac87c": {
+"v": "sonia",
+"t": "They approve the travel claims."
+},
+"bec673d3": {
+"v": "christopher",
+"t": "What time does your flight leave?"
+},
+"bf127802": {
+"v": "sonia",
+"t": "Correct. Could you check these figures, please?"
+},
+"bf20c903": {
+"v": "sonia",
+"t": "Why es exists. You cannot say 'watchs', two hisses together. So English adds a small vowel: watch iz. The spelling es just follows the sound."
+},
+"bf3412c4": {
+"v": "sonia",
+"t": "I want to borrow your pen."
+},
+"bf3cae04": {
+"v": "libby",
+"t": "Sorry, say that again, please."
+},
+"bf7834da": {
+"v": "sonia",
+"t": "Who?"
+},
+"c02455a1": {
+"v": "sonia",
+"t": "If I had had the receipt, I would have got the refund."
+},
+"c0b33a9f": {
+"v": "sonia",
+"t": "He calls the supplier every week."
+},
+"c0f3738b": {
+"v": "sonia",
+"t": "There is a good canteen next to our building."
+},
+"c0f3b670": {
+"v": "ava",
+"t": "Sorry, say that again, please."
+},
+"c17cb135": {
+"v": "sonia",
+"t": "Correct. Where does she work?"
+},
+"c1b3c82d": {
+"v": "sonia",
+"t": "How many officers are coming to the course on Thursday?"
+},
+"c22d3382": {
+"v": "sonia",
+"t": "Decided now or decided before. Will equals a decision made now, a promise, a guess: 'I'll call him.' Going to equals a plan made before, or something you can see coming: 'I'm going to visit my parents.'"
+},
+"c28bc40f": {
+"v": "sonia",
+"t": "Correct. We made a payment last month."
+},
+"c2fa27bd": {
+"v": "sonia",
+"t": "She checks the invoices."
+},
+"c38c3640": {
+"v": "sonia",
+"t": "They go to the bank every Monday."
+},
+"c423771e": {
+"v": "sonia",
+"t": "If I had saved the file, I wouldn't have lost an hour."
+},
+"c44c11d3": {
+"v": "sonia",
+"t": "Are you free on Friday?"
+},
+"c4d0b570": {
+"v": "sonia",
+"t": "Colonel Hayes, could you send me the file today, please?"
+},
+"c59314c9": {
+"v": "sonia",
+"t": "Correct. Nok starts work at eight."
+},
+"c5e2c648": {
+"v": "sonia",
+"t": "The auditor will review the accounts next week."
+},
+"c62d25d8": {
+"v": "sonia",
+"t": "Could you wait a moment, please?"
+},
+"c64932c5": {
+"v": "sonia",
+"t": "Could you, please seniors, visitors. Could you send it, please?"
+},
+"c73bd541": {
+"v": "sonia",
+"t": "to Wing Commander Anan your commanding officer"
+},
+"c76b7537": {
+"v": "sonia",
+"t": "Correct. The new budget will be announced on Friday."
+},
+"c81afd46": {
+"v": "sonia",
+"t": "There isn't any news from the bank."
+},
+"c9bd7f89": {
+"v": "sonia",
+"t": "The commander approved the budget."
+},
+"c9fbd589": {
+"v": "sonia",
+"t": "Could you call the supplier, please?"
+},
+"ca45b062": {
+"v": "sonia",
+"t": "Are the figures final?"
+},
+"cad42a74": {
+"v": "sonia",
+"t": "The cash box is locked every evening at five."
+},
+"cb749930": {
+"v": "sonia",
+"t": "Correct. I don't have any questions about the invoice."
+},
+"ccb4e10d": {
+"v": "sonia",
+"t": "Correct. The accounts will be reviewed next week."
+},
+"cced0f5d": {
+"v": "sonia",
+"t": "She has a meeting at ten."
+},
+"cced30fe": {
+"v": "sonia",
+"t": "There is one invoice on my desk."
+},
+"cd0a5721": {
+"v": "sonia",
+"t": "They need my signature."
+},
+"cd60e9a0": {
+"v": "sonia",
+"t": "There are five receipts in the file."
+},
+"ce236fc3": {
+"v": "sonia",
+"t": "I booked the hotel last week."
+},
+"ce491000": {
+"v": "sonia",
+"t": "Correct. Is the invoice correct?"
+},
+"cf5c9178": {
+"v": "sonia",
+"t": "Nok answers the phone in our office."
+},
+"d067f71a": {
+"v": "christopher",
+"t": "I fly back to Hawaii tomorrow."
+},
+"d172c8b1": {
+"v": "sonia",
+"t": "Correct. How many people are there in the meeting?"
+},
+"d1fdbd4f": {
+"v": "sonia",
+"t": "Sir, could I speak to you about the budget, please?"
+},
+"d235113f": {
+"v": "sonia",
+"t": "The invoices are ready."
+},
+"d24b1e19": {
+"v": "sonia",
+"t": "Much or many? How many for things you count, receipts, people. How much for things you don't, money, time, paperwork. 'How much is it?' asks the price."
+},
+"d2c2845e": {
+"v": "sonia",
+"t": "If the bank is closed, we will transfer the money on Monday."
+},
+"d2e231ff": {
+"v": "sonia",
+"t": "Sir, the quarterly figures are ready. Would you like to see them now?"
+},
+"d3ae045d": {
+"v": "sonia",
+"t": "She wrote the budget report last year."
+},
+"d471eae7": {
+"v": "sonia",
+"t": "The total isn't correct."
+},
+"d4d4a4c9": {
+"v": "sonia",
+"t": "Units or a mass? Coins are separate units: one coin, two coins, how many coins? Money is pictured as one mass, like water: how much money? The grammar shows the picture, not the real world."
+},
+"d4dd5eb7": {
+"v": "sonia",
+"t": "Correct. She checks the invoices."
+},
+"d7a1239c": {
+"v": "sonia",
+"t": "We pay the supplier this week."
+},
+"d82c5f45": {
+"v": "libby",
+"t": "How much information do you need?"
+},
+"d9d45d8f": {
+"v": "sonia",
+"t": "Correct. He'll sign the forms tomorrow morning."
+},
+"da0f84a6": {
+"v": "sonia",
+"t": "Correct. The flight costs a lot."
+},
+"db498bea": {
+"v": "sonia",
+"t": "We don't have a bigger budget. We can't buy the software."
+},
+"dc16f4b6": {
+"v": "sonia",
+"t": "The statement was sent yesterday."
+},
+"dc326baf": {
+"v": "sonia",
+"t": "Correct. Ploy, can we talk about the budget?"
+},
+"dc3a4f7a": {
+"v": "sonia",
+"t": "Is the invoice correct?"
+},
+"dc9bbe48": {
+"v": "libby",
+"t": "For the exercise, tell me about your section's budget."
+},
+"dcf46adc": {
+"v": "sonia",
+"t": "How much information do we need?"
+},
+"dd369e0b": {
+"v": "sonia",
+"t": "We met the delegation on Monday."
+},
+"dd4f3e59": {
+"v": "sonia",
+"t": "The auditors visited us last month."
+},
+"dd670229": {
+"v": "sonia",
+"t": "Is the meeting at two?"
+},
+"dda274ff": {
+"v": "sonia",
+"t": "How many plus plural. How many invoices?. How many receipts?"
+},
+"ddcb5561": {
+"v": "ava",
+"t": "Not quite. Try again."
+},
+"ded0ce3f": {
+"v": "sonia",
+"t": "English politeness is distance. The past form could steps back from the listener, and a question gives them room to say no."
+},
+"dfeb3714": {
+"v": "sonia",
+"t": "Correct. If the supplier accepted transfers, we wouldn't have to pay by card."
+},
+"e02cd416": {
+"v": "sonia",
+"t": "I check the invoices every morning."
+},
+"e0f7ec11": {
+"v": "sonia",
+"t": "Correct. The supplier called me yesterday."
+},
+"e0f8d9ed": {
+"v": "sonia",
+"t": "This claim form isn't complete."
+},
+"e0fd23c6": {
+"v": "sonia",
+"t": "Correct. How much does the ticket cost?"
+},
+"e10bc9d4": {
+"v": "sonia",
+"t": "Nok found it two days ago."
+},
+"e11c0e17": {
+"v": "sonia",
+"t": "The one exception. When the question word is the subject, nothing moves and the s stays: Who checks the claims? What costs 4,000 baht? The question word is already in the subject's place, so the order is the same as a statement."
+},
+"e1235b6f": {
+"v": "sonia",
+"t": "I send the report every Friday."
+},
+"e12d1ac0": {
+"v": "sonia",
+"t": "You are free on Friday."
+},
+"e14e6ea1": {
+"v": "sonia",
+"t": "the zzz sound voiced. pays. goes. needs. has"
+},
+"e2103d0c": {
+"v": "sonia",
+"t": "If… three, past"
+},
+"e22489f9": {
+"v": "sonia",
+"t": "I want to ask a question."
+},
+"e229686f": {
+"v": "sonia",
+"t": "don't. I don't know. we don't pay"
+},
+"e25005dd": {
+"v": "christopher",
+"t": "Correct. If the bank confirms today, I will send the money tomorrow."
+},
+"e25b9aef": {
+"v": "sonia",
+"t": "Could I have a coffee, please?"
+},
+"e26cb5e4": {
+"v": "sonia",
+"t": "I don't work on Saturdays."
+},
+"e292ce33": {
+"v": "sonia",
+"t": "five"
+},
+"e2a16c44": {
+"v": "sonia",
+"t": "You can send the form by email."
+},
+"e2cd7aee": {
+"v": "sonia",
+"t": "Correct. Could you wait a moment, please?"
+},
+"e3aa5321": {
+"v": "sonia",
+"t": "Correct. He didn't give me any advice."
+},
+"e3ef8381": {
+"v": "sonia",
+"t": "Correct. How does the supplier send the invoices?"
+},
+"e3f8f689": {
+"v": "sonia",
+"t": "Could you send me the file, please?"
+},
+"e4b6c0a6": {
+"v": "sonia",
+"t": "Correct. I bought office supplies last week."
+},
+"e5382226": {
+"v": "sonia",
+"t": "The s is a sound, not a letter. Your mouth chooses it from the sound before it."
+},
+"e5d08325": {
+"v": "sonia",
+"t": "The wing commander approves the travel claims."
+},
+"e5fa24fd": {
+"v": "sonia",
+"t": "There are two people from the bank downstairs."
+},
+"e614b801": {
+"v": "sonia",
+"t": "She'll call the bank this afternoon."
+},
+"e719b47a": {
+"v": "sonia",
+"t": "Where is the file?"
+},
+"e777954a": {
+"v": "sonia",
+"t": "The auditor finds a mistake. We correct it."
+},
+"e77b6837": {
+"v": "sonia",
+"t": "I'm going to check them after lunch."
+},
+"e7b41379": {
+"v": "sonia",
+"t": "Would and were step back in time just like could in see Formations 8, and the past forms come from see Formations 6."
+},
+"e88cf48d": {
+"v": "sonia",
+"t": "I finished the budget today."
+},
+"e8cf4b28": {
+"v": "sonia",
+"t": "I answered the email yesterday."
+},
+"e8f5b7f2": {
+"v": "sonia",
+"t": "Correct. We don't accept cash."
+},
+"e90f01ca": {
+"v": "sonia",
+"t": "You work in Finance."
+},
+"e91fded8": {
+"v": "sonia",
+"t": "She doesn't have the receipt."
+},
+"e9217aa5": {
+"v": "sonia",
+"t": "The invoice is correct."
+},
+"e92cece1": {
+"v": "sonia",
+"t": "I'll check the report tomorrow."
+},
+"e9a7f542": {
+"v": "sonia",
+"t": "There are six people in the meeting room."
+},
+"e9fb6a25": {
+"v": "sonia",
+"t": "Where do you come from?"
+},
+"ea944600": {
+"v": "sonia",
+"t": "Correct. Could you repeat that, please?"
+},
+"eaedb44c": {
+"v": "sonia",
+"t": "not"
+},
+"eb721061": {
+"v": "sonia",
+"t": "Correct. Could I see the invoice, please?"
+},
+"eb8225d5": {
+"v": "sonia",
+"t": "Why please is not enough. Thai softens an order with Thai chuay, noi or Thai krap, ka. In English, please does much less: 'Please sign this' can still sound like an order. Change the structure, not just the ending."
+},
+"ebea520a": {
+"v": "sonia",
+"t": "How much time does the audit take?"
+},
+"ebf72b0d": {
+"v": "sonia",
+"t": "A fee is charged for international transfers."
+},
+"ec3dc01b": {
+"v": "sonia",
+"t": "You have the receipt."
+},
+"ecb1dd5d": {
+"v": "sonia",
+"t": "There are two printers on this floor."
+},
+"ed73a9a0": {
+"v": "sonia",
+"t": "Be does all the work. The participle never changes: approved, approved, approved. Only be moves for time and number: is, are, was, were, will be, must be. Get be right and the passive is right."
+},
+"eda74582": {
+"v": "sonia",
+"t": "How much does the project need?"
+},
+"edd422af": {
+"v": "sonia",
+"t": "Correct. He had a meeting with the auditors yesterday."
+},
+"ee6314bc": {
+"v": "sonia",
+"t": "One engine, three jobs. The same sound rule makes plurals, invoices, receipts, claims, and possessives, Malee's desk. Learn the engine once, use it everywhere."
+},
+"ef1e9e64": {
+"v": "sonia",
+"t": "They pay the suppliers on the 25th."
+},
+"ef8f9f17": {
+"v": "sonia",
+"t": "Correct. Colonel Hayes, I'm afraid there is a small mistake in the report."
+},
+"efd215d6": {
+"v": "sonia",
+"t": "Correct. How many copies did she print?"
+},
+"efe529cf": {
+"v": "sonia",
+"t": "He checks the travel claims."
+},
+"eff95dcd": {
+"v": "sonia",
+"t": "The invoice was paid on Monday."
+},
+"f00081c2": {
+"v": "sonia",
+"t": "Could you change the date on the invoice, please?"
+},
+"f02a8b59": {
+"v": "sonia",
+"t": "Correct. There is one signature on the form."
+},
+"f05d9b9b": {
+"v": "sonia",
+"t": "The supplier sends the invoice on time."
+},
+"f10ba602": {
+"v": "sonia",
+"t": "Twelve new laptops were bought for the training wing."
+},
+"f17469a7": {
+"v": "sonia",
+"t": "Could I borrow your pen, please?"
+},
+"f18e2feb": {
+"v": "sonia",
+"t": "The receipts are in the blue folder."
+},
+"f1dafee2": {
+"v": "sonia",
+"t": "Correct. Could you give me the receipt, please?"
+},
+"f2125a37": {
+"v": "sonia",
+"t": "Where does she work?"
+},
+"f316752b": {
+"v": "sonia",
+"t": "to Ploy, your close friend"
+},
+"f3b6541d": {
+"v": "sonia",
+"t": "A mistake was made in the ledger."
+},
+"f4139bdd": {
+"v": "sonia",
+"t": "Correct. Does the hotel include breakfast?"
+},
+"f432351b": {
+"v": "libby",
+"t": "Correct. How much information do you need?"
+},
+"f4884e77": {
+"v": "sonia",
+"t": "to Colonel Sarah Hayes American visitor"
+},
+"f4960893": {
+"v": "sonia",
+"t": "Do you. Do you work here?. Do you have it?"
+},
+"f4d75250": {
+"v": "sonia",
+"t": "The same helper makes questions. Learn it here, reuse it in Formation 4."
+},
+"f569b170": {
+"v": "sonia",
+"t": "I'll book the hotel next week."
+},
+"f5a21553": {
+"v": "sonia",
+"t": "two"
+},
+"f5b7d94c": {
+"v": "sonia",
+"t": "Correct. How much money do we need?"
+},
+"f5b8b472": {
+"v": "sonia",
+"t": "I don't understand this report."
+},
+"f5eb6c9f": {
+"v": "sonia",
+"t": "The s moves to the helper. The subject gives its s to the helper: she works becomes she doesn't work. One subject, one s. That is why 'doesn't works' is wrong, two s sounds for one subject."
+},
+"f63cafed": {
+"v": "libby",
+"t": "Not quite. Try again."
+},
+"f6a8edc7": {
+"v": "sonia",
+"t": "The auditors will visit us next month."
+},
+"f70e8453": {
+"v": "christopher",
+"t": "The payment is late again. What happens now?"
+},
+"f7233331": {
+"v": "sonia",
+"t": "Add a question word in front and you have Formation 5."
+},
+"f847186f": {
+"v": "sonia",
+"t": "question"
+},
+"f8692639": {
+"v": "christopher",
+"t": "If the bank confirms today, I will send the money tomorrow."
+},
+"f8c0138f": {
+"v": "sonia",
+"t": "Correct. We'll meet the delegation next Monday."
+},
+"f8f5e064": {
+"v": "sonia",
+"t": "The bank opens on Sunday."
+},
+"f905b0c1": {
+"v": "sonia",
+"t": "Correct. They approved the claims last Friday."
+},
+"f93f3b57": {
+"v": "sonia",
+"t": "Correct. Could you sign this form, please?"
+},
+"f973fe82": {
+"v": "sonia",
+"t": "I got an email from the bank this morning."
+},
+"f9788e04": {
+"v": "sonia",
+"t": "Correct. I sent the report last Friday."
+},
+"f99a2e68": {
+"v": "sonia",
+"t": "There are two problems with the payment."
+},
+"fa25b1ea": {
+"v": "sonia",
+"t": "The claim must be signed."
+},
+"fa2f2e83": {
+"v": "sonia",
+"t": "Ploy, can you send me the file today?"
+},
+"fa6929c2": {
+"v": "sonia",
+"t": "Could you repeat that, please?"
+},
+"fa7b16b2": {
+"v": "sonia",
+"t": "The figures don't match."
+},
+"fae732d6": {
+"v": "sonia",
+"t": "Correct. I'll answer the email later."
+},
+"fb39ec88": {
+"v": "sonia",
+"t": "Mr Eriksen, could we talk about the budget, please?"
+},
+"fc1b60c8": {
+"v": "sonia",
+"t": "The audit takes time."
+},
+"fc5d5d0c": {
+"v": "sonia",
+"t": "Explain this charge."
+},
+"fc5e9dd4": {
+"v": "sonia",
+"t": "Correct. How much equipment does the project need?"
+},
+"fc67ebdc": {
+"v": "sonia",
+"t": "Correct. How much time does the audit take?"
+},
+"fc98ac42": {
+"v": "sonia",
+"t": "Mr Eriksen, the meeting is at two o'clock."
+},
+"fcac23ed": {
+"v": "sonia",
+"t": "We made a payment last month."
+},
+"fce2eac9": {
+"v": "sonia",
+"t": "Correct. How do they pay the suppliers?"
+},
+"fd6c8c78": {
+"v": "sonia",
+"t": "Does the course finish in December?"
+},
+"fdb1fc36": {
+"v": "christopher",
+"t": "Correct. Sorry, could you repeat that, please?"
+},
+"fe1ba016": {
+"v": "sonia",
+"t": "In questions and negatives the past moves to the helper: did you send? I didn't send. The verb returns to base."
+},
+"fe2f4045": {
+"v": "sonia",
+"t": "to Mr Lars Eriksen the auditor"
+},
+"fea92bc5": {
+"v": "sonia",
+"t": "Correct. If the bank had called us, we would have stopped the transfer."
+},
+"fed0af84": {
+"v": "sonia",
+"t": "Does he check the travel claims?"
+},
+"fefe8207": {
+"v": "sonia",
+"t": "When does the meeting start?"
+},
+"ff520886": {
+"v": "sonia",
+"t": "Why is news singular? News ends in s, but English treats it like information: one mass. So we say the news is good, not are. One item is a piece of news."
+},
+"ff69057e": {
+"v": "andrew",
+"t": "How many invoices are there in the file?"
+},
+"fff9716f": {
+"v": "sonia",
+"t": "The section head sends the report to the commander."
+}
+}
+}
