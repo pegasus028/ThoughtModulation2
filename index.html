@@ -735,6 +735,58 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding-top:12px;font-si
   .fdsl-nav .btn{min-width:84px;padding:10px 12px}
 }
 
+
+/* ---------- Scramble ---------- */
+.sc-tab b{color:#f7a8a0}
+.sc-banner{background:linear-gradient(120deg,#0F2440,#3d1a1f)}
+.sc-grid{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.sc-dd{margin:0;color:var(--ink-dim);font-size:.86rem}
+.sc-tiles{display:flex;flex-direction:column;gap:6px}
+.sc-tile{display:flex;gap:10px;align-items:center;background:#0b1726;border:1px solid var(--line);border-radius:10px;padding:7px 9px;min-height:50px}
+.sc-tile>div{flex:1;min-width:0} .sc-tile b{display:block;font-size:.9rem} .sc-tile small{color:var(--ink-dim);font-size:.74rem;display:block;line-height:1.5}
+.sc-tile .sc-ti{flex:none;width:34px;text-align:center;font-size:1.3rem;line-height:1} .sc-tile .dbtn{flex:none}
+.sc-tile.lock{opacity:.72} .sc-tile.new{border-style:dashed}
+.sc-tile.c{border-color:rgba(74,222,128,.5)} .sc-tile.p{border-color:rgba(212,175,55,.55)}
+.sc-st{display:inline-block;font-size:.74rem;font-weight:700;border-radius:99px;padding:1px 8px;border:1px solid var(--line)}
+.sc-st.c{color:var(--good);border-color:rgba(74,222,128,.55);background:rgba(74,222,128,.1)}
+.sc-st.p{color:var(--gold);border-color:rgba(212,175,55,.6);background:rgba(212,175,55,.1)}
+.sc-st.m{color:#9fc4ec;border-color:rgba(127,179,230,.5);background:rgba(127,179,230,.08)}
+.sc-stamps{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.sc-pre{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:14px;align-items:start;margin-top:12px}
+.sc-cardface{background:linear-gradient(160deg,#12294a,#0b1726);border:2px solid var(--gold);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.sc-sit{margin:0;font-size:1.08rem;line-height:1.5;color:#fff}
+.sc-th{margin:0;font-size:.92rem;line-height:1.6;color:var(--ink-dim);border-left:3px solid var(--gold-dim);padding-left:10px}
+.sc-objs{display:flex;flex-wrap:wrap;gap:8px}
+.sc-obj{background:rgba(212,175,55,.12);border:1px solid rgba(212,175,55,.5);border-radius:99px;padding:4px 12px;font-size:.86rem;font-weight:600}
+.sc-forms{font-size:.78rem;color:var(--ink-dim);line-height:1.9}
+.sc-preside{background:var(--navy2);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:10px}
+.sc-clock{display:flex;gap:12px;align-items:center}
+.sc-clock span{font-family:var(--mono);font-size:2.6rem;font-weight:700;color:var(--gold);min-width:2ch;text-align:center;line-height:1}
+.sc-clock small{color:var(--ink-dim);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;line-height:1.3}
+.sc-clock.zero span{color:#f7a8a0}
+.sc-chips{display:flex;flex-direction:column;gap:6px}
+.sc-chip{text-align:left;background:var(--navy3);border:1px dashed var(--line);color:var(--ink);border-radius:10px;padding:9px 12px;font-size:.92rem}
+.sc-chip small{color:var(--ink-dim);float:right;font-size:.72rem;margin-top:2px}
+.sc-chip.open{border-style:solid;border-color:rgba(212,175,55,.6);background:rgba(212,175,55,.1);font-weight:600}
+#scGo.pulse{animation:pulse 1.4s infinite}
+.sc-todo{display:flex;flex-direction:column;gap:6px}
+.sc-ob{background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.4);border-radius:10px;padding:8px 10px;font-weight:600;font-size:.95rem}
+.sc-ob .sc-tick{display:inline-block;width:1.3em;color:var(--ink-dim)}
+.sc-ob.hit{background:rgba(74,222,128,.1);border-color:rgba(74,222,128,.5)} .sc-ob.hit .sc-tick{color:var(--good)}
+.sc-ob.miss{background:rgba(127,179,230,.07);border-color:rgba(127,179,230,.4)}
+.sc-sitd{font-size:.86rem;color:var(--ink-dim)} .sc-sitd summary{cursor:pointer;color:var(--gold);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700} .sc-sitd p{margin:6px 0 0}
+.gs-pass.sc-soft{background:rgba(127,179,230,.08);border-color:rgba(127,179,230,.45)}
+.sc-trow{display:flex;gap:10px;align-items:center;justify-content:space-between;font-size:.9rem}
+.sc-trow>span:first-child{flex:1;min-width:0}
+.sc-tb3{display:flex;gap:6px;flex:none}
+.sc-tb3 .fd-tb{padding:9px 0;width:46px;opacity:.6}
+.sc-tb3 .fd-tb.sel{opacity:1;box-shadow:0 0 0 2px #fff inset}
+.sc-trow select{background:var(--navy3);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px;font-size:.9rem;max-width:60%}
+.sc-dbt{border-top:1px solid var(--line);padding-top:10px}
+.sc-dbq{display:flex;gap:8px;align-items:center;font-size:.92rem;color:#dbe6f3}
+.sc-links{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.86rem;color:var(--ink-dim)}
+@media (max-width:860px){ .sc-pre{grid-template-columns:1fr} }
+@media (max-width:560px){ .sc-sit{font-size:1rem} .sc-clock span{font-size:2.1rem} .sc-tb3 .fd-tb{width:42px} }
 </style>
 </head>
 <body>
@@ -3508,6 +3560,7 @@ function renderHome(){
   view = "home";
   if (store.tab === "gs") return renderGSHome();
   if (store.tab === "fd") return renderFDHome();
+  if (store.tab === "sc") return renderSCHome();
   const camp = CAMPAIGNS.find(c => c.id === store.tab) || CAMPAIGNS[0];
   const ids = camp.ids;
   // default selection: the saved one, else the first unlocked mission not yet done
@@ -5567,7 +5620,9 @@ function allTabsHTML(activeId){
   return `<button class="tab gs-tab ${activeId==='gs'?'on':''}" role="tab" aria-selected="${activeId==='gs'}" data-tab="gs">
       <span class="ti" aria-hidden="true">🎙️</span><span><b>Ground School</b><small>Speak it out · A2–B1 · ${gd}/${GS_MISSIONS.length}</small></span></button>`
     + (typeof FD_DRILLS === "undefined" ? "" : `<button class="tab fd-tab ${activeId==='fd'?'on':''}" role="tab" aria-selected="${activeId==='fd'}" data-tab="fd">
-      <span class="ti" aria-hidden="true">🎖️</span><span><b>Formation Drills</b><small>Grammar out loud · A1–B2 · ${FD_DRILLS.filter(d => fdS().best[d.id]).length}/${FD_DRILLS.length}</small></span></button>`) + camps;
+      <span class="ti" aria-hidden="true">🎖️</span><span><b>Formation Drills</b><small>Grammar out loud · A1–B2 · ${FD_DRILLS.filter(d => fdS().best[d.id]).length}/${FD_DRILLS.length}</small></span></button>`)
+    + (typeof SC_CARDS === "undefined" ? "" : `<button class="tab sc-tab ${activeId==='sc'?'on':''}" role="tab" aria-selected="${activeId==='sc'}" data-tab="sc">
+      <span class="ti" aria-hidden="true">🎴</span><span><b>Scramble</b><small>New situations · A1–B1 · ${SC_CARDS.filter(c => (scS().c[c.id] || {}).s === "c").length}/${SC_CARDS.length}</small></span></button>`) + camps;
 }
 
 function gsImg(m, el, kind){
@@ -6917,6 +6972,796 @@ function fdResult(){
   gsSpeak(acc >= 60 ? "Sortie complete. Well done!" : "Sortie complete. Fly it again to improve.", "helen");
 }
 
+
+/* ======================================================================
+   SCRAMBLE — unseen situation cards built from the formations she has flown.
+   She draws a card, gets a short pre-flight, then answers the person in her own words.
+   Checking is by OBJECTIVES (did she greet / ask / say the time…), never exact sentences.
+   Grammar slips are logged to the radar but never lower a stamp.
+   ====================================================================== */
+GS_PEOPLE.eriksen = {vp:["Daniel","Arthur","Oliver"], name:"Mr Lars Eriksen", short:"Mr Eriksen", role:"International auditor", accent:"GB", sex:"m", flag:"🇸🇪",
+  av:{skin:"#f0cdb0", hair:"#b9b2a3", style:"short", top:"#2f4a5f", bg:"#dfe7ee"}};
+GS_PEOPLE.hayes = {vp:["Samantha","Allison","Ava"], name:"Colonel Sarah Hayes", short:"Colonel Hayes", role:"Finance chief, visiting US delegation", accent:"US", sex:"f", flag:"🇺🇸",
+  av:{skin:"#eec3a1", hair:"#5a3a22", style:"bob", top:"#3b4f7a", bg:"#dde3f2", uniform:true}};
+GS_PEOPLE.anan = {vp:["Daniel","Oliver","Arthur"], name:"Wing Commander Anan", short:"Wing Commander Anan", role:"Your commanding officer, Finance Division", accent:"GB", sex:"m", flag:"🇹🇭",
+  av:{skin:"#d9a877", hair:"#1c1410", style:"short", top:"#203a5c", bg:"#e7dcc0", uniform:true}};
+
+const SC_DECKS = [
+  {id:"office",   icon:"🗂️", name:"Office",   desc:"Suppliers, auditors and your boss.", lvl:"A1 → A2"},
+  {id:"visitors", icon:"🛬", name:"Visitors", desc:"Foreign officers, instructors and hotels.", lvl:"A2 → B1"},
+  {id:"social",   icon:"☕", name:"Social",   desc:"Coffee breaks, dinners and goodbyes.", lvl:"A2 → B1"}
+];
+const SC_KINDS = {
+  greet:{i:"👋", n:"Greet"}, name:{i:"🎖️", n:"Right name"}, thank:{i:"🙏", n:"Thank"}, sorry:{i:"🙇", n:"Say sorry"},
+  request:{i:"🤝", n:"Ask politely"}, ask:{i:"❓", n:"Ask a question"}, time:{i:"🕒", n:"Say when"}, number:{i:"🔢", n:"Say a number"},
+  place:{i:"📍", n:"Say where"}, explain:{i:"💬", n:"Explain"}, plan:{i:"⏩", n:"Say the plan"}, past:{i:"⏪", n:"Say what happened"},
+  suggest:{i:"💡", n:"Suggest"}, bye:{i:"✈️", n:"Say goodbye"}
+};
+const SC_DAY = "(monday|tuesday|wednesday|thursday|friday|saturday|sunday|today|tomorrow|tonight|next week|this (morning|afternoon|evening|week)|in \\d+ (days?|hours?|minutes?)|by \\d+|at \\d+|\\d+ oclock|morning|afternoon)";
+const SC_MAAM = "(ma am|maam|mam|madam|ma m)";
+const scRe = s => new RegExp(s);
+
+const SC_CARDS = [
+/* ------------------------------ OFFICE ------------------------------ */
+{id:"o1", deck:"office", lvl:"A1", npc:"eriksen", fd:["d1"], title:"Who does what?",
+ sit:"The auditor visits your section for the first time. He wants to know who does each job. Khun Nok checks the invoices. Wing Commander Anan signs the payments.",
+ th:"ผู้ตรวจสอบบัญชีมาที่แผนกเป็นครั้งแรก และถามว่าใครทำหน้าที่อะไร คุณนกเป็นคนตรวจใบแจ้งหนี้ และ Wing Commander Anan เป็นคนเซ็นอนุมัติการจ่ายเงิน",
+ chips:["Good morning, Mr Eriksen.","Khun Nok checks …","Wing Commander Anan signs …"],
+ turns:[
+  {npc:"Good morning. I'm Lars Eriksen, the auditor. Who checks the invoices in your section?",
+   objs:[{k:"greet", lab:"Greet him", re:/\b(good (morning|afternoon)|hello|hi|nice to meet you|welcome)\b/, ex:"Good morning, Mr Eriksen."},
+         {k:"explain", lab:"Say who checks the invoices", re:/\b\w+ (checks?|is checking|checked)\b|\bi (check|do)\b|\bkhun \w+|\b\w+ does (it|that|them|this)\b/, ex:"Khun Nok checks …"}],
+   model:"Good morning, Mr Eriksen. Khun Nok checks the invoices."},
+  {npc:"I see. And who signs the payments?",
+   objs:[{k:"explain", lab:"Say who signs the payments", re:/\b(signs?|is signing|signed|signature)\b|\bwing commander\b|\b(my|our|the) (boss|commander)\b|\bdoes (it|that|them|this)\b/, ex:"Wing Commander Anan signs …"}],
+   model:"Wing Commander Anan signs the payments."}]},
+
+{id:"o2", deck:"office", lvl:"A1", npc:"mike", fd:["d2"], title:"What's in the file?",
+ sit:"A supplier phones you. He wants to know about his invoices in your file. You can see three invoices. Invoice number two has the wrong date.",
+ th:"ซัพพลายเออร์โทรมาถามเรื่องใบแจ้งหนี้ในแฟ้ม คุณเห็นใบแจ้งหนี้ 3 ใบ และใบที่ 2 ลงวันที่ผิด",
+ chips:["There are three …","Yes, there is a problem with …","The date is wrong."],
+ turns:[
+  {npc:"Hi, it's Mike Turner from Pacific Aero. How many invoices from us are there in your file?",
+   objs:[{k:"number", lab:"Say how many invoices", re:/\b(3|three)\b/, ex:"There are three …"}],
+   model:"Hello, Mr Turner. There are three invoices."},
+  {npc:"OK. Is there a problem with any of them?",
+   objs:[{k:"explain", lab:"Say there is a problem", re:/\b(problem|mistake|error|wrong|not correct|incorrect)\b/, ex:"Yes, there is a problem with …"},
+         {k:"number", lab:"Say which invoice", re:/\b(number )?(2|two)\b|\bsecond\b/, ex:"… invoice number two."}],
+   model:"Yes, there is a problem with invoice number two. The date is wrong."}]},
+
+{id:"o3", deck:"office", lvl:"A1–A2", npc:"hayes", fd:["d3"], title:"Not ready yet",
+ sit:"Colonel Hayes comes to your desk. She wants the budget report, but it is not finished. It will be ready tomorrow morning.",
+ th:"Colonel Hayes มาที่โต๊ะคุณเพื่อขอรายงานงบประมาณ แต่ยังไม่เสร็จ จะเสร็จพรุ่งนี้เช้า",
+ chips:["I'm sorry, it isn't ready yet.","It will be ready …","Good afternoon, Colonel Hayes."],
+ turns:[
+  {npc:"Good afternoon. Is the budget report ready?",
+   objs:[{k:"name", lab:"Use the right name for her", re:scRe("\\bcolonel\\b(?! sarah)|\\b"+SC_MAAM+"\\b"), ex:"Good afternoon, Colonel Hayes."},
+         {k:"explain", lab:"Say it is not ready", re:/\b(is not|not ready|not yet|not finished|not done|have not|has not|did not|do not have|need more time|will be ready|still working|almost ready)\b/, ex:"I'm sorry, it isn't …"}],
+   model:"Good afternoon, Colonel Hayes. I'm sorry, it isn't ready yet."},
+  {npc:"I see. When will it be ready?",
+   objs:[{k:"time", lab:"Say when it will be ready", re:scRe("\\b"+SC_DAY+"\\b"), ex:"It will be ready tomorrow …"}],
+   model:"It will be ready tomorrow morning, Ma'am."}]},
+
+{id:"o4", deck:"office", lvl:"A2", npc:"mark", fd:["d4"], title:"Check the details",
+ sit:"Captain Ellis phones from Hawaii about a payment. You must check two things: the invoice number, and the currency (US dollars?).",
+ th:"Captain Ellis โทรมาจากฮาวายเรื่องการชำระเงิน คุณต้องถามเพื่อตรวจ 2 อย่าง คือเลขที่ใบแจ้งหนี้ และยอดเงินเป็นดอลลาร์หรือไม่",
+ chips:["Do you have the invoice number?","Is the amount in US dollars?","Hello, Captain Ellis."],
+ turns:[
+  {npc:"Hi, it's Mark Ellis from Hawaii. I'm calling about our payment.",
+   objs:[{k:"greet", lab:"Greet him", re:/\b(good (morning|afternoon|evening)|hello|hi)\b/, ex:"Hello, Captain Ellis."},
+         {k:"ask", lab:"Ask for the invoice number", re:/\b(invoice|reference)\b.*\bnumber\b|\bnumber\b.*\b(invoice|reference)\b|\bwhich invoice\b/, ex:"Do you have the …?"}],
+   model:"Hello, Captain Ellis. Do you have the invoice number?"},
+  {npc:"Sure. It's invoice four, five, one.",
+   objs:[{k:"number", lab:"Repeat the number to check it", re:/\b(4|for) ?5 ?1\b/, ex:"Four, five, one. Thank you."},
+         {k:"ask", lab:"Ask about US dollars", re:/\b(dollars?|usd|baht|currency)\b/, ex:"Is the amount in …?"}],
+   model:"Four, five, one. Thank you. Is the amount in US dollars?"}]},
+
+{id:"o5", deck:"office", lvl:"A2", npc:"eriksen", fd:["d5"], title:"Fix the meeting",
+ sit:"The auditor wants a meeting with your section this week. Ask him about the day. Your office is room 204, on the second floor.",
+ th:"ผู้ตรวจสอบบัญชีขอนัดประชุมกับแผนกในสัปดาห์นี้ ถามว่าเขาสะดวกวันไหน ห้องทำงานของคุณคือห้อง 204 ชั้น 2",
+ chips:["What day is good for you?","Please come to room …","See you on …"],
+ turns:[
+  {npc:"Hello. I'd like a short meeting with your section this week.",
+   objs:[{k:"ask", lab:"Ask when — What day …? / What time …?", re:/\b(when|what (day|time)|which day)\b/, ex:"What day is …?"}],
+   model:"Of course, Mr Eriksen. What day is good for you?"},
+  {npc:"Thursday morning at ten. Where should I go?",
+   objs:[{k:"place", lab:"Say where your office is", re:/\b(room|floor|building|office|upstairs|division)\b/, ex:"Please come to room …"},
+         {k:"time", lab:"Check the day or time", re:/\b(thursday|10)\b/, ex:"See you on Thursday at …"}],
+   model:"Please come to room 204, on the second floor. See you on Thursday at ten."}]},
+
+{id:"o6", deck:"office", lvl:"A2", npc:"eriksen", fd:["d6","d8"], title:"Two more days",
+ sit:"The auditor asks for last month's receipts. You did not send them because you found a mistake yesterday. You need two more days.",
+ th:"ผู้ตรวจสอบบัญชีทวงใบเสร็จของเดือนที่แล้ว คุณยังไม่ได้ส่งเพราะเมื่อวานเจอข้อผิดพลาด คุณต้องขอเวลาเพิ่มอีก 2 วัน",
+ chips:["I'm sorry, I didn't send them.","I found a mistake yesterday.","Could I have two more days, please?"],
+ turns:[
+  {npc:"Good morning. Did you send me last month's receipts?",
+   objs:[{k:"sorry", lab:"Say sorry", re:/\b(sorry|apologi[sz]e|afraid)\b/, ex:"I'm sorry, …"},
+         {k:"past", lab:"Say what happened", re:/\b(did not|have not|not yet|found|was|were|sent|checked|saw|had)\b/, ex:"I didn't send them. I found …"}],
+   model:"Good morning, Mr Eriksen. I'm sorry, I didn't send them. I found a mistake yesterday."},
+  {npc:"I see. When can I have them?",
+   objs:[{k:"request", lab:"Ask politely for more time", re:/\b(could|can|may|would) (i|we|you)\b/, ex:"Could I have …, please?"},
+         {k:"time", lab:"Say how long, or which day", re:scRe("\\b(2 (more )?days|"+SC_DAY+")\\b"), ex:"… two more days."}],
+   model:"Could I have two more days, please? I will send them on Friday."}]},
+
+{id:"o7", deck:"office", lvl:"A2", npc:"mike", fd:["d7"], title:"The late payment",
+ sit:"A supplier phones you. His payment is thirty days late because the bank details were wrong. You will pay on Friday.",
+ th:"ซัพพลายเออร์โทรมาเรื่องการจ่ายเงินล่าช้า 30 วัน เพราะข้อมูลธนาคารผิด คุณจะจ่ายวันศุกร์",
+ chips:["I'm sorry about the delay.","There was a problem with the bank details.","We will pay on …"],
+ turns:[
+  {npc:"Hi, this is Mike Turner. We're still waiting for our payment. It's thirty days late. What's happening?",
+   objs:[{k:"sorry", lab:"Say sorry", re:/\b(sorry|apologi[sz]e|afraid)\b/, ex:"I'm sorry, Mr Turner."},
+         {k:"explain", lab:"Explain the problem", re:/\b(problem|mistake|wrong|error|bank|details|incorrect)\b/, ex:"There was a problem with …"}],
+   model:"I'm sorry, Mr Turner. There was a problem with the bank details."},
+  {npc:"OK. So when will you pay?",
+   objs:[{k:"plan", lab:"Say the plan — We will … / We're going to …", re:/\b(will|going to|can)\b/, ex:"We will pay …"},
+         {k:"time", lab:"Say which day", re:scRe("\\b"+SC_DAY+"\\b"), ex:"… on Friday."}],
+   model:"We will pay on Friday. I'll send you an email today."}]},
+
+{id:"o8", deck:"office", lvl:"A2–B1", npc:"anan", fd:["d8","d12"], title:"Ask the boss",
+ sit:"You need Wing Commander Anan's signature on a payment form today. A foreign guest is in his office, so everyone speaks English. The bank closes at three.",
+ th:"คุณต้องขอลายเซ็นจาก Wing Commander Anan ในแบบฟอร์มการจ่ายเงินวันนี้ มีแขกต่างชาติอยู่ในห้อง จึงต้องพูดภาษาอังกฤษ ธนาคารปิดบ่ายสาม",
+ chips:["Excuse me, Sir.","Could you sign this form, please?","The bank closes at three today."],
+ turns:[
+  {npc:"Yes? Come in.",
+   objs:[{k:"name", lab:"Use the right name for him", re:/\b(sir|wing commander)\b/, ex:"Excuse me, Sir."},
+         {k:"request", lab:"Ask politely for his signature", re:/\b(could|would|may) (you|i)\b|\bcan (you|i)\b.*\bplease\b|\bplease\b.*\bcan (you|i)\b/, ex:"Could you sign …, please?"}],
+   model:"Excuse me, Sir. Could you sign this payment form, please?"},
+  {npc:"Of course. Is it urgent?",
+   objs:[{k:"explain", lab:"Say why it is urgent", re:/\b(today|bank|closes?|closing|deadline|before|3|this afternoon)\b/, ex:"Yes, Sir. The bank closes at …"},
+         {k:"thank", lab:"Thank him", re:/\b(thank you|thanks)\b/, ex:"Thank you, Sir."}],
+   model:"Yes, Sir. The bank closes at three today. Thank you, Sir."}]},
+
+/* ------------------------------ VISITORS ------------------------------ */
+{id:"v1", deck:"visitors", lvl:"A2", npc:"tom", fd:["d2"], title:"Where is the briefing room?",
+ sit:"A visiting officer is lost in your building. The briefing room is on the second floor, next to the lift. The session starts at nine.",
+ th:"นายทหารต่างชาติหลงทางในอาคาร ห้องบรรยายสรุปอยู่ชั้น 2 ข้างลิฟต์ และเริ่มเวลา 9 โมง",
+ chips:["It's on the second floor.","It's next to the lift.","It starts at nine o'clock."],
+ turns:[
+  {npc:"Excuse me. Where is the briefing room?",
+   objs:[{k:"place", lab:"Say where it is", re:/\b(floor|next to|lift|elevator|upstairs|left|right|straight|opposite|near)\b/, ex:"It's on the second floor, next to …"}],
+   model:"It's on the second floor, next to the lift."},
+  {npc:"Thanks. And what time does the session start?",
+   objs:[{k:"time", lab:"Say the time", re:/\b(9|nine)\b/, ex:"It starts at …"}],
+   model:"It starts at nine o'clock."}]},
+
+{id:"v2", deck:"visitors", lvl:"A2", npc:"jessica", fd:["d4","d8"], title:"No booking",
+ sit:"You arrive at a hotel in Washington. You booked three nights, but the front desk cannot find your booking. Your confirmation number is 4729.",
+ th:"คุณมาถึงโรงแรมที่วอชิงตัน คุณจองไว้ 3 คืน แต่พนักงานหาการจองของคุณไม่เจอ หมายเลขยืนยันการจองคือ 4729",
+ chips:["I have a booking for three nights.","Could you check again, please?","My confirmation number is …"],
+ turns:[
+  {npc:"Good evening, and welcome to the Capitol View. I'm sorry, I can't find your booking.",
+   objs:[{k:"explain", lab:"Say you have a booking", re:/\b(booking|reservation|booked|reserved|room)\b/, ex:"I have a booking for …"},
+         {k:"request", lab:"Ask her politely to check again", re:/\b(could|can|would) you\b/, ex:"Could you check …, please?"}],
+   model:"Good evening. I have a booking for three nights. Could you check again, please?"},
+  {npc:"Of course. Do you have a confirmation number?",
+   objs:[{k:"number", lab:"Give the number", re:/\b(4|for) ?7 ?(2|to|too) ?9\b/, ex:"Yes. It's four, seven, …"}],
+   model:"Yes. It's four, seven, two, nine."}]},
+
+{id:"v3", deck:"visitors", lvl:"A2", npc:"tom", fd:["d5"], title:"Welcome to the base",
+ sit:"You meet a visiting officer at the main gate. Welcome him, ask about his journey, and take him to the security office first.",
+ th:"คุณไปรับนายทหารต่างชาติที่ประตูใหญ่ กล่าวต้อนรับ ถามเรื่องการเดินทาง แล้วพาไปสำนักงานรักษาความปลอดภัยก่อน",
+ chips:["Welcome to the base.","How was your flight?","Please come with me."],
+ turns:[
+  {npc:"Hello! I'm Tom Hughes. I'm here for the exercise week.",
+   objs:[{k:"greet", lab:"Welcome him", re:/\b(welcome|nice to meet you|pleased to meet you|good (morning|afternoon))\b/, ex:"Welcome to the base, …"},
+         {k:"ask", lab:"Ask about his journey", re:/\b(how|where|when|what|did)\b.*\b(flight|trip|journey|hotel|stay|staying|arrive|travel)\b/, ex:"How was your …?"}],
+   model:"Welcome to the base, Flight Lieutenant Hughes. How was your flight?"},
+  {npc:"Long, but fine, thanks. Where do I go first?",
+   objs:[{k:"place", lab:"Say where to go first", re:/\b(security|office|room|building|gate|come with|follow|this way)\b/, ex:"Please come with me. First, we will go to …"}],
+   model:"Please come with me. First, we will go to the security office."}]},
+
+{id:"v4", deck:"visitors", lvl:"A2", npc:"hayes", fd:["d6"], title:"Yesterday's meeting",
+ sit:"Colonel Hayes missed the finance meeting yesterday. You talked about the travel budget, and Wing Commander Anan approved the plan. Nobody sent the notes.",
+ th:"Colonel Hayes ไม่ได้เข้าประชุมการเงินเมื่อวาน ที่ประชุมคุยเรื่องงบเดินทาง และ Wing Commander Anan อนุมัติแผนแล้ว ยังไม่มีใครส่งบันทึกการประชุม",
+ chips:["We talked about the travel budget.","Wing Commander Anan approved the plan.","I will send the notes this afternoon."],
+ turns:[
+  {npc:"I missed the finance meeting yesterday. What did you discuss?",
+   objs:[{k:"past", lab:"Say what you talked about", re:/\b(budget|travel|plan|cost|money)\b/, ex:"We talked about …"},
+         {k:"past", lab:"Say what was decided", re:/\b(approved?|agreed?|decided?|said yes|said okay|accepted?|signed?)\b|\bplan (is|was) okay\b/, ex:"Wing Commander Anan approved …"}],
+   model:"We talked about the travel budget, Ma'am. Wing Commander Anan approved the plan."},
+  {npc:"Good. Did anyone send the notes?",
+   objs:[{k:"plan", lab:"Offer to send them, and say when", re:scRe("\\b(will|can|going to)\\b.*\\b("+SC_DAY+"|now|soon|later|after lunch)\\b|\\b"+SC_DAY+"\\b.*\\b(will|can|going to)\\b"), ex:"Not yet. I will send them this …"}],
+   model:"Not yet, Ma'am. I will send them this afternoon."}]},
+
+{id:"v5", deck:"visitors", lvl:"A2", npc:"mark", fd:["d7"], title:"Tomorrow's plan",
+ sit:"Captain Ellis asks about tomorrow. The plan: a visit to the finance office at ten. He must bring his ID card.",
+ th:"Captain Ellis ถามกำหนดการวันพรุ่งนี้ แผนคือไปเยี่ยมชมแผนกการเงินตอน 10 โมง และเขาต้องนำบัตรประจำตัวมาด้วย",
+ chips:["Tomorrow we are going to visit …","… at ten o'clock.","Please bring your ID card."],
+ turns:[
+  {npc:"So, what's the plan for tomorrow?",
+   objs:[{k:"plan", lab:"Say the plan — We are going to … / We will …", re:/\b(going to|will|visit\w*|see|go to|plan is)\b/, ex:"Tomorrow we are going to visit …"},
+         {k:"time", lab:"Say the time", re:/\b(10|ten)\b/, ex:"… at ten o'clock."}],
+   model:"Tomorrow we are going to visit the finance office at ten o'clock."},
+  {npc:"Great. Do I need to bring anything?",
+   objs:[{k:"explain", lab:"Say what to bring", re:/\b(id|card|identification|passport)\b/, ex:"Yes, please bring your …"}],
+   model:"Yes, please bring your ID card."}]},
+
+{id:"v6", deck:"visitors", lvl:"A2–B1", npc:"hayes", fd:["d8","d9"], title:"The taxi claim",
+ sit:"Colonel Hayes wants to claim her taxi costs. You need her receipts. For a lost receipt, she must fill in a form.",
+ th:"Colonel Hayes ต้องการเบิกค่าแท็กซี่ คุณต้องขอใบเสร็จ ถ้าใบเสร็จหาย ท่านต้องกรอกแบบฟอร์ม",
+ chips:["Could you give me the receipts, please?","How many receipts do you have?","Could you fill in this form, please?"],
+ turns:[
+  {npc:"I'd like to claim my taxi costs. What do you need from me?",
+   objs:[{k:"request", lab:"Ask politely for the receipts", re:/\b(could|would|may|can) (you|i)\b.*\breceipts?\b|\breceipts?\b.*\b(could|would|may|can) (you|i)\b|\bplease\b.*\breceipts?\b|\breceipts?\b.*\bplease\b/, ex:"Could you give me …, please?"},
+         {k:"ask", lab:"Ask how many", re:/\bhow (many|much)\b/, ex:"How many receipts …?"}],
+   model:"Could you give me the receipts, please, Ma'am? How many receipts do you have?"},
+  {npc:"I have two receipts. I lost the third one.",
+   objs:[{k:"request", lab:"Ask her to fill in the form", re:/\b(form|fill|write|sign)\b/, ex:"No problem. Could you fill in …, please?"}],
+   model:"No problem, Ma'am. Could you fill in this form for the lost receipt, please?"}]},
+
+{id:"v7", deck:"visitors", lvl:"B1", npc:"mark", fd:["d10"], title:"The transfer came back",
+ sit:"Your US dollar payment to Captain Ellis's base came back from the bank. You need his new bank details today. Then you can pay again tomorrow.",
+ th:"เงินโอนดอลลาร์ที่จ่ายให้ฐานของ Captain Ellis ถูกธนาคารตีกลับ คุณต้องการข้อมูลธนาคารใหม่วันนี้ แล้วจะจ่ายอีกครั้งได้พรุ่งนี้",
+ chips:["I'm sorry about that.","If you send the new bank details today, …","… we will pay again tomorrow."],
+ turns:[
+  {npc:"Our bank says the transfer came back. What happens now?",
+   objs:[{k:"sorry", lab:"Say sorry", re:/\b(sorry|apologi[sz]e|afraid)\b/, ex:"I'm sorry, Captain Ellis."},
+         {k:"plan", lab:"Say the plan with if", re:/\bif\b.*\b(will|can|going to)\b|\b(will|can|going to)\b.*\bif\b/, ex:"If you send …, we will …"}],
+   model:"I'm sorry, Captain Ellis. If you send the new bank details today, we will pay again tomorrow."},
+  {npc:"And if the details are wrong again?",
+   objs:[{k:"plan", lab:"Say what you will do then", re:/\b(will|can|going to)\b.*\b(call|check|phone|confirm|email|contact|tell)\b/, ex:"Then I will call you and …"}],
+   model:"Then I will call you, and we will check them together."}]},
+
+{id:"v8", deck:"visitors", lvl:"B1", npc:"eriksen", fd:["d11"], title:"Status report",
+ sit:"The auditor asks about three March payments. Two were made last week. One was returned by the bank, because the account number was wrong.",
+ th:"ผู้ตรวจสอบบัญชีถามสถานะการจ่ายเงิน 3 รายการของเดือนมีนาคม จ่ายแล้ว 2 รายการเมื่อสัปดาห์ที่แล้ว อีก 1 รายการถูกธนาคารตีกลับเพราะเลขบัญชีผิด",
+ chips:["Two payments were made last week.","One payment was returned by the bank.","The account number was wrong."],
+ turns:[
+  {npc:"What is the status of the three March payments?",
+   objs:[{k:"past", lab:"Say two were made", re:/\b(2|two)\b.*\b(paid|made|sent|done|completed)\b|\b(paid|made|sent)\b.*\b(2|two)\b/, ex:"Two payments were made …"},
+         {k:"past", lab:"Say one was returned", re:/\b(1|one|the other|the third|the last)\b.*\b(returned|came back|sent back|rejected)\b/, ex:"One payment was returned by …"}],
+   model:"Two payments were made last week. One payment was returned by the bank."},
+  {npc:"Why was it returned?",
+   objs:[{k:"explain", lab:"Say why", re:/\b(wrong|mistake|incorrect|error|not correct)\b/, ex:"Because the account number was …"}],
+   model:"Because the account number was wrong."}]},
+
+/* ------------------------------ SOCIAL ------------------------------ */
+{id:"s1", deck:"social", lvl:"A2", npc:"tom", fd:["d1"], title:"What do you do?",
+ sit:"Coffee break on the first day of the exercise. A visiting officer starts a friendly chat about your job and your boss.",
+ th:"ช่วงพักกาแฟวันแรกของการฝึก นายทหารต่างชาติชวนคุยเรื่องงานของคุณและหัวหน้าของคุณ",
+ chips:["I work in the Finance Division.","I check invoices and payments.","He signs all the payments."],
+ turns:[
+  {npc:"Hi! I'm Tom. So, what do you do here?",
+   objs:[{k:"explain", lab:"Say your job or your division", re:/\b(financ\w*|account\w*|invoices?|payments?|budgets?)\b/, ex:"I work in the …"}],
+   model:"I work in the Finance Division. I check invoices and payments."},
+  {npc:"Interesting! And your boss, what does he do?",
+   objs:[{k:"explain", lab:"Say what your boss does", re:/\b(manag|sign|check|approv|lead|run|work|control|head|command|chief|director|charge)\w*\b|\bboss of\b/, ex:"He signs …"}],
+   model:"He manages the division. He signs all the payments."}]},
+
+{id:"s2", deck:"social", lvl:"A2", npc:"sarah", fd:["d3","d4"], title:"Welcome dinner",
+ sit:"A welcome dinner for the course. Your instructor sits next to you and looks at the Thai food on the table.",
+ th:"งานเลี้ยงต้อนรับของหลักสูตร ครูผู้สอนนั่งข้างคุณและมองอาหารไทยบนโต๊ะ",
+ chips:["Yes, I do. I love spicy food.","Do you like Thai food?","Try this one. It isn't spicy."],
+ turns:[
+  {npc:"This green curry looks wonderful. Do you eat spicy food?",
+   objs:[{k:"explain", lab:"Answer about yourself", re:/\b(yes|no|i (do|love|like|eat|can))\b/, ex:"Yes, I do. I love …"},
+         {k:"ask", lab:"Ask her a question back", re:/\b(do|can|are|would|did|have) you\b|\b(how|what) about you\b|\band you\b/, ex:"Do you like …?"}],
+   model:"Yes, I do. I love spicy food. Do you like Thai food?"},
+  {npc:"I do, but I don't eat very spicy food.",
+   objs:[{k:"suggest", lab:"Suggest a dish that is not spicy", re:/\b(try|recommend|should|not spicy|not hot|mild|how about|would you like|this (1|one|dish|soup))\b/, ex:"Try this one. It isn't …"}],
+   model:"Then try this one. It isn't spicy."}]},
+
+{id:"s3", deck:"social", lvl:"A2", npc:"tom", fd:["d6"], title:"Your UK degree",
+ sit:"At the squadron welcome dinner, a British officer hears that you studied in the UK. He wants to know more.",
+ th:"ในงานเลี้ยงต้อนรับของฝูงบิน นายทหารอังกฤษรู้ว่าคุณเคยเรียนที่สหราชอาณาจักร และอยากรู้เพิ่มเติม",
+ chips:["I studied business administration.","I lived there for three years.","I loved it, but it was very cold."],
+ turns:[
+  {npc:"I hear you studied in the UK. What did you study?",
+   objs:[{k:"past", lab:"Say what you studied", re:/\b(business|administration|management|account\w*|financ\w*|economics|marketing|law|english|mba|master\w*|bachelor\w*|degree)\b|\bstudied (?!in\b|there\b|at\b|abroad\b)\w+/, ex:"I studied …"}],
+   model:"I studied business administration."},
+  {npc:"Lovely! Did you like it there?",
+   objs:[{k:"past", lab:"Say if you liked it", re:/\b(yes|no|liked|loved|enjoyed|did|was|were)\b/, ex:"Yes, I loved it, …"},
+         {k:"explain", lab:"Add one detail — weather, food, people …", re:/\b(weather|food|people|cold|rain\w*|friends?|city|expensive|beautiful|friendly|quiet|miss\w*)\b/, ex:"… but it was very cold."}],
+   model:"Yes, I loved it, but the weather was very cold."}]},
+
+{id:"s4", deck:"social", lvl:"A2", npc:"mark", fd:["d5"], title:"Bangkok traffic",
+ sit:"Coffee break. Captain Ellis arrived late because of the traffic. Make small talk with him.",
+ th:"ช่วงพักกาแฟ Captain Ellis มาสายเพราะรถติด ชวนเขาคุยเล่น",
+ chips:["I take the BTS. It's faster.","Where are you staying?","You should visit the Grand Palace."],
+ turns:[
+  {npc:"The traffic this morning was terrible! How do you get to work?",
+   objs:[{k:"explain", lab:"Say how you get to work", re:/\b(car|bus|train|taxi|motorbike|motorcycle|bts|mrt|skytrain|drive|walk|boat)\b/, ex:"I take the …"},
+         {k:"ask", lab:"Ask him a question back", re:/\b(where|how|what|when|do|are|did) (are |do |did |is )?you\w*\b|\b(how|what) about you\b|\band you\b/, ex:"Where are you …?"}],
+   model:"I take the BTS. It's faster than a car. Where are you staying?"},
+  {npc:"At a hotel near the river. What should I see this weekend?",
+   objs:[{k:"suggest", lab:"Suggest a place", re:/\b(should|can|could|try|visit|go to|recommend|how about|see)\b/, ex:"You should visit …"}],
+   model:"You should visit the Grand Palace. Go early in the morning."}]},
+
+{id:"s5", deck:"social", lvl:"A2", npc:"sarah", fd:["d7"], title:"Weekend plans",
+ sit:"Friday afternoon, after class. Your instructor asks about the weekend. She is free on Sunday and wants an idea.",
+ th:"บ่ายวันศุกร์หลังเลิกเรียน ครูผู้สอนถามเรื่องแผนวันหยุด เธอว่างวันอาทิตย์และอยากได้คำแนะนำ",
+ chips:["I'm going to visit my parents.","… on Saturday.","You could go to Chatuchak Market."],
+ turns:[
+  {npc:"Finally, Friday! Any plans for the weekend?",
+   objs:[{k:"plan", lab:"Say your plan — I'm going to … / I will …", re:/\b(going to|will|plan to|want to|am (visiting|meeting|staying|going|seeing))\b/, ex:"I'm going to …"}],
+   model:"I'm going to visit my parents on Saturday."},
+  {npc:"That sounds nice. I have a free day on Sunday. Any ideas?",
+   objs:[{k:"suggest", lab:"Suggest something to do", re:/\b(should|can|could|try|visit|go to|recommend|how about|see|maybe|why not)\b/, ex:"You could go to …"}],
+   model:"You could go to Chatuchak Market. It's open on Sundays."}]},
+
+{id:"s6", deck:"social", lvl:"A2–B1", npc:"hayes", fd:["d8","d12"], title:"A photo, please",
+ sit:"At the farewell dinner, your team wants a photo with Colonel Hayes. You are the one who asks her.",
+ th:"ในงานเลี้ยงอำลา ทีมของคุณอยากถ่ายรูปกับ Colonel Hayes และคุณเป็นคนไปขอ",
+ chips:["Excuse me, Colonel Hayes.","Could we take a photo with you, please?","Here in the middle, please, Ma'am."],
+ turns:[
+  {npc:"What a lovely evening.",
+   objs:[{k:"name", lab:"Use the right name for her", re:scRe("\\bcolonel\\b(?! sarah)|\\b"+SC_MAAM+"\\b"), ex:"Excuse me, Colonel Hayes."},
+         {k:"request", lab:"Ask politely for a photo", re:/\b(could|would|may|can) (we|i|you)\b/, ex:"Could we take …, please?"}],
+   model:"Excuse me, Colonel Hayes. Could we take a photo with you, please?"},
+  {npc:"Of course! Where should I stand?",
+   objs:[{k:"place", lab:"Say where to stand", re:/\b(here|next to|middle|centre|center|front|beside|between|left|right)\b/, ex:"Here in the middle, …"},
+         {k:"thank", lab:"Thank her", re:/\b(thank you|thanks)\b/, ex:"Thank you, Ma'am."}],
+   model:"Here in the middle, please, Ma'am. Thank you."}]},
+
+{id:"s7", deck:"social", lvl:"B1", npc:"tom", fd:["d10"], title:"If you had a free week",
+ sit:"Dinner conversation. Tom likes to ask 'imagine' questions. Answer with I would …",
+ th:"คุยกันระหว่างมื้อค่ำ Tom ชอบถามคำถามแบบสมมุติ ตอบโดยใช้ would",
+ chips:["I would go to Chiang Mai.","I would visit the mountains.","If you come again, you should …"],
+ turns:[
+  {npc:"Here's a question. If you had a free week, where would you go?",
+   objs:[{k:"explain", lab:"Say where you would go — I would …", re:/\bwould (go|visit|travel|stay|like|love|fly|take|see|spend)\b/, ex:"I would go to …"}],
+   model:"I would go to Chiang Mai. I would visit the mountains."},
+  {npc:"Nice. And if I come to Thailand again, what should I do?",
+   objs:[{k:"suggest", lab:"Suggest something for his next visit", re:/\b(should|can|could|try|visit|go to|recommend|see|must)\b/, ex:"If you come again, you should …"}],
+   model:"If you come again, you should visit the islands in the south."}]},
+
+{id:"s8", deck:"social", lvl:"A2–B1", npc:"tom", fd:["d12"], title:"Saying goodbye",
+ sit:"The exercise week is over. Flight Lieutenant Hughes flies home tonight. Thank him and say goodbye.",
+ th:"สัปดาห์การฝึกจบแล้ว Flight Lieutenant Hughes จะบินกลับคืนนี้ กล่าวขอบคุณและกล่าวลา",
+ chips:["Thank you for everything.","Have a safe flight.","Please keep in touch. Goodbye!"],
+ turns:[
+  {npc:"Well, that's the end of the week. I fly home tonight.",
+   objs:[{k:"thank", lab:"Thank him", re:/\b(thank you|thanks)\b/, ex:"Thank you for …"},
+         {k:"bye", lab:"Wish him a good journey", re:/\b(safe|good|nice|great) (flight|trip|journey|travel\w*)\b|\bgood luck\b|\ball the best\b|\btake care\b|\bbon voyage\b|\bhave a (good|nice|safe) (1|day|time)\b/, ex:"Have a safe …"}],
+   model:"Thank you for everything, Flight Lieutenant Hughes. Have a safe flight."},
+  {npc:"Thanks. I hope we meet again.",
+   objs:[{k:"bye", lab:"Say goodbye", re:/\b(goodbye|bye|see you|take care|keep in touch|hope so|me too|again)\b/, ex:"I hope so too. Goodbye!"}],
+   model:"I hope so too. Please keep in touch. Goodbye!"}]}
+];
+
+/* grammar slips: logged to the radar and shown as one note in the debrief — never graded.
+   Each: [test(norm) → matched text or "", radar tag, note] */
+const SC_AUX = /^(does|did|do|can|could|will|would|should|must|may|might|let|make|makes|made|help|helps|see|saw|and|or)$/;
+function scFind(n, re, guard){
+  const m = re.exec(n); if (!m) return "";
+  if (guard) { const prev = n.slice(0, m.index).trim().split(" ").pop() || ""; if (SC_AUX.test(prev)) return ""; }
+  return m[0];
+}
+const SC_SLIPS = [
+  [n => scFind(n, /\b(he|she) (work|check|sign|pay|manage|need|want|start|go|have|do|approve|live)\b(?! not)/, true), "Verb -s", "After he / she, add -s: he signs, she checks, he has."],
+  [n => scFind(n, /\b(khun \w+|wing commander anan|my boss) (check|sign|pay|manage|approve)\b/, true), "Verb -s", "One person → verb + s: Khun Nok checks, my boss signs."],
+  [n => scFind(n, /\bthere is (2|3|4|5|6|7|8|9|\d\d+|many|two|three)\b/), "There is / are", "More than one → there are: There are three invoices."],
+  [n => scFind(n, /\bthere are (1|a|an|one) (?!lot|few|couple|number)/), "There is / are", "One thing → there is: There is a problem."],
+  [n => scFind(n, /\b(i|we|they|you) (no|not) (have|need|know|like|eat|send|want|finish)\b/), "Negatives", "Use don't + verb: I don't have it."],
+  [n => scFind(n, /\b(it|he|she) (do not|no) (?!longer|problem|one|1)\w+\b/), "Negatives", "With he / she / it use doesn't or isn't: It isn't ready."],
+  [n => scFind(n, /\b(where|what time|how) (you|he|she|i) (go|stay|start|work|come|arrive|get|live)\b/), "Wh- questions", "Put the helper after the question word: Where do you stay? Where are you staying?"],
+  [n => scFind(n, /\bdid (you|he|she|they|we|i|not) (sent|went|paid|checked|found|finished|saw|had|got|came|made|signed|approved)\b/), "Past simple", "After did / didn't, use the base verb: Did you send …? I didn't send them."],
+  [n => scFind(n, /\bdoes (not )?(\w+ )?(has|signs|checks|pays|goes|works|needs|wants)\b/), "Verb -s", "After does / doesn't, no -s: Does she have …? She doesn't have …"],
+  [n => { const m = /\b(it|report|invoice|payment|form|transfer) (not|no) (ready|finished|correct|done|right)\b/.exec(n); if (!m) return ""; return /\b(is|was)$/.test(n.slice(0, m.index).trim()) ? "" : m[0]; }, "Negatives", "Add is: It isn't ready."],
+  [n => scFind(n, /\byesterday (i|we|he|she|they) (send|go|check|pay|find|finish|discuss|talk|have|see|call|email|phone|sign|approve|meet|tell|ask)\b/) || scFind(n, /\b(i|we) (send|go|check|pay|find|finish|discuss|talk|see) (it |them |a \w+ |the \w+ )?(yesterday|last (week|month|night|year))\b/), "Past simple", "Yesterday / last week → past form: sent, went, checked, paid, found."],
+  [n => scFind(n, /\b(i|we|he|she|they|you) going to\b/, true), "Future", "Going to needs am / is / are: I am going to visit."],
+  [n => scFind(n, /\bwill (to|paid|sent|going|went)\b/), "Future", "After will, use the base verb: I will send it."],
+  [n => scFind(n, /\bcould (you|i|we) to\b/), "Polite requests", "No to after could: Could you sign this, please?"],
+  [n => scFind(n, /\bi want (?!to (go|visit|travel|stay|see|eat|try|say|rest|relax|meet|shop|thank|learn)\b)/), "Polite requests", "Softer with a senior or a visitor: Could I have … ? / I'd like …"],
+  [n => scFind(n, /\bhow much (receipts|invoices|people|days|copies|nights)\b/), "Countable / uncountable", "Things you count → how many: How many receipts?"],
+  [n => scFind(n, /\bhow many (money|information|time)\b/) || scFind(n, /\b(informations|advices|equipments)\b/), "Countable / uncountable", "Money, information and time are not counted: how much money, some information."],
+  [n => scFind(n, /\bif (you|i|we|it|they|the \w+) will\b/), "Conditionals", "No will after if: If you send it today, we will pay tomorrow."],
+  [n => scFind(n, /\b(payments?|invoices?|report|transfer|budget|form|receipts?) (already )?(paid|approved|sent|returned|signed|received|made)\b/), "Passive", "The thing needs be: The payment was returned. Two payments were paid."],
+  [n => scFind(n, /\bcolonel sarah\b/) || scFind(n, /\b(mr|mister) (lars|tom|mark|mike)\b/) || scFind(n, /\b(captain|flight lieutenant) (mark|tom)\b/) || scFind(n, /\bkhun (eriksen|hayes|ellis|hughes|tom|mark|mike|sarah)\b/), "Address & register", "Rank or Mr + family name: Colonel Hayes, Mr Eriksen."]
+];
+function scSlip(n){ for (const s of SC_SLIPS) { const hit = s[0](n); if (hit) return {said: hit, tag: s[1], msg: s[2]}; } return null; }
+
+const SC_REPAIR = /\b(say|repeat|sing|stay) (that|it|this)( again)?\b|\b(could|can|would) you repeat\b|\b(say|speak|repeat)( it| that)? (again|slowly|more slowly|slower)\b|\b(pardon|once more|once again|one more time|1 more time)\b|\bi (do not|did not) (understand|catch)\b|\bwhat did you say\b/;
+const SC_REPAIR_G = new RegExp(SC_REPAIR.source, "g");
+const SC_POLITE = /\b(sorry|excuse me|please|could|can|would|you|sir|maam|mam|madam|ma am|colonel|hayes|mr|eriksen|turner|captain|ellis|flight lieutenant|hughes|wing commander|anan|me|i|the|question|again)\b/g;
+
+/* check one answer against the objectives of the turn */
+function scEval(turn, raw){
+  raw = String(raw || "").replace(/\bgonna\b/gi, "going to").replace(/\bwanna\b/gi, "want to")
+    .replace(/\b(is|are|was|were|do|does|did|have|has|could|would|should)nt\b/gi, "$1 not").replace(/\bcant\b/gi, "can not").replace(/\bwont\b/gi, "will not").replace(/\bim\b/gi, "i am");
+  const n = gsNorm(raw).replace(FD_FILL, " ").replace(/\s+/g, " ").trim();
+  const r = {norm: n, status: "ok", hits: turn.objs.map(() => false), slip: null};
+  if (!n) { r.status = "empty"; return r; }
+  // the repair phrase first: if little is left after taking out the repair words and polite words, it is a repair, never an answer
+  if (SC_REPAIR.test(n)) {
+    const rest = n.replace(SC_REPAIR_G, " ").replace(SC_POLITE, " ").trim().split(/\s+/).filter(Boolean);
+    if (rest.length < 2) { r.status = "repair"; return r; }
+  }
+  const w = n.split(" ");
+  // saying the person's own words back adds nothing: no credit
+  if (w.length >= 3 && gsLCS(w, gsNorm(turn.npc).split(" ")).n === w.length) return r;
+  r.hits = turn.objs.map(o => o.re.test(n));
+  if (SC_REPAIR.test(n) && !r.hits.every(Boolean)) { r.status = "repair"; r.hits = turn.objs.map(() => false); return r; }
+  // a short answer is fine when it does the whole job ("Tomorrow morning."); otherwise ask for a full sentence
+  if (w.length < 3 && !(w.length === 2 && r.hits.every(Boolean))) { r.status = "short"; r.hits = turn.objs.map(() => false); return r; }
+  r.slip = scSlip(n);
+  return r;
+}
+
+/* ---------- state (inside gs → syncs and logs with no backend change) ---------- */
+const SC_PRE = 20;                         // seconds of pre-flight
+const SC_CAP = [100, 90, 80, 70];          // score cap after 0 / 1 / 2 / 3 phrase chips
+function scS(){ if (!gs.sc || typeof gs.sc !== "object") gs.sc = {}; const s = gs.sc; s.c = s.c || {}; s.k = s.k || {}; return s; }
+const scCard = id => SC_CARDS.find(c => c.id === id);
+const scNeeds = c => c.fd.filter(d => !fdS().best[d]);                   // formations still to fly before this card opens
+const scOpen = c => !!store.free || !!scS().live || scNeeds(c).length === 0;
+const scDue = c => { const s = scS().c[c.id]; return !!(s && s.due && s.due <= fdToday()); };
+const scStampTxt = {c: "Cleared", p: "Partial", m: "Not yet"};
+function scPick(deck){
+  const pool = SC_CARDS.filter(c => (!deck || c.deck === deck) && scOpen(c)), st = scS().c;
+  const due = pool.filter(scDue).sort((a, b) => (st[a.id].due < st[b.id].due ? -1 : 1));
+  if (due.length) return due[0];
+  const unseen = pool.filter(c => !st[c.id]); if (unseen.length) return unseen[0];
+  const again = pool.filter(c => st[c.id].s !== "c"); if (again.length) return again[Math.floor(Math.random() * again.length)];
+  return pool.length ? pool[Math.floor(Math.random() * pool.length)] : null;
+}
+
+/* ---------- home: the three decks ---------- */
+let SCP = null, scTick = null;
+function renderSCHome(){
+  view = "home"; gsStopAudio(); clearInterval(scTick); GSP = null; FDP = null; SCP = null;
+  const s = scS(), mic = gsMicStatus(), st = s.c;
+  const seen = SC_CARDS.filter(c => st[c.id]).length, cleared = SC_CARDS.filter(c => st[c.id] && st[c.id].s === "c").length, due = SC_CARDS.filter(scDue).length;
+  const openN = SC_CARDS.filter(scOpen).length;
+  const tile = c => {
+    const r = st[c.id], open = scOpen(c), needs = scNeeds(c), p = GS_PEOPLE[c.npc];
+    const forms = c.fd.map(d => `<span class="chip">F${fdD(d).idx + 1} ${esc(fdD(d).short)}</span>`).join(" ");
+    if (!open) return `<div class="sc-tile lock"><span class="sc-ti" aria-hidden="true">🔒</span><div><b>Locked card · ${esc(c.lvl)}</b><small>Fly ${needs.map(d => "Formation " + (fdD(d).idx + 1)).join(" and ")} first</small></div>
+      <button class="dbtn" data-scfd="${needs[0]}">Go ▸</button></div>`;
+    if (!r && !s.live) return `<div class="sc-tile new"><span class="sc-ti" aria-hidden="true">🂠</span><div><b>Unseen card · ${esc(c.lvl)}</b><small>${forms}</small></div></div>`;
+    return `<div class="sc-tile ${r ? r.s : "new"}"><span class="sc-ti">${gsAvatar(c.npc, 34)}</span><div><b>${esc(c.title)}</b>
+        <small>${r ? `<span class="sc-st ${r.s}">${scStampTxt[r.s]}</span> · best ${r.best}%${scDue(c) ? ` · <b class="fd-due">due</b>` : ""}` : esc(c.lvl) + " · with " + esc(p.short)} ${forms}</small></div>
+      <button class="dbtn" data-scgo="${c.id}">${s.live ? "Deal ▸" : "↺ Again"}</button></div>`;
+  };
+  const decks = SC_DECKS.map(d => {
+    const cs = SC_CARDS.filter(c => c.deck === d.id), can = cs.some(scOpen);
+    return `<article class="fd-card sc-deck"><div class="fd-ch"><span class="fd-ic" aria-hidden="true">${d.icon}</span><div><div class="kick">${esc(d.lvl)} · ${cs.filter(c => st[c.id] && st[c.id].s === "c").length}/${cs.length} cleared</div><h3>${esc(d.name)}</h3></div></div>
+      <p class="sc-dd">${esc(d.desc)}</p>
+      <button class="btn" data-scdraw="${d.id}" ${can ? "" : "disabled"}>🎴 Draw a card ▸</button>
+      <div class="sc-tiles">${cs.map(tile).join("")}</div></article>`;
+  }).join("");
+  const kinds = Object.entries(s.k).filter(([k, v]) => SC_KINDS[k] && v[1] >= 2).map(([k, v]) => [k, v[0], v[1], v[0] / v[1]]).sort((a, b) => a[3] - b[3]).slice(0, 5);
+  $("#app").innerHTML = `
+  <div class="tabs" role="tablist" aria-label="Campaigns">${allTabsHTML("sc")}</div>
+  <section class="cbanner sc-banner">
+    <div><div class="kick">Scramble · New situations, no script</div><h2>Draw a card. Handle it.</h2>
+      <p>A pilot on scramble takes off at short notice. Here you draw a situation you have <b>not seen before</b> and answer the person in your own words. Every card uses grammar from formations you have already flown. You get stamps for what you <b>do</b> (greet, ask, say when) — grammar slips are noted, not marked down.</p></div>
+    <div class="cstats">
+      <div class="cstat"><div class="v">${cleared}/${SC_CARDS.length}</div><div class="k">Cleared</div></div>
+      <div class="cstat"><div class="v">${seen}</div><div class="k">Cards flown</div></div>
+      <div class="cstat"><div class="v">${due}</div><div class="k">Due today</div></div>
+    </div>
+  </section>
+  <div class="gs-strip">
+    <span class="gs-mic ${mic.ok ? "ok" : "no"}">${mic.ok ? "🎙️" : "⚠️"} ${esc(mic.text)}</span>
+    <button class="hbtn" id="scVoiceChk">🔊 Voice &amp; mic check</button>
+    <button class="hbtn ${gs.slow ? "on" : ""}" id="scSlow">🐢 Slow voice: ${gs.slow ? "on" : "off"}</button>
+    <button class="hbtn ${s.live ? "on" : ""}" id="scLive">👩‍🏫 Lesson mode: ${s.live ? "on" : "off"}</button>
+  </div>
+  ${s.live ? `<div class="fd-livenote">👩‍🏫 <b>Lesson mode is on.</b> Share this screen in the online lesson and deal any card (all cards are open and named). Ms. Demii answers out loud on the call — no microphone in the app. The teacher marks each objective <b>✓</b>, <b>½</b> or <b>✗</b>, picks a grammar note and a fluency score. Results are saved and logged as <i>live</i>.</div>` : ""}
+  <div class="fd-review ${due || openN ? "" : "none"}">
+    <div><b>🚨 Scramble!</b><br><small>${!openN ? "No cards are open yet. Fly Formation 1 in Formation Drills to open your first card."
+      : due ? `${due} card${due > 1 ? "s" : ""} that needed help ${due > 1 ? "are" : "is"} back for another try.` : `${openN} of ${SC_CARDS.length} cards are open. A surprise card from any deck — the best test.`}</small></div>
+    <button class="btn" id="scAny" ${openN ? "" : "disabled"}>Scramble ▸</button></div>
+  <section class="fd-grid sc-grid">${decks}</section>
+  ${kinds.length ? `<section class="gs-radar"><h3>Your objective radar</h3><p>What you do first time on Scramble cards — lowest first. These are the moves to practise.</p>
+    ${kinds.map(([k, h, n, r]) => `<div class="gr-row"><span>${SC_KINDS[k].i} ${esc(SC_KINDS[k].n)}</span><span class="gr-bar"><i style="width:${Math.max(6, r * 100)}%"></i></span><b>${h}/${n}</b></div>`).join("")}</section>` : ""}
+  <details class="vocab" style="margin-top:14px"><summary>How Scramble works</summary>
+    <ol class="steps" style="margin-top:10px">
+      <li><span><b>Draw a card.</b> Read the situation (with a Thai line) and your objectives.</span></li>
+      <li><span><b>Pre-flight: ${SC_PRE} seconds.</b> Plan what to say. You can open up to three <b>phrase chips</b> — each one lowers your top score a little (100 → 90 → 80 → 70).</span></li>
+      <li><span><b>Answer the person</b> out loud, in your own words. Two short exchanges per card. Check what the app heard, then <b>Commit</b>.</span></li>
+      <li><span><b>Didn't catch it?</b> Say <i>“Sorry, could you say that again, please?”</i> — it is always a good move. The person repeats, more slowly.</span></li>
+      <li><span><b>Debrief.</b> One stamp for each objective: <b>Cleared</b> (first try), <b>Partial</b> (with help) or <b>Not yet</b>. Then one grammar note and the model answers.</span></li>
+    </ol>
+    <p style="font-size:.85rem;color:var(--ink-dim)">Cards open when you have flown their formations in Formation Drills. A card that was not cleared comes back after 1 or 3 days. On iPhone use <b>Safari</b> and earphones.</p></details>`;
+  document.querySelectorAll("[data-tab]").forEach(b => b.onclick = () => { store.tab = b.dataset.tab; save(); renderHome(); });
+  document.querySelectorAll("[data-scdraw]").forEach(b => b.onclick = () => { const c = scPick(b.dataset.scdraw); if (c) scBrief(c); });
+  document.querySelectorAll("[data-scgo]").forEach(b => b.onclick = () => scBrief(scCard(b.dataset.scgo)));
+  document.querySelectorAll("[data-scfd]").forEach(b => b.onclick = () => { store.tab = "fd"; save(); fdBrief(fdD(b.dataset.scfd)); });
+  $("#scAny").onclick = () => { const c = scPick(null); if (c) scBrief(c); };
+  try { const tb = document.querySelector(".tabs .tab.on"); if (tb && tb.scrollIntoView) tb.scrollIntoView({block: "nearest", inline: "center"}); } catch(e){}
+  $("#scVoiceChk").onclick = gsVoiceCheck;
+  $("#scSlow").onclick = () => { gs.slow = !gs.slow; gsSave(); renderSCHome(); };
+  $("#scLive").onclick = () => { s.live = !s.live; gsSave(); renderSCHome(); };
+}
+
+/* ---------- pre-flight ---------- */
+const scTurn = () => SCP.card.turns[SCP.ti];
+const scObjIcons = c => { const seen = new Set(), out = []; c.turns.forEach(t => t.objs.forEach(o => { if (!seen.has(o.k)) { seen.add(o.k); out.push(o.k); } })); return out; };
+function scBrief(c){
+  view = "scplay"; gsStopAudio(); clearInterval(scTick);
+  SCP = {card: c, ti: 0, phase: "pre", chips: [false, false, false], left: SC_PRE, live: !!scS().live, res: [], t0: Date.now()};
+  scRenderPre();
+  window.scrollTo({top: 0});
+  scTick = setInterval(() => {
+    if (!SCP || SCP.phase !== "pre") { clearInterval(scTick); return; }
+    SCP.left = Math.max(0, SCP.left - 1);
+    const el = $("#scClock"); if (el) { el.textContent = SCP.left; el.parentNode.classList.toggle("zero", SCP.left === 0); }
+    const go = $("#scGo"); if (go && SCP.left === 0) { go.textContent = "TIME — START ▸"; go.classList.add("pulse"); clearInterval(scTick); }
+  }, 1000);
+}
+const scChipsUsed = () => SCP.chips.filter(Boolean).length;
+function scChipsHTML(talk){
+  const c = SCP.card, used = scChipsUsed();
+  return `<div class="sc-chips">${c.chips.map((ph, i) => SCP.chips[i]
+      ? `<button class="sc-chip open" data-scsay="${i}">💬 ${esc(ph)} <span aria-hidden="true">🔊</span></button>`
+      : `<button class="sc-chip" data-scchip="${i}">💬 Phrase ${i + 1}${SCP.live ? "" : ` <small>top score → ${SC_CAP[Math.min(3, used + 1)]}</small>`}</button>`).join("")}</div>`;
+}
+function scBindChips(root, rerender){
+  root.querySelectorAll("[data-scchip]").forEach(b => b.onclick = () => { const i = +b.dataset.scchip; SCP.chips[i] = true; rerender(); gsSpeak(SCP.card.chips[i].replace(/…/g, ""), "helen", {rate: 0.85}); });
+  root.querySelectorAll("[data-scsay]").forEach(b => b.onclick = () => gsSpeak(SCP.card.chips[+b.dataset.scsay].replace(/…/g, ""), "helen", {rate: 0.85}));
+}
+function scRenderPre(){
+  const c = SCP.card, p = GS_PEOPLE[c.npc], d = SC_DECKS.find(x => x.id === c.deck), r = scS().c[c.id];
+  $("#app").innerHTML = `
+  <div class="pbar"><button class="btn ghost" id="scBack">&larr; Scramble</button><h2>🎴 ${esc(c.title)}</h2><span class="bdg lv">${esc(c.lvl)}</span>${SCP.live ? `<span class="bdg">👩‍🏫 Lesson mode</span>` : ""}</div>
+  <section class="sc-pre">
+    <div class="sc-cardface">
+      <div class="kick">${d.icon} ${esc(d.name)} deck · ${r ? "second look" : "new card"}</div>
+      <div class="fd-usewho">${gsAvatar(c.npc, 58)}<div><b>${esc(p.name)}</b> ${p.flag}<br><small>${esc(p.role)}</small></div></div>
+      <p class="sc-sit">${esc(c.sit)}</p>
+      <p class="sc-th" lang="th">${esc(c.th)}</p>
+      <div class="sc-objs">${scObjIcons(c).map(k => `<span class="sc-obj"><span aria-hidden="true">${SC_KINDS[k].i}</span> ${esc(SC_KINDS[k].n)}</span>`).join("")}</div>
+      <div class="sc-forms">Grammar you already know: ${c.fd.map(x => `<span class="chip">Formation ${fdD(x).idx + 1} · ${esc(fdD(x).short)}</span>`).join(" ")}</div>
+    </div>
+    <div class="sc-preside">
+      <div class="sc-clock" aria-live="off"><span id="scClock">${SCP.left}</span><small>seconds<br>pre-flight</small></div>
+      <p class="gs-fine">Plan your first sentence. Need help? Open a phrase — you can use it, change it, or just listen.</p>
+      <div id="scChipBox">${scChipsHTML()}</div>
+      <button class="commit" id="scGo">I'M READY ▸</button>
+      <p class="gs-fine">Didn't catch something? You can always say: <b>“Sorry, could you say that again, please?”</b></p>
+    </div>
+  </section>`;
+  $("#scBack").onclick = scLeave;
+  $("#scGo").onclick = () => { clearInterval(scTick); SCP.phase = "talk"; SCP.pre = SC_PRE - SCP.left; scBegin(); };
+  const bind = () => scBindChips($("#scChipBox"), () => { $("#scChipBox").innerHTML = scChipsHTML(); bind(); });
+  bind();
+}
+function scLeave(){
+  if (SCP && SCP.phase === "talk" && (SCP.ti > 0 || SCP.tries > 0) && !confirm("Leave this card? It will not be saved.")) return;
+  clearInterval(scTick); gsStopAudio(); renderSCHome();
+}
+
+/* ---------- the exchange ---------- */
+function scBegin(){
+  const t = scTurn();
+  Object.assign(SCP, {sub: "ready", lad: 0, tries: 0, repairs: 0, said: "", typed: false, live_: "", micErr: null, issue: null, slip: null,
+    hits: t.objs.map(() => false), first: t.objs.map(() => false), tm: t.objs.map(() => null), flu: 0, gtag: "", tSpoke: 0, secs: null, heard: []});
+  scRender();
+  scPlayNpc();
+}
+async function scPlayNpc(rate){
+  const me = SCP, ti = SCP.ti;
+  await gsSpeak(scTurn().npc, SCP.card.npc, rate ? {rate} : undefined);
+  if (SCP === me && SCP.ti === ti && !SCP.tSpoke) SCP.tSpoke = Date.now();
+}
+function scRender(){
+  const c = SCP.card, n = c.turns.length;
+  const dots = c.turns.map((_, i) => `<span class="gs-dot ${i < SCP.ti ? "done" : i === SCP.ti ? "cur" : ""}"></span>`).join("");
+  $("#app").innerHTML = `
+  <div class="pbar"><button class="btn ghost" id="scBack">&larr; Scramble</button><h2>🎴 ${esc(c.title)}</h2><span class="bdg lv">${esc(c.lvl)}</span>${SCP.live ? `<span class="bdg">👩‍🏫 Lesson mode</span>` : ""}
+    <span class="gs-dots" aria-label="Exchange ${SCP.ti + 1} of ${n}">${dots}</span></div>
+  <section class="fd-play">
+    <div class="fd-stage" id="scStage"></div>
+    <section class="gs-speak" id="scSpeak"></section>
+  </section>`;
+  $("#scBack").onclick = scLeave;
+  scRenderStage(); scRenderSpeak();
+}
+function scRenderStage(){
+  const el = $("#scStage"); if (!el) return;
+  const c = SCP.card, t = scTurn(), p = GS_PEOPLE[c.npc], done = SCP.sub === "passed";
+  el.innerHTML = `<div class="kick">Exchange ${SCP.ti + 1} of ${c.turns.length}</div>
+    <div class="fd-usewho">${gsAvatar(c.npc, 54)}<div><b>${esc(p.name)}</b> ${p.flag}<br><small>${esc(p.role)}</small></div></div>
+    <div class="gs-msg npc"><div class="gs-bub fd-ubub">${esc(t.npc)}<button class="gs-play" id="scRe" aria-label="Play again">🔊</button></div></div>
+    <div class="sc-todo"><div class="kick">Your objectives</div>
+      ${t.objs.map((o, i) => `<div class="sc-ob ${SCP.hits[i] ? "hit" : done ? "miss" : ""}"><span class="sc-tick" aria-hidden="true">${SCP.hits[i] ? "✓" : done ? "–" : "○"}</span><span aria-hidden="true">${SC_KINDS[o.k].i}</span> ${esc(o.lab)}</div>`).join("")}</div>
+    <details class="sc-sitd"><summary>Situation</summary><p>${esc(c.sit)}</p><p lang="th">${esc(c.th)}</p></details>
+    <div id="scChipBox2">${scChipsHTML(true)}</div>`;
+  $("#scRe").onclick = () => scPlayNpc();
+  scBindChips($("#scChipBox2"), scRenderStage);
+}
+function scCoachHTML(){
+  const t = scTurn(), I = SCP.issue; let h = "";
+  const miss = t.objs.map((o, i) => SCP.hits[i] ? null : o).filter(Boolean);
+  if (I === "short") h += `<div class="gs-c unclear">👂 <b>A little more, please.</b> Say a full sentence — three words or more.</div>`;
+  else if (I === "repair") h += `<div class="gs-c">👍 <b>Good move.</b> Asking the person to repeat is always fine. Listen again, then answer.</div>`;
+  else if (I === "miss") h += `<div class="gs-c">🧭 <b>${SCP.hits.some(Boolean) ? "Good start — one more thing." : "Not yet."}</b> Still to do: ${miss.map(o => `<b>${esc(o.lab)}</b>`).join(" · ")}.<br><small>Words on the screen wrong? Tap “Say again” next time, or type.</small></div>`;
+  if (SCP.lad >= 1) h += `<div class="gs-c">🧩 <b>Start like this:</b> ${miss.map(o => `<span class="fd-frame">${esc(o.ex)}</span>`).join(" ")}</div>`;
+  if (SCP.lad >= 2) h += `<div class="gs-c">🗣 <b>Model:</b> ${esc(t.model)} <button class="dbtn" id="scModel">🔊</button><div class="gs-msgx good">Now say it yourself — your own words are fine.</div></div>`;
+  return h;
+}
+function scRenderSpeak(){
+  const el = $("#scSpeak"); if (!el || !SCP) return;
+  const c = SCP.card, t = scTurn(), last = SCP.ti === c.turns.length - 1;
+  let body = "";
+  if (SCP.sub === "passed") {
+    const R = SCP.res[SCP.ti], all = R.st.every(x => x === "c"), any = R.st.some(x => x !== "m");
+    body = `<div class="gs-pass ${any ? "" : "sc-soft"}"><div class="gs-big-ok">${any ? "✓" : "→"}</div><div><b>${all ? "Cleared!" : any ? "Good — you got there." : "Let's keep moving."}</b>
+        <div class="sc-stamps">${t.objs.map((o, i) => `<span class="sc-st ${R.st[i]}">${SC_KINDS[o.k].i} ${scStampTxt[R.st[i]]}</span>`).join("")}</div>
+        <div class="gs-note">One good answer: <b>${esc(t.model)}</b> <button class="dbtn" id="scModel">🔊</button></div>
+        ${R.said && !SCP.live ? `<div class="gs-note">You said: ${esc(R.said)}</div>` : ""}</div></div>
+      <div class="gs-acts"><button class="commit" id="scNext">${last ? "DEBRIEF ▸" : "NEXT ▸"}</button></div>`;
+  } else if (SCP.live) {
+    const tags = FD_DRILLS.map(d => d.tag);
+    body = `<div class="gs-coach">${scCoachHTML()}</div>
+      <div class="fd-tbox"><div class="kick">Teacher · mark each objective</div>
+        ${t.objs.map((o, i) => `<div class="sc-trow"><span>${SC_KINDS[o.k].i} ${esc(o.lab)}</span><span class="sc-tb3">
+          <button class="fd-tb ok ${SCP.tm[i] === "c" ? "sel" : ""}" data-sct="${i}:c" aria-label="Cleared">✓</button><button class="fd-tb mid ${SCP.tm[i] === "p" ? "sel" : ""}" data-sct="${i}:p" aria-label="Partial">½</button><button class="fd-tb no ${SCP.tm[i] === "m" ? "sel" : ""}" data-sct="${i}:m" aria-label="Not yet">✗</button></span></div>`).join("")}
+        <div class="sc-trow"><span>🗣 Fluency</span><span class="sc-tb3">${[1, 2, 3].map(v => `<button class="fd-tb ${SCP.flu === v ? "sel mid" : ""}" data-scflu="${v}" aria-label="Fluency ${v} of 3">${v}</button>`).join("")}</span></div>
+        <label class="sc-trow"><span>📝 Grammar note</span><select id="scTag"><option value="">— none —</option>${tags.map(g => `<option ${SCP.gtag === g ? "selected" : ""}>${esc(g)}</option>`).join("")}</select></label>
+        <div class="gs-acts gs-under"><button class="dbtn" id="scHint" ${SCP.lad >= 2 ? "disabled" : ""}>💡 Show next hint</button><button class="dbtn" id="scModel">🔊 Model</button>
+          <button class="commit" id="scTSave" ${SCP.tm.every(Boolean) ? "" : "disabled"}>SAVE ▸</button></div></div>`;
+  } else {
+    const rec = SCP.sub === "rec", rev = SCP.sub === "review", typ = SCP.sub === "type";
+    let micArea;
+    if (rev) {
+      micArea = `<div class="gs-review"><div class="kick">Check — is this what you said?</div><div class="gs-heard">${esc(SCP.said)}</div>
+        <div class="gs-acts"><button class="dbtn gs-again" id="scAgain">🎤 Say again</button><button class="commit" id="scCommit">COMMIT ✓</button></div>
+        <button class="gs-link" id="scTypeFix">⌨ The words are wrong and “Say again” isn't working? Type it</button></div>`;
+    } else if (typ) {
+      micArea = `<div class="gs-review"><div class="kick">Type your answer</div>
+        <textarea id="scTypeIn" rows="2" autocapitalize="sentences" placeholder="Type what you want to say…">${esc(SCP.said || "")}</textarea>
+        <div class="gs-acts">${GS_SR ? `<button class="dbtn" id="scBackMic">🎤 Use the microphone</button>` : ""}<button class="commit" id="scTypeOk">CHECK ▸</button></div></div>`;
+    } else {
+      micArea = `<div class="gs-micwrap"><button class="gs-micbtn ${rec ? "rec" : ""}" id="scMic" aria-label="${rec ? "Stop" : "Speak"}">
+          <svg viewBox="0 0 24 24" width="38" height="38" aria-hidden="true"><path d="M12 15a3.5 3.5 0 0 0 3.5-3.5v-6a3.5 3.5 0 1 0-7 0v6A3.5 3.5 0 0 0 12 15z" fill="currentColor"/><path d="M18.5 11.5a6.5 6.5 0 0 1-13 0M12 18v3.5M8.5 21.5h7" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></button>
+        <div class="gs-mictxt">${rec ? `<b>Listening…</b> tap to stop<div class="gs-live" id="scLiveTx">${esc(SCP.live_ || "…")}</div>`
+          : `<b>Tap and answer in your own words</b><br><small>${GS_SR ? "Stop talking — or tap again — to finish" : esc(gsMicStatus().text)}</small>`}
+          ${SCP.micErr ? `<div class="gs-err">${gsMicErrText(SCP.micErr)}</div>` : ""}</div></div>
+        <div class="gs-acts gs-under"><button class="dbtn" id="scHint" ${SCP.lad >= 2 ? "disabled" : ""}>💡 Hint</button>
+          <button class="dbtn" id="scRepeat">🔁 Ask to repeat</button>
+          <button class="gs-link" id="scType">⌨ Type instead</button>
+          ${SCP.tries >= 2 ? `<button class="gs-link" id="scSkip">Move on ▸</button>` : ""}</div>`;
+    }
+    body = `<div class="gs-coach">${scCoachHTML()}</div>` + micArea;
+  }
+  el.innerHTML = `<div class="gs-score"><span>Exchange ${SCP.ti + 1} / ${c.turns.length}</span><span>Tries: ${SCP.tries}</span><span>Top score: ${SC_CAP[scChipsUsed()]}</span></div>` + body;
+  const on = (id, f) => { const b = document.getElementById(id); if (b) b.onclick = f; };
+  on("scMic", scMicStart);
+  on("scAgain", () => { SCP.said = ""; scMicStart(); });
+  on("scCommit", scCommit);
+  on("scType", () => { gsStopAudio(); SCP.sub = "type"; scRenderSpeak(); const ta = $("#scTypeIn"); if (ta) ta.focus(); });
+  on("scTypeFix", () => { SCP.sub = "type"; scRenderSpeak(); const ta = $("#scTypeIn"); if (ta) ta.focus(); });
+  on("scBackMic", () => { SCP.sub = "ready"; scRenderSpeak(); });
+  on("scTypeOk", () => { const v = ($("#scTypeIn").value || "").trim(); if (!v) return; SCP.said = v; SCP.typed = true; scCommit(); });
+  on("scHint", scHint);
+  on("scRepeat", () => { SCP.said = "Sorry, could you say that again, please?"; SCP.typed = false; SCP.tapRepair = true; scCommit(); });
+  on("scSkip", () => scPass());
+  on("scModel", () => gsSpeak(t.model, "helen", {rate: 0.8}));
+  on("scNext", scNext);
+  on("scTSave", scTeacherSave);
+  const tg = document.getElementById("scTag"); if (tg) tg.onchange = () => { SCP.gtag = tg.value; };
+  el.querySelectorAll("[data-sct]").forEach(b => b.onclick = () => { const [i, v] = b.dataset.sct.split(":"); SCP.tm[+i] = v; scRenderSpeak(); });
+  el.querySelectorAll("[data-scflu]").forEach(b => b.onclick = () => { SCP.flu = +b.dataset.scflu; scRenderSpeak(); });
+}
+/* microphone — same recogniser as Ground School and Formation Drills (GS_SR / GS_REC) */
+function scMicStart(){
+  if (!GS_SR) { SCP.sub = "type"; scRenderSpeak(); return; }
+  if (GS_REC) { try { GS_REC.stop(); } catch(e){} return; }
+  gsHush();
+  if (SCP.secs == null) SCP.secs = Math.max(0, Math.round((Date.now() - (SCP.tSpoke || Date.now())) / 1000));
+  const r = new GS_SR(); GS_REC = r;
+  r.lang = "en-US"; r.interimResults = true; r.continuous = false; r.maxAlternatives = 1;
+  let fin = "", inter = "", silence = null, stopped = false; const me = SCP;
+  const stop = () => { if (stopped) return; stopped = true; try { r.stop(); } catch(e){} };
+  r.onresult = e => {
+    let f = "", t = "";
+    for (let i = 0; i < e.results.length; i++) { const tx = e.results[i][0].transcript; if (e.results[i].isFinal) f += tx + " "; else t += tx + " "; }
+    fin = f; inter = t; me.live_ = (f + t).trim();
+    const el = document.getElementById("scLiveTx"); if (el) el.textContent = me.live_ || "…";
+    clearTimeout(silence); silence = setTimeout(stop, 2600);
+  };
+  r.onerror = e => { me.micErr = e.error || "error"; };
+  r.onend = () => {
+    clearTimeout(silence); clearTimeout(maxT); if (GS_REC === r) GS_REC = null;
+    if (SCP !== me || me.sub !== "rec") return;
+    const txt = (fin + " " + inter).replace(/\s+/g, " ").trim();
+    if (txt) { me.said = txt; me.typed = false; me.sub = "review"; gs.speaks = (gs.speaks || 0) + 1; } else me.sub = "ready";
+    scRenderSpeak();
+  };
+  const maxT = setTimeout(stop, 20000);
+  SCP.sub = "rec"; SCP.live_ = ""; SCP.micErr = null; scRenderSpeak();
+  try { r.start(); } catch(e) { GS_REC = null; SCP.micErr = "start"; SCP.sub = "ready"; scRenderSpeak(); }
+}
+function scHint(){ SCP.lad = Math.min(2, SCP.lad + 1); scRenderSpeak(); if (SCP.lad === 2) gsSpeak(scTurn().model, "helen", {rate: 0.8}); }
+function scLog(res, note){
+  const c = SCP.card;
+  gsLog({m: "scramble " + c.id, t: c.id + "-" + (SCP.ti + 1), mode: SCP.live ? "live" : "scramble", said: SCP.live ? "" : SCP.said, res, note: note || "", tries: SCP.tries, typed: !!SCP.typed});
+}
+function scCommit(){
+  const t = scTurn(), said = SCP.said; if (!said) return;
+  const e = scEval(t, said), tapped = !!SCP.tapRepair; SCP.tapRepair = false;
+  if (e.status === "repair") {   // the repair phrase is always a valid move: nothing is lost, the person repeats more slowly
+    SCP.repairs++; SCP.issue = "repair"; scLog("repair", tapped ? "tapped" : "");
+    SCP.sub = "ready"; SCP.said = ""; scRenderSpeak();
+    (async () => { const me = SCP, ti = SCP.ti; await gsSpeak("Of course.", SCP.card.npc); if (SCP === me && SCP.ti === ti) scPlayNpc(0.75); })();
+    return;
+  }
+  if (e.status === "empty" || e.status === "short") {
+    SCP.issue = "short"; SCP.heard.push(said); scLog("too short", ""); SCP.sub = "ready"; SCP.said = ""; scRenderSpeak(); return;
+  }
+  const clean = SCP.tries === 0 && SCP.lad === 0;
+  SCP.tries++; SCP.heard.push(said);
+  e.hits.forEach((h, i) => { if (h && !SCP.hits[i]) { SCP.hits[i] = true; if (clean) SCP.first[i] = true; } });
+  if (e.slip && !SCP.slip) { SCP.slip = e.slip; gs.errs = gs.errs || {}; gs.errs[e.slip.tag] = (gs.errs[e.slip.tag] || 0) + 1; }
+  if (SCP.hits.every(Boolean)) { scPass(); return; }
+  SCP.issue = "miss";
+  scLog("try " + SCP.tries + ": " + t.objs.map((o, i) => o.k + (SCP.hits[i] ? "✓" : "–")).join(" "), e.slip ? "slip: " + e.slip.tag : "");
+  gsSave();
+  SCP.sub = "ready"; SCP.said = ""; scRenderStage(); scRenderSpeak();
+  if (!SCP.hits.some(Boolean) && SCP.tries === 1) gsSpeak(GS_CATCH, SCP.card.npc);
+}
+function scStamp(k, st){ const s = scS(), v = s.k[k] || [0, 0]; v[1]++; if (st === "c") v[0]++; s.k[k] = v; }
+function scPass(teacher){
+  const t = scTurn();
+  const st = teacher ? SCP.tm.slice() : t.objs.map((o, i) => SCP.hits[i] ? (SCP.first[i] ? "c" : "p") : "m");
+  t.objs.forEach((o, i) => scStamp(o.k, st[i]));
+  if (teacher && SCP.gtag) { gs.errs = gs.errs || {}; gs.errs[SCP.gtag] = (gs.errs[SCP.gtag] || 0) + 1; SCP.slip = {tag: SCP.gtag, msg: "", said: ""}; }
+  const said = SCP.live ? "" : SCP.heard.join(" / ");
+  SCP.res[SCP.ti] = {st, said, typed: SCP.typed, tries: SCP.tries, slip: SCP.slip, secs: SCP.secs, flu: SCP.flu, repairs: SCP.repairs};
+  SCP.said = said;
+  scLog(t.objs.map((o, i) => o.k + ":" + st[i].toUpperCase()).join(" "),
+    ["chips " + scChipsUsed(), SCP.secs != null ? SCP.secs + "s to speak" : "", SCP.repairs ? "repair ×" + SCP.repairs : "", SCP.lad ? "hints " + SCP.lad : "", SCP.slip ? "grammar: " + SCP.slip.tag + (SCP.slip.said ? " (“" + SCP.slip.said + "”)" : "") : "", SCP.flu ? "fluency " + SCP.flu + "/3" : ""].filter(Boolean).join(" · "));
+  SCP.sub = "passed"; SCP.issue = null;
+  gsSave();
+  scRenderStage(); scRenderSpeak();
+  if (!SCP.live) gsSpeak(t.model, "helen", {rate: 0.9});
+}
+function scTeacherSave(){ SCP.tries = Math.max(1, SCP.tries); scPass(true); }
+function scNext(){
+  if (SCP.ti < SCP.card.turns.length - 1) { SCP.ti++; scBegin(); window.scrollTo({top: 0}); return; }
+  scResult();
+}
+
+/* ---------- debrief ---------- */
+function scResult(){
+  SCP.phase = "done"; gsStopAudio();
+  const c = SCP.card, s = scS(), all = [].concat(...SCP.res.map(r => r.st)), cap = SCP.live ? 100 : SC_CAP[scChipsUsed()];
+  const raw = all.reduce((a, x) => a + (x === "c" ? 1 : x === "p" ? 0.5 : 0), 0) / all.length;
+  const score = Math.round(raw * cap), status = all.every(x => x === "c") ? "c" : raw >= 0.5 ? "p" : "m";
+  const prev = s.c[c.id], rec = prev || {n: 0, best: 0};
+  rec.n++; rec.best = Math.max(rec.best || 0, score); rec.s = status; rec.d = fdToday();
+  rec.due = status === "c" ? null : fdAdd(status === "p" ? 3 : 1);
+  s.c[c.id] = rec; s.runs = (s.runs || 0) + 1;
+  gsSave();
+  const slip = (SCP.res.find(r => r.slip) || {}).slip;
+  gsLog({m: "scramble " + c.id, t: "result", mode: SCP.live ? "live" : "scramble", said: "", res: scStampTxt[status].toLowerCase() + " " + score + "%",
+    note: "chips " + scChipsUsed() + " · pre-flight " + (SCP.pre || 0) + "s" + (slip ? " · grammar: " + slip.tag : ""), tries: "", typed: false});
+  const tier = status === "c" ? {t: "CLEARED", w: "Every objective first time. That is real-life English."}
+    : status === "p" ? {t: "PARTIAL", w: "You handled it with a little help. This card comes back in 3 days."}
+    : {t: "NOT YET", w: "A hard one — and you finished it. This card comes back tomorrow."};
+  const slipD = slip ? FD_DRILLS.find(d => d.tag === slip.tag) : null;
+  const linkIds = Array.from(new Set((slipD ? [slipD.id] : []).concat(status === "c" ? [] : c.fd)));
+  view = "scplay";
+  $("#app").innerHTML = `
+  <div class="pbar"><button class="btn ghost" id="scBack">&larr; Scramble</button><h2>Debrief · ${esc(c.title)}</h2>${SCP.live ? `<span class="bdg">👩‍🏫 Lesson mode</span>` : ""}</div>
+  <section class="gs-resbox">
+    <div class="gs-resh"><div class="gs-resv">${score}%</div><div><div class="kick">${tier.t}</div><b>${esc(tier.w)}</b><br>
+      <small>${SCP.live ? "Scored by the teacher" : "Top score " + cap + " (" + scChipsUsed() + " phrase chip" + (scChipsUsed() === 1 ? "" : "s") + ")"}${prev ? ` · best ${rec.best}%` : " · first time"}</small></div></div>
+    ${c.turns.map((t, ti) => { const R = SCP.res[ti]; return `<div class="sc-dbt">
+      <div class="sc-dbq">${gsAvatar(c.npc, 30)}<span>${esc(t.npc)}</span></div>
+      <div class="sc-stamps">${t.objs.map((o, i) => `<span class="sc-st ${R.st[i]}">${SC_KINDS[o.k].i} ${esc(o.lab)} — ${scStampTxt[R.st[i]]}</span>`).join("")}</div>
+      ${R.said ? `<div class="gs-note">You said: ${esc(R.said)}${R.typed ? ' <small class="gs-ty">typed</small>' : ""}</div>` : ""}
+      <div class="gs-note">One good answer: <b>${esc(t.model)}</b> <button class="dbtn" data-scm="${ti}">🔊</button></div></div>`; }).join("")}
+    ${slip ? `<div class="gs-c">📝 <b>One grammar note</b> (not marked down): ${slip.msg ? esc(slip.msg) : "practise <b>" + esc(slip.tag) + "</b>."}${slip.said ? ` <span class="gs-said">I heard: “${esc(slip.said)}”</span>` : ""}</div>` : ""}
+    ${linkIds.length ? `<div class="sc-links"><span>Formations that help with this card:</span>${linkIds.map(id => `<button class="btn ghost" data-scfd="${id}">${fdD(id).icon} Formation ${fdD(id).idx + 1} · ${esc(fdD(id).short)} ▸</button>`).join("")}</div>` : ""}
+    <div class="gs-acts" style="flex-wrap:wrap">
+      <button class="btn" id="scMore">🎴 Draw another ▸</button>
+      ${status === "c" ? "" : `<button class="btn ghost" id="scRetry">↺ Fly this card again</button>`}
+      <button class="btn ghost" id="scHome">All decks</button>
+    </div>
+  </section>`;
+  $("#scBack").onclick = $("#scHome").onclick = () => renderSCHome();
+  $("#scMore").onclick = () => { const n = scPick(null); if (n && n.id !== c.id) scBrief(n); else { const o = SC_CARDS.filter(x => scOpen(x) && x.id !== c.id); if (o.length) scBrief(o[Math.floor(Math.random() * o.length)]); else renderSCHome(); } };
+  if ($("#scRetry")) $("#scRetry").onclick = () => scBrief(c);
+  document.querySelectorAll("[data-scm]").forEach(b => b.onclick = () => gsSpeak(c.turns[+b.dataset.scm].model, "helen", {rate: 0.8}));
+  document.querySelectorAll("[data-scfd]").forEach(b => b.onclick = () => { store.tab = "fd"; save(); fdBrief(fdD(b.dataset.scfd)); });
+  window.scrollTo({top: 0, behavior: "smooth"});
+  gsSpeak(status === "c" ? "Card cleared. Well done!" : "Card complete. Good work.", "helen");
+}
+
 /* ======================================================================
    ACCOUNT — name + PIN login, progress saved to Google Sheets
    ====================================================================== */
@@ -6943,7 +7788,8 @@ async function gsApi(action, body, keep){
 function gsSummary(){
   return GS_MISSIONS.map(m => m.id + ":" + GS_MODES.map(md => { const b = gsBest(m.id, md.id); return b ? b.score : "-"; }).join("/")).join("  ")
     + " | Desk: " + Object.keys(store.best || {}).length + " missions"
-    + " | Drills: " + FD_DRILLS.map(d => { const b = fdS().best[d.id]; return d.id + ":" + (b ? b.acc : "-"); }).join(" ");
+    + " | Drills: " + FD_DRILLS.map(d => { const b = fdS().best[d.id]; return d.id + ":" + (b ? b.acc : "-"); }).join(" ")
+    + " | Scramble: " + SC_CARDS.filter(c => scS().c[c.id]).length + " cards, " + SC_CARDS.filter(c => (scS().c[c.id] || {}).s === "c").length + " cleared";
 }
 function cloudQueue(){
   if (!USER || !gsApiURL()) return;
@@ -7055,10 +7901,11 @@ function gsInitAccount(){
 $("#homeBtn").onclick = () => {
   if (view === "gsplay") { gsLeave(); return; }
   if (view === "fdplay") { fdLeave(); return; }
+  if (view === "scplay") { scLeave(); return; }
   if (view !== "play" || confirmLeave()) renderHome();
 };
 document.addEventListener("keydown", e => { if (e.key === "Escape") $("#acct").classList.remove("show"); });
-(function(){ try { const q = new URLSearchParams(location.search).get("tab"); if (q === "gs" || q === "fd" || CAMPAIGNS.some(c => c.id === q)) store.tab = q; } catch(e){} })();
+(function(){ try { const q = new URLSearchParams(location.search).get("tab"); if (q === "gs" || q === "fd" || q === "sc" || CAMPAIGNS.some(c => c.id === q)) store.tab = q; } catch(e){} })();
 gsInitAccount();
 
 renderHome();
