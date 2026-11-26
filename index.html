@@ -3477,9 +3477,11 @@ function roomTurn(sc){
 }
 
 /* ---- persistence ---- */
-let store = {best:{}, fs:16, voice:false, free:false, tab:"gs", sel:{}};
+let store = {best:{}, fs:16, voice:false, free:true, unlockAll1:1, tab:"gs", sel:{}};
 const DESK_DEFAULT = JSON.stringify(store);
 try { const raw = localStorage.getItem(LS_KEY); if (raw) store = Object.assign(store, JSON.parse(raw)); } catch(e){}
+/* 26 Nov 2026: every scenario, mission, mode and Scramble card is open by default (Chris). The Free play box can still re-lock them. */
+if (!store.unlockAll1) { store.free = true; store.unlockAll1 = 1; try { localStorage.setItem(LS_KEY, JSON.stringify(store)); } catch(e){} }
 function save(){ store._t = Date.now(); try { localStorage.setItem(LS_KEY, JSON.stringify(store)); } catch(e){} cloudQueue(); }
 document.documentElement.style.setProperty("--fs", store.fs + "px");
 
@@ -7813,6 +7815,7 @@ document.addEventListener("visibilitychange", () => { if (document.visibilitySta
 function gsAdopt(remote){
   const desk = JSON.parse(DESK_DEFAULT);
   Object.keys(store).forEach(k => delete store[k]); Object.assign(store, desk, (remote && remote.desk) || {});
+  if (!store.unlockAll1) { store.free = true; store.unlockAll1 = 1; }   // cloud copies saved before 26 Nov open everything too
   const g2 = JSON.parse(JSON.stringify(GS_DEFAULT));
   Object.keys(gs).forEach(k => delete gs[k]); Object.assign(gs, g2, (remote && remote.gs) || {});
   try { localStorage.setItem(LS_KEY, JSON.stringify(store)); localStorage.setItem(GS_KEY, JSON.stringify(gs)); } catch(e){}
