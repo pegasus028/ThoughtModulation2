@@ -1,0 +1,1474 @@
+[
+ {
+  "id": "o3",
+  "ex": 1,
+  "text": "Good afternoon Ma'am. The report not finish yet.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o3",
+  "ex": 1,
+  "text": "Sorry Colonel Hayes, I not finish it.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": "Negatives (i not finish)"
+ },
+ {
+  "id": "o3",
+  "ex": 1,
+  "text": "Good afternoon Colonel Hayes. Sorry, not ready.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o3",
+  "ex": 1,
+  "text": "Yes Colonel Hayes, it is ready. Is not a problem.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o3",
+  "ex": 2,
+  "text": "I don't know when, maybe next month in the morning.",
+  "kind": "FP?",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o1",
+  "ex": 1,
+  "text": "Hello. I don't know who checks.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o1",
+  "ex": 2,
+  "text": "I sign the payments.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o1",
+  "ex": 2,
+  "text": "Khun Nok signs the payments.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o2",
+  "ex": 1,
+  "text": "I have three questions for you.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o2",
+  "ex": 2,
+  "text": "No problem. Two invoices are ok.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o4",
+  "ex": 1,
+  "text": "Hello. Please tell me the number of invoice.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o4",
+  "ex": 1,
+  "text": "Hi Mark. What number?",
+  "kind": "FN?",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o4",
+  "ex": 2,
+  "text": "Four five one. Dollar or baht?",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o4",
+  "ex": 2,
+  "text": "Okay 451. US dollar, right?",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o5",
+  "ex": 1,
+  "text": "Okay. Are you free on Thursday?",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o5",
+  "ex": 1,
+  "text": "Yes, when?",
+  "kind": "short",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o5",
+  "ex": 2,
+  "text": "Room 204. Thursday.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o6",
+  "ex": 1,
+  "text": "Sorry, not yet.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o6",
+  "ex": 2,
+  "text": "Please give me two more days.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   false,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o6",
+  "ex": 2,
+  "text": "I need two more days please.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   false,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o6",
+  "ex": 2,
+  "text": "I will send in two days.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   false,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o7",
+  "ex": 1,
+  "text": "Sorry. I don't know.",
+  "kind": "FP?",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o7",
+  "ex": 2,
+  "text": "We pay you on Friday, I promise.",
+  "kind": "FN?",
+  "status": "ok",
+  "hits": [
+   false,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o7",
+  "ex": 2,
+  "text": "I can not pay today.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o8",
+  "ex": 1,
+  "text": "Excuse me Sir, please sign this form.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o8",
+  "ex": 1,
+  "text": "Sir, I would like your signature please.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o8",
+  "ex": 1,
+  "text": "Sir, can I have your signature?",
+  "kind": "FN?",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o8",
+  "ex": 1,
+  "text": "Khun Anan, could you sign this?",
+  "kind": "FP-name",
+  "status": "ok",
+  "hits": [
+   false,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o8",
+  "ex": 2,
+  "text": "No Sir, not today. Thank you.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v1",
+  "ex": 1,
+  "text": "I don't know. Ask the right person.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v1",
+  "ex": 1,
+  "text": "Go up to floor 2.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v1",
+  "ex": 1,
+  "text": "It is on the second level beside the lift.",
+  "kind": "ok",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v1",
+  "ex": 2,
+  "text": "At 9.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v1",
+  "ex": 2,
+  "text": "Nine.",
+  "kind": "short",
+  "status": "short",
+  "hits": [
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "v2",
+  "ex": 1,
+  "text": "I have reservation three night. Please check again.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "v2",
+  "ex": 2,
+  "text": "Four seven two nine.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v2",
+  "ex": 2,
+  "text": "It is 4 7 2 9.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v2",
+  "ex": 2,
+  "text": "forty-seven twenty-nine",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v3",
+  "ex": 1,
+  "text": "Hello Tom. Welcome. How are you?",
+  "kind": "FN?",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "v3",
+  "ex": 1,
+  "text": "Welcome Flight Lieutenant Hughes. Your flight is ok?",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "v3",
+  "ex": 1,
+  "text": "Welcome. Was your trip good?",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "v3",
+  "ex": 2,
+  "text": "We go to the gate.",
+  "kind": "FP?",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v4",
+  "ex": 1,
+  "text": "We talked about travel budget and Wing Commander Anan say ok.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "v4",
+  "ex": 1,
+  "text": "The travel plan is not approved.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v4",
+  "ex": 2,
+  "text": "Nobody send. I send now.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "v4",
+  "ex": 2,
+  "text": "No Ma'am. I will send.",
+  "kind": "FN?",
+  "status": "ok",
+  "hits": [
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "v4",
+  "ex": 2,
+  "text": "I can not send them today.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v5",
+  "ex": 1,
+  "text": "We visit finance office at 10 am.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v5",
+  "ex": 1,
+  "text": "I will see you at ten.",
+  "kind": "FP?",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v5",
+  "ex": 2,
+  "text": "No. You don't need ID.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v6",
+  "ex": 1,
+  "text": "I need your receipts Ma'am. How many do you have?",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   false,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v6",
+  "ex": 1,
+  "text": "Can I have the receipt? How many?",
+  "kind": "ok",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v6",
+  "ex": 2,
+  "text": "I can not sign for you.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v7",
+  "ex": 1,
+  "text": "Sorry. When you send the new bank details, we will pay again.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "v7",
+  "ex": 1,
+  "text": "Sorry. If the bank can.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v7",
+  "ex": 2,
+  "text": "I call you.",
+  "kind": "FN?",
+  "status": "ok",
+  "hits": [
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "v7",
+  "ex": 2,
+  "text": "We will not call you.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v8",
+  "ex": 1,
+  "text": "We paid two last week. One came back.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v8",
+  "ex": 1,
+  "text": "Two is paid already. One is return from bank.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "v8",
+  "ex": 1,
+  "text": "Two payments already made and one returned.",
+  "kind": "ok",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": "Passive (payments already made)"
+ },
+ {
+  "id": "v8",
+  "ex": 2,
+  "text": "Account number not correct.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v8",
+  "ex": 2,
+  "text": "The number is not right.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "s1",
+  "ex": 1,
+  "text": "I am accountant.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "s1",
+  "ex": 1,
+  "text": "I am officer in air force.",
+  "kind": "FN?",
+  "status": "ok",
+  "hits": [
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "s1",
+  "ex": 2,
+  "text": "He is the boss.",
+  "kind": "FN?",
+  "status": "ok",
+  "hits": [
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "s1",
+  "ex": 2,
+  "text": "I don't know his work.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "s2",
+  "ex": 1,
+  "text": "I like it.",
+  "kind": "FN-partial",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "s2",
+  "ex": 1,
+  "text": "Yes. And you?",
+  "kind": "ok",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "s2",
+  "ex": 2,
+  "text": "This one is okay for you.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "s2",
+  "ex": 2,
+  "text": "I don't recommend anything.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "s2",
+  "ex": 2,
+  "text": "Tom yum is very hot. You should eat it.",
+  "kind": "FP?",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "s3",
+  "ex": 1,
+  "text": "I learn about business.",
+  "kind": "ok",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "s3",
+  "ex": 1,
+  "text": "I studied in London.",
+  "kind": "FP-ok",
+  "status": "ok",
+  "hits": [
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "s3",
+  "ex": 1,
+  "text": "I studied hard.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "s3",
+  "ex": 2,
+  "text": "It was fun.",
+  "kind": "FN-partial",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "s3",
+  "ex": 2,
+  "text": "I enjoy it. London is nice.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   false,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "s4",
+  "ex": 1,
+  "text": "By BTS. How about you?",
+  "kind": "ok",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "s4",
+  "ex": 1,
+  "text": "I ride motorcycle taxi. You stay where?",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "s4",
+  "ex": 1,
+  "text": "I go by MRT. Is your hotel far?",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "s4",
+  "ex": 2,
+  "text": "Wat Arun is beautiful.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "s4",
+  "ex": 2,
+  "text": "I can not think.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "s5",
+  "ex": 1,
+  "text": "I stay home and sleep.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "s5",
+  "ex": 1,
+  "text": "Maybe I go shopping with my mom.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "s5",
+  "ex": 2,
+  "text": "Chatuchak market is good.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "s5",
+  "ex": 2,
+  "text": "I can not see you on Sunday.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "s6",
+  "ex": 1,
+  "text": "Excuse me Ma'am. We want to take photo with you.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "s6",
+  "ex": 1,
+  "text": "Colonel, photo please.",
+  "kind": "FN?",
+  "status": "ok",
+  "hits": [
+   true,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "s6",
+  "ex": 2,
+  "text": "Here please. Thank you.",
+  "kind": "ok",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "s7",
+  "ex": 1,
+  "text": "I'd like to go to Japan.",
+  "kind": "ok",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "s7",
+  "ex": 1,
+  "text": "I go to Japan.",
+  "kind": "known",
+  "status": "ok",
+  "hits": [
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "s7",
+  "ex": 1,
+  "text": "Maybe Japan. I love Japanese food.",
+  "kind": "known",
+  "status": "ok",
+  "hits": [
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "s7",
+  "ex": 2,
+  "text": "Please come to Chiang Mai.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "s7",
+  "ex": 2,
+  "text": "Chiang Mai is good in winter.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "s8",
+  "ex": 1,
+  "text": "Thank you. Safe travels.",
+  "kind": "FN",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "s8",
+  "ex": 1,
+  "text": "Thanks for everything. Have a good flight.",
+  "kind": "ok",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "s8",
+  "ex": 1,
+  "text": "Thank you very much. Have a nice trip home.",
+  "kind": "ok",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "s8",
+  "ex": 2,
+  "text": "Me too. Bye bye.",
+  "kind": "ok",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "s8",
+  "ex": 2,
+  "text": "I hope so too.",
+  "kind": "ok",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "s8",
+  "ex": 2,
+  "text": "No, never again.",
+  "kind": "FP",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o1",
+  "ex": 1,
+  "text": "Sorry, I not understand.",
+  "kind": "REPAIR",
+  "status": "ok",
+  "hits": [
+   false,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o1",
+  "ex": 1,
+  "text": "Sorry, I don't understand.",
+  "kind": "REPAIR",
+  "status": "repair",
+  "hits": [
+   false,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o1",
+  "ex": 1,
+  "text": "Again please.",
+  "kind": "REPAIR",
+  "status": "short",
+  "hits": [
+   false,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o1",
+  "ex": 1,
+  "text": "Can you speak slowly please?",
+  "kind": "REPAIR",
+  "status": "repair",
+  "hits": [
+   false,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o1",
+  "ex": 1,
+  "text": "Sorry?",
+  "kind": "REPAIR",
+  "status": "short",
+  "hits": [
+   false,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o1",
+  "ex": 1,
+  "text": "What?",
+  "kind": "REPAIR",
+  "status": "short",
+  "hits": [
+   false,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o1",
+  "ex": 1,
+  "text": "Excuse me, can you say again?",
+  "kind": "REPAIR",
+  "status": "repair",
+  "hits": [
+   false,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o1",
+  "ex": 1,
+  "text": "Please repeat.",
+  "kind": "REPAIR",
+  "status": "short",
+  "hits": [
+   false,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o1",
+  "ex": 1,
+  "text": "Could you repeat please?",
+  "kind": "REPAIR",
+  "status": "repair",
+  "hits": [
+   false,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o1",
+  "ex": 1,
+  "text": "Sorry, one more please.",
+  "kind": "REPAIR",
+  "status": "ok",
+  "hits": [
+   false,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o1",
+  "ex": 1,
+  "text": "I can't hear you.",
+  "kind": "REPAIR",
+  "status": "ok",
+  "hits": [
+   false,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o1",
+  "ex": 1,
+  "text": "Please speak slow.",
+  "kind": "REPAIR",
+  "status": "ok",
+  "hits": [
+   false,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o1",
+  "ex": 1,
+  "text": "Come again?",
+  "kind": "REPAIR",
+  "status": "short",
+  "hits": [
+   false,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o1",
+  "ex": 1,
+  "text": "Say again please.",
+  "kind": "REPAIR",
+  "status": "repair",
+  "hits": [
+   false,
+   false
+  ],
+  "slip": null
+ },
+ {
+  "id": "o3",
+  "ex": 1,
+  "text": "Good afternoon Sarah. It is not ready.",
+  "kind": "ADDR",
+  "status": "ok",
+  "hits": [
+   false,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o3",
+  "ex": 1,
+  "text": "Good afternoon Miss Hayes. It is not ready.",
+  "kind": "ADDR",
+  "status": "ok",
+  "hits": [
+   false,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o3",
+  "ex": 1,
+  "text": "Good afternoon Sir. It is not ready.",
+  "kind": "ADDR",
+  "status": "ok",
+  "hits": [
+   false,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o3",
+  "ex": 1,
+  "text": "Good afternoon Khun Sarah. It is not ready yet.",
+  "kind": "ADDR",
+  "status": "ok",
+  "hits": [
+   false,
+   true
+  ],
+  "slip": "Address & register (khun sarah)"
+ },
+ {
+  "id": "s6",
+  "ex": 1,
+  "text": "Colonel Sarah Hayes, could we take a photo?",
+  "kind": "ADDR",
+  "status": "ok",
+  "hits": [
+   false,
+   true
+  ],
+  "slip": "Address & register (colonel sarah)"
+ },
+ {
+  "id": "o8",
+  "ex": 1,
+  "text": "Wing Commander, could you sign please?",
+  "kind": "ADDR",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v1",
+  "ex": 1,
+  "text": "It on the second floor.",
+  "kind": "SLIP",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "o3",
+  "ex": 2,
+  "text": "It will ready tomorrow.",
+  "kind": "SLIP",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "s3",
+  "ex": 2,
+  "text": "Yes I like it. The weather is cold.",
+  "kind": "SLIP",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v4",
+  "ex": 1,
+  "text": "We talk about budget. He approve the plan.",
+  "kind": "SLIP",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": "Verb -s (he approve)"
+ },
+ {
+  "id": "s2",
+  "ex": 2,
+  "text": "Try this. It not spicy.",
+  "kind": "SLIP",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": null
+ },
+ {
+  "id": "v8",
+  "ex": 1,
+  "text": "Two payments paid last week. One payment returned.",
+  "kind": "SLIP",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": "Passive (payments paid)"
+ },
+ {
+  "id": "s1",
+  "ex": 2,
+  "text": "He don't sign. He manage the division.",
+  "kind": "SLIP",
+  "status": "ok",
+  "hits": [
+   true
+  ],
+  "slip": "Verb -s (he manage)"
+ },
+ {
+  "id": "o2",
+  "ex": 2,
+  "text": "Yes, have problem with invoice two.",
+  "kind": "SLIP",
+  "status": "ok",
+  "hits": [
+   true,
+   true
+  ],
+  "slip": null
+ }
+]

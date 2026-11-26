@@ -1,0 +1,5678 @@
+{
+ "persona": "A1-Demii",
+ "level": "A1",
+ "started": "2026-11-26 16:20:42",
+ "viewport": "390x844@2x mobile touch",
+ "input": "typing fallback (no microphone in headless Chromium)",
+ "exchanges": [
+  {
+   "card": "o1",
+   "exchange": 1,
+   "npc": "Good morning. I'm Lars Eriksen, the auditor. Who checks the invoices in your section?",
+   "objectives": [
+    "greet: Greet him",
+    "explain: Say who checks the invoices"
+   ],
+   "chips_opened": [
+    "Good morning, Mr Eriksen."
+   ],
+   "attempts": [
+    {
+     "typed": "Hello. Khun Nok check invoice.",
+     "norm": "hello khun nok check invoice",
+     "status": "ok",
+     "hit_this_try": [
+      "greet",
+      "explain"
+     ],
+     "missed_this_try": [],
+     "slip": {
+      "said": "khun nok check",
+      "tag": "Verb -s",
+      "msg": "One person → verb + s: Khun Nok checks, my boss signs."
+     },
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n👋 Cleared\n💬 Cleared\nOne good answer: Good morning, Mr Eriksen. Khun Nok checks the invoices. 🔊\nYou said: Hello. Khun Nok check invoice.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "greet: Greet him": "c",
+    "explain: Say who checks the invoices": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": {
+    "said": "khun nok check",
+    "tag": "Verb -s",
+    "msg": "One person → verb + s: Khun Nok checks, my boss signs."
+   },
+   "feedback": "✓\nCleared!\n👋 Cleared\n💬 Cleared\nOne good answer: Good morning, Mr Eriksen. Khun Nok checks the invoices. 🔊\nYou said: Hello. Khun Nok check invoice."
+  },
+  {
+   "card": "o1",
+   "exchange": 2,
+   "npc": "I see. And who signs the payments?",
+   "objectives": [
+    "explain: Say who signs the payments"
+   ],
+   "chips_opened": [
+    "Good morning, Mr Eriksen."
+   ],
+   "attempts": [
+    {
+     "typed": "Wing Commander Anan sign payment.",
+     "norm": "wing commander anan sign payment",
+     "status": "ok",
+     "hit_this_try": [
+      "explain"
+     ],
+     "missed_this_try": [],
+     "slip": {
+      "said": "wing commander anan sign",
+      "tag": "Verb -s",
+      "msg": "One person → verb + s: Khun Nok checks, my boss signs."
+     },
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n💬 Cleared\nOne good answer: Wing Commander Anan signs the payments. 🔊\nYou said: Wing Commander Anan sign payment.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "explain: Say who signs the payments": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": {
+    "said": "wing commander anan sign",
+    "tag": "Verb -s",
+    "msg": "One person → verb + s: Khun Nok checks, my boss signs."
+   },
+   "feedback": "✓\nCleared!\n💬 Cleared\nOne good answer: Wing Commander Anan signs the payments. 🔊\nYou said: Wing Commander Anan sign payment."
+  },
+  {
+   "card": "o2",
+   "exchange": 1,
+   "npc": "Hi, it's Mike Turner from Pacific Aero. How many invoices from us are there in your file?",
+   "objectives": [
+    "number: Say how many invoices"
+   ],
+   "chips_opened": [
+    "There are three …",
+    "The date is wrong."
+   ],
+   "attempts": [
+    {
+     "typed": "3",
+     "norm": "3",
+     "status": "short",
+     "hit_this_try": [],
+     "missed_this_try": [
+      "number"
+     ],
+     "slip": null,
+     "tries_after": 0,
+     "passed": false,
+     "app": "👂 A little more, please. Say a full sentence — three words or more.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "typed": "There are three invoice.",
+     "norm": "there are 3 invoice",
+     "status": "ok",
+     "hit_this_try": [
+      "number"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n🔢 Cleared\nOne good answer: Hello, Mr Turner. There are three invoices. 🔊\nYou said: 3 / There are three invoice.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "number: Say how many invoices": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n🔢 Cleared\nOne good answer: Hello, Mr Turner. There are three invoices. 🔊\nYou said: 3 / There are three invoice."
+  },
+  {
+   "card": "o2",
+   "exchange": 2,
+   "npc": "OK. Is there a problem with any of them?",
+   "objectives": [
+    "explain: Say there is a problem",
+    "number: Say which invoice"
+   ],
+   "chips_opened": [
+    "There are three …",
+    "The date is wrong."
+   ],
+   "attempts": [
+    {
+     "typed": "Yes. Invoice two date wrong.",
+     "norm": "yes invoice 2 date wrong",
+     "status": "ok",
+     "hit_this_try": [
+      "explain",
+      "number"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n💬 Cleared\n🔢 Cleared\nOne good answer: Yes, there is a problem with invoice number two. The date is wrong. 🔊\nYou said: Yes. Invoice two date wrong.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "explain: Say there is a problem": "c",
+    "number: Say which invoice": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n💬 Cleared\n🔢 Cleared\nOne good answer: Yes, there is a problem with invoice number two. The date is wrong. 🔊\nYou said: Yes. Invoice two date wrong."
+  },
+  {
+   "card": "o3",
+   "exchange": 1,
+   "npc": "Good afternoon. Is the budget report ready?",
+   "objectives": [
+    "name: Use the right name for her",
+    "explain: Say it is not ready"
+   ],
+   "chips_opened": [
+    "I'm sorry, it isn't ready yet.",
+    "It will be ready …"
+   ],
+   "attempts": [
+    {
+     "action": "tapped 'Ask to repeat'",
+     "app": "👍 Good move. Asking the person to repeat is always fine. Listen again, then answer.",
+     "tries_after": 0
+    },
+    {
+     "typed": "Sorry Colonel. Report not finish.",
+     "norm": "sorry colonel report not finish",
+     "status": "ok",
+     "hit_this_try": [
+      "name"
+     ],
+     "missed_this_try": [
+      "explain"
+     ],
+     "slip": null,
+     "tries_after": 1,
+     "passed": false,
+     "app": "🧭 Good start — one more thing. Still to do: Say it is not ready.\nWords on the screen wrong? Tap “Say again” next time, or type.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "typed": "Sorry Colonel Hayes, it isn't ready.",
+     "norm": "sorry colonel hayes it is not ready",
+     "status": "ok",
+     "hit_this_try": [
+      "name",
+      "explain"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 2,
+     "passed": true,
+     "app": "✓\nGood — you got there.\n🎖️ Cleared\n💬 Partial\nOne good answer: Good afternoon, Colonel Hayes. I'm sorry, it isn't ready yet. 🔊\nYou said: Sorry Colonel. Report not finish. / Sorry Colonel Hayes, it isn't ready.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 1,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "name: Use the right name for her": "c",
+    "explain: Say it is not ready": "p"
+   },
+   "stamp": "Partial",
+   "slip_kept": null,
+   "feedback": "✓\nGood — you got there.\n🎖️ Cleared\n💬 Partial\nOne good answer: Good afternoon, Colonel Hayes. I'm sorry, it isn't ready yet. 🔊\nYou said: Sorry Colonel. Report not finish. / Sorry Colonel Hayes, it isn't ready."
+  },
+  {
+   "card": "o3",
+   "exchange": 2,
+   "npc": "I see. When will it be ready?",
+   "objectives": [
+    "time: Say when it will be ready"
+   ],
+   "chips_opened": [
+    "I'm sorry, it isn't ready yet.",
+    "It will be ready …"
+   ],
+   "attempts": [
+    {
+     "typed": "Tomorow morning.",
+     "norm": "tomorow morning",
+     "status": "ok",
+     "hit_this_try": [
+      "time"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n🕒 Cleared\nOne good answer: It will be ready tomorrow morning, Ma'am. 🔊\nYou said: Tomorow morning.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "time: Say when it will be ready": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n🕒 Cleared\nOne good answer: It will be ready tomorrow morning, Ma'am. 🔊\nYou said: Tomorow morning."
+  },
+  {
+   "card": "o4",
+   "exchange": 1,
+   "npc": "Hi, it's Mark Ellis from Hawaii. I'm calling about our payment.",
+   "objectives": [
+    "greet: Greet him",
+    "ask: Ask for the invoice number"
+   ],
+   "chips_opened": [
+    "Do you have the invoice number?",
+    "Is the amount in US dollars?",
+    "Hello, Captain Ellis."
+   ],
+   "attempts": [
+    {
+     "typed": "Hello Captain Ellis. You have invoice number?",
+     "norm": "hello captain ellis you have invoice number",
+     "status": "ok",
+     "hit_this_try": [
+      "greet",
+      "ask"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n👋 Cleared\n❓ Cleared\nOne good answer: Hello, Captain Ellis. Do you have the invoice number? 🔊\nYou said: Hello Captain Ellis. You have invoice number?",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "greet: Greet him": "c",
+    "ask: Ask for the invoice number": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n👋 Cleared\n❓ Cleared\nOne good answer: Hello, Captain Ellis. Do you have the invoice number? 🔊\nYou said: Hello Captain Ellis. You have invoice number?"
+  },
+  {
+   "card": "o4",
+   "exchange": 2,
+   "npc": "Sure. It's invoice four, five, one.",
+   "objectives": [
+    "number: Repeat the number to check it",
+    "ask: Ask about US dollars"
+   ],
+   "chips_opened": [
+    "Do you have the invoice number?",
+    "Is the amount in US dollars?",
+    "Hello, Captain Ellis."
+   ],
+   "attempts": [
+    {
+     "typed": "4 5 1. Thank you. Is US dollar?",
+     "norm": "4 5 1 thank you is us dollar",
+     "status": "ok",
+     "hit_this_try": [
+      "number",
+      "ask"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n🔢 Cleared\n❓ Cleared\nOne good answer: Four, five, one. Thank you. Is the amount in US dollars? 🔊\nYou said: 4 5 1. Thank you. Is US dollar?",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "number: Repeat the number to check it": "c",
+    "ask: Ask about US dollars": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n🔢 Cleared\n❓ Cleared\nOne good answer: Four, five, one. Thank you. Is the amount in US dollars? 🔊\nYou said: 4 5 1. Thank you. Is US dollar?"
+  },
+  {
+   "card": "o5",
+   "exchange": 1,
+   "npc": "Hello. I'd like a short meeting with your section this week.",
+   "objectives": [
+    "ask: Ask when — What day …? / What time …?"
+   ],
+   "chips_opened": [
+    "What day is good for you?",
+    "Please come to room …"
+   ],
+   "attempts": [
+    {
+     "typed": "OK. You come what day?",
+     "norm": "okay you come what day",
+     "status": "ok",
+     "hit_this_try": [
+      "ask"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n❓ Cleared\nOne good answer: Of course, Mr Eriksen. What day is good for you? 🔊\nYou said: OK. You come what day?",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "ask: Ask when — What day …? / What time …?": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n❓ Cleared\nOne good answer: Of course, Mr Eriksen. What day is good for you? 🔊\nYou said: OK. You come what day?"
+  },
+  {
+   "card": "o5",
+   "exchange": 2,
+   "npc": "Thursday morning at ten. Where should I go?",
+   "objectives": [
+    "place: Say where your office is",
+    "time: Check the day or time"
+   ],
+   "chips_opened": [
+    "What day is good for you?",
+    "Please come to room …"
+   ],
+   "attempts": [
+    {
+     "typed": "Room 204, floor 2. See you Thursday.",
+     "norm": "room 204 floor 2 see you thursday",
+     "status": "ok",
+     "hit_this_try": [
+      "place",
+      "time"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n📍 Cleared\n🕒 Cleared\nOne good answer: Please come to room 204, on the second floor. See you on Thursday at ten. 🔊\nYou said: Room 204, floor 2. See you Thursday.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "place: Say where your office is": "c",
+    "time: Check the day or time": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n📍 Cleared\n🕒 Cleared\nOne good answer: Please come to room 204, on the second floor. See you on Thursday at ten. 🔊\nYou said: Room 204, floor 2. See you Thursday."
+  },
+  {
+   "card": "o6",
+   "exchange": 1,
+   "npc": "Good morning. Did you send me last month's receipts?",
+   "objectives": [
+    "sorry: Say sorry",
+    "past: Say what happened"
+   ],
+   "chips_opened": [
+    "I'm sorry, I didn't send them.",
+    "Could I have two more days, please?"
+   ],
+   "attempts": [
+    {
+     "typed": "Sorry. I not send. Have mistake.",
+     "norm": "sorry i not send have mistake",
+     "status": "ok",
+     "hit_this_try": [
+      "sorry"
+     ],
+     "missed_this_try": [
+      "past"
+     ],
+     "slip": {
+      "said": "i not send",
+      "tag": "Negatives",
+      "msg": "Use don't + verb: I don't have it."
+     },
+     "tries_after": 1,
+     "passed": false,
+     "app": "🧭 Good start — one more thing. Still to do: Say what happened.\nWords on the screen wrong? Tap “Say again” next time, or type.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "typed": "I'm sorry, I didn't send.",
+     "norm": "i am sorry i did not send",
+     "status": "ok",
+     "hit_this_try": [
+      "sorry",
+      "past"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 2,
+     "passed": true,
+     "app": "✓\nGood — you got there.\n🙇 Cleared\n⏪ Partial\nOne good answer: Good morning, Mr Eriksen. I'm sorry, I didn't send them. I found a mistake yesterday. 🔊\nYou said: Sorry. I not send. Have mistake. / I'm sorry, I didn't send.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "sorry: Say sorry": "c",
+    "past: Say what happened": "p"
+   },
+   "stamp": "Partial",
+   "slip_kept": {
+    "said": "i not send",
+    "tag": "Negatives",
+    "msg": "Use don't + verb: I don't have it."
+   },
+   "feedback": "✓\nGood — you got there.\n🙇 Cleared\n⏪ Partial\nOne good answer: Good morning, Mr Eriksen. I'm sorry, I didn't send them. I found a mistake yesterday. 🔊\nYou said: Sorry. I not send. Have mistake. / I'm sorry, I didn't send."
+  },
+  {
+   "card": "o6",
+   "exchange": 2,
+   "npc": "I see. When can I have them?",
+   "objectives": [
+    "request: Ask politely for more time",
+    "time: Say how long, or which day"
+   ],
+   "chips_opened": [
+    "I'm sorry, I didn't send them.",
+    "Could I have two more days, please?"
+   ],
+   "attempts": [
+    {
+     "typed": "I want two more day.",
+     "norm": "i want 2 more day",
+     "status": "ok",
+     "hit_this_try": [],
+     "missed_this_try": [
+      "request",
+      "time"
+     ],
+     "slip": {
+      "said": "i want ",
+      "tag": "Polite requests",
+      "msg": "Softer with a senior or a visitor: Could I have … ? / I'd like …"
+     },
+     "tries_after": 1,
+     "passed": false,
+     "app": "🧭 Not yet. Still to do: Ask politely for more time · Say how long, or which day.\nWords on the screen wrong? Tap “Say again” next time, or type.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "action": "tapped Hint (level 1)",
+     "app": "🧭 Not yet. Still to do: Ask politely for more time · Say how long, or which day.\nWords on the screen wrong? Tap “Say again” next time, or type.\n🧩 Start like this: Could I have …, please? … two more days."
+    },
+    {
+     "typed": "Could I have two more day please?",
+     "norm": "could i have 2 more day please",
+     "status": "ok",
+     "hit_this_try": [
+      "request"
+     ],
+     "missed_this_try": [
+      "time"
+     ],
+     "slip": null,
+     "tries_after": 2,
+     "passed": false,
+     "app": "🧭 Good start — one more thing. Still to do: Say how long, or which day.\nWords on the screen wrong? Tap “Say again” next time, or type.\n🧩 Start like this: … two more days.",
+     "move_on_visible": true,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 1,
+   "repairs": 0,
+   "moved_on": true,
+   "tries": 2,
+   "stamps": {
+    "request: Ask politely for more time": "p",
+    "time: Say how long, or which day": "m"
+   },
+   "stamp": "Partial",
+   "slip_kept": {
+    "said": "i want ",
+    "tag": "Polite requests",
+    "msg": "Softer with a senior or a visitor: Could I have … ? / I'd like …"
+   },
+   "feedback": "✓\nGood — you got there.\n🤝 Partial\n🕒 Not yet\nOne good answer: Could I have two more days, please? I will send them on Friday. 🔊\nYou said: I want two more day. / Could I have two more day please?"
+  },
+  {
+   "card": "o7",
+   "exchange": 1,
+   "npc": "Hi, this is Mike Turner. We're still waiting for our payment. It's thirty days late. What's happening?",
+   "objectives": [
+    "sorry: Say sorry",
+    "explain: Explain the problem"
+   ],
+   "chips_opened": [
+    "I'm sorry about the delay.",
+    "There was a problem with the bank details."
+   ],
+   "attempts": [
+    {
+     "action": "tapped 'Ask to repeat'",
+     "app": "👍 Good move. Asking the person to repeat is always fine. Listen again, then answer.",
+     "tries_after": 0
+    },
+    {
+     "typed": "Sorry Mr Mike. Bank detail wrong.",
+     "norm": "sorry mr mike bank detail wrong",
+     "status": "ok",
+     "hit_this_try": [
+      "sorry",
+      "explain"
+     ],
+     "missed_this_try": [],
+     "slip": {
+      "said": "mr mike",
+      "tag": "Address & register",
+      "msg": "Rank or Mr + family name: Colonel Hayes, Mr Eriksen."
+     },
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n🙇 Cleared\n💬 Cleared\nOne good answer: I'm sorry, Mr Turner. There was a problem with the bank details. 🔊\nYou said: Sorry Mr Mike. Bank detail wrong.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 1,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "sorry: Say sorry": "c",
+    "explain: Explain the problem": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": {
+    "said": "mr mike",
+    "tag": "Address & register",
+    "msg": "Rank or Mr + family name: Colonel Hayes, Mr Eriksen."
+   },
+   "feedback": "✓\nCleared!\n🙇 Cleared\n💬 Cleared\nOne good answer: I'm sorry, Mr Turner. There was a problem with the bank details. 🔊\nYou said: Sorry Mr Mike. Bank detail wrong."
+  },
+  {
+   "card": "o7",
+   "exchange": 2,
+   "npc": "OK. So when will you pay?",
+   "objectives": [
+    "plan: Say the plan — We will … / We're going to …",
+    "time: Say which day"
+   ],
+   "chips_opened": [
+    "I'm sorry about the delay.",
+    "There was a problem with the bank details."
+   ],
+   "attempts": [
+    {
+     "typed": "Friday we pay.",
+     "norm": "friday we pay",
+     "status": "ok",
+     "hit_this_try": [
+      "time"
+     ],
+     "missed_this_try": [
+      "plan"
+     ],
+     "slip": null,
+     "tries_after": 1,
+     "passed": false,
+     "app": "🧭 Good start — one more thing. Still to do: Say the plan — We will … / We're going to ….\nWords on the screen wrong? Tap “Say again” next time, or type.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "typed": "We will pay Friday.",
+     "norm": "we will pay friday",
+     "status": "ok",
+     "hit_this_try": [
+      "plan",
+      "time"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 2,
+     "passed": true,
+     "app": "✓\nGood — you got there.\n⏩ Partial\n🕒 Cleared\nOne good answer: We will pay on Friday. I'll send you an email today. 🔊\nYou said: Friday we pay. / We will pay Friday.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "plan: Say the plan — We will … / We're going to …": "p",
+    "time: Say which day": "c"
+   },
+   "stamp": "Partial",
+   "slip_kept": null,
+   "feedback": "✓\nGood — you got there.\n⏩ Partial\n🕒 Cleared\nOne good answer: We will pay on Friday. I'll send you an email today. 🔊\nYou said: Friday we pay. / We will pay Friday."
+  },
+  {
+   "card": "o8",
+   "exchange": 1,
+   "npc": "Yes? Come in.",
+   "objectives": [
+    "name: Use the right name for him",
+    "request: Ask politely for his signature"
+   ],
+   "chips_opened": [
+    "Excuse me, Sir.",
+    "Could you sign this form, please?",
+    "The bank closes at three today."
+   ],
+   "attempts": [
+    {
+     "typed": "Excuse me sir. I want signature.",
+     "norm": "excuse me sir i want signature",
+     "status": "ok",
+     "hit_this_try": [
+      "name"
+     ],
+     "missed_this_try": [
+      "request"
+     ],
+     "slip": {
+      "said": "i want ",
+      "tag": "Polite requests",
+      "msg": "Softer with a senior or a visitor: Could I have … ? / I'd like …"
+     },
+     "tries_after": 1,
+     "passed": false,
+     "app": "🧭 Good start — one more thing. Still to do: Ask politely for his signature.\nWords on the screen wrong? Tap “Say again” next time, or type.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "typed": "Could you sign this form please?",
+     "norm": "could you sign this form please",
+     "status": "ok",
+     "hit_this_try": [
+      "request"
+     ],
+     "missed_this_try": [
+      "name"
+     ],
+     "slip": null,
+     "tries_after": 2,
+     "passed": true,
+     "app": "✓\nGood — you got there.\n🎖️ Cleared\n🤝 Partial\nOne good answer: Excuse me, Sir. Could you sign this payment form, please? 🔊\nYou said: Excuse me sir. I want signature. / Could you sign this form please?",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "name: Use the right name for him": "c",
+    "request: Ask politely for his signature": "p"
+   },
+   "stamp": "Partial",
+   "slip_kept": {
+    "said": "i want ",
+    "tag": "Polite requests",
+    "msg": "Softer with a senior or a visitor: Could I have … ? / I'd like …"
+   },
+   "feedback": "✓\nGood — you got there.\n🎖️ Cleared\n🤝 Partial\nOne good answer: Excuse me, Sir. Could you sign this payment form, please? 🔊\nYou said: Excuse me sir. I want signature. / Could you sign this form please?"
+  },
+  {
+   "card": "o8",
+   "exchange": 2,
+   "npc": "Of course. Is it urgent?",
+   "objectives": [
+    "explain: Say why it is urgent",
+    "thank: Thank him"
+   ],
+   "chips_opened": [
+    "Excuse me, Sir.",
+    "Could you sign this form, please?",
+    "The bank closes at three today."
+   ],
+   "attempts": [
+    {
+     "typed": "Yes sir. Bank close 3 o'clock. Thank you.",
+     "norm": "yes sir bank close 3 oclock thank you",
+     "status": "ok",
+     "hit_this_try": [
+      "explain",
+      "thank"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n💬 Cleared\n🙏 Cleared\nOne good answer: Yes, Sir. The bank closes at three today. Thank you, Sir. 🔊\nYou said: Yes sir. Bank close 3 o'clock. Thank you.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "explain: Say why it is urgent": "c",
+    "thank: Thank him": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n💬 Cleared\n🙏 Cleared\nOne good answer: Yes, Sir. The bank closes at three today. Thank you, Sir. 🔊\nYou said: Yes sir. Bank close 3 o'clock. Thank you."
+  },
+  {
+   "card": "v1",
+   "exchange": 1,
+   "npc": "Excuse me. Where is the briefing room?",
+   "objectives": [
+    "place: Say where it is"
+   ],
+   "chips_opened": [
+    "It's on the second floor.",
+    "It's next to the lift."
+   ],
+   "attempts": [
+    {
+     "typed": "Floor 2, next to lift.",
+     "norm": "floor 2 next to lift",
+     "status": "ok",
+     "hit_this_try": [
+      "place"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n📍 Cleared\nOne good answer: It's on the second floor, next to the lift. 🔊\nYou said: Floor 2, next to lift.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "place: Say where it is": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n📍 Cleared\nOne good answer: It's on the second floor, next to the lift. 🔊\nYou said: Floor 2, next to lift."
+  },
+  {
+   "card": "v1",
+   "exchange": 2,
+   "npc": "Thanks. And what time does the session start?",
+   "objectives": [
+    "time: Say the time"
+   ],
+   "chips_opened": [
+    "It's on the second floor.",
+    "It's next to the lift."
+   ],
+   "attempts": [
+    {
+     "typed": "9 am",
+     "norm": "9",
+     "status": "short",
+     "hit_this_try": [],
+     "missed_this_try": [
+      "time"
+     ],
+     "slip": null,
+     "tries_after": 0,
+     "passed": false,
+     "app": "👂 A little more, please. Say a full sentence — three words or more.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "typed": "It start 9 am.",
+     "norm": "it start 9",
+     "status": "ok",
+     "hit_this_try": [
+      "time"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n🕒 Cleared\nOne good answer: It starts at nine o'clock. 🔊\nYou said: 9 am / It start 9 am.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "time: Say the time": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n🕒 Cleared\nOne good answer: It starts at nine o'clock. 🔊\nYou said: 9 am / It start 9 am."
+  },
+  {
+   "card": "v2",
+   "exchange": 1,
+   "npc": "Good evening, and welcome to the Capitol View. I'm sorry, I can't find your booking.",
+   "objectives": [
+    "explain: Say you have a booking",
+    "request: Ask her politely to check again"
+   ],
+   "chips_opened": [
+    "I have a booking for three nights.",
+    "My confirmation number is …"
+   ],
+   "attempts": [
+    {
+     "action": "tapped 'Ask to repeat'",
+     "app": "👍 Good move. Asking the person to repeat is always fine. Listen again, then answer.",
+     "tries_after": 0
+    },
+    {
+     "typed": "I book three night. Please check again.",
+     "norm": "i book 3 night please check again",
+     "status": "ok",
+     "hit_this_try": [],
+     "missed_this_try": [
+      "explain",
+      "request"
+     ],
+     "slip": null,
+     "tries_after": 1,
+     "passed": false,
+     "app": "🧭 Not yet. Still to do: Say you have a booking · Ask her politely to check again.\nWords on the screen wrong? Tap “Say again” next time, or type.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "typed": "I have booking three night. Can you check?",
+     "norm": "i have booking 3 night can you check",
+     "status": "ok",
+     "hit_this_try": [
+      "explain",
+      "request"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 2,
+     "passed": true,
+     "app": "✓\nGood — you got there.\n💬 Partial\n🤝 Partial\nOne good answer: Good evening. I have a booking for three nights. Could you check again, please? 🔊\nYou said: I book three night. Please check again. / I have booking three night. Can you check?",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 1,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "explain: Say you have a booking": "p",
+    "request: Ask her politely to check again": "p"
+   },
+   "stamp": "Partial",
+   "slip_kept": null,
+   "feedback": "✓\nGood — you got there.\n💬 Partial\n🤝 Partial\nOne good answer: Good evening. I have a booking for three nights. Could you check again, please? 🔊\nYou said: I book three night. Please check again. / I have booking three night. Can you check?"
+  },
+  {
+   "card": "v2",
+   "exchange": 2,
+   "npc": "Of course. Do you have a confirmation number?",
+   "objectives": [
+    "number: Give the number"
+   ],
+   "chips_opened": [
+    "I have a booking for three nights.",
+    "My confirmation number is …"
+   ],
+   "attempts": [
+    {
+     "typed": "4729",
+     "norm": "4729",
+     "status": "short",
+     "hit_this_try": [],
+     "missed_this_try": [
+      "number"
+     ],
+     "slip": null,
+     "tries_after": 0,
+     "passed": false,
+     "app": "👂 A little more, please. Say a full sentence — three words or more.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "typed": "Yes. Number 4729.",
+     "norm": "yes number 4729",
+     "status": "ok",
+     "hit_this_try": [
+      "number"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n🔢 Cleared\nOne good answer: Yes. It's four, seven, two, nine. 🔊\nYou said: 4729 / Yes. Number 4729.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "number: Give the number": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n🔢 Cleared\nOne good answer: Yes. It's four, seven, two, nine. 🔊\nYou said: 4729 / Yes. Number 4729."
+  },
+  {
+   "card": "v3",
+   "exchange": 1,
+   "npc": "Hello! I'm Tom Hughes. I'm here for the exercise week.",
+   "objectives": [
+    "greet: Welcome him",
+    "ask: Ask about his journey"
+   ],
+   "chips_opened": [
+    "Welcome to the base.",
+    "How was your flight?"
+   ],
+   "attempts": [
+    {
+     "typed": "Welcome to base. How your flight?",
+     "norm": "welcome to base how your flight",
+     "status": "ok",
+     "hit_this_try": [
+      "greet",
+      "ask"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n👋 Cleared\n❓ Cleared\nOne good answer: Welcome to the base, Flight Lieutenant Hughes. How was your flight? 🔊\nYou said: Welcome to base. How your flight?",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "greet: Welcome him": "c",
+    "ask: Ask about his journey": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n👋 Cleared\n❓ Cleared\nOne good answer: Welcome to the base, Flight Lieutenant Hughes. How was your flight? 🔊\nYou said: Welcome to base. How your flight?"
+  },
+  {
+   "card": "v3",
+   "exchange": 2,
+   "npc": "Long, but fine, thanks. Where do I go first?",
+   "objectives": [
+    "place: Say where to go first"
+   ],
+   "chips_opened": [
+    "Welcome to the base.",
+    "How was your flight?"
+   ],
+   "attempts": [
+    {
+     "typed": "First go security office.",
+     "norm": "1 go security office",
+     "status": "ok",
+     "hit_this_try": [
+      "place"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n📍 Cleared\nOne good answer: Please come with me. First, we will go to the security office. 🔊\nYou said: First go security office.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "place: Say where to go first": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n📍 Cleared\nOne good answer: Please come with me. First, we will go to the security office. 🔊\nYou said: First go security office."
+  },
+  {
+   "card": "v4",
+   "exchange": 1,
+   "npc": "I missed the finance meeting yesterday. What did you discuss?",
+   "objectives": [
+    "past: Say what you talked about",
+    "past: Say what was decided"
+   ],
+   "chips_opened": [
+    "We talked about the travel budget.",
+    "Wing Commander Anan approved the plan.",
+    "I will send the notes this afternoon."
+   ],
+   "attempts": [
+    {
+     "typed": "We talk travel budget. Boss say ok.",
+     "norm": "we talk travel budget boss say okay",
+     "status": "ok",
+     "hit_this_try": [
+      "past"
+     ],
+     "missed_this_try": [
+      "past"
+     ],
+     "slip": null,
+     "tries_after": 1,
+     "passed": false,
+     "app": "🧭 Good start — one more thing. Still to do: Say what was decided.\nWords on the screen wrong? Tap “Say again” next time, or type.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "typed": "Wing Commander Anan approve plan.",
+     "norm": "wing commander anan approve plan",
+     "status": "ok",
+     "hit_this_try": [
+      "past",
+      "past"
+     ],
+     "missed_this_try": [],
+     "slip": {
+      "said": "wing commander anan approve",
+      "tag": "Verb -s",
+      "msg": "One person → verb + s: Khun Nok checks, my boss signs."
+     },
+     "tries_after": 2,
+     "passed": true,
+     "app": "✓\nGood — you got there.\n⏪ Cleared\n⏪ Partial\nOne good answer: We talked about the travel budget, Ma'am. Wing Commander Anan approved the plan. 🔊\nYou said: We talk travel budget. Boss say ok. / Wing Commander Anan approve plan.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "past: Say what you talked about": "c",
+    "past: Say what was decided": "p"
+   },
+   "stamp": "Partial",
+   "slip_kept": {
+    "said": "wing commander anan approve",
+    "tag": "Verb -s",
+    "msg": "One person → verb + s: Khun Nok checks, my boss signs."
+   },
+   "feedback": "✓\nGood — you got there.\n⏪ Cleared\n⏪ Partial\nOne good answer: We talked about the travel budget, Ma'am. Wing Commander Anan approved the plan. 🔊\nYou said: We talk travel budget. Boss say ok. / Wing Commander Anan approve plan."
+  },
+  {
+   "card": "v4",
+   "exchange": 2,
+   "npc": "Good. Did anyone send the notes?",
+   "objectives": [
+    "plan: Offer to send them, and say when"
+   ],
+   "chips_opened": [
+    "We talked about the travel budget.",
+    "Wing Commander Anan approved the plan.",
+    "I will send the notes this afternoon."
+   ],
+   "attempts": [
+    {
+     "typed": "No. I send today.",
+     "norm": "no i send today",
+     "status": "ok",
+     "hit_this_try": [],
+     "missed_this_try": [
+      "plan"
+     ],
+     "slip": null,
+     "tries_after": 1,
+     "passed": false,
+     "app": "🧭 Not yet. Still to do: Offer to send them, and say when.\nWords on the screen wrong? Tap “Say again” next time, or type.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "action": "tapped Hint (level 1)",
+     "app": "🧭 Not yet. Still to do: Offer to send them, and say when.\nWords on the screen wrong? Tap “Say again” next time, or type.\n🧩 Start like this: Not yet. I will send them this …"
+    },
+    {
+     "typed": "Not yet. I will send afternoon.",
+     "norm": "not yet i will send afternoon",
+     "status": "ok",
+     "hit_this_try": [
+      "plan"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 2,
+     "passed": true,
+     "app": "✓\nGood — you got there.\n⏩ Partial\nOne good answer: Not yet, Ma'am. I will send them this afternoon. 🔊\nYou said: No. I send today. / Not yet. I will send afternoon.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 1,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "plan: Offer to send them, and say when": "p"
+   },
+   "stamp": "Partial",
+   "slip_kept": null,
+   "feedback": "✓\nGood — you got there.\n⏩ Partial\nOne good answer: Not yet, Ma'am. I will send them this afternoon. 🔊\nYou said: No. I send today. / Not yet. I will send afternoon."
+  },
+  {
+   "card": "v5",
+   "exchange": 1,
+   "npc": "So, what's the plan for tomorrow?",
+   "objectives": [
+    "plan: Say the plan — We are going to … / We will …",
+    "time: Say the time"
+   ],
+   "chips_opened": [
+    "Tomorrow we are going to visit …",
+    "Please bring your ID card."
+   ],
+   "attempts": [
+    {
+     "typed": "Again please",
+     "norm": "again please",
+     "status": "short",
+     "hit_this_try": [],
+     "missed_this_try": [
+      "plan",
+      "time"
+     ],
+     "slip": null,
+     "tries_after": 0,
+     "passed": false,
+     "app": "👂 A little more, please. Say a full sentence — three words or more.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "typed": "Tomorrow we go finance office 10 o'clock.",
+     "norm": "tomorrow we go finance office 10 oclock",
+     "status": "ok",
+     "hit_this_try": [
+      "time"
+     ],
+     "missed_this_try": [
+      "plan"
+     ],
+     "slip": null,
+     "tries_after": 1,
+     "passed": false,
+     "app": "🧭 Good start — one more thing. Still to do: Say the plan — We are going to … / We will ….\nWords on the screen wrong? Tap “Say again” next time, or type.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "typed": "Tomorrow we are going to visit finance.",
+     "norm": "tomorrow we are going to visit finance",
+     "status": "ok",
+     "hit_this_try": [
+      "plan"
+     ],
+     "missed_this_try": [
+      "time"
+     ],
+     "slip": null,
+     "tries_after": 2,
+     "passed": true,
+     "app": "✓\nGood — you got there.\n⏩ Partial\n🕒 Cleared\nOne good answer: Tomorrow we are going to visit the finance office at ten o'clock. 🔊\nYou said: Again please / Tomorrow we go finance office 10 o'clock. / Tomorrow we are going to visit finance.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "plan: Say the plan — We are going to … / We will …": "p",
+    "time: Say the time": "c"
+   },
+   "stamp": "Partial",
+   "slip_kept": null,
+   "feedback": "✓\nGood — you got there.\n⏩ Partial\n🕒 Cleared\nOne good answer: Tomorrow we are going to visit the finance office at ten o'clock. 🔊\nYou said: Again please / Tomorrow we go finance office 10 o'clock. / Tomorrow we are going to visit finance."
+  },
+  {
+   "card": "v5",
+   "exchange": 2,
+   "npc": "Great. Do I need to bring anything?",
+   "objectives": [
+    "explain: Say what to bring"
+   ],
+   "chips_opened": [
+    "Tomorrow we are going to visit …",
+    "Please bring your ID card."
+   ],
+   "attempts": [
+    {
+     "action": "tapped 'Ask to repeat'",
+     "app": "👍 Good move. Asking the person to repeat is always fine. Listen again, then answer.",
+     "tries_after": 0
+    },
+    {
+     "typed": "Bring ID card please.",
+     "norm": "bring id card please",
+     "status": "ok",
+     "hit_this_try": [
+      "explain"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n💬 Cleared\nOne good answer: Yes, please bring your ID card. 🔊\nYou said: Bring ID card please.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 1,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "explain: Say what to bring": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n💬 Cleared\nOne good answer: Yes, please bring your ID card. 🔊\nYou said: Bring ID card please."
+  },
+  {
+   "card": "v6",
+   "exchange": 1,
+   "npc": "I'd like to claim my taxi costs. What do you need from me?",
+   "objectives": [
+    "request: Ask politely for the receipts",
+    "ask: Ask how many"
+   ],
+   "chips_opened": [
+    "Could you give me the receipts, please?",
+    "How many receipts do you have?",
+    "Could you fill in this form, please?"
+   ],
+   "attempts": [
+    {
+     "typed": "I want receipt please.",
+     "norm": "i want receipt please",
+     "status": "ok",
+     "hit_this_try": [
+      "request"
+     ],
+     "missed_this_try": [
+      "ask"
+     ],
+     "slip": {
+      "said": "i want ",
+      "tag": "Polite requests",
+      "msg": "Softer with a senior or a visitor: Could I have … ? / I'd like …"
+     },
+     "tries_after": 1,
+     "passed": false,
+     "app": "🧭 Good start — one more thing. Still to do: Ask how many.\nWords on the screen wrong? Tap “Say again” next time, or type.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "typed": "How many receipt you have?",
+     "norm": "how many receipt you have",
+     "status": "ok",
+     "hit_this_try": [
+      "ask"
+     ],
+     "missed_this_try": [
+      "request"
+     ],
+     "slip": null,
+     "tries_after": 2,
+     "passed": true,
+     "app": "✓\nGood — you got there.\n🤝 Cleared\n❓ Partial\nOne good answer: Could you give me the receipts, please, Ma'am? How many receipts do you have? 🔊\nYou said: I want receipt please. / How many receipt you have?",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "request: Ask politely for the receipts": "c",
+    "ask: Ask how many": "p"
+   },
+   "stamp": "Partial",
+   "slip_kept": {
+    "said": "i want ",
+    "tag": "Polite requests",
+    "msg": "Softer with a senior or a visitor: Could I have … ? / I'd like …"
+   },
+   "feedback": "✓\nGood — you got there.\n🤝 Cleared\n❓ Partial\nOne good answer: Could you give me the receipts, please, Ma'am? How many receipts do you have? 🔊\nYou said: I want receipt please. / How many receipt you have?"
+  },
+  {
+   "card": "v6",
+   "exchange": 2,
+   "npc": "I have two receipts. I lost the third one.",
+   "objectives": [
+    "request: Ask her to fill in the form"
+   ],
+   "chips_opened": [
+    "Could you give me the receipts, please?",
+    "How many receipts do you have?",
+    "Could you fill in this form, please?"
+   ],
+   "attempts": [
+    {
+     "typed": "OK. You write this form please.",
+     "norm": "okay you write this form please",
+     "status": "ok",
+     "hit_this_try": [
+      "request"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n🤝 Cleared\nOne good answer: No problem, Ma'am. Could you fill in this form for the lost receipt, please? 🔊\nYou said: OK. You write this form please.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "request: Ask her to fill in the form": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n🤝 Cleared\nOne good answer: No problem, Ma'am. Could you fill in this form for the lost receipt, please? 🔊\nYou said: OK. You write this form please."
+  },
+  {
+   "card": "v7",
+   "exchange": 1,
+   "npc": "Our bank says the transfer came back. What happens now?",
+   "objectives": [
+    "sorry: Say sorry",
+    "plan: Say the plan with if"
+   ],
+   "chips_opened": [
+    "I'm sorry about that.",
+    "If you send the new bank details today, …",
+    "… we will pay again tomorrow."
+   ],
+   "attempts": [
+    {
+     "typed": "Sorry. Please send new bank detail today.",
+     "norm": "sorry please send new bank detail today",
+     "status": "ok",
+     "hit_this_try": [
+      "sorry"
+     ],
+     "missed_this_try": [
+      "plan"
+     ],
+     "slip": null,
+     "tries_after": 1,
+     "passed": false,
+     "app": "🧭 Good start — one more thing. Still to do: Say the plan with if.\nWords on the screen wrong? Tap “Say again” next time, or type.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "action": "tapped Hint (level 1)",
+     "app": "🧭 Good start — one more thing. Still to do: Say the plan with if.\nWords on the screen wrong? Tap “Say again” next time, or type.\n🧩 Start like this: If you send …, we will …"
+    },
+    {
+     "typed": "If you send today, we pay tomorrow.",
+     "norm": "if you send today we pay tomorrow",
+     "status": "ok",
+     "hit_this_try": [],
+     "missed_this_try": [
+      "sorry",
+      "plan"
+     ],
+     "slip": null,
+     "tries_after": 2,
+     "passed": false,
+     "app": "🧭 Good start — one more thing. Still to do: Say the plan with if.\nWords on the screen wrong? Tap “Say again” next time, or type.\n🧩 Start like this: If you send …, we will …",
+     "move_on_visible": true,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 1,
+   "repairs": 0,
+   "moved_on": true,
+   "tries": 2,
+   "stamps": {
+    "sorry: Say sorry": "c",
+    "plan: Say the plan with if": "m"
+   },
+   "stamp": "Partial",
+   "slip_kept": null,
+   "feedback": "✓\nGood — you got there.\n🙇 Cleared\n⏩ Not yet\nOne good answer: I'm sorry, Captain Ellis. If you send the new bank details today, we will pay again tomorrow. 🔊\nYou said: Sorry. Please send new bank detail today. / If you send today, we pay tomorrow."
+  },
+  {
+   "card": "v7",
+   "exchange": 2,
+   "npc": "And if the details are wrong again?",
+   "objectives": [
+    "plan: Say what you will do then"
+   ],
+   "chips_opened": [
+    "I'm sorry about that.",
+    "If you send the new bank details today, …",
+    "… we will pay again tomorrow."
+   ],
+   "attempts": [
+    {
+     "typed": "I call you again.",
+     "norm": "i call you again",
+     "status": "ok",
+     "hit_this_try": [],
+     "missed_this_try": [
+      "plan"
+     ],
+     "slip": null,
+     "tries_after": 1,
+     "passed": false,
+     "app": "🧭 Not yet. Still to do: Say what you will do then.\nWords on the screen wrong? Tap “Say again” next time, or type.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "action": "tapped Hint (level 1)",
+     "app": "🧭 Not yet. Still to do: Say what you will do then.\nWords on the screen wrong? Tap “Say again” next time, or type.\n🧩 Start like this: Then I will call you and …"
+    },
+    {
+     "action": "tapped Hint (level 2)",
+     "app": "🧭 Not yet. Still to do: Say what you will do then.\nWords on the screen wrong? Tap “Say again” next time, or type.\n🧩 Start like this: Then I will call you and …\n🗣 Model: Then I will call you, and we will check them together. 🔊\nNow say it yourself — your own words are fine."
+    },
+    {
+     "typed": "I will call you.",
+     "norm": "i will call you",
+     "status": "ok",
+     "hit_this_try": [
+      "plan"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 2,
+     "passed": true,
+     "app": "✓\nGood — you got there.\n⏩ Partial\nOne good answer: Then I will call you, and we will check them together. 🔊\nYou said: I call you again. / I will call you.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 2,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "plan: Say what you will do then": "p"
+   },
+   "stamp": "Partial",
+   "slip_kept": null,
+   "feedback": "✓\nGood — you got there.\n⏩ Partial\nOne good answer: Then I will call you, and we will check them together. 🔊\nYou said: I call you again. / I will call you."
+  },
+  {
+   "card": "v8",
+   "exchange": 1,
+   "npc": "What is the status of the three March payments?",
+   "objectives": [
+    "past: Say two were made",
+    "past: Say one was returned"
+   ],
+   "chips_opened": [
+    "Two payments were made last week.",
+    "One payment was returned by the bank.",
+    "The account number was wrong."
+   ],
+   "attempts": [
+    {
+     "typed": "Two payment pay already. One come back.",
+     "norm": "2 payment pay already 1 come back",
+     "status": "ok",
+     "hit_this_try": [],
+     "missed_this_try": [
+      "past",
+      "past"
+     ],
+     "slip": null,
+     "tries_after": 1,
+     "passed": false,
+     "app": "🧭 Not yet. Still to do: Say two were made · Say one was returned.\nWords on the screen wrong? Tap “Say again” next time, or type.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "action": "tapped Hint (level 1)",
+     "app": "🧭 Not yet. Still to do: Say two were made · Say one was returned.\nWords on the screen wrong? Tap “Say again” next time, or type.\n🧩 Start like this: Two payments were made … One payment was returned by …"
+    },
+    {
+     "typed": "Two payments were made. One payment return.",
+     "norm": "2 payments were made 1 payment return",
+     "status": "ok",
+     "hit_this_try": [
+      "past"
+     ],
+     "missed_this_try": [
+      "past"
+     ],
+     "slip": null,
+     "tries_after": 2,
+     "passed": false,
+     "app": "🧭 Good start — one more thing. Still to do: Say one was returned.\nWords on the screen wrong? Tap “Say again” next time, or type.\n🧩 Start like this: One payment was returned by …",
+     "move_on_visible": true,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 1,
+   "repairs": 0,
+   "moved_on": true,
+   "tries": 2,
+   "stamps": {
+    "past: Say two were made": "p",
+    "past: Say one was returned": "m"
+   },
+   "stamp": "Partial",
+   "slip_kept": null,
+   "feedback": "✓\nGood — you got there.\n⏪ Partial\n⏪ Not yet\nOne good answer: Two payments were made last week. One payment was returned by the bank. 🔊\nYou said: Two payment pay already. One come back. / Two payments were made. One payment return."
+  },
+  {
+   "card": "v8",
+   "exchange": 2,
+   "npc": "Why was it returned?",
+   "objectives": [
+    "explain: Say why"
+   ],
+   "chips_opened": [
+    "Two payments were made last week.",
+    "One payment was returned by the bank.",
+    "The account number was wrong."
+   ],
+   "attempts": [
+    {
+     "typed": "Account number wrong.",
+     "norm": "account number wrong",
+     "status": "ok",
+     "hit_this_try": [
+      "explain"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n💬 Cleared\nOne good answer: Because the account number was wrong. 🔊\nYou said: Account number wrong.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "explain: Say why": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n💬 Cleared\nOne good answer: Because the account number was wrong. 🔊\nYou said: Account number wrong."
+  },
+  {
+   "card": "s1",
+   "exchange": 1,
+   "npc": "Hi! I'm Tom. So, what do you do here?",
+   "objectives": [
+    "explain: Say your job or your division"
+   ],
+   "chips_opened": [
+    "I work in the Finance Division."
+   ],
+   "attempts": [
+    {
+     "typed": "I work finance. I am accountant.",
+     "norm": "i work finance i am accountant",
+     "status": "ok",
+     "hit_this_try": [
+      "explain"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n💬 Cleared\nOne good answer: I work in the Finance Division. I check invoices and payments. 🔊\nYou said: I work finance. I am accountant.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "explain: Say your job or your division": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n💬 Cleared\nOne good answer: I work in the Finance Division. I check invoices and payments. 🔊\nYou said: I work finance. I am accountant."
+  },
+  {
+   "card": "s1",
+   "exchange": 2,
+   "npc": "Interesting! And your boss, what does he do?",
+   "objectives": [
+    "explain: Say what your boss does"
+   ],
+   "chips_opened": [
+    "I work in the Finance Division."
+   ],
+   "attempts": [
+    {
+     "typed": "He sign payment.",
+     "norm": "he sign payment",
+     "status": "ok",
+     "hit_this_try": [
+      "explain"
+     ],
+     "missed_this_try": [],
+     "slip": {
+      "said": "he sign",
+      "tag": "Verb -s",
+      "msg": "After he / she, add -s: he signs, she checks, he has."
+     },
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n💬 Cleared\nOne good answer: He manages the division. He signs all the payments. 🔊\nYou said: He sign payment.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "explain: Say what your boss does": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": {
+    "said": "he sign",
+    "tag": "Verb -s",
+    "msg": "After he / she, add -s: he signs, she checks, he has."
+   },
+   "feedback": "✓\nCleared!\n💬 Cleared\nOne good answer: He manages the division. He signs all the payments. 🔊\nYou said: He sign payment."
+  },
+  {
+   "card": "s2",
+   "exchange": 1,
+   "npc": "This green curry looks wonderful. Do you eat spicy food?",
+   "objectives": [
+    "explain: Answer about yourself",
+    "ask: Ask her a question back"
+   ],
+   "chips_opened": [
+    "Yes, I do. I love spicy food.",
+    "Do you like Thai food?"
+   ],
+   "attempts": [
+    {
+     "typed": "Yes, I like spicy. You like?",
+     "norm": "yes i like spicy you like",
+     "status": "ok",
+     "hit_this_try": [
+      "explain"
+     ],
+     "missed_this_try": [
+      "ask"
+     ],
+     "slip": null,
+     "tries_after": 1,
+     "passed": false,
+     "app": "🧭 Good start — one more thing. Still to do: Ask her a question back.\nWords on the screen wrong? Tap “Say again” next time, or type.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "typed": "Do you like Thai food?",
+     "norm": "do you like thai food",
+     "status": "ok",
+     "hit_this_try": [
+      "ask"
+     ],
+     "missed_this_try": [
+      "explain"
+     ],
+     "slip": null,
+     "tries_after": 2,
+     "passed": true,
+     "app": "✓\nGood — you got there.\n💬 Cleared\n❓ Partial\nOne good answer: Yes, I do. I love spicy food. Do you like Thai food? 🔊\nYou said: Yes, I like spicy. You like? / Do you like Thai food?",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "explain: Answer about yourself": "c",
+    "ask: Ask her a question back": "p"
+   },
+   "stamp": "Partial",
+   "slip_kept": null,
+   "feedback": "✓\nGood — you got there.\n💬 Cleared\n❓ Partial\nOne good answer: Yes, I do. I love spicy food. Do you like Thai food? 🔊\nYou said: Yes, I like spicy. You like? / Do you like Thai food?"
+  },
+  {
+   "card": "s2",
+   "exchange": 2,
+   "npc": "I do, but I don't eat very spicy food.",
+   "objectives": [
+    "suggest: Suggest a dish that is not spicy"
+   ],
+   "chips_opened": [
+    "Yes, I do. I love spicy food.",
+    "Do you like Thai food?"
+   ],
+   "attempts": [
+    {
+     "typed": "This one not spicy.",
+     "norm": "this 1 not spicy",
+     "status": "ok",
+     "hit_this_try": [
+      "suggest"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n💡 Cleared\nOne good answer: Then try this one. It isn't spicy. 🔊\nYou said: This one not spicy.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "suggest: Suggest a dish that is not spicy": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n💡 Cleared\nOne good answer: Then try this one. It isn't spicy. 🔊\nYou said: This one not spicy."
+  },
+  {
+   "card": "s3",
+   "exchange": 1,
+   "npc": "I hear you studied in the UK. What did you study?",
+   "objectives": [
+    "past: Say what you studied"
+   ],
+   "chips_opened": [
+    "I studied business administration.",
+    "I loved it, but it was very cold."
+   ],
+   "attempts": [
+    {
+     "action": "tapped 'Ask to repeat'",
+     "app": "👍 Good move. Asking the person to repeat is always fine. Listen again, then answer.",
+     "tries_after": 0
+    },
+    {
+     "typed": "I study business.",
+     "norm": "i study business",
+     "status": "ok",
+     "hit_this_try": [
+      "past"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n⏪ Cleared\nOne good answer: I studied business administration. 🔊\nYou said: I study business.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 1,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "past: Say what you studied": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n⏪ Cleared\nOne good answer: I studied business administration. 🔊\nYou said: I study business."
+  },
+  {
+   "card": "s3",
+   "exchange": 2,
+   "npc": "Lovely! Did you like it there?",
+   "objectives": [
+    "past: Say if you liked it",
+    "explain: Add one detail — weather, food, people …"
+   ],
+   "chips_opened": [
+    "I studied business administration.",
+    "I loved it, but it was very cold."
+   ],
+   "attempts": [
+    {
+     "typed": "Yes. I like. But very cold.",
+     "norm": "yes i like but very cold",
+     "status": "ok",
+     "hit_this_try": [
+      "past",
+      "explain"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n⏪ Cleared\n💬 Cleared\nOne good answer: Yes, I loved it, but the weather was very cold. 🔊\nYou said: Yes. I like. But very cold.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "past: Say if you liked it": "c",
+    "explain: Add one detail — weather, food, people …": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n⏪ Cleared\n💬 Cleared\nOne good answer: Yes, I loved it, but the weather was very cold. 🔊\nYou said: Yes. I like. But very cold."
+  },
+  {
+   "card": "s4",
+   "exchange": 1,
+   "npc": "The traffic this morning was terrible! How do you get to work?",
+   "objectives": [
+    "explain: Say how you get to work",
+    "ask: Ask him a question back"
+   ],
+   "chips_opened": [
+    "I take the BTS. It's faster.",
+    "Where are you staying?"
+   ],
+   "attempts": [
+    {
+     "typed": "I go by BTS. And you?",
+     "norm": "i go by bts and you",
+     "status": "ok",
+     "hit_this_try": [
+      "explain",
+      "ask"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n💬 Cleared\n❓ Cleared\nOne good answer: I take the BTS. It's faster than a car. Where are you staying? 🔊\nYou said: I go by BTS. And you?",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "explain: Say how you get to work": "c",
+    "ask: Ask him a question back": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n💬 Cleared\n❓ Cleared\nOne good answer: I take the BTS. It's faster than a car. Where are you staying? 🔊\nYou said: I go by BTS. And you?"
+  },
+  {
+   "card": "s4",
+   "exchange": 2,
+   "npc": "At a hotel near the river. What should I see this weekend?",
+   "objectives": [
+    "suggest: Suggest a place"
+   ],
+   "chips_opened": [
+    "I take the BTS. It's faster.",
+    "Where are you staying?"
+   ],
+   "attempts": [
+    {
+     "typed": "Wat Pho very beautiful.",
+     "norm": "wat pho very beautiful",
+     "status": "ok",
+     "hit_this_try": [],
+     "missed_this_try": [
+      "suggest"
+     ],
+     "slip": null,
+     "tries_after": 1,
+     "passed": false,
+     "app": "🧭 Not yet. Still to do: Suggest a place.\nWords on the screen wrong? Tap “Say again” next time, or type.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "typed": "You go Wat Pho.",
+     "norm": "you go wat pho",
+     "status": "ok",
+     "hit_this_try": [],
+     "missed_this_try": [
+      "suggest"
+     ],
+     "slip": null,
+     "tries_after": 2,
+     "passed": false,
+     "app": "🧭 Not yet. Still to do: Suggest a place.\nWords on the screen wrong? Tap “Say again” next time, or type.",
+     "move_on_visible": true,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": true,
+   "tries": 2,
+   "stamps": {
+    "suggest: Suggest a place": "m"
+   },
+   "stamp": "Not yet",
+   "slip_kept": null,
+   "feedback": "→\nLet's keep moving.\n💡 Not yet\nOne good answer: You should visit the Grand Palace. Go early in the morning. 🔊\nYou said: Wat Pho very beautiful. / You go Wat Pho."
+  },
+  {
+   "card": "s5",
+   "exchange": 1,
+   "npc": "Finally, Friday! Any plans for the weekend?",
+   "objectives": [
+    "plan: Say your plan — I'm going to … / I will …"
+   ],
+   "chips_opened": [
+    "I'm going to visit my parents.",
+    "You could go to Chatuchak Market."
+   ],
+   "attempts": [
+    {
+     "typed": "I go home see my mother.",
+     "norm": "i go home see my mother",
+     "status": "ok",
+     "hit_this_try": [],
+     "missed_this_try": [
+      "plan"
+     ],
+     "slip": null,
+     "tries_after": 1,
+     "passed": false,
+     "app": "🧭 Not yet. Still to do: Say your plan — I'm going to … / I will ….\nWords on the screen wrong? Tap “Say again” next time, or type.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "typed": "I going to visit my mother.",
+     "norm": "i going to visit my mother",
+     "status": "ok",
+     "hit_this_try": [
+      "plan"
+     ],
+     "missed_this_try": [],
+     "slip": {
+      "said": "i going to",
+      "tag": "Future",
+      "msg": "Going to needs am / is / are: I am going to visit."
+     },
+     "tries_after": 2,
+     "passed": true,
+     "app": "✓\nGood — you got there.\n⏩ Partial\nOne good answer: I'm going to visit my parents on Saturday. 🔊\nYou said: I go home see my mother. / I going to visit my mother.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "plan: Say your plan — I'm going to … / I will …": "p"
+   },
+   "stamp": "Partial",
+   "slip_kept": {
+    "said": "i going to",
+    "tag": "Future",
+    "msg": "Going to needs am / is / are: I am going to visit."
+   },
+   "feedback": "✓\nGood — you got there.\n⏩ Partial\nOne good answer: I'm going to visit my parents on Saturday. 🔊\nYou said: I go home see my mother. / I going to visit my mother."
+  },
+  {
+   "card": "s5",
+   "exchange": 2,
+   "npc": "That sounds nice. I have a free day on Sunday. Any ideas?",
+   "objectives": [
+    "suggest: Suggest something to do"
+   ],
+   "chips_opened": [
+    "I'm going to visit my parents.",
+    "You could go to Chatuchak Market."
+   ],
+   "attempts": [
+    {
+     "typed": "You can go Chatuchak market.",
+     "norm": "you can go chatuchak market",
+     "status": "ok",
+     "hit_this_try": [
+      "suggest"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n💡 Cleared\nOne good answer: You could go to Chatuchak Market. It's open on Sundays. 🔊\nYou said: You can go Chatuchak market.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "suggest: Suggest something to do": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n💡 Cleared\nOne good answer: You could go to Chatuchak Market. It's open on Sundays. 🔊\nYou said: You can go Chatuchak market."
+  },
+  {
+   "card": "s6",
+   "exchange": 1,
+   "npc": "What a lovely evening.",
+   "objectives": [
+    "name: Use the right name for her",
+    "request: Ask politely for a photo"
+   ],
+   "chips_opened": [
+    "Excuse me, Colonel Hayes.",
+    "Could we take a photo with you, please?",
+    "Here in the middle, please, Ma'am."
+   ],
+   "attempts": [
+    {
+     "typed": "Excuse me madam. Photo with you please?",
+     "norm": "excuse me madam photo with you please",
+     "status": "ok",
+     "hit_this_try": [
+      "name"
+     ],
+     "missed_this_try": [
+      "request"
+     ],
+     "slip": null,
+     "tries_after": 1,
+     "passed": false,
+     "app": "🧭 Good start — one more thing. Still to do: Ask politely for a photo.\nWords on the screen wrong? Tap “Say again” next time, or type.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "typed": "Could we take photo with you?",
+     "norm": "could we take photo with you",
+     "status": "ok",
+     "hit_this_try": [
+      "request"
+     ],
+     "missed_this_try": [
+      "name"
+     ],
+     "slip": null,
+     "tries_after": 2,
+     "passed": true,
+     "app": "✓\nGood — you got there.\n🎖️ Cleared\n🤝 Partial\nOne good answer: Excuse me, Colonel Hayes. Could we take a photo with you, please? 🔊\nYou said: Excuse me madam. Photo with you please? / Could we take photo with you?",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "name: Use the right name for her": "c",
+    "request: Ask politely for a photo": "p"
+   },
+   "stamp": "Partial",
+   "slip_kept": null,
+   "feedback": "✓\nGood — you got there.\n🎖️ Cleared\n🤝 Partial\nOne good answer: Excuse me, Colonel Hayes. Could we take a photo with you, please? 🔊\nYou said: Excuse me madam. Photo with you please? / Could we take photo with you?"
+  },
+  {
+   "card": "s6",
+   "exchange": 2,
+   "npc": "Of course! Where should I stand?",
+   "objectives": [
+    "place: Say where to stand",
+    "thank: Thank her"
+   ],
+   "chips_opened": [
+    "Excuse me, Colonel Hayes.",
+    "Could we take a photo with you, please?",
+    "Here in the middle, please, Ma'am."
+   ],
+   "attempts": [
+    {
+     "typed": "Here, middle please. Thank you madam.",
+     "norm": "here middle please thank you madam",
+     "status": "ok",
+     "hit_this_try": [
+      "place",
+      "thank"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n📍 Cleared\n🙏 Cleared\nOne good answer: Here in the middle, please, Ma'am. Thank you. 🔊\nYou said: Here, middle please. Thank you madam.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "place: Say where to stand": "c",
+    "thank: Thank her": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n📍 Cleared\n🙏 Cleared\nOne good answer: Here in the middle, please, Ma'am. Thank you. 🔊\nYou said: Here, middle please. Thank you madam."
+  },
+  {
+   "card": "s7",
+   "exchange": 1,
+   "npc": "Here's a question. If you had a free week, where would you go?",
+   "objectives": [
+    "explain: Say where you would go — I would …"
+   ],
+   "chips_opened": [
+    "I would go to Chiang Mai.",
+    "I would visit the mountains."
+   ],
+   "attempts": [
+    {
+     "typed": "I don't understand",
+     "norm": "i do not understand",
+     "status": "repair",
+     "hit_this_try": [],
+     "missed_this_try": [
+      "explain"
+     ],
+     "slip": null,
+     "tries_after": 0,
+     "passed": false,
+     "app": "👍 Good move. Asking the person to repeat is always fine. Listen again, then answer.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "typed": "ไม่เข้าใจค่ะ",
+     "norm": "",
+     "status": "empty",
+     "hit_this_try": [],
+     "missed_this_try": [
+      "explain"
+     ],
+     "slip": null,
+     "tries_after": 0,
+     "passed": false,
+     "app": "👂 A little more, please. Say a full sentence — three words or more.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "typed": "I go Chiang Mai.",
+     "norm": "i go chiang mai",
+     "status": "ok",
+     "hit_this_try": [],
+     "missed_this_try": [
+      "explain"
+     ],
+     "slip": null,
+     "tries_after": 1,
+     "passed": false,
+     "app": "🧭 Not yet. Still to do: Say where you would go — I would ….\nWords on the screen wrong? Tap “Say again” next time, or type.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "action": "tapped Hint (level 1)",
+     "app": "🧭 Not yet. Still to do: Say where you would go — I would ….\nWords on the screen wrong? Tap “Say again” next time, or type.\n🧩 Start like this: I would go to …"
+    },
+    {
+     "typed": "I would go to Chiang Mai.",
+     "norm": "i would go to chiang mai",
+     "status": "ok",
+     "hit_this_try": [
+      "explain"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 2,
+     "passed": true,
+     "app": "✓\nGood — you got there.\n💬 Partial\nOne good answer: I would go to Chiang Mai. I would visit the mountains. 🔊\nYou said: ไม่เข้าใจค่ะ / I go Chiang Mai. / I would go to Chiang Mai.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 1,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "explain: Say where you would go — I would …": "p"
+   },
+   "stamp": "Partial",
+   "slip_kept": null,
+   "feedback": "✓\nGood — you got there.\n💬 Partial\nOne good answer: I would go to Chiang Mai. I would visit the mountains. 🔊\nYou said: ไม่เข้าใจค่ะ / I go Chiang Mai. / I would go to Chiang Mai."
+  },
+  {
+   "card": "s7",
+   "exchange": 2,
+   "npc": "Nice. And if I come to Thailand again, what should I do?",
+   "objectives": [
+    "suggest: Suggest something for his next visit"
+   ],
+   "chips_opened": [
+    "I would go to Chiang Mai.",
+    "I would visit the mountains."
+   ],
+   "attempts": [
+    {
+     "typed": "You should go Phuket. Beach beautiful.",
+     "norm": "you should go phuket beach beautiful",
+     "status": "ok",
+     "hit_this_try": [
+      "suggest"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n💡 Cleared\nOne good answer: If you come again, you should visit the islands in the south. 🔊\nYou said: You should go Phuket. Beach beautiful.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "suggest: Suggest something for his next visit": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n💡 Cleared\nOne good answer: If you come again, you should visit the islands in the south. 🔊\nYou said: You should go Phuket. Beach beautiful."
+  },
+  {
+   "card": "s8",
+   "exchange": 1,
+   "npc": "Well, that's the end of the week. I fly home tonight.",
+   "objectives": [
+    "thank: Thank him",
+    "bye: Wish him a good journey"
+   ],
+   "chips_opened": [
+    "Have a safe flight."
+   ],
+   "attempts": [
+    {
+     "typed": "Thank you very much. Safe flight.",
+     "norm": "thank you very much safe flight",
+     "status": "ok",
+     "hit_this_try": [
+      "thank",
+      "bye"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n🙏 Cleared\n✈️ Cleared\nOne good answer: Thank you for everything, Flight Lieutenant Hughes. Have a safe flight. 🔊\nYou said: Thank you very much. Safe flight.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "thank: Thank him": "c",
+    "bye: Wish him a good journey": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n🙏 Cleared\n✈️ Cleared\nOne good answer: Thank you for everything, Flight Lieutenant Hughes. Have a safe flight. 🔊\nYou said: Thank you very much. Safe flight."
+  },
+  {
+   "card": "s8",
+   "exchange": 2,
+   "npc": "Thanks. I hope we meet again.",
+   "objectives": [
+    "bye: Say goodbye"
+   ],
+   "chips_opened": [
+    "Have a safe flight."
+   ],
+   "attempts": [
+    {
+     "typed": "Goodbye",
+     "norm": "goodbye",
+     "status": "short",
+     "hit_this_try": [],
+     "missed_this_try": [
+      "bye"
+     ],
+     "slip": null,
+     "tries_after": 0,
+     "passed": false,
+     "app": "👂 A little more, please. Say a full sentence — three words or more.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    },
+    {
+     "typed": "Goodbye. See you again.",
+     "norm": "goodbye see you again",
+     "status": "ok",
+     "hit_this_try": [
+      "bye"
+     ],
+     "missed_this_try": [],
+     "slip": null,
+     "tries_after": 1,
+     "passed": true,
+     "app": "✓\nCleared!\n✈️ Cleared\nOne good answer: I hope so too. Please keep in touch. Goodbye! 🔊\nYou said: Goodbye / Goodbye. See you again.",
+     "move_on_visible": false,
+     "had_to_tap_type_instead": true
+    }
+   ],
+   "hints": 0,
+   "repairs": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "bye: Say goodbye": "c"
+   },
+   "stamp": "Cleared",
+   "slip_kept": null,
+   "feedback": "✓\nCleared!\n✈️ Cleared\nOne good answer: I hope so too. Please keep in touch. Goodbye! 🔊\nYou said: Goodbye / Goodbye. See you again."
+  }
+ ],
+ "cards": [
+  {
+   "card": "o1",
+   "title": "Who does what?",
+   "level": "A1",
+   "chips": 1,
+   "preflight_secs_used": 2,
+   "final_stamp": "Cleared",
+   "score": "90%",
+   "best": 90,
+   "due": null,
+   "debrief": {
+    "score": "90%",
+    "tier": "CLEARED",
+    "line": "Every objective first time. That is real-life English.",
+    "small": "Top score 90 (1 phrase chip) · first time",
+    "note": "📝 One grammar note (not marked down): One person → verb + s: Khun Nok checks, my boss signs.\nI heard: “khun nok check”",
+    "links": [
+     "🧍‍♀️ Formation 1 · Verb -s ▸"
+    ],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "🗂️ OFFICE DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "o2",
+   "title": "What's in the file?",
+   "level": "A1",
+   "chips": 2,
+   "preflight_secs_used": 0,
+   "final_stamp": "Cleared",
+   "score": "80%",
+   "best": 80,
+   "due": null,
+   "debrief": {
+    "score": "80%",
+    "tier": "CLEARED",
+    "line": "Every objective first time. That is real-life English.",
+    "small": "Top score 80 (2 phrase chips) · first time",
+    "note": "",
+    "links": [],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "🗂️ OFFICE DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "o3",
+   "title": "Not ready yet",
+   "level": "A1–A2",
+   "chips": 2,
+   "preflight_secs_used": 0,
+   "final_stamp": "Partial",
+   "score": "67%",
+   "best": 67,
+   "due": "2026-11-29",
+   "debrief": {
+    "score": "67%",
+    "tier": "PARTIAL",
+    "line": "You handled it with a little help. This card comes back in 3 days.",
+    "small": "Top score 80 (2 phrase chips) · first time",
+    "note": "",
+    "links": [
+     "🚫 Formation 3 · Negatives ▸"
+    ],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "↺ Fly this card again",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "🗂️ OFFICE DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "o4",
+   "title": "Check the details",
+   "level": "A2",
+   "chips": 3,
+   "preflight_secs_used": 0,
+   "final_stamp": "Cleared",
+   "score": "70%",
+   "best": 70,
+   "due": null,
+   "debrief": {
+    "score": "70%",
+    "tier": "CLEARED",
+    "line": "Every objective first time. That is real-life English.",
+    "small": "Top score 70 (3 phrase chips) · first time",
+    "note": "",
+    "links": [],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "🗂️ OFFICE DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "o5",
+   "title": "Fix the meeting",
+   "level": "A2",
+   "chips": 2,
+   "preflight_secs_used": 0,
+   "final_stamp": "Cleared",
+   "score": "80%",
+   "best": 80,
+   "due": null,
+   "debrief": {
+    "score": "80%",
+    "tier": "CLEARED",
+    "line": "Every objective first time. That is real-life English.",
+    "small": "Top score 80 (2 phrase chips) · first time",
+    "note": "",
+    "links": [],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "🗂️ OFFICE DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "o6",
+   "title": "Two more days",
+   "level": "A2",
+   "chips": 2,
+   "preflight_secs_used": 0,
+   "final_stamp": "Partial",
+   "score": "40%",
+   "best": 40,
+   "due": "2026-11-29",
+   "debrief": {
+    "score": "40%",
+    "tier": "PARTIAL",
+    "line": "You handled it with a little help. This card comes back in 3 days.",
+    "small": "Top score 80 (2 phrase chips) · first time",
+    "note": "📝 One grammar note (not marked down): Use don't + verb: I don't have it.\nI heard: “i not send”",
+    "links": [
+     "🚫 Formation 3 · Negatives ▸",
+     "⏪ Formation 6 · Past simple ▸",
+     "🙏 Formation 8 · Polite requests ▸"
+    ],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "↺ Fly this card again",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "🗂️ OFFICE DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "o7",
+   "title": "The late payment",
+   "level": "A2",
+   "chips": 2,
+   "preflight_secs_used": 0,
+   "final_stamp": "Partial",
+   "score": "70%",
+   "best": 70,
+   "due": "2026-11-29",
+   "debrief": {
+    "score": "70%",
+    "tier": "PARTIAL",
+    "line": "You handled it with a little help. This card comes back in 3 days.",
+    "small": "Top score 80 (2 phrase chips) · first time",
+    "note": "📝 One grammar note (not marked down): Rank or Mr + family name: Colonel Hayes, Mr Eriksen.\nI heard: “mr mike”",
+    "links": [
+     "🎚️ Formation 12 · Address & register ▸",
+     "⏩ Formation 7 · Future ▸"
+    ],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "↺ Fly this card again",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "🗂️ OFFICE DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "o8",
+   "title": "Ask the boss",
+   "level": "A2–B1",
+   "chips": 3,
+   "preflight_secs_used": 0,
+   "final_stamp": "Partial",
+   "score": "61%",
+   "best": 61,
+   "due": "2026-11-29",
+   "debrief": {
+    "score": "61%",
+    "tier": "PARTIAL",
+    "line": "You handled it with a little help. This card comes back in 3 days.",
+    "small": "Top score 70 (3 phrase chips) · first time",
+    "note": "📝 One grammar note (not marked down): Softer with a senior or a visitor: Could I have … ? / I'd like …\nI heard: “i want ”",
+    "links": [
+     "🙏 Formation 8 · Polite requests ▸",
+     "🎚️ Formation 12 · Address & register ▸"
+    ],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "↺ Fly this card again",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "🗂️ OFFICE DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "v1",
+   "title": "Where is the briefing room?",
+   "level": "A2",
+   "chips": 2,
+   "preflight_secs_used": 0,
+   "final_stamp": "Cleared",
+   "score": "80%",
+   "best": 80,
+   "due": null,
+   "debrief": {
+    "score": "80%",
+    "tier": "CLEARED",
+    "line": "Every objective first time. That is real-life English.",
+    "small": "Top score 80 (2 phrase chips) · first time",
+    "note": "",
+    "links": [],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "🛬 VISITORS DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "v2",
+   "title": "No booking",
+   "level": "A2",
+   "chips": 2,
+   "preflight_secs_used": 0,
+   "final_stamp": "Partial",
+   "score": "53%",
+   "best": 53,
+   "due": "2026-11-29",
+   "debrief": {
+    "score": "53%",
+    "tier": "PARTIAL",
+    "line": "You handled it with a little help. This card comes back in 3 days.",
+    "small": "Top score 80 (2 phrase chips) · first time",
+    "note": "",
+    "links": [
+     "❓ Formation 4 · Yes/No questions ▸",
+     "🙏 Formation 8 · Polite requests ▸"
+    ],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "↺ Fly this card again",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "🛬 VISITORS DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "v3",
+   "title": "Welcome to the base",
+   "level": "A2",
+   "chips": 2,
+   "preflight_secs_used": 0,
+   "final_stamp": "Cleared",
+   "score": "80%",
+   "best": 80,
+   "due": null,
+   "debrief": {
+    "score": "80%",
+    "tier": "CLEARED",
+    "line": "Every objective first time. That is real-life English.",
+    "small": "Top score 80 (2 phrase chips) · first time",
+    "note": "",
+    "links": [],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "🛬 VISITORS DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "v4",
+   "title": "Yesterday's meeting",
+   "level": "A2",
+   "chips": 3,
+   "preflight_secs_used": 0,
+   "final_stamp": "Partial",
+   "score": "47%",
+   "best": 47,
+   "due": "2026-11-29",
+   "debrief": {
+    "score": "47%",
+    "tier": "PARTIAL",
+    "line": "You handled it with a little help. This card comes back in 3 days.",
+    "small": "Top score 70 (3 phrase chips) · first time",
+    "note": "📝 One grammar note (not marked down): One person → verb + s: Khun Nok checks, my boss signs.\nI heard: “wing commander anan approve”",
+    "links": [
+     "🧍‍♀️ Formation 1 · Verb -s ▸",
+     "⏪ Formation 6 · Past simple ▸"
+    ],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "↺ Fly this card again",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "🛬 VISITORS DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "v5",
+   "title": "Tomorrow's plan",
+   "level": "A2",
+   "chips": 2,
+   "preflight_secs_used": 0,
+   "final_stamp": "Partial",
+   "score": "67%",
+   "best": 67,
+   "due": "2026-11-29",
+   "debrief": {
+    "score": "67%",
+    "tier": "PARTIAL",
+    "line": "You handled it with a little help. This card comes back in 3 days.",
+    "small": "Top score 80 (2 phrase chips) · first time",
+    "note": "",
+    "links": [
+     "⏩ Formation 7 · Future ▸"
+    ],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "↺ Fly this card again",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "🛬 VISITORS DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "v6",
+   "title": "The taxi claim",
+   "level": "A2–B1",
+   "chips": 3,
+   "preflight_secs_used": 0,
+   "final_stamp": "Partial",
+   "score": "58%",
+   "best": 58,
+   "due": "2026-11-29",
+   "debrief": {
+    "score": "58%",
+    "tier": "PARTIAL",
+    "line": "You handled it with a little help. This card comes back in 3 days.",
+    "small": "Top score 70 (3 phrase chips) · first time",
+    "note": "📝 One grammar note (not marked down): Softer with a senior or a visitor: Could I have … ? / I'd like …\nI heard: “i want ”",
+    "links": [
+     "🙏 Formation 8 · Polite requests ▸",
+     "📦 Formation 9 · Count / non-count ▸"
+    ],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "↺ Fly this card again",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "🛬 VISITORS DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "v7",
+   "title": "The transfer came back",
+   "level": "B1",
+   "chips": 3,
+   "preflight_secs_used": 0,
+   "final_stamp": "Partial",
+   "score": "35%",
+   "best": 35,
+   "due": "2026-11-29",
+   "debrief": {
+    "score": "35%",
+    "tier": "PARTIAL",
+    "line": "You handled it with a little help. This card comes back in 3 days.",
+    "small": "Top score 70 (3 phrase chips) · first time",
+    "note": "",
+    "links": [
+     "🔀 Formation 10 · Conditionals ▸"
+    ],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "↺ Fly this card again",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "🛬 VISITORS DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "v8",
+   "title": "Status report",
+   "level": "B1",
+   "chips": 3,
+   "preflight_secs_used": 1,
+   "final_stamp": "Partial",
+   "score": "35%",
+   "best": 35,
+   "due": "2026-11-29",
+   "debrief": {
+    "score": "35%",
+    "tier": "PARTIAL",
+    "line": "You handled it with a little help. This card comes back in 3 days.",
+    "small": "Top score 70 (3 phrase chips) · first time",
+    "note": "",
+    "links": [
+     "🔁 Formation 11 · Passive ▸"
+    ],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "↺ Fly this card again",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "🛬 VISITORS DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "s1",
+   "title": "What do you do?",
+   "level": "A2",
+   "chips": 1,
+   "preflight_secs_used": 0,
+   "final_stamp": "Cleared",
+   "score": "90%",
+   "best": 90,
+   "due": null,
+   "debrief": {
+    "score": "90%",
+    "tier": "CLEARED",
+    "line": "Every objective first time. That is real-life English.",
+    "small": "Top score 90 (1 phrase chip) · first time",
+    "note": "📝 One grammar note (not marked down): After he / she, add -s: he signs, she checks, he has.\nI heard: “he sign”",
+    "links": [
+     "🧍‍♀️ Formation 1 · Verb -s ▸"
+    ],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "☕ SOCIAL DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "s2",
+   "title": "Welcome dinner",
+   "level": "A2",
+   "chips": 2,
+   "preflight_secs_used": 0,
+   "final_stamp": "Partial",
+   "score": "67%",
+   "best": 67,
+   "due": "2026-11-29",
+   "debrief": {
+    "score": "67%",
+    "tier": "PARTIAL",
+    "line": "You handled it with a little help. This card comes back in 3 days.",
+    "small": "Top score 80 (2 phrase chips) · first time",
+    "note": "",
+    "links": [
+     "🚫 Formation 3 · Negatives ▸",
+     "❓ Formation 4 · Yes/No questions ▸"
+    ],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "↺ Fly this card again",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "☕ SOCIAL DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "s3",
+   "title": "Your UK degree",
+   "level": "A2",
+   "chips": 2,
+   "preflight_secs_used": 0,
+   "final_stamp": "Cleared",
+   "score": "80%",
+   "best": 80,
+   "due": null,
+   "debrief": {
+    "score": "80%",
+    "tier": "CLEARED",
+    "line": "Every objective first time. That is real-life English.",
+    "small": "Top score 80 (2 phrase chips) · first time",
+    "note": "",
+    "links": [],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "☕ SOCIAL DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "s4",
+   "title": "Bangkok traffic",
+   "level": "A2",
+   "chips": 2,
+   "preflight_secs_used": 0,
+   "final_stamp": "Partial",
+   "score": "53%",
+   "best": 53,
+   "due": "2026-11-29",
+   "debrief": {
+    "score": "53%",
+    "tier": "PARTIAL",
+    "line": "You handled it with a little help. This card comes back in 3 days.",
+    "small": "Top score 80 (2 phrase chips) · first time",
+    "note": "",
+    "links": [
+     "🧭 Formation 5 · Wh- questions ▸"
+    ],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "↺ Fly this card again",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "☕ SOCIAL DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "s5",
+   "title": "Weekend plans",
+   "level": "A2",
+   "chips": 2,
+   "preflight_secs_used": 0,
+   "final_stamp": "Partial",
+   "score": "60%",
+   "best": 60,
+   "due": "2026-11-29",
+   "debrief": {
+    "score": "60%",
+    "tier": "PARTIAL",
+    "line": "You handled it with a little help. This card comes back in 3 days.",
+    "small": "Top score 80 (2 phrase chips) · first time",
+    "note": "📝 One grammar note (not marked down): Going to needs am / is / are: I am going to visit.\nI heard: “i going to”",
+    "links": [
+     "⏩ Formation 7 · Future ▸"
+    ],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "↺ Fly this card again",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "☕ SOCIAL DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "s6",
+   "title": "A photo, please",
+   "level": "A2–B1",
+   "chips": 3,
+   "preflight_secs_used": 0,
+   "final_stamp": "Partial",
+   "score": "61%",
+   "best": 61,
+   "due": "2026-11-29",
+   "debrief": {
+    "score": "61%",
+    "tier": "PARTIAL",
+    "line": "You handled it with a little help. This card comes back in 3 days.",
+    "small": "Top score 70 (3 phrase chips) · first time",
+    "note": "",
+    "links": [
+     "🙏 Formation 8 · Polite requests ▸",
+     "🎚️ Formation 12 · Address & register ▸"
+    ],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "↺ Fly this card again",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "☕ SOCIAL DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "s7",
+   "title": "If you had a free week",
+   "level": "B1",
+   "chips": 2,
+   "preflight_secs_used": 0,
+   "final_stamp": "Partial",
+   "score": "60%",
+   "best": 60,
+   "due": "2026-11-29",
+   "debrief": {
+    "score": "60%",
+    "tier": "PARTIAL",
+    "line": "You handled it with a little help. This card comes back in 3 days.",
+    "small": "Top score 80 (2 phrase chips) · first time",
+    "note": "",
+    "links": [
+     "🔀 Formation 10 · Conditionals ▸"
+    ],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "↺ Fly this card again",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "☕ SOCIAL DECK · NEW CARD",
+    "clock": "20"
+   }
+  },
+  {
+   "card": "s8",
+   "title": "Saying goodbye",
+   "level": "A2–B1",
+   "chips": 1,
+   "preflight_secs_used": 0,
+   "final_stamp": "Cleared",
+   "score": "90%",
+   "best": 90,
+   "due": null,
+   "debrief": {
+    "score": "90%",
+    "tier": "CLEARED",
+    "line": "Every objective first time. That is real-life English.",
+    "small": "Top score 90 (1 phrase chip) · first time",
+    "note": "",
+    "links": [],
+    "buttons": [
+     "🎴 Draw another ▸",
+     "All decks"
+    ]
+   },
+   "face": {
+    "kick": "☕ SOCIAL DECK · NEW CARD",
+    "clock": "20"
+   }
+  }
+ ],
+ "events": [
+  {
+   "msg": "home loaded",
+   "title": "Modulation Desk — RTAF Finance English",
+   "sc": {
+    "c": {},
+    "k": {}
+   },
+   "mic": "🎙️ Microphone ready · Safari",
+   "free": true,
+   "user": "none"
+  },
+  {
+   "msg": "unseen tiles have no button",
+   "unseenButtons": 0,
+   "tiles": 24
+  },
+  {
+   "msg": "Scramble surprise draw",
+   "got": "o1"
+  },
+  {
+   "msg": "Draw another",
+   "after": "o1",
+   "got": "o2"
+  },
+  {
+   "msg": "Draw another",
+   "after": "o2",
+   "got": "o3"
+  },
+  {
+   "msg": "Draw another",
+   "after": "o3",
+   "got": "o4"
+  },
+  {
+   "msg": "Draw another",
+   "after": "o4",
+   "got": "o5"
+  },
+  {
+   "msg": "Draw another",
+   "after": "o5",
+   "got": "o6"
+  },
+  {
+   "msg": "debrief formation link",
+   "view": "fdplay",
+   "tab": "fd",
+   "heading": "🚫 Don't · Doesn't · Isn't",
+   "backBtn": "← Formation Drills"
+  },
+  {
+   "msg": "back from formation",
+   "view": "home",
+   "tabOn": "🎖️\nFormation Drills"
+  },
+  {
+   "msg": "Draw a card",
+   "deck": "office",
+   "got": "o7"
+  },
+  {
+   "msg": "Draw another",
+   "after": "o7",
+   "got": "o8"
+  },
+  {
+   "msg": "Draw a card",
+   "deck": "visitors",
+   "got": "v1"
+  },
+  {
+   "msg": "Draw another",
+   "after": "v1",
+   "got": "v2"
+  },
+  {
+   "msg": "Draw another",
+   "after": "v2",
+   "got": "v3"
+  },
+  {
+   "msg": "Draw another",
+   "after": "v3",
+   "got": "v4"
+  },
+  {
+   "msg": "Draw another",
+   "after": "v4",
+   "got": "v5"
+  },
+  {
+   "msg": "Draw another",
+   "after": "v5",
+   "got": "v6"
+  },
+  {
+   "msg": "Draw another",
+   "after": "v6",
+   "got": "v7"
+  },
+  {
+   "msg": "Fly this card again",
+   "got": "v7",
+   "kick": "🛬 VISITORS DECK · SECOND LOOK"
+  },
+  {
+   "msg": "back from pre-flight (no confirm expected)",
+   "dialogs": [],
+   "view": "home"
+  },
+  {
+   "msg": "Draw a card",
+   "deck": "visitors",
+   "got": "v8"
+  },
+  {
+   "msg": "Draw a card",
+   "deck": "social",
+   "got": "s1"
+  },
+  {
+   "msg": "Draw another",
+   "after": "s1",
+   "got": "s2"
+  },
+  {
+   "msg": "Draw another",
+   "after": "s2",
+   "got": "s3"
+  },
+  {
+   "msg": "Draw another",
+   "after": "s3",
+   "got": "s4"
+  },
+  {
+   "msg": "Draw another",
+   "after": "s4",
+   "got": "s5"
+  },
+  {
+   "msg": "Draw another",
+   "after": "s5",
+   "got": "s6"
+  },
+  {
+   "msg": "Draw another",
+   "after": "s6",
+   "got": "s7"
+  },
+  {
+   "msg": "Draw another",
+   "after": "s7",
+   "got": "s8"
+  },
+  {
+   "msg": "Scramble after all seen",
+   "got": "v6",
+   "status": "p",
+   "kick": "🛬 VISITORS DECK · SECOND LOOK"
+  },
+  {
+   "msg": "replay o6 e1",
+   "typed": "Sorry. I not send yet.",
+   "state": {
+    "id": "o6",
+    "ti": 0,
+    "phase": "talk",
+    "sub": "ready",
+    "tries": 1,
+    "lad": 0,
+    "hits": [
+     true,
+     false
+    ],
+    "first": [
+     true,
+     false
+    ],
+    "repairs": 0,
+    "issue": "miss",
+    "chips": [
+     false,
+     false,
+     false
+    ],
+    "slip": {
+     "said": "i not send",
+     "tag": "Negatives",
+     "msg": "Use don't + verb: I don't have it."
+    },
+    "res": []
+   }
+  },
+  {
+   "msg": "leave mid-card: dismissed confirm",
+   "dialog": [
+    "Leave this card? It will not be saved."
+   ],
+   "stillOn": "o6"
+  },
+  {
+   "msg": "leave mid-card: accepted",
+   "view": "home",
+   "o6_unchanged": true,
+   "kinds_changed": false
+  },
+  {
+   "msg": "one-word answers never open Move on",
+   "steps": [
+    {
+     "typed": "Three",
+     "tries": 0,
+     "move_on": false,
+     "coach": "👂 A little more, please. Say a full sentence — three words or more."
+    },
+    {
+     "typed": "3",
+     "tries": 0,
+     "move_on": false,
+     "coach": "👂 A little more, please. Say a full sentence — three words or more."
+    },
+    {
+     "typed": "Three.",
+     "tries": 0,
+     "move_on": false,
+     "coach": "👂 A little more, please. Say a full sentence — three words or more."
+    }
+   ]
+  },
+  {
+   "msg": "final home",
+   "view": "home",
+   "dialogs": [
+    "Leave this card? It will not be saved.",
+    "Leave this card? It will not be saved."
+   ]
+  }
+ ],
+ "layout": {
+  "home-before": {
+   "overflowX": 0,
+   "pageH": 3146,
+   "items": [
+    {
+     "sel": ".tabs .tab",
+     "n": 5,
+     "font": 16,
+     "w": 170,
+     "h": 42,
+     "color": "rgb(169, 187, 208)",
+     "right": -58
+    },
+    {
+     "sel": ".cbanner h2",
+     "n": 1,
+     "font": 23.2,
+     "w": 320,
+     "h": 34,
+     "color": "rgb(237, 242, 249)",
+     "right": 355
+    },
+    {
+     "sel": ".cbanner p",
+     "n": 1,
+     "font": 14.7,
+     "w": 320,
+     "h": 171,
+     "color": "rgb(169, 187, 208)",
+     "right": 355
+    },
+    {
+     "sel": ".cstat .v",
+     "n": 3,
+     "font": 19.2,
+     "w": 77,
+     "h": 28,
+     "color": "rgb(212, 175, 55)",
+     "right": 124
+    },
+    {
+     "sel": ".cstat .k",
+     "n": 3,
+     "font": 9.6,
+     "w": 77,
+     "h": 14,
+     "color": "rgb(169, 187, 208)",
+     "right": 124
+    },
+    {
+     "sel": ".gs-strip .hbtn",
+     "n": 3,
+     "font": 13.1,
+     "w": 186,
+     "h": 33,
+     "color": "rgb(237, 242, 249)",
+     "right": 202
+    },
+    {
+     "sel": ".gs-mic",
+     "n": 1,
+     "font": 13.1,
+     "w": 202,
+     "h": 33,
+     "color": "rgb(191, 245, 207)",
+     "right": 218
+    },
+    {
+     "sel": "#scAny",
+     "n": 1,
+     "font": 16,
+     "w": 118,
+     "h": 41,
+     "color": "rgb(26, 20, 5)",
+     "right": 149
+    },
+    {
+     "sel": ".fd-review small",
+     "n": 1,
+     "font": 13.3,
+     "w": 315,
+     "h": 39,
+     "color": "rgb(169, 187, 208)",
+     "right": 346
+    },
+    {
+     "sel": "[data-scdraw]",
+     "n": 3,
+     "font": 16,
+     "w": 328,
+     "h": 41,
+     "color": "rgb(26, 20, 5)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-dd",
+     "n": 3,
+     "font": 13.8,
+     "w": 328,
+     "h": 20,
+     "color": "rgb(169, 187, 208)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-tile b",
+     "n": 24,
+     "font": 14.4,
+     "w": 264,
+     "h": 21,
+     "color": "rgb(237, 242, 249)",
+     "right": 349
+    },
+    {
+     "sel": ".sc-tile small",
+     "n": 24,
+     "font": 11.8,
+     "w": 264,
+     "h": 18,
+     "color": "rgb(169, 187, 208)",
+     "right": 349
+    },
+    {
+     "sel": ".sc-tile .chip",
+     "n": 30,
+     "font": 11.5,
+     "w": 69,
+     "h": 18,
+     "color": "rgb(169, 187, 208)",
+     "right": 154
+    }
+   ]
+  },
+  "preflight": {
+   "overflowX": 0,
+   "pageH": 1286,
+   "items": [
+    {
+     "sel": "#scBack",
+     "n": 1,
+     "font": 16,
+     "w": 126,
+     "h": 43,
+     "color": "rgb(237, 242, 249)",
+     "right": 142
+    },
+    {
+     "sel": ".pbar h2",
+     "n": 1,
+     "font": 17.6,
+     "w": 169,
+     "h": 26,
+     "color": "rgb(237, 242, 249)",
+     "right": 322
+    },
+    {
+     "sel": ".bdg",
+     "n": 1,
+     "font": 11.2,
+     "w": 32,
+     "h": 22,
+     "color": "rgb(26, 20, 5)",
+     "right": 364
+    },
+    {
+     "sel": ".sc-sit",
+     "n": 1,
+     "font": 16,
+     "w": 322,
+     "h": 96,
+     "color": "rgb(255, 255, 255)",
+     "right": 356
+    },
+    {
+     "sel": ".sc-th",
+     "n": 1,
+     "font": 14.7,
+     "w": 322,
+     "h": 94,
+     "color": "rgb(169, 187, 208)",
+     "right": 356
+    },
+    {
+     "sel": ".sc-obj",
+     "n": 2,
+     "font": 13.8,
+     "w": 83,
+     "h": 30,
+     "color": "rgb(237, 242, 249)",
+     "right": 117
+    },
+    {
+     "sel": ".sc-forms",
+     "n": 1,
+     "font": 12.5,
+     "w": 322,
+     "h": 24,
+     "color": "rgb(169, 187, 208)",
+     "right": 356
+    },
+    {
+     "sel": ".sc-forms .chip",
+     "n": 1,
+     "font": 11.5,
+     "w": 127,
+     "h": 18,
+     "color": "rgb(169, 187, 208)",
+     "right": 330
+    },
+    {
+     "sel": ".sc-clock small",
+     "n": 1,
+     "font": 11.5,
+     "w": 82,
+     "h": 30,
+     "color": "rgb(169, 187, 208)",
+     "right": 165
+    },
+    {
+     "sel": ".gs-fine",
+     "n": 2,
+     "font": 12.5,
+     "w": 328,
+     "h": 36,
+     "color": "rgb(169, 187, 208)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-chip",
+     "n": 3,
+     "font": 14.7,
+     "w": 328,
+     "h": 41,
+     "color": "rgb(237, 242, 249)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-chip small",
+     "n": 3,
+     "font": 11.5,
+     "w": 83,
+     "h": 17,
+     "color": "rgb(169, 187, 208)",
+     "right": 346
+    },
+    {
+     "sel": "#scGo",
+     "n": 1,
+     "font": 16,
+     "w": 174,
+     "h": 45,
+     "color": "rgb(255, 255, 255)",
+     "right": 359
+    }
+   ]
+  },
+  "exchange-ready": {
+   "overflowX": 0,
+   "pageH": 1259,
+   "items": [
+    {
+     "sel": "#scBack",
+     "n": 1,
+     "font": 16,
+     "w": 126,
+     "h": 43,
+     "color": "rgb(237, 242, 249)",
+     "right": 142
+    },
+    {
+     "sel": ".pbar h2",
+     "n": 1,
+     "font": 17.6,
+     "w": 169,
+     "h": 26,
+     "color": "rgb(237, 242, 249)",
+     "right": 322
+    },
+    {
+     "sel": ".bdg",
+     "n": 1,
+     "font": 11.2,
+     "w": 32,
+     "h": 22,
+     "color": "rgb(26, 20, 5)",
+     "right": 364
+    },
+    {
+     "sel": ".sc-chip",
+     "n": 3,
+     "font": 14.7,
+     "w": 328,
+     "h": 41,
+     "color": "rgb(237, 242, 249)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-chip small",
+     "n": 2,
+     "font": 11.5,
+     "w": 83,
+     "h": 17,
+     "color": "rgb(169, 187, 208)",
+     "right": 346
+    },
+    {
+     "sel": ".gs-bub",
+     "n": 1,
+     "font": 16,
+     "w": 302,
+     "h": 85,
+     "color": "rgb(20, 32, 46)",
+     "right": 333
+    },
+    {
+     "sel": ".gs-play",
+     "n": 1,
+     "font": 16.8,
+     "w": 29,
+     "h": 32,
+     "color": "rgb(0, 0, 0)",
+     "right": 327
+    },
+    {
+     "sel": ".sc-ob",
+     "n": 2,
+     "font": 15.2,
+     "w": 328,
+     "h": 40,
+     "color": "rgb(237, 242, 249)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-sitd summary",
+     "n": 1,
+     "font": 11.8,
+     "w": 328,
+     "h": 17,
+     "color": "rgb(212, 175, 55)",
+     "right": 359
+    },
+    {
+     "sel": ".gs-score",
+     "n": 1,
+     "font": 11.8,
+     "w": 328,
+     "h": 17,
+     "color": "rgb(169, 187, 208)",
+     "right": 359
+    },
+    {
+     "sel": ".gs-mictxt",
+     "n": 1,
+     "font": 15.2,
+     "w": 236,
+     "h": 66,
+     "color": "rgb(237, 242, 249)",
+     "right": 359
+    },
+    {
+     "sel": ".gs-mictxt small",
+     "n": 1,
+     "font": 12.7,
+     "w": 229,
+     "h": 15,
+     "color": "rgb(169, 187, 208)",
+     "right": 352
+    },
+    {
+     "sel": ".gs-micbtn",
+     "n": 1,
+     "font": 16,
+     "w": 76,
+     "h": 76,
+     "color": "rgb(255, 255, 255)",
+     "right": 107
+    },
+    {
+     "sel": "#scHint",
+     "n": 1,
+     "font": 12.5,
+     "w": 83,
+     "h": 36,
+     "color": "rgb(233, 236, 239)",
+     "right": 114
+    },
+    {
+     "sel": "#scRepeat",
+     "n": 1,
+     "font": 12.5,
+     "w": 161,
+     "h": 36,
+     "color": "rgb(233, 236, 239)",
+     "right": 359
+    },
+    {
+     "sel": "#scType",
+     "n": 1,
+     "font": 13.1,
+     "w": 102,
+     "h": 27,
+     "color": "rgb(159, 198, 238)",
+     "right": 133
+    }
+   ]
+  },
+  "typing": {
+   "overflowX": 0,
+   "pageH": 1291,
+   "items": [
+    {
+     "sel": "#scBack",
+     "n": 1,
+     "font": 16,
+     "w": 126,
+     "h": 43,
+     "color": "rgb(237, 242, 249)",
+     "right": 142
+    },
+    {
+     "sel": ".pbar h2",
+     "n": 1,
+     "font": 17.6,
+     "w": 169,
+     "h": 26,
+     "color": "rgb(237, 242, 249)",
+     "right": 322
+    },
+    {
+     "sel": ".bdg",
+     "n": 1,
+     "font": 11.2,
+     "w": 32,
+     "h": 22,
+     "color": "rgb(26, 20, 5)",
+     "right": 364
+    },
+    {
+     "sel": ".sc-chip",
+     "n": 3,
+     "font": 14.7,
+     "w": 328,
+     "h": 41,
+     "color": "rgb(237, 242, 249)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-chip small",
+     "n": 2,
+     "font": 11.5,
+     "w": 83,
+     "h": 17,
+     "color": "rgb(169, 187, 208)",
+     "right": 346
+    },
+    {
+     "sel": ".gs-bub",
+     "n": 1,
+     "font": 16,
+     "w": 302,
+     "h": 85,
+     "color": "rgb(20, 32, 46)",
+     "right": 333
+    },
+    {
+     "sel": ".gs-play",
+     "n": 1,
+     "font": 16.8,
+     "w": 29,
+     "h": 32,
+     "color": "rgb(0, 0, 0)",
+     "right": 327
+    },
+    {
+     "sel": ".sc-ob",
+     "n": 2,
+     "font": 15.2,
+     "w": 328,
+     "h": 40,
+     "color": "rgb(237, 242, 249)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-sitd summary",
+     "n": 1,
+     "font": 11.8,
+     "w": 328,
+     "h": 17,
+     "color": "rgb(212, 175, 55)",
+     "right": 359
+    },
+    {
+     "sel": ".gs-score",
+     "n": 1,
+     "font": 11.8,
+     "w": 328,
+     "h": 17,
+     "color": "rgb(169, 187, 208)",
+     "right": 359
+    },
+    {
+     "sel": "#scTypeIn",
+     "n": 1,
+     "font": 16.8,
+     "w": 328,
+     "h": 71,
+     "color": "rgb(255, 255, 255)",
+     "right": 359
+    },
+    {
+     "sel": "#scTypeOk",
+     "n": 1,
+     "font": 16,
+     "w": 135,
+     "h": 45,
+     "color": "rgb(255, 255, 255)",
+     "right": 359
+    },
+    {
+     "sel": "#scBackMic",
+     "n": 1,
+     "font": 12.5,
+     "w": 212,
+     "h": 36,
+     "color": "rgb(233, 236, 239)",
+     "right": 243
+    }
+   ]
+  },
+  "feedback": {
+   "overflowX": 0,
+   "pageH": 1357,
+   "items": [
+    {
+     "sel": "#scBack",
+     "n": 1,
+     "font": 16,
+     "w": 126,
+     "h": 43,
+     "color": "rgb(237, 242, 249)",
+     "right": 142
+    },
+    {
+     "sel": ".pbar h2",
+     "n": 1,
+     "font": 17.6,
+     "w": 169,
+     "h": 26,
+     "color": "rgb(237, 242, 249)",
+     "right": 322
+    },
+    {
+     "sel": ".bdg",
+     "n": 1,
+     "font": 11.2,
+     "w": 32,
+     "h": 22,
+     "color": "rgb(26, 20, 5)",
+     "right": 364
+    },
+    {
+     "sel": ".sc-chip",
+     "n": 3,
+     "font": 14.7,
+     "w": 328,
+     "h": 41,
+     "color": "rgb(237, 242, 249)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-chip small",
+     "n": 2,
+     "font": 11.5,
+     "w": 83,
+     "h": 17,
+     "color": "rgb(169, 187, 208)",
+     "right": 346
+    },
+    {
+     "sel": ".gs-bub",
+     "n": 1,
+     "font": 16,
+     "w": 302,
+     "h": 85,
+     "color": "rgb(20, 32, 46)",
+     "right": 333
+    },
+    {
+     "sel": ".gs-play",
+     "n": 1,
+     "font": 16.8,
+     "w": 29,
+     "h": 32,
+     "color": "rgb(0, 0, 0)",
+     "right": 327
+    },
+    {
+     "sel": ".sc-ob",
+     "n": 2,
+     "font": 15.2,
+     "w": 328,
+     "h": 40,
+     "color": "rgb(237, 242, 249)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-sitd summary",
+     "n": 1,
+     "font": 11.8,
+     "w": 328,
+     "h": 17,
+     "color": "rgb(212, 175, 55)",
+     "right": 359
+    },
+    {
+     "sel": ".gs-score",
+     "n": 1,
+     "font": 11.8,
+     "w": 328,
+     "h": 17,
+     "color": "rgb(169, 187, 208)",
+     "right": 359
+    },
+    {
+     "sel": ".gs-note",
+     "n": 2,
+     "font": 13.8,
+     "w": 232,
+     "h": 76,
+     "color": "rgb(169, 187, 208)",
+     "right": 346
+    },
+    {
+     "sel": ".sc-st",
+     "n": 2,
+     "font": 11.8,
+     "w": 81,
+     "h": 21,
+     "color": "rgb(74, 222, 128)",
+     "right": 195
+    },
+    {
+     "sel": "#scNext",
+     "n": 1,
+     "font": 16,
+     "w": 119,
+     "h": 45,
+     "color": "rgb(255, 255, 255)",
+     "right": 359
+    },
+    {
+     "sel": "#scModel",
+     "n": 1,
+     "font": 12.5,
+     "w": 43,
+     "h": 36,
+     "color": "rgb(233, 236, 239)",
+     "right": 221
+    }
+   ]
+  },
+  "debrief-o1": {
+   "overflowX": 0,
+   "pageH": 1362,
+   "items": [
+    {
+     "sel": "#scBack",
+     "n": 1,
+     "font": 16,
+     "w": 126,
+     "h": 43,
+     "color": "rgb(237, 242, 249)",
+     "right": 142
+    },
+    {
+     "sel": ".pbar h2",
+     "n": 1,
+     "font": 17.6,
+     "w": 221,
+     "h": 26,
+     "color": "rgb(237, 242, 249)",
+     "right": 373
+    },
+    {
+     "sel": ".gs-c",
+     "n": 1,
+     "font": 14.7,
+     "w": 328,
+     "h": 103,
+     "color": "rgb(232, 238, 246)",
+     "right": 359
+    },
+    {
+     "sel": ".gs-note",
+     "n": 4,
+     "font": 13.8,
+     "w": 328,
+     "h": 20,
+     "color": "rgb(169, 187, 208)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-st",
+     "n": 3,
+     "font": 11.8,
+     "w": 154,
+     "h": 21,
+     "color": "rgb(74, 222, 128)",
+     "right": 185
+    },
+    {
+     "sel": ".gs-resv",
+     "n": 1,
+     "font": 38.4,
+     "w": 69,
+     "h": 56,
+     "color": "rgb(212, 175, 55)",
+     "right": 100
+    },
+    {
+     "sel": ".gs-resh b",
+     "n": 1,
+     "font": 16,
+     "w": 321,
+     "h": 43,
+     "color": "rgb(237, 242, 249)",
+     "right": 352
+    },
+    {
+     "sel": ".gs-resh small",
+     "n": 1,
+     "font": 13.3,
+     "w": 246,
+     "h": 16,
+     "color": "rgb(237, 242, 249)",
+     "right": 277
+    },
+    {
+     "sel": ".sc-dbq",
+     "n": 2,
+     "font": 14.7,
+     "w": 328,
+     "h": 64,
+     "color": "rgb(219, 230, 243)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-links .btn",
+     "n": 1,
+     "font": 13.8,
+     "w": 202,
+     "h": 40,
+     "color": "rgb(237, 242, 249)",
+     "right": 233
+    },
+    {
+     "sel": "#scMore",
+     "n": 1,
+     "font": 16,
+     "w": 173,
+     "h": 41,
+     "color": "rgb(26, 20, 5)",
+     "right": 204
+    },
+    {
+     "sel": "#scHome",
+     "n": 1,
+     "font": 16,
+     "w": 105,
+     "h": 43,
+     "color": "rgb(237, 242, 249)",
+     "right": 319
+    },
+    {
+     "sel": "[data-scm]",
+     "n": 2,
+     "font": 12.5,
+     "w": 43,
+     "h": 36,
+     "color": "rgb(233, 236, 239)",
+     "right": 284
+    },
+    {
+     "sel": ".gs-said",
+     "n": 1,
+     "font": 13.8,
+     "w": 304,
+     "h": 20,
+     "color": "rgb(255, 201, 201)",
+     "right": 349
+    }
+   ]
+  },
+  "hint": {
+   "overflowX": 0,
+   "pageH": 1422,
+   "items": [
+    {
+     "sel": "#scBack",
+     "n": 1,
+     "font": 16,
+     "w": 126,
+     "h": 43,
+     "color": "rgb(237, 242, 249)",
+     "right": 142
+    },
+    {
+     "sel": ".pbar h2",
+     "n": 1,
+     "font": 17.6,
+     "w": 156,
+     "h": 26,
+     "color": "rgb(237, 242, 249)",
+     "right": 309
+    },
+    {
+     "sel": ".bdg",
+     "n": 1,
+     "font": 11.2,
+     "w": 35,
+     "h": 22,
+     "color": "rgb(26, 20, 5)",
+     "right": 353
+    },
+    {
+     "sel": ".sc-chip",
+     "n": 3,
+     "font": 14.7,
+     "w": 328,
+     "h": 41,
+     "color": "rgb(237, 242, 249)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-chip small",
+     "n": 1,
+     "font": 11.5,
+     "w": 82,
+     "h": 17,
+     "color": "rgb(169, 187, 208)",
+     "right": 346
+    },
+    {
+     "sel": ".gs-bub",
+     "n": 1,
+     "font": 16,
+     "w": 273,
+     "h": 40,
+     "color": "rgb(20, 32, 46)",
+     "right": 304
+    },
+    {
+     "sel": ".gs-play",
+     "n": 1,
+     "font": 16.8,
+     "w": 29,
+     "h": 32,
+     "color": "rgb(0, 0, 0)",
+     "right": 298
+    },
+    {
+     "sel": ".sc-ob",
+     "n": 2,
+     "font": 15.2,
+     "w": 328,
+     "h": 40,
+     "color": "rgb(237, 242, 249)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-sitd summary",
+     "n": 1,
+     "font": 11.8,
+     "w": 328,
+     "h": 17,
+     "color": "rgb(212, 175, 55)",
+     "right": 359
+    },
+    {
+     "sel": ".gs-score",
+     "n": 1,
+     "font": 11.8,
+     "w": 328,
+     "h": 17,
+     "color": "rgb(169, 187, 208)",
+     "right": 359
+    },
+    {
+     "sel": ".gs-mictxt",
+     "n": 1,
+     "font": 15.2,
+     "w": 236,
+     "h": 66,
+     "color": "rgb(237, 242, 249)",
+     "right": 359
+    },
+    {
+     "sel": ".gs-mictxt small",
+     "n": 1,
+     "font": 12.7,
+     "w": 229,
+     "h": 15,
+     "color": "rgb(169, 187, 208)",
+     "right": 352
+    },
+    {
+     "sel": ".gs-micbtn",
+     "n": 1,
+     "font": 16,
+     "w": 76,
+     "h": 76,
+     "color": "rgb(255, 255, 255)",
+     "right": 107
+    },
+    {
+     "sel": "#scHint",
+     "n": 1,
+     "font": 12.5,
+     "w": 83,
+     "h": 36,
+     "color": "rgb(233, 236, 239)",
+     "right": 114
+    },
+    {
+     "sel": "#scRepeat",
+     "n": 1,
+     "font": 12.5,
+     "w": 161,
+     "h": 36,
+     "color": "rgb(233, 236, 239)",
+     "right": 359
+    },
+    {
+     "sel": "#scType",
+     "n": 1,
+     "font": 13.1,
+     "w": 102,
+     "h": 27,
+     "color": "rgb(159, 198, 238)",
+     "right": 133
+    },
+    {
+     "sel": ".gs-c",
+     "n": 2,
+     "font": 14.7,
+     "w": 328,
+     "h": 101,
+     "color": "rgb(232, 238, 246)",
+     "right": 359
+    },
+    {
+     "sel": ".gs-c small",
+     "n": 1,
+     "font": 12.3,
+     "w": 290,
+     "h": 36,
+     "color": "rgb(232, 238, 246)",
+     "right": 335
+    },
+    {
+     "sel": ".fd-frame",
+     "n": 2,
+     "font": 17.6,
+     "w": 257,
+     "h": 47,
+     "color": "rgb(255, 255, 255)",
+     "right": 302
+    }
+   ]
+  },
+  "debrief-o6": {
+   "overflowX": 0,
+   "pageH": 1534,
+   "items": [
+    {
+     "sel": "#scBack",
+     "n": 1,
+     "font": 16,
+     "w": 126,
+     "h": 43,
+     "color": "rgb(237, 242, 249)",
+     "right": 142
+    },
+    {
+     "sel": ".pbar h2",
+     "n": 1,
+     "font": 17.6,
+     "w": 208,
+     "h": 26,
+     "color": "rgb(237, 242, 249)",
+     "right": 360
+    },
+    {
+     "sel": ".gs-c",
+     "n": 1,
+     "font": 14.7,
+     "w": 328,
+     "h": 82,
+     "color": "rgb(232, 238, 246)",
+     "right": 359
+    },
+    {
+     "sel": ".gs-note",
+     "n": 4,
+     "font": 13.8,
+     "w": 328,
+     "h": 40,
+     "color": "rgb(169, 187, 208)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-st",
+     "n": 4,
+     "font": 11.8,
+     "w": 153,
+     "h": 21,
+     "color": "rgb(74, 222, 128)",
+     "right": 184
+    },
+    {
+     "sel": ".gs-resv",
+     "n": 1,
+     "font": 38.4,
+     "w": 69,
+     "h": 56,
+     "color": "rgb(212, 175, 55)",
+     "right": 100
+    },
+    {
+     "sel": ".gs-resh b",
+     "n": 1,
+     "font": 16,
+     "w": 318,
+     "h": 43,
+     "color": "rgb(237, 242, 249)",
+     "right": 349
+    },
+    {
+     "sel": ".gs-resh small",
+     "n": 1,
+     "font": 13.3,
+     "w": 256,
+     "h": 16,
+     "color": "rgb(237, 242, 249)",
+     "right": 287
+    },
+    {
+     "sel": ".sc-dbq",
+     "n": 2,
+     "font": 14.7,
+     "w": 328,
+     "h": 43,
+     "color": "rgb(219, 230, 243)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-links .btn",
+     "n": 3,
+     "font": 13.8,
+     "w": 223,
+     "h": 40,
+     "color": "rgb(237, 242, 249)",
+     "right": 254
+    },
+    {
+     "sel": "#scMore",
+     "n": 1,
+     "font": 16,
+     "w": 173,
+     "h": 41,
+     "color": "rgb(26, 20, 5)",
+     "right": 204
+    },
+    {
+     "sel": "#scRetry",
+     "n": 1,
+     "font": 16,
+     "w": 194,
+     "h": 43,
+     "color": "rgb(237, 242, 249)",
+     "right": 225
+    },
+    {
+     "sel": "#scHome",
+     "n": 1,
+     "font": 16,
+     "w": 105,
+     "h": 43,
+     "color": "rgb(237, 242, 249)",
+     "right": 340
+    },
+    {
+     "sel": "[data-scm]",
+     "n": 2,
+     "font": 12.5,
+     "w": 43,
+     "h": 36,
+     "color": "rgb(233, 236, 239)",
+     "right": 149
+    },
+    {
+     "sel": ".gs-said",
+     "n": 1,
+     "font": 13.8,
+     "w": 304,
+     "h": 20,
+     "color": "rgb(255, 201, 201)",
+     "right": 349
+    }
+   ]
+  },
+  "home-mid": {
+   "overflowX": 0,
+   "pageH": 3546,
+   "items": [
+    {
+     "sel": ".tabs .tab",
+     "n": 5,
+     "font": 16,
+     "w": 170,
+     "h": 42,
+     "color": "rgb(169, 187, 208)",
+     "right": -58
+    },
+    {
+     "sel": ".cbanner h2",
+     "n": 1,
+     "font": 23.2,
+     "w": 320,
+     "h": 34,
+     "color": "rgb(237, 242, 249)",
+     "right": 355
+    },
+    {
+     "sel": ".cbanner p",
+     "n": 1,
+     "font": 14.7,
+     "w": 320,
+     "h": 171,
+     "color": "rgb(169, 187, 208)",
+     "right": 355
+    },
+    {
+     "sel": ".cstat .v",
+     "n": 3,
+     "font": 19.2,
+     "w": 77,
+     "h": 28,
+     "color": "rgb(212, 175, 55)",
+     "right": 124
+    },
+    {
+     "sel": ".cstat .k",
+     "n": 3,
+     "font": 9.6,
+     "w": 77,
+     "h": 14,
+     "color": "rgb(169, 187, 208)",
+     "right": 124
+    },
+    {
+     "sel": ".gs-strip .hbtn",
+     "n": 3,
+     "font": 13.1,
+     "w": 186,
+     "h": 33,
+     "color": "rgb(237, 242, 249)",
+     "right": 202
+    },
+    {
+     "sel": ".gs-mic",
+     "n": 1,
+     "font": 13.1,
+     "w": 202,
+     "h": 33,
+     "color": "rgb(191, 245, 207)",
+     "right": 218
+    },
+    {
+     "sel": "#scAny",
+     "n": 1,
+     "font": 16,
+     "w": 118,
+     "h": 41,
+     "color": "rgb(26, 20, 5)",
+     "right": 149
+    },
+    {
+     "sel": ".fd-review small",
+     "n": 1,
+     "font": 13.3,
+     "w": 315,
+     "h": 39,
+     "color": "rgb(169, 187, 208)",
+     "right": 346
+    },
+    {
+     "sel": "[data-scdraw]",
+     "n": 3,
+     "font": 16,
+     "w": 328,
+     "h": 41,
+     "color": "rgb(26, 20, 5)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-dd",
+     "n": 3,
+     "font": 13.8,
+     "w": 328,
+     "h": 20,
+     "color": "rgb(169, 187, 208)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-tile b",
+     "n": 24,
+     "font": 14.4,
+     "w": 164,
+     "h": 21,
+     "color": "rgb(237, 242, 249)",
+     "right": 249
+    },
+    {
+     "sel": ".sc-tile small",
+     "n": 24,
+     "font": 11.8,
+     "w": 164,
+     "h": 40,
+     "color": "rgb(169, 187, 208)",
+     "right": 249
+    },
+    {
+     "sel": ".sc-tile .dbtn",
+     "n": 6,
+     "font": 12.5,
+     "w": 90,
+     "h": 36,
+     "color": "rgb(233, 236, 239)",
+     "right": 349
+    },
+    {
+     "sel": ".sc-tile .chip",
+     "n": 30,
+     "font": 11.5,
+     "w": 149,
+     "h": 38,
+     "color": "rgb(169, 187, 208)",
+     "right": 234
+    },
+    {
+     "sel": ".gr-row",
+     "n": 5,
+     "font": 13.6,
+     "w": 328,
+     "h": 20,
+     "color": "rgb(237, 242, 249)",
+     "right": 359
+    },
+    {
+     "sel": ".gs-radar p",
+     "n": 1,
+     "font": 13.1,
+     "w": 328,
+     "h": 38,
+     "color": "rgb(169, 187, 208)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-st",
+     "n": 6,
+     "font": 11.8,
+     "w": 63,
+     "h": 22,
+     "color": "rgb(74, 222, 128)",
+     "right": 148
+    }
+   ]
+  },
+  "home-after": {
+   "overflowX": 0,
+   "pageH": 4088,
+   "items": [
+    {
+     "sel": ".tabs .tab",
+     "n": 5,
+     "font": 16,
+     "w": 170,
+     "h": 42,
+     "color": "rgb(169, 187, 208)",
+     "right": -58
+    },
+    {
+     "sel": ".cbanner h2",
+     "n": 1,
+     "font": 23.2,
+     "w": 320,
+     "h": 34,
+     "color": "rgb(237, 242, 249)",
+     "right": 355
+    },
+    {
+     "sel": ".cbanner p",
+     "n": 1,
+     "font": 14.7,
+     "w": 320,
+     "h": 171,
+     "color": "rgb(169, 187, 208)",
+     "right": 355
+    },
+    {
+     "sel": ".cstat .v",
+     "n": 3,
+     "font": 19.2,
+     "w": 77,
+     "h": 28,
+     "color": "rgb(212, 175, 55)",
+     "right": 124
+    },
+    {
+     "sel": ".cstat .k",
+     "n": 3,
+     "font": 9.6,
+     "w": 77,
+     "h": 14,
+     "color": "rgb(169, 187, 208)",
+     "right": 124
+    },
+    {
+     "sel": ".gs-strip .hbtn",
+     "n": 3,
+     "font": 13.1,
+     "w": 186,
+     "h": 33,
+     "color": "rgb(237, 242, 249)",
+     "right": 202
+    },
+    {
+     "sel": ".gs-mic",
+     "n": 1,
+     "font": 13.1,
+     "w": 202,
+     "h": 33,
+     "color": "rgb(191, 245, 207)",
+     "right": 218
+    },
+    {
+     "sel": "#scAny",
+     "n": 1,
+     "font": 16,
+     "w": 118,
+     "h": 41,
+     "color": "rgb(26, 20, 5)",
+     "right": 149
+    },
+    {
+     "sel": ".fd-review small",
+     "n": 1,
+     "font": 13.3,
+     "w": 315,
+     "h": 39,
+     "color": "rgb(169, 187, 208)",
+     "right": 346
+    },
+    {
+     "sel": "[data-scdraw]",
+     "n": 3,
+     "font": 16,
+     "w": 328,
+     "h": 41,
+     "color": "rgb(26, 20, 5)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-dd",
+     "n": 3,
+     "font": 13.8,
+     "w": 328,
+     "h": 20,
+     "color": "rgb(169, 187, 208)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-tile b",
+     "n": 24,
+     "font": 14.4,
+     "w": 164,
+     "h": 21,
+     "color": "rgb(237, 242, 249)",
+     "right": 249
+    },
+    {
+     "sel": ".sc-tile small",
+     "n": 24,
+     "font": 11.8,
+     "w": 164,
+     "h": 40,
+     "color": "rgb(169, 187, 208)",
+     "right": 249
+    },
+    {
+     "sel": ".sc-tile .dbtn",
+     "n": 24,
+     "font": 12.5,
+     "w": 90,
+     "h": 36,
+     "color": "rgb(233, 236, 239)",
+     "right": 349
+    },
+    {
+     "sel": ".sc-tile .chip",
+     "n": 30,
+     "font": 11.5,
+     "w": 149,
+     "h": 38,
+     "color": "rgb(169, 187, 208)",
+     "right": 234
+    },
+    {
+     "sel": ".gr-row",
+     "n": 5,
+     "font": 13.6,
+     "w": 328,
+     "h": 20,
+     "color": "rgb(237, 242, 249)",
+     "right": 359
+    },
+    {
+     "sel": ".gs-radar p",
+     "n": 1,
+     "font": 13.1,
+     "w": 328,
+     "h": 38,
+     "color": "rgb(169, 187, 208)",
+     "right": 359
+    },
+    {
+     "sel": ".sc-st",
+     "n": 24,
+     "font": 11.8,
+     "w": 63,
+     "h": 22,
+     "color": "rgb(74, 222, 128)",
+     "right": 148
+    }
+   ]
+  }
+ },
+ "console": [],
+ "blocked": [],
+ "radar": [
+  "⏩ Say the plan 0/6",
+  "🤝 Ask politely 2/6",
+  "⏪ Say what happened 3/7",
+  "❓ Ask a question 5/7",
+  "💡 Suggest 3/4"
+ ],
+ "kinds": {
+  "greet": [
+   3,
+   3
+  ],
+  "explain": [
+   12,
+   15
+  ],
+  "number": [
+   4,
+   4
+  ],
+  "name": [
+   3,
+   3
+  ],
+  "time": [
+   5,
+   6
+  ],
+  "ask": [
+   5,
+   7
+  ],
+  "place": [
+   4,
+   4
+  ],
+  "sorry": [
+   3,
+   3
+  ],
+  "past": [
+   3,
+   7
+  ],
+  "request": [
+   2,
+   6
+  ],
+  "plan": [
+   0,
+   6
+  ],
+  "thank": [
+   3,
+   3
+  ],
+  "suggest": [
+   3,
+   4
+  ],
+  "bye": [
+   2,
+   2
+  ]
+ },
+ "review_banner": "🚨 Scramble!\n24 of 24 cards are open. A surprise card from any deck — the best test.\nScramble ▸",
+ "probes": [
+  {
+   "card": "o2",
+   "exchange": 2,
+   "typed": "No problem. Invoice two ok.",
+   "status": "ok",
+   "hits": "explain✓ number✓",
+   "slip": null
+  },
+  {
+   "card": "o2",
+   "exchange": 1,
+   "typed": "Three.",
+   "status": "short",
+   "hits": "number–",
+   "slip": null
+  },
+  {
+   "card": "o3",
+   "exchange": 1,
+   "typed": "Sorry Colonel Sarah. Not ready.",
+   "status": "ok",
+   "hits": "name– explain✓",
+   "slip": "Address & register"
+  },
+  {
+   "card": "o3",
+   "exchange": 1,
+   "typed": "Sorry madam. Report not finish.",
+   "status": "ok",
+   "hits": "name✓ explain–",
+   "slip": null
+  },
+  {
+   "card": "o3",
+   "exchange": 1,
+   "typed": "Sorry madam. Not finish yet.",
+   "status": "ok",
+   "hits": "name✓ explain–",
+   "slip": null
+  },
+  {
+   "card": "o3",
+   "exchange": 2,
+   "typed": "Tomorrow.",
+   "status": "short",
+   "hits": "time–",
+   "slip": null
+  },
+  {
+   "card": "o3",
+   "exchange": 2,
+   "typed": "Yesterday morning.",
+   "status": "ok",
+   "hits": "time✓",
+   "slip": null
+  },
+  {
+   "card": "o5",
+   "exchange": 1,
+   "typed": "When you free?",
+   "status": "ok",
+   "hits": "ask✓",
+   "slip": null
+  },
+  {
+   "card": "o6",
+   "exchange": 2,
+   "typed": "Can I have two day more please?",
+   "status": "ok",
+   "hits": "request✓ time–",
+   "slip": null
+  },
+  {
+   "card": "o6",
+   "exchange": 2,
+   "typed": "Two more day please.",
+   "status": "ok",
+   "hits": "request– time–",
+   "slip": null
+  },
+  {
+   "card": "o6",
+   "exchange": 1,
+   "typed": "Sorry. I forget.",
+   "status": "ok",
+   "hits": "sorry✓ past–",
+   "slip": null
+  },
+  {
+   "card": "o7",
+   "exchange": 2,
+   "typed": "Pay on Friday.",
+   "status": "ok",
+   "hits": "plan– time✓",
+   "slip": null
+  },
+  {
+   "card": "o7",
+   "exchange": 2,
+   "typed": "Friday.",
+   "status": "short",
+   "hits": "plan– time–",
+   "slip": null
+  },
+  {
+   "card": "o8",
+   "exchange": 1,
+   "typed": "Sir, please sign this form.",
+   "status": "ok",
+   "hits": "name✓ request–",
+   "slip": null
+  },
+  {
+   "card": "o8",
+   "exchange": 1,
+   "typed": "Excuse me sir. Please sign.",
+   "status": "ok",
+   "hits": "name✓ request–",
+   "slip": null
+  },
+  {
+   "card": "v1",
+   "exchange": 2,
+   "typed": "9",
+   "status": "short",
+   "hits": "time–",
+   "slip": null
+  },
+  {
+   "card": "v1",
+   "exchange": 2,
+   "typed": "Nine.",
+   "status": "short",
+   "hits": "time–",
+   "slip": null
+  },
+  {
+   "card": "v1",
+   "exchange": 2,
+   "typed": "At 9.",
+   "status": "ok",
+   "hits": "time✓",
+   "slip": null
+  },
+  {
+   "card": "v2",
+   "exchange": 1,
+   "typed": "I book room. Please check again.",
+   "status": "ok",
+   "hits": "explain✓ request–",
+   "slip": null
+  },
+  {
+   "card": "v2",
+   "exchange": 2,
+   "typed": "4 7 2 9",
+   "status": "ok",
+   "hits": "number✓",
+   "slip": null
+  },
+  {
+   "card": "v2",
+   "exchange": 2,
+   "typed": "four seven two nine",
+   "status": "ok",
+   "hits": "number✓",
+   "slip": null
+  },
+  {
+   "card": "v3",
+   "exchange": 1,
+   "typed": "Hello. Welcome. You tired?",
+   "status": "ok",
+   "hits": "greet✓ ask–",
+   "slip": null
+  },
+  {
+   "card": "v4",
+   "exchange": 1,
+   "typed": "Travel budget. Boss ok.",
+   "status": "ok",
+   "hits": "past✓ past–",
+   "slip": null
+  },
+  {
+   "card": "v4",
+   "exchange": 1,
+   "typed": "We talk budget. Wing Commander say yes.",
+   "status": "ok",
+   "hits": "past✓ past–",
+   "slip": null
+  },
+  {
+   "card": "v4",
+   "exchange": 2,
+   "typed": "Not yet. I send today.",
+   "status": "ok",
+   "hits": "plan–",
+   "slip": null
+  },
+  {
+   "card": "v4",
+   "exchange": 2,
+   "typed": "I will send.",
+   "status": "ok",
+   "hits": "plan–",
+   "slip": null
+  },
+  {
+   "card": "v5",
+   "exchange": 1,
+   "typed": "Tomorrow go to finance office at 10.",
+   "status": "ok",
+   "hits": "plan✓ time✓",
+   "slip": null
+  },
+  {
+   "card": "v6",
+   "exchange": 2,
+   "typed": "No problem.",
+   "status": "short",
+   "hits": "request–",
+   "slip": null
+  },
+  {
+   "card": "v6",
+   "exchange": 1,
+   "typed": "Receipt please. How many?",
+   "status": "ok",
+   "hits": "request✓ ask✓",
+   "slip": null
+  },
+  {
+   "card": "v7",
+   "exchange": 2,
+   "typed": "I call you.",
+   "status": "ok",
+   "hits": "plan–",
+   "slip": null
+  },
+  {
+   "card": "v8",
+   "exchange": 1,
+   "typed": "Two paid. One returned.",
+   "status": "ok",
+   "hits": "past✓ past✓",
+   "slip": null
+  },
+  {
+   "card": "v8",
+   "exchange": 1,
+   "typed": "Two ok. One come back.",
+   "status": "ok",
+   "hits": "past– past–",
+   "slip": null
+  },
+  {
+   "card": "s2",
+   "exchange": 1,
+   "typed": "No. And you?",
+   "status": "ok",
+   "hits": "explain✓ ask✓",
+   "slip": null
+  },
+  {
+   "card": "s2",
+   "exchange": 2,
+   "typed": "No problem.",
+   "status": "short",
+   "hits": "suggest–",
+   "slip": null
+  },
+  {
+   "card": "s3",
+   "exchange": 2,
+   "typed": "No.",
+   "status": "short",
+   "hits": "past– explain–",
+   "slip": null
+  },
+  {
+   "card": "s4",
+   "exchange": 2,
+   "typed": "Grand Palace.",
+   "status": "short",
+   "hits": "suggest–",
+   "slip": null
+  },
+  {
+   "card": "s4",
+   "exchange": 2,
+   "typed": "I see.",
+   "status": "ok",
+   "hits": "suggest✓",
+   "slip": null
+  },
+  {
+   "card": "s5",
+   "exchange": 1,
+   "typed": "I stay home.",
+   "status": "ok",
+   "hits": "plan–",
+   "slip": null
+  },
+  {
+   "card": "s5",
+   "exchange": 1,
+   "typed": "I sleep.",
+   "status": "short",
+   "hits": "plan–",
+   "slip": null
+  },
+  {
+   "card": "s5",
+   "exchange": 2,
+   "typed": "Chatuchak market is good.",
+   "status": "ok",
+   "hits": "suggest–",
+   "slip": null
+  },
+  {
+   "card": "s6",
+   "exchange": 1,
+   "typed": "Madam, photo please.",
+   "status": "ok",
+   "hits": "name✓ request–",
+   "slip": null
+  },
+  {
+   "card": "s7",
+   "exchange": 1,
+   "typed": "I want go Japan.",
+   "status": "ok",
+   "hits": "explain–",
+   "slip": "Polite requests"
+  },
+  {
+   "card": "s7",
+   "exchange": 1,
+   "typed": "Chiang Mai.",
+   "status": "short",
+   "hits": "explain–",
+   "slip": null
+  },
+  {
+   "card": "s8",
+   "exchange": 2,
+   "typed": "Bye.",
+   "status": "short",
+   "hits": "bye–",
+   "slip": null
+  },
+  {
+   "card": "s8",
+   "exchange": 2,
+   "typed": "Bye bye.",
+   "status": "ok",
+   "hits": "bye✓",
+   "slip": null
+  },
+  {
+   "card": "s8",
+   "exchange": 1,
+   "typed": "Thank you. Good luck.",
+   "status": "ok",
+   "hits": "thank✓ bye✓",
+   "slip": null
+  },
+  {
+   "card": "o1",
+   "exchange": 1,
+   "typed": "Sorry?",
+   "status": "short",
+   "hits": "greet– explain–",
+   "slip": null
+  },
+  {
+   "card": "o1",
+   "exchange": 1,
+   "typed": "Slowly please.",
+   "status": "short",
+   "hits": "greet– explain–",
+   "slip": null
+  },
+  {
+   "card": "o1",
+   "exchange": 1,
+   "typed": "Again please.",
+   "status": "short",
+   "hits": "greet– explain–",
+   "slip": null
+  },
+  {
+   "card": "o1",
+   "exchange": 1,
+   "typed": "Say again please.",
+   "status": "repair",
+   "hits": "greet– explain–",
+   "slip": null
+  },
+  {
+   "card": "o1",
+   "exchange": 1,
+   "typed": "What?",
+   "status": "short",
+   "hits": "greet– explain–",
+   "slip": null
+  },
+  {
+   "card": "o1",
+   "exchange": 1,
+   "typed": "I not understand.",
+   "status": "ok",
+   "hits": "greet– explain–",
+   "slip": null
+  },
+  {
+   "card": "o1",
+   "exchange": 1,
+   "typed": "Hello. I check.",
+   "status": "ok",
+   "hits": "greet✓ explain✓",
+   "slip": null
+  },
+  {
+   "card": "o1",
+   "exchange": 2,
+   "typed": "I don't know who signs.",
+   "status": "ok",
+   "hits": "explain✓",
+   "slip": null
+  }
+ ],
+ "final_state": {
+  "c": {
+   "o1": {
+    "n": 1,
+    "best": 90,
+    "s": "c",
+    "d": "2026-11-26",
+    "due": null
+   },
+   "o2": {
+    "n": 1,
+    "best": 80,
+    "s": "c",
+    "d": "2026-11-26",
+    "due": null
+   },
+   "o3": {
+    "n": 1,
+    "best": 67,
+    "s": "p",
+    "d": "2026-11-26",
+    "due": "2026-11-29"
+   },
+   "o4": {
+    "n": 1,
+    "best": 70,
+    "s": "c",
+    "d": "2026-11-26",
+    "due": null
+   },
+   "o5": {
+    "n": 1,
+    "best": 80,
+    "s": "c",
+    "d": "2026-11-26",
+    "due": null
+   },
+   "o6": {
+    "n": 1,
+    "best": 40,
+    "s": "p",
+    "d": "2026-11-26",
+    "due": "2026-11-29"
+   },
+   "o7": {
+    "n": 1,
+    "best": 70,
+    "s": "p",
+    "d": "2026-11-26",
+    "due": "2026-11-29"
+   },
+   "o8": {
+    "n": 1,
+    "best": 61,
+    "s": "p",
+    "d": "2026-11-26",
+    "due": "2026-11-29"
+   },
+   "v1": {
+    "n": 1,
+    "best": 80,
+    "s": "c",
+    "d": "2026-11-26",
+    "due": null
+   },
+   "v2": {
+    "n": 1,
+    "best": 53,
+    "s": "p",
+    "d": "2026-11-26",
+    "due": "2026-11-29"
+   },
+   "v3": {
+    "n": 1,
+    "best": 80,
+    "s": "c",
+    "d": "2026-11-26",
+    "due": null
+   },
+   "v4": {
+    "n": 1,
+    "best": 47,
+    "s": "p",
+    "d": "2026-11-26",
+    "due": "2026-11-29"
+   },
+   "v5": {
+    "n": 1,
+    "best": 67,
+    "s": "p",
+    "d": "2026-11-26",
+    "due": "2026-11-29"
+   },
+   "v6": {
+    "n": 1,
+    "best": 58,
+    "s": "p",
+    "d": "2026-11-26",
+    "due": "2026-11-29"
+   },
+   "v7": {
+    "n": 1,
+    "best": 35,
+    "s": "p",
+    "d": "2026-11-26",
+    "due": "2026-11-29"
+   },
+   "v8": {
+    "n": 1,
+    "best": 35,
+    "s": "p",
+    "d": "2026-11-26",
+    "due": "2026-11-29"
+   },
+   "s1": {
+    "n": 1,
+    "best": 90,
+    "s": "c",
+    "d": "2026-11-26",
+    "due": null
+   },
+   "s2": {
+    "n": 1,
+    "best": 67,
+    "s": "p",
+    "d": "2026-11-26",
+    "due": "2026-11-29"
+   },
+   "s3": {
+    "n": 1,
+    "best": 80,
+    "s": "c",
+    "d": "2026-11-26",
+    "due": null
+   },
+   "s4": {
+    "n": 1,
+    "best": 53,
+    "s": "p",
+    "d": "2026-11-26",
+    "due": "2026-11-29"
+   },
+   "s5": {
+    "n": 1,
+    "best": 60,
+    "s": "p",
+    "d": "2026-11-26",
+    "due": "2026-11-29"
+   },
+   "s6": {
+    "n": 1,
+    "best": 61,
+    "s": "p",
+    "d": "2026-11-26",
+    "due": "2026-11-29"
+   },
+   "s7": {
+    "n": 1,
+    "best": 60,
+    "s": "p",
+    "d": "2026-11-26",
+    "due": "2026-11-29"
+   },
+   "s8": {
+    "n": 1,
+    "best": 90,
+    "s": "c",
+    "d": "2026-11-26",
+    "due": null
+   }
+  },
+  "k": {
+   "greet": [
+    3,
+    3
+   ],
+   "explain": [
+    12,
+    15
+   ],
+   "number": [
+    4,
+    4
+   ],
+   "name": [
+    3,
+    3
+   ],
+   "time": [
+    5,
+    6
+   ],
+   "ask": [
+    5,
+    7
+   ],
+   "place": [
+    4,
+    4
+   ],
+   "sorry": [
+    3,
+    3
+   ],
+   "past": [
+    3,
+    7
+   ],
+   "request": [
+    2,
+    6
+   ],
+   "plan": [
+    0,
+    6
+   ],
+   "thank": [
+    3,
+    3
+   ],
+   "suggest": [
+    3,
+    4
+   ],
+   "bye": [
+    2,
+    2
+   ]
+  },
+  "runs": 24
+ },
+ "summary": {
+  "cards_played": 24,
+  "exchanges": 48,
+  "cards": {
+   "Cleared": 9,
+   "Partial": 15,
+   "Not yet": 0
+  },
+  "exchanges_by_stamp": {
+   "Cleared": 30,
+   "Partial": 17,
+   "Not yet": 1
+  },
+  "by_deck": {
+   "office": {
+    "Cleared": 4,
+    "Partial": 4,
+    "Not yet": 0
+   },
+   "visitors": {
+    "Cleared": 2,
+    "Partial": 6,
+    "Not yet": 0
+   },
+   "social": {
+    "Cleared": 3,
+    "Partial": 5,
+    "Not yet": 0
+   }
+  },
+  "avg_score_by_deck": {
+   "office": 70,
+   "visitors": 57,
+   "social": 70
+  },
+  "typed_answers": 73,
+  "too_short": 6,
+  "repairs_button": 5,
+  "hints": 7,
+  "moved_on": 4,
+  "chips_opened": 52,
+  "screenshots": 33
+ },
+ "finished": "2026-11-26 16:23:00"
+}

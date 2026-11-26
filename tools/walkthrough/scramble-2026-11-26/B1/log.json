@@ -1,0 +1,7908 @@
+{
+ "summary": {
+  "persona": "B1-Demii",
+  "date": "2026-11-26",
+  "input": "typing fallback only (no microphone in headless Chromium)",
+  "cards_covered": 24,
+  "exchanges_logged": 50,
+  "card_runs": 25,
+  "card_status_after_self_study(before lesson mode)": {
+   "Cleared": 14,
+   "Partial": 10,
+   "Not yet": 0
+  },
+  "first_run_card_stamps": {
+   "Cleared": 13,
+   "Partial": 11,
+   "Not yet": 0
+  },
+  "objective_stamps_all_runs": {
+   "Cleared": 63,
+   "Partial": 12,
+   "Not yet": 1
+  },
+  "typed_answers_committed": 64,
+  "typed_answers_not_accepted_in_full": 16,
+  "chips_opened": 3,
+  "hints": 2,
+  "moved_on": 1,
+  "repairs": {
+   "button": 1,
+   "typed_accepted": 1,
+   "typed_not_recognised": 1
+  },
+  "objective_kind_first_try(gs.sc.k)": {
+   "greet": [
+    3,
+    3
+   ],
+   "explain": [
+    11,
+    15
+   ],
+   "number": [
+    3,
+    4
+   ],
+   "name": [
+    3,
+    3
+   ],
+   "time": [
+    6,
+    6
+   ],
+   "ask": [
+    5,
+    7
+   ],
+   "place": [
+    4,
+    4
+   ],
+   "sorry": [
+    4,
+    4
+   ],
+   "past": [
+    6,
+    7
+   ],
+   "request": [
+    5,
+    6
+   ],
+   "plan": [
+    4,
+    8
+   ],
+   "thank": [
+    3,
+    3
+   ],
+   "suggest": [
+    4,
+    4
+   ],
+   "bye": [
+    2,
+    2
+   ]
+  },
+  "grammar_tags(gs.errs)": {
+   "Conditionals": 1
+  },
+  "radar_rows": [
+   "⏩ Say the plan4/8",
+   "❓ Ask a question5/7",
+   "💬 Explain11/15",
+   "🔢 Say a number3/4",
+   "🤝 Ask politely5/6"
+  ],
+  "lesson_mode": {
+   "card": "s8",
+   "marks": [
+    {
+     "exchange": 1,
+     "tm": [
+      "c",
+      "p"
+     ],
+     "flu": 3,
+     "tags": [
+      "— none —",
+      "Verb -s",
+      "There is / are",
+      "Negatives"
+     ]
+    },
+    {
+     "exchange": 2,
+     "tm": [
+      "c"
+     ],
+     "flu": 3,
+     "tags": [
+      "— none —",
+      "Verb -s",
+      "There is / are",
+      "Negatives"
+     ]
+    }
+   ],
+   "debrief": "83%PARTIALYou handled it with a little help. This card comes back in 3 days. Scored by the teacher · best 100%",
+   "rec": {
+    "n": 2,
+    "best": 100,
+    "s": "p",
+    "d": "2026-11-26",
+    "due": "2026-11-29"
+   },
+   "live_after": false
+  },
+  "state_after_lesson_mode": {
+   "Cleared": 13,
+   "Partial": 11
+  },
+  "page_errors": [],
+  "blocked_external_requests": [],
+  "run_seconds": 138,
+  "notes": [
+   "Slow voice toggle: on=True, then off=False",
+   "Voice & mic check opened: Voice & microphone check\n    Each person speaks with a British or American voice from this device. Tap ▶ to hear them.\n ",
+   "voice check closed via: gsVcClose"
+  ],
+  "read_only_probes": {
+   "total": 186,
+   "fair_answers_tested": 118,
+   "fair_answers_rejected": 77,
+   "wrong_answers_tested": 34,
+   "wrong_answers_accepted": 31,
+   "repair_wordings_tested": 6,
+   "repair_wordings_not_recognised": 4
+  }
+ },
+ "cards": {
+  "o1": {
+   "key": "o1",
+   "card": "o1",
+   "title": "Who does what?",
+   "level": "A1",
+   "npc": "eriksen",
+   "drawn_by": "home: Draw a card (office deck)",
+   "chips_opened": [
+    {
+     "chip": 0,
+     "when": "pre-flight",
+     "text": "Good morning, Mr Eriksen."
+    }
+   ],
+   "exchanges": [
+    {
+     "card": "o1",
+     "exchange": 1,
+     "npc_line": "Good morning. I'm Lars Eriksen, the auditor. Who checks the invoices in your section?",
+     "objectives": [
+      "Greet him",
+      "Say who checks the invoices"
+     ],
+     "attempts": [
+      {
+       "typed": "Good morning, Mr Erikson. Nice to meet you. The invoices are checked by Khun Nok.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Greet him",
+         "Say who checks the invoices"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Greet him": "Cleared",
+      "Say who checks the invoices": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "o1",
+     "exchange": 2,
+     "npc_line": "I see. And who signs the payments?",
+     "objectives": [
+      "Say who signs the payments"
+     ],
+     "attempts": [
+      {
+       "typed": "Our commanding officer approves and authorises all the payments.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [],
+        "objectives_missed_this_try": [
+         "Say who signs the payments"
+        ],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "ready",
+        "coach": "🧭 Not yet. Still to do: Say who signs the payments.Words on the screen wrong? Tap “Say again” next time, or type."
+       }
+      },
+      {
+       "typed": "I mean they are signed by Wing Commander Anan.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say who signs the payments"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 2,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 2,
+     "stamps": {
+      "Say who signs the payments": "Partial"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Partial",
+   "best": 75,
+   "due": "2026-11-29",
+   "debrief_header": "75%PARTIALYou handled it with a little help. This card comes back in 3 days. Top score 90 (1 phrase chip) · first time",
+   "formation_links": [
+    "🧍‍♀️ Formation 1 · Verb -s ▸"
+   ],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 17
+  },
+  "o2": {
+   "key": "o2",
+   "card": "o2",
+   "title": "What's in the file?",
+   "level": "A1",
+   "npc": "mike",
+   "drawn_by": "debrief: Draw another",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "o2",
+     "exchange": 1,
+     "npc_line": "Hi, it's Mike Turner from Pacific Aero. How many invoices from us are there in your file?",
+     "objectives": [
+      "Say how many invoices"
+     ],
+     "attempts": [
+      {
+       "action": "tapped microphone (no mic available)",
+       "app": {
+        "sub": "ready",
+        "micErr": "not-allowed",
+        "shown": "Tap and answer in your own wordsStop talking — or tap again — to finish\n          The microphone is blocked. In Safari tap aA → Website Settings → Microphone: Allow. Also check Settings → Privacy & Se"
+       }
+      },
+      {
+       "typed": "Hello, Mr Turner. I can see three invoices from your company in the file.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say how many invoices"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say how many invoices": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "o2",
+     "exchange": 2,
+     "npc_line": "OK. Is there a problem with any of them?",
+     "objectives": [
+      "Say there is a problem",
+      "Say which invoice"
+     ],
+     "attempts": [
+      {
+       "typed": "Yes, I'm afraid the date on the second invoice isn't right.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say which invoice"
+        ],
+        "objectives_missed_this_try": [
+         "Say there is a problem"
+        ],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "ready",
+        "coach": "🧭 Good start — one more thing. Still to do: Say there is a problem.Words on the screen wrong? Tap “Say again” next time, or type."
+       }
+      },
+      {
+       "typed": "Sorry, I mean there is a mistake with the date on invoice number two.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say there is a problem",
+         "Say which invoice"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 2,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 2,
+     "stamps": {
+      "Say there is a problem": "Partial",
+      "Say which invoice": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Partial",
+   "best": 83,
+   "due": "2026-11-29",
+   "debrief_header": "83%PARTIALYou handled it with a little help. This card comes back in 3 days. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [
+    "🔢 Formation 2 · There is / are ▸"
+   ],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "o3": {
+   "key": "o3",
+   "card": "o3",
+   "title": "Not ready yet",
+   "level": "A1–A2",
+   "npc": "hayes",
+   "drawn_by": "home: Draw a card (office deck)",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "o3",
+     "exchange": 1,
+     "npc_line": "Good afternoon. Is the budget report ready?",
+     "objectives": [
+      "Use the right name for her",
+      "Say it is not ready"
+     ],
+     "attempts": [
+      {
+       "typed": "Good afternoon, Colonel Hays. I'm sorry, but I haven't finished it yet.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Use the right name for her",
+         "Say it is not ready"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Use the right name for her": "Cleared",
+      "Say it is not ready": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "o3",
+     "exchange": 2,
+     "npc_line": "I see. When will it be ready?",
+     "objectives": [
+      "Say when it will be ready"
+     ],
+     "attempts": [
+      {
+       "action": "tapped 'Ask to repeat' button",
+       "app": {
+        "status": "repair",
+        "issue": "repair",
+        "tries": 0,
+        "repairs": 1
+       }
+      },
+      {
+       "typed": "I would be able to give it to you first thing tomorrow, Mam.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say when it will be ready"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say when it will be ready": "Cleared"
+     },
+     "repairs": 1,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Cleared",
+   "best": 100,
+   "due": null,
+   "debrief_header": "100%CLEAREDEvery objective first time. That is real-life English. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "o4": {
+   "key": "o4",
+   "card": "o4",
+   "title": "Check the details",
+   "level": "A2",
+   "npc": "mark",
+   "drawn_by": "debrief: Draw another",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "o4",
+     "exchange": 1,
+     "npc_line": "Hi, it's Mark Ellis from Hawaii. I'm calling about our payment.",
+     "objectives": [
+      "Greet him",
+      "Ask for the invoice number"
+     ],
+     "attempts": [
+      {
+       "typed": "Good morning, Captain Ellis. Could you tell me the invoice number, please?",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Greet him",
+         "Ask for the invoice number"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Greet him": "Cleared",
+      "Ask for the invoice number": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "o4",
+     "exchange": 2,
+     "npc_line": "Sure. It's invoice four, five, one.",
+     "objectives": [
+      "Repeat the number to check it",
+      "Ask about US dollars"
+     ],
+     "attempts": [
+      {
+       "typed": "Thank you. So that's 451, right? And could you confirm if the amount is in US dollars?",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Repeat the number to check it",
+         "Ask about US dollars"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Repeat the number to check it": "Cleared",
+      "Ask about US dollars": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Cleared",
+   "best": 100,
+   "due": null,
+   "debrief_header": "100%CLEAREDEvery objective first time. That is real-life English. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "o5": {
+   "key": "o5",
+   "card": "o5",
+   "title": "Fix the meeting",
+   "level": "A2",
+   "npc": "eriksen",
+   "drawn_by": "home: Draw a card (office deck)",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "o5",
+     "exchange": 1,
+     "npc_line": "Hello. I'd like a short meeting with your section this week.",
+     "objectives": [
+      "Ask when — What day …? / What time …?"
+     ],
+     "attempts": [
+      {
+       "typed": "Sure, Mr Erikson. Are you free on Wednesday or Thursday?",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [],
+        "objectives_missed_this_try": [
+         "Ask when — What day …? / What time …?"
+        ],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "ready",
+        "coach": "🧭 Not yet. Still to do: Ask when — What day …? / What time …?.Words on the screen wrong? Tap “Say again” next time, or type."
+       }
+      },
+      {
+       "typed": "Which day would be convenient for you?",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Ask when — What day …? / What time …?"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 2,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 2,
+     "stamps": {
+      "Ask when — What day …? / What time …?": "Partial"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "o5",
+     "exchange": 2,
+     "npc_line": "Thursday morning at ten. Where should I go?",
+     "objectives": [
+      "Say where your office is",
+      "Check the day or time"
+     ],
+     "attempts": [
+      {
+       "typed": "Please come to room 204 on the second floor. I'll see you on Thursday at ten then.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say where your office is",
+         "Check the day or time"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say where your office is": "Cleared",
+      "Check the day or time": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Partial",
+   "best": 83,
+   "due": "2026-11-29",
+   "debrief_header": "83%PARTIALYou handled it with a little help. This card comes back in 3 days. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [
+    "🧭 Formation 5 · Wh- questions ▸"
+   ],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "o6": {
+   "key": "o6",
+   "card": "o6",
+   "title": "Two more days",
+   "level": "A2",
+   "npc": "eriksen",
+   "drawn_by": "debrief: Draw another",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "o6",
+     "exchange": 1,
+     "npc_line": "Good morning. Did you send me last month's receipts?",
+     "objectives": [
+      "Say sorry",
+      "Say what happened"
+     ],
+     "attempts": [
+      {
+       "typed": "Good morning. I'm afraid I haven't sent them yet because I found a mistake yesterday.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say sorry",
+         "Say what happened"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say sorry": "Cleared",
+      "Say what happened": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "o6",
+     "exchange": 2,
+     "npc_line": "I see. When can I have them?",
+     "objectives": [
+      "Ask politely for more time",
+      "Say how long, or which day"
+     ],
+     "attempts": [
+      {
+       "typed": "Would it be possible to have two more days? I'll send them by Friday.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say how long, or which day"
+        ],
+        "objectives_missed_this_try": [
+         "Ask politely for more time"
+        ],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "ready",
+        "coach": "🧭 Good start — one more thing. Still to do: Ask politely for more time.Words on the screen wrong? Tap “Say again” next time, or type."
+       }
+      },
+      {
+       "typed": "Could I have two more days, please?",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Ask politely for more time",
+         "Say how long, or which day"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 2,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 2,
+     "stamps": {
+      "Ask politely for more time": "Partial",
+      "Say how long, or which day": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Partial",
+   "best": 88,
+   "due": "2026-11-29",
+   "debrief_header": "88%PARTIALYou handled it with a little help. This card comes back in 3 days. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [
+    "⏪ Formation 6 · Past simple ▸",
+    "🙏 Formation 8 · Polite requests ▸"
+   ],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "o7": {
+   "key": "o7",
+   "card": "o7",
+   "title": "The late payment",
+   "level": "A2",
+   "npc": "mike",
+   "drawn_by": "debrief: Draw another",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "o7",
+     "exchange": 1,
+     "npc_line": "Hi, this is Mike Turner. We're still waiting for our payment. It's thirty days late. What's happening?",
+     "objectives": [
+      "Say sorry",
+      "Explain the problem"
+     ],
+     "attempts": [
+      {
+       "typed": "I apologise for the delay, Mr Turner. The bank details we had were not correct.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say sorry",
+         "Explain the problem"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say sorry": "Cleared",
+      "Explain the problem": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "o7",
+     "exchange": 2,
+     "npc_line": "OK. So when will you pay?",
+     "objectives": [
+      "Say the plan — We will … / We're going to …",
+      "Say which day"
+     ],
+     "attempts": [
+      {
+       "typed": "The payment will be made on Friday, and I'll email you to confirm.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say the plan — We will … / We're going to …",
+         "Say which day"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say the plan — We will … / We're going to …": "Cleared",
+      "Say which day": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Cleared",
+   "best": 100,
+   "due": null,
+   "debrief_header": "100%CLEAREDEvery objective first time. That is real-life English. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "o8": {
+   "key": "o8",
+   "card": "o8",
+   "title": "Ask the boss",
+   "level": "A2–B1",
+   "npc": "anan",
+   "drawn_by": "debrief: Draw another",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "o8",
+     "exchange": 1,
+     "npc_line": "Yes? Come in.",
+     "objectives": [
+      "Use the right name for him",
+      "Ask politely for his signature"
+     ],
+     "attempts": [
+      {
+       "typed": "Excuse me, Sir. I'm sorry to interrupt. Would you mind signing this payment form?",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Use the right name for him",
+         "Ask politely for his signature"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Use the right name for him": "Cleared",
+      "Ask politely for his signature": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "o8",
+     "exchange": 2,
+     "npc_line": "Of course. Is it urgent?",
+     "objectives": [
+      "Say why it is urgent",
+      "Thank him"
+     ],
+     "attempts": [
+      {
+       "typed": "Yes, Sir, it has to reach the bank by three o'clock. Thank you very much.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say why it is urgent",
+         "Thank him"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say why it is urgent": "Cleared",
+      "Thank him": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Cleared",
+   "best": 100,
+   "due": null,
+   "debrief_header": "100%CLEAREDEvery objective first time. That is real-life English. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "v1": {
+   "key": "v1",
+   "card": "v1",
+   "title": "Where is the briefing room?",
+   "level": "A2",
+   "npc": "tom",
+   "drawn_by": "home: Scramble (surprise)",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "v1",
+     "exchange": 1,
+     "npc_line": "Excuse me. Where is the briefing room?",
+     "objectives": [
+      "Say where it is"
+     ],
+     "attempts": [
+      {
+       "typed": "Go up to the second floor and you will see it beside the lift.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say where it is"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say where it is": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "v1",
+     "exchange": 2,
+     "npc_line": "Thanks. And what time does the session start?",
+     "objectives": [
+      "Say the time"
+     ],
+     "attempts": [
+      {
+       "typed": "It begins at nine, so you still have some time.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say the time"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say the time": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Cleared",
+   "best": 100,
+   "due": null,
+   "debrief_header": "100%CLEAREDEvery objective first time. That is real-life English. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "v2": {
+   "key": "v2",
+   "card": "v2",
+   "title": "No booking",
+   "level": "A2",
+   "npc": "jessica",
+   "drawn_by": "debrief: Draw another",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "v2",
+     "exchange": 1,
+     "npc_line": "Good evening, and welcome to the Capitol View. I'm sorry, I can't find your booking.",
+     "objectives": [
+      "Say you have a booking",
+      "Ask her politely to check again"
+     ],
+     "attempts": [
+      {
+       "typed": "Good evening. That's strange, I reserved a room for three nights. Would you mind checking again?",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say you have a booking",
+         "Ask her politely to check again"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say you have a booking": "Cleared",
+      "Ask her politely to check again": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "v2",
+     "exchange": 2,
+     "npc_line": "Of course. Do you have a confirmation number?",
+     "objectives": [
+      "Give the number"
+     ],
+     "attempts": [
+      {
+       "typed": "Sorry, could you speak a bit more slowly, please?",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [],
+        "objectives_missed_this_try": [
+         "Give the number"
+        ],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "ready",
+        "coach": "🧭 Not yet. Still to do: Give the number.Words on the screen wrong? Tap “Say again” next time, or type."
+       }
+      },
+      {
+       "typed": "I'm sorry, I didn't catch that. Could you repeat it, please?",
+       "app": {
+        "status": "repair",
+        "objectives_hit_this_try": [],
+        "objectives_missed_this_try": [
+         "Give the number"
+        ],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "ready",
+        "coach": "👍 Good move. Asking the person to repeat is always fine. Listen again, then answer."
+       }
+      },
+      {
+       "typed": "Yes, here it is. It's 4729.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Give the number"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 2,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 2,
+     "stamps": {
+      "Give the number": "Partial"
+     },
+     "repairs": 1,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Partial",
+   "best": 83,
+   "due": "2026-11-29",
+   "debrief_header": "83%PARTIALYou handled it with a little help. This card comes back in 3 days. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [
+    "❓ Formation 4 · Yes/No questions ▸",
+    "🙏 Formation 8 · Polite requests ▸"
+   ],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "v3": {
+   "key": "v3",
+   "card": "v3",
+   "title": "Welcome to the base",
+   "level": "A2",
+   "npc": "tom",
+   "drawn_by": "home: Draw a card (visitors deck)",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "v3",
+     "exchange": 1,
+     "npc_line": "Hello! I'm Tom Hughes. I'm here for the exercise week.",
+     "objectives": [
+      "Welcome him",
+      "Ask about his journey"
+     ],
+     "attempts": [
+      {
+       "typed": "Welcome, Flight Lieutenant Hughes. Was your flight okay?",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Welcome him"
+        ],
+        "objectives_missed_this_try": [
+         "Ask about his journey"
+        ],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "ready",
+        "coach": "🧭 Good start — one more thing. Still to do: Ask about his journey.Words on the screen wrong? Tap “Say again” next time, or type."
+       }
+      },
+      {
+       "typed": "How was your trip from the UK?",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Ask about his journey"
+        ],
+        "objectives_missed_this_try": [
+         "Welcome him"
+        ],
+        "slip_note": null,
+        "tries_after": 2,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 2,
+     "stamps": {
+      "Welcome him": "Cleared",
+      "Ask about his journey": "Partial"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "v3",
+     "exchange": 2,
+     "npc_line": "Long, but fine, thanks. Where do I go first?",
+     "objectives": [
+      "Say where to go first"
+     ],
+     "attempts": [
+      {
+       "typed": "First, I'll take you to the security office to get your visitor pass.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say where to go first"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say where to go first": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Partial",
+   "best": 83,
+   "due": "2026-11-29",
+   "debrief_header": "83%PARTIALYou handled it with a little help. This card comes back in 3 days. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [
+    "🧭 Formation 5 · Wh- questions ▸"
+   ],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "v4": {
+   "key": "v4",
+   "card": "v4",
+   "title": "Yesterday's meeting",
+   "level": "A2",
+   "npc": "hayes",
+   "drawn_by": "debrief: Draw another",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "v4",
+     "exchange": 1,
+     "npc_line": "I missed the finance meeting yesterday. What did you discuss?",
+     "objectives": [
+      "Say what you talked about",
+      "Say what was decided"
+     ],
+     "attempts": [
+      {
+       "typed": "We discussed the travel budget, Ma'am, and Wing Commander Anan gave his approval for the plan.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say what you talked about"
+        ],
+        "objectives_missed_this_try": [
+         "Say what was decided"
+        ],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "ready",
+        "coach": "🧭 Good start — one more thing. Still to do: Say what was decided.Words on the screen wrong? Tap “Say again” next time, or type."
+       }
+      },
+      {
+       "typed": "I mean he approved the plan.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say what you talked about",
+         "Say what was decided"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 2,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 2,
+     "stamps": {
+      "Say what you talked about": "Cleared",
+      "Say what was decided": "Partial"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "v4",
+     "exchange": 2,
+     "npc_line": "Good. Did anyone send the notes?",
+     "objectives": [
+      "Offer to send them, and say when"
+     ],
+     "attempts": [
+      {
+       "typed": "Not yet, Ma'am. I'll email them to you right after this.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [],
+        "objectives_missed_this_try": [
+         "Offer to send them, and say when"
+        ],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "ready",
+        "coach": "🧭 Not yet. Still to do: Offer to send them, and say when.Words on the screen wrong? Tap “Say again” next time, or type."
+       }
+      },
+      {
+       "typed": "I will send them to you this afternoon.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Offer to send them, and say when"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 2,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 2,
+     "stamps": {
+      "Offer to send them, and say when": "Partial"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Partial",
+   "best": 67,
+   "due": "2026-11-29",
+   "debrief_header": "67%PARTIALYou handled it with a little help. This card comes back in 3 days. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [
+    "⏪ Formation 6 · Past simple ▸"
+   ],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "v5": {
+   "key": "v5",
+   "card": "v5",
+   "title": "Tomorrow's plan",
+   "level": "A2",
+   "npc": "mark",
+   "drawn_by": "debrief: Draw another",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "v5",
+     "exchange": 1,
+     "npc_line": "So, what's the plan for tomorrow?",
+     "objectives": [
+      "Say the plan — We are going to … / We will …",
+      "Say the time"
+     ],
+     "attempts": [
+      {
+       "typed": "Tomorrow we're visiting the finance office at ten o'clock.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say the plan — We are going to … / We will …",
+         "Say the time"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say the plan — We are going to … / We will …": "Cleared",
+      "Say the time": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "v5",
+     "exchange": 2,
+     "npc_line": "Great. Do I need to bring anything?",
+     "objectives": [
+      "Say what to bring"
+     ],
+     "attempts": [
+      {
+       "typed": "Yes, you'll need your ID card to get in.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say what to bring"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say what to bring": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Cleared",
+   "best": 100,
+   "due": null,
+   "debrief_header": "100%CLEAREDEvery objective first time. That is real-life English. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "v6": {
+   "key": "v6",
+   "card": "v6",
+   "title": "The taxi claim",
+   "level": "A2–B1",
+   "npc": "hayes",
+   "drawn_by": "home: Draw a card (visitors deck)",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "v6",
+     "exchange": 1,
+     "npc_line": "I'd like to claim my taxi costs. What do you need from me?",
+     "objectives": [
+      "Ask politely for the receipts",
+      "Ask how many"
+     ],
+     "attempts": [
+      {
+       "typed": "Certainly, Ma'am. I'll need your receipts, please. How many do you have?",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Ask politely for the receipts",
+         "Ask how many"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Ask politely for the receipts": "Cleared",
+      "Ask how many": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "v6",
+     "exchange": 2,
+     "npc_line": "I have two receipts. I lost the third one.",
+     "objectives": [
+      "Ask her to fill in the form"
+     ],
+     "attempts": [
+      {
+       "typed": "That's all right, Ma'am. For the lost one, you would need to complete this form.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Ask her to fill in the form"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Ask her to fill in the form": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Cleared",
+   "best": 100,
+   "due": null,
+   "debrief_header": "100%CLEAREDEvery objective first time. That is real-life English. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "v7": {
+   "key": "v7",
+   "card": "v7",
+   "title": "The transfer came back",
+   "level": "B1",
+   "npc": "mark",
+   "drawn_by": "debrief: Draw another",
+   "chips_opened": [
+    {
+     "chip": 1,
+     "when": "pre-flight",
+     "text": "If you send the new bank details today, …"
+    }
+   ],
+   "exchanges": [
+    {
+     "card": "v7",
+     "exchange": 1,
+     "npc_line": "Our bank says the transfer came back. What happens now?",
+     "objectives": [
+      "Say sorry",
+      "Say the plan with if"
+     ],
+     "attempts": [
+      {
+       "typed": "I'm sorry about that, Captain Ellis. If you could send us the new bank details today, we would be able to pay again tomorrow.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say sorry"
+        ],
+        "objectives_missed_this_try": [
+         "Say the plan with if"
+        ],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "ready",
+        "coach": "🧭 Good start — one more thing. Still to do: Say the plan with if.Words on the screen wrong? Tap “Say again” next time, or type."
+       }
+      },
+      {
+       "typed": "If you send them today, we can pay again tomorrow.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say the plan with if"
+        ],
+        "objectives_missed_this_try": [
+         "Say sorry"
+        ],
+        "slip_note": null,
+        "tries_after": 2,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 2,
+     "stamps": {
+      "Say sorry": "Cleared",
+      "Say the plan with if": "Partial"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "v7",
+     "exchange": 2,
+     "npc_line": "And if the details are wrong again?",
+     "objectives": [
+      "Say what you will do then"
+     ],
+     "attempts": [
+      {
+       "typed": "In that case, I would phone you so we could check them together.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [],
+        "objectives_missed_this_try": [
+         "Say what you will do then"
+        ],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "ready",
+        "coach": "🧭 Not yet. Still to do: Say what you will do then.Words on the screen wrong? Tap “Say again” next time, or type."
+       }
+      },
+      {
+       "typed": "Then I'd ask you to confirm the details by email before we pay.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [],
+        "objectives_missed_this_try": [
+         "Say what you will do then"
+        ],
+        "slip_note": null,
+        "tries_after": 2,
+        "screen": "ready",
+        "coach": "🧭 Not yet. Still to do: Say what you will do then.Words on the screen wrong? Tap “Say again” next time, or type."
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 2,
+     "moved_on": true,
+     "tries": 2,
+     "stamps": {
+      "Say what you will do then": "Not yet"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Partial",
+   "best": 45,
+   "due": "2026-11-29",
+   "debrief_header": "45%PARTIALYou handled it with a little help. This card comes back in 3 days. Top score 90 (1 phrase chip) · first time",
+   "formation_links": [
+    "🔀 Formation 10 · Conditionals ▸"
+   ],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19,
+   "formation_link_opened": "🔀 If … (1st · 2nd · 3rd)",
+   "after_fdBack_tab": "fd / home"
+  },
+  "v7b": {
+   "key": "v7b",
+   "card": "v7",
+   "title": "The transfer came back",
+   "level": "B1",
+   "npc": "mark",
+   "drawn_by": "home: tile Again",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "v7",
+     "exchange": 1,
+     "npc_line": "Our bank says the transfer came back. What happens now?",
+     "objectives": [
+      "Say sorry",
+      "Say the plan with if"
+     ],
+     "attempts": [
+      {
+       "typed": "I'm so sorry, Captain Ellis. If you will send the new bank details today, we will pay again tomorrow.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say sorry",
+         "Say the plan with if"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": "Conditionals: No will after if: If you send it today, we will pay tomorrow. (heard: if you will)",
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say sorry": "Cleared",
+      "Say the plan with if": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": "Conditionals — if you will"
+    },
+    {
+     "card": "v7",
+     "exchange": 2,
+     "npc_line": "And if the details are wrong again?",
+     "objectives": [
+      "Say what you will do then"
+     ],
+     "attempts": [
+      {
+       "typed": "Then I will call you and we will check every number together.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say what you will do then"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say what you will do then": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Cleared",
+   "best": 100,
+   "due": null,
+   "debrief_header": "100%CLEAREDEvery objective first time. That is real-life English. Top score 100 (0 phrase chips) · best 100%",
+   "formation_links": [
+    "🔀 Formation 10 · Conditionals ▸"
+   ],
+   "grammar_note": "📝 One grammar note (not marked down): No will after if: If you send it today, we will pay tomorrow. I heard: “if you will”",
+   "runs_on_card": 2,
+   "preflight_seconds_left": 19
+  },
+  "v8": {
+   "key": "v8",
+   "card": "v8",
+   "title": "Status report",
+   "level": "B1",
+   "npc": "eriksen",
+   "drawn_by": "home: Draw a card (visitors deck)",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "v8",
+     "exchange": 1,
+     "npc_line": "What is the status of the three March payments?",
+     "objectives": [
+      "Say two were made",
+      "Say one was returned"
+     ],
+     "attempts": [
+      {
+       "typed": "We paid two of them last week, but the third one was sent back by the bank.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say two were made",
+         "Say one was returned"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say two were made": "Cleared",
+      "Say one was returned": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "v8",
+     "exchange": 2,
+     "npc_line": "Why was it returned?",
+     "objectives": [
+      "Say why"
+     ],
+     "attempts": [
+      {
+       "typed": "The bank couldn't accept it because the account number wasn't right.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [],
+        "objectives_missed_this_try": [
+         "Say why"
+        ],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "ready",
+        "coach": "🧭 Not yet. Still to do: Say why.Words on the screen wrong? Tap “Say again” next time, or type."
+       }
+      },
+      {
+       "typed": "The account number was wrong, so the bank returned it.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say why"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 2,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 2,
+     "stamps": {
+      "Say why": "Partial"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Partial",
+   "best": 83,
+   "due": "2026-11-29",
+   "debrief_header": "83%PARTIALYou handled it with a little help. This card comes back in 3 days. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [
+    "🔁 Formation 11 · Passive ▸"
+   ],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "s1": {
+   "key": "s1",
+   "card": "s1",
+   "title": "What do you do?",
+   "level": "A2",
+   "npc": "tom",
+   "drawn_by": "home: Draw a card (social deck)",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "s1",
+     "exchange": 1,
+     "npc_line": "Hi! I'm Tom. So, what do you do here?",
+     "objectives": [
+      "Say your job or your division"
+     ],
+     "attempts": [
+      {
+       "typed": "I'm an accountant in the Finance Division. I look after invoices and payments.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say your job or your division"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say your job or your division": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "s1",
+     "exchange": 2,
+     "npc_line": "Interesting! And your boss, what does he do?",
+     "objectives": [
+      "Say what your boss does"
+     ],
+     "attempts": [
+      {
+       "typed": "He's in charge of the whole division, and he approves every payment.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say what your boss does"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say what your boss does": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Cleared",
+   "best": 100,
+   "due": null,
+   "debrief_header": "100%CLEAREDEvery objective first time. That is real-life English. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "s2": {
+   "key": "s2",
+   "card": "s2",
+   "title": "Welcome dinner",
+   "level": "A2",
+   "npc": "sarah",
+   "drawn_by": "debrief: Draw another",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "s2",
+     "exchange": 1,
+     "npc_line": "This green curry looks wonderful. Do you eat spicy food?",
+     "objectives": [
+      "Answer about yourself",
+      "Ask her a question back"
+     ],
+     "attempts": [
+      {
+       "typed": "Yes, I love it! The spicier the better. How about you?",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Answer about yourself",
+         "Ask her a question back"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Answer about yourself": "Cleared",
+      "Ask her a question back": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "s2",
+     "exchange": 2,
+     "npc_line": "I do, but I don't eat very spicy food.",
+     "objectives": [
+      "Suggest a dish that is not spicy"
+     ],
+     "attempts": [
+      {
+       "typed": "In that case, you might like the chicken with cashew nuts. It's quite mild.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Suggest a dish that is not spicy"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Suggest a dish that is not spicy": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Cleared",
+   "best": 100,
+   "due": null,
+   "debrief_header": "100%CLEAREDEvery objective first time. That is real-life English. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "s3": {
+   "key": "s3",
+   "card": "s3",
+   "title": "Your UK degree",
+   "level": "A2",
+   "npc": "tom",
+   "drawn_by": "debrief: Draw another",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "s3",
+     "exchange": 1,
+     "npc_line": "I hear you studied in the UK. What did you study?",
+     "objectives": [
+      "Say what you studied"
+     ],
+     "attempts": [
+      {
+       "typed": "I did a master's degree in accounting and finance.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say what you studied"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say what you studied": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "s3",
+     "exchange": 2,
+     "npc_line": "Lovely! Did you like it there?",
+     "objectives": [
+      "Say if you liked it",
+      "Add one detail — weather, food, people …"
+     ],
+     "attempts": [
+      {
+       "typed": "Yes, I really enjoyed it, although the weather was much colder than in Bangkok.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say if you liked it",
+         "Add one detail — weather, food, people …"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say if you liked it": "Cleared",
+      "Add one detail — weather, food, people …": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Cleared",
+   "best": 100,
+   "due": null,
+   "debrief_header": "100%CLEAREDEvery objective first time. That is real-life English. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "s4": {
+   "key": "s4",
+   "card": "s4",
+   "title": "Bangkok traffic",
+   "level": "A2",
+   "npc": "mark",
+   "drawn_by": "home: Draw a card (social deck)",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "s4",
+     "exchange": 1,
+     "npc_line": "The traffic this morning was terrible! How do you get to work?",
+     "objectives": [
+      "Say how you get to work",
+      "Ask him a question back"
+     ],
+     "attempts": [
+      {
+       "typed": "I usually take the BTS because it's quicker than driving. Where are you staying?",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say how you get to work",
+         "Ask him a question back"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say how you get to work": "Cleared",
+      "Ask him a question back": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "s4",
+     "exchange": 2,
+     "npc_line": "At a hotel near the river. What should I see this weekend?",
+     "objectives": [
+      "Suggest a place"
+     ],
+     "attempts": [
+      {
+       "typed": "If I were you, I'd go to the Grand Palace early in the morning.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Suggest a place"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Suggest a place": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Cleared",
+   "best": 100,
+   "due": null,
+   "debrief_header": "100%CLEAREDEvery objective first time. That is real-life English. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "s5": {
+   "key": "s5",
+   "card": "s5",
+   "title": "Weekend plans",
+   "level": "A2",
+   "npc": "sarah",
+   "drawn_by": "debrief: Draw another",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "s5",
+     "exchange": 1,
+     "npc_line": "Finally, Friday! Any plans for the weekend?",
+     "objectives": [
+      "Say your plan — I'm going to … / I will …"
+     ],
+     "attempts": [
+      {
+       "typed": "I'm planning to visit my parents in Ayutthaya on Saturday.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [],
+        "objectives_missed_this_try": [
+         "Say your plan — I'm going to … / I will …"
+        ],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "ready",
+        "coach": "🧭 Not yet. Still to do: Say your plan — I'm going to … / I will ….Words on the screen wrong? Tap “Say again” next time, or type."
+       }
+      },
+      {
+       "typed": "I'm going to visit my parents in Ayutthaya.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say your plan — I'm going to … / I will …"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 2,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 2,
+     "stamps": {
+      "Say your plan — I'm going to … / I will …": "Partial"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "s5",
+     "exchange": 2,
+     "npc_line": "That sounds nice. I have a free day on Sunday. Any ideas?",
+     "objectives": [
+      "Suggest something to do"
+     ],
+     "attempts": [
+      {
+       "typed": "Why don't you go to Chatuchak Market? It's open on Sundays.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Suggest something to do"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Suggest something to do": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Partial",
+   "best": 75,
+   "due": "2026-11-29",
+   "debrief_header": "75%PARTIALYou handled it with a little help. This card comes back in 3 days. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [
+    "⏩ Formation 7 · Future ▸"
+   ],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "s6": {
+   "key": "s6",
+   "card": "s6",
+   "title": "A photo, please",
+   "level": "A2–B1",
+   "npc": "hayes",
+   "drawn_by": "debrief: Draw another",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "s6",
+     "exchange": 1,
+     "npc_line": "What a lovely evening.",
+     "objectives": [
+      "Use the right name for her",
+      "Ask politely for a photo"
+     ],
+     "attempts": [
+      {
+       "typed": "Excuse me, Colonel Hays. Would you mind taking a photo with our team?",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Use the right name for her",
+         "Ask politely for a photo"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Use the right name for her": "Cleared",
+      "Ask politely for a photo": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "s6",
+     "exchange": 2,
+     "npc_line": "Of course! Where should I stand?",
+     "objectives": [
+      "Say where to stand",
+      "Thank her"
+     ],
+     "attempts": [
+      {
+       "typed": "Could you stand in the middle, please, Mam? Thank you so much.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say where to stand",
+         "Thank her"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say where to stand": "Cleared",
+      "Thank her": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Cleared",
+   "best": 100,
+   "due": null,
+   "debrief_header": "100%CLEAREDEvery objective first time. That is real-life English. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "s7": {
+   "key": "s7",
+   "card": "s7",
+   "title": "If you had a free week",
+   "level": "B1",
+   "npc": "tom",
+   "drawn_by": "home: Draw a card (social deck)",
+   "chips_opened": [
+    {
+     "chip": 0,
+     "when": "exchange 1",
+     "text": "I would go to Chiang Mai."
+    }
+   ],
+   "exchanges": [
+    {
+     "card": "s7",
+     "exchange": 1,
+     "npc_line": "Here's a question. If you had a free week, where would you go?",
+     "objectives": [
+      "Say where you would go — I would …"
+     ],
+     "attempts": [
+      {
+       "typed": "I'd probably go to Chiang Mai and spend the week in the mountains.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [],
+        "objectives_missed_this_try": [
+         "Say where you would go — I would …"
+        ],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "ready",
+        "coach": "🧭 Not yet. Still to do: Say where you would go — I would ….Words on the screen wrong? Tap “Say again” next time, or type."
+       }
+      },
+      {
+       "typed": "I would go to Chiang Mai, I think, and I would stay in the mountains.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say where you would go — I would …"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 2,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [
+      {
+       "chip": 0,
+       "text": "I would go to Chiang Mai."
+      }
+     ],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 2,
+     "stamps": {
+      "Say where you would go — I would …": "Partial"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "s7",
+     "exchange": 2,
+     "npc_line": "Nice. And if I come to Thailand again, what should I do?",
+     "objectives": [
+      "Suggest something for his next visit"
+     ],
+     "attempts": [
+      {
+       "typed": "If you come back, you should spend a few days on the islands in the south.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Suggest something for his next visit"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Suggest something for his next visit": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Partial",
+   "best": 68,
+   "due": "2026-11-29",
+   "debrief_header": "68%PARTIALYou handled it with a little help. This card comes back in 3 days. Top score 90 (1 phrase chip) · first time",
+   "formation_links": [
+    "🔀 Formation 10 · Conditionals ▸"
+   ],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  },
+  "s8": {
+   "key": "s8",
+   "card": "s8",
+   "title": "Saying goodbye",
+   "level": "A2–B1",
+   "npc": "tom",
+   "drawn_by": "debrief: Draw another",
+   "chips_opened": [],
+   "exchanges": [
+    {
+     "card": "s8",
+     "exchange": 1,
+     "npc_line": "Well, that's the end of the week. I fly home tonight.",
+     "objectives": [
+      "Thank him",
+      "Wish him a good journey"
+     ],
+     "attempts": [
+      {
+       "typed": "Thank you so much for all your help this week. Have a safe flight home.",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Thank him",
+         "Wish him a good journey"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Thank him": "Cleared",
+      "Wish him a good journey": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    },
+    {
+     "card": "s8",
+     "exchange": 2,
+     "npc_line": "Thanks. I hope we meet again.",
+     "objectives": [
+      "Say goodbye"
+     ],
+     "attempts": [
+      {
+       "typed": "I hope so too. It was a pleasure working with you. Goodbye!",
+       "app": {
+        "status": "ok",
+        "objectives_hit_this_try": [
+         "Say goodbye"
+        ],
+        "objectives_missed_this_try": [],
+        "slip_note": null,
+        "tries_after": 1,
+        "screen": "passed",
+        "coach": ""
+       }
+      }
+     ],
+     "chips_opened_here": [],
+     "hints": 0,
+     "moved_on": false,
+     "tries": 1,
+     "stamps": {
+      "Say goodbye": "Cleared"
+     },
+     "repairs": 0,
+     "slip_recorded": null
+    }
+   ],
+   "final_stamp": "Cleared",
+   "best": 100,
+   "due": null,
+   "debrief_header": "100%CLEAREDEvery objective first time. That is real-life English. Top score 100 (0 phrase chips) · first time",
+   "formation_links": [],
+   "grammar_note": null,
+   "runs_on_card": 1,
+   "preflight_seconds_left": 19
+  }
+ },
+ "exchanges": [
+  {
+   "card": "o1",
+   "exchange": 1,
+   "npc_line": "Good morning. I'm Lars Eriksen, the auditor. Who checks the invoices in your section?",
+   "objectives": [
+    "Greet him",
+    "Say who checks the invoices"
+   ],
+   "attempts": [
+    {
+     "typed": "Good morning, Mr Erikson. Nice to meet you. The invoices are checked by Khun Nok.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Greet him",
+       "Say who checks the invoices"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Greet him": "Cleared",
+    "Say who checks the invoices": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "o1",
+   "exchange": 2,
+   "npc_line": "I see. And who signs the payments?",
+   "objectives": [
+    "Say who signs the payments"
+   ],
+   "attempts": [
+    {
+     "typed": "Our commanding officer approves and authorises all the payments.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [],
+      "objectives_missed_this_try": [
+       "Say who signs the payments"
+      ],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "ready",
+      "coach": "🧭 Not yet. Still to do: Say who signs the payments.Words on the screen wrong? Tap “Say again” next time, or type."
+     }
+    },
+    {
+     "typed": "I mean they are signed by Wing Commander Anan.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say who signs the payments"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 2,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "Say who signs the payments": "Partial"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "o2",
+   "exchange": 1,
+   "npc_line": "Hi, it's Mike Turner from Pacific Aero. How many invoices from us are there in your file?",
+   "objectives": [
+    "Say how many invoices"
+   ],
+   "attempts": [
+    {
+     "action": "tapped microphone (no mic available)",
+     "app": {
+      "sub": "ready",
+      "micErr": "not-allowed",
+      "shown": "Tap and answer in your own wordsStop talking — or tap again — to finish\n          The microphone is blocked. In Safari tap aA → Website Settings → Microphone: Allow. Also check Settings → Privacy & Se"
+     }
+    },
+    {
+     "typed": "Hello, Mr Turner. I can see three invoices from your company in the file.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say how many invoices"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say how many invoices": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "o2",
+   "exchange": 2,
+   "npc_line": "OK. Is there a problem with any of them?",
+   "objectives": [
+    "Say there is a problem",
+    "Say which invoice"
+   ],
+   "attempts": [
+    {
+     "typed": "Yes, I'm afraid the date on the second invoice isn't right.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say which invoice"
+      ],
+      "objectives_missed_this_try": [
+       "Say there is a problem"
+      ],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "ready",
+      "coach": "🧭 Good start — one more thing. Still to do: Say there is a problem.Words on the screen wrong? Tap “Say again” next time, or type."
+     }
+    },
+    {
+     "typed": "Sorry, I mean there is a mistake with the date on invoice number two.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say there is a problem",
+       "Say which invoice"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 2,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "Say there is a problem": "Partial",
+    "Say which invoice": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "o3",
+   "exchange": 1,
+   "npc_line": "Good afternoon. Is the budget report ready?",
+   "objectives": [
+    "Use the right name for her",
+    "Say it is not ready"
+   ],
+   "attempts": [
+    {
+     "typed": "Good afternoon, Colonel Hays. I'm sorry, but I haven't finished it yet.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Use the right name for her",
+       "Say it is not ready"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Use the right name for her": "Cleared",
+    "Say it is not ready": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "o3",
+   "exchange": 2,
+   "npc_line": "I see. When will it be ready?",
+   "objectives": [
+    "Say when it will be ready"
+   ],
+   "attempts": [
+    {
+     "action": "tapped 'Ask to repeat' button",
+     "app": {
+      "status": "repair",
+      "issue": "repair",
+      "tries": 0,
+      "repairs": 1
+     }
+    },
+    {
+     "typed": "I would be able to give it to you first thing tomorrow, Mam.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say when it will be ready"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say when it will be ready": "Cleared"
+   },
+   "repairs": 1,
+   "slip_recorded": null
+  },
+  {
+   "card": "o4",
+   "exchange": 1,
+   "npc_line": "Hi, it's Mark Ellis from Hawaii. I'm calling about our payment.",
+   "objectives": [
+    "Greet him",
+    "Ask for the invoice number"
+   ],
+   "attempts": [
+    {
+     "typed": "Good morning, Captain Ellis. Could you tell me the invoice number, please?",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Greet him",
+       "Ask for the invoice number"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Greet him": "Cleared",
+    "Ask for the invoice number": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "o4",
+   "exchange": 2,
+   "npc_line": "Sure. It's invoice four, five, one.",
+   "objectives": [
+    "Repeat the number to check it",
+    "Ask about US dollars"
+   ],
+   "attempts": [
+    {
+     "typed": "Thank you. So that's 451, right? And could you confirm if the amount is in US dollars?",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Repeat the number to check it",
+       "Ask about US dollars"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Repeat the number to check it": "Cleared",
+    "Ask about US dollars": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "o5",
+   "exchange": 1,
+   "npc_line": "Hello. I'd like a short meeting with your section this week.",
+   "objectives": [
+    "Ask when — What day …? / What time …?"
+   ],
+   "attempts": [
+    {
+     "typed": "Sure, Mr Erikson. Are you free on Wednesday or Thursday?",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [],
+      "objectives_missed_this_try": [
+       "Ask when — What day …? / What time …?"
+      ],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "ready",
+      "coach": "🧭 Not yet. Still to do: Ask when — What day …? / What time …?.Words on the screen wrong? Tap “Say again” next time, or type."
+     }
+    },
+    {
+     "typed": "Which day would be convenient for you?",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Ask when — What day …? / What time …?"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 2,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "Ask when — What day …? / What time …?": "Partial"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "o5",
+   "exchange": 2,
+   "npc_line": "Thursday morning at ten. Where should I go?",
+   "objectives": [
+    "Say where your office is",
+    "Check the day or time"
+   ],
+   "attempts": [
+    {
+     "typed": "Please come to room 204 on the second floor. I'll see you on Thursday at ten then.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say where your office is",
+       "Check the day or time"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say where your office is": "Cleared",
+    "Check the day or time": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "o6",
+   "exchange": 1,
+   "npc_line": "Good morning. Did you send me last month's receipts?",
+   "objectives": [
+    "Say sorry",
+    "Say what happened"
+   ],
+   "attempts": [
+    {
+     "typed": "Good morning. I'm afraid I haven't sent them yet because I found a mistake yesterday.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say sorry",
+       "Say what happened"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say sorry": "Cleared",
+    "Say what happened": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "o6",
+   "exchange": 2,
+   "npc_line": "I see. When can I have them?",
+   "objectives": [
+    "Ask politely for more time",
+    "Say how long, or which day"
+   ],
+   "attempts": [
+    {
+     "typed": "Would it be possible to have two more days? I'll send them by Friday.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say how long, or which day"
+      ],
+      "objectives_missed_this_try": [
+       "Ask politely for more time"
+      ],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "ready",
+      "coach": "🧭 Good start — one more thing. Still to do: Ask politely for more time.Words on the screen wrong? Tap “Say again” next time, or type."
+     }
+    },
+    {
+     "typed": "Could I have two more days, please?",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Ask politely for more time",
+       "Say how long, or which day"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 2,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "Ask politely for more time": "Partial",
+    "Say how long, or which day": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "o7",
+   "exchange": 1,
+   "npc_line": "Hi, this is Mike Turner. We're still waiting for our payment. It's thirty days late. What's happening?",
+   "objectives": [
+    "Say sorry",
+    "Explain the problem"
+   ],
+   "attempts": [
+    {
+     "typed": "I apologise for the delay, Mr Turner. The bank details we had were not correct.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say sorry",
+       "Explain the problem"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say sorry": "Cleared",
+    "Explain the problem": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "o7",
+   "exchange": 2,
+   "npc_line": "OK. So when will you pay?",
+   "objectives": [
+    "Say the plan — We will … / We're going to …",
+    "Say which day"
+   ],
+   "attempts": [
+    {
+     "typed": "The payment will be made on Friday, and I'll email you to confirm.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say the plan — We will … / We're going to …",
+       "Say which day"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say the plan — We will … / We're going to …": "Cleared",
+    "Say which day": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "o8",
+   "exchange": 1,
+   "npc_line": "Yes? Come in.",
+   "objectives": [
+    "Use the right name for him",
+    "Ask politely for his signature"
+   ],
+   "attempts": [
+    {
+     "typed": "Excuse me, Sir. I'm sorry to interrupt. Would you mind signing this payment form?",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Use the right name for him",
+       "Ask politely for his signature"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Use the right name for him": "Cleared",
+    "Ask politely for his signature": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "o8",
+   "exchange": 2,
+   "npc_line": "Of course. Is it urgent?",
+   "objectives": [
+    "Say why it is urgent",
+    "Thank him"
+   ],
+   "attempts": [
+    {
+     "typed": "Yes, Sir, it has to reach the bank by three o'clock. Thank you very much.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say why it is urgent",
+       "Thank him"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say why it is urgent": "Cleared",
+    "Thank him": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "v1",
+   "exchange": 1,
+   "npc_line": "Excuse me. Where is the briefing room?",
+   "objectives": [
+    "Say where it is"
+   ],
+   "attempts": [
+    {
+     "typed": "Go up to the second floor and you will see it beside the lift.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say where it is"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say where it is": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "v1",
+   "exchange": 2,
+   "npc_line": "Thanks. And what time does the session start?",
+   "objectives": [
+    "Say the time"
+   ],
+   "attempts": [
+    {
+     "typed": "It begins at nine, so you still have some time.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say the time"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say the time": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "v2",
+   "exchange": 1,
+   "npc_line": "Good evening, and welcome to the Capitol View. I'm sorry, I can't find your booking.",
+   "objectives": [
+    "Say you have a booking",
+    "Ask her politely to check again"
+   ],
+   "attempts": [
+    {
+     "typed": "Good evening. That's strange, I reserved a room for three nights. Would you mind checking again?",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say you have a booking",
+       "Ask her politely to check again"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say you have a booking": "Cleared",
+    "Ask her politely to check again": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "v2",
+   "exchange": 2,
+   "npc_line": "Of course. Do you have a confirmation number?",
+   "objectives": [
+    "Give the number"
+   ],
+   "attempts": [
+    {
+     "typed": "Sorry, could you speak a bit more slowly, please?",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [],
+      "objectives_missed_this_try": [
+       "Give the number"
+      ],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "ready",
+      "coach": "🧭 Not yet. Still to do: Give the number.Words on the screen wrong? Tap “Say again” next time, or type."
+     }
+    },
+    {
+     "typed": "I'm sorry, I didn't catch that. Could you repeat it, please?",
+     "app": {
+      "status": "repair",
+      "objectives_hit_this_try": [],
+      "objectives_missed_this_try": [
+       "Give the number"
+      ],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "ready",
+      "coach": "👍 Good move. Asking the person to repeat is always fine. Listen again, then answer."
+     }
+    },
+    {
+     "typed": "Yes, here it is. It's 4729.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Give the number"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 2,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "Give the number": "Partial"
+   },
+   "repairs": 1,
+   "slip_recorded": null
+  },
+  {
+   "card": "v3",
+   "exchange": 1,
+   "npc_line": "Hello! I'm Tom Hughes. I'm here for the exercise week.",
+   "objectives": [
+    "Welcome him",
+    "Ask about his journey"
+   ],
+   "attempts": [
+    {
+     "typed": "Welcome, Flight Lieutenant Hughes. Was your flight okay?",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Welcome him"
+      ],
+      "objectives_missed_this_try": [
+       "Ask about his journey"
+      ],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "ready",
+      "coach": "🧭 Good start — one more thing. Still to do: Ask about his journey.Words on the screen wrong? Tap “Say again” next time, or type."
+     }
+    },
+    {
+     "typed": "How was your trip from the UK?",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Ask about his journey"
+      ],
+      "objectives_missed_this_try": [
+       "Welcome him"
+      ],
+      "slip_note": null,
+      "tries_after": 2,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "Welcome him": "Cleared",
+    "Ask about his journey": "Partial"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "v3",
+   "exchange": 2,
+   "npc_line": "Long, but fine, thanks. Where do I go first?",
+   "objectives": [
+    "Say where to go first"
+   ],
+   "attempts": [
+    {
+     "typed": "First, I'll take you to the security office to get your visitor pass.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say where to go first"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say where to go first": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "v4",
+   "exchange": 1,
+   "npc_line": "I missed the finance meeting yesterday. What did you discuss?",
+   "objectives": [
+    "Say what you talked about",
+    "Say what was decided"
+   ],
+   "attempts": [
+    {
+     "typed": "We discussed the travel budget, Ma'am, and Wing Commander Anan gave his approval for the plan.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say what you talked about"
+      ],
+      "objectives_missed_this_try": [
+       "Say what was decided"
+      ],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "ready",
+      "coach": "🧭 Good start — one more thing. Still to do: Say what was decided.Words on the screen wrong? Tap “Say again” next time, or type."
+     }
+    },
+    {
+     "typed": "I mean he approved the plan.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say what you talked about",
+       "Say what was decided"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 2,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "Say what you talked about": "Cleared",
+    "Say what was decided": "Partial"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "v4",
+   "exchange": 2,
+   "npc_line": "Good. Did anyone send the notes?",
+   "objectives": [
+    "Offer to send them, and say when"
+   ],
+   "attempts": [
+    {
+     "typed": "Not yet, Ma'am. I'll email them to you right after this.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [],
+      "objectives_missed_this_try": [
+       "Offer to send them, and say when"
+      ],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "ready",
+      "coach": "🧭 Not yet. Still to do: Offer to send them, and say when.Words on the screen wrong? Tap “Say again” next time, or type."
+     }
+    },
+    {
+     "typed": "I will send them to you this afternoon.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Offer to send them, and say when"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 2,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "Offer to send them, and say when": "Partial"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "v5",
+   "exchange": 1,
+   "npc_line": "So, what's the plan for tomorrow?",
+   "objectives": [
+    "Say the plan — We are going to … / We will …",
+    "Say the time"
+   ],
+   "attempts": [
+    {
+     "typed": "Tomorrow we're visiting the finance office at ten o'clock.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say the plan — We are going to … / We will …",
+       "Say the time"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say the plan — We are going to … / We will …": "Cleared",
+    "Say the time": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "v5",
+   "exchange": 2,
+   "npc_line": "Great. Do I need to bring anything?",
+   "objectives": [
+    "Say what to bring"
+   ],
+   "attempts": [
+    {
+     "typed": "Yes, you'll need your ID card to get in.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say what to bring"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say what to bring": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "v6",
+   "exchange": 1,
+   "npc_line": "I'd like to claim my taxi costs. What do you need from me?",
+   "objectives": [
+    "Ask politely for the receipts",
+    "Ask how many"
+   ],
+   "attempts": [
+    {
+     "typed": "Certainly, Ma'am. I'll need your receipts, please. How many do you have?",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Ask politely for the receipts",
+       "Ask how many"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Ask politely for the receipts": "Cleared",
+    "Ask how many": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "v6",
+   "exchange": 2,
+   "npc_line": "I have two receipts. I lost the third one.",
+   "objectives": [
+    "Ask her to fill in the form"
+   ],
+   "attempts": [
+    {
+     "typed": "That's all right, Ma'am. For the lost one, you would need to complete this form.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Ask her to fill in the form"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Ask her to fill in the form": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "v7",
+   "exchange": 1,
+   "npc_line": "Our bank says the transfer came back. What happens now?",
+   "objectives": [
+    "Say sorry",
+    "Say the plan with if"
+   ],
+   "attempts": [
+    {
+     "typed": "I'm sorry about that, Captain Ellis. If you could send us the new bank details today, we would be able to pay again tomorrow.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say sorry"
+      ],
+      "objectives_missed_this_try": [
+       "Say the plan with if"
+      ],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "ready",
+      "coach": "🧭 Good start — one more thing. Still to do: Say the plan with if.Words on the screen wrong? Tap “Say again” next time, or type."
+     }
+    },
+    {
+     "typed": "If you send them today, we can pay again tomorrow.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say the plan with if"
+      ],
+      "objectives_missed_this_try": [
+       "Say sorry"
+      ],
+      "slip_note": null,
+      "tries_after": 2,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "Say sorry": "Cleared",
+    "Say the plan with if": "Partial"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "v7",
+   "exchange": 2,
+   "npc_line": "And if the details are wrong again?",
+   "objectives": [
+    "Say what you will do then"
+   ],
+   "attempts": [
+    {
+     "typed": "In that case, I would phone you so we could check them together.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [],
+      "objectives_missed_this_try": [
+       "Say what you will do then"
+      ],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "ready",
+      "coach": "🧭 Not yet. Still to do: Say what you will do then.Words on the screen wrong? Tap “Say again” next time, or type."
+     }
+    },
+    {
+     "typed": "Then I'd ask you to confirm the details by email before we pay.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [],
+      "objectives_missed_this_try": [
+       "Say what you will do then"
+      ],
+      "slip_note": null,
+      "tries_after": 2,
+      "screen": "ready",
+      "coach": "🧭 Not yet. Still to do: Say what you will do then.Words on the screen wrong? Tap “Say again” next time, or type."
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 2,
+   "moved_on": true,
+   "tries": 2,
+   "stamps": {
+    "Say what you will do then": "Not yet"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "v7",
+   "exchange": 1,
+   "npc_line": "Our bank says the transfer came back. What happens now?",
+   "objectives": [
+    "Say sorry",
+    "Say the plan with if"
+   ],
+   "attempts": [
+    {
+     "typed": "I'm so sorry, Captain Ellis. If you will send the new bank details today, we will pay again tomorrow.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say sorry",
+       "Say the plan with if"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": "Conditionals: No will after if: If you send it today, we will pay tomorrow. (heard: if you will)",
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say sorry": "Cleared",
+    "Say the plan with if": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": "Conditionals — if you will"
+  },
+  {
+   "card": "v7",
+   "exchange": 2,
+   "npc_line": "And if the details are wrong again?",
+   "objectives": [
+    "Say what you will do then"
+   ],
+   "attempts": [
+    {
+     "typed": "Then I will call you and we will check every number together.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say what you will do then"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say what you will do then": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "v8",
+   "exchange": 1,
+   "npc_line": "What is the status of the three March payments?",
+   "objectives": [
+    "Say two were made",
+    "Say one was returned"
+   ],
+   "attempts": [
+    {
+     "typed": "We paid two of them last week, but the third one was sent back by the bank.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say two were made",
+       "Say one was returned"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say two were made": "Cleared",
+    "Say one was returned": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "v8",
+   "exchange": 2,
+   "npc_line": "Why was it returned?",
+   "objectives": [
+    "Say why"
+   ],
+   "attempts": [
+    {
+     "typed": "The bank couldn't accept it because the account number wasn't right.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [],
+      "objectives_missed_this_try": [
+       "Say why"
+      ],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "ready",
+      "coach": "🧭 Not yet. Still to do: Say why.Words on the screen wrong? Tap “Say again” next time, or type."
+     }
+    },
+    {
+     "typed": "The account number was wrong, so the bank returned it.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say why"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 2,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "Say why": "Partial"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "s1",
+   "exchange": 1,
+   "npc_line": "Hi! I'm Tom. So, what do you do here?",
+   "objectives": [
+    "Say your job or your division"
+   ],
+   "attempts": [
+    {
+     "typed": "I'm an accountant in the Finance Division. I look after invoices and payments.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say your job or your division"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say your job or your division": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "s1",
+   "exchange": 2,
+   "npc_line": "Interesting! And your boss, what does he do?",
+   "objectives": [
+    "Say what your boss does"
+   ],
+   "attempts": [
+    {
+     "typed": "He's in charge of the whole division, and he approves every payment.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say what your boss does"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say what your boss does": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "s2",
+   "exchange": 1,
+   "npc_line": "This green curry looks wonderful. Do you eat spicy food?",
+   "objectives": [
+    "Answer about yourself",
+    "Ask her a question back"
+   ],
+   "attempts": [
+    {
+     "typed": "Yes, I love it! The spicier the better. How about you?",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Answer about yourself",
+       "Ask her a question back"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Answer about yourself": "Cleared",
+    "Ask her a question back": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "s2",
+   "exchange": 2,
+   "npc_line": "I do, but I don't eat very spicy food.",
+   "objectives": [
+    "Suggest a dish that is not spicy"
+   ],
+   "attempts": [
+    {
+     "typed": "In that case, you might like the chicken with cashew nuts. It's quite mild.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Suggest a dish that is not spicy"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Suggest a dish that is not spicy": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "s3",
+   "exchange": 1,
+   "npc_line": "I hear you studied in the UK. What did you study?",
+   "objectives": [
+    "Say what you studied"
+   ],
+   "attempts": [
+    {
+     "typed": "I did a master's degree in accounting and finance.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say what you studied"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say what you studied": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "s3",
+   "exchange": 2,
+   "npc_line": "Lovely! Did you like it there?",
+   "objectives": [
+    "Say if you liked it",
+    "Add one detail — weather, food, people …"
+   ],
+   "attempts": [
+    {
+     "typed": "Yes, I really enjoyed it, although the weather was much colder than in Bangkok.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say if you liked it",
+       "Add one detail — weather, food, people …"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say if you liked it": "Cleared",
+    "Add one detail — weather, food, people …": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "s4",
+   "exchange": 1,
+   "npc_line": "The traffic this morning was terrible! How do you get to work?",
+   "objectives": [
+    "Say how you get to work",
+    "Ask him a question back"
+   ],
+   "attempts": [
+    {
+     "typed": "I usually take the BTS because it's quicker than driving. Where are you staying?",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say how you get to work",
+       "Ask him a question back"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say how you get to work": "Cleared",
+    "Ask him a question back": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "s4",
+   "exchange": 2,
+   "npc_line": "At a hotel near the river. What should I see this weekend?",
+   "objectives": [
+    "Suggest a place"
+   ],
+   "attempts": [
+    {
+     "typed": "If I were you, I'd go to the Grand Palace early in the morning.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Suggest a place"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Suggest a place": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "s5",
+   "exchange": 1,
+   "npc_line": "Finally, Friday! Any plans for the weekend?",
+   "objectives": [
+    "Say your plan — I'm going to … / I will …"
+   ],
+   "attempts": [
+    {
+     "typed": "I'm planning to visit my parents in Ayutthaya on Saturday.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [],
+      "objectives_missed_this_try": [
+       "Say your plan — I'm going to … / I will …"
+      ],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "ready",
+      "coach": "🧭 Not yet. Still to do: Say your plan — I'm going to … / I will ….Words on the screen wrong? Tap “Say again” next time, or type."
+     }
+    },
+    {
+     "typed": "I'm going to visit my parents in Ayutthaya.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say your plan — I'm going to … / I will …"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 2,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "Say your plan — I'm going to … / I will …": "Partial"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "s5",
+   "exchange": 2,
+   "npc_line": "That sounds nice. I have a free day on Sunday. Any ideas?",
+   "objectives": [
+    "Suggest something to do"
+   ],
+   "attempts": [
+    {
+     "typed": "Why don't you go to Chatuchak Market? It's open on Sundays.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Suggest something to do"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Suggest something to do": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "s6",
+   "exchange": 1,
+   "npc_line": "What a lovely evening.",
+   "objectives": [
+    "Use the right name for her",
+    "Ask politely for a photo"
+   ],
+   "attempts": [
+    {
+     "typed": "Excuse me, Colonel Hays. Would you mind taking a photo with our team?",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Use the right name for her",
+       "Ask politely for a photo"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Use the right name for her": "Cleared",
+    "Ask politely for a photo": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "s6",
+   "exchange": 2,
+   "npc_line": "Of course! Where should I stand?",
+   "objectives": [
+    "Say where to stand",
+    "Thank her"
+   ],
+   "attempts": [
+    {
+     "typed": "Could you stand in the middle, please, Mam? Thank you so much.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say where to stand",
+       "Thank her"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say where to stand": "Cleared",
+    "Thank her": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "s7",
+   "exchange": 1,
+   "npc_line": "Here's a question. If you had a free week, where would you go?",
+   "objectives": [
+    "Say where you would go — I would …"
+   ],
+   "attempts": [
+    {
+     "typed": "I'd probably go to Chiang Mai and spend the week in the mountains.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [],
+      "objectives_missed_this_try": [
+       "Say where you would go — I would …"
+      ],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "ready",
+      "coach": "🧭 Not yet. Still to do: Say where you would go — I would ….Words on the screen wrong? Tap “Say again” next time, or type."
+     }
+    },
+    {
+     "typed": "I would go to Chiang Mai, I think, and I would stay in the mountains.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say where you would go — I would …"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 2,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [
+    {
+     "chip": 0,
+     "text": "I would go to Chiang Mai."
+    }
+   ],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 2,
+   "stamps": {
+    "Say where you would go — I would …": "Partial"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "s7",
+   "exchange": 2,
+   "npc_line": "Nice. And if I come to Thailand again, what should I do?",
+   "objectives": [
+    "Suggest something for his next visit"
+   ],
+   "attempts": [
+    {
+     "typed": "If you come back, you should spend a few days on the islands in the south.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Suggest something for his next visit"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Suggest something for his next visit": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "s8",
+   "exchange": 1,
+   "npc_line": "Well, that's the end of the week. I fly home tonight.",
+   "objectives": [
+    "Thank him",
+    "Wish him a good journey"
+   ],
+   "attempts": [
+    {
+     "typed": "Thank you so much for all your help this week. Have a safe flight home.",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Thank him",
+       "Wish him a good journey"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Thank him": "Cleared",
+    "Wish him a good journey": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  },
+  {
+   "card": "s8",
+   "exchange": 2,
+   "npc_line": "Thanks. I hope we meet again.",
+   "objectives": [
+    "Say goodbye"
+   ],
+   "attempts": [
+    {
+     "typed": "I hope so too. It was a pleasure working with you. Goodbye!",
+     "app": {
+      "status": "ok",
+      "objectives_hit_this_try": [
+       "Say goodbye"
+      ],
+      "objectives_missed_this_try": [],
+      "slip_note": null,
+      "tries_after": 1,
+      "screen": "passed",
+      "coach": ""
+     }
+    }
+   ],
+   "chips_opened_here": [],
+   "hints": 0,
+   "moved_on": false,
+   "tries": 1,
+   "stamps": {
+    "Say goodbye": "Cleared"
+   },
+   "repairs": 0,
+   "slip_recorded": null
+  }
+ ],
+ "layout_measurements": [
+  {
+   "screen": "home",
+   "small_targets(<40px)": [
+    [
+     "scVoiceChk",
+     "🔊 Voice & mic check",
+     186,
+     33
+    ],
+    [
+     "scSlow",
+     "🐢 Slow voice: off",
+     164,
+     33
+    ],
+    [
+     "scLive",
+     "👩‍🏫 Lesson mode: off",
+     358,
+     33
+    ],
+    [
+     "",
+     "How Scramble works",
+     334,
+     17
+    ]
+   ]
+  },
+  {
+   "screen": "exchange (ready)",
+   "small_targets(<40px)": [
+    [
+     "scRe",
+     "🔊",
+     29,
+     32
+    ],
+    [
+     "",
+     "Situation",
+     328,
+     17
+    ],
+    [
+     "scHint",
+     "💡 Hint",
+     83,
+     36
+    ],
+    [
+     "scRepeat",
+     "🔁 Ask to repeat",
+     161,
+     36
+    ],
+    [
+     "scType",
+     "⌨ Type instead",
+     102,
+     27
+    ]
+   ]
+  },
+  {
+   "screen": "debrief",
+   "small_targets(<40px)": [
+    [
+     "dbtn",
+     "🔊",
+     43,
+     36
+    ],
+    [
+     "dbtn",
+     "🔊",
+     43,
+     36
+    ]
+   ]
+  },
+  {
+   "screen": "lesson mode marking",
+   "small_targets(<40px)": [
+    [
+     "scRe",
+     "🔊",
+     29,
+     32
+    ],
+    [
+     "",
+     "Situation",
+     328,
+     17
+    ],
+    [
+     "scTag",
+     "— none —Verb -sThere i",
+     195,
+     36
+    ],
+    [
+     "scHint",
+     "💡 Show next hint",
+     175,
+     36
+    ],
+    [
+     "scModel",
+     "🔊 Model",
+     98,
+     36
+    ]
+   ]
+  }
+ ],
+ "scEval_probes(read-only, not committed)": [
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say who signs the payments"
+   ],
+   "slip": null,
+   "norm": "the wing commander does",
+   "card": "o1",
+   "exchange": 2,
+   "text": "The Wing Commander does.",
+   "expect": "pass",
+   "why": "short natural answer"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say who signs the payments"
+   ],
+   "slip": null,
+   "norm": "our commanding officer approves them",
+   "card": "o1",
+   "exchange": 2,
+   "text": "Our commanding officer approves them.",
+   "expect": "pass",
+   "why": "paraphrase of signs"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say who signs the payments"
+   ],
+   "slip": null,
+   "norm": "that would be my boss wing commander anan",
+   "card": "o1",
+   "exchange": 2,
+   "text": "That would be my boss, Wing Commander Anan.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Greet him",
+    "Say who checks the invoices"
+   ],
+   "slip": null,
+   "norm": "good morning mr eriksen nok does",
+   "card": "o1",
+   "exchange": 1,
+   "text": "Good morning, Mr Eriksen. Nok does.",
+   "expect": "pass",
+   "why": "name without Khun"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say how many invoices"
+   ],
+   "slip": null,
+   "norm": "we have got 3 in the file",
+   "card": "o2",
+   "exchange": 1,
+   "text": "We have got 3 in the file.",
+   "expect": "pass",
+   "why": "digit"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "labs": [
+    "Say there is a problem",
+    "Say which invoice"
+   ],
+   "slip": null,
+   "norm": "yes the date on the 2 1 is not right",
+   "card": "o2",
+   "exchange": 2,
+   "text": "Yes, the date on the second one isn't right.",
+   "expect": "pass",
+   "why": "isn't right"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say there is a problem",
+    "Say which invoice"
+   ],
+   "slip": null,
+   "norm": "yes invoice no 2 has a wrong date",
+   "card": "o2",
+   "exchange": 2,
+   "text": "Yes, invoice no. 2 has a wrong date.",
+   "expect": "pass",
+   "why": "no. 2"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Use the right name for her",
+    "Say it is not ready"
+   ],
+   "slip": null,
+   "norm": "good afternoon colonel i am afraid i need a little more time",
+   "card": "o3",
+   "exchange": 1,
+   "text": "Good afternoon, Colonel. I'm afraid I need a little more time.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Use the right name for her",
+    "Say it is not ready"
+   ],
+   "slip": null,
+   "norm": "good afternoon colonel hayes unfortunately it is taking longer than i expected",
+   "card": "o3",
+   "exchange": 1,
+   "text": "Good afternoon, Colonel Hayes. Unfortunately it's taking longer than I expected.",
+   "expect": "pass",
+   "why": "no 'not' word"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "labs": [
+    "Use the right name for her",
+    "Say it is not ready"
+   ],
+   "slip": null,
+   "norm": "good afternoon ms hayes not yet sorry",
+   "card": "o3",
+   "exchange": 1,
+   "text": "Good afternoon, Ms Hayes. Not yet, sorry.",
+   "expect": "miss-name",
+   "why": "civilian title for a colonel should not count"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say when it will be ready"
+   ],
+   "slip": null,
+   "norm": "by the end of the day maam",
+   "card": "o3",
+   "exchange": 2,
+   "text": "By the end of the day, Ma'am.",
+   "expect": "pass",
+   "why": "time phrase not in SC_DAY"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say when it will be ready"
+   ],
+   "slip": null,
+   "norm": "in a couple of hours maam",
+   "card": "o3",
+   "exchange": 2,
+   "text": "In a couple of hours, Ma'am.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say when it will be ready"
+   ],
+   "slip": null,
+   "norm": "before lunch tomorrow",
+   "card": "o3",
+   "exchange": 2,
+   "text": "Before lunch tomorrow.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say when it will be ready"
+   ],
+   "slip": null,
+   "norm": "i can finish it by noon",
+   "card": "o3",
+   "exchange": 2,
+   "text": "I can finish it by noon.",
+   "expect": "pass",
+   "why": "noon"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Greet him",
+    "Ask for the invoice number"
+   ],
+   "slip": null,
+   "norm": "hello captain ellis which payment is it could i have the reference please",
+   "card": "o4",
+   "exchange": 1,
+   "text": "Hello, Captain Ellis. Which payment is it? Could I have the reference, please?",
+   "expect": "pass",
+   "why": "reference without 'number'"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Repeat the number to check it",
+    "Ask about US dollars"
+   ],
+   "slip": null,
+   "norm": "4 5 1 thank you is that in dollars or baht",
+   "card": "o4",
+   "exchange": 2,
+   "text": "Four five one, thank you. Is that in dollars or baht?",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "labs": [
+    "Repeat the number to check it",
+    "Ask about US dollars"
+   ],
+   "slip": null,
+   "norm": "invoice 4 hundred and 51 is it in us dollars",
+   "card": "o4",
+   "exchange": 2,
+   "text": "Invoice four hundred and fifty-one. Is it in US dollars?",
+   "expect": "pass",
+   "why": "number said as a whole"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Ask when — What day …? / What time …?"
+   ],
+   "slip": null,
+   "norm": "of course would thursday suit you",
+   "card": "o5",
+   "exchange": 1,
+   "text": "Of course. Would Thursday suit you?",
+   "expect": "pass",
+   "why": "asks about the day with a yes/no question"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Ask when — What day …? / What time …?"
+   ],
+   "slip": null,
+   "norm": "no problem what date would you prefer",
+   "card": "o5",
+   "exchange": 1,
+   "text": "No problem. What date would you prefer?",
+   "expect": "pass",
+   "why": "what date"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Ask when — What day …? / What time …?"
+   ],
+   "slip": null,
+   "norm": "sure how about tomorrow afternoon",
+   "card": "o5",
+   "exchange": 1,
+   "text": "Sure. How about tomorrow afternoon?",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say where your office is",
+    "Check the day or time"
+   ],
+   "slip": null,
+   "norm": "we are in 204 on the 2 floor see you at 10 on thursday",
+   "card": "o5",
+   "exchange": 2,
+   "text": "We are in 204 on the second floor. See you at ten on Thursday.",
+   "expect": "pass",
+   "why": "no 'room' word but floor"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say sorry",
+    "Say what happened"
+   ],
+   "slip": null,
+   "norm": "not yet i apologize there was an error in 1 of them",
+   "card": "o6",
+   "exchange": 1,
+   "text": "Not yet, I apologize. There was an error in one of them.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "labs": [
+    "Ask politely for more time",
+    "Say how long, or which day"
+   ],
+   "slip": null,
+   "norm": "would it be possible to have 2 more days",
+   "card": "o6",
+   "exchange": 2,
+   "text": "Would it be possible to have two more days?",
+   "expect": "pass",
+   "why": "polite request without could/can I"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "labs": [
+    "Ask politely for more time",
+    "Say how long, or which day"
+   ],
+   "slip": null,
+   "norm": "i would be grateful if you could give me until friday",
+   "card": "o6",
+   "exchange": 2,
+   "text": "I'd be grateful if you could give me until Friday.",
+   "expect": "pass",
+   "why": "'if you could' -> 'could give'? needs (could) (i|we|you)"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "labs": [
+    "Ask politely for more time",
+    "Say how long, or which day"
+   ],
+   "slip": null,
+   "norm": "is it okay if i send them on friday",
+   "card": "o6",
+   "exchange": 2,
+   "text": "Is it okay if I send them on Friday?",
+   "expect": "pass",
+   "why": "polite permission"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    false
+   ],
+   "labs": [
+    "Ask politely for more time",
+    "Say how long, or which day"
+   ],
+   "slip": null,
+   "norm": "i need a couple more days if that is all right",
+   "card": "o6",
+   "exchange": 2,
+   "text": "I need a couple more days, if that's all right.",
+   "expect": "pass",
+   "why": "a couple more days"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say the plan — We will … / We're going to …",
+    "Say which day"
+   ],
+   "slip": null,
+   "norm": "you will have it by friday",
+   "card": "o7",
+   "exchange": 2,
+   "text": "You'll have it by Friday.",
+   "expect": "pass",
+   "why": "contracted will"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "labs": [
+    "Say the plan — We will … / We're going to …",
+    "Say which day"
+   ],
+   "slip": null,
+   "norm": "we are paying on friday",
+   "card": "o7",
+   "exchange": 2,
+   "text": "We're paying on Friday.",
+   "expect": "pass",
+   "why": "present continuous for future"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "labs": [
+    "Say the plan — We will … / We're going to …",
+    "Say which day"
+   ],
+   "slip": null,
+   "norm": "it should be in your account by the end of this week",
+   "card": "o7",
+   "exchange": 2,
+   "text": "It should be in your account by the end of this week.",
+   "expect": "pass",
+   "why": "should + this week"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Use the right name for him",
+    "Ask politely for his signature"
+   ],
+   "slip": null,
+   "norm": "excuse me wing commander i need your signature on this form please",
+   "card": "o8",
+   "exchange": 1,
+   "text": "Excuse me, Wing Commander. I need your signature on this form, please.",
+   "expect": "pass",
+   "why": "'I need ... please' has no could/would"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Use the right name for him",
+    "Ask politely for his signature"
+   ],
+   "slip": null,
+   "norm": "sorry to disturb you sir would it be possible to sign this form now",
+   "card": "o8",
+   "exchange": 1,
+   "text": "Sorry to disturb you, Sir. Would it be possible to sign this form now?",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    false
+   ],
+   "labs": [
+    "Use the right name for him",
+    "Ask politely for his signature"
+   ],
+   "slip": null,
+   "norm": "khun anan can you sign this",
+   "card": "o8",
+   "exchange": 1,
+   "text": "Khun Anan, can you sign this?",
+   "expect": "miss-name",
+   "why": "Khun + name for the commanding officer"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say why it is urgent",
+    "Thank him"
+   ],
+   "slip": null,
+   "norm": "yes sir it must be paid this afternoon thank you",
+   "card": "o8",
+   "exchange": 2,
+   "text": "Yes, Sir. It must be paid this afternoon. Thank you.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "labs": [
+    "Say why it is urgent",
+    "Thank him"
+   ],
+   "slip": null,
+   "norm": "yes quite urgent sir thank you",
+   "card": "o8",
+   "exchange": 2,
+   "text": "Yes, quite urgent, Sir. Thank you.",
+   "expect": "pass?",
+   "why": "no reason given - should stay unticked"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say where it is"
+   ],
+   "slip": null,
+   "norm": "take the stairs up 1 level it is by the elevator",
+   "card": "v1",
+   "exchange": 1,
+   "text": "Take the stairs up one level; it's by the elevator.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say where it is"
+   ],
+   "slip": null,
+   "norm": "it is on the 2 floor",
+   "card": "v1",
+   "exchange": 1,
+   "text": "It's on the 2nd floor.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say the time"
+   ],
+   "slip": null,
+   "norm": "at 9 sir",
+   "card": "v1",
+   "exchange": 2,
+   "text": "At 9.00, Sir.",
+   "expect": "pass",
+   "why": "short with digits"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say the time"
+   ],
+   "slip": null,
+   "norm": "at 9",
+   "card": "v1",
+   "exchange": 2,
+   "text": "At nine.",
+   "expect": "pass",
+   "why": "two-word complete answer"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say you have a booking",
+    "Ask her politely to check again"
+   ],
+   "slip": null,
+   "norm": "i made a reservation online last month could you look again",
+   "card": "v2",
+   "exchange": 1,
+   "text": "I made a reservation online last month. Could you look again?",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Say you have a booking",
+    "Ask her politely to check again"
+   ],
+   "slip": null,
+   "norm": "but i booked 3 nights please check again",
+   "card": "v2",
+   "exchange": 1,
+   "text": "But I booked three nights. Please check again.",
+   "expect": "pass",
+   "why": "imperative + please (no could you)"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Give the number"
+   ],
+   "slip": null,
+   "norm": "sure it is 4729",
+   "card": "v2",
+   "exchange": 2,
+   "text": "Sure, it's 4729.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Give the number"
+   ],
+   "slip": null,
+   "norm": "yes 4 7 2 9",
+   "card": "v2",
+   "exchange": 2,
+   "text": "Yes. Four seven two nine.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Give the number"
+   ],
+   "slip": null,
+   "norm": "it is 47 29",
+   "card": "v2",
+   "exchange": 2,
+   "text": "It's forty-seven twenty-nine.",
+   "expect": "pass",
+   "why": "pairs"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Give the number"
+   ],
+   "slip": null,
+   "norm": "sorry could you speak a bit more slowly please",
+   "card": "v2",
+   "exchange": 2,
+   "text": "Sorry, could you speak a bit more slowly, please?",
+   "expect": "repair",
+   "why": "polite repair wording not in SC_REPAIR"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Give the number"
+   ],
+   "slip": null,
+   "norm": "sorry i did not get that",
+   "card": "v2",
+   "exchange": 2,
+   "text": "Sorry, I didn't get that.",
+   "expect": "repair",
+   "why": ""
+  },
+  {
+   "status": "repair",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Give the number"
+   ],
+   "slip": null,
+   "norm": "could you say that 1 more time please",
+   "card": "v2",
+   "exchange": 2,
+   "text": "Could you say that one more time, please?",
+   "expect": "repair",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Give the number"
+   ],
+   "slip": null,
+   "norm": "excuse me what was that",
+   "card": "v2",
+   "exchange": 2,
+   "text": "Excuse me, what was that?",
+   "expect": "repair",
+   "why": ""
+  },
+  {
+   "status": "short",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Give the number"
+   ],
+   "slip": null,
+   "norm": "sorry",
+   "card": "v2",
+   "exchange": 2,
+   "text": "Sorry?",
+   "expect": "repair",
+   "why": "one word"
+  },
+  {
+   "status": "repair",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Give the number"
+   ],
+   "slip": null,
+   "norm": "sorry can you repeat",
+   "card": "v2",
+   "exchange": 2,
+   "text": "Sorry, can you repeat?",
+   "expect": "repair",
+   "why": "can you repeat is in the list"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Welcome him",
+    "Ask about his journey"
+   ],
+   "slip": null,
+   "norm": "welcome to the base flight lieutenant hughes was your flight okay",
+   "card": "v3",
+   "exchange": 1,
+   "text": "Welcome to the base, Flight Lieutenant Hughes. Was your flight okay?",
+   "expect": "pass",
+   "why": "yes/no question about the flight"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Welcome him",
+    "Ask about his journey"
+   ],
+   "slip": null,
+   "norm": "welcome i hope you had a good journey",
+   "card": "v3",
+   "exchange": 1,
+   "text": "Welcome! I hope you had a good journey?",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Welcome him",
+    "Ask about his journey"
+   ],
+   "slip": null,
+   "norm": "nice to meet you tom how are you",
+   "card": "v3",
+   "exchange": 1,
+   "text": "Nice to meet you, Tom. How are you?",
+   "expect": "pass?",
+   "why": "'how are you' is not about the journey"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say where to go first"
+   ],
+   "slip": null,
+   "norm": "let me show you to security 1",
+   "card": "v3",
+   "exchange": 2,
+   "text": "Let me show you to security first.",
+   "expect": "pass",
+   "why": "security"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say where to go first"
+   ],
+   "slip": null,
+   "norm": "you need to get a visitor pass 1",
+   "card": "v3",
+   "exchange": 2,
+   "text": "You need to get a visitor pass first.",
+   "expect": "pass",
+   "why": "no place word"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Say what you talked about",
+    "Say what was decided"
+   ],
+   "slip": null,
+   "norm": "we discussed the travel budget and wing commander anan gave his approval",
+   "card": "v4",
+   "exchange": 1,
+   "text": "We discussed the travel budget and Wing Commander Anan gave his approval.",
+   "expect": "pass",
+   "why": "approval (noun)"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say what you talked about",
+    "Say what was decided"
+   ],
+   "slip": null,
+   "norm": "it was about the travel budget the plan was accepted",
+   "card": "v4",
+   "exchange": 1,
+   "text": "It was about the travel budget. The plan was accepted.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Say what you talked about",
+    "Say what was decided"
+   ],
+   "slip": null,
+   "norm": "we talked about the travel budget the boss was happy with it",
+   "card": "v4",
+   "exchange": 1,
+   "text": "We talked about the travel budget. The boss was happy with it.",
+   "expect": "pass",
+   "why": "decision said another way"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Offer to send them, and say when"
+   ],
+   "slip": null,
+   "norm": "not yet maam i will email them to you right after this",
+   "card": "v4",
+   "exchange": 2,
+   "text": "Not yet, Ma'am. I'll email them to you right after this.",
+   "expect": "pass",
+   "why": "when = right after this"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Offer to send them, and say when"
+   ],
+   "slip": null,
+   "norm": "no maam i will do it straight away",
+   "card": "v4",
+   "exchange": 2,
+   "text": "No, Ma'am. I'll do it straight away.",
+   "expect": "pass",
+   "why": "straight away"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Offer to send them, and say when"
+   ],
+   "slip": null,
+   "norm": "not yet let me send them to you today",
+   "card": "v4",
+   "exchange": 2,
+   "text": "Not yet. Let me send them to you today.",
+   "expect": "pass",
+   "why": "let me + today"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Offer to send them, and say when"
+   ],
+   "slip": null,
+   "norm": "i am sending them this afternoon",
+   "card": "v4",
+   "exchange": 2,
+   "text": "I'm sending them this afternoon.",
+   "expect": "pass",
+   "why": "present continuous"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say the plan — We are going to … / We will …",
+    "Say the time"
+   ],
+   "slip": null,
+   "norm": "we have a visit to the finance office at 10",
+   "card": "v5",
+   "exchange": 1,
+   "text": "We have a visit to the finance office at 10 a.m.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say what to bring"
+   ],
+   "slip": null,
+   "norm": "just your identity card please",
+   "card": "v5",
+   "exchange": 2,
+   "text": "Just your identity card, please.",
+   "expect": "pass",
+   "why": "identity"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say what to bring"
+   ],
+   "slip": null,
+   "norm": "do not forget your military id",
+   "card": "v5",
+   "exchange": 2,
+   "text": "Don't forget your military ID.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "labs": [
+    "Ask politely for the receipts",
+    "Ask how many"
+   ],
+   "slip": null,
+   "norm": "i need the receipts maam how many are there",
+   "card": "v6",
+   "exchange": 1,
+   "text": "I need the receipts, Ma'am. How many are there?",
+   "expect": "pass",
+   "why": "no could/please with receipts"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Ask politely for the receipts",
+    "Ask how many"
+   ],
+   "slip": null,
+   "norm": "may i have your receipts maam how many taxis did you take",
+   "card": "v6",
+   "exchange": 1,
+   "text": "May I have your receipts, Ma'am? How many taxis did you take?",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Ask her to fill in the form"
+   ],
+   "slip": null,
+   "norm": "then you will have to complete a lost receipt declaration",
+   "card": "v6",
+   "exchange": 2,
+   "text": "Then you'll have to complete a lost receipt declaration.",
+   "expect": "pass",
+   "why": "no form/fill word"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Say sorry",
+    "Say the plan with if"
+   ],
+   "slip": null,
+   "norm": "i am sorry captain ellis if you could send us the new details today we would pay again tomorrow",
+   "card": "v7",
+   "exchange": 1,
+   "text": "I'm sorry, Captain Ellis. If you could send us the new details today, we would pay again tomorrow.",
+   "expect": "pass",
+   "why": "could/would conditional"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Say sorry",
+    "Say the plan with if"
+   ],
+   "slip": null,
+   "norm": "i apologise once you send the new details we will pay again tomorrow",
+   "card": "v7",
+   "exchange": 1,
+   "text": "I apologise. Once you send the new details, we'll pay again tomorrow.",
+   "expect": "pass",
+   "why": "once/when instead of if"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Say sorry",
+    "Say the plan with if"
+   ],
+   "slip": null,
+   "norm": "sorry about that as soon as we get the new bank details we will transfer it again",
+   "card": "v7",
+   "exchange": 1,
+   "text": "Sorry about that. As soon as we get the new bank details, we will transfer it again.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say what you will do then"
+   ],
+   "slip": null,
+   "norm": "in that case i would phone you so we could check them together",
+   "card": "v7",
+   "exchange": 2,
+   "text": "In that case, I would phone you so we could check them together.",
+   "expect": "pass",
+   "why": "would"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say what you will do then"
+   ],
+   "slip": null,
+   "norm": "then we will double check them with you by phone",
+   "card": "v7",
+   "exchange": 2,
+   "text": "Then we'll double-check them with you by phone.",
+   "expect": "pass",
+   "why": "phone as noun after will"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say what you will do then"
+   ],
+   "slip": null,
+   "norm": "i will ring you and we will go through them together",
+   "card": "v7",
+   "exchange": 2,
+   "text": "I'll ring you and we'll go through them together.",
+   "expect": "pass",
+   "why": "ring"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say what you will do then"
+   ],
+   "slip": null,
+   "norm": "then i am going to ask the bank to verify them 1",
+   "card": "v7",
+   "exchange": 2,
+   "text": "Then I'm going to ask the bank to verify them first.",
+   "expect": "pass",
+   "why": "ask/verify"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Say two were made",
+    "Say one was returned"
+   ],
+   "slip": null,
+   "norm": "2 have been paid and the 3 was returned",
+   "card": "v8",
+   "exchange": 1,
+   "text": "Two have been paid and the third was returned.",
+   "expect": "pass",
+   "why": "'the third' -> gsNorm turns it into 3"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    false
+   ],
+   "labs": [
+    "Say two were made",
+    "Say one was returned"
+   ],
+   "slip": null,
+   "norm": "2 went through last week the last 1 bounced",
+   "card": "v8",
+   "exchange": 1,
+   "text": "Two went through last week. The last one bounced.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Say two were made",
+    "Say one was returned"
+   ],
+   "slip": null,
+   "norm": "we paid 2 last week the bank returned 1",
+   "card": "v8",
+   "exchange": 1,
+   "text": "We paid two last week. The bank returned one.",
+   "expect": "pass",
+   "why": "active: returned BEFORE one"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Say two were made",
+    "Say one was returned"
+   ],
+   "slip": null,
+   "norm": "2 were paid and the bank sent the other 1 back",
+   "card": "v8",
+   "exchange": 1,
+   "text": "Two were paid, and the bank sent the other one back.",
+   "expect": "pass",
+   "why": "sent ... back split"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say why"
+   ],
+   "slip": null,
+   "norm": "the account number was not right",
+   "card": "v8",
+   "exchange": 2,
+   "text": "The account number wasn't right.",
+   "expect": "pass",
+   "why": "not right"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say why"
+   ],
+   "slip": null,
+   "norm": "there was a typo in the account number",
+   "card": "v8",
+   "exchange": 2,
+   "text": "There was a typo in the account number.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say why"
+   ],
+   "slip": null,
+   "norm": "because of an invalid account number",
+   "card": "v8",
+   "exchange": 2,
+   "text": "Because of an invalid account number.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say your job or your division"
+   ],
+   "slip": null,
+   "norm": "i am an accountant",
+   "card": "s1",
+   "exchange": 1,
+   "text": "I'm an accountant.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say your job or your division"
+   ],
+   "slip": null,
+   "norm": "i take care of the money side",
+   "card": "s1",
+   "exchange": 1,
+   "text": "I take care of the money side.",
+   "expect": "pass?",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say what your boss does"
+   ],
+   "slip": null,
+   "norm": "he is the head of our section",
+   "card": "s1",
+   "exchange": 2,
+   "text": "He's the head of our section.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say what your boss does"
+   ],
+   "slip": null,
+   "norm": "he is responsible for the whole budget",
+   "card": "s1",
+   "exchange": 2,
+   "text": "He is responsible for the whole budget.",
+   "expect": "pass",
+   "why": "responsible"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say what your boss does"
+   ],
+   "slip": null,
+   "norm": "he makes the final decisions",
+   "card": "s1",
+   "exchange": 2,
+   "text": "He makes the final decisions.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "labs": [
+    "Answer about yourself",
+    "Ask her a question back"
+   ],
+   "slip": null,
+   "norm": "of course i am thai and you",
+   "card": "s2",
+   "exchange": 1,
+   "text": "Of course, I'm Thai! And you?",
+   "expect": "pass",
+   "why": "no yes/no word, and you?"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "labs": [
+    "Answer about yourself",
+    "Ask her a question back"
+   ],
+   "slip": null,
+   "norm": "absolutely what about you",
+   "card": "s2",
+   "exchange": 1,
+   "text": "Absolutely. What about you?",
+   "expect": "pass",
+   "why": "absolutely"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Suggest a dish that is not spicy"
+   ],
+   "slip": null,
+   "norm": "the fried rice is safe for you",
+   "card": "s2",
+   "exchange": 2,
+   "text": "The fried rice is safe for you.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Suggest a dish that is not spicy"
+   ],
+   "slip": null,
+   "norm": "you might like the chicken with cashew nuts",
+   "card": "s2",
+   "exchange": 2,
+   "text": "You might like the chicken with cashew nuts.",
+   "expect": "pass",
+   "why": "might like"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Suggest a dish that is not spicy"
+   ],
+   "slip": null,
+   "norm": "why do not you have the omelette",
+   "card": "s2",
+   "exchange": 2,
+   "text": "Why don't you have the omelette?",
+   "expect": "pass",
+   "why": "why don't you"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say what you studied"
+   ],
+   "slip": null,
+   "norm": "accounting in manchester",
+   "card": "s3",
+   "exchange": 1,
+   "text": "Accounting, in Manchester.",
+   "expect": "pass",
+   "why": "two-word-ish answer"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say what you studied"
+   ],
+   "slip": null,
+   "norm": "i did my master there",
+   "card": "s3",
+   "exchange": 1,
+   "text": "I did my master's there.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say what you studied"
+   ],
+   "slip": null,
+   "norm": "i read economics at leeds",
+   "card": "s3",
+   "exchange": 1,
+   "text": "I read economics at Leeds.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "labs": [
+    "Say if you liked it",
+    "Add one detail — weather, food, people …"
+   ],
+   "slip": null,
+   "norm": "very much though i missed thai food",
+   "card": "s3",
+   "exchange": 2,
+   "text": "Very much, though I missed Thai food.",
+   "expect": "pass",
+   "why": "no yes/liked word"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say if you liked it",
+    "Add one detail — weather, food, people …"
+   ],
+   "slip": null,
+   "norm": "it was great but so rainy",
+   "card": "s3",
+   "exchange": 2,
+   "text": "It was great, but so rainy!",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say how you get to work",
+    "Ask him a question back"
+   ],
+   "slip": null,
+   "norm": "by skytrain how about you",
+   "card": "s4",
+   "exchange": 1,
+   "text": "By skytrain. How about you?",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say how you get to work",
+    "Ask him a question back"
+   ],
+   "slip": null,
+   "norm": "i come by motorcycle taxi did you come by car",
+   "card": "s4",
+   "exchange": 1,
+   "text": "I come by motorcycle taxi. Did you come by car?",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    false
+   ],
+   "labs": [
+    "Say how you get to work",
+    "Ask him a question back"
+   ],
+   "slip": null,
+   "norm": "my husband drives me is your hotel far from here",
+   "card": "s4",
+   "exchange": 1,
+   "text": "My husband drives me. Is your hotel far from here?",
+   "expect": "pass",
+   "why": "drives; 'is your hotel' question"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Suggest a place"
+   ],
+   "slip": null,
+   "norm": "the grand palace is worth a look",
+   "card": "s4",
+   "exchange": 2,
+   "text": "The Grand Palace is worth a look.",
+   "expect": "pass",
+   "why": "suggestion without should"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Suggest a place"
+   ],
+   "slip": null,
+   "norm": "wat arun is beautiful at sunset",
+   "card": "s4",
+   "exchange": 2,
+   "text": "Wat Arun is beautiful at sunset.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Suggest a place"
+   ],
+   "slip": null,
+   "norm": "if i were you i would take a boat trip on the river",
+   "card": "s4",
+   "exchange": 2,
+   "text": "If I were you, I'd take a boat trip on the river.",
+   "expect": "pass",
+   "why": "I'd take"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say your plan — I'm going to … / I will …"
+   ],
+   "slip": null,
+   "norm": "i am planning to visit my parents",
+   "card": "s5",
+   "exchange": 1,
+   "text": "I'm planning to visit my parents.",
+   "expect": "pass",
+   "why": "am planning to"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say your plan — I'm going to … / I will …"
+   ],
+   "slip": null,
+   "norm": "i would like to sleep all weekend",
+   "card": "s5",
+   "exchange": 1,
+   "text": "I'd like to sleep all weekend!",
+   "expect": "pass",
+   "why": "would like to"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say your plan — I'm going to … / I will …"
+   ],
+   "slip": null,
+   "norm": "i am having dinner with friends on saturday",
+   "card": "s5",
+   "exchange": 1,
+   "text": "I'm having dinner with friends on Saturday.",
+   "expect": "pass",
+   "why": "present continuous not in the list"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say your plan — I'm going to … / I will …"
+   ],
+   "slip": null,
+   "norm": "nothing special i might go shopping",
+   "card": "s5",
+   "exchange": 1,
+   "text": "Nothing special. I might go shopping.",
+   "expect": "pass",
+   "why": "might"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Suggest something to do"
+   ],
+   "slip": null,
+   "norm": "what about chatuchak market",
+   "card": "s5",
+   "exchange": 2,
+   "text": "What about Chatuchak Market?",
+   "expect": "pass",
+   "why": "what about"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Suggest something to do"
+   ],
+   "slip": null,
+   "norm": "if i were you i would take a day trip to ayutthaya",
+   "card": "s5",
+   "exchange": 2,
+   "text": "If I were you, I'd take a day trip to Ayutthaya.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Use the right name for her",
+    "Ask politely for a photo"
+   ],
+   "slip": null,
+   "norm": "excuse me maam is it okay if we take a photo with you",
+   "card": "s6",
+   "exchange": 1,
+   "text": "Excuse me, Ma'am. Is it OK if we take a photo with you?",
+   "expect": "pass",
+   "why": "is it ok if"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Use the right name for her",
+    "Ask politely for a photo"
+   ],
+   "slip": null,
+   "norm": "colonel hayes we would love to have a picture with you",
+   "card": "s6",
+   "exchange": 1,
+   "text": "Colonel Hayes, we'd love to have a picture with you.",
+   "expect": "pass",
+   "why": "we'd love"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say where to stand",
+    "Thank her"
+   ],
+   "slip": null,
+   "norm": "just here in front of the flag please thanks a lot",
+   "card": "s6",
+   "exchange": 2,
+   "text": "Just here, in front of the flag, please. Thanks a lot.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "labs": [
+    "Say where to stand",
+    "Thank her"
+   ],
+   "slip": null,
+   "norm": "over there by the window would be perfect thank you",
+   "card": "s6",
+   "exchange": 2,
+   "text": "Over there by the window would be perfect. Thank you.",
+   "expect": "pass",
+   "why": "over there / by"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say where you would go — I would …"
+   ],
+   "slip": null,
+   "norm": "i would probably go to chiang mai",
+   "card": "s7",
+   "exchange": 1,
+   "text": "I'd probably go to Chiang Mai.",
+   "expect": "pass",
+   "why": "would + adverb"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say where you would go — I would …"
+   ],
+   "slip": null,
+   "norm": "i think i would go to japan",
+   "card": "s7",
+   "exchange": 1,
+   "text": "I think I'd go to Japan.",
+   "expect": "pass",
+   "why": "'d go"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say where you would go — I would …"
+   ],
+   "slip": null,
+   "norm": "i would definitely fly to japan",
+   "card": "s7",
+   "exchange": 1,
+   "text": "I would definitely fly to Japan.",
+   "expect": "pass",
+   "why": "would + adverb"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say where you would go — I would …"
+   ],
+   "slip": null,
+   "norm": "maybe i would go back to england",
+   "card": "s7",
+   "exchange": 1,
+   "text": "Maybe I would go back to England.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say where you would go — I would …"
+   ],
+   "slip": null,
+   "norm": "i would love to go to krabi",
+   "card": "s7",
+   "exchange": 1,
+   "text": "I'd love to go to Krabi.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say where you would go — I would …"
+   ],
+   "slip": null,
+   "norm": "i would choose phuket",
+   "card": "s7",
+   "exchange": 1,
+   "text": "I would choose Phuket.",
+   "expect": "pass",
+   "why": "would + other verb"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Suggest something for his next visit"
+   ],
+   "slip": null,
+   "norm": "you have to try the street food in chinatown",
+   "card": "s7",
+   "exchange": 2,
+   "text": "You have to try the street food in Chinatown.",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Suggest something for his next visit"
+   ],
+   "slip": null,
+   "norm": "do not miss chiang mai next time",
+   "card": "s7",
+   "exchange": 2,
+   "text": "Don't miss Chiang Mai next time.",
+   "expect": "pass",
+   "why": "don't miss"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Suggest something for his next visit"
+   ],
+   "slip": null,
+   "norm": "why do not you come in november for loy krathong",
+   "card": "s7",
+   "exchange": 2,
+   "text": "Why don't you come in November for Loy Krathong?",
+   "expect": "pass",
+   "why": "why don't you"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Thank him",
+    "Wish him a good journey"
+   ],
+   "slip": null,
+   "norm": "thanks for everything safe travels",
+   "card": "s8",
+   "exchange": 1,
+   "text": "Thanks for everything. Safe travels!",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Thank him",
+    "Wish him a good journey"
+   ],
+   "slip": null,
+   "norm": "thank you it was great have a pleasant flight",
+   "card": "s8",
+   "exchange": 1,
+   "text": "Thank you, it was great. Have a pleasant flight.",
+   "expect": "pass",
+   "why": "pleasant"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Thank him",
+    "Wish him a good journey"
+   ],
+   "slip": null,
+   "norm": "thank you so much i hope you get home safely",
+   "card": "s8",
+   "exchange": 1,
+   "text": "Thank you so much. I hope you get home safely.",
+   "expect": "pass",
+   "why": "safely"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say goodbye"
+   ],
+   "slip": null,
+   "norm": "me too stay in touch",
+   "card": "s8",
+   "exchange": 2,
+   "text": "Me too. Stay in touch!",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say goodbye"
+   ],
+   "slip": null,
+   "norm": "so do i have a good 1",
+   "card": "s8",
+   "exchange": 2,
+   "text": "So do I. Have a good one.",
+   "expect": "pass",
+   "why": "so do I"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say goodbye"
+   ],
+   "slip": null,
+   "norm": "i am sure we will farewell",
+   "card": "s8",
+   "exchange": 2,
+   "text": "I'm sure we will. Farewell!",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say who signs the payments"
+   ],
+   "slip": null,
+   "norm": "i do not know who signs them",
+   "card": "o1",
+   "exchange": 2,
+   "text": "I don't know who signs them.",
+   "expect": "fail",
+   "why": "contains 'signs'"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Greet him",
+    "Say who checks the invoices"
+   ],
+   "slip": null,
+   "norm": "hello i have no idea who checks them",
+   "card": "o1",
+   "exchange": 1,
+   "text": "Hello. I have no idea who checks them.",
+   "expect": "fail",
+   "why": "'who checks'"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say how many invoices"
+   ],
+   "slip": null,
+   "norm": "i have 3 cats at home",
+   "card": "o2",
+   "exchange": 1,
+   "text": "I have three cats at home.",
+   "expect": "fail",
+   "why": "number only"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say there is a problem",
+    "Say which invoice"
+   ],
+   "slip": null,
+   "norm": "no problem at all i have 2 brothers",
+   "card": "o2",
+   "exchange": 2,
+   "text": "No problem at all. I have two brothers.",
+   "expect": "fail",
+   "why": "'problem' + 'two'"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say there is a problem",
+    "Say which invoice"
+   ],
+   "slip": null,
+   "norm": "no there is no problem with any of them all 2 are fine",
+   "card": "o2",
+   "exchange": 2,
+   "text": "No, there is no problem with any of them, all 2 are fine.",
+   "expect": "fail",
+   "why": "denies the problem"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Use the right name for her",
+    "Say it is not ready"
+   ],
+   "slip": null,
+   "norm": "good afternoon colonel hayes yes it is not a problem here you are",
+   "card": "o3",
+   "exchange": 1,
+   "text": "Good afternoon, Colonel Hayes. Yes, it is not a problem, here you are.",
+   "expect": "fail",
+   "why": "'is not'"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say when it will be ready"
+   ],
+   "slip": null,
+   "norm": "i do not know maybe not this week",
+   "card": "o3",
+   "exchange": 2,
+   "text": "I don't know, maybe not this week.",
+   "expect": "fail",
+   "why": "'this week' inside a non-answer"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say when it will be ready"
+   ],
+   "slip": null,
+   "norm": "it was ready this morning",
+   "card": "o3",
+   "exchange": 2,
+   "text": "It was ready this morning.",
+   "expect": "fail?",
+   "why": "contradicts the situation"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Repeat the number to check it",
+    "Ask about US dollars"
+   ],
+   "slip": null,
+   "norm": "i have 451 dollars",
+   "card": "o4",
+   "exchange": 2,
+   "text": "I have 451 dollars.",
+   "expect": "fail",
+   "why": "no checking, no question"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Ask when — What day …? / What time …?"
+   ],
+   "slip": null,
+   "norm": "i do not know when",
+   "card": "o5",
+   "exchange": 1,
+   "text": "I don't know when.",
+   "expect": "fail",
+   "why": "'when' not in a question"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say where your office is",
+    "Check the day or time"
+   ],
+   "slip": null,
+   "norm": "my office is closed on thursday",
+   "card": "o5",
+   "exchange": 2,
+   "text": "My office is closed on Thursday.",
+   "expect": "fail",
+   "why": "office+thursday"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say sorry",
+    "Say what happened"
+   ],
+   "slip": null,
+   "norm": "sorry i was on holiday",
+   "card": "o6",
+   "exchange": 1,
+   "text": "Sorry, I was on holiday.",
+   "expect": "fail?",
+   "why": "sorry + was"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Ask politely for more time",
+    "Say how long, or which day"
+   ],
+   "slip": null,
+   "norm": "can you wait maybe next week",
+   "card": "o6",
+   "exchange": 2,
+   "text": "Can you wait? Maybe next week.",
+   "expect": "pass?",
+   "why": "direct but acceptable?"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say the plan — We will … / We're going to …",
+    "Say which day"
+   ],
+   "slip": null,
+   "norm": "i will not pay you today",
+   "card": "o7",
+   "exchange": 2,
+   "text": "I will not pay you today.",
+   "expect": "fail",
+   "why": "will + today"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say the plan — We will … / We're going to …",
+    "Say which day"
+   ],
+   "slip": null,
+   "norm": "i can not tell you maybe in 5 days",
+   "card": "o7",
+   "exchange": 2,
+   "text": "I can not tell you, maybe in 5 days.",
+   "expect": "fail?",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Use the right name for him",
+    "Ask politely for his signature"
+   ],
+   "slip": null,
+   "norm": "sir could you go away please",
+   "card": "o8",
+   "exchange": 1,
+   "text": "Sir, could you go away, please?",
+   "expect": "fail",
+   "why": "request for the wrong thing"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say why it is urgent",
+    "Thank him"
+   ],
+   "slip": null,
+   "norm": "no it can wait until after the bank holiday thanks",
+   "card": "o8",
+   "exchange": 2,
+   "text": "No, it can wait until after the bank holiday, thanks.",
+   "expect": "fail",
+   "why": "bank + thanks"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say where it is"
+   ],
+   "slip": null,
+   "norm": "i do not know i am right here",
+   "card": "v1",
+   "exchange": 1,
+   "text": "I don't know, I am right here.",
+   "expect": "fail",
+   "why": "'right'"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say where it is"
+   ],
+   "slip": null,
+   "norm": "you are right it is hard to find sorry i am new",
+   "card": "v1",
+   "exchange": 1,
+   "text": "You're right, it is hard to find. Sorry, I'm new.",
+   "expect": "fail",
+   "why": "'right'"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say the time"
+   ],
+   "slip": null,
+   "norm": "i have 9 invoices",
+   "card": "v1",
+   "exchange": 2,
+   "text": "I have nine invoices.",
+   "expect": "fail",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say you have a booking",
+    "Ask her politely to check again"
+   ],
+   "slip": null,
+   "norm": "i do not have a booking can you give me a room",
+   "card": "v2",
+   "exchange": 1,
+   "text": "I don't have a booking. Can you give me a room?",
+   "expect": "fail",
+   "why": "says the opposite"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say where to go first"
+   ],
+   "slip": null,
+   "norm": "i do not know which office",
+   "card": "v3",
+   "exchange": 2,
+   "text": "I don't know which office.",
+   "expect": "fail",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say what you talked about",
+    "Say what was decided"
+   ],
+   "slip": null,
+   "norm": "i did not go to the meeting about the budget nobody decided anything",
+   "card": "v4",
+   "exchange": 1,
+   "text": "I did not go to the meeting about the budget. Nobody decided anything.",
+   "expect": "fail",
+   "why": "'decided' inside a negative"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Offer to send them, and say when"
+   ],
+   "slip": null,
+   "norm": "yes somebody will send them i can not say when maybe not today",
+   "card": "v4",
+   "exchange": 2,
+   "text": "Yes, somebody will send them. I can not say when, maybe not today.",
+   "expect": "fail?",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Say the plan — We are going to … / We will …",
+    "Say the time"
+   ],
+   "slip": null,
+   "norm": "i will see",
+   "card": "v5",
+   "exchange": 1,
+   "text": "I will see.",
+   "expect": "fail",
+   "why": "'will see'"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say what to bring"
+   ],
+   "slip": null,
+   "norm": "no you do not need an id",
+   "card": "v5",
+   "exchange": 2,
+   "text": "No, you don't need an ID.",
+   "expect": "fail",
+   "why": "opposite"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Ask her to fill in the form"
+   ],
+   "slip": null,
+   "norm": "you do not need to fill in anything",
+   "card": "v6",
+   "exchange": 2,
+   "text": "You don't need to fill in anything.",
+   "expect": "fail",
+   "why": "opposite"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say sorry",
+    "Say the plan with if"
+   ],
+   "slip": null,
+   "norm": "sorry i do not know if we can",
+   "card": "v7",
+   "exchange": 1,
+   "text": "Sorry, I don't know if we can.",
+   "expect": "fail",
+   "why": "if ... can"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say what you will do then"
+   ],
+   "slip": null,
+   "norm": "i will not check them again",
+   "card": "v7",
+   "exchange": 2,
+   "text": "I will not check them again.",
+   "expect": "fail",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say two were made",
+    "Say one was returned"
+   ],
+   "slip": null,
+   "norm": "2 were not paid 1 of them never came back",
+   "card": "v8",
+   "exchange": 1,
+   "text": "Two were not paid. One of them never came back.",
+   "expect": "fail",
+   "why": "negatives"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say why"
+   ],
+   "slip": null,
+   "norm": "i do not know what went wrong",
+   "card": "v8",
+   "exchange": 2,
+   "text": "I don't know what went wrong.",
+   "expect": "fail",
+   "why": "'wrong'"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say your job or your division"
+   ],
+   "slip": null,
+   "norm": "i do not work in finance",
+   "card": "s1",
+   "exchange": 1,
+   "text": "I don't work in finance.",
+   "expect": "fail?",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say what your boss does"
+   ],
+   "slip": null,
+   "norm": "i do not know what he does i never see him at work",
+   "card": "s1",
+   "exchange": 2,
+   "text": "I don't know what he does, I never see him at work.",
+   "expect": "fail",
+   "why": "'work'"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Answer about yourself",
+    "Ask her a question back"
+   ],
+   "slip": null,
+   "norm": "no i am tired are you finished",
+   "card": "s2",
+   "exchange": 1,
+   "text": "No. I am tired, are you finished?",
+   "expect": "fail?",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "labs": [
+    "Say if you liked it",
+    "Add one detail — weather, food, people …"
+   ],
+   "slip": null,
+   "norm": "i was not there",
+   "card": "s3",
+   "exchange": 2,
+   "text": "I was not there.",
+   "expect": "fail",
+   "why": "'was'"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Suggest a place"
+   ],
+   "slip": null,
+   "norm": "i can not think of anything sorry",
+   "card": "s4",
+   "exchange": 2,
+   "text": "I can not think of anything, sorry.",
+   "expect": "fail",
+   "why": "'can'"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Suggest a place"
+   ],
+   "slip": null,
+   "norm": "i see",
+   "card": "s4",
+   "exchange": 2,
+   "text": "I see.",
+   "expect": "short",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Suggest something to do"
+   ],
+   "slip": null,
+   "norm": "i can not help you with that",
+   "card": "s5",
+   "exchange": 2,
+   "text": "I can not help you with that.",
+   "expect": "fail",
+   "why": "'can'"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say your plan — I'm going to … / I will …"
+   ],
+   "slip": null,
+   "norm": "i will not tell you",
+   "card": "s5",
+   "exchange": 1,
+   "text": "I will not tell you.",
+   "expect": "fail?",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say where to stand",
+    "Thank her"
+   ],
+   "slip": null,
+   "norm": "not here thanks",
+   "card": "s6",
+   "exchange": 2,
+   "text": "Not here, thanks.",
+   "expect": "pass?",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Suggest something for his next visit"
+   ],
+   "slip": null,
+   "norm": "you can not come here again",
+   "card": "s7",
+   "exchange": 2,
+   "text": "You can not come here again.",
+   "expect": "fail",
+   "why": "'can'"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say goodbye"
+   ],
+   "slip": null,
+   "norm": "not again i hope",
+   "card": "s8",
+   "exchange": 2,
+   "text": "Not again, I hope.",
+   "expect": "fail",
+   "why": "'again'"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "labs": [
+    "Say when it will be ready"
+   ],
+   "slip": null,
+   "norm": "when will it be ready",
+   "card": "o3",
+   "exchange": 2,
+   "text": "When will it be ready?",
+   "expect": "fail",
+   "why": "echo of the NPC"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say where it is"
+   ],
+   "slip": null,
+   "norm": "where is the briefing room on the floor",
+   "card": "v1",
+   "exchange": 1,
+   "text": "Where is the briefing room, on the floor?",
+   "expect": "fail",
+   "why": "near-echo"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "labs": [
+    "Use the right name for her",
+    "Say it is not ready"
+   ],
+   "slip": {
+    "said": "colonel sarah",
+    "tag": "Address & register",
+    "msg": "Rank or Mr + family name: Colonel Hayes, Mr Eriksen."
+   },
+   "norm": "good afternoon colonel sarah it is not ready yet",
+   "card": "o3",
+   "exchange": 1,
+   "text": "Good afternoon, Colonel Sarah. It is not ready yet.",
+   "expect": "miss-name",
+   "why": "Colonel + first name"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "labs": [
+    "Use the right name for her",
+    "Ask politely for a photo"
+   ],
+   "slip": {
+    "said": "colonel sarah",
+    "tag": "Address & register",
+    "msg": "Rank or Mr + family name: Colonel Hayes, Mr Eriksen."
+   },
+   "norm": "excuse me colonel sarah hayes could we take a photo with you",
+   "card": "s6",
+   "exchange": 1,
+   "text": "Excuse me, Colonel Sarah Hayes. Could we take a photo with you?",
+   "expect": "pass",
+   "why": "rank + full name is correct - should count"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "labs": [
+    "Use the right name for her",
+    "Ask politely for a photo"
+   ],
+   "slip": null,
+   "norm": "excuse me miss sarah can we take a photo",
+   "card": "s6",
+   "exchange": 1,
+   "text": "Excuse me, Miss Sarah. Can we take a photo?",
+   "expect": "miss-name",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Use the right name for him",
+    "Ask politely for his signature"
+   ],
+   "slip": null,
+   "norm": "excuse me wing commander anan may i have your signature please",
+   "card": "o8",
+   "exchange": 1,
+   "text": "Excuse me, Wing Commander Anan. May I have your signature, please?",
+   "expect": "pass",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say the plan — We will … / We're going to …",
+    "Say which day"
+   ],
+   "slip": {
+    "said": "payment sent",
+    "tag": "Passive",
+    "msg": "The thing needs be: The payment was returned. Two payments were paid."
+   },
+   "norm": "i will make sure the payment sent on friday is correct",
+   "card": "o7",
+   "exchange": 2,
+   "text": "I will make sure the payment sent on Friday is correct.",
+   "expect": "slipfree",
+   "why": "reduced relative: 'payment sent'"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say two were made",
+    "Say one was returned"
+   ],
+   "slip": {
+    "said": "payment returned",
+    "tag": "Passive",
+    "msg": "The thing needs be: The payment was returned. Two payments were paid."
+   },
+   "norm": "we made 2 payments last week and 1 payment returned to us",
+   "card": "v8",
+   "exchange": 1,
+   "text": "We made two payments last week and one payment returned to us.",
+   "expect": "slip-ok",
+   "why": "intransitive 'returned' is fine"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say what you talked about",
+    "Say what was decided"
+   ],
+   "slip": null,
+   "norm": "we talked about the budget and the plan approved by wing commander anan",
+   "card": "v4",
+   "exchange": 1,
+   "text": "We talked about the budget and the plan approved by Wing Commander Anan.",
+   "expect": "slipfree?",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Ask politely for the receipts",
+    "Ask how many"
+   ],
+   "slip": null,
+   "norm": "could you show me the receipts you received please how many are there",
+   "card": "v6",
+   "exchange": 1,
+   "text": "Could you show me the receipts you received, please? How many are there?",
+   "expect": "slipfree",
+   "why": "'receipts ... received' not adjacent"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say sorry",
+    "Say the plan with if"
+   ],
+   "slip": {
+    "said": "if you will",
+    "tag": "Conditionals",
+    "msg": "No will after if: If you send it today, we will pay tomorrow."
+   },
+   "norm": "i am sorry if you will kindly send the details today we will pay tomorrow",
+   "card": "v7",
+   "exchange": 1,
+   "text": "I'm sorry. If you will kindly send the details today, we will pay tomorrow.",
+   "expect": "slip-polite",
+   "why": "'if you will kindly' is polite and correct"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say your plan — I'm going to … / I will …"
+   ],
+   "slip": {
+    "said": "i want ",
+    "tag": "Polite requests",
+    "msg": "Softer with a senior or a visitor: Could I have … ? / I'd like …"
+   },
+   "norm": "i want a quiet weekend so i will stay at home",
+   "card": "s5",
+   "exchange": 1,
+   "text": "I want a quiet weekend, so I will stay at home.",
+   "expect": "slipfree",
+   "why": "'I want a' flagged as impolite request in small talk"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say if you liked it",
+    "Add one detail — weather, food, people …"
+   ],
+   "slip": null,
+   "norm": "yes but i no longer remember the food",
+   "card": "s3",
+   "exchange": 2,
+   "text": "Yes, but I no longer remember the food.",
+   "expect": "slipfree",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Greet him",
+    "Say who checks the invoices"
+   ],
+   "slip": null,
+   "norm": "good morning i do i check the invoices with khun nok",
+   "card": "o1",
+   "exchange": 1,
+   "text": "Good morning. I do. I check the invoices with Khun Nok.",
+   "expect": "slipfree",
+   "why": ""
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say what your boss does"
+   ],
+   "slip": null,
+   "norm": "i help him check the budget and he signs the payments",
+   "card": "s1",
+   "exchange": 2,
+   "text": "I help him check the budget and he signs the payments.",
+   "expect": "slipfree",
+   "why": "'him check' after help"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "labs": [
+    "Say who signs the payments"
+   ],
+   "slip": {
+    "said": "wing commander anan sign",
+    "tag": "Verb -s",
+    "msg": "One person → verb + s: Khun Nok checks, my boss signs."
+   },
+   "norm": "i watched wing commander anan sign them this morning",
+   "card": "o1",
+   "exchange": 2,
+   "text": "I watched Wing Commander Anan sign them this morning.",
+   "expect": "slipfree",
+   "why": "bare infinitive after watched"
+  },
+  {
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "labs": [
+    "Say how you get to work",
+    "Ask him a question back"
+   ],
+   "slip": {
+    "said": "how you go",
+    "tag": "Wh- questions",
+    "msg": "Put the helper after the question word: Where do you stay? Where are you staying?"
+   },
+   "norm": "i take the bts and how you go to your hotel",
+   "card": "s4",
+   "exchange": 1,
+   "text": "I take the BTS. And how you go to your hotel?",
+   "expect": "slip",
+   "why": ""
+  }
+ ]
+}

@@ -1,0 +1,5734 @@
+{
+ "persona": "A2-Demii",
+ "date": "2026-11-26",
+ "start": {
+  "view": "home",
+  "user": null,
+  "sr": true,
+  "mic": {
+   "ok": true,
+   "text": "Microphone ready · Safari"
+  },
+  "free": true,
+  "today": "2026-11-26",
+  "h": "🎙️\nGround School\n🎖️\nFormation Drills\n🎴\nScramble\n🏢\nFinance Division\n🌏\nInternational Week\nSCRAMBLE · NEW SITUATIONS, NO SCRIPT\nDraw a card. Handle it.\n\nA pilot on scramble takes off at short notice. Here you draw a situation you have not seen before and answer the person in your own words. Every "
+ },
+ "exchanges": [
+  {
+   "card": "o1",
+   "exchange": 1,
+   "npc": "Good morning. I'm Lars Eriksen, the auditor. Who checks the invoices in your section?",
+   "objectives": [
+    "greet:Greet him",
+    "explain:Say who checks the invoices"
+   ],
+   "how_drawn": "Scramble button",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "Good morning Mr Eriksen. Khun Nok check the invoices.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": {
+      "said": "khun nok check",
+      "tag": "Verb -s",
+      "msg": "One person → verb + s: Khun Nok checks, my boss signs."
+     },
+     "norm": "good morning mr eriksen khun nok check the invoices",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Good morning Mr Eriksen. Khun Nok check the invoices.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": {
+    "said": "khun nok check",
+    "tag": "Verb -s",
+    "msg": "One person → verb + s: Khun Nok checks, my boss signs."
+   },
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n👋 Cleared\n💬 Cleared\nOne good answer: Good morning, Mr Eriksen. Khun Nok checks the invoices. 🔊\nYou said: Good morning Mr Eriksen. Khun Nok check the invoices.\nNEXT ▸"
+  },
+  {
+   "card": "o1",
+   "exchange": 2,
+   "npc": "I see. And who signs the payments?",
+   "objectives": [
+    "explain:Say who signs the payments"
+   ],
+   "how_drawn": "Scramble button",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "Wing Commander Anan sign the payments.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": {
+      "said": "wing commander anan sign",
+      "tag": "Verb -s",
+      "msg": "One person → verb + s: Khun Nok checks, my boss signs."
+     },
+     "norm": "wing commander anan sign the payments",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Wing Commander Anan sign the payments.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": {
+    "said": "wing commander anan sign",
+    "tag": "Verb -s",
+    "msg": "One person → verb + s: Khun Nok checks, my boss signs."
+   },
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n💬 Cleared\nOne good answer: Wing Commander Anan signs the payments. 🔊\nYou said: Wing Commander Anan sign the payments.\nDEBRIEF ▸"
+  },
+  {
+   "card": "o2",
+   "exchange": 1,
+   "npc": "Hi, it's Mike Turner from Pacific Aero. How many invoices from us are there in your file?",
+   "objectives": [
+    "number:Say how many invoices"
+   ],
+   "how_drawn": "Draw another (debrief)",
+   "chips_opened": [
+    "There are three …"
+   ],
+   "attempts": [
+    {
+     "typed": "Hello Mr Turner. There is three invoices in the file.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": {
+      "said": "there is 3",
+      "tag": "There is / are",
+      "msg": "More than one → there are: There are three invoices."
+     },
+     "norm": "hello mr turner there is 3 invoices in the file",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Hello Mr Turner. There is three invoices in the file.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": {
+    "said": "there is 3",
+    "tag": "There is / are",
+    "msg": "More than one → there are: There are three invoices."
+   },
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n🔢 Cleared\nOne good answer: Hello, Mr Turner. There are three invoices. 🔊\nYou said: Hello Mr Turner. There is three invoices in the file.\nNEXT ▸"
+  },
+  {
+   "card": "o2",
+   "exchange": 2,
+   "npc": "OK. Is there a problem with any of them?",
+   "objectives": [
+    "explain:Say there is a problem",
+    "number:Say which invoice"
+   ],
+   "how_drawn": "Draw another (debrief)",
+   "chips_opened": [
+    "There are three …"
+   ],
+   "attempts": [
+    {
+     "typed": "Yes, invoice number two have wrong date.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": null,
+     "norm": "yes invoice number 2 have wrong date",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Yes, invoice number two have wrong date.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n💬 Cleared\n🔢 Cleared\nOne good answer: Yes, there is a problem with invoice number two. The date is wrong. 🔊\nYou said: Yes, invoice number two have wrong date.\nDEBRIEF ▸"
+  },
+  {
+   "card": "o3",
+   "exchange": 1,
+   "npc": "Good afternoon. Is the budget report ready?",
+   "objectives": [
+    "name:Use the right name for her",
+    "explain:Say it is not ready"
+   ],
+   "how_drawn": "Draw a card (office deck)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "Good afternoon Colonel Sarah. Sorry, the report not finish yet.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      false,
+      false
+     ],
+     "slip": {
+      "said": "colonel sarah",
+      "tag": "Address & register",
+      "msg": "Rank or Mr + family name: Colonel Hayes, Mr Eriksen."
+     },
+     "norm": "good afternoon colonel sarah sorry the report not finish yet",
+     "hits_total": [
+      false,
+      false
+     ],
+     "tries": 1,
+     "sub": "ready",
+     "coach": "🧭 Not yet. Still to do: Use the right name for her · Say it is not ready.\nWords on the screen wrong? Tap “Say again” next time, or type."
+    },
+    {
+     "typed": "Sorry Ma'am. The report is not ready yet.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": null,
+     "norm": "sorry maam the report is not ready yet",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 2,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Sorry Ma'am. The report is not ready yet.",
+   "tries": 2,
+   "repairs": 0,
+   "stamps": [
+    "Partial",
+    "Partial"
+   ],
+   "slip_note": {
+    "said": "colonel sarah",
+    "tag": "Address & register",
+    "msg": "Rank or Mr + family name: Colonel Hayes, Mr Eriksen."
+   },
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 2\nTOP SCORE: 100\n✓\nGood — you got there.\n🎖️ Partial\n💬 Partial\nOne good answer: Good afternoon, Colonel Hayes. I'm sorry, it isn't ready yet. 🔊\nYou said: Good afternoon Colonel Sarah. Sorry, the report not finish yet. / Sorry Ma'am. The report is not ready yet.\nNEXT ▸"
+  },
+  {
+   "card": "o3",
+   "exchange": 2,
+   "npc": "I see. When will it be ready?",
+   "objectives": [
+    "time:Say when it will be ready"
+   ],
+   "how_drawn": "Draw a card (office deck)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "It will ready tomorrow morning Ma'am.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "it will ready tomorrow morning maam",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "It will ready tomorrow morning Ma'am.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n🕒 Cleared\nOne good answer: It will be ready tomorrow morning, Ma'am. 🔊\nYou said: It will ready tomorrow morning Ma'am.\nDEBRIEF ▸"
+  },
+  {
+   "card": "o4",
+   "exchange": 1,
+   "npc": "Hi, it's Mark Ellis from Hawaii. I'm calling about our payment.",
+   "objectives": [
+    "greet:Greet him",
+    "ask:Ask for the invoice number"
+   ],
+   "how_drawn": "Scramble button",
+   "chips_opened": [
+    "Is the amount in US dollars?"
+   ],
+   "attempts": [
+    {
+     "typed": "Hello Captain Ellis. What is your invoice number please?",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": null,
+     "norm": "hello captain ellis what is your invoice number please",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Hello Captain Ellis. What is your invoice number please?",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n👋 Cleared\n❓ Cleared\nOne good answer: Hello, Captain Ellis. Do you have the invoice number? 🔊\nYou said: Hello Captain Ellis. What is your invoice number please?\nNEXT ▸"
+  },
+  {
+   "card": "o4",
+   "exchange": 2,
+   "npc": "Sure. It's invoice four, five, one.",
+   "objectives": [
+    "number:Repeat the number to check it",
+    "ask:Ask about US dollars"
+   ],
+   "how_drawn": "Scramble button",
+   "chips_opened": [
+    "Is the amount in US dollars?"
+   ],
+   "attempts": [
+    {
+     "action": "tap 'Ask to repeat'",
+     "status": "repair",
+     "coach": "👍 Good move. Asking the person to repeat is always fine. Listen again, then answer.",
+     "repairs": 1,
+     "tries": 0
+    },
+    {
+     "typed": "451, thank you. It is US dollar?",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": null,
+     "norm": "451 thank you it is us dollar",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "451, thank you. It is US dollar?",
+   "tries": 1,
+   "repairs": 1,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n🔢 Cleared\n❓ Cleared\nOne good answer: Four, five, one. Thank you. Is the amount in US dollars? 🔊\nYou said: 451, thank you. It is US dollar?\nDEBRIEF ▸"
+  },
+  {
+   "card": "o5",
+   "exchange": 1,
+   "npc": "Hello. I'd like a short meeting with your section this week.",
+   "objectives": [
+    "ask:Ask when — What day …? / What time …?"
+   ],
+   "how_drawn": "Draw another (debrief)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "Yes Mr Eriksen. Which day you want to come?",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "yes mr eriksen which day you want to come",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Yes Mr Eriksen. Which day you want to come?",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n❓ Cleared\nOne good answer: Of course, Mr Eriksen. What day is good for you? 🔊\nYou said: Yes Mr Eriksen. Which day you want to come?\nNEXT ▸"
+  },
+  {
+   "card": "o5",
+   "exchange": 2,
+   "npc": "Thursday morning at ten. Where should I go?",
+   "objectives": [
+    "place:Say where your office is",
+    "time:Check the day or time"
+   ],
+   "how_drawn": "Draw another (debrief)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "Please come to room 204 on second floor. See you Thursday.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": null,
+     "norm": "please come to room 204 on 2 floor see you thursday",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Please come to room 204 on second floor. See you Thursday.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n📍 Cleared\n🕒 Cleared\nOne good answer: Please come to room 204, on the second floor. See you on Thursday at ten. 🔊\nYou said: Please come to room 204 on second floor. See you Thursday.\nDEBRIEF ▸"
+  },
+  {
+   "card": "o6",
+   "exchange": 1,
+   "npc": "Good morning. Did you send me last month's receipts?",
+   "objectives": [
+    "sorry:Say sorry",
+    "past:Say what happened"
+   ],
+   "how_drawn": "Draw a card (office deck)",
+   "chips_opened": [
+    "Could I have two more days, please?"
+   ],
+   "attempts": [
+    {
+     "typed": "Sorry Mr Eriksen, I didn't sent them. Yesterday I find a mistake.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": {
+      "said": "did not sent",
+      "tag": "Past simple",
+      "msg": "After did / didn't, use the base verb: Did you send …? I didn't send them."
+     },
+     "norm": "sorry mr eriksen i did not sent them yesterday i find a mistake",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Sorry Mr Eriksen, I didn't sent them. Yesterday I find a mistake.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": {
+    "said": "did not sent",
+    "tag": "Past simple",
+    "msg": "After did / didn't, use the base verb: Did you send …? I didn't send them."
+   },
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n🙇 Cleared\n⏪ Cleared\nOne good answer: Good morning, Mr Eriksen. I'm sorry, I didn't send them. I found a mistake yesterday. 🔊\nYou said: Sorry Mr Eriksen, I didn't sent them. Yesterday I find a mistake.\nNEXT ▸"
+  },
+  {
+   "card": "o6",
+   "exchange": 2,
+   "npc": "I see. When can I have them?",
+   "objectives": [
+    "request:Ask politely for more time",
+    "time:Say how long, or which day"
+   ],
+   "how_drawn": "Draw a card (office deck)",
+   "chips_opened": [
+    "Could I have two more days, please?"
+   ],
+   "attempts": [
+    {
+     "typed": "Could I have two more day please? I will send on Friday.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": null,
+     "norm": "could i have 2 more day please i will send on friday",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Could I have two more day please? I will send on Friday.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n🤝 Cleared\n🕒 Cleared\nOne good answer: Could I have two more days, please? I will send them on Friday. 🔊\nYou said: Could I have two more day please? I will send on Friday.\nDEBRIEF ▸"
+  },
+  {
+   "card": "o7",
+   "exchange": 1,
+   "npc": "Hi, this is Mike Turner. We're still waiting for our payment. It's thirty days late. What's happening?",
+   "objectives": [
+    "sorry:Say sorry",
+    "explain:Explain the problem"
+   ],
+   "how_drawn": "Scramble button",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "I am sorry Mr Mike. The bank details was wrong.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": {
+      "said": "mr mike",
+      "tag": "Address & register",
+      "msg": "Rank or Mr + family name: Colonel Hayes, Mr Eriksen."
+     },
+     "norm": "i am sorry mr mike the bank details was wrong",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "I am sorry Mr Mike. The bank details was wrong.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": {
+    "said": "mr mike",
+    "tag": "Address & register",
+    "msg": "Rank or Mr + family name: Colonel Hayes, Mr Eriksen."
+   },
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n🙇 Cleared\n💬 Cleared\nOne good answer: I'm sorry, Mr Turner. There was a problem with the bank details. 🔊\nYou said: I am sorry Mr Mike. The bank details was wrong.\nNEXT ▸"
+  },
+  {
+   "card": "o7",
+   "exchange": 2,
+   "npc": "OK. So when will you pay?",
+   "objectives": [
+    "plan:Say the plan — We will … / We're going to …",
+    "time:Say which day"
+   ],
+   "how_drawn": "Scramble button",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "We pay on Friday.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      false,
+      true
+     ],
+     "slip": null,
+     "norm": "we pay on friday",
+     "hits_total": [
+      false,
+      true
+     ],
+     "tries": 1,
+     "sub": "ready",
+     "coach": "🧭 Good start — one more thing. Still to do: Say the plan — We will … / We're going to ….\nWords on the screen wrong? Tap “Say again” next time, or type."
+    },
+    {
+     "typed": "We will pay on Friday.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": null,
+     "norm": "we will pay on friday",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 2,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "We will pay on Friday.",
+   "tries": 2,
+   "repairs": 0,
+   "stamps": [
+    "Partial",
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 2\nTOP SCORE: 100\n✓\nGood — you got there.\n⏩ Partial\n🕒 Cleared\nOne good answer: We will pay on Friday. I'll send you an email today. 🔊\nYou said: We pay on Friday. / We will pay on Friday.\nDEBRIEF ▸"
+  },
+  {
+   "card": "o8",
+   "exchange": 1,
+   "npc": "Yes? Come in.",
+   "objectives": [
+    "name:Use the right name for him",
+    "request:Ask politely for his signature"
+   ],
+   "how_drawn": "Draw another (debrief)",
+   "chips_opened": [
+    "Excuse me, Sir."
+   ],
+   "attempts": [
+    {
+     "typed": "Excuse me Sir. Can you sign this form?",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      false
+     ],
+     "slip": null,
+     "norm": "excuse me sir can you sign this form",
+     "hits_total": [
+      true,
+      false
+     ],
+     "tries": 1,
+     "sub": "ready",
+     "coach": "🧭 Good start — one more thing. Still to do: Ask politely for his signature.\nWords on the screen wrong? Tap “Say again” next time, or type."
+    },
+    {
+     "typed": "Can you sign this form please Sir?",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": null,
+     "norm": "can you sign this form please sir",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 2,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Can you sign this form please Sir?",
+   "tries": 2,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Partial"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 2\nTOP SCORE: 90\n✓\nGood — you got there.\n🎖️ Cleared\n🤝 Partial\nOne good answer: Excuse me, Sir. Could you sign this payment form, please? 🔊\nYou said: Excuse me Sir. Can you sign this form? / Can you sign this form please Sir?\nNEXT ▸"
+  },
+  {
+   "card": "o8",
+   "exchange": 2,
+   "npc": "Of course. Is it urgent?",
+   "objectives": [
+    "explain:Say why it is urgent",
+    "thank:Thank him"
+   ],
+   "how_drawn": "Draw another (debrief)",
+   "chips_opened": [
+    "Excuse me, Sir."
+   ],
+   "attempts": [
+    {
+     "typed": "Yes Sir, because the bank close at three o'clock. Thank you Sir.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": null,
+     "norm": "yes sir because the bank close at 3 oclock thank you sir",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Yes Sir, because the bank close at three o'clock. Thank you Sir.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n💬 Cleared\n🙏 Cleared\nOne good answer: Yes, Sir. The bank closes at three today. Thank you, Sir. 🔊\nYou said: Yes Sir, because the bank close at three o'clock. Thank you Sir.\nDEBRIEF ▸"
+  },
+  {
+   "card": "v1",
+   "exchange": 1,
+   "npc": "Excuse me. Where is the briefing room?",
+   "objectives": [
+    "place:Say where it is"
+   ],
+   "how_drawn": "Draw a card (visitors deck)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "It on the second floor, next to the lift.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "it on the 2 floor next to the lift",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "It on the second floor, next to the lift.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n📍 Cleared\nOne good answer: It's on the second floor, next to the lift. 🔊\nYou said: It on the second floor, next to the lift.\nNEXT ▸"
+  },
+  {
+   "card": "v1",
+   "exchange": 2,
+   "npc": "Thanks. And what time does the session start?",
+   "objectives": [
+    "time:Say the time"
+   ],
+   "how_drawn": "Draw a card (visitors deck)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "It start at nine o'clock.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "it start at 9 oclock",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "It start at nine o'clock.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n🕒 Cleared\nOne good answer: It starts at nine o'clock. 🔊\nYou said: It start at nine o'clock.\nDEBRIEF ▸"
+  },
+  {
+   "card": "v2",
+   "exchange": 1,
+   "npc": "Good evening, and welcome to the Capitol View. I'm sorry, I can't find your booking.",
+   "objectives": [
+    "explain:Say you have a booking",
+    "request:Ask her politely to check again"
+   ],
+   "how_drawn": "Scramble button",
+   "chips_opened": [
+    "Could you check again, please?"
+   ],
+   "attempts": [
+    {
+     "typed": "Good evening. I booked a room for three nights. Could you check again please?",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": null,
+     "norm": "good evening i booked a room for 3 nights could you check again please",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Good evening. I booked a room for three nights. Could you check again please?",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n💬 Cleared\n🤝 Cleared\nOne good answer: Good evening. I have a booking for three nights. Could you check again, please? 🔊\nYou said: Good evening. I booked a room for three nights. Could you check again please?\nNEXT ▸"
+  },
+  {
+   "card": "v2",
+   "exchange": 2,
+   "npc": "Of course. Do you have a confirmation number?",
+   "objectives": [
+    "number:Give the number"
+   ],
+   "how_drawn": "Scramble button",
+   "chips_opened": [
+    "Could you check again, please?"
+   ],
+   "attempts": [
+    {
+     "typed": "Yes, my number is 4729.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "yes my number is 4729",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Yes, my number is 4729.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n🔢 Cleared\nOne good answer: Yes. It's four, seven, two, nine. 🔊\nYou said: Yes, my number is 4729.\nDEBRIEF ▸"
+  },
+  {
+   "card": "v3",
+   "exchange": 1,
+   "npc": "Hello! I'm Tom Hughes. I'm here for the exercise week.",
+   "objectives": [
+    "greet:Welcome him",
+    "ask:Ask about his journey"
+   ],
+   "how_drawn": "Draw another (debrief)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "Welcome to Thailand Mr Hughes. How about your flight?",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": null,
+     "norm": "welcome to thailand mr hughes how about your flight",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Welcome to Thailand Mr Hughes. How about your flight?",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n👋 Cleared\n❓ Cleared\nOne good answer: Welcome to the base, Flight Lieutenant Hughes. How was your flight? 🔊\nYou said: Welcome to Thailand Mr Hughes. How about your flight?\nNEXT ▸"
+  },
+  {
+   "card": "v3",
+   "exchange": 2,
+   "npc": "Long, but fine, thanks. Where do I go first?",
+   "objectives": [
+    "place:Say where to go first"
+   ],
+   "how_drawn": "Draw another (debrief)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "First we go to security office. Please follow me.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "1 we go to security office please follow me",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "First we go to security office. Please follow me.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n📍 Cleared\nOne good answer: Please come with me. First, we will go to the security office. 🔊\nYou said: First we go to security office. Please follow me.\nDEBRIEF ▸"
+  },
+  {
+   "card": "v4",
+   "exchange": 1,
+   "npc": "I missed the finance meeting yesterday. What did you discuss?",
+   "objectives": [
+    "past:Say what you talked about",
+    "past:Say what was decided"
+   ],
+   "how_drawn": "Draw a card (visitors deck)",
+   "chips_opened": [
+    "Wing Commander Anan approved the plan."
+   ],
+   "attempts": [
+    {
+     "typed": "We talk about travel budget Ma'am. Wing Commander Anan approve the plan.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": {
+      "said": "wing commander anan approve",
+      "tag": "Verb -s",
+      "msg": "One person → verb + s: Khun Nok checks, my boss signs."
+     },
+     "norm": "we talk about travel budget maam wing commander anan approve the plan",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "We talk about travel budget Ma'am. Wing Commander Anan approve the plan.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": {
+    "said": "wing commander anan approve",
+    "tag": "Verb -s",
+    "msg": "One person → verb + s: Khun Nok checks, my boss signs."
+   },
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n⏪ Cleared\n⏪ Cleared\nOne good answer: We talked about the travel budget, Ma'am. Wing Commander Anan approved the plan. 🔊\nYou said: We talk about travel budget Ma'am. Wing Commander Anan approve the plan.\nNEXT ▸"
+  },
+  {
+   "card": "v4",
+   "exchange": 2,
+   "npc": "Good. Did anyone send the notes?",
+   "objectives": [
+    "plan:Offer to send them, and say when"
+   ],
+   "how_drawn": "Draw a card (visitors deck)",
+   "chips_opened": [
+    "Wing Commander Anan approved the plan."
+   ],
+   "attempts": [
+    {
+     "typed": "Not yet Ma'am. I will send to you this afternoon.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "not yet maam i will send to you this afternoon",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Not yet Ma'am. I will send to you this afternoon.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n⏩ Cleared\nOne good answer: Not yet, Ma'am. I will send them this afternoon. 🔊\nYou said: Not yet Ma'am. I will send to you this afternoon.\nDEBRIEF ▸"
+  },
+  {
+   "card": "v5",
+   "exchange": 1,
+   "npc": "So, what's the plan for tomorrow?",
+   "objectives": [
+    "plan:Say the plan — We are going to … / We will …",
+    "time:Say the time"
+   ],
+   "how_drawn": "Scramble button",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "Tomorrow we going to visit the finance office at ten.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": {
+      "said": "we going to",
+      "tag": "Future",
+      "msg": "Going to needs am / is / are: I am going to visit."
+     },
+     "norm": "tomorrow we going to visit the finance office at 10",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Tomorrow we going to visit the finance office at ten.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": {
+    "said": "we going to",
+    "tag": "Future",
+    "msg": "Going to needs am / is / are: I am going to visit."
+   },
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n⏩ Cleared\n🕒 Cleared\nOne good answer: Tomorrow we are going to visit the finance office at ten o'clock. 🔊\nYou said: Tomorrow we going to visit the finance office at ten.\nNEXT ▸"
+  },
+  {
+   "card": "v5",
+   "exchange": 2,
+   "npc": "Great. Do I need to bring anything?",
+   "objectives": [
+    "explain:Say what to bring"
+   ],
+   "how_drawn": "Scramble button",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "Yes, you must bring ID card.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "yes you must bring id card",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Yes, you must bring ID card.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n💬 Cleared\nOne good answer: Yes, please bring your ID card. 🔊\nYou said: Yes, you must bring ID card.\nDEBRIEF ▸"
+  },
+  {
+   "card": "v6",
+   "exchange": 1,
+   "npc": "I'd like to claim my taxi costs. What do you need from me?",
+   "objectives": [
+    "request:Ask politely for the receipts",
+    "ask:Ask how many"
+   ],
+   "how_drawn": "Draw another (debrief)",
+   "chips_opened": [
+    "Could you give me the receipts, please?"
+   ],
+   "attempts": [
+    {
+     "typed": "Could you give me the receipt please Ma'am? How much receipts do you have?",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": {
+      "said": "how much receipts",
+      "tag": "Countable / uncountable",
+      "msg": "Things you count → how many: How many receipts?"
+     },
+     "norm": "could you give me the receipt please maam how much receipts do you have",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Could you give me the receipt please Ma'am? How much receipts do you have?",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": {
+    "said": "how much receipts",
+    "tag": "Countable / uncountable",
+    "msg": "Things you count → how many: How many receipts?"
+   },
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n🤝 Cleared\n❓ Cleared\nOne good answer: Could you give me the receipts, please, Ma'am? How many receipts do you have? 🔊\nYou said: Could you give me the receipt please Ma'am? How much receipts do you have?\nNEXT ▸"
+  },
+  {
+   "card": "v6",
+   "exchange": 2,
+   "npc": "I have two receipts. I lost the third one.",
+   "objectives": [
+    "request:Ask her to fill in the form"
+   ],
+   "how_drawn": "Draw another (debrief)",
+   "chips_opened": [
+    "Could you give me the receipts, please?"
+   ],
+   "attempts": [
+    {
+     "typed": "No problem Ma'am. Please fill this form for the lost one.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "no problem maam please fill this form for the lost 1",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "No problem Ma'am. Please fill this form for the lost one.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n🤝 Cleared\nOne good answer: No problem, Ma'am. Could you fill in this form for the lost receipt, please? 🔊\nYou said: No problem Ma'am. Please fill this form for the lost one.\nDEBRIEF ▸"
+  },
+  {
+   "card": "v7",
+   "exchange": 1,
+   "npc": "Our bank says the transfer came back. What happens now?",
+   "objectives": [
+    "sorry:Say sorry",
+    "plan:Say the plan with if"
+   ],
+   "how_drawn": "Draw a card (visitors deck)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "I am sorry Captain. Please send new bank details today and we pay again tomorrow.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      false
+     ],
+     "slip": null,
+     "norm": "i am sorry captain please send new bank details today and we pay again tomorrow",
+     "hits_total": [
+      true,
+      false
+     ],
+     "tries": 1,
+     "sub": "ready",
+     "coach": "🧭 Good start — one more thing. Still to do: Say the plan with if.\nWords on the screen wrong? Tap “Say again” next time, or type."
+    },
+    {
+     "action": "tap Hint",
+     "coach": "🧭 Good start — one more thing. Still to do: Say the plan with if.\nWords on the screen wrong? Tap “Say again” next time, or type.\n🧩 Start like this: If you send …, we will …",
+     "lad": 1
+    },
+    {
+     "typed": "If you send new bank details today, we will pay tomorrow.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      false,
+      true
+     ],
+     "slip": null,
+     "norm": "if you send new bank details today we will pay tomorrow",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 2,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "If you send new bank details today, we will pay tomorrow.",
+   "tries": 2,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Partial"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 2\nTOP SCORE: 100\n✓\nGood — you got there.\n🙇 Cleared\n⏩ Partial\nOne good answer: I'm sorry, Captain Ellis. If you send the new bank details today, we will pay again tomorrow. 🔊\nYou said: I am sorry Captain. Please send new bank details today and we pay again tomorrow. / If you sen"
+  },
+  {
+   "card": "v7",
+   "exchange": 2,
+   "npc": "And if the details are wrong again?",
+   "objectives": [
+    "plan:Say what you will do then"
+   ],
+   "how_drawn": "Draw a card (visitors deck)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "I will call you and check again.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "i will call you and check again",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "I will call you and check again.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n⏩ Cleared\nOne good answer: Then I will call you, and we will check them together. 🔊\nYou said: I will call you and check again.\nDEBRIEF ▸"
+  },
+  {
+   "card": "v8",
+   "exchange": 1,
+   "npc": "What is the status of the three March payments?",
+   "objectives": [
+    "past:Say two were made",
+    "past:Say one was returned"
+   ],
+   "how_drawn": "Scramble button",
+   "chips_opened": [
+    "Two payments were made last week."
+   ],
+   "attempts": [
+    {
+     "typed": "Two payments were made last week. One payment the bank return because wrong account number.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      false
+     ],
+     "slip": null,
+     "norm": "2 payments were made last week 1 payment the bank return because wrong account number",
+     "hits_total": [
+      true,
+      false
+     ],
+     "tries": 1,
+     "sub": "ready",
+     "coach": "🧭 Good start — one more thing. Still to do: Say one was returned.\nWords on the screen wrong? Tap “Say again” next time, or type."
+    },
+    {
+     "typed": "One payment come back from the bank.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      false,
+      false
+     ],
+     "slip": null,
+     "norm": "1 payment come back from the bank",
+     "hits_total": [
+      true,
+      false
+     ],
+     "tries": 2,
+     "sub": "ready",
+     "coach": "🧭 Good start — one more thing. Still to do: Say one was returned.\nWords on the screen wrong? Tap “Say again” next time, or type."
+    },
+    {
+     "action": "tap Move on",
+     "available": true
+    }
+   ],
+   "typed_final": "One payment come back from the bank.",
+   "tries": 2,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Not yet"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 2\nTOP SCORE: 90\n✓\nGood — you got there.\n⏪ Cleared\n⏪ Not yet\nOne good answer: Two payments were made last week. One payment was returned by the bank. 🔊\nYou said: Two payments were made last week. One payment the bank return because wrong account number. / One payment come back f"
+  },
+  {
+   "card": "v8",
+   "exchange": 2,
+   "npc": "Why was it returned?",
+   "objectives": [
+    "explain:Say why"
+   ],
+   "how_drawn": "Scramble button",
+   "chips_opened": [
+    "Two payments were made last week."
+   ],
+   "attempts": [
+    {
+     "typed": "Because the account number is wrong.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "because the account number is wrong",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Because the account number is wrong.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n💬 Cleared\nOne good answer: Because the account number was wrong. 🔊\nYou said: Because the account number is wrong.\nDEBRIEF ▸"
+  },
+  {
+   "card": "s1",
+   "exchange": 1,
+   "npc": "Hi! I'm Tom. So, what do you do here?",
+   "objectives": [
+    "explain:Say your job or your division"
+   ],
+   "how_drawn": "Draw another (debrief)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "I work at finance division. I am accountant.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "i work at finance division i am accountant",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "I work at finance division. I am accountant.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n💬 Cleared\nOne good answer: I work in the Finance Division. I check invoices and payments. 🔊\nYou said: I work at finance division. I am accountant.\nNEXT ▸"
+  },
+  {
+   "card": "s1",
+   "exchange": 2,
+   "npc": "Interesting! And your boss, what does he do?",
+   "objectives": [
+    "explain:Say what your boss does"
+   ],
+   "how_drawn": "Draw another (debrief)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "He is Wing Commander. He sign the document.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": {
+      "said": "he sign",
+      "tag": "Verb -s",
+      "msg": "After he / she, add -s: he signs, she checks, he has."
+     },
+     "norm": "he is wing commander he sign the document",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "He is Wing Commander. He sign the document.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": {
+    "said": "he sign",
+    "tag": "Verb -s",
+    "msg": "After he / she, add -s: he signs, she checks, he has."
+   },
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n💬 Cleared\nOne good answer: He manages the division. He signs all the payments. 🔊\nYou said: He is Wing Commander. He sign the document.\nDEBRIEF ▸"
+  },
+  {
+   "card": "s2",
+   "exchange": 1,
+   "npc": "This green curry looks wonderful. Do you eat spicy food?",
+   "objectives": [
+    "explain:Answer about yourself",
+    "ask:Ask her a question back"
+   ],
+   "how_drawn": "Draw a card (social deck)",
+   "chips_opened": [
+    "Do you like Thai food?"
+   ],
+   "attempts": [
+    {
+     "typed": "Yes, I like spicy food very much. Do you like Thai food?",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": null,
+     "norm": "yes i like spicy food very much do you like thai food",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Yes, I like spicy food very much. Do you like Thai food?",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n💬 Cleared\n❓ Cleared\nOne good answer: Yes, I do. I love spicy food. Do you like Thai food? 🔊\nYou said: Yes, I like spicy food very much. Do you like Thai food?\nNEXT ▸"
+  },
+  {
+   "card": "s2",
+   "exchange": 2,
+   "npc": "I do, but I don't eat very spicy food.",
+   "objectives": [
+    "suggest:Suggest a dish that is not spicy"
+   ],
+   "how_drawn": "Draw a card (social deck)",
+   "chips_opened": [
+    "Do you like Thai food?"
+   ],
+   "attempts": [
+    {
+     "typed": "You can eat this soup. It not spicy.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "you can eat this soup it not spicy",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "You can eat this soup. It not spicy.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n💡 Cleared\nOne good answer: Then try this one. It isn't spicy. 🔊\nYou said: You can eat this soup. It not spicy.\nDEBRIEF ▸"
+  },
+  {
+   "card": "s3",
+   "exchange": 1,
+   "npc": "I hear you studied in the UK. What did you study?",
+   "objectives": [
+    "past:Say what you studied"
+   ],
+   "how_drawn": "Scramble button",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "I study business in UK.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "i study business in uk",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "I study business in UK.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n⏪ Cleared\nOne good answer: I studied business administration. 🔊\nYou said: I study business in UK.\nNEXT ▸"
+  },
+  {
+   "card": "s3",
+   "exchange": 2,
+   "npc": "Lovely! Did you like it there?",
+   "objectives": [
+    "past:Say if you liked it",
+    "explain:Add one detail — weather, food, people …"
+   ],
+   "how_drawn": "Scramble button",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "Yes, I like it. But weather is so cold.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": null,
+     "norm": "yes i like it but weather is so cold",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Yes, I like it. But weather is so cold.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n⏪ Cleared\n💬 Cleared\nOne good answer: Yes, I loved it, but the weather was very cold. 🔊\nYou said: Yes, I like it. But weather is so cold.\nDEBRIEF ▸"
+  },
+  {
+   "card": "s4",
+   "exchange": 1,
+   "npc": "The traffic this morning was terrible! How do you get to work?",
+   "objectives": [
+    "explain:Say how you get to work",
+    "ask:Ask him a question back"
+   ],
+   "how_drawn": "Draw another (debrief)",
+   "chips_opened": [
+    "I take the BTS. It's faster."
+   ],
+   "attempts": [
+    {
+     "typed": "I take the BTS. And you? Where you stay?",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": {
+      "said": "where you stay",
+      "tag": "Wh- questions",
+      "msg": "Put the helper after the question word: Where do you stay? Where are you staying?"
+     },
+     "norm": "i take the bts and you where you stay",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "I take the BTS. And you? Where you stay?",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": {
+    "said": "where you stay",
+    "tag": "Wh- questions",
+    "msg": "Put the helper after the question word: Where do you stay? Where are you staying?"
+   },
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n💬 Cleared\n❓ Cleared\nOne good answer: I take the BTS. It's faster than a car. Where are you staying? 🔊\nYou said: I take the BTS. And you? Where you stay?\nNEXT ▸"
+  },
+  {
+   "card": "s4",
+   "exchange": 2,
+   "npc": "At a hotel near the river. What should I see this weekend?",
+   "objectives": [
+    "suggest:Suggest a place"
+   ],
+   "how_drawn": "Draw another (debrief)",
+   "chips_opened": [
+    "I take the BTS. It's faster."
+   ],
+   "attempts": [
+    {
+     "typed": "You should go to Wat Pho. It is very beautiful.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "you should go to wat pho it is very beautiful",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "You should go to Wat Pho. It is very beautiful.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n💡 Cleared\nOne good answer: You should visit the Grand Palace. Go early in the morning. 🔊\nYou said: You should go to Wat Pho. It is very beautiful.\nDEBRIEF ▸"
+  },
+  {
+   "card": "s5",
+   "exchange": 1,
+   "npc": "Finally, Friday! Any plans for the weekend?",
+   "objectives": [
+    "plan:Say your plan — I'm going to … / I will …"
+   ],
+   "how_drawn": "Draw a card (social deck)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "I will go to Chiang Mai with my friend.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "i will go to chiang mai with my friend",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "I will go to Chiang Mai with my friend.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n⏩ Cleared\nOne good answer: I'm going to visit my parents on Saturday. 🔊\nYou said: I will go to Chiang Mai with my friend.\nNEXT ▸"
+  },
+  {
+   "card": "s5",
+   "exchange": 2,
+   "npc": "That sounds nice. I have a free day on Sunday. Any ideas?",
+   "objectives": [
+    "suggest:Suggest something to do"
+   ],
+   "how_drawn": "Draw a card (social deck)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "Sorry, I not understand.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      false
+     ],
+     "slip": null,
+     "norm": "sorry i not understand",
+     "hits_total": [
+      false
+     ],
+     "tries": 1,
+     "sub": "ready",
+     "coach": "🧭 Not yet. Still to do: Suggest something to do.\nWords on the screen wrong? Tap “Say again” next time, or type."
+    },
+    {
+     "action": "tap 'Ask to repeat'",
+     "status": "repair",
+     "coach": "👍 Good move. Asking the person to repeat is always fine. Listen again, then answer.",
+     "repairs": 1,
+     "tries": 1
+    },
+    {
+     "typed": "You can go to Chatuchak market.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "you can go to chatuchak market",
+     "hits_total": [
+      true
+     ],
+     "tries": 2,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "You can go to Chatuchak market.",
+   "tries": 2,
+   "repairs": 1,
+   "stamps": [
+    "Partial"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 2\nTOP SCORE: 100\n✓\nGood — you got there.\n💡 Partial\nOne good answer: You could go to Chatuchak Market. It's open on Sundays. 🔊\nYou said: Sorry, I not understand. / You can go to Chatuchak market.\nDEBRIEF ▸"
+  },
+  {
+   "card": "s6",
+   "exchange": 1,
+   "npc": "What a lovely evening.",
+   "objectives": [
+    "name:Use the right name for her",
+    "request:Ask politely for a photo"
+   ],
+   "how_drawn": "Scramble button",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "Excuse me Colonel Sarah. Can we take a photo with you?",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      false,
+      true
+     ],
+     "slip": {
+      "said": "colonel sarah",
+      "tag": "Address & register",
+      "msg": "Rank or Mr + family name: Colonel Hayes, Mr Eriksen."
+     },
+     "norm": "excuse me colonel sarah can we take a photo with you",
+     "hits_total": [
+      false,
+      true
+     ],
+     "tries": 1,
+     "sub": "ready",
+     "coach": "🧭 Good start — one more thing. Still to do: Use the right name for her.\nWords on the screen wrong? Tap “Say again” next time, or type."
+    },
+    {
+     "typed": "Excuse me Colonel Hayes.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      false
+     ],
+     "slip": null,
+     "norm": "excuse me colonel hayes",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 2,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Excuse me Colonel Hayes.",
+   "tries": 2,
+   "repairs": 0,
+   "stamps": [
+    "Partial",
+    "Cleared"
+   ],
+   "slip_note": {
+    "said": "colonel sarah",
+    "tag": "Address & register",
+    "msg": "Rank or Mr + family name: Colonel Hayes, Mr Eriksen."
+   },
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 2\nTOP SCORE: 100\n✓\nGood — you got there.\n🎖️ Partial\n🤝 Cleared\nOne good answer: Excuse me, Colonel Hayes. Could we take a photo with you, please? 🔊\nYou said: Excuse me Colonel Sarah. Can we take a photo with you? / Excuse me Colonel Hayes.\nNEXT ▸"
+  },
+  {
+   "card": "s6",
+   "exchange": 2,
+   "npc": "Of course! Where should I stand?",
+   "objectives": [
+    "place:Say where to stand",
+    "thank:Thank her"
+   ],
+   "how_drawn": "Scramble button",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "Pardon?",
+     "after_model": false,
+     "status": "repair",
+     "hits_this_answer": [
+      false,
+      false
+     ],
+     "slip": null,
+     "norm": "pardon",
+     "hits_total": [
+      false,
+      false
+     ],
+     "tries": 0,
+     "sub": "ready",
+     "coach": "👍 Good move. Asking the person to repeat is always fine. Listen again, then answer."
+    },
+    {
+     "typed": "Please stand here in the middle. Thank you Ma'am.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": null,
+     "norm": "please stand here in the middle thank you maam",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Please stand here in the middle. Thank you Ma'am.",
+   "tries": 1,
+   "repairs": 1,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n📍 Cleared\n🙏 Cleared\nOne good answer: Here in the middle, please, Ma'am. Thank you. 🔊\nYou said: Please stand here in the middle. Thank you Ma'am.\nDEBRIEF ▸"
+  },
+  {
+   "card": "s7",
+   "exchange": 1,
+   "npc": "Here's a question. If you had a free week, where would you go?",
+   "objectives": [
+    "explain:Say where you would go — I would …"
+   ],
+   "how_drawn": "Draw another (debrief)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "I want to go to Japan.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      false
+     ],
+     "slip": null,
+     "norm": "i want to go to japan",
+     "hits_total": [
+      false
+     ],
+     "tries": 1,
+     "sub": "ready",
+     "coach": "🧭 Not yet. Still to do: Say where you would go — I would ….\nWords on the screen wrong? Tap “Say again” next time, or type."
+    },
+    {
+     "typed": "I will go to Japan with my family.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      false
+     ],
+     "slip": null,
+     "norm": "i will go to japan with my family",
+     "hits_total": [
+      false
+     ],
+     "tries": 2,
+     "sub": "ready",
+     "coach": "🧭 Not yet. Still to do: Say where you would go — I would ….\nWords on the screen wrong? Tap “Say again” next time, or type."
+    },
+    {
+     "action": "tap Move on",
+     "available": true
+    }
+   ],
+   "typed_final": "I will go to Japan with my family.",
+   "tries": 2,
+   "repairs": 0,
+   "stamps": [
+    "Not yet"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 2\nTOP SCORE: 100\n→\nLet's keep moving.\n💬 Not yet\nOne good answer: I would go to Chiang Mai. I would visit the mountains. 🔊\nYou said: I want to go to Japan. / I will go to Japan with my family.\nNEXT ▸"
+  },
+  {
+   "card": "s7",
+   "exchange": 2,
+   "npc": "Nice. And if I come to Thailand again, what should I do?",
+   "objectives": [
+    "suggest:Suggest something for his next visit"
+   ],
+   "how_drawn": "Draw another (debrief)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "Next time I take you to Chiang Mai.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      false
+     ],
+     "slip": null,
+     "norm": "next time i take you to chiang mai",
+     "hits_total": [
+      false
+     ],
+     "tries": 1,
+     "sub": "ready",
+     "coach": "🧭 Not yet. Still to do: Suggest something for his next visit.\nWords on the screen wrong? Tap “Say again” next time, or type."
+    },
+    {
+     "action": "tap Hint",
+     "coach": "🧭 Not yet. Still to do: Suggest something for his next visit.\nWords on the screen wrong? Tap “Say again” next time, or type.\n🧩 Start like this: If you come again, you should …",
+     "lad": 1
+    },
+    {
+     "typed": "You should visit Chiang Mai.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "you should visit chiang mai",
+     "hits_total": [
+      true
+     ],
+     "tries": 2,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "You should visit Chiang Mai.",
+   "tries": 2,
+   "repairs": 0,
+   "stamps": [
+    "Partial"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 2\nTOP SCORE: 100\n✓\nGood — you got there.\n💡 Partial\nOne good answer: If you come again, you should visit the islands in the south. 🔊\nYou said: Next time I take you to Chiang Mai. / You should visit Chiang Mai.\nDEBRIEF ▸"
+  },
+  {
+   "card": "s8",
+   "exchange": 1,
+   "npc": "Well, that's the end of the week. I fly home tonight.",
+   "objectives": [
+    "thank:Thank him",
+    "bye:Wish him a good journey"
+   ],
+   "how_drawn": "Draw a card (social deck)",
+   "chips_opened": [
+    "Have a safe flight."
+   ],
+   "attempts": [
+    {
+     "typed": "Thank you for everything Mr Tom. Have a safe flight.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": {
+      "said": "mr tom",
+      "tag": "Address & register",
+      "msg": "Rank or Mr + family name: Colonel Hayes, Mr Eriksen."
+     },
+     "norm": "thank you for everything mr tom have a safe flight",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Thank you for everything Mr Tom. Have a safe flight.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": {
+    "said": "mr tom",
+    "tag": "Address & register",
+    "msg": "Rank or Mr + family name: Colonel Hayes, Mr Eriksen."
+   },
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n🙏 Cleared\n✈️ Cleared\nOne good answer: Thank you for everything, Flight Lieutenant Hughes. Have a safe flight. 🔊\nYou said: Thank you for everything Mr Tom. Have a safe flight.\nNEXT ▸"
+  },
+  {
+   "card": "s8",
+   "exchange": 2,
+   "npc": "Thanks. I hope we meet again.",
+   "objectives": [
+    "bye:Say goodbye"
+   ],
+   "how_drawn": "Draw a card (social deck)",
+   "chips_opened": [
+    "Have a safe flight."
+   ],
+   "attempts": [
+    {
+     "typed": "See you again. Goodbye.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "see you again goodbye",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "See you again. Goodbye.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 90\n✓\nCleared!\n✈️ Cleared\nOne good answer: I hope so too. Please keep in touch. Goodbye! 🔊\nYou said: See you again. Goodbye.\nDEBRIEF ▸"
+  }
+ ],
+ "replay_exchanges": [
+  {
+   "card": "o8",
+   "exchange": 1,
+   "npc": "Yes? Come in.",
+   "objectives": [
+    "name:Use the right name for him",
+    "request:Ask politely for his signature"
+   ],
+   "how_drawn": "tile ↺ Again (retry)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "Excuse me Sir. Could you sign this form please?",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": null,
+     "norm": "excuse me sir could you sign this form please",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Excuse me Sir. Could you sign this form please?",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n🎖️ Cleared\n🤝 Cleared\nOne good answer: Excuse me, Sir. Could you sign this payment form, please? 🔊\nYou said: Excuse me Sir. Could you sign this form please?\nNEXT ▸"
+  },
+  {
+   "card": "o8",
+   "exchange": 2,
+   "npc": "Of course. Is it urgent?",
+   "objectives": [
+    "explain:Say why it is urgent",
+    "thank:Thank him"
+   ],
+   "how_drawn": "tile ↺ Again (retry)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "Yes Sir. The bank close at three today. Thank you Sir.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true,
+      true
+     ],
+     "slip": null,
+     "norm": "yes sir the bank close at 3 today thank you sir",
+     "hits_total": [
+      true,
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "Yes Sir. The bank close at three today. Thank you Sir.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared",
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n💬 Cleared\n🙏 Cleared\nOne good answer: Yes, Sir. The bank closes at three today. Thank you, Sir. 🔊\nYou said: Yes Sir. The bank close at three today. Thank you Sir.\nDEBRIEF ▸"
+  },
+  {
+   "card": "s7",
+   "exchange": 1,
+   "npc": "Here's a question. If you had a free week, where would you go?",
+   "objectives": [
+    "explain:Say where you would go — I would …"
+   ],
+   "how_drawn": "Scramble button, clock +1 day (due card)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "I would go to Japan with my family.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "i would go to japan with my family",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "I would go to Japan with my family.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n💬 Cleared\nOne good answer: I would go to Chiang Mai. I would visit the mountains. 🔊\nYou said: I would go to Japan with my family.\nNEXT ▸"
+  },
+  {
+   "card": "s7",
+   "exchange": 2,
+   "npc": "Nice. And if I come to Thailand again, what should I do?",
+   "objectives": [
+    "suggest:Suggest something for his next visit"
+   ],
+   "how_drawn": "Scramble button, clock +1 day (due card)",
+   "chips_opened": [],
+   "attempts": [
+    {
+     "typed": "You should visit Chiang Mai.",
+     "after_model": false,
+     "status": "ok",
+     "hits_this_answer": [
+      true
+     ],
+     "slip": null,
+     "norm": "you should visit chiang mai",
+     "hits_total": [
+      true
+     ],
+     "tries": 1,
+     "sub": "passed"
+    }
+   ],
+   "typed_final": "You should visit Chiang Mai.",
+   "tries": 1,
+   "repairs": 0,
+   "stamps": [
+    "Cleared"
+   ],
+   "slip_note": null,
+   "app_feedback": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n💡 Cleared\nOne good answer: If you come again, you should visit the islands in the south. 🔊\nYou said: You should visit Chiang Mai.\nDEBRIEF ▸"
+  }
+ ],
+ "cards": {
+  "o1": [
+   {
+    "score": "100%",
+    "stamp": "CLEARED",
+    "line": "Top score 100 (0 phrase chips) · first time",
+    "grammar_note": "📝 One grammar note (not marked down): One person → verb + s: Khun Nok checks, my boss signs.\nI heard: “khun nok check”",
+    "formation_links": [
+     "🧍‍♀️ Formation 1 · Verb -s ▸"
+    ],
+    "chips": [],
+    "how_drawn": "Scramble button",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    }
+   }
+  ],
+  "o2": [
+   {
+    "score": "90%",
+    "stamp": "CLEARED",
+    "line": "Top score 90 (1 phrase chip) · first time",
+    "grammar_note": "📝 One grammar note (not marked down): More than one → there are: There are three invoices.\nI heard: “there is 3”",
+    "formation_links": [
+     "🔢 Formation 2 · There is / are ▸"
+    ],
+    "chips": [
+     "There are three …"
+    ],
+    "how_drawn": "Draw another (debrief)",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 90,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    }
+   }
+  ],
+  "o3": [
+   {
+    "score": "67%",
+    "stamp": "PARTIAL",
+    "line": "Top score 100 (0 phrase chips) · first time",
+    "grammar_note": "📝 One grammar note (not marked down): Rank or Mr + family name: Colonel Hayes, Mr Eriksen.\nI heard: “colonel sarah”",
+    "formation_links": [
+     "🎚️ Formation 12 · Address & register ▸",
+     "🚫 Formation 3 · Negatives ▸"
+    ],
+    "chips": [],
+    "how_drawn": "Draw a card (office deck)",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 67,
+     "s": "p",
+     "d": "2026-11-26",
+     "due": "2026-11-29"
+    }
+   }
+  ],
+  "o4": [
+   {
+    "score": "90%",
+    "stamp": "CLEARED",
+    "line": "Top score 90 (1 phrase chip) · first time",
+    "grammar_note": "",
+    "formation_links": [],
+    "chips": [
+     "Is the amount in US dollars?"
+    ],
+    "how_drawn": "Scramble button",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 90,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    }
+   }
+  ],
+  "o5": [
+   {
+    "score": "100%",
+    "stamp": "CLEARED",
+    "line": "Top score 100 (0 phrase chips) · first time",
+    "grammar_note": "",
+    "formation_links": [],
+    "chips": [],
+    "how_drawn": "Draw another (debrief)",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    }
+   }
+  ],
+  "o6": [
+   {
+    "score": "90%",
+    "stamp": "CLEARED",
+    "line": "Top score 90 (1 phrase chip) · first time",
+    "grammar_note": "📝 One grammar note (not marked down): After did / didn't, use the base verb: Did you send …? I didn't send them.\nI heard: “did not sent”",
+    "formation_links": [
+     "⏪ Formation 6 · Past simple ▸"
+    ],
+    "chips": [
+     "Could I have two more days, please?"
+    ],
+    "how_drawn": "Draw a card (office deck)",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 90,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    }
+   }
+  ],
+  "o7": [
+   {
+    "score": "88%",
+    "stamp": "PARTIAL",
+    "line": "Top score 100 (0 phrase chips) · first time",
+    "grammar_note": "📝 One grammar note (not marked down): Rank or Mr + family name: Colonel Hayes, Mr Eriksen.\nI heard: “mr mike”",
+    "formation_links": [
+     "🎚️ Formation 12 · Address & register ▸",
+     "⏩ Formation 7 · Future ▸"
+    ],
+    "chips": [],
+    "how_drawn": "Scramble button",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 88,
+     "s": "p",
+     "d": "2026-11-26",
+     "due": "2026-11-29"
+    }
+   }
+  ],
+  "o8": [
+   {
+    "score": "79%",
+    "stamp": "PARTIAL",
+    "line": "Top score 90 (1 phrase chip) · first time",
+    "grammar_note": "",
+    "formation_links": [
+     "🙏 Formation 8 · Polite requests ▸",
+     "🎚️ Formation 12 · Address & register ▸"
+    ],
+    "chips": [
+     "Excuse me, Sir."
+    ],
+    "how_drawn": "Draw another (debrief)",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 79,
+     "s": "p",
+     "d": "2026-11-26",
+     "due": "2026-11-29"
+    }
+   },
+   {
+    "score": "100%",
+    "stamp": "CLEARED",
+    "line": "Top score 100 (0 phrase chips) · best 100%",
+    "grammar_note": "",
+    "formation_links": [],
+    "chips": [],
+    "how_drawn": "tile ↺ Again (retry)",
+    "gs_sc_record": {
+     "n": 2,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    }
+   }
+  ],
+  "v1": [
+   {
+    "score": "100%",
+    "stamp": "CLEARED",
+    "line": "Top score 100 (0 phrase chips) · first time",
+    "grammar_note": "",
+    "formation_links": [],
+    "chips": [],
+    "how_drawn": "Draw a card (visitors deck)",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    }
+   }
+  ],
+  "v2": [
+   {
+    "score": "90%",
+    "stamp": "CLEARED",
+    "line": "Top score 90 (1 phrase chip) · first time",
+    "grammar_note": "",
+    "formation_links": [],
+    "chips": [
+     "Could you check again, please?"
+    ],
+    "how_drawn": "Scramble button",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 90,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    }
+   }
+  ],
+  "v3": [
+   {
+    "score": "100%",
+    "stamp": "CLEARED",
+    "line": "Top score 100 (0 phrase chips) · first time",
+    "grammar_note": "",
+    "formation_links": [],
+    "chips": [],
+    "how_drawn": "Draw another (debrief)",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    }
+   }
+  ],
+  "v4": [
+   {
+    "score": "90%",
+    "stamp": "CLEARED",
+    "line": "Top score 90 (1 phrase chip) · first time",
+    "grammar_note": "📝 One grammar note (not marked down): One person → verb + s: Khun Nok checks, my boss signs.\nI heard: “wing commander anan approve”",
+    "formation_links": [
+     "🧍‍♀️ Formation 1 · Verb -s ▸"
+    ],
+    "chips": [
+     "Wing Commander Anan approved the plan."
+    ],
+    "how_drawn": "Draw a card (visitors deck)",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 90,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    }
+   }
+  ],
+  "v5": [
+   {
+    "score": "100%",
+    "stamp": "CLEARED",
+    "line": "Top score 100 (0 phrase chips) · first time",
+    "grammar_note": "📝 One grammar note (not marked down): Going to needs am / is / are: I am going to visit.\nI heard: “we going to”",
+    "formation_links": [
+     "⏩ Formation 7 · Future ▸"
+    ],
+    "chips": [],
+    "how_drawn": "Scramble button",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    }
+   }
+  ],
+  "v6": [
+   {
+    "score": "90%",
+    "stamp": "CLEARED",
+    "line": "Top score 90 (1 phrase chip) · first time",
+    "grammar_note": "📝 One grammar note (not marked down): Things you count → how many: How many receipts?\nI heard: “how much receipts”",
+    "formation_links": [
+     "📦 Formation 9 · Count / non-count ▸"
+    ],
+    "chips": [
+     "Could you give me the receipts, please?"
+    ],
+    "how_drawn": "Draw another (debrief)",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 90,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    }
+   }
+  ],
+  "v7": [
+   {
+    "score": "83%",
+    "stamp": "PARTIAL",
+    "line": "Top score 100 (0 phrase chips) · first time",
+    "grammar_note": "",
+    "formation_links": [
+     "🔀 Formation 10 · Conditionals ▸"
+    ],
+    "chips": [],
+    "how_drawn": "Draw a card (visitors deck)",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 83,
+     "s": "p",
+     "d": "2026-11-26",
+     "due": "2026-11-29"
+    }
+   }
+  ],
+  "v8": [
+   {
+    "score": "60%",
+    "stamp": "PARTIAL",
+    "line": "Top score 90 (1 phrase chip) · first time",
+    "grammar_note": "",
+    "formation_links": [
+     "🔁 Formation 11 · Passive ▸"
+    ],
+    "chips": [
+     "Two payments were made last week."
+    ],
+    "how_drawn": "Scramble button",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 60,
+     "s": "p",
+     "d": "2026-11-26",
+     "due": "2026-11-29"
+    }
+   }
+  ],
+  "s1": [
+   {
+    "score": "100%",
+    "stamp": "CLEARED",
+    "line": "Top score 100 (0 phrase chips) · first time",
+    "grammar_note": "📝 One grammar note (not marked down): After he / she, add -s: he signs, she checks, he has.\nI heard: “he sign”",
+    "formation_links": [
+     "🧍‍♀️ Formation 1 · Verb -s ▸"
+    ],
+    "chips": [],
+    "how_drawn": "Draw another (debrief)",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    }
+   }
+  ],
+  "s2": [
+   {
+    "score": "90%",
+    "stamp": "CLEARED",
+    "line": "Top score 90 (1 phrase chip) · first time",
+    "grammar_note": "",
+    "formation_links": [],
+    "chips": [
+     "Do you like Thai food?"
+    ],
+    "how_drawn": "Draw a card (social deck)",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 90,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    }
+   }
+  ],
+  "s3": [
+   {
+    "score": "100%",
+    "stamp": "CLEARED",
+    "line": "Top score 100 (0 phrase chips) · first time",
+    "grammar_note": "",
+    "formation_links": [],
+    "chips": [],
+    "how_drawn": "Scramble button",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    }
+   }
+  ],
+  "s4": [
+   {
+    "score": "90%",
+    "stamp": "CLEARED",
+    "line": "Top score 90 (1 phrase chip) · first time",
+    "grammar_note": "📝 One grammar note (not marked down): Put the helper after the question word: Where do you stay? Where are you staying?\nI heard: “where you stay”",
+    "formation_links": [
+     "🧭 Formation 5 · Wh- questions ▸"
+    ],
+    "chips": [
+     "I take the BTS. It's faster."
+    ],
+    "how_drawn": "Draw another (debrief)",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 90,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    }
+   }
+  ],
+  "s5": [
+   {
+    "score": "75%",
+    "stamp": "PARTIAL",
+    "line": "Top score 100 (0 phrase chips) · first time",
+    "grammar_note": "",
+    "formation_links": [
+     "⏩ Formation 7 · Future ▸"
+    ],
+    "chips": [],
+    "how_drawn": "Draw a card (social deck)",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 75,
+     "s": "p",
+     "d": "2026-11-26",
+     "due": "2026-11-29"
+    }
+   }
+  ],
+  "s6": [
+   {
+    "score": "88%",
+    "stamp": "PARTIAL",
+    "line": "Top score 100 (0 phrase chips) · first time",
+    "grammar_note": "📝 One grammar note (not marked down): Rank or Mr + family name: Colonel Hayes, Mr Eriksen.\nI heard: “colonel sarah”",
+    "formation_links": [
+     "🎚️ Formation 12 · Address & register ▸",
+     "🙏 Formation 8 · Polite requests ▸"
+    ],
+    "chips": [],
+    "how_drawn": "Scramble button",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 88,
+     "s": "p",
+     "d": "2026-11-26",
+     "due": "2026-11-29"
+    }
+   }
+  ],
+  "s7": [
+   {
+    "score": "25%",
+    "stamp": "NOT YET",
+    "line": "Top score 100 (0 phrase chips) · first time",
+    "grammar_note": "",
+    "formation_links": [
+     "🔀 Formation 10 · Conditionals ▸"
+    ],
+    "chips": [],
+    "how_drawn": "Draw another (debrief)",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 25,
+     "s": "m",
+     "d": "2026-11-26",
+     "due": "2026-11-27"
+    }
+   },
+   {
+    "score": "100%",
+    "stamp": "CLEARED",
+    "line": "Top score 100 (0 phrase chips) · best 100%",
+    "grammar_note": "",
+    "formation_links": [],
+    "chips": [],
+    "how_drawn": "Scramble button, clock +1 day (due card)",
+    "gs_sc_record": {
+     "n": 2,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-27",
+     "due": null
+    }
+   }
+  ],
+  "s8": [
+   {
+    "score": "90%",
+    "stamp": "CLEARED",
+    "line": "Top score 90 (1 phrase chip) · first time",
+    "grammar_note": "📝 One grammar note (not marked down): Rank or Mr + family name: Colonel Hayes, Mr Eriksen.\nI heard: “mr tom”",
+    "formation_links": [
+     "🎚️ Formation 12 · Address & register ▸"
+    ],
+    "chips": [
+     "Have a safe flight."
+    ],
+    "how_drawn": "Draw a card (social deck)",
+    "gs_sc_record": {
+     "n": 1,
+     "best": 90,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    }
+   }
+  ]
+ },
+ "lesson_mode": {
+  "o3": {
+   "pre_text": "20\nSECONDS\nPRE-FLIGHT\n\nPlan your first sentence. Need help? Open a phrase — you can use it, change it, or just listen.\n\n💬 Phrase 1\n💬 Phrase 2\n💬 Phrase 3\nI'M READY ▸\n\nDidn't catch something? You can always say: “Sorry, could you say that again, please?”",
+   "turns": [
+    {
+     "save_disabled_before": true,
+     "tag_options": [
+      "— none —",
+      "Verb -s",
+      "There is / are",
+      "Negatives",
+      "Questions",
+      "Wh- questions",
+      "Past simple",
+      "Future",
+      "Polite requests",
+      "Countable / uncountable",
+      "Conditionals",
+      "Passive",
+      "Address & register"
+     ],
+     "tbox_buttons": [
+      "✓ 42x43",
+      "½ 42x43",
+      "✗ 42x43",
+      "✓ 42x43",
+      "½ 42x43",
+      "✗ 42x43",
+      "1 42x43",
+      "2 42x43",
+      "3 42x43",
+      "💡 Show next hint 175x36",
+      "🔊 Model 98x36",
+      "SAVE ▸ 118x45"
+     ],
+     "tag_kept_after_rerender": "Negatives",
+     "res": {
+      "st": [
+       "c",
+       "p"
+      ],
+      "said": "",
+      "typed": false,
+      "tries": 1,
+      "slip": {
+       "tag": "Negatives",
+       "msg": "",
+       "said": ""
+      },
+      "secs": null,
+      "flu": 2,
+      "repairs": 0
+     },
+     "passed_text": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nGood — you got there.\n🎖️ Cleared\n💬 Partial\nOne good answer: Good afternoon, Colonel Hayes. I'm sorry, it isn't ready yet. 🔊\nNEXT ▸"
+    },
+    {
+     "save_disabled_before": true,
+     "tag_options": [
+      "— none —",
+      "Verb -s",
+      "There is / are",
+      "Negatives",
+      "Questions",
+      "Wh- questions",
+      "Past simple",
+      "Future",
+      "Polite requests",
+      "Countable / uncountable",
+      "Conditionals",
+      "Passive",
+      "Address & register"
+     ],
+     "tag_kept_after_rerender": "",
+     "res": {
+      "st": [
+       "c"
+      ],
+      "said": "",
+      "typed": false,
+      "tries": 1,
+      "slip": null,
+      "secs": null,
+      "flu": 2,
+      "repairs": 0
+     },
+     "passed_text": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n🕒 Cleared\nOne good answer: It will be ready tomorrow morning, Ma'am. 🔊\nDEBRIEF ▸"
+    }
+   ],
+   "debrief": {
+    "score": "83%",
+    "tier": "PARTIAL",
+    "line": "Scored by the teacher · best 83%",
+    "note": "📝 One grammar note (not marked down): practise Negatives.",
+    "rec": {
+     "n": 2,
+     "best": 83,
+     "s": "p",
+     "d": "2026-11-26",
+     "due": "2026-11-29"
+    }
+   }
+  },
+  "v7": {
+   "pre_text": "20\nSECONDS\nPRE-FLIGHT\n\nPlan your first sentence. Need help? Open a phrase — you can use it, change it, or just listen.\n\n💬 Phrase 1\n💬 Phrase 2\n💬 Phrase 3\nI'M READY ▸\n\nDidn't catch something? You can always say: “Sorry, could you say that again, please?”",
+   "turns": [
+    {
+     "save_disabled_before": true,
+     "tag_options": [
+      "— none —",
+      "Verb -s",
+      "There is / are",
+      "Negatives",
+      "Questions",
+      "Wh- questions",
+      "Past simple",
+      "Future",
+      "Polite requests",
+      "Countable / uncountable",
+      "Conditionals",
+      "Passive",
+      "Address & register"
+     ],
+     "tag_kept_after_rerender": "Conditionals",
+     "hint_text": "🧩 Start like this: I'm sorry, Captain Ellis. If you send …, we will …",
+     "res": {
+      "st": [
+       "c",
+       "p"
+      ],
+      "said": "",
+      "typed": false,
+      "tries": 1,
+      "slip": {
+       "tag": "Conditionals",
+       "msg": "",
+       "said": ""
+      },
+      "secs": null,
+      "flu": 1,
+      "repairs": 0
+     },
+     "passed_text": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nGood — you got there.\n🙇 Cleared\n⏩ Partial\nOne good answer: I'm sorry, Captain Ellis. If you send the new bank details today, we will pay again tomorrow. 🔊\nNEXT ▸"
+    },
+    {
+     "save_disabled_before": true,
+     "tag_options": [
+      "— none —",
+      "Verb -s",
+      "There is / are",
+      "Negatives",
+      "Questions",
+      "Wh- questions",
+      "Past simple",
+      "Future",
+      "Polite requests",
+      "Countable / uncountable",
+      "Conditionals",
+      "Passive",
+      "Address & register"
+     ],
+     "tag_kept_after_rerender": "",
+     "res": {
+      "st": [
+       "p"
+      ],
+      "said": "",
+      "typed": false,
+      "tries": 1,
+      "slip": null,
+      "secs": null,
+      "flu": 2,
+      "repairs": 0
+     },
+     "passed_text": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nGood — you got there.\n⏩ Partial\nOne good answer: Then I will call you, and we will check them together. 🔊\nDEBRIEF ▸"
+    }
+   ],
+   "debrief": {
+    "score": "67%",
+    "tier": "PARTIAL",
+    "line": "Scored by the teacher · best 83%",
+    "note": "📝 One grammar note (not marked down): practise Conditionals.",
+    "rec": {
+     "n": 2,
+     "best": 83,
+     "s": "p",
+     "d": "2026-11-26",
+     "due": "2026-11-29"
+    }
+   }
+  },
+  "v8": {
+   "pre_text": "20\nSECONDS\nPRE-FLIGHT\n\nPlan your first sentence. Need help? Open a phrase — you can use it, change it, or just listen.\n\n💬 Phrase 1\n💬 Phrase 2\n💬 Phrase 3\nI'M READY ▸\n\nDidn't catch something? You can always say: “Sorry, could you say that again, please?”",
+   "turns": [
+    {
+     "save_disabled_before": true,
+     "tag_options": [
+      "— none —",
+      "Verb -s",
+      "There is / are",
+      "Negatives",
+      "Questions",
+      "Wh- questions",
+      "Past simple",
+      "Future",
+      "Polite requests",
+      "Countable / uncountable",
+      "Conditionals",
+      "Passive",
+      "Address & register"
+     ],
+     "tag_kept_after_rerender": "Passive",
+     "res": {
+      "st": [
+       "c",
+       "m"
+      ],
+      "said": "",
+      "typed": false,
+      "tries": 1,
+      "slip": {
+       "tag": "Passive",
+       "msg": "",
+       "said": ""
+      },
+      "secs": null,
+      "flu": 1,
+      "repairs": 0
+     },
+     "passed_text": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nGood — you got there.\n⏪ Cleared\n⏪ Not yet\nOne good answer: Two payments were made last week. One payment was returned by the bank. 🔊\nNEXT ▸"
+    },
+    {
+     "save_disabled_before": true,
+     "tag_options": [
+      "— none —",
+      "Verb -s",
+      "There is / are",
+      "Negatives",
+      "Questions",
+      "Wh- questions",
+      "Past simple",
+      "Future",
+      "Polite requests",
+      "Countable / uncountable",
+      "Conditionals",
+      "Passive",
+      "Address & register"
+     ],
+     "tag_kept_after_rerender": "",
+     "res": {
+      "st": [
+       "c"
+      ],
+      "said": "",
+      "typed": false,
+      "tries": 1,
+      "slip": null,
+      "secs": null,
+      "flu": 2,
+      "repairs": 0
+     },
+     "passed_text": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n💬 Cleared\nOne good answer: Because the account number was wrong. 🔊\nDEBRIEF ▸"
+    }
+   ],
+   "debrief": {
+    "score": "67%",
+    "tier": "PARTIAL",
+    "line": "Scored by the teacher · best 67%",
+    "note": "📝 One grammar note (not marked down): practise Passive.",
+    "rec": {
+     "n": 2,
+     "best": 67,
+     "s": "p",
+     "d": "2026-11-26",
+     "due": "2026-11-29"
+    }
+   }
+  },
+  "s6": {
+   "pre_text": "20\nSECONDS\nPRE-FLIGHT\n\nPlan your first sentence. Need help? Open a phrase — you can use it, change it, or just listen.\n\n💬 Phrase 1\n💬 Phrase 2\n💬 Phrase 3\nI'M READY ▸\n\nDidn't catch something? You can always say: “Sorry, could you say that again, please?”",
+   "turns": [
+    {
+     "save_disabled_before": true,
+     "tag_options": [
+      "— none —",
+      "Verb -s",
+      "There is / are",
+      "Negatives",
+      "Questions",
+      "Wh- questions",
+      "Past simple",
+      "Future",
+      "Polite requests",
+      "Countable / uncountable",
+      "Conditionals",
+      "Passive",
+      "Address & register"
+     ],
+     "tag_kept_after_rerender": "Address & register",
+     "res": {
+      "st": [
+       "c",
+       "c"
+      ],
+      "said": "",
+      "typed": false,
+      "tries": 1,
+      "slip": {
+       "tag": "Address & register",
+       "msg": "",
+       "said": ""
+      },
+      "secs": null,
+      "flu": 3,
+      "repairs": 0
+     },
+     "passed_text": "EXCHANGE 1 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n🎖️ Cleared\n🤝 Cleared\nOne good answer: Excuse me, Colonel Hayes. Could we take a photo with you, please? 🔊\nNEXT ▸"
+    },
+    {
+     "save_disabled_before": true,
+     "tag_options": [
+      "— none —",
+      "Verb -s",
+      "There is / are",
+      "Negatives",
+      "Questions",
+      "Wh- questions",
+      "Past simple",
+      "Future",
+      "Polite requests",
+      "Countable / uncountable",
+      "Conditionals",
+      "Passive",
+      "Address & register"
+     ],
+     "tag_kept_after_rerender": "",
+     "res": {
+      "st": [
+       "c",
+       "c"
+      ],
+      "said": "",
+      "typed": false,
+      "tries": 1,
+      "slip": null,
+      "secs": null,
+      "flu": 3,
+      "repairs": 0
+     },
+     "passed_text": "EXCHANGE 2 / 2\nTRIES: 1\nTOP SCORE: 100\n✓\nCleared!\n📍 Cleared\n🙏 Cleared\nOne good answer: Here in the middle, please, Ma'am. Thank you. 🔊\nDEBRIEF ▸"
+    }
+   ],
+   "debrief": {
+    "score": "100%",
+    "tier": "CLEARED",
+    "line": "Scored by the teacher · best 100%",
+    "note": "📝 One grammar note (not marked down): practise Address & register.",
+    "rec": {
+     "n": 2,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    }
+   }
+  },
+  "zoom_exchange_layout": {
+   "tbox": [
+    662,
+    183,
+    1199,
+    460
+   ],
+   "stage": [
+    66,
+    141,
+    633,
+    592
+   ],
+   "docH": 720,
+   "npcFont": "16px"
+  }
+ },
+ "spaced_review": {
+  "+1": {
+   "today": "2026-11-27",
+   "due": [
+    "s7:m:2026-11-27"
+   ],
+   "stats": "18/24\nCLEARED\n24\nCARDS FLOWN\n1\nDUE TODAY",
+   "review": "🚨 Scramble!\n1 card that needed help is back for another try.\nScramble ▸",
+   "tab": "🎴\nScramble",
+   "due_badges": 1,
+   "scramble_draws": "s7",
+   "face_kick": "☕ SOCIAL DECK · SECOND LOOK",
+   "deck_draws": {
+    "office": "o3",
+    "visitors": "v8",
+    "social": "s7"
+   },
+   "scpick_x5": [
+    "s7",
+    "s7",
+    "s7",
+    "s7",
+    "s7"
+   ]
+  },
+  "+2": {
+   "today": "2026-11-28",
+   "due": [
+    "s7:m:2026-11-27"
+   ],
+   "stats": "18/24\nCLEARED\n24\nCARDS FLOWN\n1\nDUE TODAY",
+   "review": "🚨 Scramble!\n1 card that needed help is back for another try.\nScramble ▸",
+   "tab": "🎴\nScramble",
+   "due_badges": 1,
+   "scramble_draws": "s7",
+   "face_kick": "☕ SOCIAL DECK · SECOND LOOK",
+   "deck_draws": {
+    "office": "o7",
+    "visitors": "v7",
+    "social": "s7"
+   },
+   "scpick_x5": [
+    "s7",
+    "s7",
+    "s7",
+    "s7",
+    "s7"
+   ]
+  },
+  "+3": {
+   "today": "2026-11-29",
+   "due": [
+    "o3:p:2026-11-29",
+    "o7:p:2026-11-29",
+    "v7:p:2026-11-29",
+    "v8:p:2026-11-29",
+    "s5:p:2026-11-29",
+    "s7:m:2026-11-27"
+   ],
+   "stats": "18/24\nCLEARED\n24\nCARDS FLOWN\n6\nDUE TODAY",
+   "review": "🚨 Scramble!\n6 cards that needed help are back for another try.\nScramble ▸",
+   "tab": "🎴\nScramble",
+   "due_badges": 6,
+   "scramble_draws": "s7",
+   "face_kick": "☕ SOCIAL DECK · SECOND LOOK",
+   "deck_draws": {
+    "office": "o3",
+    "visitors": "v7",
+    "social": "s7"
+   },
+   "scpick_x5": [
+    "s7",
+    "s7",
+    "s7",
+    "s7",
+    "s7"
+   ]
+  },
+  "+1_after_replay": {
+   "card": "s7",
+   "rec": {
+    "n": 2,
+    "best": 100,
+    "s": "c",
+    "d": "2026-11-27",
+    "due": null
+   },
+   "stats": "19/24\nCLEARED\n24\nCARDS FLOWN\n0\nDUE TODAY",
+   "review": "🚨 Scramble!\n24 of 24 cards are open. A surprise card from any deck — the best test.\nScramble ▸",
+   "next_scramble": "o7"
+  }
+ },
+ "scramble_after_all_seen": [
+  [
+   "v8",
+   "p"
+  ],
+  [
+   "v8",
+   "p"
+  ],
+  [
+   "o7",
+   "p"
+  ],
+  [
+   "o3",
+   "p"
+  ]
+ ],
+ "leave_midcard": {
+  "scp_after": null,
+  "o8_after_leave": {
+   "n": 1,
+   "best": 79,
+   "s": "p",
+   "d": "2026-11-26",
+   "due": "2026-11-29"
+  },
+  "radar_k_request": [
+   6,
+   7
+  ]
+ },
+ "layout_audit": {
+  "home": {
+   "sw": 390,
+   "vw": 390,
+   "small": [
+    "homeBtn:100x33:Mission map",
+    "refBtn:109x33:Dial reference",
+    "voiceBtn:81x33:Voice: off",
+    "hbtn:39x33:A−",
+    "hbtn:39x33:A+",
+    "scVoiceChk:186x33:🔊 Voice & mic check",
+    "scSlow:164x33:🐢 Slow voice: off",
+    "scLive:358x33:👩‍🏫 Lesson mode: off",
+    "SUMMARY:334x17:How Scramble works"
+   ],
+   "over": [
+    "tab :447",
+    "SPAN:437",
+    "B:437",
+    "tab :654",
+    "ti:487",
+    "SPAN:644",
+    "B:644"
+   ],
+   "docH": 3146
+  },
+  "preflight": {
+   "sw": 390,
+   "vw": 390,
+   "small": [
+    "homeBtn:100x33:Mission map",
+    "refBtn:109x33:Dial reference",
+    "voiceBtn:81x33:Voice: off",
+    "hbtn:39x33:A−",
+    "hbtn:39x33:A+"
+   ],
+   "over": [],
+   "docH": 1286
+  },
+  "exchange": {
+   "sw": 390,
+   "vw": 390,
+   "small": [
+    "homeBtn:100x33:Mission map",
+    "refBtn:109x33:Dial reference",
+    "voiceBtn:81x33:Voice: off",
+    "hbtn:39x33:A−",
+    "hbtn:39x33:A+",
+    "scRe:29x32:🔊",
+    "SUMMARY:328x17:Situation",
+    "scHint:83x36:💡 Hint",
+    "scRepeat:161x36:🔁 Ask to repeat",
+    "scType:102x27:⌨ Type instead"
+   ],
+   "over": [],
+   "docH": 1259
+  },
+  "passed": {
+   "sw": 390,
+   "vw": 390,
+   "small": [
+    "homeBtn:100x33:Mission map",
+    "refBtn:109x33:Dial reference",
+    "voiceBtn:81x33:Voice: off",
+    "hbtn:39x33:A−",
+    "hbtn:39x33:A+",
+    "scRe:29x32:🔊",
+    "SUMMARY:328x17:Situation",
+    "scModel:43x36:🔊"
+   ],
+   "over": [],
+   "docH": 1377
+  },
+  "debrief": {
+   "sw": 390,
+   "vw": 390,
+   "small": [
+    "homeBtn:100x33:Mission map",
+    "refBtn:109x33:Dial reference",
+    "voiceBtn:81x33:Voice: off",
+    "hbtn:39x33:A−",
+    "hbtn:39x33:A+",
+    "dbtn:43x36:🔊",
+    "btn ghost:202x40:🧍‍♀️ Formation 1 · Verb"
+   ],
+   "over": [],
+   "docH": 1382
+  },
+  "home_after": {
+   "sw": 390,
+   "vw": 390,
+   "small": [
+    "homeBtn:100x33:Mission map",
+    "refBtn:109x33:Dial reference",
+    "voiceBtn:81x33:Voice: off",
+    "hbtn:39x33:A−",
+    "hbtn:39x33:A+",
+    "scVoiceChk:186x33:🔊 Voice & mic check",
+    "scSlow:164x33:🐢 Slow voice: off",
+    "scLive:358x33:👩‍🏫 Lesson mode: off",
+    "dbtn:90x36:↺ Again",
+    "SUMMARY:334x17:How Scramble works"
+   ],
+   "over": [
+    "tab :447",
+    "SPAN:437",
+    "B:437",
+    "tab :654",
+    "ti:487",
+    "SPAN:644",
+    "B:644"
+   ],
+   "docH": 4068
+  },
+  "lesson_home": {
+   "sw": 390,
+   "vw": 390,
+   "small": [
+    "homeBtn:100x33:Mission map",
+    "refBtn:109x33:Dial reference",
+    "voiceBtn:81x33:Voice: off",
+    "hbtn:39x33:A−",
+    "hbtn:39x33:A+",
+    "scVoiceChk:186x33:🔊 Voice & mic check",
+    "scSlow:164x33:🐢 Slow voice: off",
+    "scLive:358x33:👩‍🏫 Lesson mode: on",
+    "dbtn:76x36:Deal ▸",
+    "SUMMARY:334x17:How Scramble works"
+   ],
+   "over": [
+    "tab :447",
+    "SPAN:437",
+    "B:437",
+    "tab :654",
+    "ti:487",
+    "SPAN:644",
+    "B:644"
+   ],
+   "docH": 4205
+  },
+  "lesson_exchange": {
+   "sw": 390,
+   "vw": 390,
+   "small": [
+    "homeBtn:100x33:Mission map",
+    "refBtn:109x33:Dial reference",
+    "voiceBtn:81x33:Voice: off",
+    "hbtn:39x33:A−",
+    "hbtn:39x33:A+",
+    "scRe:29x32:🔊",
+    "SUMMARY:328x17:Situation",
+    "scTag:195x36:— none —Verb -sThere is ",
+    "scHint:175x36:💡 Show next hint",
+    "scModel:98x36:🔊 Model"
+   ],
+   "over": [],
+   "docH": 1430
+  }
+ },
+ "checker_probes_read_only": [
+  {
+   "id": "o3",
+   "ex": 1,
+   "text": "Good afternoon Ma'am. The report not finish yet.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o3",
+   "ex": 1,
+   "text": "Sorry Colonel Hayes, I not finish it.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": "Negatives (i not finish)"
+  },
+  {
+   "id": "o3",
+   "ex": 1,
+   "text": "Good afternoon Colonel Hayes. Sorry, not ready.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o3",
+   "ex": 1,
+   "text": "Yes Colonel Hayes, it is ready. Is not a problem.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o3",
+   "ex": 2,
+   "text": "I don't know when, maybe next month in the morning.",
+   "kind": "FP?",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o1",
+   "ex": 1,
+   "text": "Hello. I don't know who checks.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o1",
+   "ex": 2,
+   "text": "I sign the payments.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o1",
+   "ex": 2,
+   "text": "Khun Nok signs the payments.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o2",
+   "ex": 1,
+   "text": "I have three questions for you.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o2",
+   "ex": 2,
+   "text": "No problem. Two invoices are ok.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o4",
+   "ex": 1,
+   "text": "Hello. Please tell me the number of invoice.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o4",
+   "ex": 1,
+   "text": "Hi Mark. What number?",
+   "kind": "FN?",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o4",
+   "ex": 2,
+   "text": "Four five one. Dollar or baht?",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o4",
+   "ex": 2,
+   "text": "Okay 451. US dollar, right?",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o5",
+   "ex": 1,
+   "text": "Okay. Are you free on Thursday?",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o5",
+   "ex": 1,
+   "text": "Yes, when?",
+   "kind": "short",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o5",
+   "ex": 2,
+   "text": "Room 204. Thursday.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o6",
+   "ex": 1,
+   "text": "Sorry, not yet.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o6",
+   "ex": 2,
+   "text": "Please give me two more days.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o6",
+   "ex": 2,
+   "text": "I need two more days please.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o6",
+   "ex": 2,
+   "text": "I will send in two days.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o7",
+   "ex": 1,
+   "text": "Sorry. I don't know.",
+   "kind": "FP?",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o7",
+   "ex": 2,
+   "text": "We pay you on Friday, I promise.",
+   "kind": "FN?",
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o7",
+   "ex": 2,
+   "text": "I can not pay today.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o8",
+   "ex": 1,
+   "text": "Excuse me Sir, please sign this form.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o8",
+   "ex": 1,
+   "text": "Sir, I would like your signature please.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o8",
+   "ex": 1,
+   "text": "Sir, can I have your signature?",
+   "kind": "FN?",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o8",
+   "ex": 1,
+   "text": "Khun Anan, could you sign this?",
+   "kind": "FP-name",
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o8",
+   "ex": 2,
+   "text": "No Sir, not today. Thank you.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v1",
+   "ex": 1,
+   "text": "I don't know. Ask the right person.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v1",
+   "ex": 1,
+   "text": "Go up to floor 2.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v1",
+   "ex": 1,
+   "text": "It is on the second level beside the lift.",
+   "kind": "ok",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v1",
+   "ex": 2,
+   "text": "At 9.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v1",
+   "ex": 2,
+   "text": "Nine.",
+   "kind": "short",
+   "status": "short",
+   "hits": [
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "v2",
+   "ex": 1,
+   "text": "I have reservation three night. Please check again.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "v2",
+   "ex": 2,
+   "text": "Four seven two nine.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v2",
+   "ex": 2,
+   "text": "It is 4 7 2 9.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v2",
+   "ex": 2,
+   "text": "forty-seven twenty-nine",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v3",
+   "ex": 1,
+   "text": "Hello Tom. Welcome. How are you?",
+   "kind": "FN?",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "v3",
+   "ex": 1,
+   "text": "Welcome Flight Lieutenant Hughes. Your flight is ok?",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "v3",
+   "ex": 1,
+   "text": "Welcome. Was your trip good?",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "v3",
+   "ex": 2,
+   "text": "We go to the gate.",
+   "kind": "FP?",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v4",
+   "ex": 1,
+   "text": "We talked about travel budget and Wing Commander Anan say ok.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "v4",
+   "ex": 1,
+   "text": "The travel plan is not approved.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v4",
+   "ex": 2,
+   "text": "Nobody send. I send now.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "v4",
+   "ex": 2,
+   "text": "No Ma'am. I will send.",
+   "kind": "FN?",
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "v4",
+   "ex": 2,
+   "text": "I can not send them today.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v5",
+   "ex": 1,
+   "text": "We visit finance office at 10 am.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v5",
+   "ex": 1,
+   "text": "I will see you at ten.",
+   "kind": "FP?",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v5",
+   "ex": 2,
+   "text": "No. You don't need ID.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v6",
+   "ex": 1,
+   "text": "I need your receipts Ma'am. How many do you have?",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v6",
+   "ex": 1,
+   "text": "Can I have the receipt? How many?",
+   "kind": "ok",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v6",
+   "ex": 2,
+   "text": "I can not sign for you.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v7",
+   "ex": 1,
+   "text": "Sorry. When you send the new bank details, we will pay again.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "v7",
+   "ex": 1,
+   "text": "Sorry. If the bank can.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v7",
+   "ex": 2,
+   "text": "I call you.",
+   "kind": "FN?",
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "v7",
+   "ex": 2,
+   "text": "We will not call you.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v8",
+   "ex": 1,
+   "text": "We paid two last week. One came back.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v8",
+   "ex": 1,
+   "text": "Two is paid already. One is return from bank.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "v8",
+   "ex": 1,
+   "text": "Two payments already made and one returned.",
+   "kind": "ok",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": "Passive (payments already made)"
+  },
+  {
+   "id": "v8",
+   "ex": 2,
+   "text": "Account number not correct.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v8",
+   "ex": 2,
+   "text": "The number is not right.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "s1",
+   "ex": 1,
+   "text": "I am accountant.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "s1",
+   "ex": 1,
+   "text": "I am officer in air force.",
+   "kind": "FN?",
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "s1",
+   "ex": 2,
+   "text": "He is the boss.",
+   "kind": "FN?",
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "s1",
+   "ex": 2,
+   "text": "I don't know his work.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "s2",
+   "ex": 1,
+   "text": "I like it.",
+   "kind": "FN-partial",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "s2",
+   "ex": 1,
+   "text": "Yes. And you?",
+   "kind": "ok",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "s2",
+   "ex": 2,
+   "text": "This one is okay for you.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "s2",
+   "ex": 2,
+   "text": "I don't recommend anything.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "s2",
+   "ex": 2,
+   "text": "Tom yum is very hot. You should eat it.",
+   "kind": "FP?",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "s3",
+   "ex": 1,
+   "text": "I learn about business.",
+   "kind": "ok",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "s3",
+   "ex": 1,
+   "text": "I studied in London.",
+   "kind": "FP-ok",
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "s3",
+   "ex": 1,
+   "text": "I studied hard.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "s3",
+   "ex": 2,
+   "text": "It was fun.",
+   "kind": "FN-partial",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "s3",
+   "ex": 2,
+   "text": "I enjoy it. London is nice.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    false,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "s4",
+   "ex": 1,
+   "text": "By BTS. How about you?",
+   "kind": "ok",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "s4",
+   "ex": 1,
+   "text": "I ride motorcycle taxi. You stay where?",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "s4",
+   "ex": 1,
+   "text": "I go by MRT. Is your hotel far?",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "s4",
+   "ex": 2,
+   "text": "Wat Arun is beautiful.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "s4",
+   "ex": 2,
+   "text": "I can not think.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "s5",
+   "ex": 1,
+   "text": "I stay home and sleep.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "s5",
+   "ex": 1,
+   "text": "Maybe I go shopping with my mom.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "s5",
+   "ex": 2,
+   "text": "Chatuchak market is good.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "s5",
+   "ex": 2,
+   "text": "I can not see you on Sunday.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "s6",
+   "ex": 1,
+   "text": "Excuse me Ma'am. We want to take photo with you.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "s6",
+   "ex": 1,
+   "text": "Colonel, photo please.",
+   "kind": "FN?",
+   "status": "ok",
+   "hits": [
+    true,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "s6",
+   "ex": 2,
+   "text": "Here please. Thank you.",
+   "kind": "ok",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "s7",
+   "ex": 1,
+   "text": "I'd like to go to Japan.",
+   "kind": "ok",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "s7",
+   "ex": 1,
+   "text": "I go to Japan.",
+   "kind": "known",
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "s7",
+   "ex": 1,
+   "text": "Maybe Japan. I love Japanese food.",
+   "kind": "known",
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "s7",
+   "ex": 2,
+   "text": "Please come to Chiang Mai.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "s7",
+   "ex": 2,
+   "text": "Chiang Mai is good in winter.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "s8",
+   "ex": 1,
+   "text": "Thank you. Safe travels.",
+   "kind": "FN",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "s8",
+   "ex": 1,
+   "text": "Thanks for everything. Have a good flight.",
+   "kind": "ok",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "s8",
+   "ex": 1,
+   "text": "Thank you very much. Have a nice trip home.",
+   "kind": "ok",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "s8",
+   "ex": 2,
+   "text": "Me too. Bye bye.",
+   "kind": "ok",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "s8",
+   "ex": 2,
+   "text": "I hope so too.",
+   "kind": "ok",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "s8",
+   "ex": 2,
+   "text": "No, never again.",
+   "kind": "FP",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o1",
+   "ex": 1,
+   "text": "Sorry, I not understand.",
+   "kind": "REPAIR",
+   "status": "ok",
+   "hits": [
+    false,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o1",
+   "ex": 1,
+   "text": "Sorry, I don't understand.",
+   "kind": "REPAIR",
+   "status": "repair",
+   "hits": [
+    false,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o1",
+   "ex": 1,
+   "text": "Again please.",
+   "kind": "REPAIR",
+   "status": "short",
+   "hits": [
+    false,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o1",
+   "ex": 1,
+   "text": "Can you speak slowly please?",
+   "kind": "REPAIR",
+   "status": "repair",
+   "hits": [
+    false,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o1",
+   "ex": 1,
+   "text": "Sorry?",
+   "kind": "REPAIR",
+   "status": "short",
+   "hits": [
+    false,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o1",
+   "ex": 1,
+   "text": "What?",
+   "kind": "REPAIR",
+   "status": "short",
+   "hits": [
+    false,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o1",
+   "ex": 1,
+   "text": "Excuse me, can you say again?",
+   "kind": "REPAIR",
+   "status": "repair",
+   "hits": [
+    false,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o1",
+   "ex": 1,
+   "text": "Please repeat.",
+   "kind": "REPAIR",
+   "status": "short",
+   "hits": [
+    false,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o1",
+   "ex": 1,
+   "text": "Could you repeat please?",
+   "kind": "REPAIR",
+   "status": "repair",
+   "hits": [
+    false,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o1",
+   "ex": 1,
+   "text": "Sorry, one more please.",
+   "kind": "REPAIR",
+   "status": "ok",
+   "hits": [
+    false,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o1",
+   "ex": 1,
+   "text": "I can't hear you.",
+   "kind": "REPAIR",
+   "status": "ok",
+   "hits": [
+    false,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o1",
+   "ex": 1,
+   "text": "Please speak slow.",
+   "kind": "REPAIR",
+   "status": "ok",
+   "hits": [
+    false,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o1",
+   "ex": 1,
+   "text": "Come again?",
+   "kind": "REPAIR",
+   "status": "short",
+   "hits": [
+    false,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o1",
+   "ex": 1,
+   "text": "Say again please.",
+   "kind": "REPAIR",
+   "status": "repair",
+   "hits": [
+    false,
+    false
+   ],
+   "slip": null
+  },
+  {
+   "id": "o3",
+   "ex": 1,
+   "text": "Good afternoon Sarah. It is not ready.",
+   "kind": "ADDR",
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o3",
+   "ex": 1,
+   "text": "Good afternoon Miss Hayes. It is not ready.",
+   "kind": "ADDR",
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o3",
+   "ex": 1,
+   "text": "Good afternoon Sir. It is not ready.",
+   "kind": "ADDR",
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o3",
+   "ex": 1,
+   "text": "Good afternoon Khun Sarah. It is not ready yet.",
+   "kind": "ADDR",
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "slip": "Address & register (khun sarah)"
+  },
+  {
+   "id": "s6",
+   "ex": 1,
+   "text": "Colonel Sarah Hayes, could we take a photo?",
+   "kind": "ADDR",
+   "status": "ok",
+   "hits": [
+    false,
+    true
+   ],
+   "slip": "Address & register (colonel sarah)"
+  },
+  {
+   "id": "o8",
+   "ex": 1,
+   "text": "Wing Commander, could you sign please?",
+   "kind": "ADDR",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v1",
+   "ex": 1,
+   "text": "It on the second floor.",
+   "kind": "SLIP",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "o3",
+   "ex": 2,
+   "text": "It will ready tomorrow.",
+   "kind": "SLIP",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "s3",
+   "ex": 2,
+   "text": "Yes I like it. The weather is cold.",
+   "kind": "SLIP",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v4",
+   "ex": 1,
+   "text": "We talk about budget. He approve the plan.",
+   "kind": "SLIP",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": "Verb -s (he approve)"
+  },
+  {
+   "id": "s2",
+   "ex": 2,
+   "text": "Try this. It not spicy.",
+   "kind": "SLIP",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": null
+  },
+  {
+   "id": "v8",
+   "ex": 1,
+   "text": "Two payments paid last week. One payment returned.",
+   "kind": "SLIP",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": "Passive (payments paid)"
+  },
+  {
+   "id": "s1",
+   "ex": 2,
+   "text": "He don't sign. He manage the division.",
+   "kind": "SLIP",
+   "status": "ok",
+   "hits": [
+    true
+   ],
+   "slip": "Verb -s (he manage)"
+  },
+  {
+   "id": "o2",
+   "ex": 2,
+   "text": "Yes, have problem with invoice two.",
+   "kind": "SLIP",
+   "status": "ok",
+   "hits": [
+    true,
+    true
+   ],
+   "slip": null
+  }
+ ],
+ "summary": {
+  "cards_played": 24,
+  "exchanges": 48,
+  "first_run_card_stamps": {
+   "CLEARED": 16,
+   "PARTIAL": 7,
+   "NOT YET": 1
+  },
+  "objective_stamps_first_run": {
+   "Cleared": 63,
+   "Partial": 8,
+   "Not yet": 2
+  },
+  "cards_with_a_chip": 11,
+  "repair_button_taps": 2,
+  "typed_repairs": {
+   "recognised": [
+    "Pardon? (s6-2)"
+   ],
+   "not_recognised": [
+    "Sorry, I not understand. (s5-2) — counted as a failed try"
+   ]
+  },
+  "hints_used": 2,
+  "move_on_used": 2,
+  "grammar_notes_shown": 12,
+  "replays": [
+   "o8 (same day, tile Again) -> CLEARED 100",
+   "s7 (clock +1 day, due card) -> CLEARED 100"
+  ],
+  "lesson_mode_cards": [
+   "o3",
+   "v7",
+   "v8",
+   "s6"
+  ],
+  "console_errors": [],
+  "external_requests_blocked": 0,
+  "state_after_first_run": {
+   "sc": {
+    "c": {
+     "o1": {
+      "n": 1,
+      "best": 100,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "o2": {
+      "n": 1,
+      "best": 90,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "o3": {
+      "n": 1,
+      "best": 67,
+      "s": "p",
+      "d": "2026-11-26",
+      "due": "2026-11-29"
+     },
+     "o4": {
+      "n": 1,
+      "best": 90,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "o5": {
+      "n": 1,
+      "best": 100,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "o6": {
+      "n": 1,
+      "best": 90,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "o7": {
+      "n": 1,
+      "best": 88,
+      "s": "p",
+      "d": "2026-11-26",
+      "due": "2026-11-29"
+     },
+     "o8": {
+      "n": 1,
+      "best": 79,
+      "s": "p",
+      "d": "2026-11-26",
+      "due": "2026-11-29"
+     },
+     "v1": {
+      "n": 1,
+      "best": 100,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "v2": {
+      "n": 1,
+      "best": 90,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "v3": {
+      "n": 1,
+      "best": 100,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "v4": {
+      "n": 1,
+      "best": 90,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "v5": {
+      "n": 1,
+      "best": 100,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "v6": {
+      "n": 1,
+      "best": 90,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "v7": {
+      "n": 1,
+      "best": 83,
+      "s": "p",
+      "d": "2026-11-26",
+      "due": "2026-11-29"
+     },
+     "v8": {
+      "n": 1,
+      "best": 60,
+      "s": "p",
+      "d": "2026-11-26",
+      "due": "2026-11-29"
+     },
+     "s1": {
+      "n": 1,
+      "best": 100,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "s2": {
+      "n": 1,
+      "best": 90,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "s3": {
+      "n": 1,
+      "best": 100,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "s4": {
+      "n": 1,
+      "best": 90,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "s5": {
+      "n": 1,
+      "best": 75,
+      "s": "p",
+      "d": "2026-11-26",
+      "due": "2026-11-29"
+     },
+     "s6": {
+      "n": 1,
+      "best": 88,
+      "s": "p",
+      "d": "2026-11-26",
+      "due": "2026-11-29"
+     },
+     "s7": {
+      "n": 1,
+      "best": 25,
+      "s": "m",
+      "d": "2026-11-26",
+      "due": "2026-11-27"
+     },
+     "s8": {
+      "n": 1,
+      "best": 90,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     }
+    },
+    "k": {
+     "greet": [
+      3,
+      3
+     ],
+     "explain": [
+      13,
+      15
+     ],
+     "number": [
+      4,
+      4
+     ],
+     "name": [
+      1,
+      3
+     ],
+     "time": [
+      6,
+      6
+     ],
+     "ask": [
+      7,
+      7
+     ],
+     "place": [
+      4,
+      4
+     ],
+     "sorry": [
+      3,
+      3
+     ],
+     "past": [
+      6,
+      7
+     ],
+     "request": [
+      5,
+      6
+     ],
+     "plan": [
+      4,
+      6
+     ],
+     "thank": [
+      3,
+      3
+     ],
+     "suggest": [
+      2,
+      4
+     ],
+     "bye": [
+      2,
+      2
+     ]
+    },
+    "runs": 24
+   },
+   "errs": {
+    "Verb -s": 4,
+    "There is / are": 1,
+    "Address & register": 4,
+    "Past simple": 1,
+    "Future": 1,
+    "Countable / uncountable": 1,
+    "Wh- questions": 1
+   },
+   "stats": "16/24\nCLEARED\n24\nCARDS FLOWN\n0\nDUE TODAY",
+   "review": "🚨 Scramble!\n24 of 24 cards are open. A surprise card from any deck — the best test.\nScramble ▸",
+   "radar": "Your objective radar\n\nWhat you do first time on Scramble cards — lowest first. These are the moves to practise.\n\n🎖️ Right name\n1/3\n💡 Suggest\n2/4\n⏩ Say the plan\n4/6\n🤝 Ask politely\n5/6\n⏪ Say what happened\n6/7",
+   "tab": "🎴\nScramble"
+  },
+  "state_after_lesson_mode": {
+   "sc": {
+    "c": {
+     "o1": {
+      "n": 1,
+      "best": 100,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "o2": {
+      "n": 1,
+      "best": 90,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "o3": {
+      "n": 2,
+      "best": 83,
+      "s": "p",
+      "d": "2026-11-26",
+      "due": "2026-11-29"
+     },
+     "o4": {
+      "n": 1,
+      "best": 90,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "o5": {
+      "n": 1,
+      "best": 100,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "o6": {
+      "n": 1,
+      "best": 90,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "o7": {
+      "n": 1,
+      "best": 88,
+      "s": "p",
+      "d": "2026-11-26",
+      "due": "2026-11-29"
+     },
+     "o8": {
+      "n": 2,
+      "best": 100,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "v1": {
+      "n": 1,
+      "best": 100,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "v2": {
+      "n": 1,
+      "best": 90,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "v3": {
+      "n": 1,
+      "best": 100,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "v4": {
+      "n": 1,
+      "best": 90,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "v5": {
+      "n": 1,
+      "best": 100,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "v6": {
+      "n": 1,
+      "best": 90,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "v7": {
+      "n": 2,
+      "best": 83,
+      "s": "p",
+      "d": "2026-11-26",
+      "due": "2026-11-29"
+     },
+     "v8": {
+      "n": 2,
+      "best": 67,
+      "s": "p",
+      "d": "2026-11-26",
+      "due": "2026-11-29"
+     },
+     "s1": {
+      "n": 1,
+      "best": 100,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "s2": {
+      "n": 1,
+      "best": 90,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "s3": {
+      "n": 1,
+      "best": 100,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "s4": {
+      "n": 1,
+      "best": 90,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "s5": {
+      "n": 1,
+      "best": 75,
+      "s": "p",
+      "d": "2026-11-26",
+      "due": "2026-11-29"
+     },
+     "s6": {
+      "n": 2,
+      "best": 100,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     },
+     "s7": {
+      "n": 1,
+      "best": 25,
+      "s": "m",
+      "d": "2026-11-26",
+      "due": "2026-11-27"
+     },
+     "s8": {
+      "n": 1,
+      "best": 90,
+      "s": "c",
+      "d": "2026-11-26",
+      "due": null
+     }
+    },
+    "k": {
+     "greet": [
+      3,
+      3
+     ],
+     "explain": [
+      15,
+      18
+     ],
+     "number": [
+      4,
+      4
+     ],
+     "name": [
+      5,
+      7
+     ],
+     "time": [
+      7,
+      7
+     ],
+     "ask": [
+      7,
+      7
+     ],
+     "place": [
+      5,
+      5
+     ],
+     "sorry": [
+      4,
+      4
+     ],
+     "past": [
+      7,
+      9
+     ],
+     "request": [
+      8,
+      9
+     ],
+     "plan": [
+      4,
+      8
+     ],
+     "thank": [
+      5,
+      5
+     ],
+     "suggest": [
+      2,
+      4
+     ],
+     "bye": [
+      2,
+      2
+     ]
+    },
+    "runs": 29,
+    "live": false
+   },
+   "errs": {
+    "Verb -s": 4,
+    "There is / are": 1,
+    "Address & register": 5,
+    "Past simple": 1,
+    "Future": 1,
+    "Countable / uncountable": 1,
+    "Wh- questions": 1,
+    "Negatives": 1,
+    "Conditionals": 1,
+    "Passive": 1
+   },
+   "stats": "18/24\nCLEARED\n24\nCARDS FLOWN\n0\nDUE TODAY",
+   "radar": "Your objective radar\n\nWhat you do first time on Scramble cards — lowest first. These are the moves to practise.\n\n⏩ Say the plan\n4/8\n💡 Suggest\n2/4\n🎖️ Right name\n5/7\n⏪ Say what happened\n7/9\n💬 Explain\n15/18"
+  },
+  "final_gs_sc": {
+   "c": {
+    "o1": {
+     "n": 1,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    },
+    "o2": {
+     "n": 1,
+     "best": 90,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    },
+    "o3": {
+     "n": 2,
+     "best": 83,
+     "s": "p",
+     "d": "2026-11-26",
+     "due": "2026-11-29"
+    },
+    "o4": {
+     "n": 1,
+     "best": 90,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    },
+    "o5": {
+     "n": 1,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    },
+    "o6": {
+     "n": 1,
+     "best": 90,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    },
+    "o7": {
+     "n": 1,
+     "best": 88,
+     "s": "p",
+     "d": "2026-11-26",
+     "due": "2026-11-29"
+    },
+    "o8": {
+     "n": 2,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    },
+    "v1": {
+     "n": 1,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    },
+    "v2": {
+     "n": 1,
+     "best": 90,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    },
+    "v3": {
+     "n": 1,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    },
+    "v4": {
+     "n": 1,
+     "best": 90,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    },
+    "v5": {
+     "n": 1,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    },
+    "v6": {
+     "n": 1,
+     "best": 90,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    },
+    "v7": {
+     "n": 2,
+     "best": 83,
+     "s": "p",
+     "d": "2026-11-26",
+     "due": "2026-11-29"
+    },
+    "v8": {
+     "n": 2,
+     "best": 67,
+     "s": "p",
+     "d": "2026-11-26",
+     "due": "2026-11-29"
+    },
+    "s1": {
+     "n": 1,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    },
+    "s2": {
+     "n": 1,
+     "best": 90,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    },
+    "s3": {
+     "n": 1,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    },
+    "s4": {
+     "n": 1,
+     "best": 90,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    },
+    "s5": {
+     "n": 1,
+     "best": 75,
+     "s": "p",
+     "d": "2026-11-26",
+     "due": "2026-11-29"
+    },
+    "s6": {
+     "n": 2,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    },
+    "s7": {
+     "n": 2,
+     "best": 100,
+     "s": "c",
+     "d": "2026-11-27",
+     "due": null
+    },
+    "s8": {
+     "n": 1,
+     "best": 90,
+     "s": "c",
+     "d": "2026-11-26",
+     "due": null
+    }
+   },
+   "k": {
+    "greet": [
+     3,
+     3
+    ],
+    "explain": [
+     16,
+     19
+    ],
+    "number": [
+     4,
+     4
+    ],
+    "name": [
+     5,
+     7
+    ],
+    "time": [
+     7,
+     7
+    ],
+    "ask": [
+     7,
+     7
+    ],
+    "place": [
+     5,
+     5
+    ],
+    "sorry": [
+     4,
+     4
+    ],
+    "past": [
+     7,
+     9
+    ],
+    "request": [
+     8,
+     9
+    ],
+    "plan": [
+     4,
+     8
+    ],
+    "thank": [
+     5,
+     5
+    ],
+    "suggest": [
+     3,
+     5
+    ],
+    "bye": [
+     2,
+     2
+    ]
+   },
+   "runs": 30,
+   "live": false
+  }
+ }
+}

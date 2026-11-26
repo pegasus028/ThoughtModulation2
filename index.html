@@ -601,6 +601,9 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding-top:12px;font-si
 .fd-ubub{max-width:100%}
 .fd-task{background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.5);border-radius:10px;padding:10px 12px;font-weight:600}
 .fd-frame{font-size:1.1rem;font-weight:600;color:#fff}
+.sc-frame{margin-top:6px}
+#scSpeak .dbtn,#scSpeak .gs-link,#scSpeak .fd-tb,#scSpeak select,.sc-sitd summary,#scRe,#scBack,.sc-chip,[data-scm],[data-scfd],#scMore,#scRetry,#scHome{min-height:44px;min-width:44px}
+#scSpeak .gs-link{padding:10px 6px}
 .fd-blank{color:var(--gold);letter-spacing:1px}
 .fd-tbox{display:flex;flex-direction:column;gap:10px}
 .fd-tbtns{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
@@ -3477,11 +3480,11 @@ function roomTurn(sc){
 }
 
 /* ---- persistence ---- */
-let store = {best:{}, fs:16, voice:false, free:true, unlockAll1:1, tab:"gs", sel:{}};
+let store = {best:{}, fs:16, voice:false, free:true, tab:"gs", sel:{}};
 const DESK_DEFAULT = JSON.stringify(store);
 try { const raw = localStorage.getItem(LS_KEY); if (raw) store = Object.assign(store, JSON.parse(raw)); } catch(e){}
 /* 26 Nov 2026: every scenario, mission, mode and Scramble card is open by default (Chris). The Free play box can still re-lock them. */
-if (!store.unlockAll1) { store.free = true; store.unlockAll1 = 1; try { localStorage.setItem(LS_KEY, JSON.stringify(store)); } catch(e){} }
+if (!store.unlockAll2) { store.free = true; store.unlockAll2 = 1; try { localStorage.setItem(LS_KEY, JSON.stringify(store)); } catch(e){} }
 function save(){ store._t = Date.now(); try { localStorage.setItem(LS_KEY, JSON.stringify(store)); } catch(e){} cloudQueue(); }
 document.documentElement.style.setProperty("--fs", store.fs + "px");
 
@@ -5624,7 +5627,7 @@ function allTabsHTML(activeId){
     + (typeof FD_DRILLS === "undefined" ? "" : `<button class="tab fd-tab ${activeId==='fd'?'on':''}" role="tab" aria-selected="${activeId==='fd'}" data-tab="fd">
       <span class="ti" aria-hidden="true">🎖️</span><span><b>Formation Drills</b><small>Grammar out loud · A1–B2 · ${FD_DRILLS.filter(d => fdS().best[d.id]).length}/${FD_DRILLS.length}</small></span></button>`)
     + (typeof SC_CARDS === "undefined" ? "" : `<button class="tab sc-tab ${activeId==='sc'?'on':''}" role="tab" aria-selected="${activeId==='sc'}" data-tab="sc">
-      <span class="ti" aria-hidden="true">🎴</span><span><b>Scramble</b><small>New situations · A1–B1 · ${SC_CARDS.filter(c => (scS().c[c.id] || {}).s === "c").length}/${SC_CARDS.length}</small></span></button>`) + camps;
+      <span class="ti" aria-hidden="true">🎴</span><span><b>Scramble</b><small>New situations · A1–B1 · ${SC_CARDS.filter(c => (scS().c[c.id] || {}).s === "c").length}/${SC_CARDS.length}${SC_CARDS.filter(scDue).length ? " · " + SC_CARDS.filter(scDue).length + " due" : ""}</small></span></button>`) + camps;
 }
 
 function gsImg(m, el, kind){
@@ -6458,7 +6461,7 @@ const fdStars = d => { const b = fdS().best[d.id]; return !b ? 0 : b.acc >= 90 ?
 
 /* ---------- home ---------- */
 let FDP = null;
-function renderFDHome(){
+function renderFDHome(){ window.__fdFromSC = false;
   view = "home"; gsStopAudio(); GSP = null; FDP = null;
   const f = fdS(), mic = gsMicStatus(), dueAll = fdDueAll().length;
   const mastered = FD_DRILLS.reduce((a, d) => a + fdMastered(d), 0), total = FD_DRILLS.reduce((a, d) => a + d.items.length, 0);
@@ -6542,7 +6545,7 @@ function fdBrief(d){
   </section>
   <div class="gs-go"><span>🔊 Turn your sound on. ${fdS().live ? "Lesson mode: the teacher scores each answer." : "Answer with your voice — or type."}</span>
     <button class="btn gs-big" id="fdGo">Start the sortie ▸</button></div>`;
-  $("#fdBack").onclick = () => renderFDHome();
+  $("#fdBack").onclick = fdExit;
   $("#fdEgHear").onclick = async () => { await gsSpeak(fdSay(d.eg[0]), "helen"); await gsSpeak(fdSay(d.eg[1]), "helen"); gsSpeak(d.eg[2], "helen", {rate: 0.8}); };
   $("#fdGo").onclick = () => fdStart(d, fdPick(d));
   const sb = $("#fdSlides"); if (sb) sb.onclick = () => fdSlidesOpen(d);
@@ -6723,8 +6726,9 @@ async function fdPlayPrompt(){
 }
 function fdLeave(){
   if (FDP && FDP.phase !== "done" && (FDP.i > 0 || FDP.tries > 0) && !confirm("Leave this sortie? Sentences you already finished are saved.")) return;
-  gsStopAudio(); renderFDHome();
+  gsStopAudio(); fdExit();
 }
+function fdExit(){ if (window.__fdFromSC) { window.__fdFromSC = false; store.tab = "sc"; save(); renderHome(); return; } renderFDHome(); }
 function fdRender(){
   const it = fdCur(), n = FDP.list.length, d = it.d ? fdD(it.d) : null, useP = FDP.phase === "use";
   const dots = FDP.list.map((_, i) => `<span class="gs-dot ${i < FDP.i || useP ? "done" : i === FDP.i && !useP ? "cur" : ""}"></span>`).join("")
@@ -6967,7 +6971,7 @@ function fdResult(){
       <button class="btn ghost" id="fdHome">All formations</button>
     </div>
   </section>`;
-  $("#fdBack").onclick = $("#fdHome").onclick = () => renderFDHome();
+  $("#fdBack").onclick = $("#fdHome").onclick = fdExit;
   if ($("#fdAgainS")) $("#fdAgainS").onclick = () => fdStart(d, fdPick(d));
   if ($("#fdNextD")) $("#fdNextD").onclick = () => fdBrief(FD_DRILLS[d.idx + 1]);
   window.scrollTo({top: 0, behavior: "smooth"});
@@ -7002,6 +7006,15 @@ const SC_KINDS = {
 const SC_DAY = "(monday|tuesday|wednesday|thursday|friday|saturday|sunday|today|tomorrow|tonight|next week|this (morning|afternoon|evening|week)|in \\d+ (days?|hours?|minutes?)|by \\d+|at \\d+|\\d+ oclock|morning|afternoon)";
 const SC_MAAM = "(ma am|maam|mam|madam|ma m)";
 const scRe = s => new RegExp(s);
+/* answer-checker helpers (data only). SC_DAY2 = SC_DAY + other fair "when" words. Guards are lookaheads at the start (no lookbehind: old iPhone Safari):
+   an answer that says "I don't know" or says the opposite ("will not", "no problem") never clears the objective. */
+const SC_DAY2 = "(" + SC_DAY.slice(1, -1) + "|noon|midday|lunch(time)?|end of (the |this )?(day|week)|couple of (hours|days)|few (hours|days|minutes)|next (monday|tuesday|wednesday|thursday|friday)|right (now|away|after)|straight away|immediately)";
+const SC_DK = "^(?!.*\\b(do not know|did not know|no idea|not sure)\\b)";                       // "I don't know who signs."
+const SC_NO = "^(?!.*\\b(do not know|no idea|not sure|will not|can not|would not|never)\\b)";   // "I will not pay you today."
+const SC_SENIOR = "\\b(could|would|may|can) (you|i|we)\\b|\\bwould it be possible\\b|\\bis it (ok|okay|all right|possible) (if|to)\\b|\\b(i|we) would (like|love)\\b";   // with a senior (o8, s6): a modal question. "Please + verb" alone is for a service desk or a peer (v2, o6, v6).
+const SC_SUG = "\\b(should|could|try|visit|recommend|how about|what about|why not|why do not you|worth|would (go|take|visit|see)|must|have to|do not miss|maybe|(you|we) can|(can|must|should|go|to|and) see|go( to)?|come( to| in| back)?|(is|are|very|so|really) (good|nice|beautiful|fun|famous|great|interesting|lovely))\\b";
+const SC_SPOT = "\\b(grand palace|palace|wat \\w+|temples?|chatuchak|markets?|ayutthaya|museum|chinatown|yaowarat|river|islands?|beach\\w*)\\b";   // a place name alone is a fair A1 suggestion
+const scG = (guard, src) => new RegExp(guard + ".*?(?:" + (src.source || src) + ")");
 
 const SC_CARDS = [
 /* ------------------------------ OFFICE ------------------------------ */
@@ -7012,10 +7025,10 @@ const SC_CARDS = [
  turns:[
   {npc:"Good morning. I'm Lars Eriksen, the auditor. Who checks the invoices in your section?",
    objs:[{k:"greet", lab:"Greet him", re:/\b(good (morning|afternoon)|hello|hi|nice to meet you|welcome)\b/, ex:"Good morning, Mr Eriksen."},
-         {k:"explain", lab:"Say who checks the invoices", re:/\b\w+ (checks?|is checking|checked)\b|\bi (check|do)\b|\bkhun \w+|\b\w+ does (it|that|them|this)\b/, ex:"Khun Nok checks …"}],
+         {k:"explain", lab:"Say who checks the invoices", re:scG(SC_DK, /\b\w+ (checks?|is checking|checked)\b|\bi (check|do)\b|\bkhun \w+|\bnok\b|\b\w+ does (it|that|them|this)\b/), ex:"Khun Nok checks …"}],
    model:"Good morning, Mr Eriksen. Khun Nok checks the invoices."},
   {npc:"I see. And who signs the payments?",
-   objs:[{k:"explain", lab:"Say who signs the payments", re:/\b(signs?|is signing|signed|signature)\b|\bwing commander\b|\b(my|our|the) (boss|commander)\b|\bdoes (it|that|them|this)\b/, ex:"Wing Commander Anan signs …"}],
+   objs:[{k:"explain", lab:"Say who signs the payments", re:scG(SC_DK, /\b(wing commander|anan|boss|(my|our|the) (commander|commanding officer|chief|head))\b/), ex:"Wing Commander Anan signs …"}],
    model:"Wing Commander Anan signs the payments."}]},
 
 {id:"o2", deck:"office", lvl:"A1", npc:"mike", fd:["d2"], title:"What's in the file?",
@@ -7024,10 +7037,10 @@ const SC_CARDS = [
  chips:["There are three …","Yes, there is a problem with …","The date is wrong."],
  turns:[
   {npc:"Hi, it's Mike Turner from Pacific Aero. How many invoices from us are there in your file?",
-   objs:[{k:"number", lab:"Say how many invoices", re:/\b(3|three)\b/, ex:"There are three …"}],
+   objs:[{k:"number", lab:"Say how many invoices", re:/\b3( (invoices?|bills?|of|in|from|mr|sir|only|i|there|and|yes|now|here|altogether|total)\b|$)/, ex:"There are three …"}],
    model:"Hello, Mr Turner. There are three invoices."},
   {npc:"OK. Is there a problem with any of them?",
-   objs:[{k:"explain", lab:"Say there is a problem", re:/\b(problem|mistake|error|wrong|not correct|incorrect)\b/, ex:"Yes, there is a problem with …"},
+   objs:[{k:"explain", lab:"Say there is a problem", re:scG("^(?!.*\\bno (problem|mistake|error)s?\\b)", /\b(problem|mistake|error|wrong|not (correct|right|ok|okay|good)|incorrect)\b/), ex:"Yes, there is a problem with …"},
          {k:"number", lab:"Say which invoice", re:/\b(number )?(2|two)\b|\bsecond\b/, ex:"… invoice number two."}],
    model:"Yes, there is a problem with invoice number two. The date is wrong."}]},
 
@@ -7037,11 +7050,11 @@ const SC_CARDS = [
  chips:["I'm sorry, it isn't ready yet.","It will be ready …","Good afternoon, Colonel Hayes."],
  turns:[
   {npc:"Good afternoon. Is the budget report ready?",
-   objs:[{k:"name", lab:"Use the right name for her", re:scRe("\\bcolonel\\b(?! sarah)|\\b"+SC_MAAM+"\\b"), ex:"Good afternoon, Colonel Hayes."},
-         {k:"explain", lab:"Say it is not ready", re:/\b(is not|not ready|not yet|not finished|not done|have not|has not|did not|do not have|need more time|will be ready|still working|almost ready)\b/, ex:"I'm sorry, it isn't …"}],
+   objs:[{k:"name", lab:"Use the right name for her", re:scRe("\\bcolonel\\b(?! sarah\\b(?! hayes))|\\b"+SC_MAAM+"\\b"), ex:"Good afternoon, Colonel Hayes."},
+         {k:"explain", lab:"Say it is not ready", re:scG("^(?!.*\\b(it|report) is ready\\b)", /\b(is not(?! a problem| problem)|not ready|no ready|not yet|not finish\w*|not complete\w*|not done|have not|has not|did not|do not have|can not (finish|give|send)|(need|take|taking|takes) (a little |some |a bit )?(more time|longer)|will be ready|still (working|finishing|checking|doing)|almost (ready|done|finished))\b/), ex:"I'm sorry, it isn't …"}],
    model:"Good afternoon, Colonel Hayes. I'm sorry, it isn't ready yet."},
   {npc:"I see. When will it be ready?",
-   objs:[{k:"time", lab:"Say when it will be ready", re:scRe("\\b"+SC_DAY+"\\b"), ex:"It will be ready tomorrow …"}],
+   objs:[{k:"time", lab:"Say when it will be ready", re:scG("^(?!.*\\b(yesterday|last (week|night|month)|was ready|do not know|not sure)\\b)", "\\b"+SC_DAY2+"\\b"), ex:"It will be ready tomorrow …"}],
    model:"It will be ready tomorrow morning, Ma'am."}]},
 
 {id:"o4", deck:"office", lvl:"A2", npc:"mark", fd:["d4"], title:"Check the details",
@@ -7051,11 +7064,11 @@ const SC_CARDS = [
  turns:[
   {npc:"Hi, it's Mark Ellis from Hawaii. I'm calling about our payment.",
    objs:[{k:"greet", lab:"Greet him", re:/\b(good (morning|afternoon|evening)|hello|hi)\b/, ex:"Hello, Captain Ellis."},
-         {k:"ask", lab:"Ask for the invoice number", re:/\b(invoice|reference)\b.*\bnumber\b|\bnumber\b.*\b(invoice|reference)\b|\bwhich invoice\b/, ex:"Do you have the …?"}],
+         {k:"ask", lab:"Ask for the invoice number", re:/\b(invoice|reference)\b.*\bnumber\b|\bnumber\b.*\b(invoice|reference)\b|\bwhich invoice\b|\b(the|your|a) reference\b|\b(what|which) (is the )?number\b/, ex:"Do you have the …?"}],
    model:"Hello, Captain Ellis. Do you have the invoice number?"},
   {npc:"Sure. It's invoice four, five, one.",
-   objs:[{k:"number", lab:"Repeat the number to check it", re:/\b(4|for) ?5 ?1\b/, ex:"Four, five, one. Thank you."},
-         {k:"ask", lab:"Ask about US dollars", re:/\b(dollars?|usd|baht|currency)\b/, ex:"Is the amount in …?"}],
+   objs:[{k:"number", lab:"Repeat the number to check it", re:/\b(4|for) ?5 ?1\b|\b4 ?(100|hundred) (and )?(51|50 1)\b/, ex:"Four, five, one. Thank you."},
+         {k:"ask", lab:"Ask about US dollars", re:scG("^(?!.*\\bhave \\d+ (us )?dollars?\\b)", /\b(dollars?|usd|baht|currency)\b/), ex:"Is the amount in …?"}],
    model:"Four, five, one. Thank you. Is the amount in US dollars?"}]},
 
 {id:"o5", deck:"office", lvl:"A2", npc:"eriksen", fd:["d5"], title:"Fix the meeting",
@@ -7064,10 +7077,10 @@ const SC_CARDS = [
  chips:["What day is good for you?","Please come to room …","See you on …"],
  turns:[
   {npc:"Hello. I'd like a short meeting with your section this week.",
-   objs:[{k:"ask", lab:"Ask when — What day …? / What time …?", re:/\b(when|what (day|time)|which day)\b/, ex:"What day is …?"}],
+   objs:[{k:"ask", lab:"Ask when — What day …? / What time …?", re:scG(SC_DK, /\b(when|what (day|time|date)|which (day|date))\b|\b(are you|would you be) (free|available)\b|\b(would|does|is) \w+ (suit|work for|good for|okay for|ok for|convenient)\b|\bhow about \w+/), ex:"What day is …?"}],
    model:"Of course, Mr Eriksen. What day is good for you?"},
   {npc:"Thursday morning at ten. Where should I go?",
-   objs:[{k:"place", lab:"Say where your office is", re:/\b(room|floor|building|office|upstairs|division)\b/, ex:"Please come to room …"},
+   objs:[{k:"place", lab:"Say where your office is", re:scG("^(?!.*\\bclosed\\b)", /\b(room|floor|building|office|upstairs|division)\b/), ex:"Please come to room …"},
          {k:"time", lab:"Check the day or time", re:/\b(thursday|10)\b/, ex:"See you on Thursday at …"}],
    model:"Please come to room 204, on the second floor. See you on Thursday at ten."}]},
 
@@ -7078,11 +7091,11 @@ const SC_CARDS = [
  turns:[
   {npc:"Good morning. Did you send me last month's receipts?",
    objs:[{k:"sorry", lab:"Say sorry", re:/\b(sorry|apologi[sz]e|afraid)\b/, ex:"I'm sorry, …"},
-         {k:"past", lab:"Say what happened", re:/\b(did not|have not|not yet|found|was|were|sent|checked|saw|had)\b/, ex:"I didn't send them. I found …"}],
+         {k:"past", lab:"Say what happened", re:/\b(did not|have not|not yet|(not|no) send|found|find|sent|checked|saw|mistake|problem|error|wrong|forg[eo]t|late|busy)\b/, ex:"I didn't send them. I found …"}],
    model:"Good morning, Mr Eriksen. I'm sorry, I didn't send them. I found a mistake yesterday."},
   {npc:"I see. When can I have them?",
-   objs:[{k:"request", lab:"Ask politely for more time", re:/\b(could|can|may|would) (i|we|you)\b/, ex:"Could I have …, please?"},
-         {k:"time", lab:"Say how long, or which day", re:scRe("\\b(2 (more )?days|"+SC_DAY+")\\b"), ex:"… two more days."}],
+   objs:[{k:"request", lab:"Ask politely for more time", re:/\b(could|can|may|would) (i|we|you)\b|\bwould it be possible\b|\bis it (ok|okay|all right|possible) if\b|\bif you could\b|\bif that is (all right|ok|okay)\b|\bdo you mind if\b|\bplease (give|wait|let)\b|\bneed\b.*\bplease\b|\b\d+ (more )?days? (more )?please\b/, ex:"Could I have …, please?"},
+         {k:"time", lab:"Say how long, or which day", re:scRe("\\b(\\d+ (more )?days?|\\d+ days? more|couple (of )?(more )?days|"+SC_DAY2+")\\b"), ex:"… two more days."}],
    model:"Could I have two more days, please? I will send them on Friday."}]},
 
 {id:"o7", deck:"office", lvl:"A2", npc:"mike", fd:["d7"], title:"The late payment",
@@ -7095,8 +7108,8 @@ const SC_CARDS = [
          {k:"explain", lab:"Explain the problem", re:/\b(problem|mistake|wrong|error|bank|details|incorrect)\b/, ex:"There was a problem with …"}],
    model:"I'm sorry, Mr Turner. There was a problem with the bank details."},
   {npc:"OK. So when will you pay?",
-   objs:[{k:"plan", lab:"Say the plan — We will … / We're going to …", re:/\b(will|going to|can)\b/, ex:"We will pay …"},
-         {k:"time", lab:"Say which day", re:scRe("\\b"+SC_DAY+"\\b"), ex:"… on Friday."}],
+   objs:[{k:"plan", lab:"Say the plan — We will … / We're going to …", re:scG(SC_NO, /\b(will|going to|can|should)\b|\b(am|are|is) (paying|sending|transferring|making)\b/), ex:"We will pay …"},
+         {k:"time", lab:"Say which day", re:scRe("\\b"+SC_DAY2+"\\b"), ex:"… on Friday."}],
    model:"We will pay on Friday. I'll send you an email today."}]},
 
 {id:"o8", deck:"office", lvl:"A2–B1", npc:"anan", fd:["d8","d12"], title:"Ask the boss",
@@ -7106,10 +7119,10 @@ const SC_CARDS = [
  turns:[
   {npc:"Yes? Come in.",
    objs:[{k:"name", lab:"Use the right name for him", re:/\b(sir|wing commander)\b/, ex:"Excuse me, Sir."},
-         {k:"request", lab:"Ask politely for his signature", re:/\b(could|would|may) (you|i)\b|\bcan (you|i)\b.*\bplease\b|\bplease\b.*\bcan (you|i)\b/, ex:"Could you sign …, please?"}],
+         {k:"request", lab:"Ask politely for his signature — Could you …?", re:scG("^(?=.*\\b(sign\\w*|form|this|it|payment|paper|document)\\b)", SC_SENIOR), ex:"Could you sign …, please?"}],
    model:"Excuse me, Sir. Could you sign this payment form, please?"},
   {npc:"Of course. Is it urgent?",
-   objs:[{k:"explain", lab:"Say why it is urgent", re:/\b(today|bank|closes?|closing|deadline|before|3|this afternoon)\b/, ex:"Yes, Sir. The bank closes at …"},
+   objs:[{k:"explain", lab:"Say why it is urgent", re:scG("^(?!no\\b)(?!.*\\b(not today|can wait|not urgent)\\b)", /\b(today|bank|closes?|closing|deadline|before|3|this afternoon)\b/), ex:"Yes, Sir. The bank closes at …"},
          {k:"thank", lab:"Thank him", re:/\b(thank you|thanks)\b/, ex:"Thank you, Sir."}],
    model:"Yes, Sir. The bank closes at three today. Thank you, Sir."}]},
 
@@ -7120,10 +7133,10 @@ const SC_CARDS = [
  chips:["It's on the second floor.","It's next to the lift.","It starts at nine o'clock."],
  turns:[
   {npc:"Excuse me. Where is the briefing room?",
-   objs:[{k:"place", lab:"Say where it is", re:/\b(floor|next to|lift|elevator|upstairs|left|right|straight|opposite|near)\b/, ex:"It's on the second floor, next to …"}],
+   objs:[{k:"place", lab:"Say where it is", re:scG(SC_DK, /\b(floor|next to|lift|elevator|upstairs|left|straight|opposite|near)\b|\b(on|to|turn|go) (the |your )?right\b/), ex:"It's on the second floor, next to …"}],
    model:"It's on the second floor, next to the lift."},
   {npc:"Thanks. And what time does the session start?",
-   objs:[{k:"time", lab:"Say the time", re:/\b(9|nine)\b/, ex:"It starts at …"}],
+   objs:[{k:"time", lab:"Say the time", re:/\b(at|is|starts?|about|around) 9\b|\b9( (oclock|in|sharp|sir|maam|i|exactly|please|tomorrow)\b|$)/, ex:"It starts at …"}],
    model:"It starts at nine o'clock."}]},
 
 {id:"v2", deck:"visitors", lvl:"A2", npc:"jessica", fd:["d4","d8"], title:"No booking",
@@ -7132,8 +7145,8 @@ const SC_CARDS = [
  chips:["I have a booking for three nights.","Could you check again, please?","My confirmation number is …"],
  turns:[
   {npc:"Good evening, and welcome to the Capitol View. I'm sorry, I can't find your booking.",
-   objs:[{k:"explain", lab:"Say you have a booking", re:/\b(booking|reservation|booked|reserved|room)\b/, ex:"I have a booking for …"},
-         {k:"request", lab:"Ask her politely to check again", re:/\b(could|can|would) you\b/, ex:"Could you check …, please?"}],
+   objs:[{k:"explain", lab:"Say you have a booking", re:scG("^(?!.*\\bdo not have\\b)", /\b(book\w*|reserv\w*|room)\b/), ex:"I have a booking for …"},
+         {k:"request", lab:"Ask her politely to check again", re:/\b(could|can|would) you\b|\bplease (check|look|try|search|find)\b|\b(check|look|try|search) (it )?again\b.*\bplease\b/, ex:"Could you check …, please?"}],
    model:"Good evening. I have a booking for three nights. Could you check again, please?"},
   {npc:"Of course. Do you have a confirmation number?",
    objs:[{k:"number", lab:"Give the number", re:/\b(4|for) ?7 ?(2|to|too) ?9\b/, ex:"Yes. It's four, seven, …"}],
@@ -7146,10 +7159,10 @@ const SC_CARDS = [
  turns:[
   {npc:"Hello! I'm Tom Hughes. I'm here for the exercise week.",
    objs:[{k:"greet", lab:"Welcome him", re:/\b(welcome|nice to meet you|pleased to meet you|good (morning|afternoon))\b/, ex:"Welcome to the base, …"},
-         {k:"ask", lab:"Ask about his journey", re:/\b(how|where|when|what|did)\b.*\b(flight|trip|journey|hotel|stay|staying|arrive|travel)\b/, ex:"How was your …?"}],
+         {k:"ask", lab:"Ask about his journey", re:/\b(how|where|when|what|did|was|were|is|are|hope)\b.*\b(flight|trip|journey|hotel|stay|staying|arrive|travel)\b|\byour (flight|trip|journey)\b|\bhow are you\b|\byou (are )?tired\b/, ex:"How was your …?"}],
    model:"Welcome to the base, Flight Lieutenant Hughes. How was your flight?"},
   {npc:"Long, but fine, thanks. Where do I go first?",
-   objs:[{k:"place", lab:"Say where to go first", re:/\b(security|office|room|building|gate|come with|follow|this way)\b/, ex:"Please come with me. First, we will go to …"}],
+   objs:[{k:"place", lab:"Say where to go first", re:scG(SC_DK, /\b(security|office|room|building|gate|come with|follow|this way|visitor pass|badge|reception)\b/), ex:"Please come with me. First, we will go to …"}],
    model:"Please come with me. First, we will go to the security office."}]},
 
 {id:"v4", deck:"visitors", lvl:"A2", npc:"hayes", fd:["d6"], title:"Yesterday's meeting",
@@ -7159,10 +7172,10 @@ const SC_CARDS = [
  turns:[
   {npc:"I missed the finance meeting yesterday. What did you discuss?",
    objs:[{k:"past", lab:"Say what you talked about", re:/\b(budget|travel|plan|cost|money)\b/, ex:"We talked about …"},
-         {k:"past", lab:"Say what was decided", re:/\b(approved?|agreed?|decided?|said yes|said okay|accepted?|signed?)\b|\bplan (is|was) okay\b/, ex:"Wing Commander Anan approved …"}],
+         {k:"past", lab:"Say what was decided", re:scG("^(?!.*\\b(not (approv\\w+|agree\\w*|decid\\w+|accept\\w*|sign\\w*)|nobody (decided|approved|agreed)|did not (approve|agree|decide|accept))\\b)", /\b(approv\w+|agreed?|decided?|decision|(says?|said) (yes|ok|okay)|accepted?|signed?|happy with)\b|\bplan (is|was) (ok|okay)\b|\b(boss|anan|commander|he) (is |was )?(ok|okay)\b/), ex:"Wing Commander Anan approved …"}],
    model:"We talked about the travel budget, Ma'am. Wing Commander Anan approved the plan."},
   {npc:"Good. Did anyone send the notes?",
-   objs:[{k:"plan", lab:"Offer to send them, and say when", re:scRe("\\b(will|can|going to)\\b.*\\b("+SC_DAY+"|now|soon|later|after lunch)\\b|\\b"+SC_DAY+"\\b.*\\b(will|can|going to)\\b"), ex:"Not yet. I will send them this …"}],
+   objs:[{k:"plan", lab:"Offer to send them, and say when — I will … today", re:scG("^(?!.*\\b(do not know|will not|can not)\\b)", "\\b(will|can|going to|let me|am sending|am going)\\b.*\\b("+SC_DAY2+"|now|soon|later|after lunch|after this)\\b|\\b"+SC_DAY2+"\\b.*\\b(will|can|going to)\\b"), ex:"Not yet. I will send them this …"}],
    model:"Not yet, Ma'am. I will send them this afternoon."}]},
 
 {id:"v5", deck:"visitors", lvl:"A2", npc:"mark", fd:["d7"], title:"Tomorrow's plan",
@@ -7175,7 +7188,7 @@ const SC_CARDS = [
          {k:"time", lab:"Say the time", re:/\b(10|ten)\b/, ex:"… at ten o'clock."}],
    model:"Tomorrow we are going to visit the finance office at ten o'clock."},
   {npc:"Great. Do I need to bring anything?",
-   objs:[{k:"explain", lab:"Say what to bring", re:/\b(id|card|identification|passport)\b/, ex:"Yes, please bring your …"}],
+   objs:[{k:"explain", lab:"Say what to bring", re:scG("^(?!.*\\b(do not need|no need)\\b)", /\b(id|card|identification|passport)\b/), ex:"Yes, please bring your …"}],
    model:"Yes, please bring your ID card."}]},
 
 {id:"v6", deck:"visitors", lvl:"A2–B1", npc:"hayes", fd:["d8","d9"], title:"The taxi claim",
@@ -7184,11 +7197,11 @@ const SC_CARDS = [
  chips:["Could you give me the receipts, please?","How many receipts do you have?","Could you fill in this form, please?"],
  turns:[
   {npc:"I'd like to claim my taxi costs. What do you need from me?",
-   objs:[{k:"request", lab:"Ask politely for the receipts", re:/\b(could|would|may|can) (you|i)\b.*\breceipts?\b|\breceipts?\b.*\b(could|would|may|can) (you|i)\b|\bplease\b.*\breceipts?\b|\breceipts?\b.*\bplease\b/, ex:"Could you give me …, please?"},
+   objs:[{k:"request", lab:"Ask politely for the receipts", re:scG("^(?!.*\\b(i|we) want\\b)", /\b(could|would|may|can) (you|i)\b.*\breceipts?\b|\breceipts?\b.*\b(could|would|may|can) (you|i)\b|\bplease\b.*\breceipts?\b|\breceipts?\b.*\bplease\b|\bneed (your|the) receipts?\b/), ex:"Could you give me …, please?"},
          {k:"ask", lab:"Ask how many", re:/\bhow (many|much)\b/, ex:"How many receipts …?"}],
    model:"Could you give me the receipts, please, Ma'am? How many receipts do you have?"},
   {npc:"I have two receipts. I lost the third one.",
-   objs:[{k:"request", lab:"Ask her to fill in the form", re:/\b(form|fill|write|sign)\b/, ex:"No problem. Could you fill in …, please?"}],
+   objs:[{k:"request", lab:"Ask her to fill in the form", re:scG("^(?!.*\\b(do not need|no need|can not)\\b)", /\b(form|fill|write|sign|complete|declaration)\b/), ex:"No problem. Could you fill in …, please?"}],
    model:"No problem, Ma'am. Could you fill in this form for the lost receipt, please?"}]},
 
 {id:"v7", deck:"visitors", lvl:"B1", npc:"mark", fd:["d10"], title:"The transfer came back",
@@ -7198,10 +7211,10 @@ const SC_CARDS = [
  turns:[
   {npc:"Our bank says the transfer came back. What happens now?",
    objs:[{k:"sorry", lab:"Say sorry", re:/\b(sorry|apologi[sz]e|afraid)\b/, ex:"I'm sorry, Captain Ellis."},
-         {k:"plan", lab:"Say the plan with if", re:/\bif\b.*\b(will|can|going to)\b|\b(will|can|going to)\b.*\bif\b/, ex:"If you send …, we will …"}],
+         {k:"plan", lab:"Say the plan with if", re:scG(SC_DK, /\b(if|once|when|as soon as)\b.*\b(will|can|would|could|going to) \w+|\b(will|can|would|could|going to)\b.*\b(if|once|when|as soon as) \w+/), ex:"If you send …, we will …"}],
    model:"I'm sorry, Captain Ellis. If you send the new bank details today, we will pay again tomorrow."},
   {npc:"And if the details are wrong again?",
-   objs:[{k:"plan", lab:"Say what you will do then", re:/\b(will|can|going to)\b.*\b(call|check|phone|confirm|email|contact|tell)\b/, ex:"Then I will call you and …"}],
+   objs:[{k:"plan", lab:"Say what you will do then — I will …", re:scG("^(?!.*\\b(will|can) not\\b)", /\b(will|can|would|could|going to)\b.*\b(call|check|phone|ring|confirm|verify|email|contact|tell|ask|go through)\b/), ex:"Then I will call you and …"}],
    model:"Then I will call you, and we will check them together."}]},
 
 {id:"v8", deck:"visitors", lvl:"B1", npc:"eriksen", fd:["d11"], title:"Status report",
@@ -7210,11 +7223,11 @@ const SC_CARDS = [
  chips:["Two payments were made last week.","One payment was returned by the bank.","The account number was wrong."],
  turns:[
   {npc:"What is the status of the three March payments?",
-   objs:[{k:"past", lab:"Say two were made", re:/\b(2|two)\b.*\b(paid|made|sent|done|completed)\b|\b(paid|made|sent)\b.*\b(2|two)\b/, ex:"Two payments were made …"},
-         {k:"past", lab:"Say one was returned", re:/\b(1|one|the other|the third|the last)\b.*\b(returned|came back|sent back|rejected)\b/, ex:"One payment was returned by …"}],
+   objs:[{k:"past", lab:"Say two were made", re:scG("^(?!.*\\b2 (\\w+ )?(were |was |is |are )?not\\b)", /\b(2|two)\b.*\b(paid|pay|made|sent|done|completed|ok|okay|fine|finish\w*|already|went through)\b|\b(paid|made|sent)\b.*\b(2|two)\b/), ex:"Two payments were made …"},
+         {k:"past", lab:"Say one was returned", re:scG("^(?!.*\\b(never|not) (\\w+ )?(return\\w*|c[ao]me)\\b)", /\b(1|one|3|the other|the third|the last|another)\b.*\b(return\w*|c[ao]mes? back|sen[dt] back|sen[dt] .{1,12} back|reject\w*|bounced?|fail\w*)\b|\b(returned|rejected|sent back)\b.*\b(1|one|the other|the last)\b|\bsen[dt] (the )?(other|last|third)( 1| one)? back\b/), ex:"One payment was returned by …"}],
    model:"Two payments were made last week. One payment was returned by the bank."},
   {npc:"Why was it returned?",
-   objs:[{k:"explain", lab:"Say why", re:/\b(wrong|mistake|incorrect|error|not correct)\b/, ex:"Because the account number was …"}],
+   objs:[{k:"explain", lab:"Say why", re:scG(SC_DK, /\b(wrong|mistake|incorrect|error|not (correct|right)|typo|invalid|different)\b/), ex:"Because the account number was …"}],
    model:"Because the account number was wrong."}]},
 
 /* ------------------------------ SOCIAL ------------------------------ */
@@ -7224,10 +7237,10 @@ const SC_CARDS = [
  chips:["I work in the Finance Division.","I check invoices and payments.","He signs all the payments."],
  turns:[
   {npc:"Hi! I'm Tom. So, what do you do here?",
-   objs:[{k:"explain", lab:"Say your job or your division", re:/\b(financ\w*|account\w*|invoices?|payments?|budgets?)\b/, ex:"I work in the …"}],
+   objs:[{k:"explain", lab:"Say your job or your division", re:scG("^(?!.*\\bdo not work\\b)", /\b(financ\w*|account\w*|invoices?|payments?|budgets?|money|officer|air force)\b/), ex:"I work in the …"}],
    model:"I work in the Finance Division. I check invoices and payments."},
   {npc:"Interesting! And your boss, what does he do?",
-   objs:[{k:"explain", lab:"Say what your boss does", re:/\b(manag|sign|check|approv|lead|run|work|control|head|command|chief|director|charge)\w*\b|\bboss of\b/, ex:"He signs …"}],
+   objs:[{k:"explain", lab:"Say what your boss does", re:scG(SC_DK, /\b(manag|sign|check|approv|lead|run|work|control|head|command|chief|director|charge|responsib|decid|decision)\w*\b|\bboss\b/), ex:"He signs …"}],
    model:"He manages the division. He signs all the payments."}]},
 
 {id:"s2", deck:"social", lvl:"A2", npc:"sarah", fd:["d3","d4"], title:"Welcome dinner",
@@ -7236,11 +7249,11 @@ const SC_CARDS = [
  chips:["Yes, I do. I love spicy food.","Do you like Thai food?","Try this one. It isn't spicy."],
  turns:[
   {npc:"This green curry looks wonderful. Do you eat spicy food?",
-   objs:[{k:"explain", lab:"Answer about yourself", re:/\b(yes|no|i (do|love|like|eat|can))\b/, ex:"Yes, I do. I love …"},
-         {k:"ask", lab:"Ask her a question back", re:/\b(do|can|are|would|did|have) you\b|\b(how|what) about you\b|\band you\b/, ex:"Do you like …?"}],
+   objs:[{k:"explain", lab:"Answer about yourself", re:/\b(yes|no|of course|sure|absolutely|definitely|a little|not really|i (do|love|like|eat|can|am))\b/, ex:"Yes, I do. I love …"},
+         {k:"ask", lab:"Ask her a question back", re:/\b(do|can|are|would|did|have) you\b|\b(how|what) about you\b|\band you\b|\byou like\b/, ex:"Do you like …?"}],
    model:"Yes, I do. I love spicy food. Do you like Thai food?"},
   {npc:"I do, but I don't eat very spicy food.",
-   objs:[{k:"suggest", lab:"Suggest a dish that is not spicy", re:/\b(try|recommend|should|not spicy|not hot|mild|how about|would you like|this (1|one|dish|soup))\b/, ex:"Try this one. It isn't …"}],
+   objs:[{k:"suggest", lab:"Suggest a dish that is not spicy", re:scG("^(?!.*\\b(do not recommend|no problem)\\b)", /\b(try|recommend|should|not spicy|not hot|mild|safe|how about|what about|why do not you|would you like|might like|this (1|one|dish|soup))\b/), ex:"Try this one. It isn't …"}],
    model:"Then try this one. It isn't spicy."}]},
 
 {id:"s3", deck:"social", lvl:"A2", npc:"tom", fd:["d6"], title:"Your UK degree",
@@ -7249,11 +7262,11 @@ const SC_CARDS = [
  chips:["I studied business administration.","I lived there for three years.","I loved it, but it was very cold."],
  turns:[
   {npc:"I hear you studied in the UK. What did you study?",
-   objs:[{k:"past", lab:"Say what you studied", re:/\b(business|administration|management|account\w*|financ\w*|economics|marketing|law|english|mba|master\w*|bachelor\w*|degree)\b|\bstudied (?!in\b|there\b|at\b|abroad\b)\w+/, ex:"I studied …"}],
+   objs:[{k:"past", lab:"Say what you studied", re:/\b(business|administration|management|account\w*|financ\w*|economics|marketing|law|english|mba|master\w*|bachelor\w*|degree)\b|\bstudied (?!in\b|there\b|at\b|abroad\b|hard\b|a lot\b|well\b)\w+/, ex:"I studied …"}],
    model:"I studied business administration."},
   {npc:"Lovely! Did you like it there?",
-   objs:[{k:"past", lab:"Say if you liked it", re:/\b(yes|no|liked|loved|enjoyed|did|was|were)\b/, ex:"Yes, I loved it, …"},
-         {k:"explain", lab:"Add one detail — weather, food, people …", re:/\b(weather|food|people|cold|rain\w*|friends?|city|expensive|beautiful|friendly|quiet|miss\w*)\b/, ex:"… but it was very cold."}],
+   objs:[{k:"past", lab:"Say if you liked it", re:/\b(yes|no|liked?|loved?|enjoy\w*|very much|did|was|were|fun|nice|good|great)\b/, ex:"Yes, I loved it, …"},
+         {k:"explain", lab:"Add one detail — weather, food, people …", re:/\b(weather|food|people|cold|rain\w*|snow\w*|friends?|city|london|expensive|beautiful|friendly|quiet|miss\w*|nice|fun|teachers?|university|homesick)\b/, ex:"… but it was very cold."}],
    model:"Yes, I loved it, but the weather was very cold."}]},
 
 {id:"s4", deck:"social", lvl:"A2", npc:"mark", fd:["d5"], title:"Bangkok traffic",
@@ -7262,11 +7275,11 @@ const SC_CARDS = [
  chips:["I take the BTS. It's faster.","Where are you staying?","You should visit the Grand Palace."],
  turns:[
   {npc:"The traffic this morning was terrible! How do you get to work?",
-   objs:[{k:"explain", lab:"Say how you get to work", re:/\b(car|bus|train|taxi|motorbike|motorcycle|bts|mrt|skytrain|drive|walk|boat)\b/, ex:"I take the …"},
-         {k:"ask", lab:"Ask him a question back", re:/\b(where|how|what|when|do|are|did) (are |do |did |is )?you\w*\b|\b(how|what) about you\b|\band you\b/, ex:"Where are you …?"}],
+   objs:[{k:"explain", lab:"Say how you get to work", re:/\b(car|bus|train|taxi|motorbike|motorcycle|bts|mrt|skytrain|driv\w+|walk\w*|boat|ride|subway|metro|van)\b/, ex:"I take the …"},
+         {k:"ask", lab:"Ask him a question back", re:/\b(where|how|what|when|do|are|did) (are |do |did |is )?you\w*\b|\b(how|what) about you\b|\band you\b|\byou (stay|live|come) (where|how)\b|\bis (it|your \w+) (far|near|good|nice|ok|okay)\b/, ex:"Where are you …?"}],
    model:"I take the BTS. It's faster than a car. Where are you staying?"},
   {npc:"At a hotel near the river. What should I see this weekend?",
-   objs:[{k:"suggest", lab:"Suggest a place", re:/\b(should|can|could|try|visit|go to|recommend|how about|see)\b/, ex:"You should visit …"}],
+   objs:[{k:"suggest", lab:"Suggest a place", re:scG(SC_NO, SC_SUG + "|" + SC_SPOT), ex:"You should visit …"}],
    model:"You should visit the Grand Palace. Go early in the morning."}]},
 
 {id:"s5", deck:"social", lvl:"A2", npc:"sarah", fd:["d7"], title:"Weekend plans",
@@ -7275,10 +7288,10 @@ const SC_CARDS = [
  chips:["I'm going to visit my parents.","… on Saturday.","You could go to Chatuchak Market."],
  turns:[
   {npc:"Finally, Friday! Any plans for the weekend?",
-   objs:[{k:"plan", lab:"Say your plan — I'm going to … / I will …", re:/\b(going to|will|plan to|want to|am (visiting|meeting|staying|going|seeing))\b/, ex:"I'm going to …"}],
+   objs:[{k:"plan", lab:"Say your plan — I'm going to … / I will …", re:scG("^(?!.*\\bwill not\\b)", /\b(going to|will|plan(ning)? to|want to|would (like|love) to|might|am (visiting|meeting|staying|going|seeing|having|planning))\b/), ex:"I'm going to …"}],
    model:"I'm going to visit my parents on Saturday."},
   {npc:"That sounds nice. I have a free day on Sunday. Any ideas?",
-   objs:[{k:"suggest", lab:"Suggest something to do", re:/\b(should|can|could|try|visit|go to|recommend|how about|see|maybe|why not)\b/, ex:"You could go to …"}],
+   objs:[{k:"suggest", lab:"Suggest something to do", re:scG(SC_NO, SC_SUG + "|" + SC_SPOT), ex:"You could go to …"}],
    model:"You could go to Chatuchak Market. It's open on Sundays."}]},
 
 {id:"s6", deck:"social", lvl:"A2–B1", npc:"hayes", fd:["d8","d12"], title:"A photo, please",
@@ -7287,11 +7300,11 @@ const SC_CARDS = [
  chips:["Excuse me, Colonel Hayes.","Could we take a photo with you, please?","Here in the middle, please, Ma'am."],
  turns:[
   {npc:"What a lovely evening.",
-   objs:[{k:"name", lab:"Use the right name for her", re:scRe("\\bcolonel\\b(?! sarah)|\\b"+SC_MAAM+"\\b"), ex:"Excuse me, Colonel Hayes."},
-         {k:"request", lab:"Ask politely for a photo", re:/\b(could|would|may|can) (we|i|you)\b/, ex:"Could we take …, please?"}],
+   objs:[{k:"name", lab:"Use the right name for her", re:scRe("\\bcolonel\\b(?! sarah\\b(?! hayes))|\\b"+SC_MAAM+"\\b"), ex:"Excuse me, Colonel Hayes."},
+         {k:"request", lab:"Ask politely for a photo — Could we …?", re:scRe(SC_SENIOR), ex:"Could we take …, please?"}],
    model:"Excuse me, Colonel Hayes. Could we take a photo with you, please?"},
   {npc:"Of course! Where should I stand?",
-   objs:[{k:"place", lab:"Say where to stand", re:/\b(here|next to|middle|centre|center|front|beside|between|left|right)\b/, ex:"Here in the middle, …"},
+   objs:[{k:"place", lab:"Say where to stand", re:/\b(here|there|next to|middle|centre|center|front|beside|between|left|right|by the)\b/, ex:"Here in the middle, …"},
          {k:"thank", lab:"Thank her", re:/\b(thank you|thanks)\b/, ex:"Thank you, Ma'am."}],
    model:"Here in the middle, please, Ma'am. Thank you."}]},
 
@@ -7301,10 +7314,10 @@ const SC_CARDS = [
  chips:["I would go to Chiang Mai.","I would visit the mountains.","If you come again, you should …"],
  turns:[
   {npc:"Here's a question. If you had a free week, where would you go?",
-   objs:[{k:"explain", lab:"Say where you would go — I would …", re:/\bwould (go|visit|travel|stay|like|love|fly|take|see|spend)\b/, ex:"I would go to …"}],
+   objs:[{k:"explain", lab:"Say where you would go — I would …", re:/\bwould (\w+ly |also |just )?(go|visit|travel|stay|like|love|fly|take|see|spend|choose|pick)\b/, ex:"I would go to …"}],
    model:"I would go to Chiang Mai. I would visit the mountains."},
   {npc:"Nice. And if I come to Thailand again, what should I do?",
-   objs:[{k:"suggest", lab:"Suggest something for his next visit", re:/\b(should|can|could|try|visit|go to|recommend|see|must)\b/, ex:"If you come again, you should …"}],
+   objs:[{k:"suggest", lab:"Suggest something for his next visit", re:scG(SC_NO, SC_SUG), ex:"If you come again, you should …"}],
    model:"If you come again, you should visit the islands in the south."}]},
 
 {id:"s8", deck:"social", lvl:"A2–B1", npc:"tom", fd:["d12"], title:"Saying goodbye",
@@ -7314,16 +7327,16 @@ const SC_CARDS = [
  turns:[
   {npc:"Well, that's the end of the week. I fly home tonight.",
    objs:[{k:"thank", lab:"Thank him", re:/\b(thank you|thanks)\b/, ex:"Thank you for …"},
-         {k:"bye", lab:"Wish him a good journey", re:/\b(safe|good|nice|great) (flight|trip|journey|travel\w*)\b|\bgood luck\b|\ball the best\b|\btake care\b|\bbon voyage\b|\bhave a (good|nice|safe) (1|day|time)\b/, ex:"Have a safe …"}],
+         {k:"bye", lab:"Wish him a good journey", re:/\b(safe|good|nice|great|pleasant|lovely) (flight|trip|journey|travel\w*)\b|\bsafe(ly)? (home|travels?)\b|\bhome safe(ly)?\b|\bgood luck\b|\ball the best\b|\btake care\b|\bbon voyage\b|\bhave a (good|nice|safe) (1|day|time)\b/, ex:"Have a safe …"}],
    model:"Thank you for everything, Flight Lieutenant Hughes. Have a safe flight."},
   {npc:"Thanks. I hope we meet again.",
-   objs:[{k:"bye", lab:"Say goodbye", re:/\b(goodbye|bye|see you|take care|keep in touch|hope so|me too|again)\b/, ex:"I hope so too. Goodbye!"}],
+   objs:[{k:"bye", lab:"Say goodbye", re:scG("^(?!.*\\b(never|not again)\\b)", /\b(goodbye|bye|farewell|see you|take care|keep in touch|stay in touch|hope so|me too|so do i|again|sure we will|have a good 1)\b/), ex:"I hope so too. Goodbye!"}],
    model:"I hope so too. Please keep in touch. Goodbye!"}]}
 ];
 
 /* grammar slips: logged to the radar and shown as one note in the debrief — never graded.
    Each: [test(norm) → matched text or "", radar tag, note] */
-const SC_AUX = /^(does|did|do|can|could|will|would|should|must|may|might|let|make|makes|made|help|helps|see|saw|and|or)$/;
+const SC_AUX = /^(does|did|do|can|could|will|would|should|must|may|might|let|make|makes|made|help|helps|helped|see|saw|watch|watched|hear|heard|and|or)$/;
 function scFind(n, re, guard){
   const m = re.exec(n); if (!m) return "";
   if (guard) { const prev = n.slice(0, m.index).trim().split(" ").pop() || ""; if (SC_AUX.test(prev)) return ""; }
@@ -7341,20 +7354,34 @@ const SC_SLIPS = [
   [n => scFind(n, /\bdoes (not )?(\w+ )?(has|signs|checks|pays|goes|works|needs|wants)\b/), "Verb -s", "After does / doesn't, no -s: Does she have …? She doesn't have …"],
   [n => { const m = /\b(it|report|invoice|payment|form|transfer) (not|no) (ready|finished|correct|done|right)\b/.exec(n); if (!m) return ""; return /\b(is|was)$/.test(n.slice(0, m.index).trim()) ? "" : m[0]; }, "Negatives", "Add is: It isn't ready."],
   [n => scFind(n, /\byesterday (i|we|he|she|they) (send|go|check|pay|find|finish|discuss|talk|have|see|call|email|phone|sign|approve|meet|tell|ask)\b/) || scFind(n, /\b(i|we) (send|go|check|pay|find|finish|discuss|talk|see) (it |them |a \w+ |the \w+ )?(yesterday|last (week|month|night|year))\b/), "Past simple", "Yesterday / last week → past form: sent, went, checked, paid, found."],
+  [n => scFind(n, /^(it|he|she) (on|in|at|next to|not|very)\b/), "Negatives", "Add is: It is on the second floor. It isn't spicy."],
+  [n => scFind(n, /\bwill (ready|late|finished|free|open|closed)\b/), "Future", "After will, add be: It will be ready tomorrow."],
+  [n => scFind(n, /\bit (start|close|open|finish)\b/, true), "Verb -s", "After it, add -s: It starts at nine. It closes at three."],
+  [n => scFind(n, /\b(details|invoices|payments|receipts) was\b/), "There is / are", "More than one → were: The bank details were wrong."],
   [n => scFind(n, /\b(i|we|he|she|they|you) going to\b/, true), "Future", "Going to needs am / is / are: I am going to visit."],
   [n => scFind(n, /\bwill (to|paid|sent|going|went)\b/), "Future", "After will, use the base verb: I will send it."],
   [n => scFind(n, /\bcould (you|i|we) to\b/), "Polite requests", "No to after could: Could you sign this, please?"],
-  [n => scFind(n, /\bi want (?!to (go|visit|travel|stay|see|eat|try|say|rest|relax|meet|shop|thank|learn)\b)/), "Polite requests", "Softer with a senior or a visitor: Could I have … ? / I'd like …"],
+  [n => scFind(n, /\b(i|we) want (?!(to )?(go|visit|travel|stay|see|eat|try|say|rest|relax|meet|shop|thank|learn|sleep|be|do)\b|a (quiet|nice|relaxing|good|free|long|short|little) )/), "Polite requests", "Softer with a senior or a visitor: Could I have … ? / I'd like …"],
   [n => scFind(n, /\bhow much (receipts|invoices|people|days|copies|nights)\b/), "Countable / uncountable", "Things you count → how many: How many receipts?"],
   [n => scFind(n, /\bhow many (money|information|time)\b/) || scFind(n, /\b(informations|advices|equipments)\b/), "Countable / uncountable", "Money, information and time are not counted: how much money, some information."],
-  [n => scFind(n, /\bif (you|i|we|it|they|the \w+) will\b/), "Conditionals", "No will after if: If you send it today, we will pay tomorrow."],
-  [n => scFind(n, /\b(payments?|invoices?|report|transfer|budget|form|receipts?) (already )?(paid|approved|sent|returned|signed|received|made)\b/), "Passive", "The thing needs be: The payment was returned. Two payments were paid."],
-  [n => scFind(n, /\bcolonel sarah\b/) || scFind(n, /\b(mr|mister) (lars|tom|mark|mike)\b/) || scFind(n, /\b(captain|flight lieutenant) (mark|tom)\b/) || scFind(n, /\bkhun (eriksen|hayes|ellis|hughes|tom|mark|mike|sarah)\b/), "Address & register", "Rank or Mr + family name: Colonel Hayes, Mr Eriksen."]
+  [n => scFind(n, /\bif (you|i|we|it|they|the \w+) will\b(?! kindly| please)/), "Conditionals", "No will after if: If you send it today, we will pay tomorrow."],
+  [n => { const m = /\b(payments?|invoices?|report|transfer|budget|form|receipts?) (already )?(paid|approved|sent|returned|signed|received|made)\b(?! to (us|me)\b)/.exec(n); if (!m) return ""; return /\b(is|was|are|were|will|has|have) /.test(n.slice(m.index + m[0].length) + " ") ? "" : m[0]; }, "Passive", "The thing needs be: The payment was returned. Two payments were paid."],
+  [n => scFind(n, /\bcolonel sarah\b(?! hayes\b)/) || scFind(n, /\b(mr|mister) (lars|tom|mark|mike)\b/) || scFind(n, /\b(captain|flight lieutenant) (mark|tom)\b/) || scFind(n, /\b(khun|miss|mrs|ms) (eriksen|hayes|ellis|hughes|tom|mark|mike|sarah)\b/) || scFind(n, /\bgood (morning|afternoon|evening) sarah\b/), "Address & register", "Rank or Mr + family name: Colonel Hayes, Mr Eriksen."]
 ];
-function scSlip(n){ for (const s of SC_SLIPS) { const hit = s[0](n); if (hit) return {said: hit, tag: s[1], msg: s[2]}; } return null; }
+function scSlip(n, turn){
+  const past = !!(turn && turn.objs.some(o => o.k === "past"));
+  for (const s of SC_SLIPS) { const hit = s[0](n); if (hit) {
+    // on a past-tense exchange a bare verb after one person is a past-tense slip, not a missing -s
+    if (past && s[1] === "Verb -s") return {said: hit, tag: "Past simple", msg: "This happened already → past form: he approved, she checked, we talked."};
+    return {said: hit, tag: s[1], msg: s[2]}; } }
+  if (past) { const m = /\b(we|i|they|he|she|wing commander anan|my boss) (talk|approve|check|send|pay|decide|agree|sign|say|find|go|meet)\b(?! not)/.exec(n);
+    if (m) return {said: m[0], tag: "Past simple", msg: "This happened already → past form: we talked, he approved, she said."}; }
+  return null;
+}
 
-const SC_REPAIR = /\b(say|repeat|sing|stay) (that|it|this)( again)?\b|\b(could|can|would) you repeat\b|\b(say|speak|repeat)( it| that)? (again|slowly|more slowly|slower)\b|\b(pardon|once more|once again|one more time|1 more time)\b|\bi (do not|did not) (understand|catch)\b|\bwhat did you say\b/;
-const SC_REPAIR_G = new RegExp(SC_REPAIR.source, "g");
+const SC_REPAIR = /\b(say|repeat|sing|stay) (that|it|this)( again)?\b|\b(could|can|would) you repeat\b|\b(say|speak|repeat)( it| that)? (again|slowly|more slowly|slower)\b|\b(pardon|once more|once again|one more time|1 more time)\b|\bi (do not|did not) (understand|catch)\b|\bwhat did you say\b|\bi (not|no|can not) (understand|hear)\b|\bnot understand\b/;
+const SC_REPAIR_WEAK = /^(sorry|pardon|what|again|slowly|slower|repeat)( please)?$|\b(again|slowly|slower|repeat) please\b|\bplease (say )?(again|slowly|slower|repeat)\b/;   // counts only when nothing else is said
+const SC_REPAIR_G = new RegExp(SC_REPAIR.source, "g"), SC_REPAIR_WG = new RegExp(SC_REPAIR_WEAK.source, "g");
 const SC_POLITE = /\b(sorry|excuse me|please|could|can|would|you|sir|maam|mam|madam|ma am|colonel|hayes|mr|eriksen|turner|captain|ellis|flight lieutenant|hughes|wing commander|anan|me|i|the|question|again)\b/g;
 
 /* check one answer against the objectives of the turn */
@@ -7363,20 +7390,21 @@ function scEval(turn, raw){
     .replace(/\b(is|are|was|were|do|does|did|have|has|could|would|should)nt\b/gi, "$1 not").replace(/\bcant\b/gi, "can not").replace(/\bwont\b/gi, "will not").replace(/\bim\b/gi, "i am");
   const n = gsNorm(raw).replace(FD_FILL, " ").replace(/\s+/g, " ").trim();
   const r = {norm: n, status: "ok", hits: turn.objs.map(() => false), slip: null};
-  if (!n) { r.status = "empty"; return r; }
+  if (!n) { r.status = /[\u0E00-\u0E7F]/.test(raw) ? "thai" : "empty"; return r; }
   // the repair phrase first: if little is left after taking out the repair words and polite words, it is a repair, never an answer
-  if (SC_REPAIR.test(n)) {
-    const rest = n.replace(SC_REPAIR_G, " ").replace(SC_POLITE, " ").trim().split(/\s+/).filter(Boolean);
-    if (rest.length < 2) { r.status = "repair"; return r; }
+  const strong = SC_REPAIR.test(n);
+  if (strong || SC_REPAIR_WEAK.test(n)) {
+    const rest = n.replace(SC_REPAIR_G, " ").replace(SC_REPAIR_WG, " ").replace(SC_POLITE, " ").trim().split(/\s+/).filter(Boolean);
+    if (rest.length < (strong ? 2 : 1)) { r.status = "repair"; return r; }
   }
   const w = n.split(" ");
   // saying the person's own words back adds nothing: no credit
   if (w.length >= 3 && gsLCS(w, gsNorm(turn.npc).split(" ")).n === w.length) return r;
   r.hits = turn.objs.map(o => o.re.test(n));
-  if (SC_REPAIR.test(n) && !r.hits.every(Boolean)) { r.status = "repair"; r.hits = turn.objs.map(() => false); return r; }
+  if (strong && !r.hits.every(Boolean)) { r.status = "repair"; r.hits = turn.objs.map(() => false); return r; }
   // a short answer is fine when it does the whole job ("Tomorrow morning."); otherwise ask for a full sentence
-  if (w.length < 3 && !(w.length === 2 && r.hits.every(Boolean))) { r.status = "short"; r.hits = turn.objs.map(() => false); return r; }
-  r.slip = scSlip(n);
+  if (w.length < 3 && !r.hits.every(Boolean)) { r.status = "short"; r.hits = turn.objs.map(() => false); return r; }
+  r.slip = scSlip(n, turn);
   return r;
 }
 
@@ -7393,13 +7421,14 @@ function scPick(deck){
   const pool = SC_CARDS.filter(c => (!deck || c.deck === deck) && scOpen(c)), st = scS().c;
   const due = pool.filter(scDue).sort((a, b) => (st[a.id].due < st[b.id].due ? -1 : 1));
   if (due.length) return due[0];
-  const unseen = pool.filter(c => !st[c.id]); if (unseen.length) return unseen[0];
-  const again = pool.filter(c => st[c.id].s !== "c"); if (again.length) return again[Math.floor(Math.random() * again.length)];
-  return pool.length ? pool[Math.floor(Math.random() * pool.length)] : null;
+  const last = scLastId, not = c => c.id !== last || pool.length < 2;
+  const unseen = pool.filter(c => !st[c.id]); if (unseen.length) { const u2 = unseen.filter(not), u = u2.length ? u2 : unseen; return deck ? unseen[0] : u[Math.floor(Math.random() * u.length)]; }   // the Scramble button is a real surprise
+  const again = pool.filter(c => st[c.id].s !== "c" && not(c)); if (again.length) return again[Math.floor(Math.random() * again.length)];
+  const p2 = pool.filter(not); return p2.length ? p2[Math.floor(Math.random() * p2.length)] : (pool[0] || null);
 }
 
 /* ---------- home: the three decks ---------- */
-let SCP = null, scTick = null;
+let SCP = null, scTick = null, scLastId = null;
 function renderSCHome(){
   view = "home"; gsStopAudio(); clearInterval(scTick); GSP = null; FDP = null; SCP = null;
   const s = scS(), mic = gsMicStatus(), st = s.c;
@@ -7460,7 +7489,7 @@ function renderSCHome(){
   document.querySelectorAll("[data-tab]").forEach(b => b.onclick = () => { store.tab = b.dataset.tab; save(); renderHome(); });
   document.querySelectorAll("[data-scdraw]").forEach(b => b.onclick = () => { const c = scPick(b.dataset.scdraw); if (c) scBrief(c); });
   document.querySelectorAll("[data-scgo]").forEach(b => b.onclick = () => scBrief(scCard(b.dataset.scgo)));
-  document.querySelectorAll("[data-scfd]").forEach(b => b.onclick = () => { store.tab = "fd"; save(); fdBrief(fdD(b.dataset.scfd)); });
+  document.querySelectorAll("[data-scfd]").forEach(b => b.onclick = () => { store.tab = "fd"; save(); window.__fdFromSC = true; fdBrief(fdD(b.dataset.scfd)); });
   $("#scAny").onclick = () => { const c = scPick(null); if (c) scBrief(c); };
   try { const tb = document.querySelector(".tabs .tab.on"); if (tb && tb.scrollIntoView) tb.scrollIntoView({block: "nearest", inline: "center"}); } catch(e){}
   $("#scVoiceChk").onclick = gsVoiceCheck;
@@ -7471,7 +7500,7 @@ function renderSCHome(){
 /* ---------- pre-flight ---------- */
 const scTurn = () => SCP.card.turns[SCP.ti];
 const scObjIcons = c => { const seen = new Set(), out = []; c.turns.forEach(t => t.objs.forEach(o => { if (!seen.has(o.k)) { seen.add(o.k); out.push(o.k); } })); return out; };
-function scBrief(c){
+function scBrief(c){ if (c) scLastId = c.id;
   view = "scplay"; gsStopAudio(); clearInterval(scTick);
   SCP = {card: c, ti: 0, phase: "pre", chips: [false, false, false], left: SC_PRE, live: !!scS().live, res: [], t0: Date.now()};
   scRenderPre();
@@ -7528,7 +7557,7 @@ function scLeave(){
 /* ---------- the exchange ---------- */
 function scBegin(){
   const t = scTurn();
-  Object.assign(SCP, {sub: "ready", lad: 0, tries: 0, repairs: 0, said: "", typed: false, live_: "", micErr: null, issue: null, slip: null,
+  Object.assign(SCP, {sub: SCP.typeMode ? "type" : "ready", lad: 0, tries: 0, shorts: 0, freeHint: false, repairs: 0, said: "", typed: false, live_: "", micErr: null, issue: null, slip: null,
     hits: t.objs.map(() => false), first: t.objs.map(() => false), tm: t.objs.map(() => null), flu: 0, gtag: "", tSpoke: 0, secs: null, heard: []});
   scRender();
   scPlayNpc();
@@ -7567,10 +7596,11 @@ function scRenderStage(){
 function scCoachHTML(){
   const t = scTurn(), I = SCP.issue; let h = "";
   const miss = t.objs.map((o, i) => SCP.hits[i] ? null : o).filter(Boolean);
-  if (I === "short") h += `<div class="gs-c unclear">👂 <b>A little more, please.</b> Say a full sentence — three words or more.</div>`;
+  if (I === "thai") h += `<div class="gs-c unclear">🇬🇧 <b>English, please.</b> Try a few English words — or tap <b>🔁 Ask to repeat</b>.</div>`;
+  else if (I === "short") h += `<div class="gs-c unclear">👂 <b>A little more, please.</b> Say a full sentence — three words or more.</div>`;
   else if (I === "repair") h += `<div class="gs-c">👍 <b>Good move.</b> Asking the person to repeat is always fine. Listen again, then answer.</div>`;
-  else if (I === "miss") h += `<div class="gs-c">🧭 <b>${SCP.hits.some(Boolean) ? "Good start — one more thing." : "Not yet."}</b> Still to do: ${miss.map(o => `<b>${esc(o.lab)}</b>`).join(" · ")}.<br><small>Words on the screen wrong? Tap “Say again” next time, or type.</small></div>`;
-  if (SCP.lad >= 1) h += `<div class="gs-c">🧩 <b>Start like this:</b> ${miss.map(o => `<span class="fd-frame">${esc(o.ex)}</span>`).join(" ")}</div>`;
+  else if (I === "miss") h += `<div class="gs-c">🧭 <b>${SCP.hits.some(Boolean) ? "Good start — one more thing." : "Not yet."}</b> Still to do: ${miss.map(o => `<b>${esc(o.lab)}</b>`).join(" · ")}.${SCP.typeMode ? "" : `<br><small>Words on the screen wrong? Tap “Say again” next time, or type.</small>`}</div>`;
+  if (SCP.lad >= 1 || SCP.freeHint) h += `<div class="gs-c">🧩 <b>Start like this:</b>${miss.map(o => `<div class="sc-frame"><span aria-hidden="true">${SC_KINDS[o.k].i}</span> <span class="fd-frame">${esc(o.ex)}</span></div>`).join("")}</div>`;
   if (SCP.lad >= 2) h += `<div class="gs-c">🗣 <b>Model:</b> ${esc(t.model)} <button class="dbtn" id="scModel">🔊</button><div class="gs-msgx good">Now say it yourself — your own words are fine.</div></div>`;
   return h;
 }
@@ -7605,7 +7635,10 @@ function scRenderSpeak(){
     } else if (typ) {
       micArea = `<div class="gs-review"><div class="kick">Type your answer</div>
         <textarea id="scTypeIn" rows="2" autocapitalize="sentences" placeholder="Type what you want to say…">${esc(SCP.said || "")}</textarea>
-        <div class="gs-acts">${GS_SR ? `<button class="dbtn" id="scBackMic">🎤 Use the microphone</button>` : ""}<button class="commit" id="scTypeOk">CHECK ▸</button></div></div>`;
+        <div class="gs-acts">${GS_SR ? `<button class="dbtn" id="scBackMic">🎤 Use the microphone</button>` : ""}<button class="commit" id="scTypeOk">CHECK ▸</button></div></div>
+        <div class="gs-acts gs-under"><button class="dbtn" id="scHint" ${SCP.lad >= 2 ? "disabled" : ""}>💡 Hint</button>
+          <button class="dbtn" id="scRepeat">🔁 Ask to repeat</button>
+          ${SCP.tries + (SCP.shorts || 0) >= 2 ? `<button class="dbtn" id="scSkip">Move on ▸</button>` : ""}</div>`;
     } else {
       micArea = `<div class="gs-micwrap"><button class="gs-micbtn ${rec ? "rec" : ""}" id="scMic" aria-label="${rec ? "Stop" : "Speak"}">
           <svg viewBox="0 0 24 24" width="38" height="38" aria-hidden="true"><path d="M12 15a3.5 3.5 0 0 0 3.5-3.5v-6a3.5 3.5 0 1 0-7 0v6A3.5 3.5 0 0 0 12 15z" fill="currentColor"/><path d="M18.5 11.5a6.5 6.5 0 0 1-13 0M12 18v3.5M8.5 21.5h7" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></button>
@@ -7615,7 +7648,7 @@ function scRenderSpeak(){
         <div class="gs-acts gs-under"><button class="dbtn" id="scHint" ${SCP.lad >= 2 ? "disabled" : ""}>💡 Hint</button>
           <button class="dbtn" id="scRepeat">🔁 Ask to repeat</button>
           <button class="gs-link" id="scType">⌨ Type instead</button>
-          ${SCP.tries >= 2 ? `<button class="gs-link" id="scSkip">Move on ▸</button>` : ""}</div>`;
+          ${SCP.tries + (SCP.shorts || 0) >= 2 ? `<button class="dbtn" id="scSkip">Move on ▸</button>` : ""}</div>`;
     }
     body = `<div class="gs-coach">${scCoachHTML()}</div>` + micArea;
   }
@@ -7624,9 +7657,9 @@ function scRenderSpeak(){
   on("scMic", scMicStart);
   on("scAgain", () => { SCP.said = ""; scMicStart(); });
   on("scCommit", scCommit);
-  on("scType", () => { gsStopAudio(); SCP.sub = "type"; scRenderSpeak(); const ta = $("#scTypeIn"); if (ta) ta.focus(); });
-  on("scTypeFix", () => { SCP.sub = "type"; scRenderSpeak(); const ta = $("#scTypeIn"); if (ta) ta.focus(); });
-  on("scBackMic", () => { SCP.sub = "ready"; scRenderSpeak(); });
+  on("scType", () => { gsStopAudio(); SCP.sub = "type"; SCP.typeMode = true; scRenderSpeak(); const ta = $("#scTypeIn"); if (ta) ta.focus(); });
+  on("scTypeFix", () => { SCP.sub = "type"; SCP.typeMode = true; scRenderSpeak(); const ta = $("#scTypeIn"); if (ta) ta.focus(); });
+  on("scBackMic", () => { SCP.sub = "ready"; SCP.typeMode = false; scRenderSpeak(); });
   on("scTypeOk", () => { const v = ($("#scTypeIn").value || "").trim(); if (!v) return; SCP.said = v; SCP.typed = true; scCommit(); });
   on("scHint", scHint);
   on("scRepeat", () => { SCP.said = "Sorry, could you say that again, please?"; SCP.typed = false; SCP.tapRepair = true; scCommit(); });
@@ -7640,7 +7673,7 @@ function scRenderSpeak(){
 }
 /* microphone — same recogniser as Ground School and Formation Drills (GS_SR / GS_REC) */
 function scMicStart(){
-  if (!GS_SR) { SCP.sub = "type"; scRenderSpeak(); return; }
+  if (!GS_SR) { SCP.sub = "type"; SCP.typeMode = true; scRenderSpeak(); return; }
   if (GS_REC) { try { GS_REC.stop(); } catch(e){} return; }
   gsHush();
   if (SCP.secs == null) SCP.secs = Math.max(0, Math.round((Date.now() - (SCP.tSpoke || Date.now())) / 1000));
@@ -7667,39 +7700,40 @@ function scMicStart(){
   SCP.sub = "rec"; SCP.live_ = ""; SCP.micErr = null; scRenderSpeak();
   try { r.start(); } catch(e) { GS_REC = null; SCP.micErr = "start"; SCP.sub = "ready"; scRenderSpeak(); }
 }
-function scHint(){ SCP.lad = Math.min(2, SCP.lad + 1); scRenderSpeak(); if (SCP.lad === 2) gsSpeak(scTurn().model, "helen", {rate: 0.8}); }
+function scHint(){ SCP.lad = Math.min(2, SCP.lad + (SCP.freeHint && SCP.lad === 0 ? 2 : 1)); scRenderSpeak(); if (SCP.lad === 2) gsSpeak(scTurn().model, "helen", {rate: 0.8}); }
 function scLog(res, note){
   const c = SCP.card;
   gsLog({m: "scramble " + c.id, t: c.id + "-" + (SCP.ti + 1), mode: SCP.live ? "live" : "scramble", said: SCP.live ? "" : SCP.said, res, note: note || "", tries: SCP.tries, typed: !!SCP.typed});
 }
+function scFocusSpeak(){ const el = $("#scSpeak"); if (el && el.getBoundingClientRect().top > window.innerHeight * 0.45) { try { el.scrollIntoView({block: "start", behavior: "smooth"}); } catch(e) { el.scrollIntoView(); } } if (SCP && SCP.sub === "type") { const ta = $("#scTypeIn"); if (ta) try { ta.focus({preventScroll: true}); } catch(e){} } }
 function scCommit(){
   const t = scTurn(), said = SCP.said; if (!said) return;
   const e = scEval(t, said), tapped = !!SCP.tapRepair; SCP.tapRepair = false;
   if (e.status === "repair") {   // the repair phrase is always a valid move: nothing is lost, the person repeats more slowly
     SCP.repairs++; SCP.issue = "repair"; scLog("repair", tapped ? "tapped" : "");
-    SCP.sub = "ready"; SCP.said = ""; scRenderSpeak();
+    SCP.sub = SCP.typeMode ? "type" : "ready"; SCP.said = ""; scRenderSpeak(); scFocusSpeak();
     (async () => { const me = SCP, ti = SCP.ti; await gsSpeak("Of course.", SCP.card.npc); if (SCP === me && SCP.ti === ti) scPlayNpc(0.75); })();
     return;
   }
-  if (e.status === "empty" || e.status === "short") {
-    SCP.issue = "short"; SCP.heard.push(said); scLog("too short", ""); SCP.sub = "ready"; SCP.said = ""; scRenderSpeak(); return;
+  if (e.status === "empty" || e.status === "short" || e.status === "thai") {
+    SCP.issue = e.status === "thai" ? "thai" : "short"; SCP.shorts = (SCP.shorts || 0) + 1; SCP.heard.push(said); scLog("too short", ""); SCP.sub = SCP.typeMode ? "type" : "ready"; SCP.said = ""; scRenderSpeak(); scFocusSpeak(); return;
   }
   const clean = SCP.tries === 0 && SCP.lad === 0;
   SCP.tries++; SCP.heard.push(said);
   e.hits.forEach((h, i) => { if (h && !SCP.hits[i]) { SCP.hits[i] = true; if (clean) SCP.first[i] = true; } });
   if (e.slip && !SCP.slip) { SCP.slip = e.slip; gs.errs = gs.errs || {}; gs.errs[e.slip.tag] = (gs.errs[e.slip.tag] || 0) + 1; }
   if (SCP.hits.every(Boolean)) { scPass(); return; }
-  SCP.issue = "miss";
+  SCP.issue = "miss"; SCP.freeHint = true;   // after a miss the first frame is shown free: the stamp is Partial at best already
   scLog("try " + SCP.tries + ": " + t.objs.map((o, i) => o.k + (SCP.hits[i] ? "✓" : "–")).join(" "), e.slip ? "slip: " + e.slip.tag : "");
   gsSave();
-  SCP.sub = "ready"; SCP.said = ""; scRenderStage(); scRenderSpeak();
-  if (!SCP.hits.some(Boolean) && SCP.tries === 1) gsSpeak(GS_CATCH, SCP.card.npc);
+  SCP.sub = SCP.typeMode ? "type" : "ready"; SCP.said = ""; scRenderStage(); scRenderSpeak();
+  if (!SCP.hits.some(Boolean) && SCP.tries === 1 && !SCP.typed) gsSpeak(GS_CATCH, SCP.card.npc);
+  scFocusSpeak();
 }
 function scStamp(k, st){ const s = scS(), v = s.k[k] || [0, 0]; v[1]++; if (st === "c") v[0]++; s.k[k] = v; }
 function scPass(teacher){
   const t = scTurn();
   const st = teacher ? SCP.tm.slice() : t.objs.map((o, i) => SCP.hits[i] ? (SCP.first[i] ? "c" : "p") : "m");
-  t.objs.forEach((o, i) => scStamp(o.k, st[i]));
   if (teacher && SCP.gtag) { gs.errs = gs.errs || {}; gs.errs[SCP.gtag] = (gs.errs[SCP.gtag] || 0) + 1; SCP.slip = {tag: SCP.gtag, msg: "", said: ""}; }
   const said = SCP.live ? "" : SCP.heard.join(" / ");
   SCP.res[SCP.ti] = {st, said, typed: SCP.typed, tries: SCP.tries, slip: SCP.slip, secs: SCP.secs, flu: SCP.flu, repairs: SCP.repairs};
@@ -7713,7 +7747,7 @@ function scPass(teacher){
 }
 function scTeacherSave(){ SCP.tries = Math.max(1, SCP.tries); scPass(true); }
 function scNext(){
-  if (SCP.ti < SCP.card.turns.length - 1) { SCP.ti++; scBegin(); window.scrollTo({top: 0}); return; }
+  if (SCP.ti < SCP.card.turns.length - 1) { SCP.ti++; scBegin(); window.scrollTo({top: 0}); if (SCP.typeMode) setTimeout(scFocusSpeak, 50); return; }
   scResult();
 }
 
@@ -7726,6 +7760,8 @@ function scResult(){
   const prev = s.c[c.id], rec = prev || {n: 0, best: 0};
   rec.n++; rec.best = Math.max(rec.best || 0, score); rec.s = status; rec.d = fdToday();
   rec.due = status === "c" ? null : fdAdd(status === "p" ? 3 : 1);
+  if (SCP.live) { rec.live = (rec.live || 0) + 1; const fl = SCP.res.map(r => r.flu).filter(Boolean); if (fl.length) rec.flu = fl[fl.length - 1]; }
+  else SCP.res.forEach((r, ti) => c.turns[ti].objs.forEach((o, i) => scStamp(o.k, r.st[i])));   // radar = her own first tries, written when the card is finished
   s.c[c.id] = rec; s.runs = (s.runs || 0) + 1;
   gsSave();
   const slip = (SCP.res.find(r => r.slip) || {}).slip;
@@ -7759,7 +7795,7 @@ function scResult(){
   $("#scMore").onclick = () => { const n = scPick(null); if (n && n.id !== c.id) scBrief(n); else { const o = SC_CARDS.filter(x => scOpen(x) && x.id !== c.id); if (o.length) scBrief(o[Math.floor(Math.random() * o.length)]); else renderSCHome(); } };
   if ($("#scRetry")) $("#scRetry").onclick = () => scBrief(c);
   document.querySelectorAll("[data-scm]").forEach(b => b.onclick = () => gsSpeak(c.turns[+b.dataset.scm].model, "helen", {rate: 0.8}));
-  document.querySelectorAll("[data-scfd]").forEach(b => b.onclick = () => { store.tab = "fd"; save(); fdBrief(fdD(b.dataset.scfd)); });
+  document.querySelectorAll("[data-scfd]").forEach(b => b.onclick = () => { store.tab = "fd"; save(); window.__fdFromSC = true; fdBrief(fdD(b.dataset.scfd)); });
   window.scrollTo({top: 0, behavior: "smooth"});
   gsSpeak(status === "c" ? "Card cleared. Well done!" : "Card complete. Good work.", "helen");
 }
@@ -7815,7 +7851,7 @@ document.addEventListener("visibilitychange", () => { if (document.visibilitySta
 function gsAdopt(remote){
   const desk = JSON.parse(DESK_DEFAULT);
   Object.keys(store).forEach(k => delete store[k]); Object.assign(store, desk, (remote && remote.desk) || {});
-  if (!store.unlockAll1) { store.free = true; store.unlockAll1 = 1; }   // cloud copies saved before 26 Nov open everything too
+  if (!store.unlockAll2) { store.free = true; store.unlockAll2 = 1; }   // cloud copies saved before 26 Nov open everything too
   const g2 = JSON.parse(JSON.stringify(GS_DEFAULT));
   Object.keys(gs).forEach(k => delete gs[k]); Object.assign(gs, g2, (remote && remote.gs) || {});
   try { localStorage.setItem(LS_KEY, JSON.stringify(store)); localStorage.setItem(GS_KEY, JSON.stringify(gs)); } catch(e){}
